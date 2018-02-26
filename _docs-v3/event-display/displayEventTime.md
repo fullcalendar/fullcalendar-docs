@@ -13,4 +13,4 @@ This setting only applies to events that have times (`allDay` equal to `false`).
 
 Events that are all-day will never display time text anyhow.
 
-When this setting is not specified, the default that is computed is based off of the current view. For example, time text will be displayed in all *month*, *basic*, and *agenda* views by default, for [timeline views](customizing-duration), it depends on the duration.
+When this setting is not specified, the default that is computed is based off of the current view. For example, time text will be displayed in all *month*, *basic*, and *agenda* views by default. For [timeline views](timeline-view), it depends on the duration.

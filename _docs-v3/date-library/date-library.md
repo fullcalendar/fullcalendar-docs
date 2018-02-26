@@ -4,7 +4,7 @@ title_for_landing: Date Library (MomentJS)
 children:
   - moment
   - moment-duration
-  - date-formatting-strings
+  - date-formatting-string
   - formatRange
 ---
 

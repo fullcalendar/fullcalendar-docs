@@ -10,7 +10,7 @@
 
   {% for demo_document in page.demo_documents %}
     <a href='{{ site.baseurl }}{{ demo_document.url }}' target='_blank' class='docs-sublanding__image'>
-      <img src='{{ site.baseurl }}{{ demo_document.slug }}.png'  />
+      <img src='{{ site.baseurl }}{{ demo_document.slug }}.png' alt='Screenshot: {{ demo_document.title }}' />
       <div class='docs-sublanding__image-caption'>
         {{ demo_document.title }}
       </div>
@@ -19,7 +19,7 @@
 
   {% for image in page.images %}
     <div class='docs-sublanding__image'>
-      <img src='{{ image.filename }}'  />
+      <img src='{{ image.filename }}' alt='Screenshot: {{ image.caption }}' />
       <div class='docs-sublanding__image-caption'>
         {{ image.caption }}
       </div>
