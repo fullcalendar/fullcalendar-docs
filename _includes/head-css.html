@@ -10,5 +10,5 @@
 <link href='{{ site.baseurl }}/assets/base.css?{{ cachebuster }}' rel='stylesheet' />
 
 {% for name in layout.custom_css %}
-  <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ name }}.css?{{ cachebuster }}' />
+  <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ name | escape }}.css?{{ cachebuster }}' />
 {% endfor %}

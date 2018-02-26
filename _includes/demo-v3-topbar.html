@@ -1,8 +1,8 @@
 <div class='demo-topbar'>
   {% if page.description %}
-    {{ page.description }}
+    {{ page.description | escape }}
   {% elsif page.title %}
-    {{ page.title }}
+    {{ page.title | escape }}
   {% endif %}
 
   <button data-codepen>edit in codepen</button>

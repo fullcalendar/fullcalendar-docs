@@ -10,9 +10,9 @@ custom_js: docs
 
     <div class='hero__main'>
       <div class='hero__title'>
-        <a href='{{ site.baseurl }}{{ page.version.url }}'>Docs</a>
+        <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
         <span class='hero__title-separator'></span>
-        <a href='{{ site.baseurl }}{{ page.category.url }}'>{{ page.category.title }}</a>
+        <a href='{{ site.baseurl }}{{ page.category.url | escape }}'>{{ page.category.title | escape }}</a>
       </div>
     </div>
 
@@ -22,7 +22,7 @@ custom_js: docs
       <div class='hero__control'>
         <a class='hero-button hero-button--condensed'
           target='_blank'
-          href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path }}'
+          href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
           >edit</a>
       </div>
       <div class='hero__control'>
@@ -43,14 +43,14 @@ custom_js: docs
         {% include docs-premium-notice.html %}
 
         <h1>
-          {{ page.title }}
+          {{ page.title | escape }}
 
           {% if page.since_scheduler_version %}
             <span class='docs-article__version'>scheduler {{ page.since_scheduler_version }}</span>
           {% elsif page.since_version %}
             <span class='docs-article__version'>{{ page.since_version }}</span>
           {% elsif page.version_notes %}
-            <span class='docs-article__version'>{{ page.version_notes }}</span>
+            <span class='docs-article__version'>{{ page.version_notes | escape }}</span>
           {% endif %}
         </h1>
 

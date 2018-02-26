@@ -16,8 +16,8 @@
 {% endif %}
 
 {% for name in layout.custom_js %}
-  <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ name }}.js?{{ cachebuster }}'></script>
+  <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ name | escape }}.js?{{ cachebuster }}'></script>
 {% endfor %}
 {% for name in page.custom_js %}
-  <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ name }}.js?{{ cachebuster }}'></script>
+  <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ name | escape }}.js?{{ cachebuster }}'></script>
 {% endfor %}

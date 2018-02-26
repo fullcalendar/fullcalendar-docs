@@ -2,12 +2,12 @@
 
 {% if page.title %}
   <title>
-    {{ page.title }} - Demos | FullCalendar
+    {{ page.title | escape }} - Demos | FullCalendar
   </title>
 {% endif %}
 
-{% assign latest_fullcalendar_baseurl = site.data.releases.fullcalendar[0].baseurl %}
-{% assign latest_scheduler_baseurl = site.data.releases.fullcalendar-scheduler[0].baseurl %}
+{% assign latest_fullcalendar_baseurl = site.data.releases.fullcalendar[0].baseurl | escape %}
+{% assign latest_scheduler_baseurl = site.data.releases.fullcalendar-scheduler[0].baseurl | escape %}
 {% comment %}
   Will need a more sophisticated solution when new major versions are launched.
   Or we should just hardcode the path.

@@ -11,15 +11,15 @@ custom_js: docs
     <div class='hero__main'>
       {% if page.title_for_hero %}
         <div class='hero__title'>
-          <a href='{{ site.baseurl }}{{ page.version.url }}'>Docs</a>
+          <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
           <span class='hero__title-separator'></span>
-          {{ page.title_for_hero }}
+          {{ page.title_for_hero | escape }}
         </div>
       {% else %}
         <h1 class='hero__title'>
-          <a href='{{ site.baseurl }}{{ page.version.url }}'>Docs</a>
+          <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
           <span class='hero__title-separator'></span>
-          {{ page.title }}
+          {{ page.title | escape }}
         </h1>
       {% endif %}
     </div>
@@ -30,7 +30,7 @@ custom_js: docs
       <div class='hero__control'>
         <a class='hero-button'
           target='_blank'
-          href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path }}'
+          href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
           >edit</a>
       </div>
       <div class='hero__control'>
@@ -49,7 +49,7 @@ custom_js: docs
         <div class='docs-content text-content'>
 
           {% if page.title_for_hero %}
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page.title | escape }}</h1>
           {% endif %}
 
           {{ content }}

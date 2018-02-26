@@ -7,7 +7,7 @@
           {% if child_group.is_related %}
             <h3 class='docs-article__sidebar-title'>See Also</h3>
           {% elsif child_group.title %}
-            <h3 class='docs-article__sidebar-title'>{{ child_group.title }}</h3>
+            <h3 class='docs-article__sidebar-title'>{{ child_group.title | escape }}</h3>
           {% endif %}
           <ul>
             {% for article in child_group.children %}
@@ -19,8 +19,8 @@
               %}docs-article__sidebar-item--jump{%
                 endif
               %}'>
-                <a href='{{ site.baseurl }}{{ article.url }}'>
-                  <span>{{ article.title }}</span>
+                <a href='{{ site.baseurl }}{{ article.url | escape }}'>
+                  <span>{{ article.title | escape }}</span>
                 </a>
               </li>
             {% endfor %}

@@ -1,5 +1,5 @@
 {% if page.description %}
-  <meta name='description' content='{{ page.description }}' />
+  <meta name='description' content='{{ page.description | escape }}' />
 {% elsif page.excerpt %}
-  <meta name='description' content='{{ page.excerpt | strip_html }}' />
+  <meta name='description' content='{{ page.excerpt | strip_html | escape }}' />
 {% endif %}

@@ -6,15 +6,15 @@
       {% if page.slug == 'index' %}
         Documentation
       {% else %}
-        {{ page.title }} - Docs
+        {{ page.title | escape }} - Docs
       {% endif %}
       {% if page.version %}
         {% unless page.version.is_latest %}
-          {{ page.version.id }}
+          {{ page.version.id | escape }}
         {% endunless %}
       {% endif %}
     {% else %}
-      {{ page.title }}
+      {{ page.title | escape }}
     {% endif %}
     | FullCalendar
   {% endif %}

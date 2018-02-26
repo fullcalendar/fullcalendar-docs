@@ -2,29 +2,29 @@
 <div class='docs-landing'>
   {% for child_group in page.child_groups %}
     <div class='docs-landing__section'>
-      <h2 class='docs-landing__section-title'>{{ child_group.title }}</h2>
+      <h2 class='docs-landing__section-title'>{{ child_group.title | escape }}</h2>
       <div class='docs-landing__section-content'>
         <ul class='docs-landing__illustrations'>
           {% for article in child_group.children %}
             <li class='docs-landing__illustration'>
-              <a class='docs-landing__illustration-link' href='{{ site.baseurl }}{{ article.url }}'>
+              <a class='docs-landing__illustration-link' href='{{ site.baseurl }}{{ article.url | escape }}'>
                 <img src='{{ site.baseurl }}/assets/images/docs-categories/{%
                   if article.illustration
-                %}{{ article.illustration }}{%
+                %}{{ article.illustration | escape }}{%
                   else
-                %}{{ article.slug }}{%
+                %}{{ article.slug | escape }}{%
                   endif
                 %}@2x.png'
                   width='120'
                   height='120'
-                  alt='{{ article.title }}'
+                  alt='{{ article.title | escape }}'
                   class='docs-landing__illustration-image'
                   />
                 <span class='docs-landing__illustration-title'>
                   {% if article.title_for_landing %}
-                    {{ article.title_for_landing }}
+                    {{ article.title_for_landing | escape }}
                   {% else %}
-                    {{ article.title }}
+                    {{ article.title | escape }}
                   {% endif %}
                   {% if article.is_premium %}
                     <img src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png' width='12' height='19'

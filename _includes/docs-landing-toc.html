@@ -2,13 +2,13 @@
 <div class='docs-landing'>
   {% for child_group in page.child_groups %}
     <div class='docs-landing__section'>
-      <h2 class='docs-landing__section-title'>{{ child_group.title }}</h2>
+      <h2 class='docs-landing__section-title'>{{ child_group.title | escape }}</h2>
       <div class='docs-landing__section-content'>
         <ul class='docs-landing__card'>
           {% for article in child_group.children %}
             <li class='docs-landing__card-section'>
-              <a href='{{ site.baseurl }}{{ article.url }}'>
-                {{ article.title }}
+              <a href='{{ site.baseurl }}{{ article.url | escape }}'>
+                {{ article.title | escape }}
                 {% if article.is_premium %}
                   <img src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png' width='12' height='19'
                     title='needs Scheduler'
@@ -21,13 +21,13 @@
                   {% unless article_child_group.is_related %}
                     {% if article_child_group.title %}
                       <li>
-                        {{ article_child_group.title }}
+                        {{ article_child_group.title | escape }}
                         <ul>
                     {% endif %}
                     {% for subarticle in article_child_group.children %}
                       <li>
-                        <a href='{{ site.baseurl }}{{ subarticle.url }}'>
-                          {{ subarticle.title }}
+                        <a href='{{ site.baseurl }}{{ subarticle.url | escape }}'>
+                          {{ subarticle.title | escape }}
                         </a>
                       </li>
                     {% endfor %}
