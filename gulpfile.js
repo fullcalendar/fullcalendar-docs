@@ -3,10 +3,12 @@ const lintspaces = require('gulp-lintspaces');
 
 gulp.task('lintspaces', function() {
   return gulp.src([
-    '{_data,_includes,_layouts,_plugins,_saas,fragments,pages}/**/*.*',
-    '_docs-*/**/*.*',
-    'bin/*',
+    '{_includes,_layouts,fragments,pages}/**/*.{html,md}',
+    '_docs-*/**/*.{html,md}',
+    '_saas/**/*.scss',
     'assets/**/*.{js,css,scss}',
+    '_plugins/**/*.rb',
+    'bin/**/*.sh',
     '_config.yml', // top level
     'gulpfile.js' // top level
   ])
