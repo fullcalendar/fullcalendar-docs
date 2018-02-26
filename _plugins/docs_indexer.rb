@@ -1,5 +1,5 @@
 
-class Generator < Jekyll::Generator
+class DocsIndexer < Jekyll::Generator
 
   def generate(site)
     version_objs = site.config['available_versions'] # from _config.yml
