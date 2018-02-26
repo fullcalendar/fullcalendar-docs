@@ -4,7 +4,7 @@ title: Download Scheduler
 layout: scheduler-text
 ---
 
-{% assign latest_version = site.data.fullcalendar-scheduler-releases[0].version %}
+{% assign latest_version = site.data.releases.fullcalendar-scheduler[0].version %}
 
 # Free Trial
 

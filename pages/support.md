@@ -5,7 +5,7 @@ title: Support
 layout: text
 ---
 
-{% assign needs_core_version = site.data.fullcalendar-scheduler-releases[0].needsCore %}
+{% assign needs_core_version = site.data.releases.fullcalendar-scheduler[0].needsCore %}
 
 <div class='sidenote-layout'>
 <div class='sidenote-layout__main' markdown='1'>

@@ -8,15 +8,25 @@ document.addEventListener('DOMContentLoaded', function(event) {
     filterCssUrl: function(url) {
       return !url.match(/\/demo-topbar\.css$/);
     },
+    filterJs: function(js, baseUrl) {
+      return js.replace( // absolutize paths to json feeds
+        /(\:\s*['"])([^'"\n]*\.json)(['"])/g,
+        function(m0, m1, m2, m3) {
+          return m1 + normalizeUrl(m2, baseUrl) + m3;
+        }
+      );
+    },
     filterCss: function(css) {
       return css.replace(/\.demo-topbar[^{]*\{[^}]*?\}/g, '');
     },
     filterHtml: function(html) {
-      return html.replace(/<div[^>]+class=['"]demo-topbar['"][\s\S]*?<\/div>/g, '');
+      return html
+        .replace(/<div[^>]+class\s*=\s*['"]demo-topbar['"][\s\S]*?<\/\s*div\s*>/ig, '')
+        .replace(/<(a|button)[^>]+data-codepen[^>]*>[\s\S]*?<\/\s*\1\s*>/ig, '');
     }
   };
 
-  document.querySelectorAll('[data-codepen]').forEach(function(el) {
+  document.querySelectorAll('a[data-codepen], button[data-codepen]').forEach(function(el) {
     el.addEventListener('click', function() {
       var url = el.getAttribute('data-codepen');
       openEditor(
@@ -31,7 +41,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var newWindow = window.open('', '_blank');
 
     getUrlContent(url, function(content) {
-      var codepenData = buildCodepenData(content, url);
+      var codepenData = buildCodepenData(
+        content,
+        url // all relative refs within the content will be relative to this baseUrl
+      );
 
       newWindow.document.open();
       newWindow.document.write(
@@ -62,7 +75,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     if ((match = BODY_RE.exec(html))) {
       bodyHtml = normalizeCode(
-        settings.filterHtml(match[2])
+        absolutizeHtmlRefs(
+          settings.filterHtml(match[2], baseUrl),
+          baseUrl
+        )
       );
     }
 
@@ -72,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       if (url) {
         jsUrls.push(normalizeUrl(url, baseUrl));
       } else if ((code = normalizeCode(match[2]))) {
+        code = settings.filterJs(code, baseUrl);
         inlineJsBlocks.push(code);
       }
     }
@@ -88,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     while ((match = STYLE_RE.exec(html))) {
       code = match[2];
-      code = settings.filterCss(code);
+      code = settings.filterCss(code, baseUrl);
       code = normalizeCode(code);
 
       if (code) {
@@ -107,6 +124,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
         ((!settings.collapseCss && inlineCssBlocks.length) ? '1' : '0') +
         ((!settings.collapseJs && inlineJsBlocks.length) ? '1' : '0')
     };
+  }
+
+  function absolutizeHtmlRefs(html, baseUrl) {
+    return html.replace(
+      /(src|href)(\s*=\s*['"])([^'"]*)(['"])/g,
+      function(m0, m1, m2, m3, m4) {
+        return m1 + m2 + normalizeUrl(m3, baseUrl) + m4;
+      }
+    )
   }
 
   function normalizeCode(code) {

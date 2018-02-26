@@ -4,7 +4,7 @@ title: Download
 layout: text
 ---
 
-{% assign latest_version = site.data.fullcalendar-releases[0].version %}
+{% assign latest_version = site.data.releases.fullcalendar[0].version %}
 
 <div class='sidenote-layout'>
 <div class='sidenote-layout__main' markdown='1'>

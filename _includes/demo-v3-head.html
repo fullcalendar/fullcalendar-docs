@@ -6,29 +6,36 @@
   </title>
 {% endif %}
 
+{% assign latest_fullcalendar_baseurl = site.data.releases.fullcalendar[0].baseurl %}
+{% assign latest_scheduler_baseurl = site.data.releases.fullcalendar-scheduler[0].baseurl %}
+{% comment %}
+  Will need a more sophisticated solution when new major versions are launched.
+  Or we should just hardcode the path.
+{% endcomment %}
+
 <link href='{{ site.baseurl }}/assets/demo-topbar.css' rel='stylesheet' />
 
-<link href='/releases/fullcalendar/3-latest/fullcalendar.min.css' rel='stylesheet' />
-<link href='/releases/fullcalendar/3-latest/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='{{ latest_fullcalendar_baseurl }}/fullcalendar.min.css' rel='stylesheet' />
+<link href='{{ latest_fullcalendar_baseurl }}/fullcalendar.print.css' rel='stylesheet' media='print' />
 
 {% if page.needs_scheduler %}
-  <link href='/releases/fullcalendar-scheduler/1-latest/scheduler.min.css' rel='stylesheet' />
+  <link href='{{ latest_scheduler_baseurl }}/scheduler.min.css' rel='stylesheet' />
 {% endif %}
 
-<script src='/releases/fullcalendar/3-latest/lib/moment.min.js'></script>
-<script src='/releases/fullcalendar/3-latest/lib/jquery.min.js'></script>
-<script src='/releases/fullcalendar/3-latest/fullcalendar.min.js'></script>
+<script src='{{ latest_fullcalendar_baseurl }}/lib/moment.min.js'></script>
+<script src='{{ latest_fullcalendar_baseurl }}/lib/jquery.min.js'></script>
+<script src='{{ latest_fullcalendar_baseurl }}/fullcalendar.min.js'></script>
 
 {% if page.needs_locales %}
-  <script src='/releases/fullcalendar/3-latest/locale-all.js'></script>
+  <script src='{{ latest_fullcalendar_baseurl }}/locale-all.js'></script>
 {% endif %}
 
 {% if page.needs_google_calendar %}
-  <script src='/releases/fullcalendar/3-latest/gcal.min.js'></script>
+  <script src='{{ latest_fullcalendar_baseurl }}/gcal.min.js'></script>
 {% endif %}
 
 {% if page.needs_scheduler %}
-  <script src='/releases/fullcalendar-scheduler/1-latest/scheduler.min.js'></script>
+  <script src='{{ latest_scheduler_baseurl }}/scheduler.min.js'></script>
 {% endif %}
 
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
