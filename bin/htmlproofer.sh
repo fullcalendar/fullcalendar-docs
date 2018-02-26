@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # Checks built html files for various things, mainly integrity of links.
+# Provide an --external param to verify existence of external links.
 # NOTE: this script does NOT build the site beforehand
 #
 set -e # always immediately exit upon error
@@ -13,14 +14,13 @@ url_ignores="/^\/(releases|issues|scheduler\/license-(details|faq))(\/|$)/"
 
 other_flags=""
 
-# if in TravisCI environment, don't check external link.
-# too many problems with external sites giving bogus status codes.
-if [[ "$TRAVIS_BRANCH" ]]
+if [[ "$1" == "--external" ]]
 then
+  echo
+  echo "Will check external links."
+  echo
+else
   other_flags="$other_flags --disable-external"
-  echo
-  echo "TravisCI detected. Won't check external sites."
-  echo
 fi
 
 # flags:
