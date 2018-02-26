@@ -11,5 +11,6 @@ node_modules
 # rubygems in TravisCI
 vendor
 
-# _data symlinks
+# data
+_data/is-production.json
 _data/*-releases.json
