@@ -37,6 +37,7 @@ children:
       - getEventSourceById
 related:
   - renderEvent
+  - resources-and-events
 demos:
   - google-calendar-demo
   - renderEvent-demo
