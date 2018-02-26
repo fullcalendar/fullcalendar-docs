@@ -6,6 +6,9 @@ children:
       - weekends
       - hiddenDays
       - columnHeader
+      - columnHeaderFormat
+      - columnHeaderText
+      - columnHeaderHtml
   - title: Time-Axis Settings
     children:
       - slotDuration
