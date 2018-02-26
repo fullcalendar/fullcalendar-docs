@@ -1,14 +1,14 @@
 
 {% assign cachebuster = site.time | date: '%s' %}
 
-{% if site.data.is-production %}
+{% if jekyll.environment == "production" %}
   {% include google-analytics.html %}
 {% else %}
   <!-- no Google Analytics. need this comment for linting -->
 {% endif %}
 
 {% if layout.needs_jquery %}
-  {% if site.data.is-production %}
+  {% if jekyll.environment == "production" %}
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   {% else %}
     <script src='{{ site.baseurl }}/assets/jquery.min.js'></script>

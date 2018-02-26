@@ -8,7 +8,6 @@ cd "`dirname $0`/.." # start in project root
 
 npm run lintspaces
 
-# portable way to build the jekyll site
-bundle exec jekyll build
+./bin/build.sh
 
 ./bin/htmlproofer.sh

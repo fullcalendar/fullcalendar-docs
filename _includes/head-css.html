@@ -1,7 +1,7 @@
 
 {% assign cachebuster = site.time | date: '%s' %}
 
-{% if site.data.is-production %}
+{% if jekyll.environment == "production" %}
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,400,700' />
 {% else %}
   <link rel='stylesheet' href='{{ site.baseurl }}/assets/lato/lato-100-400-700.css' />

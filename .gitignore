@@ -10,7 +10,3 @@ node_modules
 
 # rubygems in TravisCI
 vendor
-
-# data
-_data/is-production.json
-_data/*-releases.json
