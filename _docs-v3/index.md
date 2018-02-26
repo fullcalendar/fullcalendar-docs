@@ -54,5 +54,6 @@ children:
   - title: Misc
     children:
       - touch
+      - typescript
       - deprecated
 ---
