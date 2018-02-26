@@ -5,7 +5,6 @@ children:
     children:
       - weekends
       - hiddenDays
-      - columnFormat
       - columnHeader
   - title: Time-Axis Settings
     children:

@@ -5,6 +5,7 @@ children:
     children:
       - theme
       - eventResourceField
+      - columnFormat
   - title: Removed
     children:
       - view-option-hash
