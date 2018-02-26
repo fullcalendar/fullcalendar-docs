@@ -2,7 +2,6 @@
 title: theme
 title_for_landing: Theme
 title_for_hero: Theme
-illustration: Theming
 layout: docs-sublanding
 since_version: 1.3
 ---
