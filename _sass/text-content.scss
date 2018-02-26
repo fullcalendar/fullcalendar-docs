@@ -1,0 +1,109 @@
+
+// a div that contains markup for rich text, like markup derived from markdown
+
+.text-content {
+  @include link-hover-underline;
+
+  line-height: $line-height;
+
+  h1 {
+    margin: 1.4em 0;
+    font-weight: $font-weight-bold;
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin: 2.3em 0 1.3em;
+    font-weight: $font-weight-normal;
+  }
+
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child {
+    margin-top: 1.3em;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p {
+    margin: 1.5em 0;
+  }
+
+  ul,
+  ol,
+  dl {
+    margin: 1.5em 0 1.5em 3em;
+  }
+
+  ul {
+    @include default-list-bullets;
+  }
+
+  li {
+    margin: 1em 0;
+  }
+
+  dl {
+    margin: 2em 0 2em 2em;
+  }
+
+  dt {
+    margin: 1.5em 0 1em;
+  }
+
+  dd {
+    margin: 1em 0 1.5em 2em;
+  }
+
+  table {
+    margin: 1.5em 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  th,
+  td {
+    border: 1px solid #E4E4E4;
+    padding: 7px 10px;
+  }
+
+  th {
+    border-color: #ddd;
+    background-color: #f2f2f2;
+  }
+
+  code { // applies inline AND block-level code example
+    border-style: solid;
+    border-color: #ddd;
+    background: #f2f2f2;
+    font-size: $code-font-size;
+    font-family: $code-font-family;
+
+    // only for inline code. block-level code will override this
+    border-width: 0 0 1px 0; // bottom only
+    padding: 0 2px;
+  }
+
+  pre code { // a block-level code example
+    display: block;
+    margin: 1.5em 0;
+    border-width: 1px; // for all sides
+    padding: .5em .7em;
+    line-height: $code-line-height;
+  }
+}

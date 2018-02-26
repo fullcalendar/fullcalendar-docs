@@ -1,0 +1,24 @@
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+body > .footer {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: ($page-max-content-width + ($page-gutter * 2)); // because border-box
+  padding: 0 $page-gutter;
+}

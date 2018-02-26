@@ -1,0 +1,61 @@
+---
+layout: base
+needs_jquery: true
+custom_css: docs
+custom_js: docs
+---
+
+<div class='hero hero--condensed'>
+  <div class='hero__container container'>
+
+    <div class='hero__main'>
+      <div class='hero__title'>
+        <a href='{{ site.baseurl }}{{ page.version.url }}'>Docs</a>
+        <span class='hero__title-separator'></span>
+        <a href='{{ site.baseurl }}{{ page.category.url }}'>{{ page.category.title }}</a>
+      </div>
+    </div>
+
+    {% include docs-version-warning.html %}
+
+    <div class='hero__controls'>
+      <div class='hero__control'>
+        <a class='hero-button hero-button--condensed'
+          target='_blank'
+          href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path }}'
+          >edit</a>
+      </div>
+      <div class='hero__control'>
+        {% include docs-version-select.html is_condensed=true %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class='docs-article'>
+  <div class='docs-article__container container'>
+
+      {% include docs-article-sidebar.html %}
+
+      <div class='docs-article__main text-content docs-content'>
+
+        {% include docs-premium-notice.html %}
+
+        <h1>
+          {{ page.title }}
+
+          {% if page.since_scheduler_version %}
+            <span class='docs-article__version'>scheduler {{ page.since_scheduler_version }}</span>
+          {% elsif page.since_version %}
+            <span class='docs-article__version'>{{ page.since_version }}</span>
+          {% elsif page.version_notes %}
+            <span class='docs-article__version'>{{ page.version_notes }}</span>
+          {% endif %}
+        </h1>
+
+        {{ content }}
+      </div>
+
+  </div>
+</div>

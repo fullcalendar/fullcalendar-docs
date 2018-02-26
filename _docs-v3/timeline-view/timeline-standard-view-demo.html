@@ -1,0 +1,24 @@
+---
+title: timelineDay, timelineWeek, timelineMonth views
+layout: demo-v3
+needs_scheduler: true
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'timelineDay',
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'timelineDay,timelineWeek,timelineMonth'
+      },
+      resourceLabelText: 'Rooms',
+      resources: '{{ site.baseurl }}/demo-resources.json',
+      events: '{{ site.baseurl }}/demo-events.json?with-resources'
+    });
+
+  });
+
+</script>

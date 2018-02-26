@@ -1,0 +1,15 @@
+---
+layout: base
+is_scheduler: true
+
+# NOTE: subpages should provide a `title` frontmatter variable
+# but it will only be used in the page's root title tag.
+---
+
+{% include scheduler-hero.html %}
+
+<div class='page-content'>
+  <div class='page-content__container container'>
+    {{ content }}
+  </div>
+</div>

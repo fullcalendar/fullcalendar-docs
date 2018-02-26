@@ -1,0 +1,5 @@
+{% if page.description %}
+  <meta name='description' content='{{ page.description }}' />
+{% elsif page.excerpt %}
+  <meta name='description' content='{{ page.excerpt | strip_html }}' />
+{% endif %}

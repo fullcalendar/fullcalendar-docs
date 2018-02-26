@@ -1,0 +1,11 @@
+---
+title: unselect
+type: method
+since_version: 1.4.6
+---
+
+A method for programmatically clearing the current selection.
+
+<div class='spec' markdown='1'>
+.fullCalendar( 'unselect' )
+</div>

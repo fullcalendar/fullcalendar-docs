@@ -1,0 +1,9 @@
+<div class='demo-topbar'>
+  {% if page.description %}
+    {{ page.description }}
+  {% elsif page.title %}
+    {{ page.title }}
+  {% endif %}
+
+  <button data-codepen>edit in codepen</button>
+</div>

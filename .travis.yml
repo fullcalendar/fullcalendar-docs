@@ -1,0 +1,21 @@
+# help from https://jekyllrb.com/docs/continuous-integration/travis-ci/
+
+sudo: false # route build to the container-based infrastructure for a faster build
+
+language: ruby
+rvm:
+  - 2.2.1
+
+before_install:
+  - npm install
+
+cache:
+  bundler: true # for rubygems
+  directories:
+    - node_modules
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+script: ./bin/lint.sh

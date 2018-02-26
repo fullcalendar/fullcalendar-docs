@@ -1,0 +1,26 @@
+---
+title: Deprecated
+children:
+  - abbrevDayHeadings
+  - addEvent
+  - buttons
+  - cacheParam
+  - disableDragging
+  - disableResizing
+  - draggable
+  - eventDragOpacity
+  - eventRevertDuration
+  - fixedWeeks
+  - formatDate-pre-13
+  - getEventsById
+  - monthDisplay
+  - nextMonth
+  - prevMonth
+  - refresh
+  - removeEvent
+  - resize
+  - rightToLeft
+  - title
+  - viewDisplay
+  - weekStart
+---

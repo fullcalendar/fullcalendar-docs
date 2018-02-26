@@ -1,0 +1,21 @@
+<title>
+  {% if page.url == '/' %}
+    FullCalendar - JavaScript Event Calendar
+  {% else %}
+    {% if page.is_docs %}
+      {% if page.slug == 'index' %}
+        Documentation
+      {% else %}
+        {{ page.title }} - Docs
+      {% endif %}
+      {% if page.version %}
+        {% unless page.version.is_latest %}
+          {{ page.version.id }}
+        {% endunless %}
+      {% endif %}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+    | FullCalendar
+  {% endif %}
+</title>

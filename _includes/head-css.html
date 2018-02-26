@@ -1,0 +1,14 @@
+
+{% assign cachebuster = site.time | date: '%s' %}
+
+{% if site.data.is-production %}
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,400,700' />
+{% else %}
+  <link rel='stylesheet' href='{{ site.baseurl }}/assets/lato/lato-100-400-700.css' />
+{% endif %}
+
+<link href='{{ site.baseurl }}/assets/base.css?{{ cachebuster }}' rel='stylesheet' />
+
+{% for name in layout.custom_css %}
+  <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ name }}.css?{{ cachebuster }}' />
+{% endfor %}

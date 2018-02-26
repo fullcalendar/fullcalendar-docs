@@ -1,0 +1,47 @@
+
+<div class='docs-landing'>
+  {% for child_group in page.child_groups %}
+    <div class='docs-landing__section'>
+      <h2 class='docs-landing__section-title'>{{ child_group.title }}</h2>
+      <div class='docs-landing__section-content'>
+        <ul class='docs-landing__card'>
+          {% for article in child_group.children %}
+            <li class='docs-landing__card-section'>
+              <a href='{{ site.baseurl }}{{ article.url }}'>
+                {{ article.title }}
+                {% if article.is_premium %}
+                  <img src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png' width='12' height='19'
+                    title='needs Scheduler'
+                    alt='lightning bolt'
+                    />
+                {% endif %}
+              </a>
+              <ul>
+                {% for article_child_group in article.child_groups %}
+                  {% unless article_child_group.is_related %}
+                    {% if article_child_group.title %}
+                      <li>
+                        {{ article_child_group.title }}
+                        <ul>
+                    {% endif %}
+                    {% for subarticle in article_child_group.children %}
+                      <li>
+                        <a href='{{ site.baseurl }}{{ subarticle.url }}'>
+                          {{ subarticle.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                    {% if article_child_group.title %}
+                        </ul>
+                      </li>
+                    {% endif %}
+                  {% endunless %}
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+</div>

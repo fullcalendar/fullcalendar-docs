@@ -1,0 +1,29 @@
+<div class='docs-sublanding__sidebar'>
+
+  {% include docs-premium-notice.html %}
+
+  {% if page.demo_documents.size == 1 %}
+    <h2 class='docs-sublanding__sidebar-title'>Demo:</h2>
+  {% elsif page.demo_documents.size > 1 %}
+    <h2 class='docs-sublanding__sidebar-title'>Demos:</h2>
+  {% endif %}
+
+  {% for demo_document in page.demo_documents %}
+    <a href='{{ site.baseurl }}{{ demo_document.url }}' target='_blank' class='docs-sublanding__image'>
+      <img src='{{ site.baseurl }}{{ demo_document.slug }}.png'  />
+      <div class='docs-sublanding__image-caption'>
+        {{ demo_document.title }}
+      </div>
+    </a>
+  {% endfor %}
+
+  {% for image in page.images %}
+    <div class='docs-sublanding__image'>
+      <img src='{{ image.filename }}'  />
+      <div class='docs-sublanding__image-caption'>
+        {{ image.caption }}
+      </div>
+    </div>
+  {% endfor %}
+
+</div>

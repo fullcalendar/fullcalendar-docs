@@ -1,0 +1,28 @@
+---
+title: Custom 4-day agenda view
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'agendaFourDay',
+      groupByResource: true,
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'agendaDay,agendaFourDay'
+      },
+      views: {
+        agendaFourDay: {
+          type: 'agenda',
+          duration: { days: 4 }
+        }
+      },
+      events: '{{ site.baseurl }}/demo-events.json'
+    });
+
+  });
+
+</script>

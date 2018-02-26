@@ -1,0 +1,34 @@
+<meta charset='utf-8' />
+
+{% if page.title %}
+  <title>
+    {{ page.title }} - Demos | FullCalendar
+  </title>
+{% endif %}
+
+<link href='{{ site.baseurl }}/assets/demo-topbar.css' rel='stylesheet' />
+
+<link href='/releases/fullcalendar/3-latest/fullcalendar.min.css' rel='stylesheet' />
+<link href='/releases/fullcalendar/3-latest/fullcalendar.print.css' rel='stylesheet' media='print' />
+
+{% if page.needs_scheduler %}
+  <link href='/releases/fullcalendar-scheduler/1-latest/scheduler.min.css' rel='stylesheet' />
+{% endif %}
+
+<script src='/releases/fullcalendar/3-latest/lib/moment.min.js'></script>
+<script src='/releases/fullcalendar/3-latest/lib/jquery.min.js'></script>
+<script src='/releases/fullcalendar/3-latest/fullcalendar.min.js'></script>
+
+{% if page.needs_locales %}
+  <script src='/releases/fullcalendar/3-latest/locale-all.js'></script>
+{% endif %}
+
+{% if page.needs_google_calendar %}
+  <script src='/releases/fullcalendar/3-latest/gcal.min.js'></script>
+{% endif %}
+
+{% if page.needs_scheduler %}
+  <script src='/releases/fullcalendar-scheduler/1-latest/scheduler.min.js'></script>
+{% endif %}
+
+<script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>

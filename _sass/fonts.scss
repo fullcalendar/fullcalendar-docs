@@ -1,0 +1,16 @@
+
+html {
+  font-size: $font-size;
+  font-weight: $font-weight-normal;
+  font-family: $font-family;
+  color: $font-color;
+}
+
+a {
+  color: $link-color;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}

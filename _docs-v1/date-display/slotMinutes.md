@@ -1,0 +1,12 @@
+---
+title: slotMinutes
+since_version: 1.4
+---
+
+The frequency for displaying time slots, in minutes.
+
+<div class='spec' markdown='1'>
+Integer, *default*: `30`
+</div>
+
+The default will make a slot every half hour.

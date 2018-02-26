@@ -1,0 +1,18 @@
+
+// a list of items that fit on the same line of text, separated by bullets
+
+.inline-list {
+}
+
+.inline-list li {
+  display: inline;
+}
+
+.inline-list li:before {
+  content: "\000B7\000A0"; // put dots in between the links
+  margin: 0 4px;
+}
+
+.inline-list li:first-child:before {
+  display: none; // don't put dot before first one
+}

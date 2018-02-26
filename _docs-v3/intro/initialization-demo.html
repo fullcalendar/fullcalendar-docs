@@ -1,0 +1,70 @@
+---
+description: initialization of standard calendar
+layout: demo-v3
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'month',
+      defaultDate: '{{ ym }}-07',
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      events: [
+        {
+          title: 'All Day Event',
+          start: '{{ ym }}-01'
+        },
+        {
+          title: 'Long Event',
+          start: '{{ ym }}-07',
+          end: '{{ ym }}-10'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '{{ ym }}-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '{{ ym }}-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '{{ ym }}-11',
+          end: '{{ ym }}-13'
+        },
+        {
+          title: 'Meeting',
+          start: '{{ ym }}-12T10:30:00',
+          end: '{{ ym }}-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '{{ ym }}-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '{{ ym }}-12T14:30:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '{{ ym }}-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '{{ ym }}-28'
+        }
+      ]
+    });
+
+  });
+
+</script>

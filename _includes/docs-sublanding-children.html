@@ -1,0 +1,26 @@
+
+{% for group in page.child_groups %}
+  <div class='docs-sublanding__child-group'>
+    {% if group.is_related %}
+      <div class='docs-sublanding__child-group-title'>See Also</div>
+    {% elsif group.title %}
+      <div class='docs-sublanding__child-group-title'>{{ group.title }}</div>
+    {% endif %}
+    <div class='term-table'>
+      {% for article in group.children %}
+        <a class='term-table__term' href='{{ site.baseurl }}{{ article.url }}'>
+          <div class='term-table__term-title'>
+            {{ article.title }}
+          </div>
+          <div class='term-table__term-description'>
+            {% if article.description %}
+              {{ article.description }}
+            {% else %}
+              {{ article.excerpt | strip_html }}
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}

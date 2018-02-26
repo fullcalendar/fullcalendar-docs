@@ -1,0 +1,69 @@
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hover-underline { // used on the <a> tag
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin link-hover-underline { // used on the container of the <a> tags
+  a {
+    @include hover-underline;
+  }
+}
+
+@mixin left-triangle($width, $height, $color) {
+  border-style: solid;
+  border-width: ($height / 2) $width ($height / 2) 0;
+  border-color: transparent $color transparent transparent;
+}
+
+@mixin down-triangle($width, $height, $color) {
+  border-style: solid;
+  border-width: ($height) ($width / 2) 0 ($width / 2);
+  border-color: $color transparent transparent transparent;
+}
+
+@mixin absolutely-center($width, $height) { // should give dimensions of the item within the container
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: ($height / -2) 0 0 ($width / -2);
+}
+
+@mixin control-focus-border {
+  &:focus {
+    outline: 0; // reset browser default
+    border: 1px solid $control-focus-border-color;
+  }
+}
+
+@mixin reset-appearance {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+@mixin default-list-bullets { // put this on a <ul>
+  list-style-position: outside;
+  list-style: disc;
+
+  ul {
+    list-style-position: outside;
+    list-style: circle;
+  }
+
+  ul ul {
+    list-style: square;
+  }
+}

@@ -1,0 +1,21 @@
+---
+title: basicDay and basicWeek views
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'basicWeek',
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'basicDay,basicWeek'
+      },
+      events: '{{ site.baseurl }}/demo-events.json'
+    });
+
+  });
+
+</script>

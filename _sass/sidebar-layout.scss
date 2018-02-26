@@ -1,0 +1,34 @@
+
+.sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.sidebar-layout__main {
+  flex-grow: 1;
+
+  > *:first-child {
+    margin-top: 0; // margins compound now :( hack
+  }
+}
+
+.sidebar-layout__sidebar { // no specified width. will shrink by default
+  @include link-hover-underline;
+  padding-left: 45px;
+  white-space: nowrap;
+
+  h3 {
+    font-size: 16px;
+    margin: 3em 0 1.4em;
+  }
+
+  li {
+    font-size: 14px;
+    margin: 1.2em 0;
+  }
+
+  > *:first-child {
+    margin-top: .4em; // margins compound now :( hack
+  }
+}

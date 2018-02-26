@@ -1,0 +1,13 @@
+
+{% if page.version.is_latest %}
+  <div class='hero__warning' style='display:none'>
+    {% comment %}for JS to dynamically inject warning{% endcomment %}
+  </div>
+{% else %}
+  <div class='hero__warning'>
+    These docs are for an old release.
+    <a href='{{ site.baseurl }}/docs/upgrading-to-v2'>
+      Info on upgrading to version 2/3
+    </a>
+  </div>
+{% endif %}

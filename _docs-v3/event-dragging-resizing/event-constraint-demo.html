@@ -1,0 +1,76 @@
+---
+title: Constrain event dragging by certain criteria
+description: Prevents events from dragging into the red. Events in green must stay in green
+layout: demo-v3
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek'
+      },
+      defaultDate: '{{ ym }}-12',
+      businessHours: true, // display business hours
+      editable: true,
+      events: [
+        {
+          title: 'Business Lunch',
+          start: '{{ ym }}-03T13:00:00',
+          constraint: 'businessHours'
+        },
+        {
+          title: 'Meeting',
+          start: '{{ ym }}-13T11:00:00',
+          constraint: 'availableForMeeting', // defined below
+          color: '#257e4a'
+        },
+        {
+          title: 'Conference',
+          start: '{{ ym }}-18',
+          end: '{{ ym }}-20'
+        },
+        {
+          title: 'Party',
+          start: '{{ ym }}-29T20:00:00'
+        },
+
+        // areas where "Meeting" must be dropped
+        {
+          id: 'availableForMeeting',
+          start: '{{ ym }}-11T10:00:00',
+          end: '{{ ym }}-11T16:00:00',
+          rendering: 'background'
+        },
+        {
+          id: 'availableForMeeting',
+          start: '{{ ym }}-13T10:00:00',
+          end: '{{ ym }}-13T16:00:00',
+          rendering: 'background'
+        },
+
+        // red areas where no events can be dropped
+        {
+          start: '{{ ym }}-24',
+          end: '{{ ym }}-28',
+          overlap: false,
+          rendering: 'background',
+          color: '#ff9f89'
+        },
+        {
+          start: '{{ ym }}-06',
+          end: '{{ ym }}-08',
+          overlap: false,
+          rendering: 'background',
+          color: '#ff9f89'
+        }
+      ]
+    });
+
+  });
+
+</script>

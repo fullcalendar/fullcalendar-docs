@@ -1,0 +1,46 @@
+
+# NOTE: keep in sync with .gitignore
+# (except for dotfiles which are automatically excluded)
+exclude:
+  - node_modules
+  - vendor
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - gulpfile.js
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+fullcalendar_org: https://github.com/fullcalendar
+fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
+fullcalendar_scheduler_repo: https://github.com/fullcalendar/fullcalendar-scheduler
+
+# ordered by how they should appear in UI
+available_versions:
+
+  - id: v3
+    collection: docs-v3
+    index_link: /docs
+    is_latest: true
+
+  - id: v2
+    aliased_to: v3
+
+  - id: v1
+    collection: docs-v1
+    index_link: /docs/v1
+
+# output:true says a page should be generated for each document
+collections:
+
+  docs-v3:
+    output: true
+    permalink: /docs/:slug
+
+  docs-v1:
+    output: true
+    permalink: /docs/v1/:slug

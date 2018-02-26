@@ -1,0 +1,32 @@
+
+{% if page.category.child_groups %}
+  <div class='docs-article__sidebar'>
+    <ul>
+      {% for child_group in page.category.child_groups %}
+        <li>
+          {% if child_group.is_related %}
+            <h3 class='docs-article__sidebar-title'>See Also</h3>
+          {% elsif child_group.title %}
+            <h3 class='docs-article__sidebar-title'>{{ child_group.title }}</h3>
+          {% endif %}
+          <ul>
+            {% for article in child_group.children %}
+              <li class='docs-article__sidebar-item {%
+                if article.slug == page.slug
+              %}docs-article__sidebar-item--selected{%
+                endif
+              %} {% if child_group.is_related
+              %}docs-article__sidebar-item--jump{%
+                endif
+              %}'>
+                <a href='{{ site.baseurl }}{{ article.url }}'>
+                  <span>{{ article.title }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

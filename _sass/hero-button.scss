@@ -1,0 +1,28 @@
+
+.hero-button {
+  @include control-focus-border;
+  display: inline-block;
+  vertical-align: top; // hack for all controls
+  height: $control-height-normal;
+  padding: 0 $control-h-padding;
+  border: 1px solid $control-border-color;
+  font-size: $control-font-size;
+  line-height: $control-height-normal - 2px; // minus border
+  color: #fff;
+  cursor: pointer;
+}
+
+a.hero-button { // resets for native <a>
+  text-decoration: none;
+}
+
+button.hero-button { // resets for native <button>
+  @include reset-appearance;
+  background: none;
+  font-family: inherit;
+}
+
+.hero-button--condensed {
+  height: $control-height-condensed;
+  line-height: $control-height-condensed - 2px;
+}

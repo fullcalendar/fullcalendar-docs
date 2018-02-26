@@ -1,0 +1,34 @@
+---
+title: Custom-duration timeline views
+layout: demo-v3
+needs_scheduler: true
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'today prev,next',
+        center: 'title',
+        right: 'timelineDay,timelineTenDay,timelineMonth,timelineYear'
+      },
+      defaultView: 'timelineTenDay',
+      views: {
+        timelineDay: {
+          buttonText: ':15 slots',
+          slotDuration: '00:15'
+        },
+        timelineTenDay: {
+          type: 'timeline',
+          duration: { days: 10 }
+        }
+      },
+      resourceLabelText: 'Rooms',
+      resources: '{{ site.baseurl }}/demo-resources.json?with-nesting',
+      events: '{{ site.baseurl }}/demo-events.json?with-resources'
+    });
+
+  });
+
+</script>

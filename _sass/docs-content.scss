@@ -1,0 +1,62 @@
+
+.docs-content {
+
+  // deprecated/removed notice that goes at the top
+  .removed-notice {
+    margin: 1.2em 0;
+    border: 1px solid #D49D49;
+    padding: .5em;
+    background: rgb(255, 224, 190);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // technical details of the setting or method
+  .spec {
+    background: #d7f0f7;
+    border: 1px solid #a9dded;
+    margin: 1.5em 0;
+    padding: .5em;
+
+    font-size: $code-font-size;
+    font-family: $code-font-family;
+    line-height: $code-line-height;
+
+    code {
+      font-size: inherit;
+    }
+
+    pre code { // block code
+      margin: .5em 0 0 0;
+      border-color: #d3d3d3;
+    }
+
+    a {
+      color: #0084AD;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // some type of warning towards top of page
+  .warning {
+    margin: 2em 0;
+    border: 1px solid rgb(239, 224, 176);
+    padding: 10px;
+    background: rgb(255, 247, 222);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // version notice that goes at the bottom
+  .version-info {
+    margin: 3.5em 0 1em;
+    font-size: 14px;
+  }
+}

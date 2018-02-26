@@ -1,0 +1,33 @@
+
+<div class='hero'>
+  <div class='hero__container container'>
+    <div class='hero__main'>
+      {% if page.is_scheduler_index %}
+        <h1 class='hero__title'>
+          Scheduler
+        </h1>
+        <p class='hero__subtitle'>
+          A premium add-on for displaying events and resources
+        </p>
+      {% else %}
+        <div class='hero__title'>
+          <a href='{{ site.baseurl }}/scheduler'>Scheduler</a>
+        </div>
+      {% endif %}
+    </div>
+    <ul class='hero__nav'>
+      <li class='hero__nav-item {% if page.is_scheduler_index %}hero__nav-item--selected{% endif %}'>
+        <a href='{{ site.baseurl }}/scheduler' class='hero__nav-link'>Demos</a>
+      </li>
+      <li class='hero__nav-item {% if page.url == '/scheduler/purchase' %}hero__nav-item--selected{% endif %}'>
+        <a href='{{ site.baseurl }}/scheduler/purchase' class='hero__nav-link'>Purchase</a>
+      </li>
+      <li class='hero__nav-item {% if page.url == '/scheduler/download' %}hero__nav-item--selected{% endif %}'>
+        <a href='{{ site.baseurl }}/scheduler/download' class='hero__nav-link'>Free Trial</a>
+      </li>
+      <li class='hero__nav-item {% if page.url == '/scheduler/license' %}hero__nav-item--selected{% endif %}'>
+        <a href='{{ site.baseurl }}/scheduler/license' class='hero__nav-link'>License</a>
+      </li>
+    </ul>
+  </div>
+</div>

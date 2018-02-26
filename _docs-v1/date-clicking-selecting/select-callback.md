@@ -1,0 +1,21 @@
+---
+title: select
+type: callback
+since_version: 1.4.6
+---
+
+Triggered when a date/time selection is made.
+
+<div class='spec' markdown='1'>
+function( *startDate*, *endDate*, *allDay*, *jsEvent*, *view* )
+</div>
+
+`startDate` is a Date object indicating the beginning of the selection.
+
+`endDate` is a Date object indicating the end of the selection. It follows the same rules as the [Event Object](event-object) for inclusivity/exclusivity: when `allDay` is `true`, `endDate` *includes* the last day.
+
+`allDay` is a boolean indicating if entire days were selected (days in month view or the "all-day" slot in the agenda view) or time slots were selected.
+
+`jsEvent` holds the primitive JavaScript event with information such as mouse coordinates.
+If `select` has been triggered via the [select method](select-method), `jsEvent` will be `undefined`.
+(added in version 1.4.7)

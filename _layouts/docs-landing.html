@@ -1,0 +1,40 @@
+---
+layout: base
+needs_jquery: true
+custom_css: docs
+custom_js: docs
+---
+
+<div class='hero'>
+  <div class='hero__container container'>
+
+    <div class='hero__main'>
+      <h1 class='hero__title'>
+        Documentation
+      </h1>
+    </div>
+
+    {% include docs-version-warning.html %}
+
+    <div class='hero__controls'>
+      <div class='hero__control'>
+        {% include docs-layout-toggler.html %}
+      </div>
+      <div class='hero__control'>
+        {% include docs-version-select.html %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class='page-content'>
+  <div class='page-content__container container'>
+    <div id='main'>
+      {% include docs-landing-main.html %}
+    </div>
+    <div id='toc' style='display:none'>
+      {% include docs-landing-toc.html %}
+    </div>
+  </div>
+</div>

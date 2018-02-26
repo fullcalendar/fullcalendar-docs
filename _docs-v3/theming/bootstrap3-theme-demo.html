@@ -1,0 +1,24 @@
+---
+title: Bootstrap 3 theme
+layout: demo-v3
+---
+<link href='https://bootswatch.com/3/lumen/bootstrap.min.css' rel='stylesheet' />
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      themeSystem: 'bootstrap3',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listMonth'
+      },
+      weekNumbers: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: '{{ site.baseurl }}/demo-events.json'
+    });
+
+  });
+
+</script>
