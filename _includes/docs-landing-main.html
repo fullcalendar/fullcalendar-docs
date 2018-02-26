@@ -8,7 +8,13 @@
           {% for article in child_group.children %}
             <li class='docs-landing__illustration'>
               <a class='docs-landing__illustration-link' href='{{ site.baseurl }}{{ article.url }}'>
-                <img src='{{ site.baseurl }}/assets/images/docs-categories/{{ article.slug }}@2x.png'
+                <img src='{{ site.baseurl }}/assets/images/docs-categories/{%
+                  if article.illustration
+                %}{{ article.illustration }}{%
+                  else
+                %}{{ article.slug }}{%
+                  endif
+                %}@2x.png'
                   width='120'
                   height='120'
                   alt='{{ article.title }}'
