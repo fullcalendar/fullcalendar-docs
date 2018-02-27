@@ -55,8 +55,7 @@ a.term-table__term {
   }
 
   &:hover {
-    .term-table__term-title,
-    .term-table__term-description {
+    .term-table__term-title {
       color: $link-color;
     }
   }
