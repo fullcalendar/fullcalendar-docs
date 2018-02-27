@@ -45,18 +45,16 @@ custom_js: docs
   <div class='docs-sublanding__container container'>
 
     <div class='docs-sublanding__main'>
-      <div class='docs-sublanding__main-inner'>
-        <div class='docs-content text-content'>
+      <div class='docs-sublanding__content docs-content text-content'>
 
-          {% if page.title_for_hero %}
-            <h1>{{ page.title | escape }}</h1>
-          {% endif %}
+        {% if page.title_for_hero %}
+          <h1>{{ page.title | escape }}</h1>
+        {% endif %}
 
-          {{ content }}
-        </div>
-        <div class='docs-sublanding__children'>
-          {% include docs-sublanding-children.html %}
-        </div>
+        {{ content }}
+      </div>
+      <div class='docs-sublanding__children'>
+        {% include docs-sublanding-children.html %}
       </div>
     </div>
 

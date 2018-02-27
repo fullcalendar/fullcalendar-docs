@@ -77,6 +77,11 @@
 .docs-article__main {
   flex-grow: 1;
   padding-bottom: 1em;
+
+  .docs-premium-notice {
+    float: right;
+    margin-top: 2em;
+  }
 }
 
 .docs-article__version {

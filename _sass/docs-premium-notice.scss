@@ -1,11 +1,7 @@
 
 .docs-premium-notice {
   @include hover-underline;
-  position: relative;
-  top: -2px;
-  float: right;
   color: #a2a2a2;
-  margin-top: 2em;
 
   img {
     margin: -50% 0 -50% 2px;

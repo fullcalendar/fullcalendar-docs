@@ -1,5 +1,7 @@
 
-$docs-sublanding-sidebar-width: 300px;
+// FYI: most images are naturally 300px wide
+// FYI: border is 14px in horizontal width
+$docs-sublanding-sidebar-width: 300px + 14px;
 
 .docs-sublanding {
 }
@@ -10,30 +12,38 @@ $docs-sublanding-sidebar-width: 300px;
 
 .docs-sublanding__main {
   flex-grow: 1;
+  margin-bottom: 3em;
 }
 
-.docs-sublanding__main-inner {
+.docs-sublanding__content {
   margin-top: 2em;
-  margin-bottom: 4em;
 }
 
 .docs-sublanding__sidebar {
-  width: $docs-sublanding-sidebar-width + 60px;
   flex-grow: 0;
   flex-shrink: 0;
-  padding-bottom: 2em;
+  width: $docs-sublanding-sidebar-width + 60px;
   padding-left: 60px;
+  margin-bottom: 2em;
   line-height: $line-height;
+
+  .docs-premium-notice {
+    position: relative;
+    top: -1px; // because icon's valignment looks wierd
+    float: right;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
 }
 
 .docs-sublanding__sidebar-title {
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: -1em;
   font-weight: $font-weight-bold;
 }
 
 .docs-sublanding__image {
-  margin-bottom: 2em;
+  margin: 2em 0;
   color: #999; // for caption and caption underline
 
   img {
@@ -51,6 +61,7 @@ a.docs-sublanding__image {
 .docs-sublanding__image-caption {
   margin: .5em 0;
   font-size: 14px;
+  line-height: 1.4;
 }
 
 .docs-sublanding__children {
@@ -88,22 +99,17 @@ $term-table-entry-title-width: 250px;
     border-bottom: 1px dotted #ccc;
     margin-top: -8px; // move up to baseline
   }
-
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
 }
 
 .term-table__term-title {
   position: relative;
   z-index: 3; // above line
   float: left;
-  background: #fff;
+  min-height: $line-height;
   padding-right: 10px;
   margin-right: 10px;
   font-weight: bold;
+  background: #fff;
 }
 
 .term-table__term-description {
@@ -111,6 +117,7 @@ $term-table-entry-title-width: 250px;
   z-index: 2; // above line
   margin-left: $term-table-entry-title-width;
   padding-left: 10px;
+  min-height: $line-height;
   background: #fff;
 }
 

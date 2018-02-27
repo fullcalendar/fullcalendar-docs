@@ -1,29 +1,35 @@
-<div class='docs-sublanding__sidebar'>
 
-  {% include docs-premium-notice.html %}
+{% if page.demo_documents or page.images %}
+  <div class='docs-sublanding__sidebar'>
 
-  {% if page.demo_documents.size == 1 %}
-    <h2 class='docs-sublanding__sidebar-title'>Demo:</h2>
-  {% elsif page.demo_documents.size > 1 %}
-    <h2 class='docs-sublanding__sidebar-title'>Demos:</h2>
-  {% endif %}
+    {% include docs-premium-notice.html %}
 
-  {% for demo_document in page.demo_documents %}
-    <a href='{{ site.baseurl }}{{ demo_document.url | escape }}' target='_blank' class='docs-sublanding__image'>
-      <img src='{{ site.baseurl }}{{ demo_document.slug | escape }}.png' alt='Screenshot: {{ demo_document.title | escape }}' />
-      <div class='docs-sublanding__image-caption'>
-        {{ demo_document.title | escape }}
+    {% if page.demo_documents.size == 1 %}
+      <h2 class='docs-sublanding__sidebar-title'>Demo:</h2>
+    {% elsif page.demo_documents.size > 1 %}
+      <h2 class='docs-sublanding__sidebar-title'>Demos:</h2>
+    {% endif %}
+
+    {% for demo_document in page.demo_documents %}
+      <a class='docs-sublanding__image'
+        href='{{ site.baseurl }}{{ demo_document.url | escape }}' target='_blank'>
+        <img src='{{ site.baseurl }}{{ demo_document.slug | escape }}.png'
+          alt='Screenshot: {{ demo_document.title | escape }}' />
+        <div class='docs-sublanding__image-caption'>
+          {{ demo_document.title | escape }}
+        </div>
+      </a>
+    {% endfor %}
+
+    {% for image in page.images %}
+      <div class='docs-sublanding__image'>
+        <img src='{{ image.filename | escape }}'
+          alt='Screenshot: {{ image.caption | escape }}' />
+        <div class='docs-sublanding__image-caption'>
+          {{ image.caption | escape }}
+        </div>
       </div>
-    </a>
-  {% endfor %}
+    {% endfor %}
 
-  {% for image in page.images %}
-    <div class='docs-sublanding__image'>
-      <img src='{{ image.filename | escape }}' alt='Screenshot: {{ image.caption | escape }}' />
-      <div class='docs-sublanding__image-caption'>
-        {{ image.caption | escape }}
-      </div>
-    </div>
-  {% endfor %}
-
-</div>
+  </div>
+{% endif %}
