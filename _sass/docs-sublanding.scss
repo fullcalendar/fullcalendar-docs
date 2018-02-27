@@ -69,74 +69,11 @@ a.docs-sublanding__image {
 }
 
 .docs-sublanding__child-group {
-  margin: 2em 0;
+  margin: 2.5em 0;
 }
 
 .docs-sublanding__child-group-title {
-  margin: 2em 0 1.5em;
+  margin-bottom: 1.5em;
   text-transform: uppercase;
   color: #999;
-}
-
-$term-table-entry-title-width: 250px;
-
-.term-table {
-  margin: 1em 0;
-}
-
-.term-table__term {
-  position: relative;
-  z-index: 1;
-  margin: 1em 0;
-
-  &:before { // dotted line
-    content: '\00a0'; // non-breaking space, to create height
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-bottom: 1px dotted #ccc;
-    margin-top: -8px; // move up to baseline
-  }
-}
-
-.term-table__term-title {
-  position: relative;
-  z-index: 3; // above line
-  float: left;
-  min-height: $line-height;
-  padding-right: 10px;
-  margin-right: 10px;
-  font-weight: bold;
-  background: #fff;
-}
-
-.term-table__term-description {
-  position: relative;
-  z-index: 2; // above line
-  margin-left: $term-table-entry-title-width;
-  padding-left: 10px;
-  min-height: $line-height;
-  background: #fff;
-}
-
-a.term-table__term {
-  display: block;
-  text-decoration: none;
-
-  .term-table__term-title {
-    color: $link-dark-color;
-  }
-
-  .term-table__term-description {
-    color: $font-color;
-  }
-
-  &:hover {
-    .term-table__term-title,
-    .term-table__term-description {
-      color: $link-color;
-    }
-  }
 }
