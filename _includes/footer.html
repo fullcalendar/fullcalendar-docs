@@ -2,24 +2,46 @@
 <div class='footer'>
   <div class='footer__container container'>
     <div class='footer__left'>
-      <form target='_blank' action='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=pp_url'>
-        <p>
-          Does your company use FullCalendar?
-        </p>
-        <input class='footer-text-input' type='text' name='entry.428396311' placeholder="Enter your company's name" />
-        <button class='footer-button'>continue &gt;</button>
-      </form>
+      {% comment %}
+        <form target='_blank' action='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=pp_url'>
+          <p>
+            Does your company use FullCalendar?
+          </p>
+          <input class='footer-text-input' type='text' name='entry.428396311' placeholder="Enter your company's name" />
+          <button class='footer-button'>continue &gt;</button>
+        </form>
+      {% endcomment %}
+      <ul>
+        <p>Recent Blog Posts:</p>
+        <li>
+          Feb 28 &mdash;
+          <a href='https://fullcalendar.io/blog'>
+            The Docs Have Been Redesigned
+          </a>
+        </li>
+        <li>
+          Jan 31 &mdash;
+          <a href='https://fullcalendar.io/blog/2018/01/typescript-support/'>
+            Built-in TypeScript Support in Version 3.8.2
+          </a>
+        </li>
+      </ul>
     </div>
     <div class='footer__right'>
       <p>
         &copy; 2017&nbsp; FullCalendar LLC
       </p>
-      <ul class='footer__links inline-list'>
+      <ul class='inline-list'>
         <li><a href='{{ site.fullcalendar_org | escape }}' target='_blank'>GitHub</a></li>
         <li><a href='https://fullcalendar.io/blog'>Blog</a></li>
         <li><a href='{{ site.baseurl }}/donate'>Donate</a></li>
         <li><a href='{{ site.baseurl }}/license'>License Information</a></li>
       </ul>
+      <p>
+        <a href='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=sf_link'>
+          Does your company use FullCalendar?
+        </a>
+      </p>
     </div>
   </div>
 </div>
