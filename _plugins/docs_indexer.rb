@@ -109,7 +109,7 @@ def build_category_child_groups(raw_children, raw_related, doc_hash)
 
   for node in raw_children
 
-    if node.instance_of? String
+    if node.instance_of?(String)
       if doc_hash[node]
         top_level_docs.push(doc_hash[node])
       else
