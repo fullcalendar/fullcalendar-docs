@@ -8,6 +8,6 @@ cd "`dirname $0`/.." # start in project root
 
 npm run lintspaces
 
-./bin/build.sh
+./bin/update.sh
 
 ./bin/htmlproofer.sh
