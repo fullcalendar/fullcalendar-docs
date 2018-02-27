@@ -12,7 +12,7 @@ disable_base_styles: true
     $('#calendar').fullCalendar({
       defaultView: 'month',
       height: 'parent',
-      events: '{{ site.baseurl }}/demo-events.json'
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
 
   });

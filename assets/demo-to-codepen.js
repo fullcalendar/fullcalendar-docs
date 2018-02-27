@@ -8,13 +8,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     filterCssUrl: function(url) {
       return !url.match(/\/demo-topbar\.css$/);
     },
-    filterJs: function(js, baseUrl) {
-      return js.replace( // absolutize paths to json feeds
-        /(\:\s*['"])([^'"\n]*\.json)(['"])/g,
-        function(m0, m1, m2, m3) {
-          return m1 + normalizeUrl(m2, baseUrl) + m3;
-        }
-      );
+    filterJs: function(js) {
+      return js;
     },
     filterCss: function(css) {
       return css.replace(/\.demo-topbar[^{]*\{[^}]*?\}/g, '');

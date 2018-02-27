@@ -17,7 +17,7 @@ disable_base_styles: true
       editable: true,
       selectable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: '{{ site.baseurl }}/demo-events.json',
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json',
       loading: function(bool) {
         $('#loading').toggle(bool);
       },
