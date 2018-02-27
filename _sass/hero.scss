@@ -23,10 +23,10 @@
   a {
     color: #fff;
     text-decoration: none;
+    padding-bottom: 3px;
 
     &:hover {
-      padding-bottom: 2px;
-      border-bottom: 1px solid $hero-bg-dark-color;
+      border-bottom: 1px solid $control-border-color;
     }
   }
 }
@@ -34,7 +34,7 @@
 .hero__title-separator {
   margin-left: .3em;
   margin-right: .3em;
-  color: $hero-bg-dark-color;
+  color: $control-border-color;
 
   &:after {
     content: '/';
