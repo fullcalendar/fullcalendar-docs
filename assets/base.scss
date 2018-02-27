@@ -18,6 +18,7 @@
 
 // text-based components
 @import 'inline-list';
+@import 'inline-thunderbolt';
 @import 'text-content';
 @import 'code-highlight';
 
@@ -29,9 +30,3 @@
 @import 'hero-button';
 @import 'hero-toggler';
 @import 'hero-select';
-
-
-.inline-thunderbolt {
-  vertical-align: middle;
-  margin: -50% 0 -50% 2px;
-}
