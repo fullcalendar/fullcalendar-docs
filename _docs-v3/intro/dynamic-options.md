@@ -1,5 +1,5 @@
 ---
-title: Set/Get Options Dynamically
+title: Get/Set Options Dynamically
 ---
 
 You can get/set calendar options after a calendar has already been initialized.

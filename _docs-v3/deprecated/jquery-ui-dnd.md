@@ -1,5 +1,5 @@
 ---
-title: Dragging and Resizing Prior to v2.1.0
+title: Dragging and Resizing before v2.1.0
 description: For older versions of the library, dependency requirements for drag-n-drop and resizing.
 type: guide
 ---
