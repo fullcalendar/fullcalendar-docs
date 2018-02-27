@@ -28,8 +28,6 @@ $docs-sublanding-sidebar-width: 300px + 14px;
   line-height: $line-height;
 
   .docs-premium-notice {
-    position: relative;
-    top: -1px; // because icon's valignment looks wierd
     float: right;
     margin-top: 2em;
     margin-bottom: 2em;

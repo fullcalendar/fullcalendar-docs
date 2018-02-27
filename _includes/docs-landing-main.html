@@ -27,7 +27,9 @@
                     {{ article.title | escape }}
                   {% endif %}
                   {% if article.is_premium %}
-                    <img src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png' width='12' height='19'
+                    <img class='inline-thunderbolt'
+                      src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png'
+                      width='12' height='19'
                       title='needs Scheduler'
                       alt='lightning bolt'
                       />
