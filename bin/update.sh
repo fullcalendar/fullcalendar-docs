@@ -13,7 +13,9 @@ npm install
 
 if [[ "$1" ]]
 then
+  echo 'Building as PRODUCTION'
   JEKYLL_ENV="$1" bundle exec jekyll build
 else
+  echo 'Building as DEVELOPMENT'
   bundle exec jekyll build
 fi
