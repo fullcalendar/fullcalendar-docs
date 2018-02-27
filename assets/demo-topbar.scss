@@ -1,10 +1,43 @@
 ---
 ---
 
+$demo-topbar-font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+
 .demo-topbar {
   height: 40px;
   line-height: 40px;
   padding-left: 1em;
   background: #eee;
   border-bottom: 1px solid #ddd;
+  font-family: $demo-topbar-font-family !important; // guard against bootstrap
+  font-size: 14px !important; // guard against bootstrap
+  color: #000 !important; // guard against bootstrap
+
+  .codepen-button {
+    float: right;
+    margin-top: 7px;
+    margin-right: 7px;
+  }
+}
+
+.codepen-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  font-family: $demo-topbar-font-family !important; // guard against bootstrap
+  font-size: 11px !important; // guard against bootstrap
+  color: #000 !important; // guard against bootstrap
+  cursor: pointer;
+
+  &:after {
+    content: '\02197'; // a diagonal arrow
+    vertical-align: middle;
+    margin: -50% 0 -50% 2px;
+  }
 }

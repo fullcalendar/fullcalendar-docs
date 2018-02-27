@@ -1,9 +1,14 @@
 <div class='demo-topbar'>
+  <button data-codepen class='codepen-button'>Edit in CodePen</button>
+
+  {% comment %}
+    Don't put any nested divs in here.
+    A regex scrapes out demo-topbar for codepen and will get confused.
+  {% endcomment %}
+
   {% if page.description %}
     {{ page.description | escape }}
   {% elsif page.title %}
     {{ page.title | escape }}
   {% endif %}
-
-  <button data-codepen>edit in codepen</button>
 </div>
