@@ -6,6 +6,11 @@
 set -e # always immediately exit upon error
 cd "`dirname $0`/.." # start in project root
 
+# install rubygems
+bundler install
+
+npm install
+
 if [[ "$1" ]]
 then
   JEKYLL_ENV="$1" bundle exec jekyll build
