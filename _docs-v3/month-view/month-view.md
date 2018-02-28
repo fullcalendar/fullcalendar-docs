@@ -13,7 +13,7 @@ Month view displays the current month's days, and usually a few days of the prev
 
 ```js
 $('#calendar').fullCalendar({
-  defaultView: 'monthView'
+  defaultView: 'month'
 });
 ```
 
