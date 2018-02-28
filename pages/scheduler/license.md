@@ -41,4 +41,4 @@ $('#calendar').fullCalendar({
 });
 ```
 
-By the way, Scheduler's source code is [hosted on Github]({{ site.fullcalendar_scheduler_repo }}).
+By the way, Scheduler's source code is [hosted on GitHub]({{ site.fullcalendar_scheduler_repo }}).

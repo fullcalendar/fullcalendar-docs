@@ -22,4 +22,4 @@ $('#calendar').fullCalendar({
 });
 ```
 
-The following options are specific to agenda view. However, there are numerious other options throughout the docs that affect the display of agenda view, such as the [local-related options](localization) and [date/time display options](date-display).
+The following options are specific to agenda view. However, there are numerious other options throughout the docs that affect the display of agenda view, such as the [locale-related options](localization) and [date/time display options](date-display).

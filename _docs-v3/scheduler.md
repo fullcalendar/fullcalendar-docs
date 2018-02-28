@@ -6,7 +6,7 @@ demos:
   - vertical-resource-standard-demo
 ---
 
-The Scheduler plugin provides you with two extra calendar views to use, both of which are good at displaying *resource* (things like rooms that you can assign events to):
+The Scheduler plugin provides you with two extra calendar views to use, both of which are good at displaying *resources* (things that events can be assigned to, like rooms):
 
 - [Timeline View](timeline-view) - good at displaying a large number of resources
 - [Vertical Resource View](vertical-resource-view) - good at displaying a fewer number of resources

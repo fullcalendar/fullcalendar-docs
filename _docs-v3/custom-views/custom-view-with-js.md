@@ -50,7 +50,7 @@ CustomView = View.extend({ // make a subclass of View
 FC.views.custom = CustomView; // register our class with the view system
 ```
 
-The View class provides many other methods that can be overridden or leveraged. See the [View class' source][View-source](https://github.com/fullcalendar/fullcalendar/blob/master/src/View.ts) for more insight. It might be wise to *watch* the project on Github in case the API for any of the more advanced non-standard methods changes.
+The View class provides many other methods that can be overridden or leveraged. See the [View class' source][View-source](https://github.com/fullcalendar/fullcalendar/blob/master/src/View.ts) for more insight. It might be wise to *watch* the project on GitHub in case the API for any of the more advanced non-standard methods changes.
 
 When overriding an advanced method, it is always a good idea to call its super-method, the method that the View super-class defines:
 
@@ -71,4 +71,4 @@ CustomView = View.extend({
 
 The above documentation is helpful for building a barebones view, but making it full-featured and interactive is a further challenging. A robust view should be right-to-left compatible, locale-customizable, allow event dragging and resizing, allow user selections, and more...
 
-Making a full-featured view is beyond the scope of this document. Further documentation should be written and further APIs should be formalized, but for now, it would be best to browse FullCalendar's [source on Github]({{ site.fullcalendar_repo }}). Pay attention to how [BasicView](https://github.com/fullcalendar/fullcalendar/blob/master/src/basic/BasicView.ts) and [AgendaView](https://github.com/fullcalendar/fullcalendar/blob/master/src/agenda/AgendaView.ts) are implemented.
+Making a full-featured view is beyond the scope of this document. Further documentation should be written and further APIs should be formalized, but for now, it would be best to browse FullCalendar's [source on GitHub]({{ site.fullcalendar_repo }}). Pay attention to how [BasicView](https://github.com/fullcalendar/fullcalendar/blob/master/src/basic/BasicView.ts) and [AgendaView](https://github.com/fullcalendar/fullcalendar/blob/master/src/agenda/AgendaView.ts) are implemented.
