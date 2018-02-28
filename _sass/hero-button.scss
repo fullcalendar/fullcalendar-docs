@@ -25,4 +25,6 @@ button.hero-button { // resets for native <button>
 .hero-button--condensed {
   height: $control-height-condensed;
   line-height: $control-height-condensed - 2px;
+  padding-left: $control-h-padding - 2px;
+  padding-right: $control-h-padding - 2px;
 }
