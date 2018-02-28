@@ -8,7 +8,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
+  - package-lock.json
   - gulpfile.js
+  - README.md
 
 markdown: kramdown
 kramdown:
