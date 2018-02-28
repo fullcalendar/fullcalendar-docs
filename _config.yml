@@ -21,7 +21,7 @@ fullcalendar_org: https://github.com/fullcalendar
 fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
 fullcalendar_scheduler_repo: https://github.com/fullcalendar/fullcalendar-scheduler
 
-production_baseurl: http://new.fullcalendar.io
+production_baseurl: https://fullcalendar.io
 releases_dir: ../fullcalendar-releases # in a sibling directory
 
 # ordered by how they should appear in UI
