@@ -15,7 +15,7 @@ String, *default*: `'standard'`
 : Prepares the calendar for a [Bootstrap 3](https://getbootstrap.com/docs/3.3/) theme. The Bootstrap stylesheet must be separately loaded in its own `<link>` tag. [See a demo](bootstrap3-theme-demo).
 
 `'bootstrap4'`
-: Prepares the calendar for a [Bootstrap 4](https://getbootstrap.com/) theme. The Bootstrap stylesheet must be separately loaded in its own `<link>` tag. Also, a [FontAwesome](https://fontawesome.com/) stylesheet [like this](https://use.fontawesome.com/releases/v5.0.6/css/all.css) must be loaded if you want to use icons in your buttons. [See a demo](bootstrap4-theme-demo). Bootstrap 4 support was added in v3.9.0.
+: Prepares the calendar for a [Bootstrap 4](https://getbootstrap.com/) theme. The Bootstrap stylesheet must be separately loaded in its own `<link>` tag. Also, a FontAwesome stylesheet must be loaded ([more info](https://fontawesome.com/get-started)). [See a demo](bootstrap4-theme-demo). Bootstrap 4 support was added in v3.9.0.
 
 `'jquery-ui'`
 : Prepares the calendar for a [jQuery UI](https://jqueryui.com/) theme. The jQuery UI CSS file file must be separately loaded in its own `<link>` tag. [See a demo](jquery-ui-theme-demo).

@@ -19,7 +19,7 @@ Object, *default:*
 ```
 </div>
 
-This option only applies to calendars that have [themeSystem](themeSystem) set to `'bootstrap4'`.
+This option only applies to calendars that have [themeSystem](themeSystem) set to `'bootstrap4'`. A FontAwesome stylesheet must be loaded before you can use Bootstrap 4 theming or customize the icons. [Getting started with FontAwesome](https://fontawesome.com/get-started).
 
 A hash must be supplied that maps button names (from the [header](header)) to icon strings. [See a full list of FontAwesome icons](https://fontawesome.com/icons).
 
