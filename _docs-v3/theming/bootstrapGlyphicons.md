@@ -3,7 +3,7 @@ title: bootstrapGlyphicons
 since_version: 3.5.0
 ---
 
-Determines which icons are displayed in buttons of the header/footer when Bootstrap theming is on.
+Determines which icons are displayed in buttons of the header/footer when Bootstrap 3 theming is on.
 
 <div class='spec' markdown='1'>
 Object, *default:*

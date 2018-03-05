@@ -4,8 +4,9 @@ children:
   - themeSystem
   - themeButtonIcons
   - bootstrapGlyphicons
+  - bootstrapFontAwesome
 demos:
-  - bootstrap3-theme-demo
+  - bootstrap4-theme-demo
   - jquery-ui-theme-demo
 ---
 
