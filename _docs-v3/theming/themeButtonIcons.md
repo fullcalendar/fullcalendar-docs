@@ -7,7 +7,7 @@ Determines which icons are displayed in buttons of the header/footer when jQuery
 <div class='spec' markdown='1'>
 Object, *default:*
 
-```
+```js
 {
   prev: 'circle-triangle-w',
   next: 'circle-triangle-e',

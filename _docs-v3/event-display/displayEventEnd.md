@@ -8,7 +8,7 @@ Whether or not to display an event's end time.
 <div class='spec' markdown='1'>
 Boolean, *default*:
 
-```
+```js
 false // for month and basicWeek views
 true  // for agendaWeek, agendaDay, and basicDay
 ```

@@ -8,7 +8,7 @@ Determines the time-text that will be displayed on each event.
 <div class='spec' markdown='1'>
 String/[View Option Hash](view-option-hash), *default*:
 
-```
+```js
 {
   // for agendaWeek and agendaDay
   agenda: 'h:mm{ - h:mm}', // 5:00 - 6:30

@@ -7,7 +7,7 @@ Determines the time-text that will be displayed on each event.
 <div class='spec' markdown='1'>
 [format string](date-formatting-string), *default*:
 
-```
+```js
 'h:mm'    // like '5:00', for agendaWeek and agendaDay
 'h(:mm)t' // like '7p', for all other views
 ```

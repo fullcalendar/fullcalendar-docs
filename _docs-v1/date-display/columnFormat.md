@@ -8,7 +8,7 @@ Determines the text that will be displayed on the calendar's column headings.
 <div class='spec' markdown='1'>
 String/[View Option Hash](view-option-hash), *default*:
 
-```
+```js
 {
   month: 'ddd',    // Mon
   week: 'ddd M/d', // Mon 9/7

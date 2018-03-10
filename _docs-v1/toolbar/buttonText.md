@@ -8,7 +8,7 @@ Text that will be displayed on buttons of the header.
 <div class='spec' markdown='1'>
 Object, *default*:
 
-```
+```js
 {
   prev:     '&lsaquo;', // <
   next:     '&rsaquo;', // >

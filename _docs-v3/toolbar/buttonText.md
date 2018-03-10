@@ -7,7 +7,7 @@ Text that will be displayed on buttons of the header/footer.
 <div class='spec' markdown='1'>
 Object, *default*:
 
-```
+```js
 {
   today:    'today',
   month:    'month',

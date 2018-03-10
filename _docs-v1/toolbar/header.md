@@ -8,7 +8,7 @@ Defines the buttons and title at the top of the calendar.
 <div class='spec' markdown='1'>
 Object/`false`, *default:*
 
-```
+```js
 {
   left:   'title',
   center: '',

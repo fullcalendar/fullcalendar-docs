@@ -8,7 +8,7 @@ Determines which theme icons appear on the header buttons.
 <div class='spec' markdown='1'>
 Object, *default:*
 
-```
+```js
 {
   prev: 'circle-triangle-w',
   next: 'circle-triangle-e'

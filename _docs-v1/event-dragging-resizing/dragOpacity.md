@@ -8,7 +8,7 @@ The opacity of an event while it is being dragged.
 <div class='spec' markdown='1'>
 Float/[View Option Hash](view-option-hash), *default*:
 
-```
+```js
 {
   // for agendaWeek and agendaDay
   agenda: .5,
