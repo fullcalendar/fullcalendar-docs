@@ -1,5 +1,5 @@
 
-# FullCalendar Website Static Content
+# FullCalendar Website Static Content [![Build Status](https://travis-ci.org/fullcalendar/fullcalendar-site-static.svg?branch=master)](https://travis-ci.org/fullcalendar/fullcalendar-site-static)
 
 This repo contains the static content for [fullcalendar.io](https://fullcalendar.io).
 
