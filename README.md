@@ -6,6 +6,11 @@ This repo contains the static content for [fullcalendar.io](https://fullcalendar
 The source for documentation articles are found in directories like `_docs-v1` and `_docs-v3`.
 
 
+## Reporting Problems
+
+See a problem with the docs? Create a ticket in the [main dev repo's issue tracker](https://github.com/fullcalendar/fullcalendar/issues). All docs-related bugs have the [docs label](https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3ADocs).
+
+
 ## Contributing
 
 To make edits to the documentation please submit a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) against the `master` branch of this repo.
