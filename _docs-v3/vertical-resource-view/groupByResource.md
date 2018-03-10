@@ -14,4 +14,4 @@ Beware this will affect *all* multi-day basic/agenda views, which might look bad
 
 ## Screenshot:
 
-<img src='groupByResource.png' width='608' style='margin-left:-3px' alt='resources above dates' />
+<img src='groupByResource.png' width='600' height='474' style='margin-left:-3px' alt='resources above dates' />
