@@ -3,6 +3,8 @@
 
 This repo contains the static content for [fullcalendar.io](https://fullcalendar.io).
 
+The source for documentation articles are found in directories like `_docs-v1` and `_docs-v3`.
+
 
 ## Contributing
 
