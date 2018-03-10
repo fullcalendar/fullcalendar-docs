@@ -34,7 +34,7 @@ They must be loaded via a `<script>` tag after the main FullCalendar library is 
 <script src='fullcalendar/lang/es.js'></script>
 <script>
 
-  $(document).ready(function() {
+  $(function() {
 
     $('#calendar').fullCalendar({
     });
@@ -53,7 +53,7 @@ However, if more than one language file is loaded, or the combined `all.js` file
 <script src='fullcalendar/lang-all.js'></script>
 <script>
 
-  $(document).ready(function() {
+  $(function() {
 
     $('#calendar').fullCalendar({
       lang: 'es'

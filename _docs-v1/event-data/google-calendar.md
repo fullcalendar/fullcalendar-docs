@@ -59,7 +59,7 @@ Now it's time to initialize your calendar in JavaScript. You pass an object into
 ```js
 <script type='text/javascript'>
 
-$(document).ready(function() {
+$(function() {
   $('#calendar').fullCalendar({
     events: {
       googleCalendarApiKey: '<YOUR API KEY>',
@@ -76,7 +76,7 @@ You can also specify some [Event Source options](event-source-object#options):
 ```js
 <script type='text/javascript'>
 
-$(document).ready(function() {
+$(function() {
   $('#calendar').fullCalendar({
     events: {
       googleCalendarApiKey: '<YOUR API KEY>',
@@ -144,7 +144,7 @@ You can specify multiple Google Calendars by using the `eventSources` option:
 ```js
 <script type='text/javascript'>
 
-$(document).ready(function() {
+$(function() {
   $('#calendar').fullCalendar({
     eventSources: [
       {

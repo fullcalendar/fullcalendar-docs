@@ -30,7 +30,7 @@ They must be loaded via a `<script>` tag after the main FullCalendar library is 
 <script src='fullcalendar/locale/es.js'></script>
 <script>
 
-  $(document).ready(function() {
+  $(function() {
 
     $('#calendar').fullCalendar({
     });
@@ -49,7 +49,7 @@ However, if more than one locale file is loaded, or the combined `locale-all.js`
 <script src='fullcalendar/locale-all.js'></script>
 <script>
 
-  $(document).ready(function() {
+  $(function() {
 
     $('#calendar').fullCalendar({
       locale: 'es'

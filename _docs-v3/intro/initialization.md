@@ -6,7 +6,7 @@ description: How to initialize your first calendar with options.
 Once you have FullCalendar and its dependencies [loaded onto the page](installation), you can write JS code that initializes a calendar. This code must be executed *after* the page has initialized. The best way to do this is with jQuery's `$(document).ready` like so:
 
 ```js
-$(document).ready(function() {
+$(function() {
 
   // page is now ready, initialize the calendar...
 

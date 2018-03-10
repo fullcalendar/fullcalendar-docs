@@ -20,7 +20,7 @@ This code must be executed *after* the page has initialized. The best way to do 
 `$(document).ready` like so:
 
 ```js
-$(document).ready(function() {
+$(function() {
 
   // page is now ready, initialize the calendar...
 
