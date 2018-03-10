@@ -16,4 +16,4 @@ Setting this value to `true` will override [groupByResource](groupByResource).
 
 ## Screenshot:
 
-<img src='groupByDateAndResource.png' width='608' style='margin-left:-2px' alt='dates above resources' />
+<img src='groupByDateAndResource.png' width='600' height='476' style='margin-left:-2px' alt='dates above resources' />
