@@ -59,7 +59,7 @@ start
 <td>
 The date/time an event begins. <em>Required</em>.
 
-A <a href='Moment'>Moment</a>-ish input, like an <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO8601 string</a>.
+A <a href='moment'>Moment</a>-ish input, like an <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO8601 string</a>.
 Throughout the API this will become a real Moment object.
 </td>
 </tr>
@@ -71,7 +71,7 @@ end
 <td>
 The <strong>exclusive</strong> date/time an event ends. Optional.
 
-A <a href='Moment'>Moment</a>-ish input, like an <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO8601 string</a>.
+A <a href='moment'>Moment</a>-ish input, like an <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO8601 string</a>.
 Throughout the API this will become a real Moment object.
 
 It is the moment immediately <em>after</em> the event has ended.
@@ -152,7 +152,7 @@ Overrides the master <a href='eventResourceEditable'>eventResourceEditable</a> o
 rendering
 </th>
 <td>
-Allows alternate rendering of the event, like <a href='Background-Events'>background events</a>.
+Allows alternate rendering of the event, like <a href='background-events'>background events</a>.
 
 Can be empty, <code>"background"</code>, or <code>"inverse-background"</code>
 </td>

@@ -33,11 +33,11 @@ Affected options:
 <tr><td><a href='{{ site.baseurl}}/docs/getDate'><code>getDate</code> method</a></td></tr>
 <tr><td><a href='{{ site.baseurl}}/docs/events-function'><code>events</code> as a function</a></td></tr>
 <tr><td><a href='{{ site.baseurl}}/docs/dayRender'><code>dayRender</code> callback</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/dayClick'><code>dayClick</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/Moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
+<tr><td><a href='{{ site.baseurl}}/docs/dayClick'><code>dayClick</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
 <tr><td><a href='{{ site.baseurl}}/docs/drop'><code>drop</code> callback</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/eventDrop'><code>eventDrop</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/Moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
+<tr><td><a href='{{ site.baseurl}}/docs/eventDrop'><code>eventDrop</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
 <tr><td><a href='{{ site.baseurl}}/docs/eventResize'><code>eventResize</code> callback</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/select-callback'><code>select</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/Moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> parameter removed. <code>end</code> is now <b>exclusive!</b></td></tr>
+<tr><td><a href='{{ site.baseurl}}/docs/select-callback'><code>select</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> parameter removed. <code>end</code> is now <b>exclusive!</b></td></tr>
 <tr><td><a href='{{ site.baseurl}}/docs/select-method'><code>select</code> method</a></td></tr>
 </table>
 
@@ -112,7 +112,7 @@ The following date utility methods have also been affected:
 
 <table>
 <tr><th>Method</th><th>Upgrade Notes</th></tr>
-<tr><td><del><code>$.fullCalendar.parseDate</code></del></td><td rowspan='2'>use a <a href='{{ site.baseurl}}/docs/Moment#creating'>moment constructor</a></td></tr>
+<tr><td><del><code>$.fullCalendar.parseDate</code></del></td><td rowspan='2'>use a <a href='{{ site.baseurl}}/docs/moment#creating'>moment constructor</a></td></tr>
 <tr><td><del><code>$.fullCalendar.parseISO8601</code></del></td></tr>
 <tr><td><del><code>$.fullCalendar.formatDate</code></del></td><td>use a moment's <a href='http://momentjs.com/docs/#/displaying/format/'><code>.format()</code></a> method instead</td></tr>
 <tr><td><del><code>$.fullCalendar.formatDates</code></del></td><td>use <a href='{{ site.baseurl}}/docs/formatRange'><code>$.fullCalendar.formatRange</code></a> instead</td></tr>

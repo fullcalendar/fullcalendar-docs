@@ -7,7 +7,7 @@ A way to specify options on a per-view basis.
 
 <div class='removed-notice'>
 View Option Hashes have been removed in v3.
-Please use <a href='View-Specific-Options'>View-Specific Options</a> instead.
+Please use <a href='view-specific-options'>View-Specific Options</a> instead.
 </div>
 
 This is specified as an object with key/value pairings. The key tells FullCalendar that the specified option value should only be applied to certain views.
