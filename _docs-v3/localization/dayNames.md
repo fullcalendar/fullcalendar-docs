@@ -7,7 +7,7 @@ Full names of days-of-week.
 <div class='spec' markdown='1'>
 Array, *default*:
 
-```
+```js
 ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
   'Thursday', 'Friday', 'Saturday']
 ```

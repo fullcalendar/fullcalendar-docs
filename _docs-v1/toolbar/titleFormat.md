@@ -8,7 +8,7 @@ Determines the text that will be displayed in the header's title.
 <div class='spec' markdown='1'>
 String/[View Option Hash](view-option-hash), *default*:
 
-```
+```js
 {
   month: 'MMMM yyyy',                             // September 2009
   week: "MMM d[ yyyy]{ '&#8212;'[ MMM] d yyyy}", // Sep 7 - 13 2009

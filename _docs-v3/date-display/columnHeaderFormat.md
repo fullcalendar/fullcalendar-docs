@@ -8,7 +8,7 @@ Determines the text that will be displayed on the calendar's column headings.
 <div class='spec' markdown='1'>
 [format string](date-formatting-string), *default*:
 
-```
+```js
 'ddd'     // like 'Mon', for month view
 'ddd M/D' // like 'Mon 9/7', for week views
 'dddd'    // like 'Monday', for day views

@@ -7,7 +7,7 @@ Determines the text that will be displayed in the header's title.
 <div class='spec' markdown='1'>
 [format string](date-formatting-string), *default*:
 
-```
+```js
 'MMMM YYYY'   // like 'September 2009', for month view
 'MMM D YYYY'  // like 'Sep 13 2009', for week views
 'MMMM D YYYY' // like 'September 8 2009', for day views

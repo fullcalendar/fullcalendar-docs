@@ -8,7 +8,7 @@ Determines which icons are displayed in buttons of the header/footer when Bootst
 <div class='spec' markdown='1'>
 Object, *default:*
 
-```
+```js
 {
   close: 'fa-times',
   prev: 'fa-chevron-left',

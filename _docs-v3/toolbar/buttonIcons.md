@@ -7,7 +7,7 @@ Icons that will be displayed in buttons of the header/footer.
 <div class='spec' markdown='1'>
 Object, *default:*
 
-```
+```js
 {
   prev: 'left-single-arrow',
   next: 'right-single-arrow',
