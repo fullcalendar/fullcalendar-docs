@@ -81,18 +81,31 @@ def process_categories(docs, doc_hash)
   for category_doc in docs
     if category_doc.data['children'] or category_doc.data['related'] # a category?
 
-      child_groups = build_category_child_groups(
+      own_child_groups = build_category_child_groups(
         (category_doc.data['children'] or []),
+        doc_hash
+      )
+
+      related_docs = build_category_related_docs(
         (category_doc.data['related'] or []),
         doc_hash
       )
 
-      category_doc.data['child_groups'] = child_groups
+      all_children_groups = own_child_groups +
+        if related_docs.length > 0
+          [ { 'is_related' => true, 'children' => related_docs } ]
+        else
+          []
+        end
+
+      # help liquid template with falsiness
+      category_doc.data['own_child_groups'] = if own_child_groups.length > 0 then own_child_groups else nil end
+      category_doc.data['child_groups'] = if all_children_groups.length > 0 then all_children_groups else nil end
 
       if category_doc.data['slug'] != 'index'
         # for the main index, AVOID assigning the top-level "category"
         # to the sublanding pages
-        assign_category_to_articles(category_doc, child_groups)
+        assign_category_to_articles(category_doc, own_child_groups)
       end
     end
   end
@@ -101,7 +114,7 @@ end
 
 # assembles a tree structure of child articles for the front-matter of an article.
 # returned data structure is array of groups, each group having an array of articles.
-def build_category_child_groups(raw_children, raw_related, doc_hash)
+def build_category_child_groups(raw_children, doc_hash)
   top_level_docs = []
   other_groups = []
   related_docs = []
@@ -134,8 +147,21 @@ def build_category_child_groups(raw_children, raw_related, doc_hash)
     end
   end
 
+  if top_level_docs.length > 0
+    groups.push({ 'children' => top_level_docs })
+  end
+
+  groups += other_groups
+
+  groups
+end
+
+
+def build_category_related_docs(raw_related, doc_hash)
+  related_docs = []
+
   for node in raw_related
-    if node.instance_of? String
+    if node.instance_of?(String)
       if doc_hash[node]
         related_docs.push(doc_hash[node])
       else
@@ -144,20 +170,7 @@ def build_category_child_groups(raw_children, raw_related, doc_hash)
     end
   end
 
-  if top_level_docs.length > 0
-    groups.push({ 'children' => top_level_docs })
-  end
-
-  groups += other_groups
-
-  if related_docs.length > 0
-    groups.push({
-      'is_related' => true,
-      'children' => related_docs
-    })
-  end
-
-  groups
+  related_docs
 end
 
 
