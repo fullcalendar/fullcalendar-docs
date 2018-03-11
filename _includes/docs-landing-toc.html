@@ -1,49 +1,78 @@
 
-<div class='docs-landing'>
-  {% for child_group in page.child_groups %}
-    <div class='docs-landing__section'>
-      <h2 class='docs-landing__section-title'>{{ child_group.title | escape }}</h2>
-      <div class='docs-landing__section-content'>
-        <ul class='docs-landing__card'>
+<div class='docs-toc'>
+  <table class='docs-toc__table'>
+    <tr>
+      <td>
+        {% for child_group in page.child_groups %}
+
+          {% comment %}
+            Manually create column breaks
+          {% endcomment %}
+          {% if page.version.id == 'v3' %}
+            {% if child_group.title == 'Date & Time'
+               or child_group.title == 'Events'
+               or child_group.title == 'Resources'
+            %}
+              </td><td>
+            {% endif %}
+          {% elsif page.version.id == 'v1' %}
+            {% if child_group.title == 'Date & Time'
+               or child_group.title == 'Events'
+               or child_group.title == 'International'
+            %}
+              </td><td>
+            {% endif %}
+          {% endif %}
+
+          <h2 class='docs-toc__title'>{{ child_group.title | escape }}</h2>
+
           {% for article in child_group.children %}
-            <li class='docs-landing__card-section'>
-              <a href='{{ site.baseurl }}{{ article.url | escape }}'>
-                {{ article.title | escape }}
-                {% if article.is_premium %}
-                  <img class='inline-thunderbolt'
-                    src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png'
-                    width='12' height='19'
-                    title='needs Scheduler'
-                    alt='lightning bolt'
-                    />
-                {% endif %}
-              </a>
-              <ul>
-                {% for article_child_group in article.child_groups %}
-                  {% unless article_child_group.is_related %}
-                    {% if article_child_group.title %}
-                      <li>
-                        {{ article_child_group.title | escape }}
-                        <ul>
-                    {% endif %}
-                    {% for subarticle in article_child_group.children %}
-                      <li>
-                        <a href='{{ site.baseurl }}{{ subarticle.url | escape }}'>
-                          {{ subarticle.title | escape }}
-                        </a>
-                      </li>
+            <div class='docs-toc-card'>
+
+              <div class='docs-toc-card__head'>
+                <a href='{{ site.baseurl }}{{ article.url | escape }}'>
+                  {{ article.title | escape }}
+                  {% if article.is_premium %}
+                    <img class='inline-thunderbolt'
+                      src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png'
+                      width='12' height='19'
+                      title='needs Scheduler'
+                      alt='lightning bolt'
+                      />
+                  {% endif %}
+                </a>
+              </div>
+
+              {% if article.own_child_groups %}
+                <div class='docs-toc-card__body'>
+                  <ul>
+                    {% for article_child_group in article.own_child_groups %}
+                      {% if article_child_group.title %}
+                        <li>
+                          {{ article_child_group.title | escape }}
+                          <ul>
+                      {% endif %}
+                      {% for subarticle in article_child_group.children %}
+                        <li>
+                          <a href='{{ site.baseurl }}{{ subarticle.url | escape }}'>
+                            {{ subarticle.title | escape }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                      {% if article_child_group.title %}
+                          </ul>
+                        </li>
+                      {% endif %}
                     {% endfor %}
-                    {% if article_child_group.title %}
-                        </ul>
-                      </li>
-                    {% endif %}
-                  {% endunless %}
-                {% endfor %}
-              </ul>
-            </li>
+                  </ul>
+                </div>
+              {% endif %}
+
+            </div>
           {% endfor %}
-        </ul>
-      </div>
-    </div>
-  {% endfor %}
+
+        {% endfor %}
+      </td>
+    </tr>
+  </table>
 </div>

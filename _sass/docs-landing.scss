@@ -55,32 +55,3 @@
   display: block;
   margin-top: 4px;
 }
-
-.docs-landing__card {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
-}
-
-.docs-landing__card-section {
-  @include link-hover-underline;
-  flex-basis: 33%;
-  flex-grow: 1; // can expand to cover 1 or 2 columns
-  margin: -1px 0 0 -1px; // will overlap border of siblings and outer container
-  border-style: solid;
-  border-color: #ccc;
-  border-width: 1px 0 0 1px;
-  padding: 1em;
-  line-height: 1.5em;
-
-  ul {
-    @include default-list-bullets;
-    margin: .75em 0 .75em 1.5em;
-  }
-
-  li {
-    margin: .75em 0;
-  }
-}

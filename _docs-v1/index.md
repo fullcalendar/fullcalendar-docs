@@ -21,7 +21,7 @@ children:
       - agenda-view
       - basic-view
       - view-api
-  - title: Dates
+  - title: Date & Time
     children:
       - date-display
       - date-navigation
