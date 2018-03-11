@@ -1,8 +1,10 @@
 
+$docs-toc-column-space: 20px;
+
 .docs-toc {
   @include link-hover-underline;
   line-height: $line-height;
-  margin-right: -20px; // compensate for table's right margin
+  margin-right: -$docs-toc-column-space; // compensate for table's right margin
 }
 
 .docs-toc__table {
@@ -26,9 +28,9 @@
 .docs-toc-card {
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
-  margin-right: 20px;
-  font-size: 14px;
+  margin-right: $docs-toc-column-space;
   margin-bottom: 1em;
+  font-size: 14px;
 }
 
 .docs-toc-card__head {
@@ -38,6 +40,7 @@
 }
 
 .docs-toc-card__body {
+  padding-right: .5em;
   padding-bottom: .5em;
 
   ul {
