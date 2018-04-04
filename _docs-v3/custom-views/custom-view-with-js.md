@@ -50,7 +50,7 @@ CustomView = View.extend({ // make a subclass of View
 FC.views.custom = CustomView; // register our class with the view system
 ```
 
-The View class provides many other methods that can be overridden or leveraged. See the [View class' source][View-source](https://github.com/fullcalendar/fullcalendar/blob/master/src/View.ts) for more insight. It might be wise to *watch* the project on GitHub in case the API for any of the more advanced non-standard methods changes.
+The View class provides many other methods that can be overridden or leveraged. See the [View class' source](https://github.com/fullcalendar/fullcalendar/blob/master/src/View.ts) for more insight. It might be wise to *watch* the project on GitHub in case the API for any of the more advanced non-standard methods changes.
 
 When overriding an advanced method, it is always a good idea to call its super-method, the method that the View super-class defines:
 
