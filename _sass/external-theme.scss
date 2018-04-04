@@ -1,0 +1,69 @@
+
+.external-theme {
+  margin: 2em 0;
+
+  a {
+    text-decoration: none;
+    color: $link-dark-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.external-theme__title {
+  font-weight: $font-weight-bold;
+
+  span {
+    font-weight: $font-weight-normal;
+  }
+}
+
+.external-theme__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.external-theme__img-wrap {
+  position: relative;
+  border: 7px solid #ccc;
+  margin-right: 10px;
+
+  img {
+    float: left;
+  }
+}
+
+.external-theme__img-wrap--calendar:hover {
+  &:after {
+    content: 'View a demo of the calendar';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 6px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .75);
+    font-size: 14px;
+  }
+}
+
+.external-theme__arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border: 20px solid #ccc;
+  border-radius: 20px;
+
+  &:after {
+    content: '';
+    @include right-triangle(18px, 16px, #fff);
+    position: absolute;
+    top: -8px;
+    left: -7px;
+  }
+}

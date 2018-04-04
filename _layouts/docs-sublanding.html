@@ -56,6 +56,11 @@ custom_js: docs
       <div class='docs-sublanding__children'>
         {% include docs-sublanding-children.html %}
       </div>
+
+      {% if page.bottom_content_include %}
+        {% include {{ page.bottom_content_include }} %}
+      {% endif %}
+
     </div>
 
     {% include docs-sublanding-sidebar.html %}
