@@ -15,5 +15,7 @@ gulp.task('lintspaces', function() {
     .pipe(lintspaces({
       editorconfig: '.editorconfig'
     }))
-    .pipe(lintspaces.reporter());
+    .pipe(lintspaces.reporter({
+      breakOnWarning: true
+    }));
 });
