@@ -37,4 +37,4 @@ Each `customButton` entry accepts the following properties:
 - `themeIcon` - see [themeButtonIcons](themeButtonIcons). optional
 - `bootstrapGlyphicon` - see [bootstrapGlyphicons](bootstrapGlyphicons). optional
 
-[See an demo of customButtons](toolbar-demo).
+[See a demo of customButtons](toolbar-demo).
