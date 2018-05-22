@@ -31,4 +31,3 @@ $('#calendar').fullCalendar({
 Agenda views of other durations can be made with a [custom view](custom-view-with-settings) with type `'agenda'`.
 
 The following options are specific to agenda view. However, there are numerious other options throughout the docs that affect the display of agenda view, such as the [locale-related options](localization) and [date/time display options](date-display).
-test
