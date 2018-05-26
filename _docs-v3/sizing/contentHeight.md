@@ -31,5 +31,5 @@ $('#calendar').fullCalendar({
 You can dynamically set a calendar's contentHeight after initialization:
 
 ```js
-$('#calendar').fullCalendar('option', 'contentHeight', 650);
+$('#calendar').option('contentHeight', 650);
 ```

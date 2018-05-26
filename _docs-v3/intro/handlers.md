@@ -22,7 +22,7 @@ The below example dynamically binds a [dayClick](dayClick) handler.
 ```js
 // a convenient utility for getting the calendar object.
 // you can call methods on the calendar object directly.
-var calendar = $('#calendar').fullCalendar('getCalendar');
+var calendar = $('#calendar').getCalendar();
 
 calendar.on('dayClick', function(date, jsEvent, view) {
   console.log('clicked on ' + date.format());

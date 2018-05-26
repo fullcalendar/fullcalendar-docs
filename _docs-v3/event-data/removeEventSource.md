@@ -6,7 +6,7 @@ type: method
 Dynamically removes an event source.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'removeEventSource', *source* )
+.removeEventSource( *source* )
 </div>
 
 Events from the source will be immediately removed from the calendar.

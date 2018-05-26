@@ -6,7 +6,7 @@ type: method
 Immediately forces the calendar to render and/or readjusts its size.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'render' )
+.render()
 </div>
 
 This method is useful in the scenario where a tab setup might hide/show a calendar. Call this method whenever the tabs are shown. Here is an example with the [jQuery UI tab plugin](http://jqueryui.com/demos/tabs/):
@@ -14,7 +14,7 @@ This method is useful in the scenario where a tab setup might hide/show a calend
 ```js
 $('#my-tabs').tabs({
   activate: function(event, ui) {
-    $('#calendar').fullCalendar('render');
+    $('#calendar').render();
   }
 });
 ```

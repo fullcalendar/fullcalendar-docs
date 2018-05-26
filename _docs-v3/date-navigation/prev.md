@@ -6,7 +6,7 @@ type: method
 Moves the calendar one step back (by a month or week for example).
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'prev' )
+.prev()
 </div>
 
 If the calendar is in `month` view, will move the calendar back one month.
@@ -19,7 +19,7 @@ Example using `prev` with an external button:
 
 ```js
 $('#my-prev-button').click(function() {
-  $('#calendar').fullCalendar('prev');
+  $('#calendar').prev();
 });
 ```
 

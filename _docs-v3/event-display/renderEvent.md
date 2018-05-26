@@ -6,7 +6,7 @@ type: method
 Renders a new event on the calendar.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'renderEvent', *event* [, *stick* ] )
+.renderEvent( *event* [, *stick* ] )
 </div>
 
 `event` must be an [Event Object](event-object) with a `title` and `start` at the very least.
