@@ -13,7 +13,7 @@ The values of these parameters will be ISO8601 date strings (like `2013-12-01`).
 Consider the following script:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   events: '/myfeed.php'
 });
 ```
@@ -31,7 +31,7 @@ If you need to access a feed that is in a different domain, you can use JSONP wi
 You can specify [Event Source options](event-source-object#options). This often comes in handy when you are using the [eventSources](eventSources) option to specify multiple event sources and you want certain options to only apply to certain sources. However, to do this, you must write things a little differently:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
 
   eventSources: [
 
@@ -84,7 +84,7 @@ Sets the <a href='timezoneParam'>timezoneParam</a> option, but only for this sou
 You can also specify any of the [jQuery $.ajax](http://api.jquery.com/jQuery.ajax/) options within the same object! This allows you to easily pass additional parameters to your feed script, as well as listen to ajax callbacks:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
 
   eventSources: [
 
@@ -113,7 +113,7 @@ $('#calendar').fullCalendar({
 Here is the same example, but using the single-source `events` option instead:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
 
   events: {
     url: '/myfeed.php',
@@ -137,7 +137,7 @@ $('#calendar').fullCalendar({
 The `data` parameters, which sends information to your JSON script through either GET or POST, can also be specified as a function, in order to send dynamic values:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
 
   events: {
     url: '/myfeed.php',
@@ -160,7 +160,7 @@ By default, FullCalendar will insert a `_` parameter into the URL of the request
 If you would like to counteract this and prevent the `_` parameter, you can set the `cache` option to `true`:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
 
   events: {
     url: '/myfeed.php',

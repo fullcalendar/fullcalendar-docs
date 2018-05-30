@@ -13,6 +13,6 @@ Example using `today` with an external button:
 
 ```js
 $('#my-today-button').click(function() {
-  $('#calendar').today();
+  calendar.today();
 });
 ```

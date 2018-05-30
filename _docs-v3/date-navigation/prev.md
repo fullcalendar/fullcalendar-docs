@@ -19,7 +19,7 @@ Example using `prev` with an external button:
 
 ```js
 $('#my-prev-button').click(function() {
-  $('#calendar').prev();
+  calendar.prev();
 });
 ```
 

@@ -24,21 +24,17 @@ disable_base_styles: true
 </style>
 <script>
 
-  $(function() {
-
-    $('#calendar').fullCalendar({
+    new Calendar({
       header: false // don't display the default header
     });
 
     $('#prev').on('click', function() {
-      $('#calendar').prev(); // call method
+      calendar.prev(); // call method
     });
 
     $('#next').on('click', function() {
-      $('#calendar').next(); // call method
+      calendar.next(); // call method
     });
-
-  });
 
 </script>
 <body>

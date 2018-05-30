@@ -19,7 +19,7 @@ Example using `next` with an external button:
 
 ```js
 $('#my-next-button').click(function() {
-  $('#calendar').next();
+  new Calendar.next();
 });
 ```
 

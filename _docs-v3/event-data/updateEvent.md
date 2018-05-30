@@ -14,12 +14,12 @@ Changes data for a single event, rerendering the event.
 Here is how you might update an event after a click:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   eventClick: function(event, element) {
 
     event.title = "CLICKED!";
 
-    $('#calendar').updateEvent(event);
+    calendar.updateEvent(event);
 
   }
 });

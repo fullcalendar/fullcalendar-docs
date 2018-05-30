@@ -9,7 +9,7 @@ It is possible to customize an existing available view by tweaking settings.
 If you'd like to take one of the existing view types, like "basic" or "agenda", but display it with a custom duration, like **4-days** instead of the stock 1-week or 1-day, do something like the following:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   header: {
     center: 'month,agendaFourDay' // buttons for switching between views
   },
@@ -35,7 +35,7 @@ Also, in the above example, `buttonText` has been used to customize the header b
 When your calendar needs to display a *single* view with custom date range logic, you can use this simplified approach instead. No need to define entries in the `view` object.
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'timeline', // the name of a generic view
   duration: { days: 3 }
 });

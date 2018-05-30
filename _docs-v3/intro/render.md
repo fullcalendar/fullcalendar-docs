@@ -14,7 +14,7 @@ This method is useful in the scenario where a tab setup might hide/show a calend
 ```js
 $('#my-tabs').tabs({
   activate: function(event, ui) {
-    $('#calendar').render();
+    calendar.render();
   }
 });
 ```

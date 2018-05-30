@@ -12,7 +12,7 @@ Object or Function
 If your calendar has only one view, you can set the visible range explicitly:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'agenda',
   visibleRange: {
     start: '2017-03-22',
@@ -26,7 +26,7 @@ The `visibleRange` object must have `start`/`end` properties that resolve to [Mo
 You can also specify a function that dynamically generates a range from the current date marker. The following example renders one day before the current date, and two days after:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'agenda',
   visibleRange: function(currentDate) {
     return {
@@ -40,7 +40,7 @@ $('#calendar').fullCalendar({
 The above examples can be written as explicit [Custom Views](custom-view-with-settings) as well:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'pastAndFutureView',
   views: {
     pastAndFutureView: {
@@ -58,7 +58,7 @@ $('#calendar').fullCalendar({
 If you need to change the `visibleRange` after initialization, you can do that using the standard technique for [setting options dynamically](dynamic-options):
 
 ```js
-$('#calendar').fullCalendar('option', 'visibleRange', {
+new Calendar.option('visibleRange', {
   start: '2017-04-01',
   end: '2017-04-05'
 });

@@ -14,6 +14,6 @@ This is useful if you want to get information about the calendar’s title or st
 Example Usage:
 
 ```js
-var view = $('#calendar').getView();
+var view = calendar.getView();
 alert("The view's title is " + view.title);
 ```

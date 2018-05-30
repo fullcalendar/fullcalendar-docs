@@ -57,14 +57,12 @@ Now it's time to initialize your calendar in JavaScript. This is the most minima
 ```html
 <script type='text/javascript'>
 
-$(function() {
-  $('#calendar').fullCalendar({
+new Calendar({
     googleCalendarApiKey: '<YOUR API KEY>',
     events: {
       googleCalendarId: 'abcd1234@group.calendar.google.com'
     }
   });
-});
 
 </script>
 ```
@@ -74,15 +72,13 @@ If you want to specify some [Event Source](event-source-object) options, you can
 ```html
 <script type='text/javascript'>
 
-$(function() {
-  $('#calendar').fullCalendar({
+new Calendar({
     googleCalendarApiKey: '<YOUR API KEY>',
     events: {
       googleCalendarId: 'abcd1234@group.calendar.google.com',
       className: 'gcal-event' // an option!
     }
   });
-});
 
 </script>
 ```
@@ -101,8 +97,7 @@ You can specify multiple Google Calendars by using the `eventSources` option:
 ```html
 <script type='text/javascript'>
 
-$(function() {
-  $('#calendar').fullCalendar({
+new Calendar({
     googleCalendarApiKey: '<YOUR API KEY>',
     eventSources: [
       {
@@ -114,7 +109,6 @@ $(function() {
       }
     ]
   });
-});
 
 </script>
 ```

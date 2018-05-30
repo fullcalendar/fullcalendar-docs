@@ -15,7 +15,7 @@ Example of displaying a calendar's current date when a button is clicked:
 
 ```js
 $('#my-button').click(function() {
-  var moment = $('#calendar').getDate();
+  var moment = calendar.getDate();
   alert("The current date of the calendar is " + moment.format());
 });
 ```
