@@ -9,7 +9,7 @@ Programmatically generates HTML that will be injected on the calendar's column h
 function( *moment* ) -> *string*
 </div>
 
-This function will will receive a [moment](moment) object that represents a single column's date and must return an HTML string to be injected.
+This function will receive a [moment](moment) object that represents a single column's date and must return an HTML string to be injected.
 
 Example:
 
