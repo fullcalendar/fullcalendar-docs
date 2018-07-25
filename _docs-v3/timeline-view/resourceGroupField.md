@@ -17,7 +17,7 @@ $('#calendar').fullCalendar({
     },
     {
       id: 'B',
-      groupdId: '1',
+      groupId: '1',
       title: 'Resource B'
     },
     {
