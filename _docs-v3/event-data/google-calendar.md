@@ -18,29 +18,26 @@ Also, your own Google Calendar API key is now required.
 **You must first have a Google Calendar API Key**:
 
 1. Go to the [Google Developer Console](https://console.developers.google.com/) and create a new project (it might take a second).
-2. Once in the project, go to **APIs & auth > APIs** on the sidebar.
-3. Find "Calendar API" in the list and turn it ON.
-4. On the sidebar, click **APIs & auth > Credentials**.
-5. In the "Public API access" section, click "Create new Key".
-6. Choose "Browser key".
-7. If you know what domains will host your calendar, enter them into the box. Otherwise, leave it blank. You can always change it later.
-8. Your new API key will appear. It might take second or two before it starts working.
+2. Once in the project, click on **Library** in the APIs & Services sidebar and search for "Google Calendar API". Click **ENABLE**.
+3. Click on **Credentials** in the APIs & Services sidebar to open the credentials menu.
+4. Under the **Credentials** tab, click on **Create Credentials**.
+5. Select **API key** in the dropdown menu to generate an API key.
+6. Your new API key will appear. It might take second or two before it starts working.
 
 **Make your Google Calendar public:**
 
 1. In the Google Calendar interface, locate the "My calendars" area on the left.
-2. Hover over the calendar you need and click the downward arrow.
-3. A menu will appear. Click "Share this Calendar".
-4. Check "Make this calendar public".
-5. Make sure "Share only my free/busy information" is **unchecked**.
-6. Click "Save".
+2. Hover over the calendar you need and click the 3 dots menu button.
+3. A pop-up menu will appear. Click **Settings and sharing**.
+4. Check "Make available to public".
+5. Make sure "See all event details" is selected.
 
 **Obtain your Google Calendar's ID:**
 
 1. In the Google Calendar interface, locate the "My calendars" area on the left.
-2. Hover over the calendar you need and click the downward arrow.
+2. Hover over the calendar you need and click the 3 dots menu button.
 3. A menu will appear. Click "Calendar settings".
-4. In the "Calendar Address" section of the screen, you will see your Calendar ID. It will look something like "abcd1234@group.calendar.google.com".
+4. In the "Integrate calendar" section of the screen, you will see your Calendar ID. It will look something like "abcd1234@group.calendar.google.com".
 
 ## Dependencies
 
