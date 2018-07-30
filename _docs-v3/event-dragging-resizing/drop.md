@@ -11,7 +11,7 @@ function( *date*, *jsEvent*, *ui*, *resourceId* ) { }
 
 `date` holds the [Moment](moment) of where the draggable was dropped. It will either have a time, or be [ambiguously-timed](moment#ambiguously-timed), depending on whether it was dropped on an all-day area or not.
 
-`jsEvent` holds the primitive JavaScript event, with information like mouse coordinates.
+`jsEvent` holds the jQuery event, with information like mouse coordinates.
 
 `ui` holds the jQuery UI information.
 
