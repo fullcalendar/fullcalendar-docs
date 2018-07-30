@@ -11,7 +11,7 @@ function( *date*, *jsEvent*, *view*, [ *resourceObj* ] ) { }
 
 `date` holds a [Moment](moment) for the clicked day. If an all-day area has been clicked, the moment will be [ambiguously-timed](moment#ambiguously-timed). If a slot in the agendaWeek or agendaDay views has been clicked, `date` will have the slot's time.
 
-`jsEvent` holds the native JavaScript event with low-level information such as click coordinates.
+`jsEvent` holds the jQuery event with low-level information such as click coordinates.
 
 `view` is set to the current [View Object](view-object).
 
