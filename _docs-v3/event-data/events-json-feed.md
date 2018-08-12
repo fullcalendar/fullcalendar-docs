@@ -1,8 +1,7 @@
 ---
 title: events (as a json feed)
 ---
-
-In order for FullCalendar to fetch [Event Objects](event-object), it will need to visit the URL of the JSON Feed containing those events. This action occurs when the user clicks prev/next or changes calendar views. FullCalendar will determine the date-range it needs events for and will pass that information along in GET parameters.
+Visiting the URL of a JSON feed is one of the ways FullCalendar fetches [Event Objects](event-object). This action occurs when the user clicks prev/next or changes calendar views. FullCalendar will determine the date-range it needs events for and will pass that information along in GET parameters.
 
 The GET parameter names will be determined by the [startParam](startParam) and [endParam](endParam) options. (`"start"` and `"end"` by default).
 
@@ -32,7 +31,7 @@ FullCalendar also accepts ISO8601 date strings with a timezone offset (see [time
 
 `2015-03-17T13:13:55-0400`
 
-**NOTE**: FullCalendar will not accept the new Date() JavaScript constructor as part of a date string (ex. new Date(2010, 12, 25)). The date string must be written using the ISO8601 standard (YYYY-MM-DDTHH:mm:ss.sssZ).
+**NOTE**: FullCalendar will not accept the new Date() JavaScript constructor as part of a date string (ex. new Date(2010, 12, 25)), because the JSON format does not support object instantiation with the **new** operator. The date string must be written using the ISO8601 standard (YYYY-MM-DDTHH:mm:ss.sssZ).
 
 Example script with ISO8601 date strings:
 
@@ -40,20 +39,20 @@ Example script with ISO8601 date strings:
 $('#calendar').fullCalendar({
   events: [
     {
-    title: ‘Event Title1’,
-    start: ‘2015-03-17T13:13:55.008’,
-    end: ‘2015-03-19T13:13:55.008’
+      title: 'Event Title1',
+      start: '2015-03-17T13:13:55.008',
+      end: '2015-03-19T13:13:55.008'
     },
     {
-    title: ‘Event Title2’,
-    start: ‘2015-03-17T13:13:55-0400’,
-    end: ‘2015-03-19T13:13:55-0400’
+      title: 'Event Title2',
+      start: '2015-03-17T13:13:55-0400',
+      end: '2015-03-19T13:13:55-0400'
     }
   ]
 });
 ```
 
-Unix timestamps can also be added to JSON feeds. FullCalendar supports only timestamps written with milliseconds, such as 1426612435000 (“March 17, 2015 5:13:55 PM”). Timestamps written in seconds (1426612435) will not be rendered.
+Millisecond time can also be added to JSON feeds. It is important to note that this number must be written in milliseconds, ex. 1426612435000 (“March 17, 2015 5:13:55 PM”), NOT seconds 1426612435.
 
 Example script with Unix timestamp:
 
@@ -61,7 +60,7 @@ Example script with Unix timestamp:
 $('#calendar').fullCalendar({
   events: [
     {
-    title: ‘Event Title’,
+    title: 'Event Title',
     start: 1426612435000,
     end: 1426785379000
     }
