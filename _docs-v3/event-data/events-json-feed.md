@@ -1,6 +1,7 @@
 ---
 title: events (as a json feed)
 ---
+
 Visiting the URL of a JSON feed is one of the ways FullCalendar fetches [Event Objects](event-object). This action occurs when the user clicks prev/next or changes calendar views. FullCalendar will determine the date-range it needs events for and will pass that information along in GET parameters.
 
 The GET parameter names will be determined by the [startParam](startParam) and [endParam](endParam) options. (`"start"` and `"end"` by default).
