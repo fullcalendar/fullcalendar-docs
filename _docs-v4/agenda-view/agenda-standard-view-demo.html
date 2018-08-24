@@ -1,0 +1,19 @@
+---
+title: agendaWeek and agendaDay views
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+    $('#calendar').fullCalendar({
+      defaultView: 'agendaWeek',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'agendaWeek,agendaDay'
+      },
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    })
+  });
+
+</script>

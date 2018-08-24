@@ -1,0 +1,27 @@
+---
+title: dayClick and selectable dates/times
+description: Use your mouse or touch device to click/select dates/times
+layout: demo-v3
+---
+<script>
+
+    $(function() {
+
+      $('#calendar').fullCalendar({
+        selectable: true,
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+        },
+        dayClick: function(date) {
+          alert('clicked ' + date.format());
+        },
+        select: function(startDate, endDate) {
+          alert('selected ' + startDate.format() + ' to ' + endDate.format());
+        }
+      });
+
+    });
+
+  </script>

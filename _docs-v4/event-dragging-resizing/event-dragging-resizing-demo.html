@@ -1,0 +1,23 @@
+---
+title: Enable event dragging/resizing
+description: You can drag events to other days and resize the end date
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      editable: true,
+      eventLimit: true, // when too many events in a day, show the popover
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'
+    });
+
+  });
+
+</script>

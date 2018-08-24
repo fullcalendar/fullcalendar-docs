@@ -1,0 +1,16 @@
+---
+title: Month View
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'month',
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+  });
+
+</script>

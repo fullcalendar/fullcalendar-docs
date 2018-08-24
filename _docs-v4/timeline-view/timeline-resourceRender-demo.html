@@ -1,0 +1,38 @@
+---
+title: Using resourceRender with a popover in timeline-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceRender
+layout: demo-v3
+needs_scheduler: true
+---
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'today prev,next',
+        center: 'title',
+        right: 'timelineDay,timelineWeek'
+      },
+      defaultView: 'timelineDay',
+      resourceRender: function(resourceObj, $td) {
+        $td.eq(0).find('.fc-cell-content')
+          .append(
+            $('<strong>(?)</strong>').popover({
+              title: resourceObj.title,
+              content: 'test!',
+              trigger: 'hover',
+              placement: 'bottom',
+              container: 'body'
+            })
+          );
+      },
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json'
+    });
+
+  });
+
+</script>

@@ -1,0 +1,21 @@
+---
+title: Calendar with navLinks activated
+description: Click on any date text within the calendar and see where it takes you
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      navLinks: true,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      }
+    });
+
+  });
+
+</script>

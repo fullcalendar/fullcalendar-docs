@@ -1,0 +1,28 @@
+---
+title: Assorted list views
+layout: demo-v3
+---
+<script>
+
+  $(function() {
+    $('#calendar').fullCalendar({
+      defaultView: 'listWeek',
+
+      // customize the button names,
+      // otherwise they'd all just say "list"
+      views: {
+        listDay: { buttonText: 'list day' },
+        listWeek: { buttonText: 'list week' },
+        listMonth: { buttonText: 'list month' }
+      },
+
+      header: {
+        left: 'title',
+        center: '',
+        right: 'listDay,listWeek,listMonth'
+      },
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    })
+  });
+
+</script>

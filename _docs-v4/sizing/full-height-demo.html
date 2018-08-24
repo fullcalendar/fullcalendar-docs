@@ -1,0 +1,68 @@
+---
+title: Calendar with full-height
+description: The height of the calendar will stretch to fill the browser window
+layout: demo-v3
+disable_base_styles: true
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'month',
+      height: 'parent',
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+  });
+
+</script>
+<style>
+
+  html, body {
+    overflow: hidden; /* don't do scrollbars */
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .demo-topbar { /* will be stripped out */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+  }
+
+  .demo-topbar + #calendar-container { /* will be stripped out */
+    top: 40px;
+  }
+
+  .fc-header-toolbar {
+    /*
+    the calendar will be butting up against the edges,
+    but let's scoot in the header's buttons
+    */
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+</style>
+<body>
+
+  {% include demo-v3-topbar.html %}
+
+  <div id='calendar-container'>
+    <div id='calendar'></div>
+  </div>
+
+</body>

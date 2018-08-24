@@ -1,0 +1,33 @@
+---
+title: Vertical resource view with groupByDateAndResource
+layout: demo-v3
+needs_scheduler: true
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'agendaFourDay',
+      groupByDateAndResource: true,
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'agendaDay,agendaFourDay'
+      },
+      views: {
+        agendaFourDay: {
+          type: 'agenda',
+          duration: { days: 4 }
+        }
+      },
+      resources: [
+        { id: 'a', title: 'Room A' },
+        { id: 'b', title: 'Room B' }
+      ],
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=2'
+    });
+
+  });
+
+</script>

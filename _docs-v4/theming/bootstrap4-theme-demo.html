@@ -1,0 +1,25 @@
+---
+title: Bootstrap 4 theme
+layout: demo-v3
+---
+<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      themeSystem: 'bootstrap4',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listMonth'
+      },
+      weekNumbers: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+  });
+
+</script>

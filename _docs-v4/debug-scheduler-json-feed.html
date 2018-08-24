@@ -1,0 +1,49 @@
+---
+description: json events with scheduler plugin
+layout: demo-v3
+needs_scheduler: true
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'timelineDay',
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'timelineDay,timelineWeek,timelineMonth'
+      },
+      resourceLabelText: 'Rooms',
+
+      // RESOURCES JSON FEED INSTRUCTIONS
+      //
+      // 1. Open a new browser tab. Go to codepen.io
+      //
+      // 2. Create a new pen (Create > New Pen)
+      //
+      // 3. Paste your JSON into the JS pane
+      //
+      // 4. Hit the "Save" button
+      //
+      // 5. The page's URL will change. It will look like this:
+      //    https://codepen.io/anon/pen/eWPBOx
+      //
+      // 6. Append ".js" to it. Will become like this:
+      //    https://codepen.io/anon/pen/eWPBOx.js
+      //
+      // 7. Paste this URL below.
+      //
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json',
+
+      // 8. do the same for the events JSON feed:
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources'
+
+      // 9. Then, enter a date for defaultDate that best displays your events.
+      //
+      // defaultDate: 'XXXX-XX-XX'
+    });
+
+  });
+
+</script>
