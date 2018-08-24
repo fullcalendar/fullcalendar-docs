@@ -15,7 +15,7 @@ function( *event*, *delta*, *revertFunc*, *jsEvent*, *ui*, *view* ) { }
 
 `revertFunc` is a function that, if called, reverts the event's start/end date to the values before the drag. This is useful if an ajax call should fail.
 
-`jsEvent` holds the native JavaScript event with low-level information such as mouse coordinates.
+`jsEvent` holds the jQuery event with low-level information such as mouse coordinates.
 
 `ui` holds an empty object. Before version 2.1, the [jQuery UI object](http://jqueryui.com/demos/draggable/).
 
