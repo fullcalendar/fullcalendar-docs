@@ -29,7 +29,7 @@ You can use the standard Bootstrap 3 theme downloaded from [getbootstrap.com](ht
 
 You can also use themes downloaded from 3rd party providers. Google ["free bootstrap themes"](https://www.google.com/search?q=free+bootstrap+themes) as a starting point.
 
-The theme you download might already have custom CSS written to style FullCalendar. If so, specifying `theme: 'bootstrap'` is unnecessary. If in doubt, try both methods to see which one looks better.
+The theme you download might already have custom CSS written to style FullCalendar. If so, specifying `theme: 'bootstrap3'` is unnecessary. If in doubt, try both methods to see which one looks better.
 
 
 ## jQuery UI Theme Roller
