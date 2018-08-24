@@ -45,9 +45,9 @@ If you need a different duration, make a [custom view](custom-view-with-settings
 
 ```js
 $('#calendar').fullCalendar({
-  header: [
+  header: {
     center: 'month,timelineFourDays'
-  ],
+  },
   views: {
     timelineFourDays: {
       type: 'timeline',
