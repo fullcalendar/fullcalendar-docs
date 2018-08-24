@@ -14,7 +14,7 @@ When a view's range is specified with a [duration](duration), hidden days will s
 Example for a [Custom View](custom-view-with-settings):
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   weekends: false,
   defaultView: 'agendaFourDay',
   views: {
@@ -29,7 +29,7 @@ $('#calendar').fullCalendar({
 Simpler example for a calendar with one view:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   weekends: false,
   defaultView: 'agenda',
   dayCount: 4

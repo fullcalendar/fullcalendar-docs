@@ -8,7 +8,7 @@ demos:
 A "basic" view is a view with one or more columns, each representing a day. The pre-configured basic views are **basicDay** and **basicWeek**. You can initialize a basic view like this:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'basicWeek'
 });
 ```

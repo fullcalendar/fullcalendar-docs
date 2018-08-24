@@ -4,9 +4,10 @@ layout: demo-v3
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       defaultView: 'basicWeek',
       header: {
         left: 'prev,next',
@@ -16,6 +17,7 @@ layout: demo-v3
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
 
+    calendar.render();
   });
 
 </script>

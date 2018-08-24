@@ -57,14 +57,18 @@ Now it's time to initialize your calendar in JavaScript. This is the most minima
 ```html
 <script type='text/javascript'>
 
-$(function() {
-  $('#calendar').fullCalendar({
-    googleCalendarApiKey: '<YOUR API KEY>',
-    events: {
-      googleCalendarId: 'abcd1234@group.calendar.google.com'
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      googleCalendarApiKey: '<YOUR API KEY>',
+      events: {
+        googleCalendarId: 'abcd1234@group.calendar.google.com'
+      }
+    });
+
+    calendar.render();
   });
-});
 
 </script>
 ```
@@ -74,15 +78,19 @@ If you want to specify some [Event Source](event-source-object) options, you can
 ```html
 <script type='text/javascript'>
 
-$(function() {
-  $('#calendar').fullCalendar({
-    googleCalendarApiKey: '<YOUR API KEY>',
-    events: {
-      googleCalendarId: 'abcd1234@group.calendar.google.com',
-      className: 'gcal-event' // an option!
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      googleCalendarApiKey: '<YOUR API KEY>',
+      events: {
+        googleCalendarId: 'abcd1234@group.calendar.google.com',
+        className: 'gcal-event' // an option!
+      }
+    });
+
+    calendar.render();
   });
-});
 
 </script>
 ```
@@ -101,20 +109,24 @@ You can specify multiple Google Calendars by using the `eventSources` option:
 ```html
 <script type='text/javascript'>
 
-$(function() {
-  $('#calendar').fullCalendar({
-    googleCalendarApiKey: '<YOUR API KEY>',
-    eventSources: [
-      {
-        googleCalendarId: 'abcd1234@group.calendar.google.com'
-      },
-      {
-        googleCalendarId: 'efgh5678@group.calendar.google.com',
-        className: 'nice-event'
-      }
-    ]
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      googleCalendarApiKey: '<YOUR API KEY>',
+      eventSources: [
+        {
+          googleCalendarId: 'abcd1234@group.calendar.google.com'
+        },
+        {
+          googleCalendarId: 'efgh5678@group.calendar.google.com',
+          className: 'nice-event'
+        }
+      ]
+    });
+
+    calendar.render();
   });
-});
 
 </script>
 ```

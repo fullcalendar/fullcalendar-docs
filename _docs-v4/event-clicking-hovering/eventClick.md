@@ -20,7 +20,7 @@ Within the callback function, `this` is set to the event's `<div>` element.
 Here is an example demonstrating all these variables:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   eventClick: function(calEvent, jsEvent, view) {
 
     alert('Event: ' + calEvent.title);
@@ -46,7 +46,7 @@ Normally, if the [Event Object](event-object) has its `url` property set, a clic
 Often, developers want an event's `url` to open in a different tab or a popup window. The following example shows how to do this:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   events: [
     {
       title: 'My Event',

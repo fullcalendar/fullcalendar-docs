@@ -9,7 +9,7 @@ You can get/set calendar options after a calendar has already been initialized.
 You can query for the current value of a calendar option:
 
 ```js
-var locale = $('#calendar').fullCalendar('option', 'locale');
+calendar.option('locale');
 ```
 
 This will only return options that are global to the calendar. This method will *not* return [View-Specific Options](view-specific-options).
@@ -22,13 +22,13 @@ Since version 2.9.0, it is possible to dynamically set options after initalizati
 Can you dynamically set a single option:
 
 ```js
-$('#calendar').fullCalendar('option', 'locale', 'fr');
+calendar.option('locale', 'fr');
 ```
 
 Or if you would like to set multiple options at once, limiting the calendar to at most one repaint, pass in an option hash:
 
 ```js
-$('#calendar').fullCalendar('option', {
+calendar.option({
   locale: 'fr',
   isRTL: true
 });

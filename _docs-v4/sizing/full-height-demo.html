@@ -7,14 +7,16 @@ disable_base_styles: true
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new Calendar(calendarEl, {
       defaultView: 'month',
       height: 'parent',
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
 
+    calendar.render();
   });
 
 </script>

@@ -7,7 +7,7 @@ since_version: 2.8.0
 Dynamically removes all event sources, or multiple specific event sources.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'removeEventSources', *optionalSourcesArray* )
+.removeEventSources( *optionalSourcesArray* )
 </div>
 
 If `optionalSourcesArray` is not given, **all event sources will be removed**.

@@ -6,7 +6,7 @@ description: How to attach handlers to your calendar, which execute when other t
 Handlers (sometimes called "callbacks") are sort of like options, but they are *functions* that get *called* whenever something special happens. In the following example, an alert box will appear whenever the user clicks on a day:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   dayClick: function() {
     alert('a day has been clicked!');
   }
@@ -20,10 +20,6 @@ You can attach handlers after the calendar initializes using the `on` and `off` 
 The below example dynamically binds a [dayClick](dayClick) handler.
 
 ```js
-// a convenient utility for getting the calendar object.
-// you can call methods on the calendar object directly.
-var calendar = $('#calendar').fullCalendar('getCalendar');
-
 calendar.on('dayClick', function(date, jsEvent, view) {
   console.log('clicked on ' + date.format());
 });

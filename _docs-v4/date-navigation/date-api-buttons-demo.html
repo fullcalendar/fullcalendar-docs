@@ -24,18 +24,21 @@ disable_base_styles: true
 </style>
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       header: false // don't display the default header
     });
 
-    $('#prev').on('click', function() {
-      $('#calendar').fullCalendar('prev'); // call method
+    calendar.render();
+
+    document.getElementById('prev').addEventListener('click', function() {
+      calendar.prev(); // call method
     });
 
-    $('#next').on('click', function() {
-      $('#calendar').fullCalendar('next'); // call method
+    document.getElementById('next').addEventListener('click', function() {
+      calendar.next(); // call method
     });
 
   });

@@ -23,7 +23,7 @@ demos:
 Agenda view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis. The two predefined agenda views are **agendaDay** and **agendaWeek**. They can be initialized like this:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'agendaWeek'
 });
 ```

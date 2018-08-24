@@ -14,7 +14,7 @@ This function will will receive a [moment](moment) object that represents a sing
 Example:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   columnHeaderText: function(mom) {
     if (mom.weekday() === 5) {
       return 'Friday!';

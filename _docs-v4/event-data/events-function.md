@@ -19,7 +19,7 @@ It will also be given `callback`, a function that must be called when the custom
 Here is an example showing how to use an event function to fetch events from a hypothetical XML feed:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   events: function(start, end, timezone, callback) {
     $.ajax({
       url: 'myxmlfeed.php',
@@ -51,7 +51,7 @@ However, if you have the choice, JSON is a better idea because you can just spec
 You can specify [Event Source options](event-source-object#options). This often comes in handy when you are using the [eventSources](eventSources) option to specify multiple event sources and you want certain options to only apply to certain sources. However, to do this, you must write things a little differently:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
 
   eventSources: [
 

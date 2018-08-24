@@ -6,7 +6,7 @@ type: method
 Removes events from the calendar.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'removeEvents' [, *idOrFilter* ] )
+.removeEvents( [, *idOrFilter* ] )
 </div>
 
 If `idOrFilter` is omitted, *all* events are removed.

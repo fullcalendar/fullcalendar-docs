@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 The [main `businessHours` settings](businessHours) can be applied more granularly to individual resources via the `businessHours` property on the [Resource Object](resource-object)<!--more--> like so:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'timelineWeek',
   resources: [
     {

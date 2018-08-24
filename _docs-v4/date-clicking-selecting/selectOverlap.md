@@ -14,7 +14,7 @@ When the [selectable](selectable) option is activated, and `false` is given, the
 If a function is given, the function will be called once for every time the user's selection intersects with an event. If the function returns `true`, the selection will be allowed. If `false`, the selection will not be allowed. Here is an example of allowing selections over [background events](background-events) but not allowing selections over any other types of events:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   events: [ /* event data here */ ]
   selectOverlap: function(event) {
     return event.rendering === 'background';
