@@ -11,7 +11,7 @@ function( *event*, *jsEvent*, *ui*, *view* ) { }
 
 `event` is an [Event Object](event-object) that hold the event's information (date, title, etc).
 
-`jsEvent` holds the native javascript event with low-level information such as click coordinates.
+`jsEvent` holds the jQuery event with low-level information such as click coordinates.
 
 `ui` holds an empty object. Before version 2.1, the [jQuery UI object](http://jqueryui.com/demos/draggable/).
 
