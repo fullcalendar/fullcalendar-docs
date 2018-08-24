@@ -33,3 +33,73 @@ $(function() {
   });
 });
 ```
+
+**Example typing**
+
+```ts
+import * as calendar from  'fullcalendar';
+
+// list of calendar objects to display
+ calendarDate: calendar.EventObjectInput[] =
+		[
+				{
+					title: 'From',
+					start: '2018-03-22',
+					allDay: true,
+					rendering: 'background',
+					backgroundColor: '#f26522',
+				},
+			];
+      
+     // TODO:  Type this...
+    calendarOptions: any = {
+        //height: 450,
+        editable: true,
+        title:'My Calendar',
+        weekends: false,
+        header: {
+          left: 'month agendaWeek',
+//          left: 'month basicWeek basicDay agendaWeek agendaDay',
+          center: 'title',
+          right: 'today prev,next'
+        },
+        dayClick: this.DateClicked(this),
+        eventMouseover : this.MouseOver,
+	    eventMouseout: this.MouseOut,
+        eventClick: this.EventClicked,
+        contentHeight: 600,
+        // eventDrop: (event: calendar.EventObjectInput, delta: moment.Duration, revertFunc: Function, jsEvent: Event, ui: any, view: calendar.View) => {
+        //     console.log( event.title + ' was drop ');
+        // },
+        // eventResize: (event: calendar.EventObjectInput, delta: moment.Duration, revertFunc: Function, jsEvent: Event, ui: any, view: calendar.View) => {
+        //     console.log( event.title + ' was resize ');
+        // }
+    };
+    
+    
+    
+     // WARNING:  'this' is date cell not the class, why there is a function returning a true Javascript function.
+    DateClicked(me: TeacherCalendarComponent) {
+        return function(date: moment.Moment, jsEvent: MouseEvent, view: calendar.View, resourceObj?: any)    {
+            var present = _.find(me.selectedDates, x=> x.isSame(date));
+             ...
+        }
+     }
+     
+       EventClicked = (event: calendar.EventObjectInput, jsEvent: MouseEvent, view: calendar.View) => {
+        console.log( event.title + ' was clicked ');
+    }
+    MouseOver = (event: calendar.EventObjectInput, jsEvent: MouseEvent, view: calendar.View) => {
+        console.log( event.title + ' was mouse over');
+    }
+    MouseOut = (event: calendar.EventObjectInput, jsEvent: MouseEvent, view: calendar.View) => {
+        console.log( event.title + ' was mouse out');
+    }
+    
+    // I am using Angular Material JS calendar created implicitly.
+    
+    var calendar = $('#teacher-calendar').fullCalendar('getCalendar');
+    calendar.addEventSource(this.holidays);
+    calendar.addEventSource({ events: this.calendarDate });
+      
+```
