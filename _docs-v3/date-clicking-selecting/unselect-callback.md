@@ -20,4 +20,4 @@ A selection might be cleared for a number of reasons:
 4. The [unselect](unselect-method) method is called through the API.
 
 
-`jsEvent` holds the primitive JavaScript event with information such as mouse coordinates. If `unselect` has been triggered via the [unselect method](unselect-method), `jsEvent` will be `undefined`.
+`jsEvent` holds the jQuery event with information such as mouse coordinates. If `unselect` has been triggered via the [unselect method](unselect-method), `jsEvent` will be `undefined`.
