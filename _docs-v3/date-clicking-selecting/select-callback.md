@@ -16,6 +16,6 @@ function( *start*, *end*, *jsEvent*, *view*, [ *resource* ] )
 
 You can test if the `start`/`end` is timed or all-day by calling `hasTime` ([more info](moment#ambiguously-timed)).
 
-`jsEvent` holds the primitive JavaScript event with information such as mouse coordinates. If `select` has been triggered via the [select method](select-method), `jsEvent` will be `undefined`.
+`jsEvent` holds the jQuery event with information such as mouse coordinates. If `select` has been triggered via the [select method](select-method), `jsEvent` will be `undefined`.
 
 If the [Scheduler plugin](scheduler) is installed, the final `resource` argument is the [Resource Object](resource-object) the user selected. [See a demo of the select callback with resources](date-clicking-selecting-resource-demo).
