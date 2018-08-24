@@ -4,9 +4,7 @@ layout: demo-v3
 ---
 <script>
 
-  $(function() {
-
-    $('#calendar').fullCalendar({
+    new Calendar({
       defaultView: 'agendaFourDay',
       groupByResource: true,
       header: {
@@ -22,7 +20,5 @@ layout: demo-v3
       },
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
-
-  });
 
 </script>

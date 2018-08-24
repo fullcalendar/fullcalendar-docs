@@ -12,7 +12,7 @@ Sets the exact duration of a custom view.
 Example for a [Custom View](custom-view-with-settings):
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'agendaFourDay',
   views: {
     agendaFourDay: {
@@ -26,7 +26,7 @@ $('#calendar').fullCalendar({
 Simpler example for a calendar with one view:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'agenda',
   duration: { days: 4 }
 });

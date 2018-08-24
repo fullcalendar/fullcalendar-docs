@@ -17,7 +17,7 @@ A string argument can be provided that navigates the user to a specific view.
 Also, a function argument can be provided that executes arbitrary code:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   navLinks: true,
   navLinkDayClick: function(date, jsEvent) {
     console.log('day', date.format()); // date is a moment

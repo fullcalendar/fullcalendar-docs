@@ -17,7 +17,7 @@ The `validRange` property can have `start` and `end` properties. You may specify
 
 ```js
 // constrain to a discrete range
-$('#calendar1').fullCalendar({
+new Calendar({
   defaultView: 'month',
   validRange: {
     start: '2017-05-01',
@@ -26,7 +26,7 @@ $('#calendar1').fullCalendar({
 });
 
 // constrain to an open-ended range
-$('#calendar2').fullCalendar({
+new Calendar({
   defaultView: 'month',
   validRange: {
     start: '2017-05-01'
@@ -37,7 +37,7 @@ $('#calendar2').fullCalendar({
 You can also dynamically generate the range via a function. It must return an object in the same format:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   defaultView: 'month',
   validRange: function(nowDate) {
     return {

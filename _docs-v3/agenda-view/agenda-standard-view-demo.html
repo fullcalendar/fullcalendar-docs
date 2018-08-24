@@ -4,8 +4,7 @@ layout: demo-v3
 ---
 <script>
 
-  $(function() {
-    $('#calendar').fullCalendar({
+    new Calendar({
       defaultView: 'agendaWeek',
       header: {
         left: 'prev,next today',
@@ -13,7 +12,6 @@ layout: demo-v3
         right: 'agendaWeek,agendaDay'
       },
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
-    })
-  });
+    });
 
 </script>

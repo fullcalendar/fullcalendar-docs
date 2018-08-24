@@ -6,7 +6,7 @@ type: method
 Moves the calendar one step forward (by a month or week for example).
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'next' )
+.next()
 </div>
 
 If the calendar is in `month` view, will move the calendar forward one month.
@@ -19,7 +19,7 @@ Example using `next` with an external button:
 
 ```js
 $('#my-next-button').click(function() {
-  $('#calendar').fullCalendar('next');
+  new Calendar.next();
 });
 ```
 

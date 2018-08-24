@@ -15,7 +15,7 @@ You can put any number of [event arrays](events-array), [functions](events-funct
 Here is an example calendar that displays two [JSON feeds](events-json-feed):
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   eventSources: [
     '/feed1.php',
     '/feed2.php'

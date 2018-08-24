@@ -6,9 +6,7 @@ layout: demo-v3
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
 
-  $(function() {
-
-    $('#calendar').fullCalendar({
+new Calendar({
       eventClick: function(eventObj) {
         if (eventObj.url) {
           alert(
@@ -36,7 +34,5 @@ layout: demo-v3
         }
       ]
     });
-
-  });
 
 </script>

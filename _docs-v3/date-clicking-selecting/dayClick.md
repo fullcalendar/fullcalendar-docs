@@ -20,7 +20,7 @@ Within the callback function, `this` is set to the `<td>` of the clicked day.
 Here is an example that demonstrates all of these variables:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   dayClick: function(date, jsEvent, view) {
 
     alert('Clicked on: ' + date.format());
@@ -51,7 +51,7 @@ The dayClick trigger is **not** fired when the user clicks a day heading in list
 For resource views, this callback will receive an additional [Resource Object](resource-object) parameter. Example:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar({
   dayClick: function(date, jsEvent, view, resourceObj) {
 
     alert('Date: ' + date.format());

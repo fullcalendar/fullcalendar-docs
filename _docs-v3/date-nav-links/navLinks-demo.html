@@ -5,9 +5,7 @@ layout: demo-v3
 ---
 <script>
 
-  $(function() {
-
-    $('#calendar').fullCalendar({
+    new Calendar({
       navLinks: true,
       header: {
         left: 'prev,next today',
@@ -15,7 +13,5 @@ layout: demo-v3
         right: 'month,agendaWeek,agendaDay'
       }
     });
-
-  });
 
 </script>

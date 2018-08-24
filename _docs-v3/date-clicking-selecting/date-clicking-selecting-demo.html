@@ -5,9 +5,7 @@ layout: demo-v3
 ---
 <script>
 
-    $(function() {
-
-      $('#calendar').fullCalendar({
+      new Calendar({
         selectable: true,
         header: {
           left: 'prev,next today',
@@ -21,7 +19,5 @@ layout: demo-v3
           alert('selected ' + startDate.format() + ' to ' + endDate.format());
         }
       });
-
-    });
 
   </script>
