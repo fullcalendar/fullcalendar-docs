@@ -61,9 +61,9 @@ Example script with Unix timestamp:
 $('#calendar').fullCalendar({
   events: [
     {
-    title: 'Event Title',
-    start: 1426612435000,
-    end: 1426785379000
+      title: 'Event Title',
+      start: 1426612435000,
+      end: 1426785379000
     }
   ]
 });
