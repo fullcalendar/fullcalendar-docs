@@ -56,4 +56,4 @@ webpack [css-loader](https://github.com/webpack-contrib/css-loader) plugin:
 ```js
 import "./node_modules/fullcalendar/dist/fullcalendar.min.css"
 ```
-*(the path names might be different on your project)*
+*(the path names might be different)*
