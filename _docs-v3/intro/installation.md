@@ -46,13 +46,14 @@ Your import for `fullcalendar` does not need to be named. It will attached to jQ
 You must also include FullCalendar's stylesheet somehow, some options:  
 Html link tag:  
 ```html
-<link rel="stylesheet" type="text/css" href="~/node_modules/fullcalendar/dist/fullcalendar.min.css">
+<link rel="stylesheet" type="text/css" href="./node_modules/fullcalendar/dist/fullcalendar.min.css">
 ``` 
 Css import:  
 ```css
-@import "/node_modules/fullcalendar/dist/fullcalendar.min.css";
+@import "./node_modules/fullcalendar/dist/fullcalendar.min.css";
 ```
-webpack css-loader plugin:  
+webpack [css-loader](https://github.com/webpack-contrib/css-loader) plugin:  
 ```js
-import "/node_modules/fullcalendar/dist/fullcalendar.min.css"
+import "./node_modules/fullcalendar/dist/fullcalendar.min.css"
 ```
+*(the path names might be different on your project)*
