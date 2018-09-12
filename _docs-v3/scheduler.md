@@ -51,16 +51,17 @@ import 'fullcalendar-scheduler';
 You must also include FullCalendar's stylesheet somehow, some options:  
 Html link tag:  
 ```html
-<link rel="stylesheet" type="text/css" href="/node_modules/fullcalendar-scheduler/dist/scheduler.min.css">
+<link rel="stylesheet" type="text/css" href="./node_modules/fullcalendar-scheduler/dist/scheduler.min.css">
 ``` 
 Css import:  
 ```css
-@import "/node_modules/fullcalendar-scheduler/dist/scheduler.min.css";
+@import "./node_modules/fullcalendar-scheduler/dist/scheduler.min.css";
 ```
-webpack css-loader plugin:  
+webpack [css-loader](https://github.com/webpack-contrib/css-loader) plugin:  
 ```js
-import "/node_modules/fullcalendar-scheduler/dist/scheduler.min.css"
+import "./node_modules/fullcalendar-scheduler/dist/scheduler.min.css"
 ```
+*(the path names might be different)*
 
 ## Initializing a View
 
