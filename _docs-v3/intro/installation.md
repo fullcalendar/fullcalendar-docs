@@ -43,4 +43,16 @@ import 'fullcalendar';
 
 Your import for `fullcalendar` does not need to be named. It will attached to jQuery as a plugin. [In the next section](initialization), you will learn how to use jQuery to initialize a calendar.
 
-You must also include FullCalendar's stylesheet somehow, either manually with a `<link>` tag or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).
+You must also include FullCalendar's stylesheet somehow, some options:  
+Html link tag:  
+```html
+<link rel="stylesheet" type="text/css" href="~/node_modules/fullcalendar/dist/fullcalendar.min.css">
+``` 
+Css import:  
+```css
+@import "/node_modules/fullcalendar/dist/fullcalendar.min.css";
+```
+webpack css-loader plugin:  
+```js
+import "/node_modules/fullcalendar/dist/fullcalendar.min.css"
+```
