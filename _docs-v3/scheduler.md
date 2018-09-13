@@ -12,7 +12,7 @@ The Scheduler plugin provides you with two extra calendar views to use, both of 
 - [Vertical Resource View](vertical-resource-view) - good at displaying a fewer number of resources
 
 Scheduler is a [premium plugin]({{ site.baseurl }}/scheduler) that has different licensing than the core FullCalendar library. [More information &raquo;]({{ site.baseurl }}/scheduler/license)
-
+/pull/38/pull/38
 
 ## Installation with Script Tags
 
@@ -48,19 +48,26 @@ import 'fullcalendar';
 import 'fullcalendar-scheduler';
 ```
 
-You must also include FullCalendar's stylesheet somehow, some options:  
-Html link tag:  
+You must also include FullCalendar's stylesheet somehow, some options:
+
+Html link tag:
+
 ```html
 <link rel="stylesheet" type="text/css" href="./node_modules/fullcalendar-scheduler/dist/scheduler.min.css">
-``` 
-Css import:  
+```
+
+Css import:
+
 ```css
 @import "./node_modules/fullcalendar-scheduler/dist/scheduler.min.css";
 ```
-webpack [css-loader](https://github.com/webpack-contrib/css-loader) plugin:  
+
+webpack [css-loader](https://github.com/webpack-contrib/css-loader) plugin:
+
 ```js
 import "./node_modules/fullcalendar-scheduler/dist/scheduler.min.css"
 ```
+
 *(the path names might be different)*
 
 ## Initializing a View
