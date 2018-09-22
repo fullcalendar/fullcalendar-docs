@@ -8,7 +8,7 @@ Modifies any of the non-date-related properties of an [Event Object](event-objec
 event.setProp( *name*, *value* )
 </div>
 
-This will cause the event to rerender.
+This will cause the event to rerender. If there are other [events](event-object) that share the same `groupId`, those events' props will be similarly modified.
 
 To modify any of the `extendedProps`, use [setExtendedProp](Event-setExtendedProp).
 
