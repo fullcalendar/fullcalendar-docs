@@ -2,7 +2,7 @@
 title: Date Clicking & Selecting
 children:
   - selectable
-  - selectHelper
+  - selectMirror
   - unselectAuto
   - unselectCancel
   - selectOverlap
@@ -11,7 +11,7 @@ children:
   - selectMinDistance
   - title: Callbacks
     children:
-      - dayClick
+      - dateClick
       - select-callback
       - unselect-callback
   - title: Methods

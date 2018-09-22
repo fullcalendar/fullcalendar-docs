@@ -12,7 +12,7 @@ children:
       - resourcesInitiallyExpanded
       - slotWidth
 related:
-  - dayClick
+  - dateClick
   - slotDuration
   - slotLabelFormat
   - slotLabelInterval

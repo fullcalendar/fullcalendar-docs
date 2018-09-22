@@ -6,42 +6,66 @@ type: callback
 Triggered when the user clicks an event.
 
 <div class='spec' markdown='1'>
-function( *event*, *jsEvent*, *view* ) { }
+function( *eventClickInfo* ) { }
 </div>
 
-`event` is an [Event Object](event-object) that holds the event's information (date, title, etc).
+`eventClickInfo` is a plain object with the following properties:
 
-`jsEvent` holds the native JavaScript event with low-level information such as click coordinates.
+<table>
 
-`view` holds the current [View Object](view-object).
+<tr>
+<th>event</th>
+<td markdown='1'>
+The associated [Event Object](event-object).
+</td>
+</tr>
 
-Within the callback function, `this` is set to the event's `<div>` element.
+<tr>
+<th>el</th>
+<td markdown='1'>
+The HTML element for this event.
+</td>
+</tr>
 
-Here is an example demonstrating all these variables:
+<tr>
+<th>jsEvent</th>
+<td markdown='1'>
+The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
+<tr>
+<th>view</th>
+<td markdown='1'>
+The current [View Object](view-object).
+</td>
+</tr>
+
+</table>
+
+Here is an example demonstrating some of these properties:
 
 ```js
-var calendar = new Calendar(calendarEl, {
-  eventClick: function(calEvent, jsEvent, view) {
+new Calendar(calendarEl, {
 
-    alert('Event: ' + calEvent.title);
-    alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-    alert('View: ' + view.name);
+  eventClick: function(info) {
+    alert('Event: ' + info.event.title);
+    alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+    alert('View: ' + info.view.type);
 
     // change the border color just for fun
-    $(this).css('border-color', 'red');
-
+    info.el.style.borderColor = 'red';
   }
+
 });
 ```
-
-eventClick will *not* be triggered for [background events](background-events).
 
 [View a simple demo](eventClick-demo) of eventClick.
 
 
-## Return Value
+## Cancelling Default Behavior
 
-Normally, if the [Event Object](event-object) has its `url` property set, a click on the event will cause the browser to visit the event's url (in the same window/tab). Returning `false` from within your function will prevent this from happening.
+Normally, if the [Event Object](event-object) has its `url` property set, a click on the event will cause the browser to visit the event's url (in the same window/tab). You can prevent this by calling `.preventDefault()` on the given native JS event.
 
 Often, developers want an event's `url` to open in a different tab or a popup window. The following example shows how to do this:
 
@@ -55,10 +79,11 @@ var calendar = new Calendar(calendarEl, {
     }
     // other events here
   ],
-  eventClick: function(event) {
-    if (event.url) {
-      window.open(event.url);
-      return false;
+  eventClick: function(info) {
+    info.jsEvent.preventDefault(); // don't let the browser navigate
+
+    if (info.event.url) {
+      window.open(info.event.url);
     }
   }
 });

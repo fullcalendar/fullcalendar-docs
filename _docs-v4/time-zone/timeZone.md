@@ -6,7 +6,7 @@ A time zone is a region of the world that serves as a context for displaying dat
 
 - How the datetime text renders on events
 - The positioning of events. Which day or which part of the time axis an event is on top of.
-- The way in which you should interpret the exposed native Date objects throughout the API, such as an [Event Object's](event-object) `start`/`end`, a [View object's](view-object) `activeStart`/`activeEnd`, or the dates exposed by the `dayClick` or `select` callbacks. Read more about [Date Objects](date-object).
+- The way in which you should interpret the exposed native Date objects throughout the API, such as an [Event Object's](event-object) `start`/`end`, a [View object's](view-object) `activeStart`/`activeEnd`, or the dates exposed by the `dateClick` or `select` callbacks. Read more about [Date Objects](date-object).
 - When event data is requested, the dates given to an [events function](events-function) or [json feed](events-json-feed)
 - When event data is received, the way in which dates are parsed. This only affects dates that were supplied with no time zone information, aka [ISO8601 date strings](https://en.wikipedia.org/wiki/ISO_8601) that do not supply a UTC offset. Read more about [Date Parsing](date-parsing).
 
@@ -24,14 +24,14 @@ When using the dates emitted from the API, you'll want to access their *local* v
 An example to summarize this behavior: (the placeholder XX:XX signifies the local time zone offset, which will vary)
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'local', // the default (unnecessary to specify)
   events: [
     { start: '2018-09-01T12:30:00Z' }, // will be shifted to local
     { start: '2018-09-01T12:30:00+XX:XX' }, // already same offset as local, so won't shift
     { start: '2018-09-01T12:30:00' } // will be parsed as if it were '2018-09-01T12:30:00+XX:XX'
   ],
-  dayClick: function(arg) {
+  dateClick: function(arg) {
     console.log(arg.date.toString()); // use *local* methods on the native Date Object
     // will output something like 'Sat Sep 01 2018 00:00:00 GMT-XX:XX (Eastern Daylight Time)'
   }
@@ -50,14 +50,14 @@ When using the dates emitted from the API, you'll want to access their *UTC* val
 In summary:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'UTC',
   events: [
     { start: '2018-09-01T12:30:00Z' }, // already in UTC, so won't shift
     { start: '2018-09-01T12:30:00+XX:XX' }, // will shift to 00:00 offset
     { start: '2018-09-01T12:30:00' } // will be parsed as if it were '2018-09-01T12:30:00Z'
   ],
-  dayClick: function(arg) {
+  dateClick: function(arg) {
     console.log(arg.date.toUTCString()); // use *UTC* methods on the native Date Object
     // will output something like 'Sat, 01 Sep 2018 00:00:00 GMT'
   }
@@ -87,7 +87,7 @@ What's the point of all of this? It allows your *server* to compute the time zon
 In summary:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'America/New_York',
   timeZoneImpl: 'UTC-coercion', // the default (unnecessary to specify)
   events: [
@@ -95,7 +95,7 @@ new Calendar({
     { start: '2018-09-01T12:30:00+XX:XX' }, // will be parsed in UTC as '2018-09-01T12:30:00Z'
     { start: '2018-09-01T12:30:00' } // will be parsed in UTC as '2018-09-01T12:30:00Z'
   ],
-  dayClick: function(arg) {
+  dateClick: function(arg) {
     console.log(arg.date.toUTCString()); // use *UTC* methods on the native Date Object
     // will output something like 'Sat, 01 Sep 2018 00:00:00 GMT'
   }
@@ -120,7 +120,7 @@ The following example demonstrates **fullcalendar-moment-timezone**:
 import { toMoment } from 'fullcalendar-moment'
 import 'fullcalendar-moment-timezone'
 
-var calendar = new Calendar({
+var calendar = new Calendar(calendarEl, {
   timeZone: 'America/New_York',
   timeZoneImpl: 'moment-timezone',
   events: [
@@ -128,7 +128,7 @@ var calendar = new Calendar({
     { start: '2018-09-01T12:30:00+XX:XX' }, // will be shifted to America/New_York
     { start: '2018-09-01T12:30:00' } // will be parsed as America/New_York
   ],
-  dayClick: function(arg) {
+  dateClick: function(arg) {
     // millisecond value is correctly in America/New_York
     console.log(arg.date.valueOf())
 

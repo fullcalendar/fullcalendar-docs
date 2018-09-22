@@ -11,6 +11,6 @@ Integer, *default*: `0`
 
 The default value of `0` puts no restriction on the distance the mouse must travel.
 
-A non-zero value is useful for differentiating a selection from a [dayClick](dayClick).
+A non-zero value is useful for differentiating a selection from a [dateClick](dateClick).
 
 This setting is only applicable to mouse-related interaction. For touch interation, see [selectLongPressDelay](selectLongPressDelay).

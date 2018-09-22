@@ -7,7 +7,7 @@ The RRule plugin is a connector to the [rrule js library](https://github.com/jak
 It introduces some new [event properties](event-parsing):
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   events: [
 
     {

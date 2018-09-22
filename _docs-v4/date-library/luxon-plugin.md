@@ -17,7 +17,7 @@ Example using formatting strings:
 require { Calendar } from 'fullcalendar'
 require 'fullcalendar-luxon' // simply require the file
 
-new Calendar({
+new Calendar(calendarEl, {
   titleFormat: 'LLLL d, yyyy' // you can now use format strings
 })
 ```
@@ -26,7 +26,7 @@ If you want to format a date *range*, you can group related date parts with curl
 
 ```js
 ...
-new Calendar({
+new Calendar(calendarEl, {
   titleFormat: '{LLLL {d}}, yyyy'
   // could produce "January 5 - 7, 2018"
   // could produce "January 5 - February 31, 2018"
@@ -40,9 +40,9 @@ Example using date/duration conversion:
 require { Calendar } from 'fullcalendar'
 require { toDateTime, toDuration } from 'fullcalendar-luxon'
 
-var calendar = new Calendar({
+var calendar = new Calendar(calendarEl, {
 
-  dayClick: function(arg) {
+  dateClick: function(arg) {
     var dt = toDateTime(calendar, arg.date) // calendar must be first argument
     console.log('clicked on ' + dt.toISO())
   },
@@ -61,7 +61,7 @@ Example using `timeZoneImpl`:
 require { Calendar } from 'fullcalendar'
 require 'fullcalendar-luxon' // simply require the file
 
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'Europe/Moscow',
   timeZoneImpl: 'luxon'
 })

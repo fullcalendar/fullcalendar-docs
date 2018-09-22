@@ -20,7 +20,7 @@ Example using formatting strings:
 require { Calendar } from 'fullcalendar'
 require 'fullcalendar-moment' // simply require the file
 
-new Calendar({
+new Calendar(calendarEl, {
   titleFormat: 'MMMM D, YYYY' // you can now use format strings
 })
 ```
@@ -29,7 +29,7 @@ If you want to format a date *range*, you can group related date parts with curl
 
 ```js
 ...
-new Calendar({
+new Calendar(calendarEl, {
   titleFormat: '{MMMM {D}}, YYYY'
   // could produce "January 5 - 7, 2018"
   // could produce "January 5 - February 31, 2018"
@@ -43,9 +43,9 @@ Example using date/duration conversion:
 require { Calendar } from 'fullcalendar'
 require { toMoment, toDuration } from 'fullcalendar-moment'
 
-var calendar = new Calendar({
+var calendar = new Calendar(calendarEl, {
 
-  dayClick: function(arg) {
+  dateClick: function(arg) {
     var m = toMoment(calendar, arg.date) // calendar must be first argument
     console.log('clicked on ' + m.format())
   },
@@ -71,7 +71,7 @@ Example using Node/Webpack:
 require { Calendar } from 'fullcalendar'
 require 'fullcalendar-moment-timezone' // simply require the file
 
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'Europe/Moscow',
   timeZoneImpl: 'moment-timezone'
 })

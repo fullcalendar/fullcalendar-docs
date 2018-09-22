@@ -2,8 +2,8 @@
 title: Event Clicking & Hovering
 children:
   - eventClick
-  - eventMouseover
-  - eventMouseout
+  - eventMouseEnter
+  - eventMouseLeave
 demos:
   - eventClick-demo
 ---

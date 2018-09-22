@@ -7,7 +7,7 @@ Handlers (sometimes called "callbacks") are sort of like options, but they are *
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  dayClick: function() {
+  dateClick: function() {
     alert('a day has been clicked!');
   }
 });
@@ -17,10 +17,10 @@ var calendar = new Calendar(calendarEl, {
 
 You can attach handlers after the calendar initializes using the `on` and `off` [methods](methods). This functionality has been available since version 2.4.0.
 
-The below example dynamically binds a [dayClick](dayClick) handler.
+The below example dynamically binds a [dateClick](dateClick) handler.
 
 ```js
-calendar.on('dayClick', function(date, jsEvent, view) {
+calendar.on('dateClick', function(date, jsEvent, view) {
   console.log('clicked on ' + date.format());
 });
 ```

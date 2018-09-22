@@ -1,15 +1,14 @@
 ---
 title: eventConstraint
-since_version: 2.2
 ---
 
 Limits event dragging and resizing to certain windows of time.
 
 <div class='spec' markdown='1'>
-an event ID, `"businessHours"`, object
+a groupId for [Events](event-object), `"businessHours"`, object
 </div>
 
-If an event ID is given (most likely a string), events that are being dragged or resized must be fully contained by at least one of the events linked to by the given event ID.
+If a `groupId` is given, events that are being dragged or resized must be fully contained by at least one of the [events](event-object) linked to by the given `groupId`.
 
 If `"businessHours"` is given, events being dragged or resized must be fully contained within the week's business hours (Monday-Friday 9am-5pm by default). A custom [businessHours](businessHours) value will be respected.
 

@@ -6,37 +6,75 @@ type: callback
 Triggered when resizing stops and the event has changed in duration.
 
 <div class='spec' markdown='1'>
-function( *event*, *delta*, *revertFunc*, *jsEvent*, *ui*, *view* ) { }
+function( *eventResizeInfo* ) { }
 </div>
 
-`event` is an [Event Object](event-object) that hold the event's information (date, title, etc).
+`eventResizeInfo` is a plain object with the following properties:
 
-`delta` is a [Duration Object](duration-object) that represents the amount of time the event's end was extended by. *Available in version 2.0.1 and later.*
+<table>
 
-`revertFunc` is a function that, if called, reverts the event's end date to the value before the drag. This is useful if an ajax call should fail.
+<tr>
+<th>event</th>
+<td markdown='1'>
+An [Event Object](event-object) that holds information about the event (date, title, etc) **after** the resize.
+</td>
+</tr>
 
-`jsEvent` holds the native javascript event with low-level information such as mouse coordinates.
+<tr>
+<th>prevEvent</th>
+<td markdown='1'>
+An [Event Object](event-object) that holds information about the event **before** the resize.
+</td>
+</tr>
 
-`ui` holds an empty object. Before version 2.1, the [jQuery UI object](http://jqueryui.com/demos/resizable/).
+<tr>
+<th>startDelta</th>
+<td markdown='1'>
+A [Duration Object](duration-object) that represents the amount of time the event's **start date** was moved by.
+</td>
+</tr>
 
-`view` holds the current [View Object](view-object).
+<tr>
+<th>endDelta</th>
+<td markdown='1'>
+A [Duration Object](duration-object) that represents the amount of time the event's **end date** was moved by.
+</td>
+</tr>
 
-Here is an example demonstrating most of these arguments:
+<tr>
+<th>revert</th>
+<td markdown='1'>
+A function that, if called, reverts the event's start/end date to the values before the drag. This is useful if an ajax call should fail.
+</td>
+</tr>
+
+<tr>
+<th>view</th>
+<td markdown='1'>
+The current [View Object](view-object).
+</td>
+</tr>
+
+</table>
+
+Here is an example demonstrating most of these properties:
 
 ```js
-$('#calendar').fullCalendar({
+new Calendar(calendarEl, {
+
   events: [
     // events here
   ],
-  editable: true,
-  eventResize: function(event, delta, revertFunc) {
 
-    alert(event.title + " end is now " + event.end.format());
+  editable: true,
+
+  eventResize: function(info) {
+    alert(info.event.title + " end is now " + info.event.end.toISOString());
 
     if (!confirm("is this okay?")) {
-      revertFunc();
+      info.revert();
     }
-
   }
+
 });
 ```

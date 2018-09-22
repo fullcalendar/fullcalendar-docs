@@ -17,7 +17,7 @@ FullCalendar's API accepts date information in many places, such as when you set
 Example:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'local',
   defaultDate: '2018-06-01' // will be parsed as local
 })
@@ -29,7 +29,7 @@ new Calendar({
 You can supply a millisecond time since the Unix epoch (Jan 1, 1970 UTC). Please specify this in milliseconds, **NOT** seconds. Seconds are not supported.
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   defaultDate: 1537302134028 // Tue Sep 18 2018 16:22:14 GMT-0400
 })
 ```
@@ -40,7 +40,7 @@ new Calendar({
 You can specify a native JavaScript Date object. The native Date constructor accepts local values, so it is best used with the local time zone:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'local',
   defaultDate: new Date(2018, 8, 1)
 })
@@ -49,7 +49,7 @@ new Calendar({
 If you want to specify UTC values, use this technique:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   timeZone: 'UTC',
   defaultDate: new Date(Date.UTC(2018, 8, 1))
 })

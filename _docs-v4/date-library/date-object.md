@@ -2,7 +2,7 @@
 title: Date Objects
 ---
 
-FullCalendar's API exposes Date objects in many places such as [dayClick](dayClick) or a [View object's](view-object) `activeStart`/`activeEnd`. These Date objects are simply **native JavaScript Date objects!** Nothing fancy. For a comprehensive rundown of how to work with a Date object, [see MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
+FullCalendar's API exposes Date objects in many places such as [dateClick](dateClick) or a [View object's](view-object) `activeStart`/`activeEnd`. These Date objects are simply **native JavaScript Date objects!** Nothing fancy. For a comprehensive rundown of how to work with a Date object, [see MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
 
 It's important to always remember that a Date object is merely a wrapper around a millisecond time since the Unix Epoch (Jan 1, 1970 UTC). The accessor methods on the Date object *interpret* this millisecond time differently for different time zones, but the underlying millisecond time will remain the same.
 

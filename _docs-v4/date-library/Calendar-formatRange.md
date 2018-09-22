@@ -20,7 +20,7 @@ Example:
 ```js
 import { formatDate } from 'fullcalendar'
 
-let calendar = new Calendar({
+let calendar = new Calendar(calendarEl, {
   timeZone: 'UTC',
   locale: 'es'
 })

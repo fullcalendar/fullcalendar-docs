@@ -8,7 +8,7 @@ A standard JavaScript object that FullCalendar uses to store information about a
 ADD: will parse from parse article
 
 ```js
-var calendar = new Calendar({
+var calendar = new Calendar(calendarEl, {
   timeZone: 'UTC',
   events: [
     {

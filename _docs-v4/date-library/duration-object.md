@@ -24,7 +24,7 @@ Also, if you want to want to get the hour/minute/second values of the duration, 
 An example that shows both Duration parsing and outputting:
 
 ```js
-var calendar = new Calendar({
+var calendar = new Calendar(calendarEl, {
   slotDuration: '02:00' // 2 hours
 })
 
@@ -53,7 +53,7 @@ An example with **fullcalendar-moment**:
 ```js
 import { toDuration } from 'fullcalendar-moment'
 
-var calendar = new Calendar({
+var calendar = new Calendar(calendarEl, {
   slotDuration: '02:00' // 2 hours
 })
 

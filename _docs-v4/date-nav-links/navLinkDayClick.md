@@ -29,6 +29,6 @@ var calendar = new Calendar(calendarEl, {
 When a custom function is specified, the user will not automatically navigate to any view.
 
 
-## Note about `dayClick`
+## Note about `dateClick`
 
-When `navLinkDayClick` fires, the [dayClick](dayClick) callback will NOT be fired.
+When `navLinkDayClick` fires, the [dateClick](dateClick) callback will NOT be fired.

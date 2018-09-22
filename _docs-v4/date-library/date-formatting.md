@@ -7,7 +7,7 @@ The term "date formatting" means taking a Date object and converting it into a s
 There are settings that define how a date is displayed, such as [eventTimeFormat](eventTimeFormat), [titleFormat](titleFormat), and others. These settings accept "date formatting configs". These are objects that define what information will outputted into the resulting string. Example:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   titleFormat: { // will produce something like "Tuesday, September 18, 2018"
     month: 'long',
     year: 'numeric',
@@ -160,7 +160,7 @@ Example using **fullcalendar-moment**:
 ```js
 import 'fullcalendar-moment'
 
-new Calendar({
+new Calendar(calendarEl, {
   // because the plugin is present, you can now use formatting strings.
   // will produce something like "Tuesday, September 18, 2018"
   titleFormat: 'dddd, MMMM D, YYYY'
@@ -177,7 +177,7 @@ If you want **complete** programmatic control over how a string is produced, or 
 Example:
 
 ```js
-new Calendar({
+new Calendar(calendarEl, {
   // will produce something like "Tue Sep 18 2018 18:48:41 GMT-0400 (Eastern Daylight Time) !!!"
   titleFormat: function(date) {
     return date.toString() + '!!!'

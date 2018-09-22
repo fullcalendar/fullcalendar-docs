@@ -17,7 +17,7 @@ Example:
 ```js
 import { Calendar } from 'fullcalendar'
 
-let calendar = new Calendar({
+let calendar = new Calendar(calendarEl, {
   timeZone: 'UTC',
   locale: 'es'
 })
