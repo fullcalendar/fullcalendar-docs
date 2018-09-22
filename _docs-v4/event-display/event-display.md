@@ -19,7 +19,7 @@ children:
       - eventDestroy
   - title: Methods
     children:
-      - rerenderEvents
+      - Calendar-rerenderEvents
 demos:
   - event-colors-demo
   - event-tooltip-demo

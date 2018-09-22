@@ -8,4 +8,4 @@ Removes an event from the calendar.
 event.remove()
 </div>
 
-You must call this on an [Event Object](event-object) that you received elsewhere in the API, such as [getEventById](getEventById).
+You must call this on an [Event Object](event-object) that you received elsewhere in the API, such as [getEventById](Calendar-getEventById).

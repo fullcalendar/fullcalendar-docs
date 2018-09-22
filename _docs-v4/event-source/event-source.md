@@ -16,13 +16,11 @@ children:
       - loading
   - title: Methods
     children:
-      - refetchEvents
-      - refetchEventSources
-      - addEventSource
-      - removeEventSource
-      - removeEventSources
-      - getEventSources
-      - getEventSourceById
+      - Calendar-getEventSources
+      - Calendar-getEventSourceById
+      - Calendar-addEventSource
+      - Calendar-refetchEvents
+      - EventSource-remove
 demos:
   - google-calendar-demo
 ---

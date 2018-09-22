@@ -14,9 +14,9 @@ children:
       - forceEventDuration
   - title: Methods
     children:
-      - getEvents
-      - getEventById
-      - addEvent
+      - Calendar-getEvents
+      - Calendar-getEventById
+      - Calendar-addEvent
       - Event-getSource
       - Event-setProp
       - Event-setExtendedProp
@@ -32,5 +32,5 @@ children:
 related:
   - resources-and-events
 demos:
-  - addEvent-demo
+  - Calendar-addEvent-demo
 ---

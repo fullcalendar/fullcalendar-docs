@@ -9,4 +9,4 @@ Methods provide ways to manipulate the calendar from JavaScript code.<!--more-->
 calendar.next();
 ```
 
-This will call the [next](next) method and will force to the calendar to move to the next month/week/day.
+This will call the [next](Calendar-next) method and will force to the calendar to move to the next month/week/day.

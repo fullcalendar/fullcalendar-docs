@@ -1,12 +1,12 @@
 ---
-title: getDate
+title: Calendar::getDate
 type: method
 ---
 
 Returns a [Date](date-object) for the current date of the calendar.
 
 <div class='spec' markdown='1'>
-.getDate() -> Date
+calendar.getDate() -> Date
 </div>
 
 For month view, it will always be sometime between the first and last day of the month. For week views, it will always be sometime between the first and last day of the week.

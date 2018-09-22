@@ -1,12 +1,12 @@
 ---
-title: changeView
+title: Calendar::changeView
 type: method
 ---
 
 Immediately switches to a different view.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'changeView', viewName, *dateOrRange* )
+calendar.changeView( viewName, *dateOrRange* )
 </div>
 
 `viewName` must be the name of one of the available views (a string).

@@ -33,7 +33,6 @@ children:
 related:
   - validRange
   - touch
-  - jquery-ui-dnd
 demos:
   - event-dragging-resizing-demo
   - external-dragging-demo

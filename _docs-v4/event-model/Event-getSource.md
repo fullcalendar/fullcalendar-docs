@@ -8,4 +8,4 @@ Retrieves the [Event Source Object](event-source-object) that this event came fr
 event.getSource() -> Event Source
 </div>
 
-If the event was added dynammically via [addEvent](addEvent), and the `source` parameter was specified, `.getSource()` will return an Event Source. Otherwise, it will return `null`.
+If the event was added dynammically via [addEvent](Calendar-addEvent), and the `source` parameter was specified, `.getSource()` will return an Event Source. Otherwise, it will return `null`.

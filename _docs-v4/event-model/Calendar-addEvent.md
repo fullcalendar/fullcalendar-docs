@@ -1,12 +1,12 @@
 ---
-title: addEvent
+title: Calendar::addEvent
 type: method
 ---
 
 Adds a new event on the calendar.
 
 <div class='spec' markdown='1'>
-.addEvent( *event* [, *source* ] )
+calendar.addEvent( *event* [, *source* ] )
 </div>
 
 `event` is a plain object that will be [parsed into an Event Object](event-parsing).
@@ -15,4 +15,4 @@ Adds a new event on the calendar.
 
 This method returns the proper [Event Object](event-object) that was parsed from the plain object.
 
-[View a live demo](addEvent-demo) of addEvent.
+[View a live demo](Calendar-addEvent-demo) of addEvent.

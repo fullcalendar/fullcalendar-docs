@@ -1,5 +1,5 @@
 ---
-title: getEventById
+title: Calendar::getEventById
 ---
 
 Returns a single event with the matching `id`.

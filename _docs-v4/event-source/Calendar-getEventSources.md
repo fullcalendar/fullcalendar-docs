@@ -1,5 +1,5 @@
 ---
-title: getEventSources
+title: Calendar::getEventSources
 type: method
 since_version: 2.8.0
 ---
@@ -7,7 +7,7 @@ since_version: 2.8.0
 Retrieves all [Event Source Objects](event-source-object).
 
 <div class='spec' markdown='1'>
-.getEventSources()
+calendar.getEventSources()
 </div>
 
 Returns an array.

@@ -31,7 +31,7 @@ An event object has a number of properties and methods. **All properties are rea
 <tr>
 <th>id</th>
 <td markdown='1'>
-String. Will uniquely identify your event. Leveraged by [getEventById](getEventById).
+String. Will uniquely identify your event. Leveraged by [getEventById](Calendar-getEventById).
 </td>
 </tr>
 

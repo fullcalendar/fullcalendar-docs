@@ -16,7 +16,7 @@ children:
       - unselect-callback
   - title: Methods
     children:
-      - select-method
+      - Calendar-select
       - Calendar-unselect
 related:
   - dragScroll

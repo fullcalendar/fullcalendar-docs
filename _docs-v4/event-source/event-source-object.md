@@ -68,7 +68,7 @@ Google Calendar feed:
 id
 </th>
 <td>
-Optional. Useful for <a href='getEventSourceById'>getEventSourceById</a>.
+Optional. Useful for <a href='Calendar-getEventSourceById'>getEventSourceById</a>.
 </td>
 </tr>
 <tr>

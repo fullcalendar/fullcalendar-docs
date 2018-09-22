@@ -38,10 +38,10 @@ calendar.option({
 
 Some options need to be **manipulated through methods**:
 
-- defaultDate - use [gotoDate](gotoDate) instead
-- defaultView - use [changeView](changeView) instead
+- defaultDate - use [gotoDate](Calendar-gotoDate) instead
+- defaultView - use [changeView](Calendar-changeView) instead
 
-Event Sources should be dynamically manipulated through methods like [addEventSource](addEventSource) and [removeEventSource](removeEventSource). Thusly, dynamic setting of the following options is **not applicable**:
+Event Sources should be dynamically manipulated through methods like [addEventSource](Calendar-addEventSource) and [remove](EventSource-remove). Thusly, dynamic setting of the following options is **not applicable**:
 
 - events
 - eventSources

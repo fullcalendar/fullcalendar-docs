@@ -1,12 +1,12 @@
 ---
-title: next
+title: Calendar::next
 type: method
 ---
 
 Moves the calendar one step forward (by a month or week for example).
 
 <div class='spec' markdown='1'>
-.next()
+calendar.next()
 </div>
 
 If the calendar is in `month` view, will move the calendar forward one month.

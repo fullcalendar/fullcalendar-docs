@@ -1,12 +1,12 @@
 ---
-title: prev
+title: Calendar::prev
 type: method
 ---
 
 Moves the calendar one step back (by a month or week for example).
 
 <div class='spec' markdown='1'>
-.prev()
+calendar.prev()
 </div>
 
 If the calendar is in `month` view, will move the calendar back one month.

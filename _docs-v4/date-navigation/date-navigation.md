@@ -7,14 +7,14 @@ children:
   - validRange
   - title: Methods
     children:
-      - prev
-      - next
-      - prevYear
-      - nextYear
-      - today
-      - gotoDate
-      - incrementDate
-      - getDate
+      - Calendar-prev
+      - Calendar-next
+      - Calendar-prevYear
+      - Calendar-nextYear
+      - Calendar-today
+      - Calendar-gotoDate
+      - Calendar-incrementDate
+      - Calendar-getDate
 related:
   - viewRender
   - viewDestroy
