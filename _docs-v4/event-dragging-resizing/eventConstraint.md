@@ -17,10 +17,10 @@ A custom time-window, an object identical to what [businessHours](businessHours)
 
 ```js
 {
-  start: '10:00', // a start time (10am in this example)
-  end: '18:00', // an end time (6pm in this example)
+  startTime: '10:00', // a start time (10am in this example)
+  endTime: '18:00', // an end time (6pm in this example)
 
-  dow: [ 1, 2, 3, 4 ]
+  daysOfWeek: [ 1, 2, 3, 4 ]
   // days of week. an array of zero-based day of week integers (0=Sunday)
   // (Monday-Thursday in this example)
 }
@@ -30,8 +30,8 @@ A specific period of time with concrete start/end dates can also be given, simil
 
 ```js
 {
-  start: '2014-12-01T10:00:00',
-  end: '2014-12-05T22:00:00'
+  startTime: '2014-12-01T10:00:00',
+  endTime: '2014-12-05T22:00:00'
 }
 ```
 
@@ -53,7 +53,7 @@ $('#calendar').fullCalendar({
   events: [
     {
       title: 'my event',
-      start: '2016-01-01',
+      startTime: '2016-01-01',
       resourceId: 'b' // start out in resource 'b'
       constraint: {
         resourceIds: [ 'a', 'b', 'c' ] // constrain dragging to these

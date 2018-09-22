@@ -17,7 +17,7 @@ children:
   - title: Methods
     children:
       - select-method
-      - unselect-method
+      - Calendar-unselect
 related:
   - dragScroll
   - snapDuration

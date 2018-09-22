@@ -1,12 +1,12 @@
 ---
-title: select
+title: Calendar::select
 type: method
 ---
 
 A method for programmatically selecting a period of time.
 
 <div class='spec' markdown='1'>
-.fullCalendar( 'select', *start*, [ *end* ], [ *resource* ] )
+calendar.select( *start*, [ *end* ], [ *resource* ] )
 </div>
 
 `start` and `end` are [parsable Dates](date-parsing).
