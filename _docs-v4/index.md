@@ -37,7 +37,8 @@ children:
       - business-hours
   - title: Events
     children:
-      - event-data
+      - event-model
+      - event-source
       - event-display
       - event-clicking-hovering
       - event-dragging-resizing
@@ -50,10 +51,9 @@ children:
   - title: International
     children:
       - localization
-      - timezone
+      - time-zone
   - title: Misc
     children:
       - touch
       - typescript
-      - deprecated
 ---

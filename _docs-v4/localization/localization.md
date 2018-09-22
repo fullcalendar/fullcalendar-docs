@@ -9,8 +9,8 @@ children:
   - dayNames
   - dayNamesShort
 related:
-  - timeFormat
-  - columnFormat
+  - eventTimeFormat
+  - columnHeaderFormat
   - titleFormat
   - buttonText
   - weekNumberTitle

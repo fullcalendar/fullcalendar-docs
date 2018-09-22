@@ -5,7 +5,7 @@ children:
   - eventBackgroundColor
   - eventBorderColor
   - eventTextColor
-  - timeFormat
+  - eventTimeFormat
   - displayEventTime
   - displayEventEnd
   - nextDayThreshold
@@ -19,8 +19,6 @@ children:
       - eventDestroy
   - title: Methods
     children:
-      - renderEvent
-      - renderEvents
       - rerenderEvents
 demos:
   - event-colors-demo

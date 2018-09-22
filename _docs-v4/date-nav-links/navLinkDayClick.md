@@ -20,7 +20,7 @@ Also, a function argument can be provided that executes arbitrary code:
 var calendar = new Calendar(calendarEl, {
   navLinks: true,
   navLinkDayClick: function(date, jsEvent) {
-    console.log('day', date.format()); // date is a moment
+    console.log('day', date.toISOString());
     console.log('coords', jsEvent.pageX, jsEvent.pageY);
   }
 });

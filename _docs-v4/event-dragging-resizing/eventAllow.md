@@ -26,8 +26,8 @@ eventAllow: function(dropLocation, draggedEvent) {
 
 The `dropLocation` object will have the following properties:
 
-- `start` (a [Moment](moment))
-- `end` exclusive end date/time (a [Moment](moment))
+- `start` (a [Date](date-object))
+- `end` exclusive end date/time (a [Date](date-object))
 - `resourceId` if you are using a [Resource View](scheduler)
 
 

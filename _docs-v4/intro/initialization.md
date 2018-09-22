@@ -25,7 +25,7 @@ The calendar will be placed *inside* this div:
 <div id='calendar'></div>
 ```
 
-An that's it, you should see a month-based calendar that has no events on it. If you want to learn how to display events, visit the [Google Calendar](google-calendar) or [Event Data](event-data) sections.
+An that's it, you should see a month-based calendar that has no events on it. If you want to learn how to display events, visit the [Google Calendar](google-calendar) or [Event Parsing](event-parsing) sections.
 
 
 ## Options

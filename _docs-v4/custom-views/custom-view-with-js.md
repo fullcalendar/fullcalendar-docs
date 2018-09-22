@@ -38,7 +38,7 @@ CustomView = View.extend({ // make a subclass of View
   },
 
   renderSelection: function(range) {
-    // accepts a {start,end} object made of Moments, and must render the selection
+    // accepts a {start,end} object made of Dates, and must render the selection
   },
 
   destroySelection: function() {

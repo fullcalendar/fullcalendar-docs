@@ -2,22 +2,34 @@
 title: formatRange
 ---
 
-Formats a date range by intelligently inserting a dash between the two dates.
+Formats two dates, a start and an end, into a string. A separator string, most likely a dash, will be intelligently inserted between the two dates.
 
 <div class='spec' markdown='1'>
-$.fullCalendar.formatRange( *moment1*, *moment2*, *formatString* [, *separator*, *isRTL* ] ) -> String
+FullCalendar.formatDate( *start*, *end*, *settings* )
 </div>
 
-`moment1` and `moment2` must be [Moment](moment) objects.
+`start` and `end` can each be a [Date Object](date-object) or something that will [parse into a Date Object](date-parsing).
 
-`formatString` is a [date formatting string](date-formatting-string) written as if it were for a single date, but FullCalendar will intelligently use it to format both dates with a dash in between.
+`settings` is an object that holds any of the [date format config](date-formatting) options. It also accepts the following additional properties:
+
+- `separator` &mdash; what will be inserted between the two dates. a `' - '` by default
+- `isExclusive` &mdash; if `true`, the given end date will be considered the *exclusive end* of the range, meaning date just before the `end` will be rendered instead. Useful if you need to format an exclusive-end whole-day range.
+- `locale` &mdash; the name of a [locale](locale) like `'es'`
+- `timeZone` &mdash; the name of a [time zone](timeZone). Either `'local'`, `'UTC'`, or a named time zone
+- `timeZoneImpl` &mdash; for named time zones. See the main [timeZoneImpl](timeZoneImpl) setting for more info.
 
 Example:
 
 ```js
-var moment1 = moment('2013-09-02');
-var moment2 = moment('2013-09-09');
-$.fullCalendar.formatRange(moment1, moment2, 'MMMM D YYYY');
+import { formatDate } from 'fullcalendar'
 
-=> "Sep 2 - 9 2013"
+let str = formatRange('2018-09-01', '2018-09-15', {
+  month: 'long',
+  year: 'numeric',
+  day: 'numeric',
+  separator: ' to ',
+  locale: 'es'
+})
+
+console.log(str) // "1 to 15 de septiembre de 2018"
 ```

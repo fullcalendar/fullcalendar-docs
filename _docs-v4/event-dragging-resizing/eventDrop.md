@@ -9,9 +9,9 @@ Triggered when dragging stops and the event has moved to a *different* day/time.
 function( *event*, *delta*, *revertFunc*, *jsEvent*, *ui*, *view* ) { }
 </div>
 
-`event` is an [Event Object](event-object) that hold the event's information (date, title, etc). Call `hasTime` on the event's `start`/`end` to see if it has been dropped in a timed or all-day area ([more info](moment#ambiguously-timed)).
+`event` is an [Event Object](event-object) that hold the event's information (date, title, etc).
 
-`delta` is a [Duration Object](moment-duration) that represents the amount of time the event was moved by. *Available in version 2.0.1 and later.*
+`delta` is a [Duration Object](duration-object) that represents the amount of time the event was moved by. *Available in version 2.0.1 and later.*
 
 `revertFunc` is a function that, if called, reverts the event's start/end date to the values before the drag. This is useful if an ajax call should fail.
 

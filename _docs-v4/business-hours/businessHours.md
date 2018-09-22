@@ -42,4 +42,4 @@ businessHours: [ // specify an array instead
 
 If you are using one of the resource views from the [Scheduler plugin](scheduler), you may specify business hours on a per-resource basis. See the [Resource Object](resource-object) docs for more information.
 
-More information on specifying times can be found in the [Duration](moment-duration) article.
+More information on specifying times can be found in the [Duration](duration-object) article.

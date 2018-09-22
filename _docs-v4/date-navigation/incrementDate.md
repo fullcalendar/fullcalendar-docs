@@ -9,4 +9,4 @@ Moves the calendar forward/backward an arbitrary amount of time.
 .incrementDate( duration )
 </div>
 
-`duration` can be a [Duration](moment-duration) object or anything the Duration constructor accepts.
+`duration` can be a [Duration](duration-object) object or anything the Duration constructor accepts.

@@ -33,7 +33,7 @@ function( cellInfo, jsEvent )
 
 `cellInfo` is an object that holds named properties for information about the day cell:
 
-- `date` - the [Moment](moment) date of the day
+- `date` - the [Date](date-object) date of the day
 - `dayEl` - jQuery element for the day cell
 - `moreEl` - jQuery element for the "more" link
 - `segs` - array of all event "segment" objects for the given day
@@ -47,7 +47,7 @@ A callback function can return a string value, like `"day"`, that will be proces
 ## Event Segment Object
 
 - `event` - the [Event Object](event-object)
-- `start` - the [Moment](moment) for when this stretch of the event begins
-- `end` - the [Moment](moment) for when this stretch of the event ends (exclusive)
+- `start` - the [Date](date-object) for when this stretch of the event begins
+- `end` - the [Date](date-object) for when this stretch of the event ends (exclusive)
 - `isStart` - boolean if this is chronologically the first segment for the event
 - `isEnd` - boolean if this is chronologically the last segment for the event

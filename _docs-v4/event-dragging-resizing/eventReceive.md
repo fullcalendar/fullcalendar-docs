@@ -38,13 +38,10 @@ If done through an HTML5 attribute, make sure it is **valid JSON**! For example,
 In the provided object, any of the [Event Object](event-object) properties can be specified. There are a few additional properties that provide special functionality:
 
 `start` or `time`
-:   A time-of-day an event should start if dragged onto a whole day. A [Duration](moment-duration)-ish input like `'09:00'` (9am).
+:   A time-of-day an event should start if dragged onto a whole day. A [Duration](duration-object)-ish input like `'09:00'` (9am).
 
 `duration`
-:   The the duration of the event when dropped. A [Duration](moment-duration)-ish input like `'03:00'` (3 hours). If not specified, [defaultAllDayEventDuration](defaultAllDayEventDuration) or [defaultTimedEventDuration](defaultTimedEventDuration) will apply.
-
-`stick`
-:   Whether the event should persist after the initial render. See the `stick` flag in the [renderEvent method](renderEvent).
+:   The the duration of the event when dropped. A [Duration](duration-object)-ish input like `'03:00'` (3 hours). If not specified, [defaultAllDayEventDuration](defaultAllDayEventDuration) or [defaultTimedEventDuration](defaultTimedEventDuration) will apply.
 
 
 These special properties can either be specified in the provided event object, or they can be standalone data attributes:

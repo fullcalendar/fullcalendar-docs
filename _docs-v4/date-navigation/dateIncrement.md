@@ -6,7 +6,7 @@ since_version: 3.3.0
 How far into the future/past the calendar navigates when prev/next is executed.
 
 <div class='spec' markdown='1'>
-[Duration](moment-duration)-ish object
+[Duration](duration-object)-ish input
 </div>
 
 Determines how far the calendar will jump when the user presses the prev/next buttons in the [header](header) or when the [prev](prev) or [next](next) methods are executed.

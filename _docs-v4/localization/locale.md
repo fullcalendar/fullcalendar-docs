@@ -13,7 +13,7 @@ This option affects many things such as:
 
 - the text in buttons, as defined by [header](header)
 - text that contains month or day-of-week strings
-- date formatting strings, such as [timeFormat](timeFormat)
+- date formatting strings, such as [eventTimeFormat](eventTimeFormat)
 - [weekNumberCalculation](weekNumberCalculation)
 - [firstDay](firstDay)
 
@@ -61,19 +61,3 @@ However, if more than one locale file is loaded, or the combined `locale-all.js`
 ```
 
 For more information, [view a live demo](locale-demo).
-
-
-## MomentJS and jQuery UI Datepicker
-
-When you load a FullCalendar locale file, it also loads the translations
-for MomentJS and jQuery UI Datepicker (if the library is already on the page).
-Just make sure to include the `<script>` tags for Moment and Datepicker before
-you include FullCalendar's locale file:
-
-    <script src='lib/moment.js'></script>
-
-```html
-<script src='lib/jquery-ui.custom-datepicker.js'></script>
-<script src='fullcalendar/fullcalendar.js'></script>
-<script src='fullcalendar/locale-all.js'></script>
-```

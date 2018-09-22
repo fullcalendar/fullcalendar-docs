@@ -6,7 +6,7 @@ since_version: 2.4.0
 Determines the text that will be displayed within a time slot.
 
 <div class='spec' markdown='1'>
-[format string](date-formatting-string), *default*: `'h(:mm)a'`
+[Date Formatter](date-formatting), *default*: `'h(:mm)a'`
 </div>
 
 The default value depends on the current [locale](locale).
@@ -26,9 +26,3 @@ slotLabelFormat: [
 ```
 
 Only available with the [Scheduler plugin]({{ site.baseurl }}/scheduler).
-
-
-
-<div class='version-info' markdown='1'>
-Prior to v2.4.0, this setting was named *axisFormat*.
-</div>

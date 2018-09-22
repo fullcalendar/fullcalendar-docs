@@ -11,7 +11,7 @@ function( date, cell ) { }
 
 This callback lets you modify the day cells elements that are part of each calendar view.
 
-`date` is the [Moment](moment) for the given day.
+`date` is the [Date](date-object) for the given day.
 
 You cannot return a new element. You must only modify the `cell` (a `<td>` element) that is provided.
 

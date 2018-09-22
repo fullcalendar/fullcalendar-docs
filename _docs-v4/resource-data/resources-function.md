@@ -16,7 +16,7 @@ resources: function(callback) {
 
 This allows for any sort of asynchronous means of obtaining the resource list.
 
-If [refetchResourcesOnNavigate](refetchResourcesOnNavigate) is set to `true`, the resources function will receive additional arguments. It will receive the start and end moments for the newly visible window of time as well as the calendar's timezone:
+If [refetchResourcesOnNavigate](refetchResourcesOnNavigate) is set to `true`, the resources function will receive additional arguments. It will receive the start and end dates for the newly visible window of time as well as the calendar's timezone:
 
 ```js
 refetchResourcesOnNavigate: true,

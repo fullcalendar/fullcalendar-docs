@@ -9,6 +9,6 @@ The amount of milliseconds to wait after an operation, before rendering events.
 Integer / `null` (turned off, the default)
 </div>
 
-When this value is specified as a millisecond number value, the calendar will begin to wait after any operation that might result in an event rerendering, such as [renderEvent](renderEvent) and [updateEvent](updateEvent). After this time has passed, the calendar will render all events together. This reduces the number of rerenders, for performance reasons.
+When this value is specified as a millisecond number value, the calendar will begin to wait after any operation that might result in an event rerendering, such as [addEvent](addEvent). After this time has passed, the calendar will render all events together. This reduces the number of rerenders, for performance reasons.
 
 This setting is experimental. It is turned off by default.

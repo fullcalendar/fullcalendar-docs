@@ -3,7 +3,7 @@ title: listDayFormat
 since_version: 3.0
 ---
 
-A [date formatting string](date-formatting-string) that affects the text on the left side of the day headings in list view.
+A [Date Formatter](date-formatting) that affects the text on the left side of the day headings in list view.
 
 <div class='spec' markdown='1'>
 String, `false`

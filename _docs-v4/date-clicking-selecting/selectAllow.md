@@ -15,6 +15,6 @@ The callback function will receive information about where the user is attemptin
 
 The `selectInfo` object will have the following properties:
 
-- `start` (a [Moment](moment))
-- `end` exclusive end date/time (a [Moment](moment))
+- `start` (a [Date](date-object))
+- `end` exclusive end date/time (a [Date](date-object))
 - `resourceId` if you are using a [Resource View](scheduler)

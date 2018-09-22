@@ -9,7 +9,7 @@ Triggered when the user clicks on a date or a time.
 function( *date*, *jsEvent*, *view*, [ *resourceObj* ] ) { }
 </div>
 
-`date` holds a [Moment](moment) for the clicked day. If an all-day area has been clicked, the moment will be [ambiguously-timed](moment#ambiguously-timed). If a slot in the agendaWeek or agendaDay views has been clicked, `date` will have the slot's time.
+`date` holds a [Date](date-object) for the clicked day. If a slot in the agendaWeek or agendaDay views has been clicked, `date` will have the slot's time.
 
 `jsEvent` holds the native JavaScript event with low-level information such as click coordinates.
 

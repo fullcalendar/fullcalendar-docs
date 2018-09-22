@@ -21,8 +21,6 @@ In the `<head>` of your page, include the necessary FullCalendar *and* Scheduler
 ```html
 <link href='fullcalendar.css' rel='stylesheet' />
 <link href='scheduler.css' rel='stylesheet' />
-<script src='moment.js'></script>
-<script src='jquery.js'></script>
 <script src='fullcalendar.js'></script>
 <script src='scheduler.js'></script>
 ```

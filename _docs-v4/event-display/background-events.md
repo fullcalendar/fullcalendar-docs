@@ -37,7 +37,7 @@ The color of background events can be manipulated by targeting the `fc-bgevent` 
 
 ## Recurring Events
 
-It is possible to define daily or weekly recurring events. Use [Duration](moment-duration)-ish times in the [Event Object](event-object)'s `start` and `end` properties, or use the `dow` property. See [businessHours](businessHours) for more information.
+It is possible to define daily or weekly recurring events. Use [Duration](duration-object)-ish times in the [Event Object](event-object)'s `start` and `end` properties, or use the `dow` property. See [businessHours](businessHours) for more information.
 
 
 ## Inverse Backgrounds

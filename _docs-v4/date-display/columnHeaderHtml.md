@@ -6,10 +6,10 @@ since_version: 3.8.0
 Programmatically generates HTML that will be injected on the calendar's column headings.
 
 <div class='spec' markdown='1'>
-function( *moment* ) -> *string*
+function( *date* ) -> *string*
 </div>
 
-This function will will receive a [moment](moment) object that represents a single column's date and must return an HTML string to be injected.
+This function will will receive a [date](date-object) object that represents a single column's date and must return an HTML string to be injected.
 
 Example:
 

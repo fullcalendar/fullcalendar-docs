@@ -9,7 +9,7 @@ Called when a valid external jQuery UI draggable has been dropped onto the calen
 function( *date*, *jsEvent*, *ui*, *resourceId* ) { }
 </div>
 
-`date` holds the [Moment](moment) of where the draggable was dropped. It will either have a time, or be [ambiguously-timed](moment#ambiguously-timed), depending on whether it was dropped on an all-day area or not.
+`date` holds the [Date](date-object) of where the draggable was dropped.
 
 `jsEvent` holds the primitive JavaScript event, with information like mouse coordinates.
 

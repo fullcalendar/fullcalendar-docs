@@ -33,7 +33,7 @@ Good question. Please see the [eventReceive](eventReceive) article. This is only
 
 ## Specifying Duration
 
-Data can be attached to the element in order to specify its duration when dropped. A [Duration](moment-duration)-ish value can be provided. This can either be done via jQuery:
+Data can be attached to the element in order to specify its duration when dropped. A [Duration](duration-object)-ish value can be provided. This can either be done via jQuery:
 
 ```js
 $('.draggable').data('duration', '03:00'); // three hours

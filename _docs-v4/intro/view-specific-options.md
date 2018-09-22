@@ -40,8 +40,3 @@ $('#calendar').fullCalendar({
 ```
 
 If an option is not matched by a View-Specific Option, the option value is taken from the top-level options object (whatever you passed in to `$('#calendar').fullCalendar({ })`).
-
-
-## Legacy
-
-Prior to version 2.2.4, View-Specific Options were not available. Use the now-deprecated [View Option Hashes](view-option-hash) instead.

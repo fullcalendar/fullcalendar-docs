@@ -10,18 +10,12 @@ You must first get FullCalendar's code loaded onto the page before initializing 
 
 First, download FullCalendar's code from the [downloads page]({{ site.baseurl }}/download). After unzipping, find the files `fullcalendar.js` and `fullcalendar.css`.
 
-Then, download the JavaScript files for FullCalendar's two dependencies: [jQuery](http://jquery.com/) and [Moment](http://momentjs.com/).
-
 Then, write something like this in the `<head>` of your page:
 
 ```html
 <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
-<script src='lib/jquery.min.js'></script>
-<script src='lib/moment.min.js'></script>
 <script src='fullcalendar/fullcalendar.js'></script>
 ```
-
-It is important that you load jQuery and Moment's JS files *before* loading FullCalendar's JS files.
 
 
 ## As an NPM module (Webpack / Browserify)

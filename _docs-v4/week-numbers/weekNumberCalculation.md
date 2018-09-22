@@ -12,4 +12,4 @@ Specifying `"local"` causes the locale-specific calculation to be used, as deter
 
 Specifiying `"ISO"` results in [ISO8601 week numbers](http://en.wikipedia.org/wiki/ISO_8601#Week_dates). Since v3.0, specifying `"ISO"` changes the default value of [firstDay](firstDay) to `1` (Monday).
 
-You may also specify a function, which must accept a single [Moment](moment) and return an integer week number.
+You may also specify a function, which must accept a single [Date](date-object) and return an integer week number.

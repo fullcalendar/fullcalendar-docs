@@ -9,4 +9,4 @@ Moves the calendar to an arbitrary date.
 .gotoDate( date )
 </div>
 
-`date` can be a [Moment](moment) object, or anything the Moment constructor accepts.
+`date` is a [parsable Date](date-parsing)

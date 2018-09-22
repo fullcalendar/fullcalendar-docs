@@ -11,7 +11,7 @@ function( *event*, *delta*, *revertFunc*, *jsEvent*, *ui*, *view* ) { }
 
 `event` is an [Event Object](event-object) that hold the event's information (date, title, etc).
 
-`delta` is a [Duration Object](moment-duration) that represents the amount of time the event's end was extended by. *Available in version 2.0.1 and later.*
+`delta` is a [Duration Object](duration-object) that represents the amount of time the event's end was extended by. *Available in version 2.0.1 and later.*
 
 `revertFunc` is a function that, if called, reverts the event's end date to the value before the drag. This is useful if an ajax call should fail.
 

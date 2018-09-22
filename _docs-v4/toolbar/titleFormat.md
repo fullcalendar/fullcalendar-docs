@@ -5,7 +5,7 @@ title: titleFormat
 Determines the text that will be displayed in the header's title.
 
 <div class='spec' markdown='1'>
-[format string](date-formatting-string), *default*:
+[Date Formatter](date-formatting), *default*:
 
 ```js
 'MMMM YYYY'   // like 'September 2009', for month view

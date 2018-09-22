@@ -6,7 +6,7 @@ since_version: 3.3.0
 Sets the exact duration of a custom view.
 
 <div class='spec' markdown='1'>
-[Duration](moment-duration)-ish object
+[Duration](duration-object)
 </div>
 
 Example for a [Custom View](custom-view-with-settings):
