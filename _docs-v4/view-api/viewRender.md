@@ -15,4 +15,4 @@ function( view, element )
 
 This callback will get triggered when the user changes the view, or when any of the [date navigation](date-navigation) methods are called.
 
-This callback will trigger after the view has been fully rendered, but before events have been rendered (see also: [eventAfterAllRender](eventAfterAllRender)).
+This callback will trigger after the view has been fully rendered, but before events have been rendered.

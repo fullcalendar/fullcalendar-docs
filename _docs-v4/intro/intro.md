@@ -12,6 +12,7 @@ children:
       - dynamic-options
       - render
       - destroy
+      - rerenderDelay
 related:
   - defaultDate
   - defaultView

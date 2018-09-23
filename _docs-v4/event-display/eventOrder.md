@@ -1,15 +1,16 @@
 ---
 title: eventOrder
-since_version: 2.4.0
 ---
 
-Determines the vertical ordering events that have the same times.
+Determines the ordering events within the same day.
 
 <div class='spec' markdown='1'>
-String / Array / Function, *default*: `"title"`
+String / Array / Function, *default*: `"start,-duration,allDay,title"`
 </div>
 
-By default, FullCalendar decides that events with longer durations and earlier start times are sorted above other events. However, events often have the same exact start time and duration, which is especially true for all-day events. By default, when this happens, events are sorted alphabetically by title. `eventOrder` provides the ability to override this behavior.
+For most views, this determines the vertical ordering of events within the same day. For [agenda view](agenda-view) however, it determines the *horizontal* ordering of events within the same day.
+
+The default value puts earlier events first. If tied, it puts longer events first. If tied, it puts all-day events first. If still tied, orders events by title, alphabetically.
 
 This setting accepts a few different arguments:
 

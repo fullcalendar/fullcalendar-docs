@@ -10,12 +10,10 @@ children:
   - displayEventEnd
   - nextDayThreshold
   - eventOrder
-  - eventRenderWait
   - title: Callbacks
     children:
       - eventRender
-      - eventAfterRender
-      - eventAfterAllRender
+      - eventPositioned
       - eventDestroy
   - title: Methods
     children:
