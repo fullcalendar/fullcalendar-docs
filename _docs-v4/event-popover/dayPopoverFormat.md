@@ -1,12 +1,15 @@
 ---
 title: dayPopoverFormat
-since_version: 2.1.0
 ---
 
 Determines the date format of title of the popover created by the [eventLimitClick](eventLimitClick) option.
 
 <div class='spec' markdown='1'>
-String
+[Date Formatter](date-formatting), *default*:
+
+```js
+{ month: 'long', day: 'numeric', year: 'numeric' }
+```
 </div>
 
-Must be a [Date Formatter](date-formatting). The default value is `"dddd, MMMM D"` for English and `"LL"` for other languages.
+The default value produces strings like `Monday, September 24`.

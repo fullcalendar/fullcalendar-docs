@@ -10,7 +10,7 @@ A View Object with information about the current view is passed into nearly ever
 
 ## Properties
 
-`name`
+`type`
 :   Name of one of the available views (a string).
 
 `title`

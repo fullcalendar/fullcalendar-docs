@@ -125,7 +125,7 @@ The rendering type of this event. Can be empty (normal rendering), `"background"
 <tr>
 <th>overlap</th>
 <td markdown='1'>
-The value overriding the [eventOverlap](eventOverlap) setting for this specific event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
+The value overriding the [eventOverlap](eventOverlap) setting for this specific event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event. Does not accept a function.
 </td>
 </tr>
 

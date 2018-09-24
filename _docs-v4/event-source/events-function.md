@@ -5,42 +5,94 @@ title: events (as a function)
 A custom function for programmatically generating [Event Objects](event-object).
 
 <div class='spec' markdown='1'>
-function( *start*, *end*, *timezone*, *callback* ) { }
+function( *fetchInfo*, *successCallback*, *failureCallback* ) { }
 </div>
 
 FullCalendar will call this function whenever it needs new event data. This is triggered when the user clicks prev/next or switches views.
 
-This function will be given `start` and `end` parameters, which are [Dates](date-object) denoting the range the calendar needs events for.
+the `fetchInfo` argument is a plain object with the following properties:
 
-`timezone` is a string/boolean describing the calendar's current timezone. It is the exact value of the [timezone](timezone) option.
+<table>
 
-It will also be given `callback`, a function that must be called when the custom event function has generated its events. It is the event function's responsibility to make sure `callback` is being called with an array of [Event Objects](event-object).
+<tr>
+<th>start</th>
+<td markdown='1'>
+A [Date](date-object) for the beginning of the range the calendar needs events for.
+</td>
+</tr>
+
+<tr>
+<th>end</th>
+<td markdown='1'>
+A [Date](date-object) for the end of the range the calendar needs events for.
+
+**It is an exclusive value.**
+</td>
+</tr>
+
+<tr>
+<th>startStr</th>
+<td markdown='1'>
+An ISO8601 string representation of the start date. Will have a time zone offset according to the calendar's [timeZone](timeZone) like `2018-09-01T12:30:00-05:00`.
+</td>
+</tr>
+
+<tr>
+<th>endStr</th>
+<td markdown='1'>
+Just like `startStr`, but for the `end` date.
+</td>
+</tr>
+
+<tr>
+<th>timeZone</th>
+<td markdown='1'>
+The exact value of the calendar's [timeZone](timeZone) setting.
+</td>
+</tr>
+
+</table>
+
+The `successCallback` function must be called when the custom event function has generated its events. It is the event function's responsibility to make sure `successCallback` is being called with an array of [parsable Event Objects](event-parsing).
+
+If there is some sort of failure, for example, if an AJAX request should fail, then call the `failureCallback` instead. It accepts an argument with information about the failure.
+
+Instead of calling `successCallback` and `failureCallback`, you may return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-like object instead.
 
 Here is an example showing how to use an event function to fetch events from a hypothetical XML feed:
 
 ```js
+import { req } from 'superagent'; // ajax library
+
 var calendar = new Calendar(calendarEl, {
-  events: function(start, end, timezone, callback) {
-    $.ajax({
-      url: 'myxmlfeed.php',
-      dataType: 'xml',
-      data: {
-        // our hypothetical feed requires UNIX timestamps
-        start: start.unix(),
-        end: end.unix()
-      },
-      success: function(doc) {
-        var events = [];
-        $(doc).find('event').each(function() {
-          events.push({
-            title: $(this).attr('title'),
-            start: $(this).attr('start') // will be parsed
-          });
-        });
-        callback(events);
-      }
-    });
+
+  events: function(info, successCallback, failureCallback) {
+    req.get('myxmlfeed.php')
+      .type('xml')
+      .query({
+        start: info.start.valueOf(),
+        end: info.end.valueOf()
+      })
+      .end(function(err, res) {
+
+        if (err) {
+          failureCallback(err);
+        } else {
+
+          successCallback(
+            Array.prototype.slice.call( // convert to array
+              res.getElementsByTagName('event')
+            ).map(function(eventEl) {
+              return {
+                title: eventEl.getAttribute('title'),
+                start: eventEl.getAttribute('start')
+              }
+            })
+          )
+        }
+      })
   }
+
 });
 ```
 
@@ -57,7 +109,7 @@ var calendar = new Calendar(calendarEl, {
 
     // your event source
     {
-      events: function(start, end, timezone, callback) {
+      events: function(fetchInfo, successCallback, failureCallback) {
         // ...
       },
       color: 'yellow',   // an option!

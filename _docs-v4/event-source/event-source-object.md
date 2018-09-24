@@ -156,7 +156,7 @@ Sets every <a href='event-object'>Event Object's</a> <code>rendering</code> for 
 overlap
 </th>
 <td>
-Sets every <a href='event-object'>Event Object's</a> <code>overlap</code> for this source.
+Sets every <a href='event-object'>Event Object's</a> <code>overlap</code> for this source. Does not accept a function.
 </td>
 </tr>
 <tr>

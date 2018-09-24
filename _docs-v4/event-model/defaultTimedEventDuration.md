@@ -5,7 +5,7 @@ title: defaultTimedEventDuration
 A fallback duration for timed [Event Objects](event-object) without a specified `end` value.
 
 <div class='spec' markdown='1'>
-[Duration](duration-object), *default*: `'02:00:00'` (2 hours)
+[Duration](duration-object), *default*: `'01:00'` (1 hour)
 </div>
 
 If an event does not have an `end` specified, it will appear to be this duration when rendered.

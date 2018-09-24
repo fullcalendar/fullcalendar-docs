@@ -11,7 +11,6 @@ children:
   - title: Effects
     children:
       - dragRevertDuration
-      - dragOpacity
       - dragScroll
       - snapDuration
   - title: Control

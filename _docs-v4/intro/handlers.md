@@ -15,13 +15,13 @@ var calendar = new Calendar(calendarEl, {
 
 ## Dynamically adding Handlers
 
-You can attach handlers after the calendar initializes using the `on` and `off` [methods](methods). This functionality has been available since version 2.4.0.
+You can attach handlers after the calendar initializes using the `on` and `off` [methods](methods).
 
 The below example dynamically binds a [dateClick](dateClick) handler.
 
 ```js
-calendar.on('dateClick', function(date, jsEvent, view) {
-  console.log('clicked on ' + date.format());
+calendar.on('dateClick', function(info) {
+  console.log('clicked on ' + info.dateStr);
 });
 ```
 

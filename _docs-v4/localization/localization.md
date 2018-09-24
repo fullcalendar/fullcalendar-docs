@@ -4,10 +4,6 @@ children:
   - locale
   - isRTL
   - firstDay
-  - monthNames
-  - monthNamesShort
-  - dayNames
-  - dayNamesShort
 related:
   - eventTimeFormat
   - columnHeaderFormat

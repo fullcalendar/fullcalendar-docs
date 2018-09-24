@@ -11,7 +11,7 @@ children:
     children:
       - startParam
       - endParam
-      - timezoneParam
+      - timeZoneParam
       - lazyFetching
       - loading
   - title: Methods

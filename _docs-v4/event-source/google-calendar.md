@@ -98,10 +98,6 @@ If you want to specify some [Event Source](event-source-object) options, you can
 [View a demo](google-calendar-demo) that displays US holidays from Google Calendar.
 
 
-## Timezones
-
-The Google Calendar plugin respects the [timezone](timezone) parameter. If it is `false` (the default), the timezone setting of the Google Calendar will be used, as defined in Google's UI. If it is specified, this will be ignored and the timezone will be forced.
-
 ## Multiple Google Calendars
 
 You can specify multiple Google Calendars by using the `eventSources` option:
@@ -135,4 +131,4 @@ You can specify multiple Google Calendars by using the `eventSources` option:
 
 If you need different API keys per calendar, you can set a `googleCalendarApiKey` option on each individual [Event Source](event-source-object) when written in extended form.
 
-If you need to detect errors with the Google API, there's no way to get at this with jQuery's AJAX error handler. You'll need to use the FullCalendar's `googleCalendarError` callback, which is available as a normal option, or a per-[Event Source](event-source-object) option.
+For detecting errors, use the [Event Source Object's](event-source-object) `failure` callback.
