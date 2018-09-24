@@ -1,6 +1,8 @@
 ---
 title: Event Dragging & Resizing
 children:
+  - external-dragging
+  - third-party-dragging
   - title: Flags
     children:
       - editable
