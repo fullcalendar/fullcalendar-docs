@@ -9,8 +9,10 @@ children:
       - Calendar-getView
   - title: Callbacks
     children:
-      - viewRender
-      - viewDestroy
+      - viewSkeletonRender
+      - viewSkeletonDestroy
+      - datesRender
+      - datesDestroy
 related:
   - view-specific-options
 ---
