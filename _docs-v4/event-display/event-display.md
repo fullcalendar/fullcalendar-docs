@@ -10,6 +10,7 @@ children:
   - displayEventEnd
   - nextDayThreshold
   - eventOrder
+  - progressiveEventRendering
   - title: Callbacks
     children:
       - eventRender

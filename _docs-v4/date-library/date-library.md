@@ -5,6 +5,7 @@ children:
   - date-object
   - duration-object
   - date-formatting
+  - defaultRangeSeparator
   - title: Util Methods
     children:
       - formatDate

@@ -1,7 +1,6 @@
 ---
 title: navLinkDayClick
 type: callback
-since_version: 3.0
 ---
 
 Determines what happens upon a day heading nav-link click.

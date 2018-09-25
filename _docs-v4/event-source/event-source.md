@@ -7,6 +7,7 @@ children:
   - google-calendar
   - event-source-object
   - eventSources
+  - eventSourceFailure
   - title: Event Requesting
     children:
       - startParam

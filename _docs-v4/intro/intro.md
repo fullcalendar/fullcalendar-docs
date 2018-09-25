@@ -13,6 +13,7 @@ children:
       - render
       - destroy
       - rerenderDelay
+      - Calendar-batchRendering
 related:
   - defaultDate
   - defaultView

@@ -1,6 +1,5 @@
 ---
 title: columnHeaderHtml
-since_version: 3.8.0
 ---
 
 Programmatically generates HTML that will be injected on the calendar's column headings.

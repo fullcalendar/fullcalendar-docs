@@ -7,14 +7,18 @@ children:
     children:
       - editable
       - eventStartEditable
+      - eventResizableFromStart
       - eventDurationEditable
       - eventResourceEditable
       - droppable
   - title: Effects
     children:
+      - eventDragMinDistance
       - dragRevertDuration
       - dragScroll
+      - dragScrollEls
       - snapDuration
+      - allDayMaintainDuration
   - title: Control
     children:
       - eventOverlap

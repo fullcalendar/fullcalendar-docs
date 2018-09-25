@@ -1,6 +1,5 @@
 ---
 title: locale
-version_notes: changed in 3.0 from lang
 ---
 
 Customize the language and localization options for the calendar.
@@ -13,7 +12,7 @@ This option affects many things such as:
 
 - the text in buttons, as defined by [header](header)
 - text that contains month or day-of-week strings
-- date formatting strings, such as [eventTimeFormat](eventTimeFormat)
+- date formatting, such as [eventTimeFormat](eventTimeFormat)
 - [weekNumberCalculation](weekNumberCalculation)
 - [firstDay](firstDay)
 

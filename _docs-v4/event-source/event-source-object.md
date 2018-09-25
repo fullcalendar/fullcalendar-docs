@@ -156,7 +156,7 @@ Sets every <a href='event-object'>Event Object's</a> <code>rendering</code> for 
 overlap
 </th>
 <td>
-Sets every <a href='event-object'>Event Object's</a> <code>overlap</code> for this source. Does not accept a function.
+Sets the <a href='eventOverlap'>eventOverlap</a> setting for every event in this source. Does not accept a function.
 </td>
 </tr>
 <tr>
@@ -164,7 +164,15 @@ Sets every <a href='event-object'>Event Object's</a> <code>overlap</code> for th
 constraint
 </th>
 <td>
-Sets every <a href='event-object'>Event Object's</a> <code>constraint</code> for this source.
+Sets the <a href='eventConstraint'>eventConstraint</a> setting for every event in this source.
+</td>
+</tr>
+<tr>
+<th>
+allow
+</th>
+<td>
+Sets the <a href='eventAllow'>eventAllow</a> setting for every event in this source.
 </td>
 </tr>
 <tr>
@@ -181,6 +189,14 @@ eventDataTransform
 </th>
 <td>
 Sets the <a href='eventDataTransform'>eventDataTransform</a> callback, but only for this source.
+</td>
+</tr>
+<tr>
+<th>
+failure
+</th>
+<td markdown='1'>
+A function that gets called when fetching failed. Probably because [an AJAX request](events-json-feed) failed. Receives one argument, an error object.
 </td>
 </tr>
 </table>

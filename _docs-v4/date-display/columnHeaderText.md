@@ -1,6 +1,5 @@
 ---
 title: columnHeaderText
-since_version: 3.8.0
 ---
 
 Programmatically generates text that will be displayed on the calendar's column headings.

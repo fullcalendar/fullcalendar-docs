@@ -2,7 +2,7 @@
 title: Locale
 children:
   - locale
-  - isRTL
+  - dir
   - firstDay
 related:
   - eventTimeFormat
