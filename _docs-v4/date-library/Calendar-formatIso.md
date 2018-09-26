@@ -2,7 +2,7 @@
 title: Calendar::formatIso
 ---
 
-Formats a date into an [ISO8601 string](https://en.wikipedia.org/wiki/ISO_8601). Outputs a UTC offset appropriate to the [Calendar object](calendar-object) it's being called on.
+Formats a date into an [ISO8601 string](https://en.wikipedia.org/wiki/ISO_8601). Outputs a UTC offset appropriate to the calendar it's called on.
 
 <div class='spec' markdown='1'>
 calendar.formateIso( *date*, [ *omitTime* = false ] )

@@ -2,7 +2,7 @@
 title: Calendar::formatDate
 ---
 
-A method that formats a date into a string. It inherits the locale and time zone settings of the [Calendar object](calendar-object) it's being called on.
+A method that formats a date into a string. It inherits the locale and time zone settings of the calendar it's called on.
 
 <div class='spec' markdown='1'>
 calendar.formatDate( *date*, *settings* )

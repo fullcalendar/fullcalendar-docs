@@ -5,7 +5,6 @@ children:
   - initialization
   - handlers
   - methods
-  - Calendar-object
   - title: More Advanced
     children:
       - view-specific-options
