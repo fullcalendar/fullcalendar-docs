@@ -3,9 +3,7 @@ title: Event Object
 type: guide
 ---
 
-A standard JavaScript object that FullCalendar uses to store information about a calendar event.
-
-ADD: will parse from parse article
+A standard JavaScript object that FullCalendar uses to store information about a calendar event. It is exposed in various places of the API such as [getEventById](Calendar-getEventById) and provides methods for dynamic manipulation. It was originally [parsed from a plain object](event-parsing).
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -161,6 +159,13 @@ The [eventTextColor](eventTextColor) override for this specific event.
 <th>extendedProps</th>
 <td markdown='1'>
 A plain object holding miscellaneous other properties specified during parsing. Receives properties in the explicitly given `extendedProps` hash as well as other non-standard properties.
+</td>
+</tr>
+
+<tr>
+<th>resources</th>
+<td markdown='1'>
+TODO
 </td>
 </tr>
 

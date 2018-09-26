@@ -21,6 +21,7 @@ children:
       - Calendar-getEventSourceById
       - Calendar-addEventSource
       - Calendar-refetchEvents
+      - EventSource-refetch
       - EventSource-remove
 demos:
   - google-calendar-demo

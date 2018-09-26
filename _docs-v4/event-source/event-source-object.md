@@ -202,3 +202,40 @@ A function that gets called when fetching failed. Probably because [an AJAX requ
 </table>
 
 **For JSON feeds**, [there are additional options you can set](events-json-feed#options).
+
+
+## After Parsing
+
+The above object is what you specify to initially define an event source, but if you want to access it and manipulate it dynamically afterwards, you'll be dealing with a different type of object. This type of object is emitted from methods like [getEventSources](Calendar-getEventSources) and [getEventSourceById](Calendar-getEventSourceById). It has the following properties and methods:
+
+<table>
+
+<tr>
+<th>id</th>
+<td markdown='1'>
+The specified ID
+</td>
+</tr>
+
+<tr>
+<th>url</th>
+<td markdown='1'>
+If a [JSON feed](events-json-feed), the specified URL
+</td>
+</tr>
+
+<tr>
+<th>refetch()</th>
+<td markdown='1'>
+Refetches event data for this event source. [More information](EventSource-refetch).
+</td>
+</tr>
+
+<tr>
+<th>remove()</th>
+<td markdown='1'>
+Removes this source from the calendar [More information](EventSource-remove).
+</td>
+</tr>
+
+</table>
