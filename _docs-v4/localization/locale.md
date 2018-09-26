@@ -22,6 +22,7 @@ This option affects many things such as:
 You will need to load the locale JavaScript data file in order to use it.
 These files are included with the FullCalendar download in the `locale/` directory.
 They must be loaded via a `<script>` tag after the main FullCalendar library is loaded.
+TODO
 
     <script src='fullcalendar/fullcalendar.js'></script>
 
@@ -29,11 +30,13 @@ They must be loaded via a `<script>` tag after the main FullCalendar library is 
 <script src='fullcalendar/locale/es.js'></script>
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
     });
 
+    calendar.render();
   });
 
 </script>
@@ -48,12 +51,14 @@ However, if more than one locale file is loaded, or the combined `locale-all.js`
 <script src='fullcalendar/locale-all.js'></script>
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       locale: 'es'
     });
 
+    calendar.render();
   });
 
 </script>

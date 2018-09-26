@@ -11,7 +11,7 @@ String
 You can change the color of all events on the calendar like so:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   events: [
     // my event data
   ],

@@ -18,7 +18,7 @@ If the calendar is in `basicDay` or `agendaDay`, will move the calendar forward 
 Example using `next` with an external button:
 
 ```js
-$('#my-next-button').click(function() {
+document.getElementById('my-next-button').addEventListener('click', function() {
   calendar.next();
 });
 ```

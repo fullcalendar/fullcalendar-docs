@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 You can specify options that apply only to *specific* calendar views.<!--more--> Provide separate options objects within the `views` option, keyed by the name of your view.
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   header: { center: 'month,agendaWeek' }, // buttons for switching between views
 
   views: {
@@ -21,7 +21,7 @@ $('#calendar').fullCalendar({
 You may also specify options that apply to certain types of views:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   views: {
     basic: {
       // options apply to basicWeek, basicDay, and month views
@@ -39,4 +39,4 @@ $('#calendar').fullCalendar({
 });
 ```
 
-If an option is not matched by a View-Specific Option, the option value is taken from the top-level options object (whatever you passed in to `$('#calendar').fullCalendar({ })`).
+If an option is not matched by a View-Specific Option, the option value is taken from the top-level options object (whatever you passed in to `new Calendar`).

@@ -10,7 +10,7 @@ demos:
 Events that appear as background highlights can be achieved by setting an [Event Object](event-object)'s `rendering` property to `"background"`:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultDate: '2014-11-10',
   defaultView: 'agendaWeek',
   events: [

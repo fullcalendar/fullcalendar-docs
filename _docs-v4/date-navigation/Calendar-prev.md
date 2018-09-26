@@ -18,7 +18,7 @@ If the calendar is in `basicDay` or `agendaDay`, will move the calendar back one
 Example using `prev` with an external button:
 
 ```js
-$('#my-prev-button').click(function() {
+document.getElementById('my-prev-button').addEventListener('click', function() {
   calendar.prev();
 });
 ```

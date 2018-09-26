@@ -7,7 +7,7 @@ Visually groups resources by certain criteria.
 The given argument must be a field name that each resource object has. Example:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   resourceGroupField: 'groupId',
   resources: [
     {

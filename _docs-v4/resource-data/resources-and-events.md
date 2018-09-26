@@ -6,7 +6,7 @@ description: How to specify which resources your events are assigned to.
 An [Event Object](event-object) becomes associated with a resource when its `resourceId` property matches one of the [Resource Object](resource-object)'s `id` fields:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   resources: [
     {
       id: 'a',
@@ -29,7 +29,7 @@ $('#calendar').fullCalendar({
 It is also possible to associate an event with *multiple* resources using the `resourceIds` property, which is an array:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   resources: [
     {
       id: 'a',

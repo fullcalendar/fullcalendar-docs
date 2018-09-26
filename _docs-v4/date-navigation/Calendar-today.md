@@ -12,7 +12,7 @@ calendar.today()
 Example using `today` with an external button:
 
 ```js
-$('#my-today-button').click(function() {
+document.getElementById('my-today-button').addEventListener('click', function() {
   calendar.today();
 });
 ```

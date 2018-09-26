@@ -44,7 +44,7 @@ If you are using a resource view and would like to constrain an event to cerain 
 The `resourceId` and `resourceIds` (an array) properties can be applied to force an event to stay within specific *resources*:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'timelineWeek',
   resources: [
     // resource data...

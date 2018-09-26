@@ -7,7 +7,7 @@ Turns the resource area from a plain list of titles into a grid of data.
 An array of objects can be provided, each with information about a column:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   resourceColumns: [
     {
       labelText: 'First Name',

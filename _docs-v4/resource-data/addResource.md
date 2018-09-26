@@ -12,7 +12,7 @@ Allows programmatic rendering of a new resource on the calendar after the initia
 The `resource` argument should be a [Resource Object](resource-object). Example:
 
 ```js
-$('#calendar').fullCalendar('addResource', {
+calendar.addResource({
   id: 'e',
   title: 'Room E'
 });

@@ -13,7 +13,7 @@ demos:
 A list view displays events in a simple vertical list for a specific interval of time. If there are no events during a specific interval of time, the [noEventsMessage](noEventsMessage) is displayed. List view was added in FullCalendar version `3.0.0`. There are 4 preset list views: **listDay**, **listWeek**, **listMonth**, and **listYear**. You can initialize a list view like this:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'listWeek'
 });
 ```

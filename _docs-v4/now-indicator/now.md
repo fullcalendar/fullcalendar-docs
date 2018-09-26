@@ -24,7 +24,7 @@ You'll most likely want to calculate this with a server-side script and inject i
   $datetime_string = $datetime->format('c');
 ?>
 
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   now: <?php echo json_encode($datetime_string) ?>
 });
 ```

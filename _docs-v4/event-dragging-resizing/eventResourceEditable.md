@@ -14,7 +14,7 @@ The default value is inherited from the master [editable](editable) flag, which 
 A variation of this property called `resourceEditable` can be set on an [Event Object](event-object) for more granular control:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'timelineWeek',
   resources: [
     // resource data...
@@ -39,7 +39,7 @@ A similar technique can be used on [Event Source Objects](event-source-object).
 If you'd like to allow the user to drag-n-drop an event to a different resource, you can set the master `editable` flag to `false`, but override it specifically for event resources:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'timeline',
   editable: false, // don't allow event dragging
   eventResourceEditable: true // except for between resources

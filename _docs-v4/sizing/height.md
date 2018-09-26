@@ -22,7 +22,7 @@ If `"auto"` is specified, the view's contents will assume a natural height and n
 Example usage of `height`:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   height: 650
 });
 ```
@@ -32,5 +32,5 @@ $('#calendar').fullCalendar({
 You can dynamically set a calendar's height after initialization:
 
 ```js
-$('#calendar').fullCalendar('option', 'height', 700);
+calendar.setOption('height', 700);
 ```

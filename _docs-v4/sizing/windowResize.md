@@ -18,7 +18,7 @@ Within the callback function, `this` will be set to the calendar's main element.
 Example usage of windowResize:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   windowResize: function(view) {
     alert('The calendar has adjusted to a window resize');
   }

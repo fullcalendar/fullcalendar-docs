@@ -15,7 +15,7 @@ If prefixed with a minus sign like `'-propertyName'`, the ordering will be desce
 Compound ordering criteria can be specified as a single string separated by commas.
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   resourceOrder: '-type1,type2',
   resources: [
     {

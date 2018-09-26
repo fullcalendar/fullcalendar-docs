@@ -26,7 +26,9 @@ In the following example, the first draggable (with id `"draggable1"`) can be dr
 and here is the JavaScript:
 
 ```js
-$('#calendar').fullCalendar({
+import { Calendar, Draggable } from 'fullcalendar';
+
+var calendar = new Calendar(calendarEl, {
   droppable: true,
   dropAccept: '.cool-event',
   drop: function() {
@@ -34,6 +36,11 @@ $('#calendar').fullCalendar({
   }
 });
 
-$('#draggable1').draggable();
-$('#draggable2').draggable();
+new Draggable(
+  document.getElementById('draggable1')
+);
+
+new Draggable(
+  document.getElementById('draggable2')
+);
 ```

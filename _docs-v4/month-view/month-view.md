@@ -12,7 +12,7 @@ demos:
 Month view displays the current month's days, and usually a few days of the previous and next months, in a table-like format. It can be initialized like so:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'month'
 });
 ```

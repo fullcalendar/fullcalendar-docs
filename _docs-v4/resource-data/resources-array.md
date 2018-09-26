@@ -5,7 +5,7 @@ title: resources (as an array)
 Tells the calendar to display resources from an array input.
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   resources: [
     {
       id: 'a',

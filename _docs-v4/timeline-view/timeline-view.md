@@ -36,7 +36,7 @@ The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides a new view called 
 The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialied like so:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'timelineDay'
 });
 ```
@@ -44,7 +44,7 @@ $('#calendar').fullCalendar({
 If you need a different duration, make a [custom view](custom-view-with-settings) with type `'timeline'`:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   header: [
     center: 'month,timelineFourDays'
   ],

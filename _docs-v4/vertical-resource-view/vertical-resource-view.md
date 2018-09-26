@@ -17,7 +17,7 @@ The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides [agenda view](agen
 To activate this functionality in a single-day view, simply use `agendaDay` or `basicDay` view and specify the `resources` setting:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   defaultView: 'agendaDay',
   events: [
     // events go here
