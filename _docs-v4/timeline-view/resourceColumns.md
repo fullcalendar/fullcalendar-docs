@@ -68,7 +68,7 @@ If specified as <code>true</code>, resources will be grouped by this column.
 
 [See a demo of resourceColumns with **grouping**](resourceColumns-grouping-demo).
 
-The `text` function will be given the Resource Object and must return text. The `render` function will be given the Resource Object and the jQuery element associated with the cell. Here is an example that incorporates both techniques:
+The `text` function will be given the Resource Object and must return text. The `render` function will be given the Resource Object and the HTML element associated with the cell. Here is an example that incorporates both techniques:
 
 ```js
 resourceColumns: [
@@ -83,9 +83,9 @@ resourceColumns: [
       return message;
     },
 
-    render: function(resource, el) {
+    render: function(resource, el) { // TODO
       if (resource.isUrgent) {
-        el.css('background-color', 'red');
+        el.style.backgroundColor = 'red';
       }
     }
   }

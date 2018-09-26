@@ -39,7 +39,7 @@ Time-text will only be displayed for [Event Objects](event-object) that have `al
 Here is an example of displaying all events in a 24-hour format:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
   events: [
     {
       title:  'My Event',

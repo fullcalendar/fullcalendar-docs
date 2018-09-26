@@ -35,8 +35,3 @@ The theme you download might already have custom CSS written to style FullCalend
 ## jQuery UI Theme Roller
 
 Custom jQuery UI themes can be created with the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/).
-
-
-## Legacy
-
-The `themeSystem` option was introduced in version 3.5.0 with the introduction of Bootstrap theming. Prior, jQuery UI theming was available via the now-deprecated `theme: true` option.

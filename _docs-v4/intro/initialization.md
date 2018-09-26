@@ -3,16 +3,20 @@ title: Initializing with Options
 description: How to initialize your first calendar with options.
 ---
 
-Once you have FullCalendar and its dependencies [loaded onto the page](installation), you can write JS code that initializes a calendar. This code must be executed *after* the page has initialized. The best way to do this is with jQuery's `$(document).ready` like so:
+Once you have FullCalendar and its dependencies [loaded onto the page](installation), you can write JS code that initializes a calendar. This code must be executed *after* the page has initialized. The best way to do this is with [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) like so:
 
 ```js
-$(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
   // page is now ready, initialize the calendar...
 
-  $('#calendar').fullCalendar({
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new Calendar(calendarEl, {
     // put your options and callbacks here
-  })
+  });
+
+  calendar.render();
 
 });
 ```
@@ -33,7 +37,7 @@ An that's it, you should see a month-based calendar that has no events on it. If
 Most of FullCalendar's documentation describes options that affect the look or behavior of the calendar. Options are usually set when the calendar is initialized, like so:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar({
   weekends: false // will hide Saturdays and Sundays
 });
 ```

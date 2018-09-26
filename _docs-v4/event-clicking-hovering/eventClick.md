@@ -46,7 +46,7 @@ The current [View Object](view-object).
 Here is an example demonstrating some of these properties:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
 
   eventClick: function(info) {
     alert('Event: ' + info.event.title);

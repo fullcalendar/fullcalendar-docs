@@ -5,9 +5,10 @@ layout: demo-v3
 <link href='https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css' rel='stylesheet' />
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new Calendar(calendarEl, {
       themeSystem: 'jquery-ui',
       header: {
         left: 'prev,next today',
@@ -19,6 +20,7 @@ layout: demo-v3
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
 
+    calendar.render();
   });
 
 </script>

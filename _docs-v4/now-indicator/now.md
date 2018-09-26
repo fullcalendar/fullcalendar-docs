@@ -14,7 +14,7 @@ You can override the current date by providing a [parsable Date](date-parsing), 
 
 You can also provide a function that returns a [Date](date-object).
 
-Overriding the current date is particularly useful when your calendar is using a custom [timezone](timezone) parameter. The current year/month/date in the custom timezone might be different than the local computer's current date.
+Overriding the current date is particularly useful when your calendar is using a custom [timeZone](timeZone) parameter. The current year/month/date in the custom timezone might be different than the local computer's current date.
 
 You'll most likely want to calculate this with a server-side script and inject it into the settings of the calendar. Here is an example in PHP:
 

@@ -24,7 +24,7 @@ When using the dates emitted from the API, you'll want to access their *local* v
 An example to summarize this behavior: (the placeholder XX:XX signifies the local time zone offset, which will vary)
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
   timeZone: 'local', // the default (unnecessary to specify)
   events: [
     { start: '2018-09-01T12:30:00Z' }, // will be shifted to local
@@ -50,7 +50,7 @@ When using the dates emitted from the API, you'll want to access their *UTC* val
 In summary:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
   timeZone: 'UTC',
   events: [
     { start: '2018-09-01T12:30:00Z' }, // already in UTC, so won't shift
@@ -87,7 +87,7 @@ What's the point of all of this? It allows your *server* to compute the time zon
 In summary:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
   timeZone: 'America/New_York',
   timeZoneImpl: 'UTC-coercion', // the default (unnecessary to specify)
   events: [

@@ -6,23 +6,24 @@ It's possible to take elements that live outside of a calendar and make them dra
 
 [See a live demo](external-dragging-demo).
 
-To demonstrate the most basic case, you can create a draggable element by instantiating a `Draggable`:
+To demonstrate the most basic case, you can create a draggable element by instantiating a `Draggable`. You must also ensure the calendar's [droppable](droppable) setting is `true`:
 
 ```js
-import { Draggable } from 'fullcalendar'
+import { Calendar, Draggable } from 'fullcalendar'
 
-let el = document.getElementById('myel')
+let draggableEl = document.getElementById('mydraggable')
+let calendarEl = document.getElementBy('mycalendar')
 
-new Draggable(el)
+let calendar = new Calendar(calendarEl, {
+  droppable: true
+})
+
+new Draggable(draggableEl)
 ```
 
 You can also instantiate a `Draggable` on a container element that holds the elements that you want to be draggable, queryable by a selector:
 
 ```js
-import { Draggable } from 'fullcalendar'
-
-let containerEl = document.getElementById('container-id')
-
 new Draggable(containerEl, {
   itemSelector: '.item-class'
 })
@@ -44,11 +45,7 @@ This must be used in tandem with instantiating a `new Draggable`. Also, make sur
 If you want to do everything entirely in JavaScript, you can specify an `eventData` object:
 
 ```js
-import { Draggable } from 'fullcalendar'
-
-let el = document.getElementById('myel')
-
-new Draggable(el, {
+new Draggable(draggableEl, {
   eventData: {
     title: 'my event',
     duration: '02:00'
@@ -59,10 +56,6 @@ new Draggable(el, {
 You can also specify [eventData](eventData) as a function that returns an object. This function receives the element to be dragged.
 
 ```js
-import { Draggable } from 'fullcalendar'
-
-let containerEl = document.getElementById('container-id')
-
 new Draggable(containerEl, {
   itemSelector: '.item-class',
   eventData: function(eventEl) {

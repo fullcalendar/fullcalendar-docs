@@ -33,17 +33,16 @@ The ordering of the `<script>` tags is important.
 Use NPM to install FullCalendar:
 
 ```sh
-npm install jquery fullcalendar fullcalendar-scheduler
+npm install fullcalendar fullcalendar-scheduler
 ```
 
 Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/scheduler-webpack-example)
 
-Then, write a module that imports both jQuery, FullCalendar, and Scheduler:
+Then, write a module that imports both FullCalendar and Scheduler:
 
 ```js
-import $ from 'jquery';
-import 'fullcalendar';
-import 'fullcalendar-scheduler';
+import { Calendar } from 'fullcalendar';
+import 'fullcalendar-scheduler'; // TODO
 ```
 
 You must also somehow include FullCalendar's `fullcalendar.css` and Scheduler's `scheduler.css`, either manually with a `<link>` tag or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).

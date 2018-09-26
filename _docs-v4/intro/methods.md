@@ -3,7 +3,7 @@ title: Methods
 excerpt_separator: <!--more-->
 ---
 
-Methods provide ways to manipulate the calendar from JavaScript code.<!--more--> A method operates on the jQuery object of a calendar that has already been initialized, using the familiar `fullCalendar` command, but in a completely different way:
+Methods provide ways to manipulate the calendar from JavaScript code.<!--more--> A method operates on a Calendar object that has already been [initialized](initialization):
 
 ```js
 calendar.next();

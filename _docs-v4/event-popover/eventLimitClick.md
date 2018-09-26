@@ -1,6 +1,5 @@
 ---
 title: eventLimitClick
-since_version: 2.1.0
 ---
 
 Determines the action taken when the user clicks on a "more" link created by the [eventLimit](eventLimit) option.
@@ -28,26 +27,97 @@ Determines the action taken when the user clicks on a "more" link created by the
 ## Callback Function
 
 <div class='spec' markdown='1'>
-function( cellInfo, jsEvent )
+function( *info* )
 </div>
 
-`cellInfo` is an object that holds named properties for information about the day cell:
+`info` is an object with the following properties:
 
-- `date` - the [Date](date-object) date of the day
-- `dayEl` - jQuery element for the day cell
-- `moreEl` - jQuery element for the "more" link
-- `segs` - array of all event "segment" objects for the given day
-- `hiddenSegs` - array of only the segment objects that were not displayed prior
+<table>
 
-`jsEvent` holds the native JavaScript event for the click.
+<tr>
+<th>date</th>
+<td markdown='1'>
+the [Date](date-object) date of the day
+</td>
+</tr>
+
+<tr>
+<th>dayEl</th>
+<td markdown='1'>
+the HTML element for the day cell
+</td>
+</tr>
+
+<tr>
+<th>moreEl</th>
+<td markdown='1'>
+the HTML element for the "more" link
+</td>
+</tr>
+
+<tr>
+<th>segs</th>
+<td markdown='1'>
+array of all event "segment" objects for the given day. More information below.
+</td>
+</tr>
+
+<tr>
+<th>hiddenSegs</th>
+<td markdown='1'>
+array of only the segment objects that were not displayed prior
+</td>
+</tr>
+
+<tr>
+<th>jsEvent</th>
+<td markdown='1'>
+holds the native JavaScript event for the click
+</td>
+</tr>
+
+</table>
 
 A callback function can return a string value, like `"day"`, that will be processed as the new value of the setting.
 
 
 ## Event Segment Object
 
-- `event` - the [Event Object](event-object)
-- `start` - the [Date](date-object) for when this stretch of the event begins
-- `end` - the [Date](date-object) for when this stretch of the event ends (exclusive)
-- `isStart` - boolean if this is chronologically the first segment for the event
-- `isEnd` - boolean if this is chronologically the last segment for the event
+<table>
+
+<tr>
+<th>event</th>
+<td markdown='1'>
+the [Event Object](event-object)
+</td>
+</tr>
+
+<tr>
+<th>start</th>
+<td markdown='1'>
+the [Date](date-object) for when this stretch of the event begins
+</td>
+</tr>
+
+<tr>
+<th>end</th>
+<td markdown='1'>
+the [Date](date-object) for when this stretch of the event ends (exclusive)
+</td>
+</tr>
+
+<tr>
+<th>isStart</th>
+<td markdown='1'>
+boolean if this is chronologically the first segment for the event
+</td>
+</tr>
+
+<tr>
+<th>isEnd</th>
+<td markdown='1'>
+boolean if this is chronologically the last segment for the event
+</td>
+</tr>
+
+</table>

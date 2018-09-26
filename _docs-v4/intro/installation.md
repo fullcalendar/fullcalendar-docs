@@ -23,18 +23,17 @@ Then, write something like this in the `<head>` of your page:
 Use NPM to install FullCalendar:
 
 ```sh
-npm install jquery fullcalendar
+npm install fullcalendar
 ```
 
 Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/webpack-example)
 
-Then, write a module that imports both jQuery and FullCalendar:
+Then, write a module that imports the FullCalendar module:
 
 ```js
-import $ from 'jquery';
-import 'fullcalendar';
+import { Calendar } from 'fullcalendar';
 ```
 
-Your import for `fullcalendar` does not need to be named. It will attached to jQuery as a plugin. [In the next section](initialization), you will learn how to use jQuery to initialize a calendar.
+[In the next section](initialization), you will learn how to initialize a calendar.
 
 You must also include FullCalendar's stylesheet somehow, either manually with a `<link>` tag or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).

@@ -67,7 +67,7 @@ If the current view is a resource-view, the [Resource Object](resource-object) t
 Here is an example that demonstrates some of these properties:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
 
   dateClick: function(info) {
 
@@ -93,7 +93,7 @@ The dateClick trigger is **not** fired when the user clicks a day heading in lis
 For resource views, this callback will receive an additional [Resource Object](resource-object) parameter. Example:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
 
   dateClick: function(info) {
     alert('Date: ' + info.dateStr);

@@ -66,7 +66,7 @@ The function can also return `false` to completely cancel the rendering of the e
 `eventRender` is a great way to attach effects to event elements, such as a [Tooltip.js](https://popper.js.org/tooltip-examples.html) tooltip effect:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
   events: [
     {
       title: 'My Event',

@@ -42,6 +42,13 @@ A function that, if called, reverts the event's start/end date to the values bef
 </tr>
 
 <tr>
+<th>jsEvent</th>
+<td markdown='1'>
+The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
+<tr>
 <th>view</th>
 <td markdown='1'>
 The current [View Object](view-object).
@@ -55,7 +62,7 @@ eventDrop *does not* get called when an external event lands on the calendar. [e
 Here is an example demonstrating most of these arguments:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
 
   events: [
     // events here

@@ -7,7 +7,7 @@ When you give your calendar event data, whether it's through [an array](events-a
 This article describes all the properties you may supply in your plain, pre-parsed object. To demonstrate the simplest case:
 
 ```js
-new Calendar(calendarEl, {
+var calendar = new Calendar(calendarEl, {
   events: [
     { // this object will be "parsed" into an Event Object
       title: 'The Title', // a property!

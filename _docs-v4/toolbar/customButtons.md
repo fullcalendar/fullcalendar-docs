@@ -1,6 +1,5 @@
 ---
 title: customButtons
-since_version: 2.4.0
 ---
 
 Defines custom buttons that can be used in the header/footer.
@@ -12,7 +11,7 @@ Object
 Specify a hash of custom buttons. Then reference them from the `header` setting. Like this:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   customButtons: {
     myCustomButton: {
       text: 'custom!',
@@ -32,7 +31,7 @@ $('#calendar').fullCalendar({
 Each `customButton` entry accepts the following properties:
 
 - `text` - the text to be display on the button itself
-- `click` - a callback function that is called when the button is clicked. Accepts a single argument, a [jqueryEvent](https://api.jquery.com/category/events/event-object/).
+- `click` - a callback function that is called when the button is clicked. Accepts a single argument, a [JavaScript native event](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent).
 - `icon` - see [buttonIcons](buttonIcons). optional
 - `themeIcon` - see [themeButtonIcons](themeButtonIcons). optional
 - `bootstrapGlyphicon` - see [bootstrapGlyphicons](bootstrapGlyphicons). optional

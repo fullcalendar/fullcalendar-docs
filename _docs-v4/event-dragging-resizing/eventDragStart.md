@@ -6,13 +6,32 @@ type: callback
 Triggered when event dragging begins.
 
 <div class='spec' markdown='1'>
-function( *event*, *jsEvent*, *ui*, *view* ) { }
+function( *info* ) { }
 </div>
 
-`event` is an [Event Object](event-object) that hold the event's information (date, title, etc).
+`info` is a plain object with the following properties:
 
-`jsEvent` holds the native javascript event with low-level information such as click coordinates.
+<table>
 
-`ui` holds an empty object. Before version 2.1, the [jQuery UI object](http://jqueryui.com/demos/draggable/).
+<tr>
+<th>event</th>
+<td markdown='1'>
+An [Event Object](event-object) that holds information about the event (date, title, etc) **after** the drop.
+</td>
+</tr>
 
-`view` holds the current [View Object](view-object).
+<tr>
+<th>jsEvent</th>
+<td markdown='1'>
+The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
+<tr>
+<th>view</th>
+<td markdown='1'>
+The current [View Object](view-object).
+</td>
+</tr>
+
+</table>
