@@ -16,7 +16,7 @@ Example:
 
 ```js
 resourceRender: function(resourceObj, labelTds, bodyTds) {
-  labelTds.css('background', 'blue');
+  labelTds.style.backgroundColor = 'blue';
 }
 ```
 

@@ -1,6 +1,5 @@
 ---
 title: resourcesInitiallyExpanded
-since_scheduler_version: 1.8
 ---
 
 Whether child resources should be expanded when the view loads.

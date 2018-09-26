@@ -1,6 +1,5 @@
 ---
 title: Vertical Resource View
-since_scheduler_version: 1.1
 is_premium: true
 children:
   - groupByResource

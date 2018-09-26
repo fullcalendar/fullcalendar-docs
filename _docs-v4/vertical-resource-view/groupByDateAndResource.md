@@ -1,6 +1,5 @@
 ---
 title: groupByDateAndResource
-since_scheduler_version: 1.1
 ---
 
 Determines if multi-day agenda or basic views should display resource columns. If so, renders date headings above resource headings.

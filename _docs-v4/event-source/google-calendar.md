@@ -5,14 +5,6 @@ excerpt_separator: <!--more-->
 
 FullCalendar can display events from a public [Google Calendar](http://calendar.google.com/).<!--more--> Google Calendar can serve as a backend that manages and persistently stores event data (a feature that FullCalendar currently lacks).
 
-<div class='warning'>
-On Nov 17th 2014, Google shut down V1 and V2 of their Calendar APIs, which FullCalendar relied upon.
-Please upgrade to the latest version of FullCalendar or at least replace <code>gcal.js</code> with
-<strong><a href='https://github.com/fullcalendar/fullcalendar/blob/v3.7.0/dist/gcal.js'>this file</a></strong>
-(will work down to FullCalendar v2.0.0).
-Also, your own Google Calendar API key is now required.
-</div>
-
 ## Before you code...
 
 **You must first have a Google Calendar API Key**:

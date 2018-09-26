@@ -50,7 +50,3 @@ var calendar = new Calendar(calendarEl, {
   ]
 });
 ```
-
-<div class='version-info' markdown='1'>
-Multiple resources-per-event are only available in Scheduler v1.2.0 and onward.
-</div>

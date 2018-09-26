@@ -29,5 +29,3 @@ resources: function(callback, start, end, timezone) {
 ```
 
 These arguments are similar to what the [events function](events-function) receives, though in a different order.
-
-This `refetchResourcesOnNavigate` behavior is present in v1.5.1 and later.

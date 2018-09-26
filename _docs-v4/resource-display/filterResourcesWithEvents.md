@@ -1,6 +1,5 @@
 ---
 title: filterResourcesWithEvents
-since_scheduler_version: 1.5
 ---
 
 When this setting is activated, only resources that have associated events will be displayed.

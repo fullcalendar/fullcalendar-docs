@@ -22,7 +22,7 @@ businessHours: {
 }
 ```
 
-You may also break your business hour declaration into parts for additional control (added in v2.9.1):
+You may also break your business hour declaration into parts for additional control:
 
 ```js
 businessHours: [ // specify an array instead

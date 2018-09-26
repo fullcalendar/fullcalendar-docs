@@ -35,5 +35,3 @@ var calendar = new Calendar(calendarEl, {
 ```
 
 The parameters are similar to the [event JSON feed](events-function)'s parameters.
-
-This `refetchResourcesOnNavigate` behavior is present in v1.5.1 and later.
