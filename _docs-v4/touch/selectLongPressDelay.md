@@ -1,6 +1,5 @@
 ---
 title: selectLongPressDelay
-since_version: 3.1.0
 ---
 
 For touch devices, the amount of time the user most hold down before a date becomes selectable.

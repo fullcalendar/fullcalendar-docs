@@ -1,6 +1,5 @@
 ---
 title: displayEventEnd
-since_version: 2.0.1
 ---
 
 Whether or not to display an event's end time.

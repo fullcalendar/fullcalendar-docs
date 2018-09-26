@@ -1,6 +1,5 @@
 ---
 title: agendaEventMinHeight
-since_version: 3.6.0
 ---
 
 Guarantees that events within the Agenda views will be a minimum height.

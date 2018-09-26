@@ -1,7 +1,6 @@
 ---
 title: Calendar::getEventSourceById
 type: method
-since_version: 2.8.0
 ---
 
 Retrieves a specific [Event Source Object](event-source-object).

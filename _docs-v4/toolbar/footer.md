@@ -1,6 +1,5 @@
 ---
 title: footer
-since_version: 3.1
 ---
 
 Defines the controls at the bottom of the calendar.

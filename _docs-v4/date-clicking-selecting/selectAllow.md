@@ -1,6 +1,5 @@
 ---
 title: selectAllow
-since_version: 3.0
 ---
 
 Exact programmatic control over where the user can select.

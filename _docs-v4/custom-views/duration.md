@@ -1,6 +1,5 @@
 ---
 title: duration
-since_version: 3.3.0
 ---
 
 Sets the exact duration of a custom view.

@@ -1,6 +1,5 @@
 ---
 title: validRange
-since_version: 3.3.0
 ---
 
 Limits which dates the user can navigate to and where events can go.

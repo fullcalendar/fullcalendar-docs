@@ -1,6 +1,5 @@
 ---
 title: navLinks
-since_version: 3.0
 ---
 
 Determines if day names and week names are clickable.

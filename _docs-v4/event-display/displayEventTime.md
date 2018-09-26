@@ -1,6 +1,5 @@
 ---
 title: displayEventTime
-since_version: 2.4.0
 ---
 
 Whether or not to display the text for an event's date/time.

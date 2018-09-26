@@ -1,6 +1,5 @@
 ---
 title: fixedWeekCount
-since_version: 2.1.0
 ---
 
 Determines the number of weeks displayed in a month view.

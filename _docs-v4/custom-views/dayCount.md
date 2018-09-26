@@ -1,6 +1,5 @@
 ---
 title: dayCount
-since_version: 3.3.0
 ---
 
 Sets the exact number of days displayed in a custom view, regardless of [weekends](weekends) or [hiddenDays](hiddenDays).

@@ -1,6 +1,5 @@
 ---
 title: eventLimit
-since_version: 2.1.0
 ---
 
 Limits the number of events displayed on a day. The rest will show up in a popover.

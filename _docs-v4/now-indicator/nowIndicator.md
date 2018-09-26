@@ -1,6 +1,5 @@
 ---
 title: nowIndicator
-since_version: 2.6.0
 ---
 
 Whether or not to display a marker indicating the current time.

@@ -1,6 +1,5 @@
 ---
 title: noEventsMessage
-since_version: 3.0
 ---
 
 The text that is displayed in the middle of list view, alerting the user that there are no events within the given range.

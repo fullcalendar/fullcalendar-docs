@@ -1,7 +1,6 @@
 ---
 title: Custom Views via Settings
 type: guide
-since_version: 2.2.5
 ---
 
 It is possible to customize an existing available view by tweaking settings.

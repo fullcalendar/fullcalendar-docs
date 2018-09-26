@@ -1,6 +1,5 @@
 ---
 title: weekNumbersWithinDays
-since_version: 3.0
 ---
 
 Determines the styling for week numbers in month view and basic view.

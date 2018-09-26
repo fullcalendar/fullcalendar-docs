@@ -1,6 +1,5 @@
 ---
 title: visibleRange
-since_version: 3.3.0
 ---
 
 Sets the exact date range that is visible in a view.

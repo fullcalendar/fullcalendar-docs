@@ -1,6 +1,5 @@
 ---
 title: columnHeader
-since_version: 3.6.0
 ---
 
 Whether the day headers should appear. For the Month, Agenda, and Basic views.

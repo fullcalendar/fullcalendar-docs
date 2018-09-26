@@ -1,6 +1,5 @@
 ---
 title: selectMinDistance
-since_version: 3.1.1
 ---
 
 The minimum distance the user's mouse must travel after a mousedown, before a selection is allowed.

@@ -1,6 +1,5 @@
 ---
 title: dateIncrement
-since_version: 3.3.0
 ---
 
 How far into the future/past the calendar navigates when prev/next is executed.

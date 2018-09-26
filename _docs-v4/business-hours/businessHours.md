@@ -1,6 +1,5 @@
 ---
 title: businessHours
-since_version: 2.2
 ---
 
 Emphasizes certain time slots on the calendar. By default, Monday-Friday, 9am-5pm.

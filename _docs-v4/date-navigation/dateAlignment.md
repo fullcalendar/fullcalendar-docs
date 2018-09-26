@@ -1,6 +1,5 @@
 ---
 title: dateAlignment
-since_version: 3.3.0
 ---
 
 Determines the first visible day of a custom view.

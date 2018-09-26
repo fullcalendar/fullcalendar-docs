@@ -1,6 +1,5 @@
 ---
 title: bootstrapGlyphicons
-since_version: 3.5.0
 ---
 
 Determines which icons are displayed in buttons of the header/footer when Bootstrap 3 theming is on.

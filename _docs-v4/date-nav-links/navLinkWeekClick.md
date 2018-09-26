@@ -1,7 +1,6 @@
 ---
 title: navLinkWeekClick
 type: callback
-since_version: 3.0
 ---
 
 Determines what happens upon a [week-number](weekNumbers) nav-link click.

@@ -1,6 +1,5 @@
 ---
 title: showNonCurrentDates
-since_version: 3.3.0
 ---
 
 In month view, whether dates in the previous or next month should be rendered at all.

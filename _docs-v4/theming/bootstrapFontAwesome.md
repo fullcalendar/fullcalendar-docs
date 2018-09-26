@@ -1,6 +1,5 @@
 ---
 title: bootstrapFontAwesome
-since_version: 3.5.0
 ---
 
 Determines which icons are displayed in buttons of the header/footer when Bootstrap 4 theming is on.

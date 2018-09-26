@@ -1,6 +1,5 @@
 ---
 title: slotLabelInterval
-since_version: 2.4.0
 ---
 
 The frequency that the time slots should be labelled with text.
