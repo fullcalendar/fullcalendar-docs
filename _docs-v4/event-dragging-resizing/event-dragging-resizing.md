@@ -2,6 +2,7 @@
 title: Event Dragging & Resizing
 children:
   - external-dragging
+  - other-calendar-dragging
   - third-party-dragging
   - title: Flags
     children:
@@ -16,7 +17,6 @@ children:
       - eventDragMinDistance
       - dragRevertDuration
       - dragScroll
-      - dragScrollEls
       - snapDuration
       - allDayMaintainDuration
   - title: Control

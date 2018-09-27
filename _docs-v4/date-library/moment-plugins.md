@@ -14,16 +14,18 @@ The fullcalendar-moment plugin provides the following functionality:
 - Lets you convert [Duration](duration-object) objects emitted from the API into moment durations objects
 
 Example using formatting strings:
-...... what about rangessss
 
 ```js
-require { Calendar } from 'fullcalendar'
-require 'fullcalendar-moment' // simply require the file
+import { Calendar } from 'fullcalendar';
+import 'fullcalendar/plugins/moment'; // need this! or include <script> tag instead
 
+var calendarEl = document.getElementById('calendar');
 var calendar = new Calendar(calendarEl, {
   titleFormat: 'MMMM D, YYYY' // you can now use format strings
-})
+});
 ```
+
+If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `moment.js` dist file [from the Moment site](https://momentjs.com/) is included on your page first.
 
 If you want to format a date *range*, you can group related date parts with curly brackets:
 
@@ -34,29 +36,31 @@ var calendar = new Calendar(calendarEl, {
   // could produce "January 5 - 7, 2018"
   // could produce "January 5 - February 31, 2018"
   // could produce "January 5, 2018 - June 9, 2019"
-})
+});
 ```
 
 Example using date/duration conversion:
 
 ```js
-require { Calendar } from 'fullcalendar'
-require { toMoment, toDuration } from 'fullcalendar-moment'
+import { Calendar } from 'fullcalendar';
+import { toMoment, toDuration } from 'fullcalendar/plugins/moment';
 
 var calendar = new Calendar(calendarEl, {
 
   dateClick: function(arg) {
-    var m = toMoment(calendar, arg.date) // calendar must be first argument
-    console.log('clicked on ' + m.format())
+    var m = toMoment(arg.date, calendar); // calendar is required
+    console.log('clicked on ' + m.format());
   },
 
   eventDrop: function(arg) {
-    var d = toDuration(arg.delta) // no need to pass calendar
-    console.log('event moved ' + d.humanize())
+    var d = toDuration(arg.delta);
+    console.log('event moved ' + d.humanize());
   }
 
-})
+});
 ```
+
+If you are using `<script>` tags and browser globals, you can access `FullCalendar.Moment.toMoment` and `FullCalendar.Moment.toDuration`.
 
 
 <h2 id='fullcalendar-moment-timezone'>fullcalendar-moment-timezone</h2>
@@ -68,11 +72,13 @@ In addition to loading the plugin, you must also load moment-timezone's timezone
 Example using Node/Webpack:
 
 ```js
-require { Calendar } from 'fullcalendar'
-require 'fullcalendar-moment-timezone' // simply require the file
+import { Calendar } from 'fullcalendar';
+import 'fullcalendar/plugins/timezone'; // need this! or include <script> tag instead
 
 var calendar = new Calendar(calendarEl, {
   timeZone: 'Europe/Moscow',
   timeZoneImpl: 'moment-timezone'
-})
+});
 ```
+
+If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `moment.js` and `moment-timezone.js` dist files [from the Moment site](https://momentjs.com/) is included on your page first.

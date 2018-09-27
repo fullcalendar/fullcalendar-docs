@@ -3,7 +3,7 @@ title: drop
 type: callback
 ---
 
-Called when an [external draggable element](external-dragging) has been dropped onto the calendar.
+Called when an [external draggable element](external-dragging) or [an event from another calendar](other-calendar-dragging) has been dropped onto the calendar.
 
 <div class='spec' markdown='1'>
 function( *dropInfo* ) { }
@@ -56,3 +56,5 @@ The current [View Object](view-object).
 </tr>
 
 </table>
+
+If you need an Event object, see [eventReceive](eventReceive) instead.

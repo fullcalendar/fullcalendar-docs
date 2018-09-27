@@ -23,6 +23,15 @@ Here is a URL that FullCalendar might visit:
 `/myfeed.php?start=2013-12-01T00:00:00-05:00&end=2014-01-12T00:00:00-05:00`
 
 
+## Dependencies
+
+Requesting JSON event feed relies on a third-party AJAX library called [SuperAgent](http://visionmedia.github.io/superagent/).
+
+If you are building your project with Node/Webpack, there is no need to worry about bundling SuperAgent files. It will happen automatically.
+
+However, if you are using `<script>` tags and browser globals, **you must include SuperAgent's JS file yourself!**
+
+
 ## Extended Form
 
 You can specify [Event Source options](event-source-object#options). This often comes in handy when you are using the [eventSources](eventSources) option to specify multiple event sources and you want certain options to only apply to certain sources. However, to do this, you must write things a little differently:

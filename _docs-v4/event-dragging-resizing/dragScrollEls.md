@@ -4,6 +4,8 @@ title: dragScrollEls
 
 Determines which elements in the DOM the [dragScroll](dragScroll) setting will auto-scroll.
 
+NOT YET EXPOSED
+
 <div class='spec' markdown='1'>
 a CSS selector<br>
 -or-<br>

@@ -102,6 +102,13 @@ Like [eventDragMinDistance](eventDragMinDistance).
 </td>
 </tr>
 
+<tr>
+<th>appendTo</th>
+<td markdown='1'>
+An HTML element that will be the parent of the "mirror" element that follows the mouse while dragging. Defaults to the `<body>`.
+</td>
+</tr>
+
 </table>
 
 The `eventData` object can have any of the [parsable Event object](event-parsing) properties in addition to some others:

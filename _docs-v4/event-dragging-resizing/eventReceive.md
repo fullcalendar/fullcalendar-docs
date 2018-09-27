@@ -3,7 +3,7 @@ title: eventReceive
 type: callback
 ---
 
-Called when an [external draggable element](external-dragging) with associated [event data](event-parsing) was dropped onto the calendar.
+Called when an [external draggable element](external-dragging) with associated [event data](event-parsing) was dropped onto the calendar. Or an event [from another calendar](other-calendar-dragging).
 
 <div class='spec' markdown='1'>
 function( *receivedInfo* ) { }
