@@ -1,15 +1,19 @@
 ---
 title: Agenda-view now-indicator
-layout: demo-v3
+layout: demo-v4
 ---
 <script>
 
-  $(function() {
-    $('#calendar').fullCalendar({
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       defaultView: 'agendaWeek',
       nowIndicator: true,
       now: '2018-02-13T09:25:00' // just for demo
     });
+
+    calendar.render();
   });
 
 </script>

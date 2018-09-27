@@ -1,15 +1,17 @@
 ---
 title: Dynamically switch between locales
-layout: demo-v3
+layout: demo-v4
 disable_base_styles: true
 needs_locales: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var initialLocaleCode = 'en';
+    var localeSelectorEl = document.getElementById('locale-selector');
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -23,22 +25,24 @@ needs_locales: true
       eventLimit: true // allow "more" link when too many events
     });
 
+    calendar.render();
+
     // build the locale selector's options
-    $.each($.fullCalendar.locales, function(localeCode) {
-      $('#locale-selector').append(
-        $('<option/>')
-          .attr('value', localeCode)
-          .prop('selected', localeCode == initialLocaleCode)
-          .text(localeCode)
-      );
+    FullCalendar.getLocaleCodes().forEach(function(localeCode) {
+      var optionEl = document.createElement('option');
+      optionEl.value = localeCode;
+      optionEl.selected = localeCode == initialLocaleCode;
+      optionEl.innerText = localeCode;
+      localeSelectorEl.appendChild(optionEl);
     });
 
     // when the selected option changes, dynamically change the calendar option
-    $('#locale-selector').on('change', function() {
+    localeSelectorEl.addEventListener('change', function() {
       if (this.value) {
-        $('#calendar').fullCalendar('option', 'locale', this.value);
+        calendar.setOption('locale', this.value);
       }
     });
+
   });
 
 </script>

@@ -1,38 +1,32 @@
 ---
 title: Drag-n-drop external events
 description: Drag external events into the calendar with the help of jquery-ui draggable
-layout: demo-v3
+layout: demo-v4
 disable_base_styles: true
 ---
-<script src='https://code.jquery.com/ui/1.11.3/jquery-ui.min.js'></script>
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var containerEl = document.getElementById('external-events');
+    var calendarEl = document.getElementById('calendar');
+    var checkbox = document.getElementById('drop-remove');
 
     // initialize the external events
     // -----------------------------------------------------------------
 
-    $('#external-events .fc-event').each(function() {
-
-      // store data so the calendar knows to render an event upon drop
-      $(this).data('event', {
-        title: $.trim($(this).text()), // use the element's text as the event title
-        stick: true // maintain when user navigates (see docs on the renderEvent method)
-      });
-
-      // make the event draggable using jQuery UI
-      $(this).draggable({
-        zIndex: 999,
-        revert: true,      // will cause the event to go back to its
-        revertDuration: 0  //  original position after the drag
-      });
-
+    new FullCalendar.Draggable(containerEl, {
+      itemSelector: '.fc-event',
+      eventData: function(eventEl) {
+        return {
+          title: eventEl.innerText
+        };
+      }
     });
 
     // initialize the calendar
     // -----------------------------------------------------------------
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -40,15 +34,16 @@ disable_base_styles: true
       },
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar
-      drop: function() {
+      drop: function(info) {
         // is the "remove after drop" checkbox checked?
-        if ($('#drop-remove').is(':checked')) {
+        if (checkbox.checked) {
           // if so, remove the element from the "Draggable Events" list
-          $(this).remove();
+          info.draggedEl.parentNode.removeChild(info.draggedEl);
         }
       }
     });
 
+    calendar.render();
   });
 
 </script>

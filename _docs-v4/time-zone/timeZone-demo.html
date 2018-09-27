@@ -1,13 +1,19 @@
 ---
 title: Dynamically switch between timezones
-layout: demo-v3
+layout: demo-v4
 disable_base_styles: true
+needs_json_feed: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var initialTimeZone = 'local';
+    var timeZoneSelectorEl = document.getElementById('time-zone-selector');
+    var loadingEl = document.getElementById('loading');
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: initialTimeZone,
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -18,34 +24,41 @@ disable_base_styles: true
       selectable: true,
       eventLimit: true, // allow "more" link when too many events
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json',
+
       loading: function(bool) {
-        $('#loading').toggle(bool);
-      },
-      eventRender: function(event, el) {
-        // render the timezone offset below the event title
-        if (event.start.hasZone()) {
-          el.find('.fc-title').after(
-            $('<div class="tzo"/>').text(event.start.format('Z'))
-          );
+        if (bool) {
+          loadingEl.style.display = 'inline'; // show
+        } else {
+          loadingEl.style.display = 'none'; // hide
         }
-      }
+      },
+
+      eventTimeFormat: { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }
     });
 
+    calendar.render();
+
     // load the list of available timezones, build the <select> options
-    $.getJSON('{{ site.data.demo_feed_baseurl }}/demo-timezones.json', function(timezones) {
-      $.each(timezones, function(i, timezone) {
-        if (timezone != 'UTC') { // UTC is already in the list
-          $('#timezone-selector').append(
-            $("<option/>").text(timezone).attr('value', timezone)
-          );
+    superagent.get('{{ site.data.demo_feed_baseurl }}/demo-timezones.json').end(function(err, res) {
+      var timeZones = res ? (res.body || JSON.parse(res.text)) : [];
+
+      timeZones.forEach(function(timeZone) {
+        var optionEl;
+
+        if (timeZone !== 'UTC') { // UTC is already in the list
+          optionEl = document.createElement('option');
+          optionEl.value = timeZone;
+          optionEl.innerText = timeZone;
+          timeZoneSelectorEl.appendChild(optionEl);
         }
       });
     });
 
     // when the timezone selector changes, dynamically change the calendar option
-    $('#timezone-selector').on('change', function() {
-      $('#calendar').fullCalendar('option', 'timezone', this.value || false);
+    timeZoneSelectorEl.addEventListener('change', function() {
+      calendar.setOption('timeZone', this.value || false);
     });
+
   });
 
 </script>
@@ -87,8 +100,7 @@ disable_base_styles: true
 
     <div style='float:left'>
       Timezone:
-      <select id='timezone-selector'>
-        <option value='' selected>none</option>
+      <select id='time-zone-selector'>
         <option value='local'>local</option>
         <option value='UTC'>UTC</option>
       </select>

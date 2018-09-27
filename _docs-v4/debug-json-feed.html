@@ -1,12 +1,14 @@
 ---
 description: json events with standard calendar
-layout: demo-v3
+layout: demo-v4
+needs_json_feed: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       defaultView: 'month',
       header: {
         left: 'prev,next',
@@ -39,6 +41,7 @@ layout: demo-v3
       // defaultDate: 'XXXX-XX-XX'
     });
 
+    calendar.render();
   });
 
 </script>

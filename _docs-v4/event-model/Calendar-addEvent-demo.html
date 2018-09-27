@@ -1,28 +1,27 @@
 ---
 title: Add an event dynamically
 description: Click the "add event..." button
-layout: demo-v3
+layout: demo-v4
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       defaultView: 'month',
-
       header: {
         center: 'addEventButton'
       },
-
       customButtons: {
         addEventButton: {
           text: 'add event...',
           click: function() {
             var dateStr = prompt('Enter a date in YYYY-MM-DD format');
-            var date = new Date(dateStr);
+            var date = new Date(dateStr + 'T00:00:00'); // will be in local time
 
             if (!isNaN(date.valueOf())) { // valid?
-              $('#calendar').fullCalendar('renderEvent', {
+              calendar.addEvent({
                 title: 'dynamic event',
                 start: date,
                 allDay: true
@@ -36,6 +35,7 @@ layout: demo-v3
       }
     });
 
+    calendar.render();
   });
 
 </script>

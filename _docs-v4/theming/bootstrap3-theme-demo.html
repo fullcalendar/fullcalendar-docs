@@ -1,13 +1,15 @@
 ---
 title: Bootstrap 3 theme
-layout: demo-v3
+layout: demo-v4
+needs_json_feed: true
 ---
 <link href='https://bootswatch.com/3/lumen/bootstrap.min.css' rel='stylesheet' />
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       themeSystem: 'bootstrap3',
       header: {
         left: 'prev,next today',
@@ -19,6 +21,7 @@ layout: demo-v3
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
 
+    calendar.render();
   });
 
 </script>

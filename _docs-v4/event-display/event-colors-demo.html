@@ -1,13 +1,14 @@
 ---
 title: Event color customization
-layout: demo-v3
+layout: demo-v4
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       defaultView: 'month',
       defaultDate: '{{ ym }}-12',
       eventColor: 'green',
@@ -63,6 +64,7 @@ layout: demo-v3
       ]
     });
 
+    calendar.render();
   });
 
 </script>

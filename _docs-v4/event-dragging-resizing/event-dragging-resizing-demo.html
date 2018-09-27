@@ -1,13 +1,15 @@
 ---
 title: Enable event dragging/resizing
 description: You can drag events to other days and resize the end date
-layout: demo-v3
+layout: demo-v4
+needs_json_feed: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -18,6 +20,7 @@ layout: demo-v3
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'
     });
 
+    calendar.render();
   });
 
 </script>
