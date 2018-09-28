@@ -32,6 +32,7 @@ children:
       - eventDrop
       - drop
       - eventReceive
+      - eventLeave
       - eventResizeStart
       - eventResizeStop
       - eventResize

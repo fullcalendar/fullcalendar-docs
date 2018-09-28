@@ -6,10 +6,10 @@ type: callback
 Called when an [external draggable element](external-dragging) with associated [event data](event-parsing) was dropped onto the calendar. Or an event [from another calendar](other-calendar-dragging).
 
 <div class='spec' markdown='1'>
-function( *receivedInfo* ) { }
+function( *info* ) { }
 </div>
 
-`receivedInfo` is a plain object with the following properties:
+`info` is a plain object with the following properties:
 
 <table>
 
@@ -23,7 +23,7 @@ The HTML element that was being dragged.
 <tr>
 <th>event</th>
 <td markdown='1'>
-An [Event object](event-object) containing the newly created event.
+An [Event object](event-object) containing the newly created/received event.
 </td>
 </tr>
 

@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-When dropped, the [drop callback](drop) and [eventReceive callback](eventReceive) will fire.
+When dropped, the [eventLeave](eventLeave), [drop](drop), and [eventReceive](eventReceive) callbacks will fire.
 
 [See a live demo &raquo;](other-calendar-dragging-demo)
