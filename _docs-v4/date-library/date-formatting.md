@@ -161,13 +161,17 @@ Example using **fullcalendar-moment**:
 import { Calendar } from 'fullcalendar';
 import 'fullcalendar-moment';
 
-var calendar = new Calendar(calendarEl, {
-  // because the plugin is present, you can now use formatting strings.
-  // will produce something like "Tuesday, September 18, 2018"
-  titleFormat: 'dddd, MMMM D, YYYY'
-});
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-calendar.render();
+  var calendar = new Calendar(calendarEl, {
+    // because the plugin is present, you can now use formatting strings.
+    // will produce something like "Tuesday, September 18, 2018"
+    titleFormat: 'dddd, MMMM D, YYYY'
+  });
+
+  calendar.render();
+});
 ```
 
 [Read more about Moment JS formatting strings](http://momentjs.com/docs/#/displaying/).

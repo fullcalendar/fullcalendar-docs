@@ -15,18 +15,22 @@ calendar.formatDate( *date*, *settings* )
 Example:
 
 ```js
-import { Calendar } from 'fullcalendar'
+import { Calendar } from 'fullcalendar';
 
-let calendar = new Calendar(calendarEl, {
-  timeZone: 'UTC',
-  locale: 'es'
-})
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-let str = calendar.formatDate('2018-09-01', {
-  month: 'long',
-  year: 'numeric',
-  day: 'numeric'
-})
+  var calendar = new Calendar(calendarEl, {
+    timeZone: 'UTC',
+    locale: 'es'
+  });
 
-console.log(str) // "1 de septiembre de 2018 0:00 UTC"
+  var str = calendar.formatDate('2018-09-01', {
+    month: 'long',
+    year: 'numeric',
+    day: 'numeric'
+  });
+
+  console.log(str); // "1 de septiembre de 2018 0:00 UTC"
+});
 ```

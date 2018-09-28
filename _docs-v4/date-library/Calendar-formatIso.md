@@ -15,16 +15,20 @@ If `omitTime` is set to `true`, a string like `2019-09-01` will be produced. Oth
 Example:
 
 ```js
-import { Calendar } from 'fullcalendar'
+import { Calendar } from 'fullcalendar';
 
-let calendar = new Calendar(calendarEl, {
-  timeZone: 'local',
-  locale: 'es'
-})
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-let str = calendar.formatIso('2018-09-01')
+  var calendar = new Calendar(calendarEl, {
+    timeZone: 'local',
+    locale: 'es'
+  });
 
-console.log(str) // "2018-09-01T00:00:00-05:00" when in America/New_York
+  var str = calendar.formatIso('2018-09-01');
+
+  console.log(str); // "2018-09-01T00:00:00-05:00" when in America/New_York
+});
 ```
 
 If you simply need to output an ISO8601 string that is normalized to a `00:00` UTC offset, it is more efficient to use the native Date's [toISOString method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).

@@ -11,14 +11,18 @@ To demonstrate the most basic case, you can create a draggable element by instan
 ```js
 import { Calendar, Draggable } from 'fullcalendar'
 
-let draggableEl = document.getElementById('mydraggable')
-let calendarEl = document.getElementBy('mycalendar')
+document.addEventListener('DOMContentLoaded', function() {
+  var draggableEl = document.getElementById('mydraggable');
+  var calendarEl = document.getElementBy('mycalendar');
 
-let calendar = new Calendar(calendarEl, {
-  droppable: true
-})
+  var calendar = new Calendar(calendarEl, {
+    droppable: true
+  });
 
-new Draggable(draggableEl)
+  calendar.render();
+
+  new Draggable(draggableEl);
+});
 ```
 
 You can also instantiate a `Draggable` on a container element that holds the elements that you want to be draggable, queryable by a selector:

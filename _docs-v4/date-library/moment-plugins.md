@@ -19,9 +19,14 @@ Example using formatting strings:
 import { Calendar } from 'fullcalendar';
 import 'fullcalendar/plugins/moment'; // need this! or include <script> tag instead
 
-var calendarEl = document.getElementById('calendar');
-var calendar = new Calendar(calendarEl, {
-  titleFormat: 'MMMM D, YYYY' // you can now use format strings
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new Calendar(calendarEl, {
+    titleFormat: 'MMMM D, YYYY' // you can now use format strings
+  });
+
+  calendar.render();
 });
 ```
 
@@ -45,18 +50,23 @@ Example using date/duration conversion:
 import { Calendar } from 'fullcalendar';
 import { toMoment, toDuration } from 'fullcalendar/plugins/moment';
 
-var calendar = new Calendar(calendarEl, {
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-  dateClick: function(arg) {
-    var m = toMoment(arg.date, calendar); // calendar is required
-    console.log('clicked on ' + m.format());
-  },
+  var calendar = new Calendar(calendarEl, {
 
-  eventDrop: function(arg) {
-    var d = toDuration(arg.delta);
-    console.log('event moved ' + d.humanize());
-  }
+    dateClick: function(arg) {
+      var m = toMoment(arg.date, calendar); // calendar is required
+      console.log('clicked on ' + m.format());
+    },
 
+    eventDrop: function(arg) {
+      var d = toDuration(arg.delta);
+      console.log('event moved ' + d.humanize());
+    }
+  });
+
+  calendar.render();
 });
 ```
 
@@ -75,9 +85,15 @@ Example using Node/Webpack:
 import { Calendar } from 'fullcalendar';
 import 'fullcalendar/plugins/timezone'; // need this! or include <script> tag instead
 
-var calendar = new Calendar(calendarEl, {
-  timeZone: 'Europe/Moscow',
-  timeZoneImpl: 'moment-timezone'
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new Calendar(calendarEl, {
+    timeZone: 'Europe/Moscow',
+    timeZoneImpl: 'moment-timezone'
+  });
+
+  calendar.render();
 });
 ```
 

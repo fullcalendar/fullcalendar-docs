@@ -28,19 +28,22 @@ and here is the JavaScript:
 ```js
 import { Calendar, Draggable } from 'fullcalendar';
 
-var calendar = new Calendar(calendarEl, {
-  droppable: true,
-  dropAccept: '.cool-event',
-  drop: function() {
-    alert('dropped!');
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var draggableEl1 = document.getElementById('draggable1');
+  var draggableEl2 = document.getElementById('draggable2');
+
+  var calendar = new Calendar(calendarEl, {
+    droppable: true,
+    dropAccept: '.cool-event',
+    drop: function() {
+      alert('dropped!');
+    }
+  });
+
+  calendar.render();
+
+  new Draggable(draggableEl1);
+  new Draggable(draggableEl2);
 });
-
-new Draggable(
-  document.getElementById('draggable1')
-);
-
-new Draggable(
-  document.getElementById('draggable2')
-);
 ```

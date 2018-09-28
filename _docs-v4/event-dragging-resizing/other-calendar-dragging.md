@@ -9,21 +9,25 @@ It's possible to initialize two or more separate Calendars, and then allow the u
 ```js
 import { Calendar } from 'fullcalendar';
 
-var srcCalendarEl = document.getElementById('source-calendar');
-var srcCalendar = new Calendar(srcCalendarEl, {
-  editable: true,
-  events: [
-    // event data here
-  ]
-});
-srcCalendar.render();
+document.addEventListener('DOMContentLoaded', function() {
+  var srcCalendarEl = document.getElementById('source-calendar');
+  var destCalendarEl = document.getElementById('destination-calendar');
 
-var destCalendarEl = document.getElementById('destination-calendar');
-var destCalendar = new Calendar(destCalendarEl, {
-  editable: true,
-  droppable: true // will let it receive events!
+  var srcCalendar = new Calendar(srcCalendarEl, {
+    editable: true,
+    events: [
+      // event data here
+    ]
+  });
+
+  var destCalendar = new Calendar(destCalendarEl, {
+    editable: true,
+    droppable: true // will let it receive events!
+  });
+
+  srcCalendar.render();
+  destCalendar.render();
 });
-destCalendar.render();
 ```
 
 When dropped, the [drop callback](drop) and [eventReceive callback](eventReceive) will fire.

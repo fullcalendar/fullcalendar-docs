@@ -17,9 +17,14 @@ Example using formatting strings:
 import { Calendar } from 'fullcalendar';
 import 'fullcalendar/plugins/luxon'; // need this! or include <script> tag instead
 
-var calendarEl = document.getElementById('calendar');
-var calendar = new Calendar(calendarEl, {
-  titleFormat: 'LLLL d, yyyy' // you can now use format strings
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new Calendar(calendarEl, {
+    titleFormat: 'LLLL d, yyyy' // you can now use format strings
+  });
+
+  calendar.render();
 });
 ```
 
@@ -43,19 +48,23 @@ Example using date/duration conversion:
 import { Calendar } from 'fullcalendar';
 import { toDateTime, toDuration } from 'fullcalendar/plugins/luxon';
 
-var calendarEl = document.getElementById('calendar');
-var calendar = new Calendar(calendarEl, {
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
-  dateClick: function(arg) {
-    var dt = toDateTime(arg.date, calendar); // calendar is required
-    console.log('clicked on ' + dt.toISO());
-  },
+  var calendar = new Calendar(calendarEl, {
 
-  eventDrop: function(arg) {
-    var dur = toDuration(arg.delta, calendar); // calendar is required
-    console.log('event moved ' + dur.toISO());
-  }
+    dateClick: function(arg) {
+      var dt = toDateTime(arg.date, calendar); // calendar is required
+      console.log('clicked on ' + dt.toISO());
+    },
 
+    eventDrop: function(arg) {
+      var dur = toDuration(arg.delta, calendar); // calendar is required
+      console.log('event moved ' + dur.toISO());
+    }
+  });
+
+  calendar.render();
 });
 ```
 
@@ -67,9 +76,14 @@ Example using `timeZoneImpl`:
 import { Calendar } from 'fullcalendar';
 import 'fullcalendar/plugins/luxon'; // need this! or include <script> tag instead
 
-var calendarEl = document.getElementById('calendar');
-var calendar = new Calendar(calendarEl, {
-  timeZone: 'Europe/Moscow',
-  timeZoneImpl: 'luxon'
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new Calendar(calendarEl, {
+    timeZone: 'Europe/Moscow',
+    timeZoneImpl: 'luxon'
+  });
+
+  calendar.render();
 });
 ```
