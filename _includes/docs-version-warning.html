@@ -1,6 +1,11 @@
 
 {% if page.version.is_pre %}
-  <!-- TODO: pre-release warning -->
+  <div class='hero__warning'>
+    This release is in alpha. Docs are incomplete.
+    <a href='#'>
+      Read the blog post.
+    </a>
+  </div>
 {% elsif page.version.is_latest %}
   <div class='hero__warning' style='display:none'>
     {% comment %}for JS to dynamically inject warning{% endcomment %}
