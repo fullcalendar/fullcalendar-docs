@@ -28,4 +28,4 @@ destCalendar.render();
 
 When dropped, the [drop callback](drop) and [eventReceive callback](eventReceive) will fire.
 
-See a live demo &raquo; (TODO)
+[See a live demo &raquo;](other-calendar-dragging-demo)

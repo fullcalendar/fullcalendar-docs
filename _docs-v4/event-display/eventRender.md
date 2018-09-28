@@ -77,11 +77,15 @@ var calendar = new Calendar(calendarEl, {
   ],
   eventRender: function(info) {
     var tooltip = new Tooltip(info.el, {
-      title: info.event.extendedProps.description
+      title: info.event.extendedProps.description,
+      placement: 'top',
+      trigger: 'hover',
+      container: 'body'
     });
-    tooltip.show();
   }
 });
 ```
 
 Note that `description` is a non-standard [Event Object](event-object) field, which is allowed.
+
+[See a live demo with Tooltip.js &raquo;](event-tooltip-demo)
