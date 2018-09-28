@@ -4,6 +4,7 @@ children:
   - height
   - contentHeight
   - aspectRatio
+  - updateSize
   - handleWindowResize
   - windowResizeDelay
   - title: Callbacks
