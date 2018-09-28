@@ -20,14 +20,13 @@ This option affects many things such as:
 ## How to use other locales
 
 You will need to load the locale JavaScript data file in order to use it.
-These files are included with the FullCalendar download in the `locale/` directory.
+These files are included with the FullCalendar download in the `locales/` directory.
 They must be loaded via a `<script>` tag after the main FullCalendar library is loaded.
 TODO
 
-    <script src='fullcalendar/fullcalendar.js'></script>
-
 ```html
-<script src='fullcalendar/locale/es.js'></script>
+<script src='fullcalendar/fullcalendar.js'></script>
+<script src='fullcalendar/locales/es.js'></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -44,11 +43,11 @@ TODO
 
 If you are simply loading one locale, you do *not* need to specify the `locale` option. FullCalendar will look at the most recent locale file loaded and use it.
 
-However, if more than one locale file is loaded, or the combined `locale-all.js` file is loaded, you must explicitly specify which locale to use via the `locale` option:
+However, if more than one locale file is loaded, or the combined `locales-all.js` file is loaded, you must explicitly specify which locale to use via the `locale` option:
 
 ```html
 <script src='fullcalendar/fullcalendar.js'></script>
-<script src='fullcalendar/locale-all.js'></script>
+<script src='fullcalendar/locales-all.js'></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {

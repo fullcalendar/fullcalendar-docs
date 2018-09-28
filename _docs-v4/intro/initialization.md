@@ -6,24 +6,34 @@ description: How to initialize your first calendar with options.
 Once you have FullCalendar and its dependencies [loaded onto the page](installation), you can write JS code that initializes a calendar. This code must be executed *after* the page has initialized. The best way to do this is with [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) like so:
 
 ```js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { // page is now ready...
+  var calendarEl = document.getElementById('calendar'); // grab element reference
 
-  // page is now ready, initialize the calendar...
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    // put your options and callbacks here
+  });
 
-  var calendarEl = document.getElementById('calendar');
+  calendar.render();
+});
+```
+
+The above example assumes you are using a `<script>` tag that supplies the `FullCalendar` browser global. The following example is the same thing, but written as an ES6 module:
+
+```js
+import { Calendar } from 'fullcalendar';
+
+document.addEventListener('DOMContentLoaded', function() { // page is now ready...
+  var calendarEl = document.getElementById('calendar'); // grab element reference
 
   var calendar = new Calendar(calendarEl, {
     // put your options and callbacks here
   });
 
   calendar.render();
-
 });
 ```
 
-The above code should be in a `<script>` tag in the head of your page. The code
-relies on there being an element with an id of "calendar" in the body of your page.
-The calendar will be placed *inside* this div:
+The code relies on there being an element with an id of "calendar" in the body of your page. The calendar will be placed *inside* this div:
 
 ```html
 <div id='calendar'></div>
