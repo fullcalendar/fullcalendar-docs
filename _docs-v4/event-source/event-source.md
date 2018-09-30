@@ -7,6 +7,7 @@ children:
   - google-calendar
   - event-source-object
   - eventSources
+  - eventSourceSuccess
   - eventSourceFailure
   - title: Event Requesting
     children:

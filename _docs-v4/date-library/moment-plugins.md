@@ -83,7 +83,7 @@ Example using Node/Webpack:
 
 ```js
 import { Calendar } from 'fullcalendar';
-import 'fullcalendar/plugins/timezone'; // need this! or include <script> tag instead
+import 'fullcalendar/plugins/moment-timezone'; // need this! or include <script> tag instead
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');

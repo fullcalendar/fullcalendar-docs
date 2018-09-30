@@ -118,7 +118,7 @@ The following example demonstrates **fullcalendar-moment-timezone**:
 
 ```js
 import { toMoment } from 'fullcalendar-moment'
-import 'fullcalendar-moment-timezone'
+import 'fullcalendar/plugins/moment-timezone'; // need this! or include <script> tag instead
 
 var calendar = new Calendar(calendarEl, {
   timeZone: 'America/New_York',

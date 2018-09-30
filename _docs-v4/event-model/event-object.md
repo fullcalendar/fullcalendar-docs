@@ -163,6 +163,13 @@ A plain object holding miscellaneous other properties specified during parsing. 
 </tr>
 
 <tr>
+<th>source</th>
+<td markdown='1'>
+A reference to the [Event Source](event-source-object) this event came from. If the event was added dynamically via [addEvent](Calendar-addEvent), and the `source` parameter was not specified, this value will be `null`.
+</td>
+</tr>
+
+<tr>
 <th>resources</th>
 <td markdown='1'>
 TODO

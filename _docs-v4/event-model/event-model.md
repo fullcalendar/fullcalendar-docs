@@ -17,7 +17,6 @@ children:
       - Calendar-getEvents
       - Calendar-getEventById
       - Calendar-addEvent
-      - Event-getSource
       - Event-setProp
       - Event-setExtendedProp
       - Event-setStart

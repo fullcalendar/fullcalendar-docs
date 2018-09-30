@@ -193,6 +193,14 @@ Sets the <a href='eventDataTransform'>eventDataTransform</a> callback, but only 
 </tr>
 <tr>
 <th>
+success
+</th>
+<td markdown='1'>
+A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Cannot modify the response. That's what `eventDataTransform` is for.
+</td>
+</tr>
+<tr>
+<th>
 failure
 </th>
 <td markdown='1'>

@@ -34,11 +34,6 @@ Background events that are **timed** will only be rendered on the time slots in 
 The color of background events can be manipulated by targeting the `fc-bgevent` className, one of your own custom classNames provided by the [Event Object](event-object)'s `className` property, or by explicitly specifying a color with each [Event Object](event-object)'s or [Event Source](event-source-object)'s `color` or `backgroundColor` properties.
 
 
-## Recurring Events
-
-It is possible to define daily or weekly recurring events. Use [Duration](duration-object)-ish times in the [Event Object](event-object)'s `start` and `end` properties, or use the `dow` property. See [businessHours](businessHours) for more information.
-
-
 ## Inverse Backgrounds
 
 The spans of time *not* occupied by an event can be colored by setting the `rendering` property to `"inverse-background"`. Events that share the same `id` will be grouped together when this rendering happens.
