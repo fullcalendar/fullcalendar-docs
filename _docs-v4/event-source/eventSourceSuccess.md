@@ -8,4 +8,4 @@ A function that gets called when fetching succeeds. Gets called for any type of 
 function( *rawEvents*, *xhr* )
 </div>
 
-Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Cannot modify the response. Use [eventDataTransform](eventDataTransform) instead.
+Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Cannot modify the response. Use [eventRootDataTransform](eventRootDataTransform) instead.

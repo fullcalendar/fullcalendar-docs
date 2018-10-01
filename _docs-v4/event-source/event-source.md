@@ -9,6 +9,7 @@ children:
   - eventSources
   - eventSourceSuccess
   - eventSourceFailure
+  - eventRootDataTransform
   - title: Event Requesting
     children:
       - startParam

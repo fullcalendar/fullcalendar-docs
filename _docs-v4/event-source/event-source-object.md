@@ -185,6 +185,14 @@ Sets the <a href='allDayDefault'>allDayDefault</a> option, but only for this sou
 </tr>
 <tr>
 <th>
+rootDataTransform
+</th>
+<td>
+Sets the <a href='eventRootDataTransform'>eventRootDataTransform</a> callback, but only for this source.
+</td>
+</tr>
+<tr>
+<th>
 eventDataTransform
 </th>
 <td>

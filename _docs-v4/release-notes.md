@@ -972,7 +972,7 @@ var calendar = new Calendar(calendarEl, {
 
 ## Date Navigation
 
-The [getDate](getDate) method will return a [Date object](date-object) not a Moment.
+The [getDate](Calendar-getDate) method will return a [Date object](date-object) not a Moment.
 
 
 ## Date Clicking & Selecting
