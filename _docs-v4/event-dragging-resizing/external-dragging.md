@@ -30,7 +30,7 @@ You can also instantiate a `Draggable` on a container element that holds the ele
 ```js
 new Draggable(containerEl, {
   itemSelector: '.item-class'
-})
+});
 ```
 
 In either of these examples, if one of these external elements is dropped on a calendar, it will fire the [drop](drop) callback.
@@ -54,7 +54,7 @@ new Draggable(draggableEl, {
     title: 'my event',
     duration: '02:00'
   }
-})
+});
 ```
 
 You can also specify [eventData](eventData) as a function that returns an object. This function receives the element to be dragged.
@@ -66,9 +66,9 @@ new Draggable(containerEl, {
     return {
       title: eventEl.innerText,
       duration: '02:00'
-    }
+    };
   }
-})
+});
 ```
 
 
