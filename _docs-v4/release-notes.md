@@ -580,7 +580,7 @@ Like the calendar-wide [eventAllow](eventAllow) but for this event source only.
 <tr>
 <th>success (new)</th>
 <td markdown='1'>
-A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Cannot modify the response. That's what `eventDataTransform` is for.
+A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Can massage the response by returning an event source array to use instead.
 </td>
 </tr>
 
@@ -648,7 +648,7 @@ There are two new calendar-wide callbacks:
 <tr>
 <th><a href='eventSourceSuccess'>eventSourceSuccess</a></th>
 <td markdown='1'>
-A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Cannot modify the response. That's what `eventDataTransform` is for.
+A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Can massage the response by returning an event source array to use instead.
 </td>
 </tr>
 

@@ -185,10 +185,18 @@ Sets the <a href='allDayDefault'>allDayDefault</a> option, but only for this sou
 </tr>
 <tr>
 <th>
-rootDataTransform
+success
 </th>
-<td>
-Sets the <a href='eventRootDataTransform'>eventRootDataTransform</a> callback, but only for this source.
+<td markdown='1'>
+Sets the <a href='eventSourceSuccess'>eventSourceSuccess</a> callback, but only for this source.
+</td>
+</tr>
+<tr>
+<th>
+failure
+</th>
+<td markdown='1'>
+Sets the <a href='eventSourceFailure'>eventSourceFailure</a> callback, but only for this source.
 </td>
 </tr>
 <tr>
@@ -197,22 +205,6 @@ eventDataTransform
 </th>
 <td>
 Sets the <a href='eventDataTransform'>eventDataTransform</a> callback, but only for this source.
-</td>
-</tr>
-<tr>
-<th>
-success
-</th>
-<td markdown='1'>
-A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Cannot modify the response. That's what `eventDataTransform` is for.
-</td>
-</tr>
-<tr>
-<th>
-failure
-</th>
-<td markdown='1'>
-A function that gets called when fetching failed. Probably because [an AJAX request](events-json-feed) failed. Receives one argument, an error object.
 </td>
 </tr>
 </table>
