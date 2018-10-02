@@ -187,7 +187,7 @@ Example:
 var calendar = new Calendar(calendarEl, {
   // will produce something like "Tue Sep 18 2018 18:48:41 GMT-0400 (Eastern Daylight Time) !!!"
   titleFormat: function(date) {
-    return date.toString() + '!!!'
+    return date.toString() + '!!!';
   }
-})
+});
 ```

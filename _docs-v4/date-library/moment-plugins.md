@@ -75,7 +75,7 @@ If you are using `<script>` tags and browser globals, you can access `FullCalend
 
 <h2 id='fullcalendar-moment-timezone'>fullcalendar-moment-timezone</h2>
 
-The fullcalendar-moment-timezone plugin, which is separate from the basic fullcalendar-moment plugin, gives your calendar support for arbitrary named time zones. It provides a "time zone implementation" for the [timeZoneImpl](timeZoneImpl) setting. For more information, see [named timezone section in the timeZone article](timeZone#named-time-zones).
+The fullcalendar-moment-timezone plugin, which is separate from the basic fullcalendar-moment plugin, gives your calendar support for arbitrary named time zones. It provides a "time zone implementation" for the [timeZoneImpl](timeZoneImpl) setting. For more information, see [named time zone section in the timeZone article](timeZone#named-time-zones).
 
 In addition to loading the plugin, you must also load moment-timezone's timezone data. You should consult the [moment-timezone docs on this matter](https://momentjs.com/timezone/docs/#/use-it/), but long story short, if you are using Node/Webpack, all time zone data will be automatically loaded, but if you are using script tags and browser globals, you must load a separate file.
 

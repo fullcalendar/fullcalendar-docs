@@ -16,9 +16,17 @@ layout: text
     >fullcalendar-{{ latest_version }}.zip</a>
 </h2>
 
-Includes a **basic stylesheet**, the **Google Calendar extension**, and the necessary **Moment** and **jQuery** files.
+Includes a **basic stylesheet**, the **Google Calendar extension**, and the necessary **jQuery** and **Moment** files.
 
 [Changelog + All Releases &raquo;]({{ site.fullcalendar_repo }}/releases)
+
+
+## V4 Beta
+
+Want to try the v4 beta, which doesn't rely on jQuery or Moment anymore?
+
+[More information &raquo;](https://fullcalendar.io/docs/v4/release-notes)
+
 
 ## Package Managers
 
