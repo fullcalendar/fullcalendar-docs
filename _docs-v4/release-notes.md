@@ -60,7 +60,7 @@ Also, the agenda view and event drag-n-drop functionality will be broken out int
 
 **Getting the code:**
 
-Download [fullcalendar-4.0.0-alpha.2.zip](#) or use NPM/Webpack:
+Download [fullcalendar-4.0.0-alpha.2.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-alpha.2/fullcalendar-4.0.0-alpha.2.zip) or use NPM/Webpack:
 
 ```
 npm install fullcalendar@alpha
@@ -68,11 +68,11 @@ npm install fullcalendar@alpha
 
 <br />
 
-**Want the full docs** in a non-changelog format? [View the docs](../v4). They are a work in progress.
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs/v4). They are a work in progress.
 
-**Found a bug?** [Report it on the issue tracker](#). Please include "v4" in the title.
+**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs). Please include "v4" in the title.
 
-**Have a comment?** [Comment on the blog post](#).
+**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2018/10/release-v4-alpha2).
 
 </div>
 <div class='sidenote-layout__sidenote' id='toc' markdown='1'>
