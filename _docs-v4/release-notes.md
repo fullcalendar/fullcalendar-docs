@@ -43,7 +43,8 @@ Version 4.0.0-alpha2 is now available. When the 4.0.0 is officially released, it
 - Event drag & drop between two calendars. [Demo](other-calendar-dragging-demo)
 - Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this.
 - Connector plugins for [Moment JS](moment-plugins), [Moment Timezone](moment-plugins#fullcalendar-moment-timezone), and [Luxon](luxon-plugin)
-- Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled.
+- Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled. [Issue 2761](https://github.com/fullcalendar/fullcalendar/issues/2761)
+- Touch scrolling works better with event and date unselecting. [Issue 3530](https://github.com/fullcalendar/fullcalendar/issues/3530)
 
 <br />
 
@@ -119,7 +120,7 @@ Instead of relying on FullCalendar to attach a new method to jQuery (`$().fullCa
 <tr>
 <th>print stylesheet</th>
 <td markdown='1'>
-No need to use a separate `<link>` tag to include the `fullcalendar.print.css` stylesheet. It will be automatically included within `fullcalendar.css`, by use of media queries.
+No need to use a separate `<link>` tag to include the `fullcalendar.print.css` stylesheet. It will be automatically included within `fullcalendar.css`, by use of media queries. [Issue 3594](https://github.com/fullcalendar/fullcalendar/issues/3594)
 </td>
 </tr>
 
@@ -137,6 +138,8 @@ document.addEventListener('DOMContentLoaded', function() {
   calendar.render();
 });
 ```
+
+[Issue 3703](https://github.com/fullcalendar/fullcalendar/issues/3703)
 </td>
 </tr>
 
@@ -161,7 +164,7 @@ Top-level utility functions that were called like `$.fullCalendar.formatDate()` 
 <tr>
 <th><a href='handlers'>handlers</a></th>
 <td markdown='1'>
-The `this` context will always be the `Calendar` object, as opposed to something arbitrary:
+The `this` context will always be the `Calendar` object, as opposed to something arbitrary. [Issue 2463](https://github.com/fullcalendar/fullcalendar/issues/2463) and [2699](https://github.com/fullcalendar/fullcalendar/issues/2699)
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -200,7 +203,7 @@ calendar.setOption('optionName', 'optionValue');
 <tr>
 <th><a href='render'>render method</a></th>
 <td markdown='1'>
-When called after initialization, will rerender **everything**, not just merely adjust the calendar's size. For that, use [updateSize](updateSize).
+When called after initialization, will rerender **everything**, not just merely adjust the calendar's size. For that, use [updateSize](updateSize). [Issue 2709](https://github.com/fullcalendar/fullcalendar/issues/2709)
 </td>
 </tr>
 
@@ -220,7 +223,7 @@ Will readjust a calendar's sizing (what the `render` method used to do).
 <tr>
 <th><a href='Calendar-batchRendering'>batchRendering</a></th>
 <td markdown='1'>
-Will group operations and consolidate them into a single rerender.
+Will group operations and consolidate them into a single rerender. Solves [issue 3262](https://github.com/fullcalendar/fullcalendar/issues/3262)
 </td>
 </tr>
 
@@ -243,21 +246,21 @@ Breaking changes:
 <tr>
 <th>Moment JS removal</th>
 <td markdown='1'>
-Moment JS has been removed as a dependency and thus there is no need to include `moment(.min).js`. The API now deals in [native Date objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) as opposed to Moment objects.
+Moment JS has been removed as a dependency and thus there is no need to include `moment(.min).js`. The API now deals in [native Date objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) as opposed to Moment objects. Related to [issue 3937](https://github.com/fullcalendar/fullcalendar/issues/3937), [3672](https://github.com/fullcalendar/fullcalendar/issues/3672), [3672](https://github.com/fullcalendar/fullcalendar/issues/3274).
 </td>
 </tr>
 
 <tr>
 <th>Ambiguously-zoned Moments</th>
 <td markdown='1'>
-Will now be `Date` objects in UTC.
+Will now be `Date` objects in UTC. [Issue 2981](https://github.com/fullcalendar/fullcalendar/issues/2981)
 </td>
 </tr>
 
 <tr>
 <th>Ambiguously-timed Moments</th>
 <td markdown='1'>
-Will now be `Date` objects with a time of `00:00:00`. Callbacks nearly always provide an `allDay` boolean in addition.
+Will now be `Date` objects with a time of `00:00:00`. Callbacks nearly always provide an `allDay` boolean in addition. [Issue 2981](https://github.com/fullcalendar/fullcalendar/issues/2981)
 </td>
 </tr>
 
@@ -265,6 +268,8 @@ Will now be `Date` objects with a time of `00:00:00`. Callbacks nearly always pr
 <th><a href='date-formatting'>date formatting strings</a></th>
 <td markdown='1'>
 Instead of specifying date formats as command strings like `MMMM d, YYYY`, you specify them as objects like `{ month: 'long', day: 'numeric', year: 'numeric' }`. This technique leverages the native [DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) which results in greater flexibility across locales and smaller locale files.
+
+Also, you can use functions to programmatically generate date string text. [Issue 3664](https://github.com/fullcalendar/fullcalendar/issues/3664)
 
 You can still use command strings, but you'll need to use the [moment](moment-plugins) or [luxon](luxon-plugin) plugins.
 </td>
@@ -296,7 +301,7 @@ Renamed to [timeZone](timeZone) (to be more consistent with native naming conven
 <tr>
 <th><a href='time-zone'>time zone handling</a></th>
 <td markdown='1'>
-The `timezone: false` technique is obsolete. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl](timeZoneImpl) of `'UTC-coercion'`, which is the default.
+The `timezone: false` technique is obsolete. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl](timeZoneImpl) of `'UTC-coercion'`, which is the default. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
 
 The current [timeZone](timeZone) will affect how you will interpret the [Date objects](date-object) emitted from the API. Whether you will use local methods like `getHours()` or UTC methods like `getUTCHours()`.
 </td>
@@ -318,7 +323,7 @@ New things:
 <tr>
 <th><a href='timeZoneImpl'>timeZoneImpl</a><br />(time zone implementation)</th>
 <td markdown='1'>
-Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary.
+Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
 </td>
 </tr>
 
@@ -458,6 +463,13 @@ The outputted object, which is now an instance if the `Event` class, has propert
 </tr>
 
 <tr>
+<th>groupId</th>
+<td markdown='1'>
+All events with the same groupId will be dragged, resized, and mutated together. [Issue 4147](https://github.com/fullcalendar/fullcalendar/issues/4147)
+</td>
+</tr>
+
+<tr>
 <th>start</th>
 <td markdown='1'>
 A [Date object](date-object). No longer a moment.
@@ -483,7 +495,7 @@ Access `backgroundColor` and `borderColor` instead. Color is an alias for settin
 <td markdown='1'>
 Previously, any non-standard properties would be preserved as top-level keys. Now, they are moved into the `extendedProps` hash.
 
-It is also possible to specify an explicit `extendedProps` hash in the plain object.
+It is also possible to specify an explicit `extendedProps` hash in the plain object. [Issue 3228](https://github.com/fullcalendar/fullcalendar/issues/3228)
 </td>
 </tr>
 
@@ -554,7 +566,7 @@ The default has changed from 2 hours to 1 hour.
 
 </table>
 
-Also, recurring events is now a built-in feature! You can use [simple event recurrence](recurring-events) or use the [RRule adapater](rrule-plugin).
+Also, recurring events is now a built-in feature! You can use [simple event recurrence](recurring-events) or use the [RRule adapater](rrule-plugin). [Issue 387](https://github.com/fullcalendar/fullcalendar/issues/387)
 
 
 ## Event Source
@@ -648,7 +660,7 @@ There are two new calendar-wide callbacks:
 <tr>
 <th><a href='eventSourceSuccess'>eventSourceSuccess</a></th>
 <td markdown='1'>
-A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Can massage the response by returning an event source array to use instead.
+A function that gets called when fetching succeeds. Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. Can massage the response by returning an event source array to use instead. [Issue 2431](https://github.com/fullcalendar/fullcalendar/issues/2431)
 </td>
 </tr>
 
@@ -688,6 +700,8 @@ var calendar = new Calendar(calendarEl, {
   }
 })
 ```
+
+Solves [issue 3593](https://github.com/fullcalendar/fullcalendar/issues/3593)
 
 
 ## Event JSON Feed
@@ -751,7 +765,7 @@ The following request parameters have been affected:
 <tr>
 <th><a href='startParam'>startParam</a></th>
 <td markdown='1'>
-Would previously generate strings like `2019-09-01` which did not have time parts or UTC offsets. Now, the string is guaranteed to have a time part (most likely `00:00:00`) and will have a UTC offset that is dependant on the current [timeZone](timeZone). If the timeZone is set to `'local'` and the user is localed in New York, the string might be `2019-09-01T00:00:00-05:00`
+Would previously generate strings like `2019-09-01` which did not have time parts or UTC offsets. Now, the string is guaranteed to have a time part (most likely `00:00:00`) and will have a UTC offset that is dependant on the current [timeZone](timeZone). If the timeZone is set to `'local'` and the user is localed in New York, the string might be `2019-09-01T00:00:00-05:00`. [Issue 3593](https://github.com/fullcalendar/fullcalendar/issues/3593)
 </td>
 </tr>
 
@@ -790,7 +804,7 @@ Just like with JSON event feeds, make sure to SuperAgent has been included. If u
 <tr>
 <th><del>googleCalendarError</del></th>
 <td markdown='1'>
-Removed. Use [eventSourceFailure](eventSourceFailure) instead.
+Removed. Use [eventSourceFailure](eventSourceFailure) instead. [Issue 3982](https://github.com/fullcalendar/fullcalendar/issues/3982)
 </td>
 </tr>
 
@@ -846,7 +860,7 @@ defineView('deluxeAgendaWeek', {
 defineView('custom', CustomViewClass); // can pass-in class directly!
 ```
 
-**This will likely change before the official v4.0.0 release.**
+[Issue 3657](https://github.com/fullcalendar/fullcalendar/issues/3657). **This will likely change before the official v4.0.0 release.**
 </td>
 </tr>
 
@@ -895,14 +909,14 @@ The following view-rendering-related callbacks have been affected:
 <tr>
 <th><del>viewRender</del></th>
 <td markdown='1'>
-Renamed to `datesRender`
+Renamed to [datesRender](datesRender). Parameters have changed.
 </td>
 </tr>
 
 <tr>
 <th><del>viewDestroy</del></th>
 <td markdown='1'>
-Renamed to `datesDestroy`
+Renamed to [datesDestroy](datesDestroy). Parameters have changed.
 </td>
 </tr>
 
@@ -1053,14 +1067,14 @@ The following settings have been affected:
 <tr>
 <th><a href='nextDayThreshold'>nextDayThreshold</a></th>
 <td markdown='1'>
-Default has been changed to `00:00:00`. The previous default of `09:00:00` didn't make a lot of sense.
+Default has been changed to `00:00:00`. The previous default of `09:00:00` didn't make a lot of sense. [Issue 2902](https://github.com/fullcalendar/fullcalendar/issues/2902)
 </td>
 </tr>
 
 <tr>
 <th><a href='eventOrder'>eventOrder</a></th>
 <td markdown='1'>
-This value how has complete control over ordering events within a day, as opposed to before when events were always ordered by time first. The default is now `'start,-duration,allDay,title'`.
+This value how has complete control over ordering events within a day, as opposed to before when events were always ordered by time first. The default is now `'start,-duration,allDay,title'`. [Issue 2907](https://github.com/fullcalendar/fullcalendar/issues/2907)
 
 If your old value for this setting was something like `'-duration,title'`, you'll want to include the start time in the value now. So, convert it to `'start,-duration,title'`.
 </td>
@@ -1083,6 +1097,8 @@ var calendar = new Calendar(calendarEl, {
   }
 });
 ```
+
+Addresses [issue 3674](https://github.com/fullcalendar/fullcalendar/issues/3674), [3956](https://github.com/fullcalendar/fullcalendar/issues/3956), [2616](https://github.com/fullcalendar/fullcalendar/issues/2616), [3952](https://github.com/fullcalendar/fullcalendar/pull/3952), and [3311](https://github.com/fullcalendar/fullcalendar/issues/3311)
 </td>
 </tr>
 
@@ -1106,7 +1122,7 @@ var calendar = new Calendar(calendarEl, {
 <tr>
 <th><del>timeFormat</del></th>
 <td markdown='1'>
-Renamed to [eventTimeFormat](eventTimeFormat). Accepts [a date-formatting object](date-formatting) instead.
+Renamed to [eventTimeFormat](eventTimeFormat). Accepts [a date-formatting object](date-formatting) instead. [Issue 1019](https://github.com/fullcalendar/fullcalendar/issues/1019)
 </td>
 </tr>
 
@@ -1134,7 +1150,7 @@ Removed. Use [rerenderDelay](rerenderDelay) instead, which waits before rerender
 <tr>
 <th><a href='progressiveEventRendering'>progressiveEventRendering</a> (new)</th>
 <td markdown='1'>
-When to render multiple asynchronous event sources in an individual or batched manner.
+When to render multiple asynchronous event sources in an individual or batched manner. [Issue 1672](https://github.com/fullcalendar/fullcalendar/issues/1672) and [4072](https://github.com/fullcalendar/fullcalendar/issues/4072)
 </td>
 </tr>
 
@@ -1170,7 +1186,7 @@ The following callbacks have been affected:
 <tr>
 <th><a href='eventClick'>eventClick</a></th>
 <td markdown='1'>
-Where previously received ordered arguments `( event, jsEvent, view )`, will now receive a single object argument `{ event, el, jsEvent, view }`. Now fires for background events.
+Where previously received ordered arguments `( event, jsEvent, view )`, will now receive a single object argument `{ event, el, jsEvent, view }`. Now fires for background events. [Issue 2808](https://github.com/fullcalendar/fullcalendar/issues/2808)
 
 You can no longer return `false` to cancel the browser's navigation to the [Event object's](event-object) URL. Instead, use the `jsEvent`:
 
@@ -1179,7 +1195,7 @@ var calendar = new Calendar(calendarEl, {
   eventClick: function(info) {
     info.jsEvent.preventDefault();
   }
-})
+});
 ```
 </td>
 </tr>
@@ -1187,14 +1203,14 @@ var calendar = new Calendar(calendarEl, {
 <tr>
 <th><del>eventMouseover</del></th>
 <td markdown='1'>
-Renamed to [eventMouseEnter](eventMouseEnter). Where previously received ordered arguments `( event, jsEvent, view )`, will now receive a single object argument `{ event, el, jsEvent, view }`. Now fires for background events.
+Renamed to [eventMouseEnter](eventMouseEnter). Where previously received ordered arguments `( event, jsEvent, view )`, will now receive a single object argument `{ event, el, jsEvent, view }`. Now fires for background events. [Issue 3005](https://github.com/fullcalendar/fullcalendar/issues/3005)
 </td>
 </tr>
 
 <tr>
 <th><del>eventMouseout</del></th>
 <td markdown='1'>
-Renamed to [eventMouseLeave](eventMouseLeave). Where previously received ordered arguments `( event, jsEvent, view )`, will now receive a single object argument `{ event, el, jsEvent, view }`. Now fires for background events.
+Renamed to [eventMouseLeave](eventMouseLeave). Where previously received ordered arguments `( event, jsEvent, view )`, will now receive a single object argument `{ event, el, jsEvent, view }`. Now fires for background events. [Issue 3005](https://github.com/fullcalendar/fullcalendar/issues/3005)
 </td>
 </tr>
 
@@ -1278,14 +1294,14 @@ var calendar = new Calendar(calendarEl, {
 })
 ```
 
-The `startDelta` is for resizing from start edge (with `eventResizableFromStart`). `endDelta` is for resizing from ending edge. Both are [Duration objects](duration-object), no longer Moment Durations. The `prevEvent` property is a new feature that allows you to inspect the event's values prior to the mutation.
+The `startDelta` is for resizing from start edge (with `eventResizableFromStart`). `endDelta` is for resizing from ending edge. Both are [Duration objects](duration-object), no longer Moment Durations. The `prevEvent` property is a new feature that allows you to inspect the event's values prior to the mutation. [Issue 4148](https://github.com/fullcalendar/fullcalendar/issues/4148)
 </td>
 </tr>
 
 <tr>
 <th><a href='eventResizableFromStart'>eventResizableFromStart</a> (new)</th>
 <td markdown='1'>
-Whether the event can be resized from its starting edge. Defaults to `false`.
+Whether the event can be resized from its starting edge. Defaults to `false`. [Issue 374](https://github.com/fullcalendar/fullcalendar/issues/374)
 </td>
 </tr>
 
@@ -1299,14 +1315,14 @@ How many pixels the user’s mouse/touch must move before an event drag activate
 <tr>
 <th><a href='allDayMaintainDuration'>allDayMaintainDuration</a> (new)</th>
 <td markdown='1'>
-Determines how an event’s duration should be mutated when it is dragged from a timed section to an all-day section and vice versa.
+Determines how an event’s duration should be mutated when it is dragged from a timed section to an all-day section and vice versa. [Issue 2764](https://github.com/fullcalendar/fullcalendar/issues/2764)
 </td>
 </tr>
 
 <tr>
 <th><a href='dragScroll'>dragScroll</a></th>
 <td markdown='1'>
-Does auto-scrolling not just for event dragging, but also for **event resizing** and **date selecting**.
+Does auto-scrolling not just for event dragging, but also for **event resizing**, **external element dragging**, and **date selecting**. [Issue 242](https://github.com/fullcalendar/fullcalendar/issues/242)
 </td>
 </tr>
 
@@ -1350,7 +1366,7 @@ Version 4 offers the following new features:
 <tr>
 <th>no third-party dependencies</th>
 <td markdown='1'>
-You no longer need jQuery UI to be able to drag elements into a calendar. You can use the built-in `Draggable` API. [More information](external-dragging).
+You no longer need jQuery UI to be able to drag elements into a calendar. You can use the built-in `Draggable` API. [More information](external-dragging). [Issue 3902](https://github.com/fullcalendar/fullcalendar/issues/3902)
 </td>
 </tr>
 
@@ -1364,7 +1380,7 @@ If you'd like to use a third-party library for dragging such as [Dragula](https:
 <tr>
 <th>dragging between calendars</th>
 <td markdown='1'>
-It's possible to drag events between two separate Calendar instances. [More information](other-calendar-dragging).
+It's possible to drag events between two separate Calendar instances. [More information](other-calendar-dragging). [Issue 820](https://github.com/fullcalendar/fullcalendar/issues/820)
 </td>
 </tr>
 
