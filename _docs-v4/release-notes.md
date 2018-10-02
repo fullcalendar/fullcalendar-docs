@@ -528,7 +528,7 @@ var event = calendar.getEventById('a');
 event.setProp('title', 'new title');
 ```
 
-Manipulation methods: [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setStart](Event-setStart), [setEnd](Event-setEnd), [setDates](Event-setDate), [setAllDay](Event-setAllDay), [moveStart](Event-moveStart), [moveEnd](Event-moveEnd), [moveDates](Event-moveDates)
+Manipulation methods: [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setStart](Event-setStart), [setEnd](Event-setEnd), [setDates](Event-setDates), [setAllDay](Event-setAllDay), [moveStart](Event-moveStart), [moveEnd](Event-moveEnd), [moveDates](Event-moveDates)
 </td>
 </tr>
 
@@ -612,7 +612,7 @@ Can now return `false` to exclude an event from being included. The calendar-wid
 
 </table>
 
-This plain object is then parsed and becomes available in places like [getEventSourceById](getEventSourceById) and the [event object's](event-object) `source` property. Previously, these event source references would be slighly massaged version of the original plain object. Now, they are instances of the `EventSource` class and have methods that allow manipulation.
+This plain object is then parsed and becomes available in places like [getEventSourceById](Calendar-getEventSourceById) and the [event object's](event-object) `source` property. Previously, these event source references would be slighly massaged version of the original plain object. Now, they are instances of the `EventSource` class and have methods that allow manipulation.
 
 **In v4, this new `EventSource` object is rather limited, offering only two properties:** `id` and `url`. [More info](event-source-object#after-parsing)
 
@@ -1035,7 +1035,7 @@ var calendar = new Calendar(calendarEl, {
 </tr>
 
 <tr>
-<th><a href='select-method'>select method</a></th>
+<th><a href='Calendar-select'>select method</a></th>
 <td markdown='1'>
 Removed the ordered argument signature: `( start, end, resourceId )`. Instead, pass in a single object `{ start, end, resourceId }`. The ordered argument signature `( start, end )` is still supported.
 </td>
