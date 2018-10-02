@@ -63,7 +63,7 @@ Also, the agenda view and event drag-n-drop functionality will be broken out int
 Download [fullcalendar-4.0.0-alpha2.zip](#) or use NPM/Webpack:
 
 ```
-npm install fullcalendar@alpha2
+npm install fullcalendar@alpha
 ```
 
 <br />
