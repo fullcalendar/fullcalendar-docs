@@ -1,0 +1,24 @@
+---
+title: basicDay and basicWeek views
+layout: demo-v4
+needs_json_feed: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      defaultView: 'basicWeek',
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'basicDay,basicWeek'
+      },
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

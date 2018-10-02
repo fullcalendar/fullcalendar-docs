@@ -27,9 +27,12 @@ releases_dir: ../fullcalendar-releases # in a sibling directory
 # ordered by how they should appear in UI
 available_versions:
 
+  - id: v4
+    collection: docs-v4
+    is_pre: true
+
   - id: v3
     collection: docs-v3
-    index_link: /docs
     is_latest: true
 
   - id: v2
@@ -37,10 +40,13 @@ available_versions:
 
   - id: v1
     collection: docs-v1
-    index_link: /docs/v1
 
 # output:true says a page should be generated for each document
 collections:
+
+  docs-v4:
+    output: true
+    permalink: /docs/v4/:slug
 
   docs-v3:
     output: true

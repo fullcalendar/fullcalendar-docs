@@ -1,0 +1,19 @@
+---
+title: weekNumbersWithinDays activated
+layout: demo-v4
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      defaultView: 'month',
+      weekNumbers: true,
+      weekNumbersWithinDays: true
+    });
+
+    calendar.render();
+  });
+
+</script>

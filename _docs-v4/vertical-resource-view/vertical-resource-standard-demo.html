@@ -1,0 +1,23 @@
+---
+title: 1-day vertical resource view
+layout: demo-v3
+needs_scheduler: true
+needs_json_feed: true
+---
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'agendaDay',
+      groupByResource: true,
+      resources: [
+        { id: 'a', title: 'Room A' },
+        { id: 'b', title: 'Room B' }
+      ],
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=2'
+    });
+
+  });
+
+</script>

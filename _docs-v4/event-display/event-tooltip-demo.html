@@ -1,0 +1,196 @@
+---
+title: Event tooltip with eventRender
+description: Event tooltip with eventRender and Tooltip.js
+layout: demo-v4
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+<script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      defaultView: 'month',
+      defaultDate: '{{ ym }}-12',
+
+      eventRender: function(info) {
+        var tooltip = new Tooltip(info.el, {
+          title: info.event.extendedProps.description,
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body'
+        });
+      },
+
+      events: [
+        {
+          title: 'All Day Event',
+          description: 'description for All Day Event',
+          start: '{{ ym }}-01'
+        },
+        {
+          title: 'Long Event',
+          description: 'description for Long Event',
+          start: '{{ ym }}-07',
+          end: '{{ ym }}-10'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          description: 'description for Repeating Event',
+          start: '{{ ym }}-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          description: 'description for Repeating Event',
+          start: '{{ ym }}-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          description: 'description for Conference',
+          start: '{{ ym }}-11',
+          end: '{{ ym }}-13'
+        },
+        {
+          title: 'Meeting',
+          description: 'description for Meeting',
+          start: '{{ ym }}-12T10:30:00',
+          end: '{{ ym }}-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          description: 'description for Lunch',
+          start: '{{ ym }}-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          description: 'description for Meeting',
+          start: '{{ ym }}-12T14:30:00'
+        },
+        {
+          title: 'Birthday Party',
+          description: 'description for Birthday Party',
+          start: '{{ ym }}-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          description: 'description for Click for Google',
+          url: 'http://google.com/',
+          start: '{{ ym }}-28'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+  /*
+  i wish this required CSS was better documented :(
+  https://github.com/FezVrasta/popper.js/issues/674
+  derived from this CSS on this page: https://popper.js.org/tooltip-examples.html
+  */
+
+  .popper,
+  .tooltip {
+    position: absolute;
+    z-index: 9999;
+    background: #FFC107;
+    color: black;
+    width: 150px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: center;
+  }
+  .style5 .tooltip {
+    background: #1E252B;
+    color: #FFFFFF;
+    max-width: 200px;
+    width: auto;
+    font-size: .8rem;
+    padding: .5em 1em;
+  }
+  .popper .popper__arrow,
+  .tooltip .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+  }
+
+  .tooltip .tooltip-arrow,
+  .popper .popper__arrow {
+    border-color: #FFC107;
+  }
+  .style5 .tooltip .tooltip-arrow {
+    border-color: #1E252B;
+  }
+  .popper[x-placement^="top"],
+  .tooltip[x-placement^="top"] {
+    margin-bottom: 5px;
+  }
+  .popper[x-placement^="top"] .popper__arrow,
+  .tooltip[x-placement^="top"] .tooltip-arrow {
+    border-width: 5px 5px 0 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    bottom: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .popper[x-placement^="bottom"],
+  .tooltip[x-placement^="bottom"] {
+    margin-top: 5px;
+  }
+  .tooltip[x-placement^="bottom"] .tooltip-arrow,
+  .popper[x-placement^="bottom"] .popper__arrow {
+    border-width: 0 5px 5px 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    top: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .tooltip[x-placement^="right"],
+  .popper[x-placement^="right"] {
+    margin-left: 5px;
+  }
+  .popper[x-placement^="right"] .popper__arrow,
+  .tooltip[x-placement^="right"] .tooltip-arrow {
+    border-width: 5px 5px 5px 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    left: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .popper[x-placement^="left"],
+  .tooltip[x-placement^="left"] {
+    margin-right: 5px;
+  }
+  .popper[x-placement^="left"] .popper__arrow,
+  .tooltip[x-placement^="left"] .tooltip-arrow {
+    border-width: 5px 0 5px 5px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    right: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+</style>

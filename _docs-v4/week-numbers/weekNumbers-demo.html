@@ -1,0 +1,18 @@
+---
+title: Week numbers activated
+layout: demo-v4
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      defaultView: 'month',
+      weekNumbers: true
+    });
+
+    calendar.render();
+  });
+
+</script>

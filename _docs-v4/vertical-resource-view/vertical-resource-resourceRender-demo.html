@@ -1,0 +1,36 @@
+---
+title: Using resourceRender with a popover in vertical-resource-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceRender
+layout: demo-v3
+needs_scheduler: true
+---
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'agendaDay',
+      resourceRender: function(resourceObj, $th) {
+        $th.append(
+          $('<strong>(?)</strong>').popover({
+            title: resourceObj.title,
+            content: 'test!',
+            trigger: 'hover',
+            placement: 'bottom',
+            container: 'body'
+          })
+        );
+      },
+      resources: [
+        { id: 'a', title: 'Auditorium A' },
+        { id: 'b', title: 'Auditorium B' },
+        { id: 'c', title: 'Auditorium C' }
+      ]
+    });
+
+  });
+
+</script>

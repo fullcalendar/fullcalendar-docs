@@ -1,0 +1,31 @@
+---
+title: Custom 4-day agenda view
+layout: demo-v4
+needs_json_feed: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      defaultView: 'agendaFourDay',
+      groupByResource: true,
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'agendaDay,agendaFourDay'
+      },
+      views: {
+        agendaFourDay: {
+          type: 'agenda',
+          duration: { days: 4 }
+        }
+      },
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

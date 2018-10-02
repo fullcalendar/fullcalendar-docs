@@ -1,0 +1,62 @@
+---
+title: Using external buttons with date API
+layout: demo-v4
+disable_base_styles: true
+---
+<style>
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 40px auto;
+  }
+
+</style>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      header: false // don't display the default header
+    });
+
+    calendar.render();
+
+    document.getElementById('prev').addEventListener('click', function() {
+      calendar.prev(); // call method
+    });
+
+    document.getElementById('next').addEventListener('click', function() {
+      calendar.next(); // call method
+    });
+
+  });
+
+</script>
+<body>
+
+  {% include demo-topbar.html %}
+
+  <p>
+    These buttons hook up to the <code>prev</code> and <code>next</code> methods.
+  </p>
+
+  <p>
+    <button id='prev'>prev</button>
+    <button id='next'>next</button>
+  </p>
+
+  <div id='calendar'></div>
+
+</body>

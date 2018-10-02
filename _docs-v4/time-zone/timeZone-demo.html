@@ -1,0 +1,119 @@
+---
+title: Dynamically switch between timezones
+layout: demo-v4
+disable_base_styles: true
+needs_json_feed: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var initialTimeZone = 'local';
+    var timeZoneSelectorEl = document.getElementById('time-zone-selector');
+    var loadingEl = document.getElementById('loading');
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: initialTimeZone,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listWeek'
+      },
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      selectable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json',
+
+      loading: function(bool) {
+        if (bool) {
+          loadingEl.style.display = 'inline'; // show
+        } else {
+          loadingEl.style.display = 'none'; // hide
+        }
+      },
+
+      eventTimeFormat: { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }
+    });
+
+    calendar.render();
+
+    // load the list of available timezones, build the <select> options
+    superagent.get('{{ site.data.demo_feed_baseurl }}/demo-timezones.json').end(function(err, res) {
+      var timeZones = res ? (res.body || JSON.parse(res.text)) : [];
+
+      timeZones.forEach(function(timeZone) {
+        var optionEl;
+
+        if (timeZone !== 'UTC') { // UTC is already in the list
+          optionEl = document.createElement('option');
+          optionEl.value = timeZone;
+          optionEl.innerText = timeZone;
+          timeZoneSelectorEl.appendChild(optionEl);
+        }
+      });
+    });
+
+    // when the timezone selector changes, dynamically change the calendar option
+    timeZoneSelectorEl.addEventListener('change', function() {
+      calendar.setOption('timeZone', this.value || false);
+    });
+
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #top {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 12px;
+  }
+
+  #loading {
+    display: none;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+  .tzo {
+    color: #000;
+  }
+
+</style>
+<body>
+
+  <div id='top'>
+
+    <div style='float:left'>
+      Timezone:
+      <select id='time-zone-selector'>
+        <option value='local'>local</option>
+        <option value='UTC'>UTC</option>
+      </select>
+    </div>
+
+    <div style='float:right'>
+      <span id='loading'>loading...</span>
+      <button data-codepen class='codepen-button'>Edit in CodePen</button>
+    </div>
+
+    <div style='clear:both'></div>
+  </div>
+
+  <div id='calendar'></div>
+
+</body>

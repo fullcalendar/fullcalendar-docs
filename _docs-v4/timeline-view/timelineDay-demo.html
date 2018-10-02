@@ -1,0 +1,54 @@
+---
+description: timelineDay
+layout: demo-v3
+needs_scheduler: true
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  $(function() {
+
+    $('#calendar').fullCalendar({
+      defaultView: 'timelineDay',
+      defaultDate: '{{ ym }}-07',
+      events: [
+        { id: '1', resourceId: 'b', start: '{{ ym }}-07T08:00:00', end: '{{ ym }}-07T13:00:00', title: 'event 1' },
+        { id: '2', resourceId: 'c', start: '{{ ym }}-07T11:00:00', end: '{{ ym }}-07T23:00:00', title: 'event 2' },
+        { id: '3', resourceId: 'd', start: '{{ ym }}-06', end: '{{ ym }}-08', title: 'event 3' },
+        { id: '4', resourceId: 'e', start: '{{ ym }}-07T09:00:00', end: '{{ ym }}-07T14:00:00', title: 'event 4' },
+        { id: '5', resourceId: 'f', start: '{{ ym }}-07T06:30:00', end: '{{ ym }}-07T08:30:00', title: 'event 5' }
+      ],
+      resourceLabelText: 'Rooms',
+      resources: [
+        { id: 'a', title: 'Auditorium A' },
+        { id: 'b', title: 'Auditorium B' },
+        { id: 'c', title: 'Auditorium C' },
+        { id: 'd', title: 'Auditorium D' },
+        { id: 'e', title: 'Auditorium E' },
+        { id: 'f', title: 'Auditorium F' },
+        { id: 'g', title: 'Auditorium G' },
+        { id: 'h', title: 'Auditorium H' },
+        { id: 'i', title: 'Auditorium I' },
+        { id: 'j', title: 'Auditorium J' },
+        { id: 'k', title: 'Auditorium K' },
+        { id: 'l', title: 'Auditorium L' },
+        { id: 'm', title: 'Auditorium M' },
+        { id: 'n', title: 'Auditorium N' },
+        { id: 'o', title: 'Auditorium O' },
+        { id: 'p', title: 'Auditorium P' },
+        { id: 'q', title: 'Auditorium Q' },
+        { id: 'r', title: 'Auditorium R' },
+        { id: 's', title: 'Auditorium S' },
+        { id: 't', title: 'Auditorium T' },
+        { id: 'u', title: 'Auditorium U' },
+        { id: 'v', title: 'Auditorium V' },
+        { id: 'w', title: 'Auditorium W' },
+        { id: 'x', title: 'Auditorium X' },
+        { id: 'y', title: 'Auditorium Y' },
+        { id: 'z', title: 'Auditorium Z' }
+      ]
+    });
+
+  });
+
+</script>

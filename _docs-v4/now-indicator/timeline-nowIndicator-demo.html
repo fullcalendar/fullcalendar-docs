@@ -1,0 +1,17 @@
+---
+title: Timeline-view now-indicator
+layout: demo-v3
+needs_scheduler: true
+---
+<script>
+
+  $(function() {
+    $('#calendar').fullCalendar({
+      defaultView: 'timeline',
+      nowIndicator: true,
+      now: '2018-02-13T09:25:00', // just for demo
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json'
+    });
+  });
+
+</script>

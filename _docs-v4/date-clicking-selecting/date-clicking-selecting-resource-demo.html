@@ -1,0 +1,36 @@
+---
+title: Clicking and selecting on resources
+description: Use your mouse or touch device to click/select dates/times on the resoureces
+layout: demo-v3
+needs_scheduler: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      selectable: true,
+      defaultView: 'timelineWeek',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'timelineWeek,agendaDay'
+      },
+      resources: [
+        { id: 'a', title: 'Room A' },
+        { id: 'b', title: 'Room B' },
+        { id: 'c', title: 'Room C' }
+      ],
+      dayClick: function(date, jsEvent, view, resource) {
+        alert('clicked ' + date.format() + ' on resource ' + resource.id);
+      },
+      select: function(startDate, endDate, jsEvent, view, resource) {
+        alert('selected ' + startDate.format() + ' to ' + endDate.format() + ' on resource ' + resource.id);
+      }
+    });
+
+    calendar.render();
+  });
+
+</script>
