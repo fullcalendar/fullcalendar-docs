@@ -52,7 +52,7 @@ Version 4.0.0-alpha.2 is now available. When the 4.0.0 is officially released, i
 
 First off, the [Scheduler plugin](/scheduler) has not been made compatible with v4.0.0-alpha.2 yet. It is still stuck on the first alpha release. Thus, you can't use resources, timeline view, or vertical resource view just yet with this latest release. Getting this working is our top priority.
 
-Also, you might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-part libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.2, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.
+Also, you might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-party libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.2, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.
 
 Also, the agenda view and event drag-n-drop functionality will be broken out into their own plugins to further reduce bundle size if you don't need those features. All of these plugins will be passed to the `Calendar` constructor instead of being imported solely for side effects.
 

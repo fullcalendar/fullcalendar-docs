@@ -21,9 +21,9 @@ Includes a **basic stylesheet**, the **Google Calendar extension**, and the nece
 [Changelog + All Releases &raquo;]({{ site.fullcalendar_repo }}/releases)
 
 
-## V4 Beta
+## V4 Alpha Release
 
-Want to try the v4 beta, which doesn't rely on jQuery or Moment anymore?
+Want to try the v4 alpha release, which doesn't rely on jQuery or Moment anymore?
 
 [More information &raquo;](https://fullcalendar.io/docs/v4/release-notes)
 
