@@ -163,7 +163,7 @@ Allows alternate rendering of the event, like background events. Can be empty, `
 <tr>
 <th>constraint</th>
 <td markdown='1'>
-a **groupId** belonging to other events, `"businessHours"`, or an object. Overrides the master [eventConstraint](eventConstraint) option for this single event.
+A **groupId** belonging to other events, `"businessHours"`, or an object. Overrides the master [eventConstraint](eventConstraint) option for this single event.
 </td>
 </tr>
 
