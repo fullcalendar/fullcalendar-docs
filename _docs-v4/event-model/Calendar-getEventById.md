@@ -5,7 +5,7 @@ title: Calendar::getEventById
 Returns a single event with the matching `id`.
 
 <div class='spec' markdown='1'>
-calendar.getEvenyById( *id* )
+calendar.getEventById( *id* )
 </div>
 
 `id` must be a string or a number
