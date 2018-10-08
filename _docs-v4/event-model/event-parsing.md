@@ -2,7 +2,7 @@
 title: Event Parsing
 ---
 
-When you give your calendar event data, whether it's through [an array](events-array), [a json feed](events-json-feed), or the [addEvent method](Calendar-addEvent), you specify the event as a plan JavaScript object with properties. This object then gets "parsed" into a proper [Event Object](event-object) that is then exposed in other parts of the API, like the [eventRender](eventRender) method.
+When you give your calendar event data, whether it's through [an array](events-array), [a json feed](events-json-feed), or the [addEvent method](Calendar-addEvent), you specify the event as a plain JavaScript object with properties. This object then gets "parsed" into a proper [Event Object](event-object) that is then exposed in other parts of the API, like the [eventRender](eventRender) method.
 
 This article describes all the properties you may supply in your plain, pre-parsed object. To demonstrate the simplest case:
 
