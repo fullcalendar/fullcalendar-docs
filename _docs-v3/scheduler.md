@@ -38,9 +38,9 @@ Use NPM to install FullCalendar:
 npm install jquery fullcalendar fullcalendar-scheduler
 ```
 
-Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/scheduler-webpack-example)
+Install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/scheduler-webpack-example)
 
-Then, write a module that imports both jQuery, FullCalendar, and Scheduler:
+Write a module that imports both jQuery, FullCalendar, and Scheduler:
 
 ```js
 import $ from 'jquery';
@@ -48,7 +48,7 @@ import 'fullcalendar';
 import 'fullcalendar-scheduler';
 ```
 
-You must also somehow include FullCalendar's `fullcalendar.css` and Scheduler's `scheduler.css`, either manually with a `<link>` tag or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).
+Include FullCalendar's `fullcalendar.css` and Scheduler's `scheduler.css` either manually with a `<link>` tag, or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).
 
 
 ## Initializing a View
