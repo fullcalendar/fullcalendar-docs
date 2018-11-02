@@ -20,14 +20,14 @@ Here is an example showing how to use an event function to fetch events from a h
 
 ```js
 $('#calendar').fullCalendar({
-  events: function(start, end, timezone, callback) {
+  events: function(range, successCallback, failureCallback) {
     $.ajax({
       url: 'myxmlfeed.php',
       dataType: 'xml',
       data: {
         // our hypothetical feed requires UNIX timestamps
-        start: start.unix(),
-        end: end.unix()
+        start: range.startStr,
+        end: range.endStr
       },
       success: function(doc) {
         var events = [];
@@ -37,7 +37,7 @@ $('#calendar').fullCalendar({
             start: $(this).attr('start') // will be parsed
           });
         });
-        callback(events);
+        successCallback(events);
       }
     });
   }
