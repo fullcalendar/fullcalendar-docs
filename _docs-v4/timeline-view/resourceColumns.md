@@ -76,15 +76,20 @@ resourceColumns: [
     labelText: 'My Column',
 
     text: function(resource) {
-      var message = resource.message;
+      var extendedProps = resource.extendedProps;
+      var message = extendedProps.message;
+
       if (resource.isUrgent) {
         message += '!!!';
       }
+
       return message;
     },
 
-    render: function(resource, el) { // TODO
-      if (resource.isUrgent) {
+    render: function(resource, el) {
+      var extendedProps = resource.extendedProps;
+
+      if (extendedProps.isUrgent) {
         el.style.backgroundColor = 'red';
       }
     }

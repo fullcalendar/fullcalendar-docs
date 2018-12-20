@@ -29,6 +29,7 @@ children:
       - Event-formatRange
       - Event-remove
 related:
+  - Event-getResources
   - resources-and-events
 demos:
   - Calendar-addEvent-demo

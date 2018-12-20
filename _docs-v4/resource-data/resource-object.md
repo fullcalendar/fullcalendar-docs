@@ -120,5 +120,5 @@ resources: [
 
 The `parentId` and `children` properties will only be available when you are initially specifying a resource as a raw object. After the resource has been parsed and is emitted in other parts of the API like [getResourceById](getResourceById), you must use the following methods to retrieve the parent/children of that resource:
 
-- [getParent](Resource::getParent)
-- [getChildren](Resource::getChildren)
+- [getParent](Resource-getParent)
+- [getChildren](Resource-getChildren)

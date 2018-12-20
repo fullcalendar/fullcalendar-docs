@@ -22,7 +22,6 @@ This option affects many things such as:
 You will need to load the locale JavaScript data file in order to use it.
 These files are included with the FullCalendar download in the `locales/` directory.
 They must be loaded via a `<script>` tag after the main FullCalendar library is loaded.
-TODO
 
 ```html
 <script src='fullcalendar/fullcalendar.js'></script>

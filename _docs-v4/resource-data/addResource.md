@@ -6,7 +6,7 @@ type: method
 Allows programmatic rendering of a new resource on the calendar after the initial set of resources has already been displayed.
 
 <div class='spec' markdown='1'>
-.addResource( resource, scroll )
+.addResource( resource, [ scrollTo ] )
 </div>
 
 The `resource` argument should be an object with raw [Resource](resource-object) properties. Example:
@@ -26,7 +26,7 @@ If you would like the new resource to be a child of an existing resource, make s
 
 You may also specify an existing parsed Resource if it has previouisly been removed.
 
-The `scroll` argument will scrol the current view to the newly added resource. It is `true` by default. To disable this behavior, specify `false`.
+The `scrollTo` argument will scroll the current view to the newly added resource. It is optional and `true` by default. To disable this behavior, specify `false`.
 
 
 [View a demo](addResource-demo) that utilizes addResource.

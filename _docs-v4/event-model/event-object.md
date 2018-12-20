@@ -169,13 +169,6 @@ A reference to the [Event Source](event-source-object) this event came from. If 
 </td>
 </tr>
 
-<tr>
-<th>resources</th>
-<td markdown='1'>
-TODO
-</td>
-</tr>
-
 </table>
 
 All properties are read-only. If you want to modify them, use the various methods of the Event object, such as [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setDates](Event-setDates), etc.

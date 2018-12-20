@@ -42,7 +42,7 @@ Then, write a module that imports both FullCalendar and Scheduler:
 
 ```js
 import { Calendar } from 'fullcalendar';
-import 'fullcalendar-scheduler'; // TODO
+import 'fullcalendar-scheduler';
 ```
 
 You must also somehow include FullCalendar's `fullcalendar.css` and Scheduler's `scheduler.css`, either manually with a `<link>` tag or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).
