@@ -12,6 +12,7 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
       defaultView: 'month',
       height: 'parent',
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
