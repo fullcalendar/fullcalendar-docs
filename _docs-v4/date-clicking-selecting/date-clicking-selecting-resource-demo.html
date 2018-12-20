@@ -1,7 +1,7 @@
 ---
 title: Clicking and selecting on resources
 description: Use your mouse or touch device to click/select dates/times on the resoureces
-layout: demo-v3
+layout: demo-v4
 needs_scheduler: true
 ---
 <script>
@@ -22,11 +22,11 @@ needs_scheduler: true
         { id: 'b', title: 'Room B' },
         { id: 'c', title: 'Room C' }
       ],
-      dayClick: function(date, jsEvent, view, resource) {
-        alert('clicked ' + date.format() + ' on resource ' + resource.id);
+      dateClick: function(info) {
+        alert('clicked ' + info.dateStr + ' on resource ' + info.resource.id);
       },
-      select: function(startDate, endDate, jsEvent, view, resource) {
-        alert('selected ' + startDate.format() + ' to ' + endDate.format() + ' on resource ' + resource.id);
+      select: function(info) {
+        alert('selected ' + info.startStr + ' to ' + info.endStr + ' on resource ' + info.resource.id);
       }
     });
 

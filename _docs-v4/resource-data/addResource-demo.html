@@ -1,14 +1,15 @@
 ---
 title: Add resources dynamically with addResource
 description: Click the "+room" button to dynamically add a resource
-layout: demo-v3
+layout: demo-v4
 needs_scheduler: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       header: {
         left: 'promptResource today prev,next',
         center: 'title',
@@ -20,11 +21,9 @@ needs_scheduler: true
           click: function() {
             var title = prompt('Room name');
             if (title) {
-              $('#calendar').fullCalendar(
-                'addResource',
-                { title: title },
-                true // scroll to the new resource?
-              );
+              calendar.addResource({
+                title: title
+              });
             }
           }
         }
@@ -61,6 +60,7 @@ needs_scheduler: true
       ]
     });
 
+    calendar.render();
   });
 
 </script>

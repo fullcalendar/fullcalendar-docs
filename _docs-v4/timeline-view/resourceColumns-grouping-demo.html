@@ -1,13 +1,14 @@
 ---
 title: Timeline view with column grouping
-layout: demo-v3
+layout: demo-v4
 needs_scheduler: true
 ---
 <script>
 
-  $(function() { // document ready
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
       header: {
         left: 'today prev,next',
         center: 'title',
@@ -60,6 +61,7 @@ needs_scheduler: true
       ]
     });
 
+    calendar.render();
   });
 
 </script>

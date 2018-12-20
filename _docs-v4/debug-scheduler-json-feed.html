@@ -1,14 +1,16 @@
 ---
 description: json events with scheduler plugin
-layout: demo-v3
+layout: demo-v4
 needs_json_feed: true
 needs_scheduler: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
       defaultView: 'timelineDay',
       header: {
         left: 'prev,next',
@@ -45,6 +47,7 @@ needs_scheduler: true
       // defaultDate: 'XXXX-XX-XX'
     });
 
+    calendar.render();
   });
 
 </script>

@@ -1,14 +1,16 @@
 ---
 title: Custom-duration timeline views
-layout: demo-v3
+layout: demo-v4
 needs_scheduler: true
 needs_json_feed: true
 ---
 <script>
 
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    $('#calendar').fullCalendar({
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
       header: {
         left: 'today prev,next',
         center: 'title',
@@ -22,7 +24,8 @@ needs_json_feed: true
         },
         timelineTenDay: {
           type: 'timeline',
-          duration: { days: 10 }
+          duration: { days: 10 },
+          buttonText: '10 days'
         }
       },
       resourceLabelText: 'Rooms',
@@ -30,6 +33,7 @@ needs_json_feed: true
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources'
     });
 
+    calendar.render();
   });
 
 </script>
