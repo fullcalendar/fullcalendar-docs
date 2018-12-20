@@ -89,7 +89,7 @@ Sets the [timeZoneParam](timeZoneParam) option, but only for this source.
 </tr>
 
 <tr>
-<th>extraData</th>
+<th>extraParams</th>
 <td markdown='1'>
 Other GET/POST data you want to send to the server. Can be a plain object or a function that returns an object.
 </td>
@@ -98,7 +98,7 @@ Other GET/POST data you want to send to the server. Can be a plain object or a f
 </table>
 
 
-Here's an example of specifying `extraData`:
+Here's an example of specifying `extraParams`:
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -109,7 +109,7 @@ var calendar = new Calendar(calendarEl, {
     {
       url: '/myfeed.php',
       method: 'POST',
-      extraData: {
+      extraParams: {
         custom_param1: 'something',
         custom_param2: 'somethingelse'
       },
@@ -135,7 +135,7 @@ var calendar = new Calendar(calendarEl, {
   events: {
     url: '/myfeed.php',
     method: 'POST',
-    extraData: {
+    extraParams: {
       custom_param1: 'something',
       custom_param2: 'somethingelse'
     },
@@ -149,16 +149,16 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-## Dynamic `extraData` parameter
+## Dynamic `extraParams` parameter
 
-The `extraData` parameters, which sends information to your JSON script through either GET or POST, can also be specified as a function, in order to send dynamic values:
+The `extraParams` parameters, which sends information to your JSON script through either GET or POST, can also be specified as a function, in order to send dynamic values:
 
 ```js
 var calendar = new Calendar(calendarEl, {
 
   events: {
     url: '/myfeed.php',
-    extraData: function() { // a function that returns an object
+    extraParams: function() { // a function that returns an object
       return {
         dynamic_value: Math.random()
       };
@@ -180,10 +180,10 @@ var calendar = new Calendar(calendarEl, {
 
   events: {
     url: '/myfeed.php',
-    extraData: function() {
+    extraParams: function() {
       return {
         cachebuster: new Date().valueOf()
-      }
+      };
     }
   }
 

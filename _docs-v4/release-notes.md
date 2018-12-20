@@ -730,7 +730,7 @@ It is no longer possible to request events via JSONP. CORS will be used instead.
 The full range of [jQuery.ajax](http://api.jquery.com/jquery.ajax/) settings are **no longer accepted**. However, can use the following new settings:
 
 - `method` - something like `'GET'` (the default) or `'POST'`
-- `extraData` - will send GET/POST data to the server. the `data` property was previously used
+- `extraParams` - will send GET/POST data to the server. the `data` property was previously used
 - `success` - Will receive two arguments, the raw event array and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
 - `failure` - Receives one argument, an error object
 </td>
@@ -739,13 +739,13 @@ The full range of [jQuery.ajax](http://api.jquery.com/jquery.ajax/) settings are
 <tr>
 <th>cachebusting</th>
 <td markdown='1'>
-The `cache: false` property is no longer available. Instead, adjust your script's headers or use `extraData` to insert your own cachebuster:
+The `cache: false` property is no longer available. Instead, adjust your script's headers or use `extraParams` to insert your own cachebuster:
 
 ```js
 var calendar = new Calendar(calendarEl, {
   events: {
     url: '/myfeed.php',
-    extraData: function() {
+    extraParams: function() {
       return {
         cachebuster: new Date().valueOf()
       };

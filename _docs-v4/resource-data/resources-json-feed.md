@@ -34,7 +34,7 @@ In addition to `url`, here are other properties you can include:
 </tr>
 
 <tr>
-<th>extraData</th>
+<th>extraParams</th>
 <td markdown='1'>
 An object with other GET/POST parameters that will be included in the request.
 You can also provide a function that dynamically generates an object.
