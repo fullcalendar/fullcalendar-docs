@@ -2,7 +2,7 @@
 title: events (as a function)
 ---
 
-A custom function for programmatically generating [Event Objects](event-object).
+A custom function for programmatically generating [Events](event-parsing).
 
 <div class='spec' markdown='1'>
 function( *fetchInfo*, *successCallback*, *failureCallback* ) { }

@@ -8,4 +8,4 @@ Causes this event source to fetch its event data again.
 eventSource.refetch()
 </div>
 
-Must be called on an Event Source instance. See [getEventSources](Calendar-getEventSources) and [getEventSourceId](Calendar-getEventSourceId).
+Must be called on an Event Source instance. See [getEventSources](Calendar-getEventSources) and [getEventSourceById](Calendar-getEventSourceById).

@@ -5,19 +5,47 @@ type: callback
 
 A hook for manipulating a resource's DOM.
 
-The first argument is the [Resource Object](resource-object).
+<div class='spec' markdown='1'>
+function( renderInfo )
+</div>
 
-The second argument is the `<td>` or `<th>` that holds the name of the resource (HTML element).
-The exact DOM node depends on the type of the current view.
+The `renderInfo` argument is an object with the following properties:
 
-The third argument holds an array of HTML elements that visually contain the resource's events. The exact DOM node depends on the type of the current view. Certain views might not support this argument, and will provide an empty array (TODO).
+<table>
+
+<tr>
+<th>resource</th>
+<td markdown='1'>
+The [Resource Object](resource-object) being rendered.
+</td>
+</tr>
+
+<tr>
+<th>el</th>
+<td markdown='1'>
+The DOM element that represents this resource. Most likely a `<td>` that wraps the resource's title.
+</td>
+</tr>
+
+<tr>
+<th>view</th>
+<td markdown='1'>
+The current [View](view-object).
+</td>
+</tr>
+
+</table>
 
 Example:
 
 ```js
-resourceRender: function(resourceObj, labelTds, bodyTds) {
-  labelTds.style.backgroundColor = 'blue';
-}
+var calendar = new Calendar(calendarEl, {
+
+  resourceRender: function(renderInfo) {
+    renderInfo.el.style.backgroundColor = 'blue';
+  }
+
+});
 ```
 
 See an example of resourceRender [with timeline view](timeline-resourceRender-demo) and [with vertical resource view](vertical-resource-resourceRender-demo).

@@ -11,18 +11,42 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-The value can also be an object with a `url` field and other options (TODO):
+The value can also be an object with a `url` field and other options:
 
 ```js
 var calendar = new Calendar(calendarEl, {
   resources: {
     url: '/my-resource-script.php',
-    type: 'POST'
+    method: 'POST'
   }
 });
 ```
 
-The remote script must return a JSON array of [Resource Object](resource-object)s.
+In addition to `url`, here are other properties you can include:
+
+<table>
+
+<tr>
+<th>method</th>
+<td markdown='1'>
+`'GET'` (the default), `'POST'`, or any other HTTP request type.
+</td>
+</tr>
+
+<tr>
+<th>extraData</th>
+<td markdown='1'>
+An object with other GET/POST parameters that will be included in the request.
+You can also provide a function that dynamically generates an object.
+</td>
+</tr>
+
+</table>
+
+The remote script must return a JSON array of [Resource Objects](resource-object).
+
+
+## Fetching based on current date
 
 If [refetchResourcesOnNavigate](refetchResourcesOnNavigate) is set to `true`, the network request will be made with additional parameters: the start/end date of the newly visible window of time, as well as the calendar's timezone:
 

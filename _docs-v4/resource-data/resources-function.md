@@ -3,29 +3,92 @@ title: resources (as a function)
 excerpt_separator: <!--more-->
 ---
 
-Tells the calendar to fetch the resources list by executing a function.<!--more--> The function is given a `callback` argument that should be called with an array of [Resource Object](resource-object)s:
+A custom function for programmatically generating [Resources](resource-object).<!--more--> This allows for any sort of asynchronous means of obtaining the resource list.
+
+<div class='spec' markdown='1'>
+function( *fetchInfo*, *successCallback*, *failureCallback* ) { }
+</div>
+
+The function is given a `successCallback` argument that should be called with an array of [Resource Objects](resource-object):
 
 ```js
-resources: function(callback) {
+var calendar = new Calendar(calendarEl, {
 
-  somethingAsynchonous(function(resourceObjects) {
-    callback(resourceObjects);
-  });
-}
+  resources: function(fetchInfo, successCallback, failureCallback) {
+    somethingAsynchonous(function(resources) {
+      successCallback(resources);
+    });
+  }
+
+});
 ```
 
-This allows for any sort of asynchronous means of obtaining the resource list.
+If there is some sort of failure, for example, if an AJAX request should fail, then call the `failureCallback` instead. It accepts an argument with information about the failure.
 
-If [refetchResourcesOnNavigate](refetchResourcesOnNavigate) is set to `true`, the resources function will receive additional arguments. It will receive the start and end dates for the newly visible window of time as well as the calendar's timezone:
+Instead of calling `successCallback` and `failureCallback`, you may return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-like object instead.
+
+
+## Fetching based on current date
+
+If [refetchResourcesOnNavigate](refetchResourcesOnNavigate) is set to `true`, the resources function's `fetchInfo` argument will be populated with some useful arguments. It will receive the start and end dates for the newly visible window of time as well as the calendar's timezone:
 
 ```js
-refetchResourcesOnNavigate: true,
-resources: function(callback, start, end, timezone) {
+var calendar = new Calendar(calendarEl, {
 
-  somethingAsynchonous(start, end, timezone, function(resourceObjects) {
-    callback(resourceObjects);
-  });
-}
+  refetchResourcesOnNavigate: true,
+
+  resources: function(fetchInfo, successCallback, failureCallback) {
+    somethingAsynchonous({
+      start: fetchInfo.start,
+      end: fetchInfo.end,
+      timeZone: fetchInfo.timeZone
+    }, function(resources) {
+      successCallback(resources);
+    });
+  }
+
+});
 ```
 
-These arguments are similar to what the [events function](events-function) receives, though in a different order.
+Complete list of properties in `fetchInfo`:
+
+<table>
+
+<tr>
+<th>start</th>
+<td markdown='1'>
+A [Date](date-object) for the beginning of the range the calendar needs events for.
+</td>
+</tr>
+
+<tr>
+<th>end</th>
+<td markdown='1'>
+A [Date](date-object) for the end of the range the calendar needs events for.
+
+**It is an exclusive value.**
+</td>
+</tr>
+
+<tr>
+<th>startStr</th>
+<td markdown='1'>
+An ISO8601 string representation of the start date. Will have a time zone offset according to the calendar's [timeZone](timeZone) like `2018-09-01T12:30:00-05:00`.
+</td>
+</tr>
+
+<tr>
+<th>endStr</th>
+<td markdown='1'>
+Just like `startStr`, but for the `end` date.
+</td>
+</tr>
+
+<tr>
+<th>timeZone</th>
+<td markdown='1'>
+The exact value of the calendar's [timeZone](timeZone) setting.
+</td>
+</tr>
+
+</table>

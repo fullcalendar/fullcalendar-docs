@@ -323,7 +323,7 @@ New things:
 <tr>
 <th><a href='timeZoneImpl'>timeZoneImpl</a><br />(time zone implementation)</th>
 <td markdown='1'>
-Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
+Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#fullcalendar-moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
 </td>
 </tr>
 

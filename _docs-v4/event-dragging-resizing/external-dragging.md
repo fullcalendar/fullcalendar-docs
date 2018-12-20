@@ -57,7 +57,7 @@ new Draggable(draggableEl, {
 });
 ```
 
-You can also specify [eventData](eventData) as a function that returns an object. This function receives the element to be dragged.
+You can also specify `eventData` as a function that returns an object. This function receives the element to be dragged.
 
 ```js
 new Draggable(containerEl, {

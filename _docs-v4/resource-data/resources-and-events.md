@@ -3,7 +3,7 @@ title: Associating Events with Resources
 description: How to specify which resources your events are assigned to.
 ---
 
-An [Event Object](event-object) becomes associated with a resource when its `resourceId` property matches one of the [Resource Object](resource-object)'s `id` fields:
+An [Event](event-parsing) becomes associated with a resource when its `resourceId` property matches one of the [Resource Object](resource-object)'s `id` fields:
 
 ```js
 var calendar = new Calendar(calendarEl, {

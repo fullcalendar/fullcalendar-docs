@@ -143,6 +143,25 @@ A single string like `'myclass'`, a space-separated string like `'myclass1 mycla
 <th>resourceEditable</th>
 <td markdown='1'>
 `true` or `false`. Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
+Requires the [Scheduler Plugin](scheduler).
+</td>
+</tr>
+
+<tr>
+<th>resourceId</th>
+<td markdown='1'>
+A string ID of a [Resource](resource-object).
+See [Associating Events with Resources](resources-and-events).
+Requires the [Scheduler Plugin](scheduler).
+</td>
+</tr>
+
+<tr>
+<th>resourceIds</th>
+<td markdown='1'>
+An array of string IDs of [Resources](resource-object).
+See [Associating Events with Resources](resources-and-events).
+Requires the [Scheduler Plugin](scheduler).
 </td>
 </tr>
 

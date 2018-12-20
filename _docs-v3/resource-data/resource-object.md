@@ -3,7 +3,7 @@ title: Resource Object
 type: guide
 ---
 
-This is the data structure that is accepted and emitted for resources.
+This is the data structure that is accepted for resources.
 
 <table>
 <tr>
@@ -22,23 +22,23 @@ Events associated with this resources will have their backgrounds and borders co
 <tr>
 <th>eventBackgroundColor</th>
 <td>
-Like <code>eventColor</code> but only for the background color
+Like <code>eventBackgroundColor</code> but only for the background color
 </td>
 </tr>
 <tr>
 <th>eventBorderColor</th>
 <td>
-Like <code>eventColor</code> but only for the border color
+Like <code>eventBorderColor</code> but only for the border color
 </td>
 </tr>
 <tr>
 <th>eventTextColor</th>
 <td>
-Like <code>eventColor</code> but only for the text color
+Like <code>eventTextColor</code> but only for the text color
 </td>
 </tr>
 <tr>
-<th>eventClassName</th>
+<th>eventClassNames</th>
 <td>
 className(s) that will apply to events
 </td>

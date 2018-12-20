@@ -10,13 +10,17 @@ children:
   - refetchResourcesOnNavigate
   - title: Methods
     children:
+      - refetchResources
+      - getTopLevelResources
       - getResources
       - getResourceById
-      - getResourceEvents
-      - getEventResource
       - addResource
-      - removeResource
-      - refetchResources
+      - Resource-getParent
+      - Resource-getChildren
+      - Resource-getEvents
+      - Resource-remove
+      - Event-getResources
+
 related:
   - businessHours-per-resource
   - loading

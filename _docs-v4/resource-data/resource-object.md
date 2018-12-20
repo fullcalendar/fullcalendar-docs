@@ -22,23 +22,23 @@ Events associated with this resources will have their backgrounds and borders co
 <tr>
 <th>eventBackgroundColor</th>
 <td>
-Like <code>eventColor</code> but only for the background color
+Like <code>eventBackgroundColor</code> but only for the background color
 </td>
 </tr>
 <tr>
 <th>eventBorderColor</th>
 <td>
-Like <code>eventColor</code> but only for the border color
+Like <code>eventBorderColor</code> but only for the border color
 </td>
 </tr>
 <tr>
 <th>eventTextColor</th>
 <td>
-Like <code>eventColor</code> but only for the text color
+Like <code>eventTextColor</code> but only for the text color
 </td>
 </tr>
 <tr>
-<th>eventClassName</th>
+<th>eventClassNames</th>
 <td>
 className(s) that will apply to events
 </td>
@@ -59,12 +59,6 @@ See below
 </tr>
 <tr>
 <th>parentId</th>
-<td>
-See below
-</td>
-</tr>
-<tr>
-<th>parent</th>
 <td>
 See below
 </td>
@@ -122,10 +116,9 @@ resources: [
 ]
 ```
 
-## The `parent` and `children` properties
+## Retrieving the parent and children
 
-Regardless of which method is used to set the parent/child relationship, the resulting Resource Objects throughout the API will still get the `parent` and `children` properties assigned.
+The `parentId` and `children` properties will only be available when you are initially specifying a resource as a raw object. After the resource has been parsed and is emitted in other parts of the API like [getResourceById](getResourceById), you must use the following methods to retrieve the parent/children of that resource:
 
-`parent` is a reference to the parent Resource Object. It will be `null` if there is no parent.
-
-`children` is an array of child Resource Objects.
+- [getParent](Resource::getParent)
+- [getChildren](Resource::getChildren)
