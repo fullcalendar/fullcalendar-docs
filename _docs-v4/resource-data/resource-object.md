@@ -3,9 +3,10 @@ title: Resource Object
 type: guide
 ---
 
-This is the data structure that is accepted and emitted for resources.
+This is the data structure that is accepted for resources.
 
 <table>
+
 <tr>
 <th>id</th>
 <td>
@@ -13,36 +14,63 @@ Uniquely identifies this resource. <a href='event-object'>Event Objects</a> with
 Will be coerced into a string.
 </td>
 </tr>
+
 <tr>
 <th>eventColor</th>
 <td>
 Events associated with this resources will have their backgrounds and borders colored. Any CSS string color format can be specified, like <code>"#f00"</code> or <code>"rgb(255,0,0)"</code>. This value will take precedence over the global <a href='eventColor'>eventColor</a> option and the <a href='event-source-object'>Event Source Object</a> <code>color</code> option, but it will not take precedence over the <a href='event-object'>Event Object</a> <code>color</code> option.
 </td>
 </tr>
+
 <tr>
 <th>eventBackgroundColor</th>
 <td>
-Like <code>eventBackgroundColor</code> but only for the background color
+The <a href='eventBackgroundColor'>eventBackgroundColor</a> setting for associated events.
 </td>
 </tr>
+
 <tr>
 <th>eventBorderColor</th>
 <td>
-Like <code>eventBorderColor</code> but only for the border color
+The <a href='eventBorderColor'>eventBorderColor</a> setting for associated events.
 </td>
 </tr>
+
 <tr>
 <th>eventTextColor</th>
 <td>
-Like <code>eventTextColor</code> but only for the text color
+The <a href='eventTextColor'>eventTextColor</a> setting for associated events.
 </td>
 </tr>
+
 <tr>
 <th>eventClassNames</th>
 <td>
-className(s) that will apply to events
+className(s) that will apply to associated events.
 </td>
 </tr>
+
+<tr>
+<th>eventOverlap</th>
+<td>
+The <a href='eventOverlap'>eventOverlap</a> setting for associated events. Does not accept a function.
+</td>
+</tr>
+
+<tr>
+<th>eventConstraint</th>
+<td>
+The <a href='eventConstraint'>eventConstraint</a> setting for associated events.
+</td>
+</tr>
+
+<tr>
+<th>eventAllow</th>
+<td>
+The <a href='eventAllow'>eventAllow</a> setting for associated events.
+</td>
+</tr>
+
 <tr>
 <th>businessHours</th>
 <td>
@@ -51,18 +79,21 @@ that will only apply to this resource.
 <a href='businessHours-per-resource'>See example</a>.
 </td>
 </tr>
+
 <tr>
 <th>children</th>
 <td>
-See below
+Child resources. See below.
 </td>
 </tr>
+
 <tr>
 <th>parentId</th>
 <td>
-See below
+The parent resource. See below.
 </td>
 </tr>
+
 </table>
 
 For the color-related properties, even when an event is rendered on a non-resource view (views other than Timeline), these properties will still take effect.

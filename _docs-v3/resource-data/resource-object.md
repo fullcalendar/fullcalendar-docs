@@ -3,7 +3,7 @@ title: Resource Object
 type: guide
 ---
 
-This is the data structure that is accepted for resources.
+This is the data structure that is accepted and emitted for resources.
 
 <table>
 <tr>

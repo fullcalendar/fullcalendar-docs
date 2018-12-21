@@ -145,14 +145,6 @@ Sets every <a href='event-object'>Event Object's</a> <code>resourceEditable</cod
 </tr>
 <tr>
 <th>
-rendering
-</th>
-<td>
-Sets every <a href='event-object'>Event Object's</a> <code>rendering</code> for this source.
-</td>
-</tr>
-<tr>
-<th>
 overlap
 </th>
 <td>

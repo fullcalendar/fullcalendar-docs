@@ -80,6 +80,7 @@ npm install fullcalendar@alpha
 
 - [Core](#core)
 - [Date Library](#date-library)
+- [Time Zone](#time-zone)
 - [Locales](#locales)
 - [Event Model](#event-model)
 - [Event Source](#event-source)
@@ -98,7 +99,9 @@ npm install fullcalendar@alpha
 - [Event Popover](#event-popover)
 - [Business Hours](#business-hours)
 - [Toolbar](#toolbar)
+- [Month View](#month-view)
 - [List View](#list-view)
+- [Timeline View](#timeline-view)
 
 </div>
 </div>
@@ -201,9 +204,23 @@ calendar.setOption('optionName', 'optionValue');
 </tr>
 
 <tr>
+<th><del>getView method</del></th>
+<td markdown='1'>
+To get the current [View Object](view-object), access the Calendar's `view` property instead. The `getView()` method has been removed.
+</td>
+</tr>
+
+<tr>
 <th><a href='render'>render method</a></th>
 <td markdown='1'>
 When called after initialization, will rerender **everything**, not just merely adjust the calendar's size. For that, use [updateSize](updateSize). [Issue 2709](https://github.com/fullcalendar/fullcalendar/issues/2709)
+</td>
+</tr>
+
+<tr>
+<th><a href='loading'>loading method</a></th>
+<td markdown='1'>
+No longer receives a [view](view-object) as its second parameter.
 </td>
 </tr>
 
@@ -251,13 +268,6 @@ Moment JS has been removed as a dependency and thus there is no need to include 
 </tr>
 
 <tr>
-<th>Ambiguously-zoned Moments</th>
-<td markdown='1'>
-Will now be `Date` objects in UTC. [Issue 2981](https://github.com/fullcalendar/fullcalendar/issues/2981)
-</td>
-</tr>
-
-<tr>
 <th>Ambiguously-timed Moments</th>
 <td markdown='1'>
 Will now be `Date` objects with a time of `00:00:00`. Callbacks nearly always provide an `allDay` boolean in addition. [Issue 2981](https://github.com/fullcalendar/fullcalendar/issues/2981)
@@ -292,22 +302,6 @@ You can use the [moment](moment-plugins) or [luxon](luxon-plugin) plugins to con
 </tr>
 
 <tr>
-<th><del>timezone</del></th>
-<td markdown='1'>
-Renamed to [timeZone](timeZone) (to be more consistent with native naming conventions)
-</td>
-</tr>
-
-<tr>
-<th><a href='time-zone'>time zone handling</a></th>
-<td markdown='1'>
-The `timezone: false` technique is obsolete. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl](timeZoneImpl) of `'UTC-coercion'`, which is the default. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
-
-The current [timeZone](timeZone) will affect how you will interpret the [Date objects](date-object) emitted from the API. Whether you will use local methods like `getHours()` or UTC methods like `getUTCHours()`.
-</td>
-</tr>
-
-<tr>
 <th><a href='weekNumberCalculation'>weekNumberCalculation</a></th>
 <td markdown='1'>
 When specifying a function, the function will receive a single [Date object](date-object), not a Moment.
@@ -319,13 +313,6 @@ When specifying a function, the function will receive a single [Date object](dat
 New things:
 
 <table>
-
-<tr>
-<th><a href='timeZoneImpl'>timeZoneImpl</a><br />(time zone implementation)</th>
-<td markdown='1'>
-Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#fullcalendar-moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
-</td>
-</tr>
 
 <tr>
 <th><a href='defaultRangeSeparator'>defaultRangeSeparator</a></th>
@@ -359,6 +346,55 @@ Formats a date into an ISO8601 string. Outputs a UTC offset appropriate to the c
 <th><a href='Calendar-formatRange'>formatRange method</a></th>
 <td markdown='1'>
 Formats two dates, a start and an end, into a string. Inherits settings from the calendar it's called on.
+</td>
+</tr>
+
+</table>
+
+
+## Time Zone
+
+<table>
+
+<tr>
+<th><del>timezone</del> setting</th>
+<td markdown='1'>
+Renamed to [timeZone](timeZone) (to be more consistent with native naming conventions)
+</td>
+</tr>
+
+<tr>
+<th>Date objects</th>
+<td markdown='1'>
+The current [timeZone](timeZone) will affect how you will interpret the [Date objects](date-object) emitted from the API. Whether you will use local methods like `getHours()` or UTC methods like `getUTCHours()`.
+</td>
+</tr>
+
+<tr>
+<th>Ambiguously-zoned Moments</th>
+<td markdown='1'>
+Will now be `Date` objects in UTC. [Issue 2981](https://github.com/fullcalendar/fullcalendar/issues/2981)
+</td>
+</tr>
+
+<tr>
+<th>the default time zone</th>
+<td markdown='1'>
+**The default timezone is now `local`.** It used to be `false`, a technique that forced all dates into UTC, which has been removed...
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>a `false` time zone</th>
+<td markdown='1'>
+The `timezone: false` technique is no longer available. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl](timeZoneImpl) of `'UTC-coercion'`, which is the default. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
+</td>
+</tr>
+
+<tr>
+<th><a href='timeZoneImpl'>timeZoneImpl</a><br />(time zone implementation)</th>
+<td markdown='1'>
+Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#fullcalendar-moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
 </td>
 </tr>
 
@@ -418,6 +454,10 @@ Removed. Use a [date-formatting](date-formatting) plugin or function instead.
 </tr>
 
 </table>
+
+Enhancements:
+
+If you need a locale that does not have a matching `locales/*.js` file you may still set the `locale` setting. You will get partial support: most date-related strings within the calendar will correctly translate, but those in the buttons of the header/footer will not.
 
 
 ## Event Model
@@ -779,7 +819,7 @@ Same comments as `startParam`
 <tr>
 <th><del>timezoneParam</del></th>
 <td markdown='1'>
-Renamed to [timeZoneParam](timeZoneParam). Defaults to `timeZone` instead of `timezone`.
+Renamed to [timeZoneParam](timeZoneParam). Defaults to `"timeZone"` instead of `"timezone"`.
 
 **If your server-side scripts previously relied on a `timezone=` GET/POST parameter, change it to `timeZone` instead!**
 </td>
@@ -1176,6 +1216,10 @@ Removed. Use multiple [addEvent](Calendar-addEvent) calls instead. Group togethe
 
 </table>
 
+Visual changes:
+
+In agenda view, when an event is all-day, it would previously **only** render in the all-day area at the top. Now, it will render in both the all-day area **and** the time slots. [See this illustration](all-day-bg-event.png).
+
 
 ## Event Clicking & Hovering
 
@@ -1351,6 +1395,8 @@ You can tweak this CSS to get different opacity values for different scenarios.
 Can no longer specify a single string event ID, but rather a single string `groupId` that will match [Event objects](event-object).
 
 The recurring properties `dow`/`start`/`end` have been renamed to `daysOfWeek`/`startTime`/`endTime`.
+
+Can accept an *array* of objects. Useful if you want to specify multiple date ranges.
 </td>
 </tr>
 
@@ -1405,6 +1451,13 @@ You would previously specify a `data-event="1"` HTML attribute if you wanted to 
 </tr>
 
 <tr>
+<th markdown='1'><del>start</del> and <del>time</del> properties</th>
+<td markdown='1'>
+External events that are dropped on all-day areas can be given a default time. This was previously done with the `time`/`start` properties. The proprty has been rename to `startTime` to be more consistent with naming elsewhere in the API. See [External Event Dragging](external-dragging) for more info.
+</td>
+</tr>
+
+<tr>
 <th>event creation and<br><a href='eventReceive'>eventReceive callback</a></th>
 <td markdown='1'>
 Event creation upon drop and firing of the [eventReceive](eventReceive) callback will happen by default. To prevent this from happening, specify `{ create: false }` in your event data. [More information](external-dragging#other-draggable-settings).
@@ -1418,7 +1471,7 @@ The [eventDrop](eventDrop) callback previously received a single [Event object](
 <td markdown='1'>
 Instead of ordered arguments `( date, jsEvent, ui, resourceId )` it will receive a single object `{ draggedEl, date, resource, allDay, jsEvent, view }`. The `date` property is a [Date object](date-object) not a Moment. `allDay` is a boolean. `resource` is a [Resource object](resource-object) if applicable.
 
-If dropped on an all-day slot, the `date` property will always have a `00:00:00` time, regardless of the start-time in the event data, whereas previously the start-time would have been added.
+If dropped on an all-day slot, the `date` property will always have a `00:00:00` time, regardless of the `startTime` in the event data, whereas previously the `startTime` would have been added.
 </td>
 </tr>
 
@@ -1476,6 +1529,11 @@ Determines the separator text when formatting the date range in the toolbar titl
 </table>
 
 
+## Month View
+
+The `MonthView` class is no longer exposed. Internally, the functionality has been rolled into `BasicView`, which **is** exposed.
+
+
 ## List View
 
 The following settings related to [List View](list-view) have been affected:
@@ -1493,6 +1551,22 @@ Does not accept date-formatting string by default. Use a [date-formatting object
 <th><a href='listDayAltFormat'>listDayAltFormat</a></th>
 <td markdown='1'>
 Does not accept date-formatting string by default. Use a [date-formatting object](date-formatting).
+</td>
+</tr>
+
+</table>
+
+
+## Timeline View
+
+Breaking changes:
+
+<table>
+
+<tr>
+<th><a href='resourceColumns'>resourceColumns</a></th>
+<td markdown='1'>
+The `render` function's first argument is **always** a [Resource object](resource-object). Previously, it would vary depending on whether there was a `field` specified or not.
 </td>
 </tr>
 
