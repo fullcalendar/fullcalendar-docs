@@ -102,6 +102,9 @@ npm install fullcalendar@alpha
 - [Month View](#month-view)
 - [List View](#list-view)
 - [Timeline View](#timeline-view)
+- [Resource Fetching](#resource-fetching)
+- [Resource Model](#resource-model)
+- [Resource Rendering](#resource-rendering)
 
 </div>
 </div>
@@ -716,7 +719,7 @@ A function that gets called when fetching failed. Probably because [an AJAX requ
 
 ## Event Source Function
 
-An [event-fetching function](events-function) **previously** accept the following arguments:
+An [event-fetching function](events-function) **previously** accepted the following arguments:
 
 ```js
 function( startMoment, endMoment, timeZoneStr, callback )
@@ -728,7 +731,7 @@ function( startMoment, endMoment, timeZoneStr, callback )
 function( fetchInfo, successCallback, failureCallback )
 ```
 
-It must call `successCallback`, `failureCallback`, or return a Promise. The `fetchInfo` is an object that has a bunch of other properties. [See the full article](events-function). A stubbed example of how to use the new signature:
+It must call `successCallback`, `failureCallback`, or return a Promise. `fetchInfo` is an object that has a bunch of other properties. [See the full article](events-function). A stubbed example of how to use the new signature:
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -1567,6 +1570,184 @@ Breaking changes:
 <th><a href='resourceColumns'>resourceColumns</a></th>
 <td markdown='1'>
 The `render` function's first argument is **always** a [Resource object](resource-object). Previously, it would vary depending on whether there was a `field` specified or not.
+</td>
+</tr>
+
+</table>
+
+
+## Resource Fetching
+
+A [resource-fetching function](resources-function) **previously** accepted the following arguments:
+
+```js
+function( callback, [ startMoment, endMoment, timeZone ] )
+```
+
+**Now**, it acceps the following arguments:
+
+```js
+function( fetchInfo, successCallback, failureCallback )
+```
+
+It must call `successCallback`, `failureCallback`, or return a Promise. `fetchInfo` is an object that contains the date-related properties. [See the full article](resources-function).
+
+**Other resource-fetching changes:**
+
+The following `Calendar` triggers have been affected:
+
+<table>
+
+<tr>
+<th><del>resourcesSet</del></th>
+<td markdown='1'>
+Removed. Was never officially supported.
+</td>
+</tr>
+
+</table>
+
+
+## Resource Model
+
+Previously, resource objects would be specified as plain objects, and then when accessing those same events in other parts of the API, they would be slightly-massaged versions of the same plain objects. Now, you still specify plain objects, but when you retrieve them in other parts of the API, they are **instances of the Resource class** with methods for manipulation.
+
+The following properties are now accepted in the raw object:
+
+<table>
+
+<tr>
+<th>eventOverlap</th>
+<td>
+The <a href='eventOverlap'>eventOverlap</a> setting for associated events. Does not accept a function.
+</td>
+</tr>
+
+<tr>
+<th>eventConstraint</th>
+<td>
+The <a href='eventConstraint'>eventConstraint</a> setting for associated events.
+</td>
+</tr>
+
+<tr>
+<th>eventAllow</th>
+<td>
+The <a href='eventAllow'>eventAllow</a> setting for associated events.
+</td>
+</tr>
+
+</table>
+
+The resulting [Resource object](resource-object) is rather minimal, with the following properties/methods:
+
+- id
+- title
+- extendedProps
+- [getParent()](Resource-getParent)
+- [getChildren()](Resource-getChildren)
+- [getEvents()](Resource-getEvents)
+- [remove()](Resource-remove)
+
+The following properties in the [Resource object](resource-object) have been removed:
+
+<table>
+
+<tr>
+<th markdown='1'><del>parent</del></th>
+<td markdown='1'>
+Use [getParent](Resource-getParent) instead.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'><del>children</del></th>
+<td markdown='1'>
+Use [getChildren](Resource-getChildren) instead.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>*many others...*</th>
+<td markdown='1'>
+<del>eventColor</del>,
+<del>eventBackgroundColor</del>,
+<del>eventBorderColor</del>,
+<del>eventTextColor</del>,
+<del>eventClassNames</del>,
+<del>businessHours</del>
+are no longer available for reading (though they can still be specified upon resource parsing/creation).
+</td>
+</tr>
+
+</table>
+
+The following resource-related methods/properties in the `Calendar` object have been affected:
+
+<table>
+
+<tr>
+<th markdown='1'><del>eventResourceField</del></th>
+<td markdown='1'>
+Removed. Use [eventDataTransform](eventDataTransform) instead.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>[addResource](addResource)</th>
+<td markdown='1'>
+The `scrollTo` argument is now `true` by default.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>[getResources](getResources)</th>
+<td markdown='1'>
+Now retrieves *all* resources, including nested child resources, in one flat array.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>[getTopLevelResources](getTopLevelResources) (new)</th>
+<td markdown='1'>
+Retrieves only top-level resource (resources that don't have a specified parent).
+</td>
+</tr>
+
+<tr>
+<th markdown='1'><del>getResourceEvents</del></th>
+<td markdown='1'>
+Removed. Use the `Resource` [getEvents](Resource-getEvents) method instead.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'><del>removeResource</del></th>
+<td markdown='1'>
+Removed. Use the `Resource` [remove](Resource-remove) method instead.
+</td>
+</tr>
+
+</table>
+
+
+## Resource Rendering
+
+<table>
+
+<tr>
+<th markdown='1'>[resourceRender](resourceRender) trigger</th>
+<td markdown='1'>
+Used to accept ordered arguments `( resourceObj, labelTds, bodyTds )`. Now accepts a single `renderInfo` object. The `labelTds` elements are now present in the `renderInfo.el` property as a single `<td>` element. If multiple elements are available for a single resource, `resourceRender` will be fired multiple times.
+
+There is currently no way to retrieve the element(s) that were previously available in `bodyTds`.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>[rerenderResources](rerenderResources) method</th>
+<td markdown='1'>
+Previously rerendered all resources **AND** events. Now only renders the areas of the view where explicit resource data is displayed, such as the left cells in [Timeline View](timeline-view) and the top header in [Vertical Resource View](vertical-resource-view).
 </td>
 </tr>
 

@@ -5,6 +5,9 @@ children:
   - resourceOrder
   - filterResourcesWithEvents
   - resourceText
+  - title: Methods
+    children:
+      - rerenderResources
   - title: Callbacks
     children:
       - resourceRender

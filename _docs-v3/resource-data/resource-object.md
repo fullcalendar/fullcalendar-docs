@@ -14,6 +14,12 @@ Will be coerced into a string.
 </td>
 </tr>
 <tr>
+<th>title</th>
+<td>
+Text that will be displayed on the resource when it is rendered.
+</td>
+</tr>
+<tr>
 <th>eventColor</th>
 <td>
 Events associated with this resources will have their backgrounds and borders colored. Any CSS string color format can be specified, like <code>"#f00"</code> or <code>"rgb(255,0,0)"</code>. This value will take precedence over the global <a href='eventColor'>eventColor</a> option and the <a href='event-source-object'>Event Source Object</a> <code>color</code> option, but it will not take precedence over the <a href='event-object'>Event Object</a> <code>color</code> option.

@@ -25,6 +25,7 @@ children:
 related:
   - businessHours-per-resource
   - Event-getResources
+  - Resource-getEvents
   - loading
 demos:
   - addResource-demo
