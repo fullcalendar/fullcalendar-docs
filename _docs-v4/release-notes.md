@@ -22,7 +22,7 @@ layout: text
 <div class='sidenote-layout__main' id='summary' markdown='1'>
 ## Summary of Changes
 
-Version 4.0.0-alpha.2 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
+Version 4.0.0-alpha.3 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
 
 **Major breaking changes:**
 
@@ -50,9 +50,7 @@ Version 4.0.0-alpha.2 is now available. When the 4.0.0 is officially released, i
 
 **What's yet to be done?**
 
-First off, the [Scheduler plugin](/scheduler) has not been made compatible with v4.0.0-alpha.2 yet. It is still stuck on the first alpha release. Thus, you can't use resources, timeline view, or vertical resource view just yet with this latest release. Getting this working is our top priority.
-
-Also, you might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-party libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.2, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.
+You might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-party libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.3, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.
 
 Also, the agenda view and event drag-n-drop functionality will be broken out into their own plugins to further reduce bundle size if you don't need those features. All of these plugins will be passed to the `Calendar` constructor instead of being imported solely for side effects.
 
@@ -60,11 +58,18 @@ Also, the agenda view and event drag-n-drop functionality will be broken out int
 
 **Getting the code:**
 
-Download [fullcalendar-4.0.0-alpha.2.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-alpha.2/fullcalendar-4.0.0-alpha.2.zip) or use NPM/Webpack:
+Use NPM/Webpack:
 
 ```
 npm install fullcalendar@alpha
+npm install fullcalendar-scheduler@alpha
 ```
+
+Or download directly:
+
+- [fullcalendar-4.0.0-alpha.3.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-alpha.3/fullcalendar-4.0.0-alpha.3.zip)
+- [fullcalendar-scheduler-4.0.0-alpha.3.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-alpha.3/fullcalendar-scheduler-4.0.0-alpha.3.zip)
+
 
 <br />
 
