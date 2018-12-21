@@ -19,4 +19,4 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-The `id` property is the most important because it allows [associating events with resources](resources-and-events). See the [Resource Object](resource-object) spec for a full list of fields.
+The `id` property is the most important because it allows [associating events with resources](resources-and-events). See [Resource parsing](resource-parsing) spec for a full list of fields.

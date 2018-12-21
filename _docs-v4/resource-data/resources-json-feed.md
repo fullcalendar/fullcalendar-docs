@@ -43,7 +43,7 @@ You can also provide a function that dynamically generates an object.
 
 </table>
 
-The remote script must return a JSON array of [Resource Objects](resource-object).
+The remote script must return a JSON array of [raw Resource objects](resource-parsing).
 
 
 ## Fetching based on current date

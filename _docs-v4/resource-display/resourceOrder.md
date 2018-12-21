@@ -8,7 +8,7 @@ Determines the ordering of the resource list.
 String
 </div>
 
-Can be a single [Resource Object](resource-object) property name. The resources will be ordered ascendingly by the value of this property.
+Can be a single [Resource](resource-parsing) property name. The resources will be ordered ascendingly by the value of this property.
 
 If prefixed with a minus sign like `'-propertyName'`, the ordering will be descending.
 

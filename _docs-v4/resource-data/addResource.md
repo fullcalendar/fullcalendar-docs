@@ -9,7 +9,7 @@ Allows programmatic rendering of a new resource on the calendar after the initia
 .addResource( resource, [ scrollTo ] )
 </div>
 
-The `resource` argument should be an object with raw [Resource](resource-object) properties. Example:
+The `resource` argument should be an object with [raw Resource properties](resource-parsing) properties. Example:
 
 ```js
 var calendar = new Calendar(calendarEl, {

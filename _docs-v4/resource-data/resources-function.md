@@ -3,13 +3,13 @@ title: resources (as a function)
 excerpt_separator: <!--more-->
 ---
 
-A custom function for programmatically generating [Resources](resource-object).<!--more--> This allows for any sort of asynchronous means of obtaining the resource list.
+A custom function for programmatically generating [raw Resources objects](resource-parsing).<!--more--> This allows for any sort of asynchronous means of obtaining the resource list.
 
 <div class='spec' markdown='1'>
 function( *fetchInfo*, *successCallback*, *failureCallback* ) { }
 </div>
 
-The function is given a `successCallback` argument that should be called with an array of [Resource Objects](resource-object):
+The function is given a `successCallback` argument that should be called with an array of [raw Resource objects](resource-parsing):
 
 ```js
 var calendar = new Calendar(calendarEl, {

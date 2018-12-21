@@ -5,6 +5,7 @@ children:
   - resources-array
   - resources-json-feed
   - resources-function
+  - resource-parsing
   - resource-object
   - resources-and-events
   - refetchResourcesOnNavigate
@@ -23,6 +24,7 @@ children:
 
 related:
   - businessHours-per-resource
+  - Event-getResources
   - loading
 demos:
   - addResource-demo
