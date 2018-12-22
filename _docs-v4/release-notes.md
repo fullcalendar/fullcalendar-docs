@@ -85,7 +85,7 @@ Or download directly:
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs). Please include "v4" in the title.
 
-**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2018/10/release-v4-alpha2).
+**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2018/12/alpha-release-scheduler-support).
 
 </div>
 <div class='sidenote-layout__sidenote' id='toc' markdown='1'>
@@ -1689,7 +1689,7 @@ Use [getChildren](Resource-getChildren) instead.
 <del>eventTextColor</del>,
 <del>eventClassNames</del>,
 <del>businessHours</del>
-are no longer available for reading (though they can still be specified upon resource parsing/creation).
+are no longer available for reading (though they can still be specified upon resource parsing/creation). [Issue 482](https://github.com/fullcalendar/fullcalendar-scheduler/issues/482)
 </td>
 </tr>
 
@@ -1753,7 +1753,7 @@ Removed. Use the `Resource` [remove](Resource-remove) method instead.
 <td markdown='1'>
 Used to accept ordered arguments `( resourceObj, labelTds, bodyTds )`. Now accepts a single `renderInfo` object. The `labelTds` elements are now present in the `renderInfo.el` property as a single `<td>` element. If multiple elements are available for a single resource, `resourceRender` will be fired multiple times.
 
-There is currently no way to retrieve the element(s) that were previously available in `bodyTds`.
+There is currently no way to retrieve the element(s) that were previously available in `bodyTds`. [Issue 481](https://github.com/fullcalendar/fullcalendar-scheduler/issues/481)
 </td>
 </tr>
 
