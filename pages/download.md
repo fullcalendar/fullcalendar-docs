@@ -25,7 +25,7 @@ Includes a **basic stylesheet**, the **Google Calendar extension**, and the nece
 
 Want to try the v4 alpha release, which doesn't rely on jQuery or Moment anymore?
 
-[More information &raquo;](https://fullcalendar.io/docs/v4/release-notes)
+[More information &raquo;]({{ site.baseurl }}/docs/v4/release-notes)
 
 
 ## Package Managers
@@ -41,6 +41,7 @@ You can also install FullCalendar via [Bower](https://bower.io/):
 ```
 $ bower install fullcalendar
 ```
+
 
 ## CDNJS
 

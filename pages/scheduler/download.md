@@ -6,6 +6,7 @@ layout: scheduler-text
 
 {% assign latest_version = "1.9.4" %}
 
+
 # Free Trial
 
 Scheduler can be downloaded and evaluated for an unlimited amount of time, free of charge.
@@ -13,6 +14,7 @@ This evaluation version is licensed under a Creative Commons license that does n
 of source code modifications nor use in commercial production websites or products.
 
 [Read more about licensing &raquo;]({{ site.baseurl }}/scheduler/license)
+
 
 ## License Key
 
@@ -33,6 +35,7 @@ $('#calendar').fullCalendar({
 
 [View changelog and all releases &raquo;]({{ site.fullcalendar_scheduler_repo }}/releases)
 
+
 ## Package Managers
 
 You can install Scheduler via [NPM](https://www.npmjs.com/):
@@ -46,3 +49,10 @@ You can also install Scheduler via [Bower](https://bower.io/):
 ```
 $ bower install fullcalendar-scheduler
 ```
+
+
+## V4 Alpha Release
+
+Want to try the v4 alpha release, which doesn't rely on jQuery or Moment anymore?
+
+[More information &raquo;]({{ site.baseurl }}/docs/v4/release-notes)
