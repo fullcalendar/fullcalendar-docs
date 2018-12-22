@@ -54,6 +54,14 @@ You might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are lis
 
 Also, the agenda view and event drag-n-drop functionality will be broken out into their own plugins to further reduce bundle size if you don't need those features. All of these plugins will be passed to the `Calendar` constructor instead of being imported solely for side effects.
 
+There are also a few minor regressions that will be addressed before launch:
+[#479](https://github.com/fullcalendar/fullcalendar-scheduler/issues/479),
+[#480](https://github.com/fullcalendar/fullcalendar-scheduler/issues/480),
+[#481](https://github.com/fullcalendar/fullcalendar-scheduler/issues/481),
+[#482](https://github.com/fullcalendar/fullcalendar-scheduler/issues/482),
+[#4420](https://github.com/fullcalendar/fullcalendar/issues/4420),
+[#4421](https://github.com/fullcalendar/fullcalendar/issues/4421)
+
 <br />
 
 **Getting the code:**
