@@ -1067,6 +1067,8 @@ var calendar = new Calendar(calendarEl, {
 ```
 
 `info.date` is a [Date object](date-object), not a Moment.
+
+Also, this is now triggered when the user clicks on top of a background event. [Issue 2843](https://github.com/fullcalendar/fullcalendar/issues/2843)
 </td>
 </tr>
 
