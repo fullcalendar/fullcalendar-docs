@@ -21,7 +21,7 @@ An [Event Object](event-object) that holds information about the event (date, ti
 </tr>
 
 <tr>
-<th>prevEvent</th>
+<th>oldEvent</th>
 <td markdown='1'>
 An [Event Object](event-object) that holds information about the event **before** the drop.
 </td>
@@ -52,6 +52,24 @@ The native JavaScript event with low-level information such as click coordinates
 <th>view</th>
 <td markdown='1'>
 The current [View Object](view-object).
+</td>
+</tr>
+
+<tr>
+<th>oldResource</th>
+<td markdown='1'>
+If the resource has changed, this is the [Resource Object](resource-object) the event **came from**.
+If the resource has not changed, this will be undefined.
+For [Scheduler](scheduler) only.
+</td>
+</tr>
+
+<tr>
+<th>newResource</th>
+<td markdown='1'>
+If the resource has changed, this is the [Resource Object](resource-object) the event **went to**.
+If the resource has not changed, this will be undefined.
+For [Scheduler](scheduler) only.
 </td>
 </tr>
 
