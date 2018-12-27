@@ -1115,6 +1115,8 @@ A string that represents an event ID is no longer accepted. Instead, a string re
 
 </table>
 
+Also, a bug related to an unwanted unselect on touch devices has been fixed. [Issue 4062](https://github.com/fullcalendar/fullcalendar/issues/4062)
+
 
 ## Event Rendering
 
@@ -1126,6 +1128,8 @@ The following settings have been affected:
 <th><a href='nextDayThreshold'>nextDayThreshold</a></th>
 <td markdown='1'>
 Default has been changed to `00:00:00`. The previous default of `09:00:00` didn't make a lot of sense. [Issue 2902](https://github.com/fullcalendar/fullcalendar/issues/2902)
+
+Also, a bug with events that begin before the view's start date has been fixed. [Issue 3943](https://github.com/fullcalendar/fullcalendar/issues/3943)
 </td>
 </tr>
 
