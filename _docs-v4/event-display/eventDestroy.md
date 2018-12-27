@@ -28,6 +28,13 @@ The HTML element that is being destroyed.
 </tr>
 
 <tr>
+<th>isMirror</th>
+<td markdown='1'>
+`true` if the element being rendered is a "mirror" from a user drag, resize, or selection (see [selectMirror](selectMirror)). `false` otherwise.
+</td>
+</tr>
+
+<tr>
 <th>view</th>
 <td markdown='1'>
 The current [View Object](view-object).

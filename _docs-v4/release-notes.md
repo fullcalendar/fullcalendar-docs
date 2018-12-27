@@ -1370,7 +1370,7 @@ Whether the event can be resized from its starting edge. Defaults to `false`. [I
 <tr>
 <th><a href='eventDragMinDistance'>eventDragMinDistance</a> (new)</th>
 <td markdown='1'>
-How many pixels the user’s mouse/touch must move before an event drag activates.
+How many pixels the user’s mouse/touch must move before an event drag or resize activates.
 </td>
 </tr>
 
