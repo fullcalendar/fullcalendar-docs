@@ -29,7 +29,7 @@ It is important that you load jQuery and Moment's JS files *before* loading Full
 Use NPM to install FullCalendar:
 
 ```sh
-npm install jquery fullcalendar
+npm install jquery moment fullcalendar
 ```
 
 Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/webpack-example)

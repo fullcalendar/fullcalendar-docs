@@ -33,13 +33,13 @@ Want to try the v4 alpha release, which doesn't rely on jQuery or Moment anymore
 You can install FullCalendar via [NPM](https://www.npmjs.com/):
 
 ```
-$ npm install fullcalendar
+$ npm install jquery moment fullcalendar
 ```
 
 You can also install FullCalendar via [Bower](https://bower.io/):
 
 ```
-$ bower install fullcalendar
+$ bower install jquery moment fullcalendar
 ```
 
 
