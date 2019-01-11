@@ -4,7 +4,7 @@ title: Download
 layout: text
 ---
 
-{% assign latest_version = "3.9.0" %}
+{% assign latest_version = "3.10.0" %}
 
 <div class='sidenote-layout'>
 <div class='sidenote-layout__main' markdown='1'>
