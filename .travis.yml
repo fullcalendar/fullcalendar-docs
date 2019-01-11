@@ -4,9 +4,11 @@ sudo: false # route build to the container-based infrastructure for a faster bui
 
 language: ruby
 rvm:
-  - 2.2.1
+  - 2.5.3
 
 before_install:
+  - gem update --system # we need the newest bundler
+  - gem install bundler # :(
   - npm install
 
 cache:
