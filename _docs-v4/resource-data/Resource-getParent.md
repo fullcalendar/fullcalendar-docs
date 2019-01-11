@@ -3,7 +3,7 @@ title: Resource::getParent
 type: method
 ---
 
-Returns the parent [Resource](Resource-Object) of a child resource.
+Returns the parent [Resource](resource-object) of a child resource.
 
 <div class='spec' markdown='1'>
 resource.getParent()
