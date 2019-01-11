@@ -119,6 +119,11 @@ You can specify multiple Google Calendars by using the `eventSources` option:
 </script>
 ```
 
+## Extended Properties
+
+Google Calendar's API allows you to specify [Extended Properties](https://developers.google.com/calendar/extended-properties) for your events. The extended properties will be available in the `extendedProps` hash of each [Event Object](event-object).
+
+
 ## Advanced
 
 If you need different API keys per calendar, you can set a `googleCalendarApiKey` option on each individual [Event Source](event-source-object) when written in extended form.

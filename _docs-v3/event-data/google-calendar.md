@@ -116,8 +116,16 @@ $(function() {
 </script>
 ```
 
-## Advanced
+## Advanced: Extended Properties
+
+Google Calendar's API allows you to specify [Extended Properties](https://developers.google.com/calendar/extended-properties) for your events. The extended properties will be available as the `extendedProperties` hash that is attached to each [Event Object](event-object).
+
+
+## Advanced: API Keys
 
 If you need different API keys per calendar, you can set a `googleCalendarApiKey` option on each individual [Event Source](event-source-object) when written in extended form.
+
+
+## Advanced: Error Handling
 
 If you need to detect errors with the Google API, there's no way to get at this with jQuery's AJAX error handler. You'll need to use the FullCalendar's `googleCalendarError` callback, which is available as a normal option, or a per-[Event Source](event-source-object) option.
