@@ -26,6 +26,12 @@ Then, install [Jekyll](https://jekyllrb.com/) (a static-site generator) on your 
 gem install jekyll
 ```
 
+You also need to have the [Rubygem bundler](https://bundler.io/) installed:
+
+```sh
+gem install bundler
+```
+
 Then, `cd` into the `fullcalendar-site-static` directory you cloned.
 
 Then, run the following:
