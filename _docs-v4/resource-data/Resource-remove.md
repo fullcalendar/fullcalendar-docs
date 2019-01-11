@@ -23,4 +23,3 @@ var resourceA = calendar.getResourceById('a');
 
 resourceA.remove();
 ```
-
