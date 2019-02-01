@@ -1,53 +1,14 @@
 ---
-title: Scheduler Plugin
+title: Scheduler
 layout: docs-sublanding
 demos:
   - timeline-standard-view-demo
   - vertical-resource-standard-demo
 ---
 
-The Scheduler plugin provides you with two extra calendar views to use, both of which are good at displaying *resources* (things that events can be assigned to, like rooms):
+FullCalendar "Scheduler" is the names for a collection of [premium plugin]({{ site.baseurl }}/scheduler) plugins. There are currently two distinct plugins that provide new views, both of which are good at displaying *resources* (things that events can be assigned to, like rooms):
 
 - [Timeline View](timeline-view) - good at displaying a large number of resources
 - [Vertical Resource View](vertical-resource-view) - good at displaying a fewer number of resources
 
-Scheduler is a [premium plugin]({{ site.baseurl }}/scheduler) that has different licensing than the core FullCalendar library. [More information &raquo;]({{ site.baseurl }}/scheduler/license)
-
-
-## Installation with Script Tags
-
-In the `<head>` of your page, include the necessary FullCalendar *and* Scheduler files:
-
-```html
-<link href='fullcalendar.css' rel='stylesheet' />
-<link href='scheduler.css' rel='stylesheet' />
-<script src='fullcalendar.js'></script>
-<script src='scheduler.js'></script>
-```
-
-The ordering of the `<script>` tags is important.
-
-
-## Installation as an NPM Module (Webpack / Browserify)
-
-Use NPM to install FullCalendar:
-
-```sh
-npm install fullcalendar fullcalendar-scheduler
-```
-
-Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/scheduler-webpack-example)
-
-Then, write a module that imports both FullCalendar and Scheduler:
-
-```js
-import { Calendar } from 'fullcalendar';
-import 'fullcalendar-scheduler';
-```
-
-You must also somehow include FullCalendar's `fullcalendar.css` and Scheduler's `scheduler.css`, either manually with a `<link>` tag or via Webpack's [css-loader](https://github.com/webpack-contrib/css-loader).
-
-
-## Initializing a View
-
-To learn how to initialize a calendar with a resource view, see the documentation for [Timeline View](timeline-view) and [Vertical Resource View](vertical-resource-view).
+Scheduler is a premium plugin that has different licensing than the core FullCalendar library. [More information &raquo;]({{ site.baseurl }}/scheduler/license)
