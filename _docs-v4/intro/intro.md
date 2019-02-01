@@ -1,8 +1,8 @@
 ---
 title: Introduction
 children:
-  - installation
-  - initialization
+  - initialize-globals
+  - initialize-es6
   - handlers
   - methods
   - title: More Advanced

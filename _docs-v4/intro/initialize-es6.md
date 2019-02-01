@@ -1,0 +1,68 @@
+---
+title: Initialize with ES6
+---
+
+For non-trivial projects, it is recommended to use an ES6-compatible build system like [Webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org) along with a package manager like [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com). A setup like this will ensure all necessary files are compiled together into a unified bundle. You won't need to worry about manually including `<script>` tags on the page.
+
+You'll first need to install FullCalendar's `core` package as well as any plugins. We'll demonstrate the [DayGrid plugin](daygrid-plugin) with NPM:
+
+```
+npm install --save @fullcalendar/core @fullcalendar/daygrid
+```
+
+Then, you'll need to set up your build system. Setting up a system like Webpack can be a little complicated. Please read some tutorials on the internet or browse the [Webpack Example Repo](https://github.com/fullcalendar/webpack-example/tree/v4).
+
+In your entrypoint file you will want to write something like this:
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import DayGridPlugin from '@fullcalendar/daygrid';
+
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new Calendar(calendarEl, {
+    plugins: [ DayGridPlugin ]
+  });
+
+  calendar.render();
+});
+```
+
+## Plugins
+
+FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and prevent it from being compiled into your bundle, saving space.
+
+For a full list of plugins, visit the [Plugin Index &raquo;](plugin-index)
+
+When using an ES6 build system, you must pass in the references exported from each plugin module into the `plugins` array:
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import DayGridPlugin from '@fullcalendar/daygrid';
+import TimeGridPlugin from '@fullcalendar/timegrid';
+import ListPlugin from '@fullcalendar/list';
+
+...
+var calendar = new Calendar(calendarEl, {
+  plugins: [ DayGridPlugin, TimeGridPlugin, ListPlugin ]
+});
+...
+```
+
+Specifying anything else (like an array of strings) will not work!
+
+## CSS
+
+FullCalendar's core module, in addition to its plugins, provide stylesheets that must be included on your page. Currently, you must include these stylesheets manually like this:
+
+```html
+<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/timegrid/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/list/main.css' rel='stylesheet' />
+```
+
+You may want to concatenate them together before serving them to your users. Or, you may way to include all of them from a CSS preprocessor like [Sass](https://sass-lang.com/), which will have the same effect.
+
+We know this technique is not as elegant as you'd might like. [Please chime into the Github Issue to have your opinion heard &raquo;](#)

@@ -1,20 +1,27 @@
 ---
-description: initialization of standard calendar
+description: initialization of calendar with browser globals
 layout: demo-v4
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
+<link href='{{ site.data.fullcalendar_v4_latest }}/core/main.min.css' rel='stylesheet' />
+<link href='{{ site.data.fullcalendar_v4_latest }}/daygrid/main.min.css' rel='stylesheet' />
+<link href='{{ site.data.fullcalendar_v4_latest }}/timegrid/main.min.css' rel='stylesheet' />
+<script src='{{ site.data.fullcalendar_v4_latest }}/core/main.min.js'></script>
+<script src='{{ site.data.fullcalendar_v4_latest }}/daygrid/main.min.js'></script>
+<script src='{{ site.data.fullcalendar_v4_latest }}/timegrid/main.min.js'></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'daygrid', 'timegrid' ],
       defaultView: 'month',
       defaultDate: '{{ ym }}-07',
       header: {
         left: 'prev,next',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay'
+        right: 'month,week,day'
       },
       events: [
         {

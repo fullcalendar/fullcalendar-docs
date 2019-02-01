@@ -59,4 +59,4 @@ var calendar = new Calendar(calendarEl, {
 
 When creating a custom-duration view, reasonable defaults for the slot-related settings will automatically be chosen.
 
-The following options are specific to Timeline view. However, there are numerious other options throughout the docs that affect the display of Timeline view, such as the [locale-related options](localization), [date/time display options](date-display), and [resource display options](resource-display).
+The following options are specific to Timeline view. However, there are numerous other options throughout the docs that affect the display of Timeline view, such as the [locale-related options](localization), [date/time display options](date-display), and [resource display options](resource-display).

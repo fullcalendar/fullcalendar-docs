@@ -32,4 +32,4 @@ var calendar = new Calendar(calendarEl, {
 
 If you would like resource column functionality in a **multi-day view** like `agendaWeek`, which is turned **off** by default, you'll need to activate either the [groupByResource](groupByResource) or [groupByDateAndResource](groupByDateAndResource) flags.
 
-The following options are specific to Vertical Resource view. However, there are numerious other options throughout the docs that affect the display of Vertical Resource view, such as the [locale-related options](localization), [date/time display options](date-display), and [resource display options](resource-display).
+The following options are specific to Vertical Resource view. However, there are numerous other options throughout the docs that affect the display of Vertical Resource view, such as the [locale-related options](localization), [date/time display options](date-display), and [resource display options](resource-display).

@@ -6,37 +6,5 @@
   </title>
 {% endif %}
 
-{% assign latest_fullcalendar_baseurl = site.data.releases.fullcalendar[0].baseurl | escape %}
-{% assign latest_scheduler_baseurl = site.data.releases.fullcalendar-scheduler[0].baseurl | escape %}
-{% comment %}
-  Will need a more sophisticated solution when new major versions are launched.
-  Or we should just hardcode the path.
-{% endcomment %}
-
 <link href='{{ site.baseurl }}/assets/demo-topbar.css' rel='stylesheet' />
-
-<link href='{{ latest_fullcalendar_baseurl }}/fullcalendar.min.css' rel='stylesheet' />
-
-{% if page.needs_scheduler %}
-  <link href='{{ latest_scheduler_baseurl }}/scheduler.min.css' rel='stylesheet' />
-{% endif %}
-
-{% if page.needs_json_feed or page.needs_google_calendar %}
-  <script src='{{ latest_fullcalendar_baseurl }}/demos/js/superagent.js'></script>
-{% endif %}
-
-<script src='{{ latest_fullcalendar_baseurl }}/fullcalendar.min.js'></script>
-
-{% if page.needs_locales %}
-  <script src='{{ latest_fullcalendar_baseurl }}/locales-all.js'></script>
-{% endif %}
-
-{% if page.needs_google_calendar %}
-  <script src='{{ latest_fullcalendar_baseurl }}/plugins/gcal.min.js'></script>
-{% endif %}
-
-{% if page.needs_scheduler %}
-  <script src='{{ latest_scheduler_baseurl }}/scheduler.min.js'></script>
-{% endif %}
-
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
