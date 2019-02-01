@@ -34,57 +34,59 @@ FullCalendar can display events from a public [Google Calendar](http://calendar.
 3. A menu will appear. Click "Calendar settings".
 4. In the "Calendar Address" section of the screen, you will see your Calendar ID. It will look something like "abcd1234@group.calendar.google.com".
 
-## Dependencies
 
-Next, you must have all the required js/css files. This includes the standard fullcalendar.js and fullcalendar.css, **in addition to gcal.js**:
+## Getting Set Up
+
+You must include the `google-calendar` plugin. If you are using [an ES6 build system](initialize-es6) then do something like this:
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import googleCalendarPlugin from '@fullcalendar/google-calendar';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ googleCalendarPlugin ]
+});
+```
+
+Alternatively, you can use [script tags and browser globals](initialize-script):
 
 ```html
-<script type='text/javascript' src='fullcalendar/gcal.js'></script>
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/google-calendar/main.js'></script>
+<script>
+...
+var calendar = new FullCalendar.Calendar(calendarEl, {
+  plugins: [ 'googleCalendar' ]
+});
+...
+</script>
 ```
 
 ## Writing the code
 
 Now it's time to initialize your calendar in JavaScript. This is the most minimal example:
 
-```html
-<script type='text/javascript'>
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      googleCalendarApiKey: '<YOUR API KEY>',
-      events: {
-        googleCalendarId: 'abcd1234@group.calendar.google.com'
-      }
-    });
-
-    calendar.render();
-  });
-
-</script>
+```js
+let calendar = new Calendar(calendarEl, {
+  plugins: [ googleCalendarPlugin ],
+  googleCalendarApiKey: '<YOUR API KEY>',
+  events: {
+    googleCalendarId: 'abcd1234@group.calendar.google.com'
+  }
+});
 ```
 
 If you want to specify some [Event Source](event-source-object) options, you can include them in the `events` object:
 
-```html
-<script type='text/javascript'>
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      googleCalendarApiKey: '<YOUR API KEY>',
-      events: {
-        googleCalendarId: 'abcd1234@group.calendar.google.com',
-        className: 'gcal-event' // an option!
-      }
-    });
-
-    calendar.render();
-  });
-
-</script>
+```js
+let calendar = new Calendar(calendarEl, {
+  plugins: [ googleCalendarPlugin ],
+  googleCalendarApiKey: '<YOUR API KEY>',
+  events: {
+    googleCalendarId: 'abcd1234@group.calendar.google.com',
+    className: 'gcal-event' // an option!
+  }
+});
 ```
 
 [View a demo](google-calendar-demo) that displays US holidays from Google Calendar.

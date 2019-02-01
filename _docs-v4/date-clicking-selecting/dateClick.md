@@ -9,6 +9,41 @@ Triggered when the user clicks on a date or a time.
 function( dateClickInfo ) { }
 </div>
 
+In order for this callback to fire, you must load the `interaction` plugin. If you are using [an ES6 build system](initialize-es6):
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ interactionPlugin ],
+  ...
+  dateClick: function(info) {
+    alert('Clicked on: ' + info.dateStr);
+    alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+    alert('Current view: ' + info.view.type);
+    // change the day's background color just for fun
+    info.dayEl.style.backgroundColor = 'red';
+  }
+});
+...
+```
+
+Alternatively, you can use [script tags and browser globals](initialize-global):
+
+```html
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/interaction/main.js'></script>
+<script>
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ 'interaction' ],
+  ...
+});
+...
+</script>
+```
+
 `dateClickInfo` is a plain object with the following properties:
 
 <table>
@@ -63,24 +98,6 @@ If the current view is a resource-view, the [Resource Object](resource-object) t
 </tr>
 
 </table>
-
-Here is an example that demonstrates some of these properties:
-
-```js
-var calendar = new Calendar(calendarEl, {
-
-  dateClick: function(info) {
-
-    alert('Clicked on: ' + info.dateStr);
-    alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
-    alert('Current view: ' + info.view.type);
-
-    // change the day's background color just for fun
-    info.dayEl.style.backgroundColor = 'red';
-  }
-
-});
-```
 
 
 ## List View

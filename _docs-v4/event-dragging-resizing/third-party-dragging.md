@@ -7,24 +7,35 @@ It's possible to leverage a third-party library to do your [external element dra
 FullCalendar offers a way to do this via the `ThirdPartyDraggable` class. This class will work with **any** third-party drag-n-drop library, without needing any sort of specific adapter. The following example demonstrates [Dragula](https://bevacqua.github.io/dragula/):
 
 ```js
-import { ThirdPartyDraggable } from 'fullcalendar';
+import { Calendar } from '@fullcalendar/core';
+import interactionPlugin, { ThirdPartyDraggable } from '@fullcalendar/interaction';
 import dragula from 'dragula';
 
-var containerEl = document.getElementById('external-events-list');
+document.addEventListener('DOMContentLoaded', function() {
+  let containerEl = document.getElementById('external-events-list');
+  let calendarEl = document.getElementBy('mycalendar');
 
-var drake = dragula({
-  containers: [ containerEl ],
-  copy: true
-});
+  let drake = dragula({
+    containers: [ containerEl ],
+    copy: true
+  });
 
-new ThirdPartyDraggable(containerEl, {
-  itemSelector: '.my-item',
-  mirrorSelector: '.gu-mirror', // the dragging element that dragula renders
-  eventData: function(eventEl) {
-    return {
-      title: eventEl.innerText
-    };
-  }
+  new ThirdPartyDraggable(containerEl, {
+    itemSelector: '.my-item',
+    mirrorSelector: '.gu-mirror', // the dragging element that dragula renders
+    eventData: function(eventEl) {
+      return {
+        title: eventEl.innerText
+      };
+    }
+  });
+
+  let calendar = new Calendar(calendarEl, {
+    plugins: [ interactionPlugin ],
+    droppable: true
+  });
+
+  calendar.render();
 });
 ```
 

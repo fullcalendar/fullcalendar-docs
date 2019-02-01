@@ -71,12 +71,12 @@ If you'd like all your events to display consistently across browsers regardless
 
 A named time zone is a specific region of the world specified by a string like `'America/New_York'` or `'Europe/Moscow'`. Just like the UTC time zone, it will display consistently across browsers because there is no ambiguity.
 
-However, not all browsers natively support named time zones the same way they do local or UTC. More specifically, the native Date object doesn't know how to compute their time zone offsets. Thus, if you plan to use named time zones, you'll need to decide which time zone "implementation" FullCalendar should use. There is a separate setting for this called [timeZoneImpl](timeZoneImpl).
+However, not all browsers natively support named time zones the same way they do local or UTC. More specifically, the native Date object doesn't know how to compute their time zone offsets. Thus, if you plan to use named time zones, you'll need to decide which time zone "implementation" FullCalendar should use, which come in the form of plugins.
 
 
-<h3 id='UTC-coercion'><code>timeZoneImpl</code> as <code>UTC-coercion</code> (the default)</h3>
+<h3 id='UTC-coercion'>Without a Plugin ("UTC-coercion")</h3>
 
-When UTC-coercion is activated, all dates will be *forced* into UTC-based native Date objects, even though those dates technically did not originate in UTC. Though this is a "hack" for working around browser limitations, it works quite well. You'll need to remember to use each native Date object's UTC-flavored methods like `getUTCDate()` and `toUTCString()`.
+When no timezone-related plugins are present, the calendar will do "UTC-coercion", which means all dates will be *forced* into UTC-based native Date objects, even though those dates technically did not originate in UTC. Though this is a "hack" for working around browser limitations, it works quite well. You'll need to remember to use each native Date object's UTC-flavored methods like `getUTCDate()` and `toUTCString()`.
 
 When parsing ISO8601 strings that have time zone offsets, like `2019-09-01T12:30:00-05:00`, the offset (`-05:00`) will essentially be ignored! If an Event Object accepted the date in this example, its `event.start.toISOString()` value would be `'2019-09-01T12:30:00Z'`.
 
@@ -89,7 +89,6 @@ In summary:
 ```js
 var calendar = new Calendar(calendarEl, {
   timeZone: 'America/New_York',
-  timeZoneImpl: 'UTC-coercion', // the default (unnecessary to specify)
   events: [
     { start: '2018-09-01T12:30:00Z' }, // will be parsed in UTC, as-is
     { start: '2018-09-01T12:30:00+XX:XX' }, // will be parsed in UTC as '2018-09-01T12:30:00Z'
@@ -103,7 +102,7 @@ var calendar = new Calendar(calendarEl, {
 ```
 
 
-### `timeZoneImpl` with a plugin
+### With a TimeZone Plugin
 
 You can leverage a plugin that does the heavy-lifting related to named time zones. These plugins make up for the lack of native time zone functionality. Though a plugin will add bloat to your final JavaScript bundle, it will ultimately provide a better API experience than UTC-coercion because your dates will no longer be "faked" in UTC.
 
@@ -111,18 +110,19 @@ When using a third-party time zone implementation, You won't be able to use the 
 
 There are two available plugins:
 
-- [fullcalendar-moment-timezone](moment-plugins#fullcalendar-moment-timezone) (for the [Moment Timezone](https://momentjs.com/timezone/) library)
-- [fullcalendar-luxon](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [moment-timezone plugin](moment-timezone) (for the [Moment Timezone](https://momentjs.com/timezone/) library)
+- [luxon plugin](luxon) (for the [Luxon](https://moment.github.io/luxon/) library)
 
-The following example demonstrates **fullcalendar-moment-timezone**:
+The following example demonstrates the **moment-timezone plugin** with an [ES6 build system](initialize-es6):
 
 ```js
-import { toMoment } from 'fullcalendar-moment'
-import 'fullcalendar/plugins/moment-timezone'; // need this! or include <script> tag instead
+import { Calendar } from '@fullcalendar/core';
+import { toMoment } from '@fullcalendar/moment'; // only for formatting
+import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 
-var calendar = new Calendar(calendarEl, {
+let calendar = new Calendar(calendarEl, {
+  plugins: [ momentTimezonePlugin ],
   timeZone: 'America/New_York',
-  timeZoneImpl: 'moment-timezone',
   events: [
     { start: '2018-09-01T12:30:00Z' }, // will be shifted to America/New_York
     { start: '2018-09-01T12:30:00+XX:XX' }, // will be shifted to America/New_York
@@ -133,8 +133,37 @@ var calendar = new Calendar(calendarEl, {
     console.log(arg.date.valueOf())
 
     // use the plugin for manipulation and formatting
-    var m = toMoment(calendar, arg.date)
+    let m = toMoment(calendar, arg.date)
     console.log(m.format()) // something like '2018-09-01T12:30:00-05:00'
   }
 });
+```
+
+You can do something similar with [script tags and browser globals](initialize-globals):
+
+```html
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/moment/main.js'></script>
+<script src='fullcalendar/moment-timezone/main.js'></script>
+<script>
+...
+let calendar = new FullCalendar.Calendar(calendarEl, {
+  plugins: [ 'momentTimezone' ],
+  timeZone: 'America/New_York',
+  events: [
+    { start: '2018-09-01T12:30:00Z' }, // will be shifted to America/New_York
+    { start: '2018-09-01T12:30:00+XX:XX' }, // will be shifted to America/New_York
+    { start: '2018-09-01T12:30:00' } // will be parsed as America/New_York
+  ],
+  dateClick: function(arg) {
+    // millisecond value is correctly in America/New_York
+    console.log(arg.date.valueOf())
+
+    // use the plugin for manipulation and formatting
+    let m = FullCalendarMoment.toMoment(calendar, arg.date)
+    console.log(m.format()) // something like '2018-09-01T12:30:00-05:00'
+  }
+});
+...
+</script>
 ```

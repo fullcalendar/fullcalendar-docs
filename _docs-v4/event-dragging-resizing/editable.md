@@ -12,4 +12,34 @@ This determines if the events can be *dragged* and *resized*. Enables/disables b
 
 This option can be overridden on a per-event basis with the [Event Object](event-object) `editable` property.
 
+## Required Plugin
+
+This functionality requires the `interaction` plugin. If you are using [an ES6 build system](initialize-es6), you can do something like this:
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ interactionPlugin ],
+  editable: true
+})
+...
+```
+
+Alternatively, if you are using [script tags and browser globals](initialize-globals), you can do something like this:
+
+```html
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/core/interaction/main.js'></script>
+<script>
+...
+var calendar = new FullCalendar.Calendar(calendarEl, {
+  plugins: [ 'interaction' ],
+  editable: true
+})
+...
+</script>
+```
+
 [View a demo](event-dragging-resizing-demo) with a calendar's events being editable.
