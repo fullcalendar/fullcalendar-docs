@@ -28,7 +28,7 @@ When your calendar's [timeZone](timeZone) is set to `'UTC'`, the UTC-flavored me
 - `.getUTCMilliseconds()`
 - `.toUTCString()`
 
-Also, when your calendar is set to a named time zone with [timeZoneImpl](timeZoneImpl) set to `'UTC-coercion'` (the default), all Dates throughout the API will be in UTC and thus the above UTC-flavored methods will be useful as well.
+Also, when your calendar is set to a named time zone and there is no time-zone plugin present (aka "UTC-coercion"), all Dates throughout the API will be in UTC and thus the above UTC-flavored methods will be useful as well.
 
 
 ## Date Formatting

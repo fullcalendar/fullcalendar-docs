@@ -16,7 +16,6 @@ FullCalendar.formatDate( *start*, *end*, *settings* )
 - `isExclusive` &mdash; if `true`, the given end date will be considered the *exclusive end* of the range, meaning date just before the `end` will be rendered instead. Useful if you need to format an exclusive-end whole-day range.
 - `locale` &mdash; the name of a [locale](locale) like `'es'`
 - `timeZone` &mdash; the name of a [time zone](timeZone). Either `'local'`, `'UTC'`, or a named time zone
-- `timeZoneImpl` &mdash; for named time zones. See the main [timeZoneImpl](timeZoneImpl) setting for more info.
 
 Example:
 

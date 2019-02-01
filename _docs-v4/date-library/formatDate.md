@@ -14,7 +14,6 @@ FullCalendar.formatDate( *date*, *settings* )
 
 - `locale` &mdash; the name of a [locale](locale) like `'es'`
 - `timeZone` &mdash; the name of a [time zone](timeZone). Either `'local'`, `'UTC'`, or a named time zone
-- `timeZoneImpl` &mdash; for named time zones. See the main [timeZoneImpl](timeZoneImpl) setting for more info.
 
 Example:
 
