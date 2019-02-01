@@ -11,30 +11,23 @@ The plugin provides you the following functionality:
 - Lets you convert [Duration objects](duration-object) emitted from the API into [Luxon Durations objects](https://moment.github.io/luxon/docs/class/src/duration.js~Duration.html)
 - Provides you a named time-zone implementation for the [timeZone](timeZone) setting
 
-Example using formatting strings:
+Example using formatting strings with [an ES6 build system](initialize-es6):
 
 ```js
-import { Calendar } from 'fullcalendar';
-import 'fullcalendar/plugins/luxon'; // need this! or include <script> tag instead
-
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-
-  var calendar = new Calendar(calendarEl, {
-    titleFormat: 'LLLL d, yyyy' // you can now use format strings
-  });
-
-  calendar.render();
+import { Calendar } from '@fullcalendar/core';
+import luxonPlugin from '@fullcalendar/luxon';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ luxonPlugin ],
+  titleFormat: 'LLLL d, yyyy' // you can now use format strings
 });
+...
 ```
-
-If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `luxon.js` dist file [from the Luxon site](https://moment.github.io/luxon/index.html) is included on your page first.
 
 If you want to format a date *range*, you can group related date parts with curly brackets:
 
 ```js
-...
-var calendar = new Calendar(calendarEl, {
+let calendar = new Calendar(calendarEl, {
   titleFormat: '{LLLL {d}}, yyyy'
   // could produce "January 5 - 7, 2018"
   // could produce "January 5 - February 31, 2018"
@@ -45,45 +38,20 @@ var calendar = new Calendar(calendarEl, {
 Example using date/duration conversion:
 
 ```js
-import { Calendar } from 'fullcalendar';
-import { toDateTime, toDuration } from 'fullcalendar/plugins/luxon';
+import { Calendar } from '@fullcalendar/core';
+import { toDateTime, toDuration } from '@fullcalendar/luxon';
+...
+let calendar = new Calendar(calendarEl, {
 
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
+  dateClick: function(arg) {
+    let dt = toDateTime(arg.date, calendar); // calendar is required
+    console.log('clicked on ' + dt.toISO());
+  },
 
-  var calendar = new Calendar(calendarEl, {
-
-    dateClick: function(arg) {
-      var dt = toDateTime(arg.date, calendar); // calendar is required
-      console.log('clicked on ' + dt.toISO());
-    },
-
-    eventDrop: function(arg) {
-      var dur = toDuration(arg.delta, calendar); // calendar is required
-      console.log('event moved ' + dur.toISO());
-    }
-  });
-
-  calendar.render();
+  eventDrop: function(arg) {
+    let dur = toDuration(arg.delta, calendar); // calendar is required
+    console.log('event moved ' + dur.toISO());
+  }
 });
-```
-
-If you are using `<script>` tags and browser globals, you can access `FullCalendar.Luxon.toDateTime` and `FullCalendar.Luxon.toDuration`.
-
-Example using `timeZoneImpl`:
-
-```js
-import { Calendar } from 'fullcalendar';
-import 'fullcalendar/plugins/luxon'; // need this! or include <script> tag instead
-
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-
-  var calendar = new Calendar(calendarEl, {
-    timeZone: 'Europe/Moscow',
-    timeZoneImpl: 'luxon'
-  });
-
-  calendar.render();
-});
+...
 ```

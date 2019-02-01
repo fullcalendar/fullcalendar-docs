@@ -1,6 +1,8 @@
 ---
 title: timeZone
 layout: docs-sublanding
+demos:
+  - timeZone-demo
 ---
 
 A time zone is a region of the world that serves as a context for displaying dates. It affects a Calendar instance in the following ways:
@@ -111,8 +113,8 @@ When using a third-party time zone implementation, You won't be able to use the 
 
 There are two available plugins:
 
-- [moment-timezone plugin](moment-timezone) (for the [Moment Timezone](https://momentjs.com/timezone/) library)
-- [luxon plugin](luxon) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [moment-timezone plugin](moment-plugins) (for the [Moment Timezone](https://momentjs.com/timezone/) library)
+- [luxon plugin](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
 
 The following example demonstrates the **moment-timezone plugin** with an [ES6 build system](initialize-es6):
 
