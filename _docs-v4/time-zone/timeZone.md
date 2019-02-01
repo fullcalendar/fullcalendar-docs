@@ -1,5 +1,6 @@
 ---
 title: timeZone
+layout: docs-sublanding
 ---
 
 A time zone is a region of the world that serves as a context for displaying dates. It affects a Calendar instance in the following ways:

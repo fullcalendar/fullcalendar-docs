@@ -51,7 +51,7 @@ children:
   - title: International
     children:
       - localization
-      - time-zone
+      - timeZone
   - title: Misc
     children:
       - touch
