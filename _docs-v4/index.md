@@ -19,9 +19,9 @@ children:
   - title: Views
     children:
       - month-view
-      - agenda-view
+      - timegrid-view
       - list-view
-      - basic-view
+      - daygrid-view
       - timeline-view
       - vertical-resource-view
       - custom-views

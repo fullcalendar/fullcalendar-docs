@@ -1,5 +1,5 @@
 ---
-title: Agenda View
+title: TimeGrid View
 children:
   - title: Agenda-specific Options
     children:

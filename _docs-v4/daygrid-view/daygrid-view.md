@@ -1,5 +1,5 @@
 ---
-title: Basic View
+title: DayGrid View
 layout: docs-sublanding
 demos:
   - basic-view-demo
