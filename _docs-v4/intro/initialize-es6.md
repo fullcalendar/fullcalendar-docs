@@ -1,5 +1,5 @@
 ---
-title: Initialize with ES6
+title: Initialize with ES6 Build System
 ---
 
 For non-trivial projects, it is recommended to use an ES6-compatible build system like [Webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org) along with a package manager like [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com). A setup like this will ensure all necessary files are compiled together into a unified bundle. You won't need to worry about manually including `<script>` tags on the page.
@@ -44,7 +44,7 @@ import TimeGridPlugin from '@fullcalendar/timegrid';
 import ListPlugin from '@fullcalendar/list';
 
 ...
-var calendar = new Calendar(calendarEl, {
+let calendar = new Calendar(calendarEl, {
   plugins: [ DayGridPlugin, TimeGridPlugin, ListPlugin ]
 });
 ...
