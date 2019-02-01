@@ -1,5 +1,5 @@
 ---
-title: agendaEventMinHeight
+title: timeGridEventMinHeight
 ---
 
 Guarantees that events within the Agenda views will be a minimum height.

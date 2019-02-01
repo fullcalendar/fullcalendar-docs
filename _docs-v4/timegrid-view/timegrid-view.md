@@ -6,7 +6,7 @@ children:
       - allDaySlot
       - allDayText
       - slotEventOverlap
-      - agendaEventMinHeight
+      - timeGridEventMinHeight
 related:
   - slotDuration
   - slotLabelFormat

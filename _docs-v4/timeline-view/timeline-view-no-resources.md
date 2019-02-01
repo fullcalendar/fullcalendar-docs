@@ -27,6 +27,7 @@ Or you can choose to initialized the Timeline views [entirely with script tags](
 ```html
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/timeline/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/timeline/main.js'></script>
 <script>

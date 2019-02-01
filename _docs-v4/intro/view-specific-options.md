@@ -7,7 +7,7 @@ You can specify options that apply only to *specific* calendar views.<!--more-->
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  header: { center: 'month,agendaWeek' }, // buttons for switching between views
+  header: { center: 'dayGridMonth,timeGridWeek' }, // buttons for switching between views
 
   views: {
     month: { // name of view
@@ -23,17 +23,17 @@ You may also specify options that apply to certain types of views:
 ```js
 var calendar = new Calendar(calendarEl, {
   views: {
-    basic: {
-      // options apply to basicWeek, basicDay, and month views
+    dayGrid: {
+      // options apply to dayGridMonth, dayGridWeek, and dayGridDay views
     },
-    agenda: {
-      // options apply to agendaWeek and agendaDay views
+    timeGrid: {
+      // options apply to timeGridWeek and timeGridDay views
     },
     week: {
-      // options apply to basicWeek and agendaWeek views
+      // options apply to dayGridWeek and timeGridWeek views
     },
     day: {
-      // options apply to basicDay and agendaDay views
+      // options apply to dayGridDay and timeGridDay views
     }
   }
 });
