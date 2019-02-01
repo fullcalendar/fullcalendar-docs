@@ -150,7 +150,7 @@ You can do something similar with [script tags and browser globals](initialize-g
 <script src='fullcalendar/moment-timezone/main.js'></script>
 <script>
 ...
-let calendar = new FullCalendar.Calendar(calendarEl, {
+var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'momentTimezone' ],
   timeZone: 'America/New_York',
   events: [

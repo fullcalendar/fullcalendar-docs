@@ -7,36 +7,32 @@ The RRule plugin is a connector to the [rrule js library](https://github.com/jak
 It introduces some new [event properties](event-parsing):
 
 ```js
-import { Calendar } from 'fullcalendar';
-import 'fullcalendar/plugins/rrule'; // need this! or include <script> tag instead
+import { Calendar } from '@fullcalendar/core';
+import rrulePlugin from '@fullcalendar/rrule';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ rrulePlugin ],
+  events: [
+    {
+      // standard property
+      title: 'my recurring event',
 
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
+      rrule: 'DTSTART:20120201T103000Z\nRRULE:FREQ=WEEKLY;INTERVAL=5;UNTIL=20120601;BYDAY=MO,FR',
+      // ...or, an object...
+      rrule: {
+        freq: 'weekly',
+        interval: 5,
+        byweekday: [ 'mo', 'fr' ],
+        dtstart: '2012-02-01T10:30:00',
+        until: '2012-06-01'
+      },
 
-  var calendar = new Calendar(calendarEl, {
-    events: [
-      {
-        // standard property
-        title: 'my recurring event',
-
-        rrule: 'DTSTART:20120201T103000Z\nRRULE:FREQ=WEEKLY;INTERVAL=5;UNTIL=20120601;BYDAY=MO,FR',
-        // ...or, an object...
-        rrule: {
-          freq: 'weekly',
-          interval: 5,
-          byweekday: [ 'mo', 'fr' ],
-          dtstart: '2012-02-01T10:30:00',
-          until: '2012-06-01'
-        },
-
-        // for specifying the end time of each instance
-        duration: '02:00'
-      }
-    ]
-  });
-
-  calendar.render();
+      // for specifying the end time of each instance
+      duration: '02:00'
+    }
+  ]
 });
+...
 ```
 
 If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `rrule.js` dist file [from the rrule site](https://jakubroztocil.github.io/rrule/) is included on your page first.
