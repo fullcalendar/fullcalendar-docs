@@ -6,10 +6,10 @@ You might like the way the time axis operates in Timeline view, but you simply d
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import TimelinePlugin from '@fullcalendar/timeline';
+import timelinePlugin from '@fullcalendar/timeline';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ TimelinePlugin ],
+  plugins: [ timelinePlugin ],
   defaultView: 'timelineWeek'
 });
 ...

@@ -26,7 +26,7 @@ The first step is to download and unzip a ZIP archive from the [Downloads page](
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'daygrid' ]
+          plugins: [ 'dayGrid' ]
         });
 
         calendar.render();
@@ -54,7 +54,7 @@ Merely including the `<script>` and `<link>` tags for a plugin is not enough to 
 
 ```js
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'daygrid', 'timegrid', 'list' ] // an array of strings!
+  plugins: [ 'dayGrid', 'timeGrid', 'list' ] // an array of strings!
 });
 ```
 

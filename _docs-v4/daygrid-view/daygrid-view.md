@@ -9,10 +9,10 @@ A DayGrid view is a view with one or more columns, each representing a day. The 
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import DayGridPlugin from '@fullcalendar/daygrid';
+import dayGridPlugin from '@fullcalendar/daygrid';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ DayGridPlugin ],
+  plugins: [ dayGridPlugin ],
   defaultView: 'dayGridWeek'
 });
 ...
@@ -30,12 +30,13 @@ Or you can choose to initialized DayGrid view [entirely with script tags](initia
 ```html
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/daygrid/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'daygrid' ],
+  plugins: [ 'dayGrid' ],
   defaultView: 'dayGridWeek'
 });
 ...

@@ -16,13 +16,13 @@ In your entrypoint file you will want to write something like this:
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import DayGridPlugin from '@fullcalendar/daygrid';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
-    plugins: [ DayGridPlugin ]
+    plugins: [ dayGridPlugin ]
   });
 
   calendar.render();
@@ -39,13 +39,12 @@ When using an ES6 build system, you must pass in the references exported from ea
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import DayGridPlugin from '@fullcalendar/daygrid';
-import TimeGridPlugin from '@fullcalendar/timegrid';
-import ListPlugin from '@fullcalendar/list';
-
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ DayGridPlugin, TimeGridPlugin, ListPlugin ]
+  plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ]
 });
 ...
 ```

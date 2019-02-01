@@ -7,11 +7,11 @@ A [DayGrid view](daygrid-view) like `dayGridDay` can be given resource functiona
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import ResourceDayGridPlugin from '@fullcalendar/resource-daygrid';
+import resourceDayGridPlugin from '@fullcalendar/resource-daygrid';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ ResourceDayGridPlugin ],
-  defaultView: 'dayGridDay',
+  plugins: [ resourceDayGridPlugin ],
+  defaultView: 'resourceDayGridDay',
   resources: [
     // your list of resources
   ]
@@ -33,14 +33,15 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
 <link href='fullcalendar/resource-daygrid/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/daygrid/main.js'></script>
 <script src='fullcalendar/resource-daygrid/main.js'></script>
 <script>
 ...
 let calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'resource-daygrid' ],
-  defaultView: 'dayGridDay',
+  plugins: [ 'resourceDayGrid' ],
+  defaultView: 'resourceDayGridDay',
   resources: [
     // your list of resources
   ]
@@ -48,5 +49,3 @@ let calendar = new FullCalendar.Calendar(calendarEl, {
 ...
 </script>
 ```
-
-If you would like resource column functionality in a **multi-day view** like `dayGridWeek` view, which is turned **off** by default, you'll need to activate either the [groupByResource](groupByResource) or [groupByDateAndResource](groupByDateAndResource) flags.

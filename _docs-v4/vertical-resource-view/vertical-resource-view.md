@@ -16,11 +16,11 @@ The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides [TimeGrid view](ti
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import ResourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
+import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ ResourceTimeGridPlugin ],
-  defaultView: 'day',
+  plugins: [ resourceTimeGridPlugin ],
+  defaultView: 'resourceTimeGridDay',
   resources: [
     // your list of resources
   ]
@@ -42,14 +42,15 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
 <link href='fullcalendar/resource-timegrid/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/timegrid/main.js'></script>
 <script src='fullcalendar/resource-timegrid/main.js'></script>
 <script>
 ...
 let calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'resource-timegrid' ],
-  defaultView: 'day',
+  plugins: [ 'resourceTimeGrid' ],
+  defaultView: 'resourceTimeGridDay',
   resources: [
     // your list of resources
   ]
@@ -59,7 +60,5 @@ let calendar = new FullCalendar.Calendar(calendarEl, {
 ```
 
 [DayGrid requires a similar setup &raquo;](resource-daygrid-view)
-
-If you would like resource column functionality in a **multi-day view** like `week` view, which is turned **off** by default, you'll need to activate either the [groupByResource](groupByResource) or [groupByDateAndResource](groupByDateAndResource) flags.
 
 The following options are specific to Vertical Resource view. However, there are numerous other options throughout the docs that affect the display of Vertical Resource view, such as the [locale-related options](localization), [date/time display options](date-display), and [resource display options](resource-display).

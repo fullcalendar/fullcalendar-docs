@@ -14,10 +14,10 @@ A list view displays events in a simple vertical list for a specific interval of
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import ListPlugin from '@fullcalendar/list';
+import listPlugin from '@fullcalendar/list';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ ListPlugin ],
+  plugins: [ listPlugin ],
   defaultView: 'listWeek'
 });
 ...
@@ -35,6 +35,7 @@ Or you can choose to initialized the List views [entirely with script tags](init
 ```html
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/list/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/list/main.js'></script>
 <script>

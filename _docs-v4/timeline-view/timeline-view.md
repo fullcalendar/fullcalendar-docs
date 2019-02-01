@@ -38,11 +38,11 @@ The following pre-configured timeline views are available: **timelineDay**, **ti
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import ResourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ ResourceTimelinePlugin ],
-  defaultView: 'timelineWeek',
+  plugins: [ resourceTimelinePlugin ],
+  defaultView: 'resourceTimeline',
   resources: [
     // your resource list
   ]
@@ -64,14 +64,15 @@ Or you can choose to initialized the Timeline views [entirely with script tags](
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/timeline/main.css' rel='stylesheet' />
 <link href='fullcalendar/resource-timeline/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/timeline/main.js'></script>
 <script src='fullcalendar/resource-timeline/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'resource-timeline' ],
-  defaultView: 'timelineWeek',
+  plugins: [ 'resourceTimeline' ],
+  defaultView: 'resourceTimelineWeek',
   resources: [
     // your resource list
   ]
@@ -80,17 +81,17 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 </script>
 ```
 
-If you need a different duration, make a [custom view](custom-view-with-settings) with type `'timeline'`:
+If you need a different duration, make a [custom view](custom-view-with-settings) with type `'resourceTimeline'`:
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timelineFourDays',
+  defaultView: 'resourceTimelineFourDays',
   header: [
-    center: 'month,timelineFourDays'
+    center: 'month,resourceTimelineFourDays'
   ],
   views: {
-    timelineFourDays: {
-      type: 'timeline',
+    resourceTimelineFourDays: {
+      type: 'resourceTimeline',
       duration: { days: 4 }
     }
   }

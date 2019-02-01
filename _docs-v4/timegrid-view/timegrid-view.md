@@ -20,15 +20,15 @@ demos:
   - agenda-custom-view-demo
 ---
 
-A TimeGrid view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis. The two predefined TimeGrid views are the **week** and **day** views. They can be initialized in an [ES6 setup](initialize-es6) like so:
+A TimeGrid view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis. The two predefined TimeGrid views are the **timeGridWeek** and **timeGridDay** views. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import TimeGridPlugin from '@fullcalendar/timegrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ TimeGridPlugin ],
-  defaultView: 'week'
+  plugins: [ timeGridPlugin ],
+  defaultView: 'timeGridWeek'
 });
 ...
 ```
@@ -47,14 +47,15 @@ Or you can choose to initialized the TimeGrid views [entirely with script tags](
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
 <link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/daygrid/main.js'></script>
 <script src='fullcalendar/timegrid/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'timegrid' ],
-  defaultView: 'week'
+  plugins: [ 'timeGrid' ],
+  defaultView: 'timeGridWeek'
 });
 ...
 </script>

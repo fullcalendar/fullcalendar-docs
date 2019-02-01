@@ -13,11 +13,11 @@ Month view displays the current month's days, and usually a few days of the prev
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import DayGridPlugin from '@fullcalendar/daygrid';
+import dayGridPlugin from '@fullcalendar/daygrid';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ DayGridPlugin ],
-  defaultView: 'month'
+  plugins: [ dayGridPlugin ],
+  defaultView: 'dayGridMonth'
 });
 ...
 ```
@@ -34,13 +34,14 @@ Or you can choose to initialized Month view [entirely with script tags](initiali
 ```html
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/daygrid/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'daygrid' ],
-  defaultView: 'month'
+  plugins: [ 'dayGrid' ],
+  defaultView: 'dayGridMonth'
 });
 ...
 </script>
