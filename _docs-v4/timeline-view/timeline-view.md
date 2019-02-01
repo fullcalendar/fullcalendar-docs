@@ -11,6 +11,7 @@ children:
       - resourceColumns
       - resourcesInitiallyExpanded
       - slotWidth
+      - timeline-view-no-resources
 related:
   - dateClick
   - slotDuration
@@ -33,18 +34,57 @@ demos:
 
 The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides a new view called "timeline view" with a customizable horizontal time-axis and resources as rows.
 
-The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialied like so:
+The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```js
-var calendar = new Calendar(calendarEl, {
-  defaultView: 'timelineDay'
+import { Calendar } from '@fullcalendar/core';
+import ResourceTimelinePlugin from '@fullcalendar/resource-timeline';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ ResourceTimelinePlugin ],
+  defaultView: 'timelineWeek',
+  resources: [
+    // your resource list
+  ]
 });
+...
+```
+
+Then you'll need to ensure the correct stylesheets are loaded:
+
+```html
+<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/timeline/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/resource-timeline/main.css' rel='stylesheet' />
+```
+
+Or you can choose to initialized the Timeline views [entirely with script tags](initialize-globals):
+
+```html
+<link href='fullcalendar/core/main.css' rel='stylesheet' />
+<link href='fullcalendar/timeline/main.css' rel='stylesheet' />
+<link href='fullcalendar/resource-timeline/main.css' rel='stylesheet' />
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/timeline/main.js'></script>
+<script src='fullcalendar/resource-timeline/main.js'></script>
+<script>
+...
+var calendar = new FullCalendar.Calendar(calendarEl, {
+  plugins: [ 'resource-timeline' ],
+  defaultView: 'timelineWeek',
+  resources: [
+    // your resource list
+  ]
+});
+...
+</script>
 ```
 
 If you need a different duration, make a [custom view](custom-view-with-settings) with type `'timeline'`:
 
 ```js
 var calendar = new Calendar(calendarEl, {
+  defaultView: 'timelineFourDays',
   header: [
     center: 'month,timelineFourDays'
   ],

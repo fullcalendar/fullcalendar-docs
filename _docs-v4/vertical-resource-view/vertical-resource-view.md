@@ -4,6 +4,7 @@ is_premium: true
 children:
   - groupByResource
   - groupByDateAndResource
+  - resource-daygrid-view
 demos:
   - vertical-resource-standard-demo
   - vertical-resource-custom-demo
@@ -11,25 +12,54 @@ demos:
   - vertical-resource-resourceRender-demo
 ---
 
-The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides [agenda view](agenda-view) and [basic view](basic-view) with the ability to display **resources as columns**.
-
-To activate this functionality in a single-day view, simply use `agendaDay` or `basicDay` view and specify the `resources` setting:
+The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides [TimeGrid view](timegrid-view) and [DayGrid view](daygrid-view) with the ability to display **resources as columns**. For example, a TimeGrid `day` resource view can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```js
-var calendar = new Calendar(calendarEl, {
-  defaultView: 'agendaDay',
-  events: [
-    // events go here
-  ],
+import { Calendar } from '@fullcalendar/core';
+import ResourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ ResourceTimeGridPlugin ],
+  defaultView: 'day',
   resources: [
-    { id: 'a', title: 'Room A' },
-    { id: 'b', title: 'Room B' },
-    { id: 'c', title: 'Room C' },
-    { id: 'd', title: 'Room D' }
+    // your list of resources
   ]
 });
+...
 ```
 
-If you would like resource column functionality in a **multi-day view** like `agendaWeek`, which is turned **off** by default, you'll need to activate either the [groupByResource](groupByResource) or [groupByDateAndResource](groupByDateAndResource) flags.
+Then you'll need to ensure the correct stylesheets are loaded:
+
+```html
+<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/timegrid/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/resource-timegrid/main.css' rel='stylesheet' />
+```
+
+Or you can choose to initialized it [entirely with script tags](initialize-globals):
+
+```html
+<link href='fullcalendar/core/main.css' rel='stylesheet' />
+<link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
+<link href='fullcalendar/resource-timegrid/main.css' rel='stylesheet' />
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/timegrid/main.js'></script>
+<script src='fullcalendar/resource-timegrid/main.js'></script>
+<script>
+...
+let calendar = new FullCalendar.Calendar(calendarEl, {
+  plugins: [ 'resource-timegrid' ],
+  defaultView: 'day',
+  resources: [
+    // your list of resources
+  ]
+});
+...
+</script>
+```
+
+[DayGrid requires a similar setup &raquo;](resource-daygrid-view)
+
+If you would like resource column functionality in a **multi-day view** like `week` view, which is turned **off** by default, you'll need to activate either the [groupByResource](groupByResource) or [groupByDateAndResource](groupByDateAndResource) flags.
 
 The following options are specific to Vertical Resource view. However, there are numerous other options throughout the docs that affect the display of Vertical Resource view, such as the [locale-related options](localization), [date/time display options](date-display), and [resource display options](resource-display).
