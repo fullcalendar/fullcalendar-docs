@@ -9,7 +9,7 @@ demos:
   - month-view-demo
 ---
 
-Month view displays the current month's days, and usually a few days of the previous and next months, in a table-like format. It can be initialized in an [ES6 setup](initialize-es6) like so:
+Month view displays the current month's days, and usually a few days of the previous and next months, in a table-like format. It's technically considered "dayGridMonth" view and is part of the [DayGrid plugin](daygrid-view). It can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```js
 import { Calendar } from '@fullcalendar/core';

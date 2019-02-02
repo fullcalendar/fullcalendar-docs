@@ -46,7 +46,7 @@ You'll need to ensure the correct JavaScript and CSS external files are included
 
 ## Plugins
 
-FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and save your users from having to download it.
+FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and save your users from having to download it. By default, the bare core of FullCalendar does not do *anything*. You'll *need* to use a plugin to display a calendar view at the very least.
 
 For a full list of plugins, visit the [Plugin Index &raquo;](plugin-index)
 

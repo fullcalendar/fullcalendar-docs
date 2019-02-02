@@ -43,6 +43,8 @@ The current [View Object](view-object).
 
 </table>
 
+Unlike some other event-related interactions, `eventClick` does not require the `interaction` plugin.
+
 Here is an example demonstrating some of these properties:
 
 ```js

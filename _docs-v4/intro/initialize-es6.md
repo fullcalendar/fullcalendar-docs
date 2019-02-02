@@ -31,9 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Plugins
 
-FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and prevent it from being compiled into your bundle, saving space.
+FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and prevent it from being compiled into your bundle, saving space. By default, the bare core of FullCalendar does not do *anything*. You'll *need* to use a plugin to display a calendar view at the very least.
 
 For a full list of plugins, visit the [Plugin Index &raquo;](plugin-index)
+
+Before using a plugin, you must install it view npm/yarn. You can install multiple plugins at once:
+
+```
+npm install @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/list
+```
 
 When using an ES6 build system, you must pass in the references exported from each plugin module into the `plugins` array:
 

@@ -3,6 +3,7 @@ title: Introduction
 children:
   - initialize-globals
   - initialize-es6
+  - plugin-index
   - handlers
   - methods
   - title: More Advanced

@@ -1,5 +1,5 @@
 ---
-title: Scheduler
+title: Scheduler Plugins
 layout: docs-sublanding
 demos:
   - timeline-standard-view-demo

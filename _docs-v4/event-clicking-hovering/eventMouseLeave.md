@@ -42,3 +42,5 @@ The current [View Object](view-object).
 </tr>
 
 </table>
+
+Unlike some other event-related interactions, `eventMouseLeave` does not require the `interaction` plugin.
