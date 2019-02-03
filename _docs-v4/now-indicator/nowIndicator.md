@@ -10,9 +10,9 @@ Boolean. *default*: `false`
 
 The indicator will automatically reposition itself while the user is viewing the calendar.
 
-When set to `true` in one of the **agenda** views ([view live demo](agenda-nowIndicator-demo)):
+When set to `true` in one of the **TimeGrid** views ([view live demo](timegrid-nowIndicator-demo)):
 
-<img src='agenda-nowIndicator-demo.png' width='323' height='241' alt='agenda view now-indicator' />
+<img src='timegrid-nowIndicator-demo.png' width='323' height='241' alt='timegrid view now-indicator' />
 
 When set to `true` in one of the **timeline** views ([view live demo](timeline-nowIndicator-demo)):
 

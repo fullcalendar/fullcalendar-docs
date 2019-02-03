@@ -14,11 +14,11 @@ To delay rerender until the last operation, you can leverage the `batchRendering
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'agendaWeek'
+  defaultView: 'timeGridWeek'
 });
 
 calendar.batchRendering(function() {
-  calendar.changeView('month');
+  calendar.changeView('dayGridMonth');
   calendar.addEvent({ title: 'new event', start: '2018-09-01' });
 });
 ```

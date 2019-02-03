@@ -42,7 +42,7 @@ Version 4.0.0-alpha.4 is now available. When the 4.0.0 is officially released, i
 - Recurring events (a ["simple" implementation](recurring-events) and an [RRule plugin](rrule-plugin))
 - Event drag & drop between two calendars. [Demo](other-calendar-dragging-demo)
 - Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this.
-- Connector plugins for [Moment JS](moment-plugins), [Moment Timezone](moment-plugins#fullcalendar-moment-timezone), and [Luxon](luxon-plugin)
+- Connector plugins for [Moment JS](moment-plugins), [Moment Timezone](moment-plugins#moment-timezone), and [Luxon](luxon-plugin)
 - Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled. [Issue 2761](https://github.com/fullcalendar/fullcalendar/issues/2761)
 - Touch scrolling works better with event and date unselecting. [Issue 3530](https://github.com/fullcalendar/fullcalendar/issues/3530)
 
@@ -50,9 +50,9 @@ Version 4.0.0-alpha.4 is now available. When the 4.0.0 is officially released, i
 
 **What's yet to be done?**
 
-You might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-party libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.4, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.
+You might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-party libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.4, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.!!!
 
-Also, the agenda view and event drag-n-drop functionality will be broken out into their own plugins to further reduce bundle size if you don't need those features. All of these plugins will be passed to the `Calendar` constructor instead of being imported solely for side effects.
+Also, the TimeGrid view and event drag-n-drop functionality will be broken out into their own plugins to further reduce bundle size if you don't need those features. All of these plugins will be passed to the `Calendar` constructor instead of being imported solely for side effects.
 
 There are also a few minor regressions that will be addressed before launch:
 [#479](https://github.com/fullcalendar/fullcalendar-scheduler/issues/479),
@@ -139,7 +139,7 @@ Instead of relying on FullCalendar to attach a new method to jQuery (`$().fullCa
 <tr>
 <th>print stylesheet</th>
 <td markdown='1'>
-No need to use a separate `<link>` tag to include the `fullcalendar.print.css` stylesheet. It will be automatically included within `fullcalendar.css`, by use of media queries. [Issue 3594](https://github.com/fullcalendar/fullcalendar/issues/3594)
+No need to use a separate `<link>` tag to include the `fullcalendar.print.css` stylesheet. It will be automatically included within `fullcalendar.css!!!`, by use of media queries. [Issue 3594](https://github.com/fullcalendar/fullcalendar/issues/3594)
 </td>
 </tr>
 
@@ -165,10 +165,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr>
 <th><a href='methods'>calling methods</a></th>
 <td markdown='1'>
-Instead of using jQuery like `$().fullCalendar('changeView', 'month')`, do something like this:
+Instead of using jQuery like `$().fullCalendar('changeView', 'month!!!')`, do something like this:
 
 ```js
-calendar.changeView('month');
+calendar.changeView('month!!!');
 ```
 </td>
 </tr>
@@ -403,14 +403,14 @@ Will now be `Date` objects in UTC. [Issue 2981](https://github.com/fullcalendar/
 <tr>
 <th markdown='1'>a `false` time zone</th>
 <td markdown='1'>
-The `timezone: false` technique is no longer available. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl](timeZoneImpl) of `'UTC-coercion'`, which is the default. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
+The `timezone: false` technique is no longer available. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl!!!](timeZoneImpl) of `'UTC-coercion'`, which is the default. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
 </td>
 </tr>
 
 <tr>
-<th><a href='timeZoneImpl'>timeZoneImpl</a><br />(time zone implementation)</th>
+<th><a href='timeZoneImpl'>timeZoneImpl!!!</a><br />(time zone implementation)</th>
 <td markdown='1'>
-Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#fullcalendar-moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
+Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
 </td>
 </tr>
 
@@ -876,7 +876,7 @@ The way Views are customized and defined has been affected:
 <tr>
 <th><a href='view-specific-options'>view-specific options</a></th>
 <td markdown='1'>
-Providing options in the `basic` key will affect [month view](month-view).
+Providing options in the `basic` key will affect [month view](month-view).!!!
 </td>
 </tr>
 
@@ -1553,7 +1553,7 @@ Determines the separator text when formatting the date range in the toolbar titl
 
 ## Month View
 
-The `MonthView` class is no longer exposed. Internally, the functionality has been rolled into `BasicView`, which **is** exposed.
+The `MonthView` class is no longer exposed. Internally, the functionality has been rolled into `BasicView!!!`, which **is** exposed.
 
 
 ## List View
@@ -1600,7 +1600,7 @@ The `render` function's first argument is **always** a [Resource object](resourc
 A [resource-fetching function](resources-function) **previously** accepted the following arguments:
 
 ```js
-function( callback, [ startMoment, endMoment, timeZone ] )
+function( callback, startMoment, endMoment, timeZone )
 ```
 
 **Now**, it acceps the following arguments:

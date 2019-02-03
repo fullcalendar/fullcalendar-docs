@@ -11,7 +11,7 @@ Events that appear as background highlights can be achieved by setting an [Event
 ```js
 var calendar = new Calendar(calendarEl, {
   defaultDate: '2014-11-10',
-  defaultView: 'agendaWeek',
+  defaultView: 'timeGridWeek',
   events: [
     {
       start: '2014-11-10T10:00:00',
@@ -26,7 +26,7 @@ Result:
 
 <img src='background-events.png' width='500' alt='background events example' />
 
-Background events that are **timed** will only be rendered on the time slots in agenda view. Background events that are **all-day** will only be rendered in month view or the all-day slots of agenda view.
+Background events that are **timed** will only be rendered on the time slots in TimeGrid view. Background events that are **all-day** will only be rendered in month view or the all-day slots of TimeGrid view.
 
 
 ## Color

@@ -2,7 +2,7 @@
 title: slotEventOverlap
 ---
 
-Determines if timed events in agenda view should visually overlap.
+Determines if timed events in TimeGrid view should visually overlap.
 
 <div class='spec' markdown='1'>
 Boolean, *default*: `true`

@@ -23,7 +23,7 @@ var calendar = new Calendar(calendarEl, {
   header: {
     left: 'prev,next today myCustomButton',
     center: 'title',
-    right: 'month,agendaWeek,agendaDay'
+    right: 'dayGridMonth,timeGridWeek,timeGridDay'
   }
 });
 ```

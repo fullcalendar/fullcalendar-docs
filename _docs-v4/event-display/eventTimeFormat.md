@@ -8,14 +8,14 @@ Determines the time-text that will be displayed on each event.
 [Date Formatter](date-formatting), *defaults*:
 
 ```js
-// agenda views. '7:00'
+// TimeGrid views. '7:00'
 {
   hour: 'numeric',
   minute: '2-digit',
   meridiem: false
 }
 
-// month and basic views. '7p'
+// DayGrid views. '7p'
 {
   hour: 'numeric',
   minute: '2-digit',
@@ -23,7 +23,7 @@ Determines the time-text that will be displayed on each event.
   meridiem: 'narrow'
 }
 
-// list views. '7pm'
+// List views. '7pm'
 {
   hour: 'numeric',
   minute: '2-digit',

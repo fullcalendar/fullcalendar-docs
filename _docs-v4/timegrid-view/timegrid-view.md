@@ -16,8 +16,8 @@ related:
   - nowIndicator
   - scrollTime
 demos:
-  - agenda-standard-view-demo
-  - agenda-custom-view-demo
+  - timegrid-standard-view-demo
+  - timegrid-custom-view-demo
 ---
 
 A TimeGrid view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis. The two predefined TimeGrid views are the **timeGridWeek** and **timeGridDay** views. They can be initialized in an [ES6 setup](initialize-es6) like so:

@@ -8,7 +8,7 @@ Determines the ordering events within the same day.
 String / Array / Function, *default*: `"start,-duration,allDay,title"`
 </div>
 
-For most views, this determines the vertical ordering of events within the same day. For [agenda view](agenda-view) however, it determines the *horizontal* ordering of events within the same day.
+For most views, this determines the vertical ordering of events within the same day. For [TimeGrid view](timegrid-view) however, it determines the *horizontal* ordering of events within the same day.
 
 The default value puts earlier events first. If tied, it puts longer events first. If tied, it puts all-day events first. If still tied, orders events by title, alphabetically.
 

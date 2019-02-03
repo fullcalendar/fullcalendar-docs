@@ -11,7 +11,7 @@ children:
       - dayCount
       - visibleRange
 demos:
-  - agenda-custom-view-demo
+  - timegrid-custom-view-demo
   - vertical-resource-custom-demo
   - timeline-custom-view-demo
 ---

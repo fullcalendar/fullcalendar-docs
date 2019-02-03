@@ -31,7 +31,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 </script>
 ```
 
-[See a demo &raquo;](bootstrap4-theme-demo)
+[See a demo &raquo;](bootstrap-theme-demo)
 
 Alternatively, you can load the bootstrap plugin [in an ES6 build system](initialize-es6):
 

@@ -6,10 +6,10 @@ children:
   - eventLongPressDelay
   - selectLongPressDelay
 images:
-  - filename: touch-agenda.png
-    caption: Example of an agenda-view event in the selected state
+  - filename: touch-timegrid.png
+    caption: Example of a TimeGrid view event in the selected state
   - filename: touch-scheduler.png
-    caption: Example of a timeline-view event in the selected state
+    caption: Example of a Timeline view event in the selected state
 ---
 
 FullCalendar's Touch support includes smooth scrolling, time-range selection via long-press, and event drag-n-drop/resizing via long-press.

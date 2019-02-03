@@ -152,19 +152,22 @@ Date formatting configs are great for internationalization, but if you want **mo
 
 Date formatting strings are **only** available if you include a plugin that provides the functionality. The two available connector plugins are:
 
-- [fullcalendar-moment](moment-plugins) (for the [Moment](https://momentjs.com/) library)
-- [fullcalendar-luxon](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Moment Plugin](moment-plugins) (for the [Moment](https://momentjs.com/) library)
+- [Luxon Plugin](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
 
-Example using **fullcalendar-moment**:
+Example using the Moment plugin:
 
 ```js
-import { Calendar } from 'fullcalendar';
-import 'fullcalendar-moment';
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import momentPlugin from '@fullcalendar/moment';
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
+    plugins: [ dayGridPlugin, momentPlugin ],
+
     // because the plugin is present, you can now use formatting strings.
     // will produce something like "Tuesday, September 18, 2018"
     titleFormat: 'dddd, MMMM D, YYYY'

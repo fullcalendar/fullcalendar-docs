@@ -60,8 +60,8 @@ When recurrences of this event end. Something that will [parse into a Date](date
 If any of these properties are specified, the event is assumed to be recurring and there is no need to specify the normal `start` and `end` properties.
 
 
-## Recurrence with fullcalendar-rrule
+## Recurrence with the RRule Plugin
 
 If the built-in recurrence functionality is too limited for you, you can leverage the [rrule library](https://github.com/jakubroztocil/rrule). FullCalendar has a connector plugin to make it easy to work with.
 
-[Read about fullcalendar-rrule plugin &raquo;](rrule-plugin)
+[Read about the RRule plugin &raquo;](rrule-plugin)

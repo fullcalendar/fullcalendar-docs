@@ -23,7 +23,7 @@ var calendar = new Calendar(calendarEl, {
 
 `movingEvent` is the event that is being dragged or resized. Its `start` and `end` dates will remain at their original values when the callback function is called. `stillEvent` is the event underneath the moving event.
 
-If a timed event occurs on the same day as an all-day event, this will qualify as an intersection. This might seem confusing in the agenda views because the events don't visually intersect because the all-day slot is separate from the timed slots. But it's still considered an overlap.
+If a timed event occurs on the same day as an all-day event, this will qualify as an intersection. This might seem confusing in the TimeGrid views because the events don't visually intersect because the all-day slot is separate from the timed slots. But it's still considered an overlap.
 
 The `eventOverlap` setting does not differentiate between [background events](background-events) or normal events. It treats both types of events the same way.
 

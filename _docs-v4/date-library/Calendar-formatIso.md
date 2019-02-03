@@ -15,12 +15,14 @@ If `omitTime` is set to `true`, a string like `2019-09-01` will be produced. Oth
 Example:
 
 ```js
-import { Calendar } from 'fullcalendar';
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
+    plugins: [ dayGridPlugin ],
     timeZone: 'local',
     locale: 'es'
   });

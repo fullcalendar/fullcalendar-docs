@@ -2,7 +2,7 @@
 title: weekNumbersWithinDays
 ---
 
-Determines the styling for week numbers in month view and basic view.
+Determines the styling for week numbers in Month and DayGrid views.
 
 <div class='spec' markdown='1'>
 boolean. *default*: `false`

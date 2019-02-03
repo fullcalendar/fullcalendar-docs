@@ -2,7 +2,7 @@
 title: columnHeader
 ---
 
-Whether the day headers should appear. For the Month, Agenda, and Basic views.
+Whether the day headers should appear. For the Month, TimeGrid, and DayGrid views.
 
 <div class='spec' markdown='1'>
 Boolean, *default*: `true`

@@ -90,9 +90,6 @@ If you need a different duration, make a [custom view](custom-view-with-settings
 ```js
 var calendar = new Calendar(calendarEl, {
   defaultView: 'resourceTimelineFourDays',
-  header: [
-    center: 'month,resourceTimelineFourDays'
-  ],
   views: {
     resourceTimelineFourDays: {
       type: 'resourceTimeline',

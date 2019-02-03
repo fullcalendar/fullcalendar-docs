@@ -2,7 +2,7 @@
 title: DayGrid View
 layout: docs-sublanding
 demos:
-  - basic-view-demo
+  - daygrid-view-demo
 ---
 
 A DayGrid view is a view with one or more columns, each representing a day. The pre-configured DayGrid views are **dayGridDay** and **dayGridWeek**. They can be initialized in an [ES6 setup](initialize-es6) like so:

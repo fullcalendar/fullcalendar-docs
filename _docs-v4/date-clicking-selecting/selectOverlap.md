@@ -23,4 +23,4 @@ var calendar = new Calendar(calendarEl, {
 
 The `selectOverlap` setting does not differentiate between [background events](background-events) or normal events. It treats both types of events the same unless you write custom logic in your callback function (like the code above).
 
-If selecting time slots in one of the [agenda views](agenda-view), and there is an all-day event for that specific day, this will be considered an intersection, even though the events don't appear to visually overlap because the all-day slot is separate from the time slots.
+If selecting time slots in one of the [TimeGrid views](timegrid-view), and there is an all-day event for that specific day, this will be considered an intersection, even though the events don't appear to visually overlap because the all-day slot is separate from the time slots.

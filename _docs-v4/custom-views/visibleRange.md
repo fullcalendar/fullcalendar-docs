@@ -12,7 +12,7 @@ If your calendar has only one view, you can set the visible range explicitly:
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'agenda',
+  defaultView: 'timeGrid',
   visibleRange: {
     start: '2017-03-22',
     end: '2017-03-25'
@@ -26,7 +26,7 @@ You can also specify a function that dynamically generates a range from the curr
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'agenda',
+  defaultView: 'timeGrid',
   visibleRange: function(currentDate) {
     return {
       start: currentDate.clone().subtract(1, 'days'),

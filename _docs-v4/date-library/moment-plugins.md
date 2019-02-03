@@ -7,7 +7,7 @@ title: Moment Plugins
 
 ## Moment Plugin
 
-The fullcalendar-moment plugin provides the following functionality:
+FullCalendar's Moment plugin provides the following functionality:
 
 - Lets you use moment formatting strings for all [date-formatting](date-formatting) settings
 - Lets you convert native [Date objects](date-object) emitted from the API into moment objects that match the calendar's time zone and locale

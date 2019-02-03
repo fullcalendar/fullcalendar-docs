@@ -15,10 +15,10 @@ Example for a [Custom View](custom-view-with-settings):
 ```js
 var calendar = new Calendar(calendarEl, {
   weekends: false,
-  defaultView: 'agendaFourDay',
+  defaultView: 'timeGridFourDay',
   views: {
-    agendaFourDay: {
-      type: 'agenda',
+    timeGridFourDay: {
+      type: 'timeGrid',
       dayCount: 4
     }
   }
@@ -30,7 +30,7 @@ Simpler example for a calendar with one view:
 ```js
 var calendar = new Calendar(calendarEl, {
   weekends: false,
-  defaultView: 'agenda',
+  defaultView: 'timeGrid',
   dayCount: 4
 });
 ```

@@ -8,8 +8,8 @@ Whether or not to display an event's end time.
 Boolean, *default*:
 
 ```js
-false // for month and basicWeek views
-true  // for agendaWeek, agendaDay, and basicDay
+false // for dayGridMonth and dayGridWeek views
+true  // for timeGridWeek, timeGridDay, and dayGridDay
 ```
 </div>
 

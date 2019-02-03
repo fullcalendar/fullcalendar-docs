@@ -2,13 +2,13 @@
 title: groupByDateAndResource
 ---
 
-Determines if multi-day agenda or basic views should display resource columns. If so, renders date headings above resource headings.
+Determines if multi-day TimeGrid or DayGrid views should display resource columns. If so, renders date headings above resource headings.
 
 <div class='spec' markdown='1'>
 Boolean, *default*: `false`
 </div>
 
-Beware this will affect *all* multi-day basic/agenda views, which might look bad for views that have many days. If you'd like to target a specific view, use [View-Specific Options](view-specific-options).
+Beware this will affect *all* multi-day DayGrid/TimeGrid views, which might look bad for views that have many days. If you'd like to target a specific view, use [View-Specific Options](view-specific-options).
 
 Setting this value to `true` will override [groupByResource](groupByResource).
 

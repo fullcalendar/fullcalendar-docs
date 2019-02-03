@@ -16,14 +16,14 @@ A value of `true` will limit the number of events to the height of the day cell.
 
 An integer value will limit the events to a specific number of rows.
 
-For the all-day section in the agenda views, a value of `true` will limit the number of events to `5`. To fine-tune this, use [View-Specific Options](view-specific-options) like this:
+For the all-day section in the TimeGrid views, a value of `true` will limit the number of events to `5`. To fine-tune this, use [View-Specific Options](view-specific-options) like this:
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  eventLimit: true, // for all non-agenda views
+  eventLimit: true, // for all non-TimeGrid views
   views: {
-    agenda: {
-      eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
+    timeGrid: {
+      eventLimit: 6 // adjust to 6 only for timeGridWeek/timeGridDay
     }
   }
 });

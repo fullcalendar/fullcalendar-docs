@@ -18,9 +18,11 @@ calendar.formatDate( *start*, *end*, *settings* )
 Example:
 
 ```js
-import { formatDate } from 'fullcalendar'
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 let calendar = new Calendar(calendarEl, {
+  plugins: [ dayGridPlugin ],
   timeZone: 'UTC',
   locale: 'es'
 })

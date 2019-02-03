@@ -45,13 +45,13 @@ console.log(slotDuration)
 
 The Duration objects that FullCalendar emits are very simple objects that don't offer a lot of utilities to work with. If you need more power, feed one of these duration objects into a third-party library. There are already connectors written for other libs:
 
-- [fullcalendar-moment](moment-plugins) (for the [Moment](https://momentjs.com/) library)
-- [fullcalendar-luxon](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Moment Plugin](moment-plugins) (for the [Moment](https://momentjs.com/) library)
+- [Luxon Plugin](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
 
-An example with **fullcalendar-moment**:
+An example with the Moment plugin:
 
 ```js
-import { toDuration } from 'fullcalendar-moment'
+import { toDuration } from '@fullcalendar/moment'
 
 var calendar = new Calendar(calendarEl, {
   slotDuration: '02:00' // 2 hours

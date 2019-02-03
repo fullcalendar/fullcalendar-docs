@@ -17,7 +17,7 @@ The `validRange` property can have `start` and `end` properties. You may specify
 ```js
 // constrain to a discrete range
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'month',
+  defaultView: 'dayGridMonth',
   validRange: {
     start: '2017-05-01',
     end: '2017-06-01'
@@ -26,7 +26,7 @@ var calendar = new Calendar(calendarEl, {
 
 // constrain to an open-ended range
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'month',
+  defaultView: 'dayGridMonth',
   validRange: {
     start: '2017-05-01'
   }
@@ -37,7 +37,7 @@ You can also dynamically generate the range via a function. It must return an ob
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'month',
+  defaultView: 'dayGridMonth',
   validRange: function(nowDate) {
     return {
       start: nowDate,

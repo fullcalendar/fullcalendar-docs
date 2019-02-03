@@ -16,12 +16,14 @@ Once you have your build system set up, you can begin to write type-aware code l
 **example.ts**:
 
 ```ts
-import { Calendar } from 'fullcalendar';
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
+  let calendarEl: HTMLElement = document.getElementById('calendar')!;
 
-  var calendar = new Calendar(calendarEl, {
+  let calendar = new Calendar(calendarEl, {
+    plugins: [ dayGridPlugin ]
     // options here
   });
 

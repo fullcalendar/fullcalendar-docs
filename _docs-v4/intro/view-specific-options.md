@@ -10,7 +10,7 @@ var calendar = new Calendar(calendarEl, {
   header: { center: 'dayGridMonth,timeGridWeek' }, // buttons for switching between views
 
   views: {
-    month: { // name of view
+    dayGridMonth: { // name of view
       titleFormat: 'YYYY, MM, DD'
       // other view-specific options here
     }
