@@ -18,6 +18,6 @@ Object, *default*:
 ```
 </div>
 
-[buttonIcons](buttonIcons) and [themeButtonIcons](themeButtonIcons) affects the appearance of certain other buttons.
+[buttonIcons](buttonIcons) and [bootstrapFontAwesome](bootstrapFontAwesome) affects the appearance of certain other buttons.
 
 HTML injection is not supported. All special characters will be escaped.

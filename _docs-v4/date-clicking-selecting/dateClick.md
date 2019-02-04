@@ -29,7 +29,7 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Alternatively, you can use [script tags and browser globals](initialize-global):
+Alternatively, you can use [script tags and browser globals](initialize-globals):
 
 ```html
 <script src='fullcalendar/core/main.js'></script>

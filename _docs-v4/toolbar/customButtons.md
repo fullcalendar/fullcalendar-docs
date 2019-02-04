@@ -33,7 +33,6 @@ Each `customButton` entry accepts the following properties:
 - `text` - the text to be display on the button itself
 - `click` - a callback function that is called when the button is clicked. Accepts a single argument, a [JavaScript native event](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent).
 - `icon` - see [buttonIcons](buttonIcons). optional
-- `themeIcon` - see [themeButtonIcons](themeButtonIcons). optional
-- `bootstrapGlyphicon` - see [bootstrapGlyphicons](bootstrapGlyphicons). optional
+- `bootstrapFontAwesome` - see [bootstrapFontAwesome](bootstrapFontAwesome). optional
 
 [See a demo of customButtons](toolbar-demo).

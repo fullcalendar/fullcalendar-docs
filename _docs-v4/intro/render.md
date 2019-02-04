@@ -9,4 +9,4 @@ Will initially render a calendar, or if it is already rendered, will **rerender*
 .render()
 </div>
 
-This method is integral to [initializing a calendar](initialization).
+This method is integral to [initializing a calendar](initialize-es6).
