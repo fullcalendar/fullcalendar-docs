@@ -7,4 +7,41 @@
 {% endif %}
 
 <link href='{{ site.baseurl }}/assets/demo-topbar.css' rel='stylesheet' />
+
+{% unless page.disable_base_styles %}
+  <style>
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+      font-size: 14px;
+    }
+
+    #calendar {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+  </style>
+{% endunless %}
+
+<link href='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/core/main.css' rel='stylesheet' />
+
+{% for plugin_name in page.plugins %}
+  {% if plugin_name == 'daygrid'
+     or plugin_name == 'timegrid'
+     or plugin_name == 'list'
+     or plugin_name == 'bootstrap'
+     or plugin_name == 'timeline'
+     or plugin_name == 'resource-timeline' %}
+    <link href='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/{{ plugin_name }}/main.css' rel='stylesheet' />
+  {% endif %}
+{% endfor %}
+
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
+<script src='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/core/main.js'></script>
+
+{% for plugin_name in page.plugins %}
+  <script src='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/{{ plugin_name }}/main.js'></script>
+{% endfor %}
