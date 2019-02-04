@@ -1,7 +1,7 @@
 ---
 title: Assorted list views
 layout: demo-v4
-needs_json_feed: true
+plugins: [ list ]
 ---
 <script>
 
@@ -9,6 +9,7 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'list' ],
       timeZone: 'UTC',
       defaultView: 'listWeek',
 

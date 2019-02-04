@@ -2,7 +2,7 @@
 title: Dynamically switch between timezones
 layout: demo-v4
 disable_base_styles: true
-needs_json_feed: true
+plugins: [ daygrid, timegrid, list ]
 ---
 <script>
 
@@ -13,11 +13,12 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid', 'list' ],
       timeZone: initialTimeZone,
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay,listWeek'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
       navLinks: true, // can click day/week names to navigate views
       editable: true,
@@ -39,9 +40,8 @@ needs_json_feed: true
     calendar.render();
 
     // load the list of available timezones, build the <select> options
-    superagent.get('{{ site.data.demo_feed_baseurl }}/demo-timezones.json').end(function(err, res) {
-      var timeZones = res ? (res.body || JSON.parse(res.text)) : [];
-
+    // it's highly encouraged to use your own AJAX lib instead of using FullCalendar's internal util
+    FullCalendar.requestJson('GET', '{{ site.data.demo_feed_baseurl }}/demo-timezones.json', {}, function(timeZones) {
       timeZones.forEach(function(timeZone) {
         var optionEl;
 
@@ -52,6 +52,8 @@ needs_json_feed: true
           timeZoneSelectorEl.appendChild(optionEl);
         }
       });
+    }, function() {
+      // failure
     });
 
     // when the timezone selector changes, dynamically change the calendar option

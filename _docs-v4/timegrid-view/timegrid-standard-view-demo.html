@@ -1,7 +1,8 @@
 ---
-title: agendaWeek and agendaDay views
+title: timeGridWeek and timeGridDay views
 layout: demo-v4
 needs_json_feed: true
+plugins: [ daygrid, timegrid ]
 ---
 <script>
 
@@ -9,12 +10,13 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'timeGrid' ],
       timeZone: 'UTC',
-      defaultView: 'agendaWeek',
+      defaultView: 'timeGridWeek',
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'agendaWeek,agendaDay'
+        right: 'timeGridWeek,timeGridDay'
       },
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });

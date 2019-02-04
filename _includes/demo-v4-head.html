@@ -42,6 +42,10 @@
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
 <script src='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/core/main.js'></script>
 
+{% if page.needs_locales %}
+  <script src='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/core/locales-all.js'></script>
+{% endif %}
+
 {% for plugin_name in page.plugins %}
   <script src='{{ site.baseurl }}/releases/fullcalendar/4.0.0-beta.1/{{ plugin_name }}/main.js'></script>
 {% endfor %}

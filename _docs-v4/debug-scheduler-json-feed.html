@@ -1,8 +1,7 @@
 ---
 description: json events with scheduler plugin
 layout: demo-v4
-needs_json_feed: true
-needs_scheduler: true
+plugins: [ timeline, resource-common, resource-timeline ]
 ---
 <script>
 
@@ -10,12 +9,13 @@ needs_scheduler: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'resourceTimeline' ],
       timeZone: 'UTC',
-      defaultView: 'timelineDay',
+      defaultView: 'resourceTimelineDay',
       header: {
         left: 'prev,next',
         center: 'title',
-        right: 'timelineDay,timelineWeek,timelineMonth'
+        right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
       },
       resourceLabelText: 'Rooms',
 

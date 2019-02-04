@@ -1,8 +1,7 @@
 ---
 title: Timeline-view now-indicator
 layout: demo-v4
-needs_scheduler: true
-needs_json_feed: true
+plugins: [ timeline, resource-common, resource-timeline ]
 ---
 <script>
 
@@ -10,7 +9,8 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'timeline',
+      plugins: [ 'resourceTimeline' ],
+      defaultView: 'resourceTimeline',
       nowIndicator: true,
       now: '2018-02-13T09:25:00', // just for demo
       resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json'

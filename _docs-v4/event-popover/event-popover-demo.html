@@ -2,7 +2,7 @@
 title: Event popover when too many events
 description: Click the "+3 more" link to show the event popover
 layout: demo-v4
-needs_json_feed: true
+plugins: [ daygrid ]
 ---
 <script>
 
@@ -10,6 +10,7 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid' ],
       timeZone: 'UTC',
       eventLimit: true, // allow "more" link when too many events
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'

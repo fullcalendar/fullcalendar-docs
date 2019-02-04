@@ -2,6 +2,7 @@
 title: Background Events
 description: Click between month and week view to see background events
 layout: demo-v4
+plugins: [ daygrid, timegrid ]
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
@@ -10,10 +11,11 @@ layout: demo-v4
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid' ],
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek'
+        right: 'dayGridMonth,timeGridWeek'
       },
       defaultDate: '{{ ym }}-12',
       events: [

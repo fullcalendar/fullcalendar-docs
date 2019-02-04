@@ -2,6 +2,7 @@
 title: Bootstrap 4 theme
 layout: demo-v4
 needs_json_feed: true
+plugins: [ daygrid, timegrid, list, bootstrap ]
 ---
 <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
@@ -11,12 +12,13 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid', 'list', 'bootstrap' ],
       timeZone: 'UTC',
-      themeSystem: 'bootstrap4',
+      themeSystem: 'bootstrap',
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
       weekNumbers: true,
       eventLimit: true, // allow "more" link when too many events

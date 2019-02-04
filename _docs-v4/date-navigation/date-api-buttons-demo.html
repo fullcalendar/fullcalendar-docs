@@ -2,6 +2,7 @@
 title: Using external buttons with date API
 layout: demo-v4
 disable_base_styles: true
+plugins: [ daygrid ]
 ---
 <style>
 
@@ -28,6 +29,7 @@ disable_base_styles: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid' ],
       header: false // don't display the default header
     });
 

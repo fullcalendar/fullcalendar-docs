@@ -3,6 +3,7 @@ title: Dynamically switch between locales
 layout: demo-v4
 disable_base_styles: true
 needs_locales: true
+plugins: [ daygrid, timegrid, list ]
 ---
 <script>
 
@@ -12,10 +13,11 @@ needs_locales: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid', 'list' ],
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth'
+        right: 'dayGridMonth,timeGridMonth,timeGridDay,listMonth'
       },
       locale: initialLocaleCode,
       buttonIcons: false, // show the prev/next text
@@ -28,7 +30,7 @@ needs_locales: true
     calendar.render();
 
     // build the locale selector's options
-    FullCalendar.getLocaleCodes().forEach(function(localeCode) {
+    calendar.getAvailableLocaleCodes().forEach(function(localeCode) {
       var optionEl = document.createElement('option');
       optionEl.value = localeCode;
       optionEl.selected = localeCode == initialLocaleCode;

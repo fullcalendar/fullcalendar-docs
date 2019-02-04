@@ -2,7 +2,7 @@
 title: Using resourceRender with a popover in vertical-resource-view
 description: Mouseover each "(?)" to see a popover that was attached via resourceRender
 layout: demo-v4
-needs_scheduler: true
+plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegrid ]
 ---
 {% include popper-css.html %}
 <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
@@ -13,7 +13,8 @@ needs_scheduler: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'agendaDay',
+      plugins: [ 'resourceTimeGrid' ],
+      defaultView: 'resourceTimeGridDay',
       resourceRender: function(info) {
         var questionMark = document.createElement('span');
         questionMark.innerText = ' (?) ';

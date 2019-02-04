@@ -1,6 +1,7 @@
 ---
 title: weekNumbersWithinDays activated
 layout: demo-v4
+plugins: [ daygrid ]
 ---
 <script>
 
@@ -8,7 +9,8 @@ layout: demo-v4
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'month',
+      plugins: [ 'dayGrid' ],
+      defaultView: 'dayGridMonth',
       weekNumbers: true,
       weekNumbersWithinDays: true
     });

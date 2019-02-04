@@ -1,7 +1,7 @@
 ---
 description: json events with standard calendar
 layout: demo-v4
-needs_json_feed: true
+plugins: [ daygrid, timegrid ]
 ---
 <script>
 
@@ -9,12 +9,13 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid' ],
       timeZone: 'UTC',
-      defaultView: 'month',
+      defaultView: 'dayGridMonth',
       header: {
         left: 'prev,next',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
 
       // JSON FEED INSTRUCTIONS

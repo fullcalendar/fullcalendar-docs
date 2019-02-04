@@ -2,7 +2,7 @@
 title: Clicking and selecting on resources
 description: Use your mouse or touch device to click/select dates/times on the resoureces
 layout: demo-v4
-needs_scheduler: true
+plugins: [ interaction, timeline, resource-common, resource-timeline, timegrid ]
 ---
 <script>
 
@@ -10,12 +10,13 @@ needs_scheduler: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'resourceTimeline', 'timeGrid' ],
       selectable: true,
-      defaultView: 'timelineWeek',
+      defaultView: 'resourceTimelineWeek',
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'timelineWeek,agendaDay'
+        right: 'resourceTimelineWeek,timeGridDay'
       },
       resources: [
         { id: 'a', title: 'Room A' },

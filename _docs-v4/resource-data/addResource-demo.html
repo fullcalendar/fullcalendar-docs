@@ -3,6 +3,7 @@ title: Add resources dynamically with addResource
 description: Click the "+room" button to dynamically add a resource
 layout: demo-v4
 needs_scheduler: true
+plugins: [ timeline, resource-common, resource-timeline ]
 ---
 <script>
 
@@ -10,10 +11,11 @@ needs_scheduler: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'resourceTimeline' ],
       header: {
         left: 'promptResource today prev,next',
         center: 'title',
-        right: 'timelineDay,timelineWeek'
+        right: 'resourceTimelineDay,resourceTimelineWeek'
       },
       customButtons: {
         promptResource: {
@@ -28,7 +30,7 @@ needs_scheduler: true
           }
         }
       },
-      defaultView: 'timelineDay',
+      defaultView: 'resourceTimelineDay',
       resourceLabelText: 'Rooms',
       resources: [
         { id: 'a', title: 'Auditorium A' },

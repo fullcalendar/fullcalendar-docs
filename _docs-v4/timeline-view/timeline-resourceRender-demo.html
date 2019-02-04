@@ -2,8 +2,7 @@
 title: Using resourceRender with a popover in timeline-view
 description: Mouseover each "(?)" to see a popover that was attached via resourceRender
 layout: demo-v4
-needs_scheduler: true
-needs_json_feed: true
+plugins: [ timeline, resource-common, resource-timeline ]
 ---
 {% include popper-css.html %}
 <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
@@ -14,12 +13,13 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'resourceTimeline' ],
       header: {
         left: 'today prev,next',
         center: 'title',
-        right: 'timelineDay,timelineWeek'
+        right: 'resourceTimelineDay,resourceTimelineWeek'
       },
-      defaultView: 'timelineDay',
+      defaultView: 'resourceTimelineDay',
       resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json',
 
       resourceRender: function(info) {

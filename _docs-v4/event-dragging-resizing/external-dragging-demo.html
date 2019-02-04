@@ -3,10 +3,14 @@ title: Drag-n-drop external events
 description: Drag external events into the calendar with the Draggable API
 layout: demo-v4
 disable_base_styles: true
+plugins: [ interaction, daygrid, timegrid ]
 ---
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
+    var Calendar = FullCalendar.Calendar;
+    var Draggable = FullCalendarInteraction.Draggable;
+
     var containerEl = document.getElementById('external-events');
     var calendarEl = document.getElementById('calendar');
     var checkbox = document.getElementById('drop-remove');
@@ -14,7 +18,7 @@ disable_base_styles: true
     // initialize the external events
     // -----------------------------------------------------------------
 
-    new FullCalendar.Draggable(containerEl, {
+    new Draggable(containerEl, {
       itemSelector: '.fc-event',
       eventData: function(eventEl) {
         return {
@@ -26,7 +30,8 @@ disable_base_styles: true
     // initialize the calendar
     // -----------------------------------------------------------------
 
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+    var calendar = new Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
       header: {
         left: 'prev,next today',
         center: 'title',

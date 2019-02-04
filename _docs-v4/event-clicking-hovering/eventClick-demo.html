@@ -2,6 +2,7 @@
 title: eventClick triggering
 description: Click on an event to trigger eventClick
 layout: demo-v4
+plugins: [ daygrid ]
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
@@ -10,6 +11,7 @@ layout: demo-v4
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid' ],
       eventClick: function(info) {
         var eventObj = info.event;
 

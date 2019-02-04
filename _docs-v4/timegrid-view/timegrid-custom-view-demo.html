@@ -1,7 +1,7 @@
 ---
-title: Custom 4-day agenda view
+title: Custom 4-day TimeGrid view
 layout: demo-v4
-needs_json_feed: true
+plugins: [ daygrid, timegrid ]
 ---
 <script>
 
@@ -9,18 +9,20 @@ needs_json_feed: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'timeGrid' ],
       timeZone: 'UTC',
-      defaultView: 'agendaFourDay',
+      defaultView: 'timeGridFourDay',
       groupByResource: true,
       header: {
         left: 'prev,next',
         center: 'title',
-        right: 'agendaDay,agendaFourDay'
+        right: 'timeGridDay,timeGridFourDay'
       },
       views: {
-        agendaFourDay: {
-          type: 'agenda',
-          duration: { days: 4 }
+        timeGridFourDay: {
+          type: 'timeGrid',
+          duration: { days: 4 },
+          buttonText: '4 day'
         }
       },
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'

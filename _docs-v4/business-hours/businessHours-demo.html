@@ -1,6 +1,7 @@
 ---
 title: Business-hours on agendaWeek view
 layout: demo-v4
+plugins: [ daygrid, timegrid ]
 ---
 <script>
 
@@ -8,7 +9,8 @@ layout: demo-v4
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'agendaWeek',
+      plugins: [ 'timeGrid' ],
+      defaultView: 'timeGridWeek',
       businessHours: true
     });
 

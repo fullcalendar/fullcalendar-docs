@@ -1,6 +1,7 @@
 ---
 title: Custom buttons and a footer
 layout: demo-v4
+plugins: [ daygrid, timegrid ]
 ---
 <script>
 
@@ -8,8 +9,9 @@ layout: demo-v4
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid' ],
       header: {
-        left: 'month,agendaWeek,agendaDay custom1',
+        left: 'dayGridMonth,timeGridWeek,timeGridDay custom1',
         center: 'title',
         right: 'custom2 prevYear,prev,next,nextYear'
       },
