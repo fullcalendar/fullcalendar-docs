@@ -2,13 +2,12 @@
 title: Vertical Resource View
 is_premium: true
 children:
-  - groupByResource
-  - groupByDateAndResource
+  - datesAboveResources
   - resource-daygrid-view
 demos:
   - vertical-resource-standard-demo
   - vertical-resource-custom-demo
-  - groupByDateAndResource-demo
+  - datesAboveResources-demo
   - vertical-resource-resourceRender-demo
 ---
 
