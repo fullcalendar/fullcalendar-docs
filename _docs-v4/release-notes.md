@@ -762,7 +762,7 @@ Solves [issue 3593](https://github.com/fullcalendar/fullcalendar/issues/3593)
 
 ## Event JSON Feed
 
-[Event JSON feed fetching](events-json-feed) previously relied upon jQuery's AJAX functionality, but now it relies on [SuperAgent](http://visionmedia.github.io/superagent/). The following FullCalendar functionality has been affected:
+[Event JSON feed fetching](events-json-feed) previously relied upon jQuery's AJAX!!! functionality, but now it relies on [SuperAgent](http://visionmedia.github.io/superagent/). The following FullCalendar functionality has been affected:
 
 <table>
 
