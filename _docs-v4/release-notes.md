@@ -22,7 +22,7 @@ layout: text
 <div class='sidenote-layout__main' id='summary' markdown='1'>
 ## Summary of Changes
 
-Version 4.0.0-alpha.4 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
+Version 4.0.0-beta.1 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
 
 **Major breaking changes:**
 
@@ -33,6 +33,7 @@ Version 4.0.0-alpha.4 is now available. When the 4.0.0 is officially released, i
   - Native Date objects are used in place of Moment objects.
   - Time zone support was reworked and is now more intuitive.
   - Date formatting is delegated to the native [DateTimeFormat API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat).
+- A modular plugin-based API.
 - A more object-oriented API. There are distinct `Calendar`, `EventSource`, and `Event` classes.
 - Many settings and callbacks have been renamed, reworked, or their arguments have changed.
 - IE 9 & 10 support has been dropped. Only IE11 and Edge are supported.
@@ -50,11 +51,7 @@ Version 4.0.0-alpha.4 is now available. When the 4.0.0 is officially released, i
 
 **What's yet to be done?**
 
-You might notice that `jquery`, `moment`, `moment-timezone`, and `luxon` are listed as dependencies in `package.json`. This is because the connector plugins to the third-party libs currently reside in the main `fullcalendar` package. For the official v4 release, these will be moved into their own packages (example: `fullcalendar-moment`). If you use v4.0.0-alpha.4, these dependencies will be *downloaded* when you run `npm install`, but they *won't* be included in your bundle if you don't require the corresponding connectors.!!!
-
-Also, the TimeGrid view and event drag-n-drop functionality will be broken out into their own plugins to further reduce bundle size if you don't need those features. All of these plugins will be passed to the `Calendar` constructor instead of being imported solely for side effects.
-
-There are also a few minor regressions that will be addressed before launch:
+There are a few minor regressions that will be addressed before launch:
 [#479](https://github.com/fullcalendar/fullcalendar-scheduler/issues/479),
 [#480](https://github.com/fullcalendar/fullcalendar-scheduler/issues/480),
 [#481](https://github.com/fullcalendar/fullcalendar-scheduler/issues/481),
@@ -66,17 +63,16 @@ There are also a few minor regressions that will be addressed before launch:
 
 **Getting the code:**
 
-Use NPM/Webpack:
+Read the instructions for [use within an ES6 build system](initialize-es6). Essentially, you'll do something like this:
 
 ```
-npm install fullcalendar@alpha
-npm install fullcalendar-scheduler@alpha
+npm install @fullcalendar/core @fullcalendar/daygrid
 ```
 
 Or download directly:
 
-- [fullcalendar-4.0.0-alpha.4.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-alpha.4/fullcalendar-4.0.0-alpha.4.zip)
-- [fullcalendar-scheduler-4.0.0-alpha.4.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-alpha.4/fullcalendar-scheduler-4.0.0-alpha.4.zip)
+- [fullcalendar-4.0.0-beta.1.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-beta.1/fullcalendar-4.0.0-beta.1.zip)
+- [fullcalendar-scheduler-4.0.0-beta.1.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-beta.1/fullcalendar-scheduler-4.0.0-beta.1.zip)
 
 
 <br />
@@ -91,7 +87,9 @@ Or download directly:
 <div class='sidenote-layout__sidenote' id='toc' markdown='1'>
 ## Table of Contents
 
-- [Core](#core)
+- [Initialization](#initialization)
+- [Scheduler](#scheduler)
+- [Other Core Changes](#other-core-changes)
 - [Date Library](#date-library)
 - [Time Zone](#time-zone)
 - [Locales](#locales)
@@ -112,63 +110,136 @@ Or download directly:
 - [Event Popover](#event-popover)
 - [Business Hours](#business-hours)
 - [Toolbar](#toolbar)
+- [Theming](#theming)
 - [Month View](#month-view)
+- [Agenda View](#agenda-view)
 - [List View](#list-view)
 - [Timeline View](#timeline-view)
+- [Vertical Resource View](#vertical-resource-view)
 - [Resource Fetching](#resource-fetching)
 - [Resource Model](#resource-model)
 - [Resource Rendering](#resource-rendering)
+- [Package Managers](#package-managers)
 
 </div>
 </div>
 
 
-## Core
+## Initialization
 
-Breaking changes:
+Previously, a calendar was initialized by calling the `$().fullCalendar()` jQuery method. FullCalendar resided in a single JavaScript file that needed to be included on the page before pageload.
 
-<table>
+Now, a calendar is initialized by instantiating a `Calendar` object and then calling its `render` method. Also, **all functionality has been broken into plugins**. You'll need to use the plugin system for any and all views in addition to drag-n-drop functionality. [See a full list of plugins &raquo;](plugin-index)
 
-<tr>
-<th><a href='installation'>loading the module</a></th>
-<td markdown='1'>
-Instead of relying on FullCalendar to attach a new method to jQuery (`$().fullCalendar()`), you must do `import { Calendar } from 'fullcalendar'` or use the browser global `FullCalendar.Calendar`.
-</td>
-</tr>
+If you want to use [script tags and browser globals](initialize-globals) you can do something like this:
 
-<tr>
-<th>print stylesheet</th>
-<td markdown='1'>
-No need to use a separate `<link>` tag to include the `fullcalendar.print.css` stylesheet. It will be automatically included within `fullcalendar.css!!!`, by use of media queries. [Issue 3594](https://github.com/fullcalendar/fullcalendar/issues/3594)
-</td>
-</tr>
+```html
+<link href='fullcalendar/core/main.css' rel='stylesheet' />
+<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
 
-<tr>
-<th><a href='initialization'>initializing a calendar</a></th>
-<td markdown='1'>
-Instead of using jQuery like `$().fullCalendar()`, do something like this:
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/daygrid/main.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid' ],
+      defaultView: 'dayGridMonth'
+    });
+
+    calendar.render();
+  });
+
+</script>
+```
+
+Or if you want to use [an ES6 build environment](initialize-es6) install the necessary dependencies:
+
+```
+npm install --save @fullcalendar/core @fullcalendar/daygrid
+```
+
+And then write your JS:
 
 ```js
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
+
   var calendar = new Calendar(calendarEl, {
-    // options
+    plugins: [ dayGridPlugin ],
+    defaultView: 'dayGridMonth'
   });
+
   calendar.render();
 });
 ```
 
-[Issue 3703](https://github.com/fullcalendar/fullcalendar/issues/3703)
+You'll need to manually include the necessary CSS files on your page like so:
+
+```html
+<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
+<link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
+```
+
+The CSS aspect might seem a little clunky to some people. [Please chime into the GitHub issue](#) to have you voice heard.
+
+Also, many of the views have been renamed:
+
+- <del><strong>month</strong></del> renamed to **dayGridMonth** (uses the [dayGrid](daygrid-view) plugin, but has [its own article](month-view))
+- <del><strong>basicWeek</strong></del> renamed to **dayGridWeek** (uses the [dayGrid](daygrid-view) plugin)
+- <del><strong>basicDay</strong></del> renamed to **dayGridDay** (uses the [dayGrid](daygrid-view) plugin)
+- <del><strong>agendaWeek</strong></del> renamed to **timeGridWeek** (uses the [timeGrid](timegrid-view) plugin)
+- <del><strong>agendaDay</strong></del> renamed to **timeGridDay** (uses the [timeGrid](timegrid-view) plugin)
+
+
+## Scheduler
+
+The [premium Scheduler product]({{ site.baseurl }}/scheduler) has been broken into a number of separate plugins:
+
+- The "timeline" views:
+  - In the likely event that you need resources, use the [resourceTimeline](timeline-view) plugin along with the following views:
+    - `resourceTimelineDay`
+    - `resourceTimelineWeek`
+    - `resourceTimelineMonth`
+    - `resourceTimelineYear`
+  - If you want to use timeline view, [but don't need resources](timeline-view-no-resources), use the `timeline` plugin along with the following views:
+    - `timelineDay`
+    - `timelineWeek`
+    - `timelineMonth`
+    - `timelineYear`
+- The "vertical resource" views:
+  - For the `timeGrid` views (previously named "<del>agenda</del>" views), you must explicitly use the [resourceTimeGrid](vertical-resource-view) plugin along with the following views:
+    - `resourceTimeGridDay`
+    - `resourceTimeGridWeek`
+  - For the `dayGrid` views (previously named "<del>basic</del>" views), you must explicitly use the [resourceDayGrid](resource-daygrid-view) plugin along with the following views:
+    - `resourceDayGridDay`
+    - `resourceDayGridWeek`
+
+Gone are the days where you could simply specify a `resources` settings or a `groupByResource` / `groupByDateAndResource` setting and have the calendar infer that you want a resource view.
+
+## Other Core Changes
+
+<table>
+
+<tr>
+<th>print stylesheet</th>
+<td markdown='1'>
+No need to use a separate `<link>` tag for a print-only stylesheet. It will be automatically included within the normal `core/main.css`, by use of media queries. [Issue 3594](https://github.com/fullcalendar/fullcalendar/issues/3594)
 </td>
 </tr>
 
 <tr>
 <th><a href='methods'>calling methods</a></th>
 <td markdown='1'>
-Instead of using jQuery like `$().fullCalendar('changeView', 'month!!!')`, do something like this:
+Instead of using jQuery like `$().fullCalendar('next')`, do something like this:
 
 ```js
-calendar.changeView('month!!!');
+calendar.next();
 ```
 </td>
 </tr>
@@ -176,7 +247,7 @@ calendar.changeView('month!!!');
 <tr>
 <th>util functions</th>
 <td markdown='1'>
-Top-level utility functions that were called like `$.fullCalendar.formatDate()` must now be accessed like `import { formatDate } from 'fullcalendar'` or via the global like `FullCalendar.formatDate`.
+Top-level utility functions that were called like `$.fullCalendar.formatDate()` must now be accessed like `import { formatDate } from '@fullcalendar/core'` or via the global like `FullCalendar.formatDate`.
 </td>
 </tr>
 
@@ -403,14 +474,14 @@ Will now be `Date` objects in UTC. [Issue 2981](https://github.com/fullcalendar/
 <tr>
 <th markdown='1'>a `false` time zone</th>
 <td markdown='1'>
-The `timezone: false` technique is no longer available. Instead, use a named time zone like `America/Chicago` with a [timeZoneImpl!!!](timeZoneImpl) of `'UTC-coercion'`, which is the default. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
+The `timezone: false` technique is no longer available. Instead, use a named time zone like `America/Chicago` without any time zone plugins. Addresses [2981](https://github.com/fullcalendar/fullcalendar/issues/2981), [2780](https://github.com/fullcalendar/fullcalendar/issues/2780), [3951](https://github.com/fullcalendar/fullcalendar/issues/3951)
 </td>
 </tr>
 
 <tr>
-<th><a href='timeZoneImpl'>timeZoneImpl!!!</a><br />(time zone implementation)</th>
+<th>Plugins</th>
 <td markdown='1'>
-Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone "implementation" is `UTC-coercion`, which essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
+Browsers have a tough time supporting time zones other than local and UTC, which is why the default named time zone implementation essentially shoehorns everything into UTC Date objects. However you can use third-party adapter plugins like [moment-timezone](moment-plugins#moment-timezone) or [luxon](luxon-plugin) for more authentic time zone implementations, though browser support will vary. [Issue 3188](https://github.com/fullcalendar/fullcalendar/issues/3188)
 </td>
 </tr>
 
@@ -466,6 +537,13 @@ Removed. Use a [date-formatting](date-formatting) plugin or function instead.
 <th><del>monthNamesShort</del></th>
 <td markdown='1'>
 Removed. Use a [date-formatting](date-formatting) plugin or function instead.
+</td>
+</tr>
+
+<tr>
+<th>jQuery UI Datepicker</th>
+<td markdown='1'>
+Previously, FullCalendar was kind enough to populate locales for jQuery UI Datepicker. This is no longer the case.
 </td>
 </tr>
 
@@ -762,16 +840,9 @@ Solves [issue 3593](https://github.com/fullcalendar/fullcalendar/issues/3593)
 
 ## Event JSON Feed
 
-[Event JSON feed fetching](events-json-feed) previously relied upon jQuery's AJAX!!! functionality, but now it relies on [SuperAgent](http://visionmedia.github.io/superagent/). The following FullCalendar functionality has been affected:
+The following FullCalendar functionality has been affected:
 
 <table>
-
-<tr>
-<th>dependency</th>
-<td markdown='1'>
-The `jquery(.min).js` file is no longer needed but SuperAgent is. Include the `superagent(.min).js` script tag if you are using globals. If using NPM/Webpack, SuperAgent will be automatically included.
-</td>
-</tr>
 
 <tr>
 <th>JSONP requesting</th>
@@ -851,16 +922,16 @@ The [Google Calendar Event Source](google-calendar) has been affected:
 <table>
 
 <tr>
-<th>dependency</th>
+<th><del>googleCalendarError</del></th>
 <td markdown='1'>
-Just like with JSON event feeds, make sure to SuperAgent has been included. If using NPM/Webpack, this happens automatically.
+Removed. Use [eventSourceFailure](eventSourceFailure) instead. [Issue 3982](https://github.com/fullcalendar/fullcalendar/issues/3982)
 </td>
 </tr>
 
 <tr>
-<th><del>googleCalendarError</del></th>
+<th>timeZone</th>
 <td markdown='1'>
-Removed. Use [eventSourceFailure](eventSourceFailure) instead. [Issue 3982](https://github.com/fullcalendar/fullcalendar/issues/3982)
+Previously, it was possible to specify timeZones with spaces such as "America/New York". Now, you must use underscores like "America/New_York".
 </td>
 </tr>
 
@@ -876,7 +947,7 @@ The way Views are customized and defined has been affected:
 <tr>
 <th><a href='view-specific-options'>view-specific options</a></th>
 <td markdown='1'>
-Providing options in the `basic` key will affect [month view](month-view).!!!
+In parity with how view names have been renamed, instead of specifying `agenda` and `basic` to affect views of a certain type, use `timeGrid` and `dayGrid` respectively.
 </td>
 </tr>
 
@@ -893,30 +964,33 @@ When subclassing the `View` class, the methods that must be implemented have cha
 Previously, to globally define a new type of view, you would use this technique:
 
 ```js
-$.fullCalendar.views.deluxeAgendaWeek = {
-  type: 'agendaWeek',
+$.fullCalendar.views.specialView = {
+  type: 'theViewType',
   defaults: { slotLabalInterval: '06:00' }
 };
 
-$.fullCalendar.views.custom = {
+$.fullCalendar.views.customView = {
   'class': CustomViewClass
 };
 ```
 
-This must rewritten as follows:
+This must rewritten as a plugin:
 
 ```js
-import { defineView } from 'fullcalendar';
+import { createPlugin } from '@fullcalendar/core';
 
-defineView('deluxeAgendaWeek', {
-  type: 'agendaWeek',
-  slotLabalInterval: '06:00' // top-level property!
-});
-
-defineView('custom', CustomViewClass); // can pass-in class directly!
+export default createPlugin({
+  views: {
+    specialView: {
+      type: 'theViewType',
+      slotLabalInterval: '06:00' // top-level property!
+    },
+    customView: CustomViewClass // can pass-in the class directly!
+  }
+})
 ```
 
-[Issue 3657](https://github.com/fullcalendar/fullcalendar/issues/3657). **This will likely change before the official v4.0.0 release.**
+Solves [issue 3657](https://github.com/fullcalendar/fullcalendar/issues/3657).
 </td>
 </tr>
 
@@ -1240,7 +1314,7 @@ Removed. Use multiple [addEvent](Calendar-addEvent) calls instead. Group togethe
 
 Visual changes:
 
-In agenda view, when an event is all-day, it would previously **only** render in the all-day area at the top. Now, it will render in both the all-day area **and** the time slots. [See this illustration](all-day-bg-event.png).
+In a `timeGrid` view (previously called "<del>agenda view</del>", when an event is all-day, it would previously **only** render in the all-day area at the top. Now, it will render in both the all-day area **and** the time slots. [See this illustration](all-day-bg-event.png).
 
 
 ## Event Clicking & Hovering
@@ -1551,9 +1625,67 @@ Determines the separator text when formatting the date range in the toolbar titl
 </table>
 
 
+## Theming
+
+<table>
+
+<tr>
+<th><del>theme</del> setting</th>
+<td markdown='1'>
+This previously-deprecated setting has been removed. Use [themeSystem](themeSystem) instead.
+</td>
+</tr>
+
+<tr>
+<th markdown='1'>`themeSystem` set to `'bootstrap4'`</th>
+<td markdown='1'>
+Now, simply specify `'bootstrap'`. Also, [initializing a Bootstrap 4 theme requires additional steps](bootstrap-theme).
+</td>
+</tr>
+
+<tr>
+<th>Bootstrap 3 support</th>
+<td markdown='1'>
+Removed. Consequently, the `bootstrapGlyphicons` option has been removed. Bootstrap 4 support remains however. Going forward, FullCalendar will only support the newest officially released version of Boostrap.
+</td>
+</tr>
+
+<tr>
+<th>jQuery UI theme support</th>
+<td markdown='1'>
+Removed. Consequently, the `themeButtonIcons` option has been removed.
+</td>
+</tr>
+
+</table>
+
+
 ## Month View
 
-The `MonthView` class is no longer exposed. Internally, the functionality has been rolled into `BasicView!!!`, which **is** exposed.
+The `MonthView` class is no longer exposed. Internally, the functionality has been rolled into `DayGridView`, which **is** exposed.
+
+
+## Agenda View
+
+As mentioned above, the "<del>agenda views</del>" have been renamed to the `timeGrid` views. The following settings have been affected:
+
+<table>
+
+<tr>
+<th><del>agendaEventMinHeight</del></th>
+<td markdown='1'>
+Renamed to [timeGridEventMinHeight](timeGridEventMinHeight)
+</td>
+</tr>
+
+<tr>
+<th><del>AgendaView</del> class</th>
+<td markdown='1'>
+Renamed to `TimeGridView`. Use this for programmatically extending functionality via a subclass.
+</td>
+</tr>
+
+</table>
 
 
 ## List View
@@ -1593,6 +1725,18 @@ The `render` function's first argument is **always** a [Resource object](resourc
 </tr>
 
 </table>
+
+
+## Vertical Resource View
+
+Previously, the <del>groupByResource</del> and <del>groupByDateAndResource</del> settings would do two things. They would "active" a vertical resource view (as opposed to rendering the non-resource version of the view) as well as control the headers at the top of the view.
+
+Now, explicitly specifying a resource view such as `resourceTimeGridDay` is how you "active" a vertical resource. Additionally, these two settings have been collapsed into one:
+
+```js
+datesAboveResources: false // the default. instead of groupByResource:true
+datesAboveResources: true // instead of groupByDateAndResource:true
+```
 
 
 ## Resource Fetching
@@ -1767,6 +1911,29 @@ There is currently no way to retrieve the element(s) that were previously availa
 <th markdown='1'>[rerenderResources](rerenderResources) method</th>
 <td markdown='1'>
 Previously rerendered all resources **AND** events. Now only renders the areas of the view where explicit resource data is displayed, such as the left cells in [Timeline View](timeline-view) and the top header in [Vertical Resource View](vertical-resource-view).
+</td>
+</tr>
+
+</table>
+
+
+### Package Managers
+
+Support for NPM (and Yarn) is strong, but here's what happened to support for other package managers:
+
+<table>
+
+<tr>
+<th>Bower</th>
+<td markdown='1'>
+Support has been dropped.
+</td>
+</tr>
+
+<tr>
+<th>Composer</th>
+<td markdown='1'>
+Support has been temporarily dropped, but this will be addressed before the official v4 release. It might be possible to use [Asset Packagist](https://asset-packagist.org/). You can read and comment on [the discussion](#).
 </td>
 </tr>
 
