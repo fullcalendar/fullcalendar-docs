@@ -51,8 +51,8 @@ $ bower install fullcalendar-scheduler
 ```
 
 
-## V4 Alpha Release
+## V4 Beta Release
 
-Want to try the v4 alpha release, which doesn't rely on jQuery or Moment anymore?
+Want to try the v4 beta release, which doesn't rely on jQuery or Moment anymore?
 
 [More information &raquo;]({{ site.baseurl }}/docs/v4/release-notes)

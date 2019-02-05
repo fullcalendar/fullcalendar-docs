@@ -13,5 +13,3 @@ String, *default*: `'standard'`
 
 `'bootstrap'`
 : Prepares the calendar for a [Bootstrap 4](https://getbootstrap.com/) theme. [There are other instructions you must follow to get Bootstrap theming working &raquo;](bootstrap-theme)
-
-[Explore themes with the theme chooser &raquo;](/releases/fullcalendar/3-latest/demos/themes.html)
