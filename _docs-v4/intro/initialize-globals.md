@@ -44,6 +44,8 @@ The first step is to download and unzip a ZIP archive from the [Downloads page](
 
 You'll need to ensure the correct JavaScript and CSS external files are included in the `<head>` of you page. You'll always need the `core` files, which offer the `FullCalendar` global variable.
 
+[View a runnable example &raquo;](initialize-globals-demo)
+
 ## Plugins
 
 FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and save your users from having to download it. By default, the bare core of FullCalendar does not do *anything*. You'll *need* to use a plugin to display a calendar view at the very least.
