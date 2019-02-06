@@ -83,7 +83,7 @@ Or download directly:
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs). Please include "v4" in the title.
 
-**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2018/12/alpha-release-scheduler-support).
+**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2019/02/v4-beta-release).
 
 </div>
 <div class='sidenote-layout__sidenote' id='toc' markdown='1'>
