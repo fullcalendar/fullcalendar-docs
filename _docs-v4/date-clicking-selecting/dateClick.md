@@ -36,7 +36,7 @@ Alternatively, you can use [script tags and browser globals](initialize-globals)
 <script src='fullcalendar/interaction/main.js'></script>
 <script>
 ...
-let calendar = new Calendar(calendarEl, {
+var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'interaction' ],
   ...
 });
@@ -110,7 +110,7 @@ The dateClick trigger is **not** fired when the user clicks a day heading in lis
 For resource views, this callback will receive an additional [Resource Object](resource-object) parameter. Example:
 
 ```js
-var calendar = new Calendar(calendarEl, {
+var calendar = new FullCalendar.Calendar(calendarEl, {
 
   dateClick: function(info) {
     alert('Date: ' + info.dateStr);
