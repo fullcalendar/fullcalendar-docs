@@ -26,7 +26,7 @@
   </style>
 {% endunless %}
 
-<link href='{{ site.baseurl }}/releases/4.0.0-beta.1/packages/core/main.css' rel='stylesheet' />
+<link href='{{ site.baseurl }}/releases/4.0.0-beta.2/packages/core/main.css' rel='stylesheet' />
 
 {% for plugin_name in page.plugins %}
   {% if plugin_name == 'daygrid'
@@ -35,17 +35,17 @@
      or plugin_name == 'bootstrap'
      or plugin_name == 'timeline'
      or plugin_name == 'resource-timeline' %}
-    <link href='{{ site.baseurl }}/releases/4.0.0-beta.1/packages/{{ plugin_name }}/main.css' rel='stylesheet' />
+    <link href='{{ site.baseurl }}/releases/4.0.0-beta.2/packages/{{ plugin_name }}/main.css' rel='stylesheet' />
   {% endif %}
 {% endfor %}
 
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
-<script src='{{ site.baseurl }}/releases/4.0.0-beta.1/packages/core/main.js'></script>
+<script src='{{ site.baseurl }}/releases/4.0.0-beta.2/packages/core/main.js'></script>
 
 {% if page.needs_locales %}
-  <script src='{{ site.baseurl }}/releases/4.0.0-beta.1/packages/core/locales-all.js'></script>
+  <script src='{{ site.baseurl }}/releases/4.0.0-beta.2/packages/core/locales-all.js'></script>
 {% endif %}
 
 {% for plugin_name in page.plugins %}
-  <script src='{{ site.baseurl }}/releases/4.0.0-beta.1/packages/{{ plugin_name }}/main.js'></script>
+  <script src='{{ site.baseurl }}/releases/4.0.0-beta.2/packages/{{ plugin_name }}/main.js'></script>
 {% endfor %}

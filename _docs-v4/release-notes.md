@@ -22,7 +22,7 @@ layout: text
 <div class='sidenote-layout__main' id='summary' markdown='1'>
 ## Summary of Changes
 
-Version 4.0.0-beta.1 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
+Version 4.0.0-beta.2 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
 
 **Major breaking changes:**
 
@@ -73,8 +73,8 @@ npm install @fullcalendar/core @fullcalendar/daygrid
 
 Or download directly:
 
-- [fullcalendar-4.0.0-beta.1.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-beta.1/fullcalendar-4.0.0-beta.1.zip)
-- [fullcalendar-scheduler-4.0.0-beta.1.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-beta.1/fullcalendar-scheduler-4.0.0-beta.1.zip)
+- [fullcalendar-4.0.0-beta.2.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-beta.2/fullcalendar-4.0.0-beta.2.zip)
+- [fullcalendar-scheduler-4.0.0-beta.2.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-beta.2/fullcalendar-scheduler-4.0.0-beta.2.zip)
 
 
 <br />

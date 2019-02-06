@@ -20,10 +20,6 @@ class ReleasesIndexer < Jekyll::Generator
           { 'version' => '1-latest', 'needsCore' => '3-latest' }
         ])
     }
-
-    # hack
-    site.data['fullcalendar_v4_latest'] = '/releases/fullcalendar/4.0.0-beta.1/fullcalendar-packages'
-    site.data['fullcalendar_scheduler_v4_latest'] = '/releases/fullcalendar-scheduler/4.0.0-beta.1/fullcalendar-packages'
   end
 
 end
