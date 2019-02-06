@@ -70,4 +70,4 @@ FullCalendar's core module, in addition to its plugins, provide stylesheets that
 
 You may want to concatenate them together before serving them to your users. Or, you may way to include all of them from a CSS preprocessor like [Sass](https://sass-lang.com/), which will have the same effect.
 
-We know this technique is not as elegant as you'd might like. [Please chime into the Github Issue to have your opinion heard &raquo;](#)
+We know this technique is not as elegant as you'd might like. [Please chime into the Github Issue to have your opinion heard &raquo;](https://github.com/fullcalendar/fullcalendar/issues/4490)

@@ -51,13 +51,15 @@ Version 4.0.0-beta.1 is now available. When the 4.0.0 is officially released, it
 
 **What's yet to be done?**
 
-There are a few minor regressions that will be addressed before launch:
+There are a few minor regressions and open-questions that will be addressed before launch:
 [#479](https://github.com/fullcalendar/fullcalendar-scheduler/issues/479),
 [#480](https://github.com/fullcalendar/fullcalendar-scheduler/issues/480),
 [#481](https://github.com/fullcalendar/fullcalendar-scheduler/issues/481),
 [#482](https://github.com/fullcalendar/fullcalendar-scheduler/issues/482),
 [#4420](https://github.com/fullcalendar/fullcalendar/issues/4420),
-[#4421](https://github.com/fullcalendar/fullcalendar/issues/4421)
+[#4421](https://github.com/fullcalendar/fullcalendar/issues/4421),
+[#4489](https://github.com/fullcalendar/fullcalendar/issues/4489),
+[#4490](https://github.com/fullcalendar/fullcalendar/issues/4490)
 
 <br />
 
@@ -186,7 +188,7 @@ You'll need to manually include the necessary CSS files on your page like so:
 <link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
 ```
 
-The CSS aspect might seem a little clunky to some people. [Please chime into the GitHub issue](#) to have you voice heard.
+The CSS aspect might seem a little clunky to some people. [Please chime into the GitHub issue](https://github.com/fullcalendar/fullcalendar/issues/4490) to have you voice heard.
 
 Also, many of the views have been renamed:
 
@@ -1933,7 +1935,7 @@ Support has been dropped.
 <tr>
 <th>Composer</th>
 <td markdown='1'>
-Support has been temporarily dropped, but this will be addressed before the official v4 release. It might be possible to use [Asset Packagist](https://asset-packagist.org/). You can read and comment on [the discussion](#).
+Support has been temporarily dropped, but this will be addressed before the official v4 release. It might be possible to use [Asset Packagist](https://asset-packagist.org/). You can read and comment on [the discussion](https://github.com/fullcalendar/fullcalendar/issues/4489).
 </td>
 </tr>
 
