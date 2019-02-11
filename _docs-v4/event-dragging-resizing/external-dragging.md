@@ -10,7 +10,7 @@ To demonstrate the most basic case, you can create a draggable element by instan
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import interactionPlugin, { Draggable } '@fullcalendar/interaction';
+import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 
 document.addEventListener('DOMContentLoaded', function() {
   let draggableEl = document.getElementById('mydraggable');
