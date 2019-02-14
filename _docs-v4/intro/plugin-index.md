@@ -5,7 +5,7 @@ layout: docs-sublanding
 
 FullCalendar offers the following packages to extended the funcionality of the core:
 
-- **@fullcalendar/interaction** - to detect [dateClick](dateClick) actions, [selectable](selectable) actions, [event drag-n-drop and resizing](http://fullcalendar.test/docs/v4/editable). *Not needed* for [eventClick](eventClick) or [eventMouseEnter](eventMouseEnter)/[eventMouseLeave](eventMouseLeave).
+- **@fullcalendar/interaction** - to detect [dateClick](dateClick) actions, [selectable](selectable) actions, [event drag-n-drop and resizing](editable). *Not needed* for [eventClick](eventClick) or [eventMouseEnter](eventMouseEnter)/[eventMouseLeave](eventMouseLeave).
 - **@fullcalendar/daygrid** - for [Month view](month-view) and [DayGrid view](daygrid-view).
 - **@fullcalendar/timegrid** - for [TimeGrid view](timegrid-view).
 - **@fullcalendar/list** - for [List view](list-view).
