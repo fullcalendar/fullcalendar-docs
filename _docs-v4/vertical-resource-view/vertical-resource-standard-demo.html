@@ -12,15 +12,23 @@ plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegr
       plugins: [ 'resourceTimeGrid' ],
       timeZone: 'UTC',
       defaultView: 'resourceTimeGridDay',
-      groupByResource: true,
       resources: [
         { id: 'a', title: 'Room A' },
-        { id: 'b', title: 'Room B' }
+        { id: 'b', title: 'Room B'},
+        { id: 'c', title: 'Room C' },
+        { id: 'd', title: 'Room D' }
       ],
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=2'
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=4&single-day'
     });
 
     calendar.render();
   });
 
 </script>
+<style>
+
+  .fc-today {
+    background: transparent !important; /* hack. because demo will always start out on current day */
+  }
+
+</style>

@@ -1,7 +1,7 @@
 ---
 title: dayGridDay and dayGridWeek views
 layout: demo-v4
-plugins: [ daygrid ]
+plugins: [ daygrid, interaction ]
 ---
 <script>
 
@@ -9,7 +9,7 @@ plugins: [ daygrid ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid' ],
+      plugins: [ 'dayGrid', 'interaction' ],
       timeZone: 'UTC',
       defaultView: 'dayGridWeek',
       header: {
@@ -17,6 +17,7 @@ plugins: [ daygrid ]
         center: 'title',
         right: 'dayGridDay,dayGridWeek'
       },
+      editable: true,
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });
 

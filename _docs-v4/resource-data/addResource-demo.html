@@ -2,7 +2,7 @@
 title: Add resources dynamically with addResource
 description: Click the "+room" button to dynamically add a resource
 layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline ]
+plugins: [ timeline, resource-common, resource-timeline, interaction ]
 ---
 <script>
 
@@ -10,7 +10,8 @@ plugins: [ timeline, resource-common, resource-timeline ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'resourceTimeline' ],
+      timeZone: 'UTC',
+      plugins: [ 'resourceTimeline', 'interaction' ],
       header: {
         left: 'promptResource today prev,next',
         center: 'title',
@@ -29,36 +30,11 @@ plugins: [ timeline, resource-common, resource-timeline ]
           }
         }
       },
+      aspectRatio: 1.5,
       defaultView: 'resourceTimelineDay',
       resourceLabelText: 'Rooms',
-      resources: [
-        { id: 'a', title: 'Auditorium A' },
-        { id: 'b', title: 'Auditorium B' },
-        { id: 'c', title: 'Auditorium C' },
-        { id: 'd', title: 'Auditorium D' },
-        { id: 'e', title: 'Auditorium E' },
-        { id: 'f', title: 'Auditorium F' },
-        { id: 'g', title: 'Auditorium G' },
-        { id: 'h', title: 'Auditorium H' },
-        { id: 'i', title: 'Auditorium I' },
-        { id: 'j', title: 'Auditorium J' },
-        { id: 'k', title: 'Auditorium K' },
-        { id: 'l', title: 'Auditorium L' },
-        { id: 'm', title: 'Auditorium M' },
-        { id: 'n', title: 'Auditorium N' },
-        { id: 'o', title: 'Auditorium O' },
-        { id: 'p', title: 'Auditorium P' },
-        { id: 'q', title: 'Auditorium Q' },
-        { id: 'r', title: 'Auditorium R' },
-        { id: 's', title: 'Auditorium S' },
-        { id: 't', title: 'Auditorium T' },
-        { id: 'u', title: 'Auditorium U' },
-        { id: 'v', title: 'Auditorium V' },
-        { id: 'w', title: 'Auditorium W' },
-        { id: 'x', title: 'Auditorium X' },
-        { id: 'y', title: 'Auditorium Y' },
-        { id: 'z', title: 'Auditorium Z' }
-      ]
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json&with-nesting',
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json&single-day&for-resource-timeline'
     });
 
     calendar.render();
