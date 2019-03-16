@@ -1,5 +1,7 @@
 ---
 title: timeZone
+title_for_landing: Time Zone
+illustration: timezone
 layout: docs-sublanding
 demos:
   - timeZone-demo
