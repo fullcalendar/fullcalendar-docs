@@ -1,20 +1,20 @@
 
-{% if page.version.is_pre %}
+{% if page.version.id == "v3" %}
   <div class='hero__warning'>
-    This version is in beta.
+    These docs are for an old release.
     <a href='{{ site.baseurl }}/docs/upgrading-from-v3'>
-      Read the release notes
+      Info on upgrading to v4
     </a>
   </div>
-{% elsif page.version.is_latest %}
-  <div class='hero__warning' style='display:none'>
-    {% comment %}for JS to dynamically inject warning{% endcomment %}
-  </div>
-{% else %}
+{% elsif page.version.id == "v1" %}
   <div class='hero__warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/docs/v3/upgrading-from-v1'>
       Info on upgrading to version 2/3
     </a>
+  </div>
+{% else %}
+  <div class='hero__warning' style='display:none'>
+    {% comment %}for JS to dynamically inject warning{% endcomment %}
   </div>
 {% endif %}

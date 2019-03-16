@@ -27,11 +27,10 @@ available_versions:
 
   - id: v4
     collection: docs-v4
-    is_pre: true
+    is_latest: true
 
   - id: v3
     collection: docs-v3
-    is_latest: true
 
   - id: v2
     aliased_to: v3
