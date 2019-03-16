@@ -18,7 +18,7 @@ module Jekyll
 
       if release
         url = release['baseUrl'] + '/main.min.js'
-        "<script src='#{url}''></script>"
+        "<script src='#{url}'></script>"
       else
         puts "Could not identify release by '#{rendered_input}'"
         ''

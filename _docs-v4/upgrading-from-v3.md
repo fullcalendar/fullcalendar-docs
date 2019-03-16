@@ -79,7 +79,7 @@ Or download directly:
 
 <br />
 
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs/v4). They are a work in progress.
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs). They are a work in progress.
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs). Please include "v4" in the title.
 

@@ -7,7 +7,7 @@ plugins: [ interaction, daygrid, timegrid, list ]
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
-    var initialTimeZone = 'local';
+    var initialTimeZone = 'UTC';
     var timeZoneSelectorEl = document.getElementById('time-zone-selector');
     var loadingEl = document.getElementById('loading');
     var calendarEl = document.getElementById('calendar');
@@ -58,7 +58,7 @@ plugins: [ interaction, daygrid, timegrid, list ]
 
     // when the timezone selector changes, dynamically change the calendar option
     timeZoneSelectorEl.addEventListener('change', function() {
-      calendar.setOption('timeZone', this.value || false);
+      calendar.setOption('timeZone', this.value);
     });
 
   });
@@ -103,8 +103,8 @@ plugins: [ interaction, daygrid, timegrid, list ]
     <div style='float:left'>
       Timezone:
       <select id='time-zone-selector'>
-        <option value='local'>local</option>
         <option value='UTC'>UTC</option>
+        <option value='local'>local</option>
       </select>
     </div>
 
