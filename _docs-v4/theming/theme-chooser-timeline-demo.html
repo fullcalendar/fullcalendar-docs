@@ -1,13 +1,14 @@
 ---
 title: Theme Chooser for Timeline Views
 layout: demo-v4
+disable_base_styles: true
 plugins: [ interaction, bootstrap, timeline, resource-common, resource-timeline ]
 ---
 <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
 <script src='{{ site.baseurl }}/assets/theme-chooser.js'></script>
 <script>
 
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar;
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
           },
+          aspectRatio: 1.5,
           defaultView: 'resourceTimelineDay',
           navLinks: true, // can click day/week names to navigate views
           editable: true,
