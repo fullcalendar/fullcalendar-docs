@@ -1,8 +1,6 @@
 ---
 title: Upgrading to v2
 layout: text
-is_docs: true
-permalink: /docs/upgrading-to-v2
 ---
 
 FullCalendar version 2.0 ([full documentation]({{ site.baseurl }}/docs))
@@ -26,19 +24,19 @@ Affected options:
 
 <table>
 <tr><th>Option</th><th>Upgrade Notes</th></tr>
-<tr><td><del><code>year</code></del></td><td rowspan='3'>use <a href='{{ site.baseurl}}/docs/defaultDate'><code>defaultDate</code></a> instead, which is Moment-like and determines year, month, and date</td></tr>
+<tr><td><del><code>year</code></del></td><td rowspan='3'>use <a href='defaultDate'><code>defaultDate</code></a> instead, which is Moment-like and determines year, month, and date</td></tr>
 <tr><td><del><code>month</code></del></td></tr>
 <tr><td><del><code>date</code></del></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/gotoDate'><code>gotoDate</code> method</a></td><td rowspan='4'>Uses Moments</td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/getDate'><code>getDate</code> method</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/events-function'><code>events</code> as a function</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/dayRender'><code>dayRender</code> callback</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/dayClick'><code>dayClick</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/drop'><code>drop</code> callback</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/eventDrop'><code>eventDrop</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/eventResize'><code>eventResize</code> callback</a></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/select-callback'><code>select</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='{{ site.baseurl}}/docs/moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> parameter removed. <code>end</code> is now <b>exclusive!</b></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/select-method'><code>select</code> method</a></td></tr>
+<tr><td><a href='gotoDate'><code>gotoDate</code> method</a></td><td rowspan='4'>Uses Moments</td></tr>
+<tr><td><a href='getDate'><code>getDate</code> method</a></td></tr>
+<tr><td><a href='events-function'><code>events</code> as a function</a></td></tr>
+<tr><td><a href='dayRender'><code>dayRender</code> callback</a></td></tr>
+<tr><td><a href='dayClick'><code>dayClick</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
+<tr><td><a href='drop'><code>drop</code> callback</a></td></tr>
+<tr><td><a href='eventDrop'><code>eventDrop</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> removed, <code>delta</code> added</td></tr>
+<tr><td><a href='eventResize'><code>eventResize</code> callback</a></td></tr>
+<tr><td><a href='select-callback'><code>select</code> callback</a></td><td rowspan='2'>Uses Moments, which may be <a href='moment#ambiguously-timed'>ambiguously-timed</a>.<br /><code>allDay</code> parameter removed. <code>end</code> is now <b>exclusive!</b></td></tr>
+<tr><td><a href='select-method'><code>select</code> method</a></td></tr>
 </table>
 
 [Event Object]({{ site.baseurl }}/docs/event-object) modifications:
@@ -71,12 +69,12 @@ The following options have been affected:
 
 <table>
 <tr><th>Option</th><th>Upgrade Notes</th></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/incrementDate'><code>incrementDate</code> method</a></td><td>accepts a Duration</td></tr>
-<tr><td><del><code>slotMinutes</code></del></td><td>superseded by <a href='{{ site.baseurl}}/docs/slotDuration'><code>slotDuration</code></a></td></tr>
-<tr><td><del><code>snapMinutes</code></del></td><td>superseded by <a href='{{ site.baseurl}}/docs/snapDuration'><code>snapDuration</code></a></td></tr>
-<tr><td><del><code>firstHour</code></del></td><td>superseded by <a href='{{ site.baseurl}}/docs/scrollTime'><code>scrollTime</code></a></td></tr>
-<tr><td rowspan='2'><del><code>defaultEventMinutes</code></del></td><td>superseded by <a href='{{ site.baseurl}}/docs/defaultTimedEventDuration'><code>defaultTimedEventDuration</code></a></td></tr>
-<tr><td>superseded by <a href='{{ site.baseurl}}/docs/defaultAllDayEventDuration'><code>defaultAllDayEventDuration</code></a></td></tr>
+<tr><td><a href='incrementDate'><code>incrementDate</code> method</a></td><td>accepts a Duration</td></tr>
+<tr><td><del><code>slotMinutes</code></del></td><td>superseded by <a href='slotDuration'><code>slotDuration</code></a></td></tr>
+<tr><td><del><code>snapMinutes</code></del></td><td>superseded by <a href='snapDuration'><code>snapDuration</code></a></td></tr>
+<tr><td><del><code>firstHour</code></del></td><td>superseded by <a href='scrollTime'><code>scrollTime</code></a></td></tr>
+<tr><td rowspan='2'><del><code>defaultEventMinutes</code></del></td><td>superseded by <a href='defaultTimedEventDuration'><code>defaultTimedEventDuration</code></a></td></tr>
+<tr><td>superseded by <a href='defaultAllDayEventDuration'><code>defaultAllDayEventDuration</code></a></td></tr>
 </table>
 
 *Note*: Anywhere the API accepts a Duration, a "Duration-like" parameter can be given (anything the
@@ -98,7 +96,7 @@ characters are the same, **but some have changed!**
 <tr><td><code>TT</code> (AM or PM)</td><td><code>A</code></td></tr>
 <tr><td><code>S</code> (st, nd, rd, th)</td><td><code>o</code></td></tr>
 <tr><td><code>''</code> (escape characters)</td><td><code>[]</code></td></tr>
-<tr><td><code>[]</code> and <code>{}</code> for range formatting</td><td>no replacement. <a href='{{ site.baseurl}}/docs/formatRange'><code>formatRange</code></a> works differently</td></tr>
+<tr><td><code>[]</code> and <code>{}</code> for range formatting</td><td>no replacement. <a href='formatRange'><code>formatRange</code></a> works differently</td></tr>
 <tr><td><code>u</code> (outputs IS08601)</td><td>use moment's <a href='http://momentjs.com/docs/#/displaying/as-iso-string/'><code>toISOString</code></a> instead</td></tr>
 </table>
 
@@ -112,10 +110,10 @@ The following date utility methods have also been affected:
 
 <table>
 <tr><th>Method</th><th>Upgrade Notes</th></tr>
-<tr><td><del><code>$.fullCalendar.parseDate</code></del></td><td rowspan='2'>use a <a href='{{ site.baseurl}}/docs/moment#creating'>moment constructor</a></td></tr>
+<tr><td><del><code>$.fullCalendar.parseDate</code></del></td><td rowspan='2'>use a <a href='moment#creating'>moment constructor</a></td></tr>
 <tr><td><del><code>$.fullCalendar.parseISO8601</code></del></td></tr>
 <tr><td><del><code>$.fullCalendar.formatDate</code></del></td><td>use a moment's <a href='http://momentjs.com/docs/#/displaying/format/'><code>.format()</code></a> method instead</td></tr>
-<tr><td><del><code>$.fullCalendar.formatDates</code></del></td><td>use <a href='{{ site.baseurl}}/docs/formatRange'><code>$.fullCalendar.formatRange</code></a> instead</td></tr>
+<tr><td><del><code>$.fullCalendar.formatDates</code></del></td><td>use <a href='formatRange'><code>$.fullCalendar.formatRange</code></a> instead</td></tr>
 </table>
 
 ## Internationalization
@@ -149,15 +147,15 @@ Certain existing options were modified for timezone support:
 
 <table>
 <tr><th>Option</th><th>Upgrade Notes</th></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/events-function'><code>events</code> as a function</a></td><td>Receives a <code>timezone</code> parameter.<br /><b>Changes the argument order for <code>callback</code>!</b></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/events-json-feed'><code>events</code> as a JSON feed</a></td><td>Might send a <code>timezone</code> parameter in the request</td></tr>
+<tr><td><a href='events-function'><code>events</code> as a function</a></td><td>Receives a <code>timezone</code> parameter.<br /><b>Changes the argument order for <code>callback</code>!</b></td></tr>
+<tr><td><a href='events-json-feed'><code>events</code> as a JSON feed</a></td><td>Might send a <code>timezone</code> parameter in the request</td></tr>
 <tr><td><del><code>ignoreTimezone</code></del></td><td>Was a bad idea in the first place</td></tr>
 <tr><td><del><code>currentTimezone</code></del><br />(Google Calendar plugin option)</td><td>Uses the calendar's <code>timezone</code> option instead</td></tr>
 </table>
 
 The
-<a href='{{ site.baseurl}}/docs/timezoneParam'><code>timezoneParam</code></a> and
-<a href='{{ site.baseurl}}/docs/now'><code>now</code></a>
+<a href='timezoneParam'><code>timezoneParam</code></a> and
+<a href='now'><code>now</code></a>
 options have been added as well.
 
 **[View a live demo!]({% package_baseurl fullcalendar 2 %}/demos/timezones.html)**
@@ -166,9 +164,9 @@ options have been added as well.
 
 <table>
 <tr><th>Option</th><th>Upgrade Notes</th></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/events-function'><code>events</code> as a function</a></td><td>Receives a <code>timezone</code> parameter.<br /><b>Changes the argument order for <code>callback</code>!</b></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/events-json-feed'><code>events</code> as a JSON feed</a></td><td>Sends ISO8601 dates for <code>start</code> and <code>end</code></td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/allDayDefault'><code>allDayDefault</code></a></td><td>Defaults to <code>undefined</code> instead of <code>true</code> to allow for the smart <code>allDay</code> guessing behavior...</td></tr>
+<tr><td><a href='events-function'><code>events</code> as a function</a></td><td>Receives a <code>timezone</code> parameter.<br /><b>Changes the argument order for <code>callback</code>!</b></td></tr>
+<tr><td><a href='events-json-feed'><code>events</code> as a JSON feed</a></td><td>Sends ISO8601 dates for <code>start</code> and <code>end</code></td></tr>
+<tr><td><a href='allDayDefault'><code>allDayDefault</code></a></td><td>Defaults to <code>undefined</code> instead of <code>true</code> to allow for the smart <code>allDay</code> guessing behavior...</td></tr>
 </table>
 
 When an [Event Object's]({{ site.baseurl }}/docs/event-object) `allDay` property is not specified,
@@ -184,8 +182,8 @@ date computed via defaults instead of allowing it to remain `null`.
 
 <table>
 <tr><th>Option</th><th>Upgrade Notes</th></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/buttonIcons'><code>buttonIcons</code></a> <b>repurposed!</b></td><td>Repurposed to affect button icons when themeing is <em>off</em>.<br/>Use <a href='{{ site.baseurl}}/docs/themeButtonIcons'><code>themeButtonIcons</code></a> for when themeing is <em>on</em>.</td></tr>
-<tr><td><a href='{{ site.baseurl}}/docs/buttonText'><code>buttonText</code></a></td><td>Text is now escaped. HTML injection won't work.</td></tr>
+<tr><td><a href='buttonIcons'><code>buttonIcons</code></a> <b>repurposed!</b></td><td>Repurposed to affect button icons when themeing is <em>off</em>.<br/>Use <a href='themeButtonIcons'><code>themeButtonIcons</code></a> for when themeing is <em>on</em>.</td></tr>
+<tr><td><a href='buttonText'><code>buttonText</code></a></td><td>Text is now escaped. HTML injection won't work.</td></tr>
 <tr><td><del><code>viewDisplay</code> callback</del></td><td rowspan='3'>Previously deprecated and now removed</td></tr>
 <tr><td><del><code>disableDragging</code></del></td></tr>
 <tr><td><del><code>disableResizing</code></del></td></tr>
