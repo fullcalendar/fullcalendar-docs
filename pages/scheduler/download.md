@@ -46,10 +46,3 @@ You can also install Scheduler via [Bower](https://bower.io/):
 ```
 $ bower install fullcalendar-scheduler
 ```
-
-
-## V4 Beta Release
-
-Want to try the v4 beta release, which doesn't rely on jQuery or Moment anymore?
-
-[More information &raquo;]({{ site.baseurl }}/docs/v4/upgrading-from-v3)

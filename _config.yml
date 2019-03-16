@@ -39,16 +39,18 @@ available_versions:
   - id: v1
     collection: docs-v1
 
-# output:true says a page should be generated for each document
+# `output: true` says a page should be generated for each document.
+# NOTE: if you change the permalink structure, you must also change
+# the permalinks in the _docs-*/index.md files.
 collections:
 
   docs-v4:
     output: true
-    permalink: /docs/v4/:slug
+    permalink: /docs/:slug
 
   docs-v3:
     output: true
-    permalink: /docs/:slug
+    permalink: /docs/v3/:slug
 
   docs-v1:
     output: true

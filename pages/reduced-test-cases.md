@@ -24,16 +24,16 @@ Use a service like [Codepen](http://codepen.io/) or [JSFiddle](http://jsfiddle.n
 <div style='margin:2em 0 2em 2em'>
   <div style='font-weight:bold'>FullCalendar Standard</div>
   <div style='margin-top:.5em'>
-    <a data-codepen='{{ site.baseurl }}/docs/initialization-demo'>simple template</a> |
-    <a data-codepen='{{ site.baseurl }}/docs/debug-json-feed'>JSON feed template</a>
+    <a data-codepen='{{ site.baseurl }}/docs/v3/initialization-demo'>simple template</a> |
+    <a data-codepen='{{ site.baseurl }}/docs/v3/debug-json-feed'>JSON feed template</a>
   </div>
 </div>
 
 <div style='margin:2em 0 2em 2em'>
   <div style='font-weight:bold'>Scheduler Add-on</div>
   <div style='margin-top:.5em'>
-    <a data-codepen='{{ site.baseurl }}/docs/timeline-standard-view-demo'>simple template</a> |
-    <a data-codepen='{{ site.baseurl }}/docs/debug-scheduler-json-feed'>JSON feed template</a>
+    <a data-codepen='{{ site.baseurl }}/docs/v3/timeline-standard-view-demo'>simple template</a> |
+    <a data-codepen='{{ site.baseurl }}/docs/v3/debug-scheduler-json-feed'>JSON feed template</a>
   </div>
 </div>
 

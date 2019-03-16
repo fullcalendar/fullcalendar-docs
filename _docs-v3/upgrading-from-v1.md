@@ -39,7 +39,7 @@ Affected options:
 <tr><td><a href='select-method'><code>select</code> method</a></td></tr>
 </table>
 
-[Event Object]({{ site.baseurl }}/docs/event-object) modifications:
+[Event Object](event-object) modifications:
 
 <table>
 <tr><th>Property</th><th>Upgrade Notes</th></tr>
@@ -47,7 +47,7 @@ Affected options:
 <tr><td><code>.end</code></td><td>is now a Moment, and is always <b>exclusive!</b></td></tr>
 </table>
 
-[View Objects]({{ site.baseurl }}/docs/view-object) modifications:
+[View Objects](view-object) modifications:
 
 <table>
 <tr><th>Property</th><th>Upgrade Notes</th></tr>
@@ -103,7 +103,7 @@ characters are the same, **but some have changed!**
 See the [MomentJS formatting characters](http://momentjs.com/docs/#/displaying/format/)
 for the full list of available characters.
 
-Additionally, there are some [FullCalendar-specific formatting characters]({{ site.baseurl }}/docs/date-formatting-string),
+Additionally, there are some [FullCalendar-specific formatting characters](date-formatting-string),
 such as `t`, `T`, and `(` `)`.
 
 The following date utility methods have also been affected:
@@ -118,24 +118,24 @@ The following date utility methods have also been affected:
 
 ## Internationalization
 
-The new [`lang`]({{ site.baseurl }}/docs/lang) option provides built-in support for over **40 locales**!
+The new [`lang`](lang) option provides built-in support for over **40 locales**!
 
 Changing the locale affects the default values of many options
-(such as [`isRTL`]({{ site.baseurl }}/docs/isRTL) and [`dayNames`]({{ site.baseurl }}/docs/dayNames)).
+(such as [`isRTL`](isRTL) and [`dayNames`](dayNames)).
 However, these options can still be individually overridden if need be.
 
 Other affected locale-related options:
 
 <table>
 <tr><th>Option</th><th>Upgrade Notes</th></tr>
-<tr><td><a href='{{ site.baseurl }}/docs/weekNumberCalculation'><code>weekNumberCalculation</code></a></td><td>new <code>"local"</code> option, which is now the default</td></tr>
+<tr><td><a href='weekNumberCalculation'><code>weekNumberCalculation</code></a></td><td>new <code>"local"</code> option, which is now the default</td></tr>
 </table>
 
 **[View a live demo!]({% package_baseurl fullcalendar 2 %}/demos/languages.html)**
 
 ## Timezones
 
-The new [`timezone`]({{ site.baseurl }}/docs/timezone) option provides flexible support for arbitrary
+The new [`timezone`](timezone) option provides flexible support for arbitrary
 timezones! The potential values are:
 
 - `false` - no timezone (default)
@@ -169,12 +169,12 @@ options have been added as well.
 <tr><td><a href='allDayDefault'><code>allDayDefault</code></a></td><td>Defaults to <code>undefined</code> instead of <code>true</code> to allow for the smart <code>allDay</code> guessing behavior...</td></tr>
 </table>
 
-When an [Event Object's]({{ site.baseurl }}/docs/event-object) `allDay` property is not specified,
+When an [Event Object's](event-object) `allDay` property is not specified,
 FullCalendar is now smarter about guessing it.
 If either the `start` or `end` value has a "T" as part of the ISO8601 date string,
 `allDay` will become `false`. Otherwise, it will be `true`.
 
-[`forceEventDuration`]({{ site.baseurl }}/docs/forceEventDuration) has been added.
+[`forceEventDuration`](forceEventDuration) has been added.
 When `true`, it will ensure that any event inputted with an empty `end` date will have that
 date computed via defaults instead of allowing it to remain `null`.
 
@@ -189,10 +189,10 @@ date computed via defaults instead of allowing it to remain `null`.
 <tr><td><del><code>disableResizing</code></del></td></tr>
 </table>
 
-[`nextDayThreshold`]({{ site.baseurl }}/docs/nextDayThreshold) as been added to
+[`nextDayThreshold`](nextDayThreshold) as been added to
 prevent events which span past midnight from appearing as if they are multi-day.
 
-The HTML markup for buttons in the [header]({{ site.baseurl }}/docs/header) has changed slightly,
+The HTML markup for buttons in the [header](header) has changed slightly,
 as well as the CSS method used to inject icon characters into those buttons.
 
 Timed events (events that are not all-day) can no longer be resized via the mouse in month

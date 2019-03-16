@@ -1,5 +1,5 @@
 ---
-# we actually want "/docs/v1" without the trailing slash,
+# we actually want "/docs/v1" (without the trailing slash),
 # but wildcard URL for doc articles confuses things.
 permalink: /docs/v1/
 
