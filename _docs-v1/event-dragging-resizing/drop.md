@@ -20,4 +20,4 @@ function( *date*, *allDay*, *jsEvent*, *ui* ) { }
 
 `this` holds the DOM element that has been dropped.
 
-To see this callback function in action, view the [droppable](droppable) article or look at [this example]({{ site.baseurl }}/releases/fullcalendar/1-latest/demos/external-dragging.html).
+To see this callback function in action, view the [droppable](droppable) article or look at [this example]({% package_baseurl fullcalendar 1 %}/demos/external-dragging.html).

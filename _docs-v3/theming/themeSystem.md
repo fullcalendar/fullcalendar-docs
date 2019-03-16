@@ -20,7 +20,7 @@ String, *default*: `'standard'`
 `'jquery-ui'`
 : Prepares the calendar for a [jQuery UI](https://jqueryui.com/) theme. The jQuery UI CSS file file must be separately loaded in its own `<link>` tag. [See a demo](jquery-ui-theme-demo).
 
-[Explore themes with the theme chooser &raquo;](/releases/fullcalendar/3-latest/demos/themes.html)
+[Explore themes with the theme chooser &raquo;]({% package_baseurl fullcalendar 3 %}/demos/themes.html)
 
 
 ## 3rd Party Bootstrap Themes
