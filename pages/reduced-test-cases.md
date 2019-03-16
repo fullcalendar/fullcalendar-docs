@@ -22,7 +22,23 @@ For more info on this technique, read [Reduced Test Cases](http://css-tricks.com
 Use a service like [Codepen](http://codepen.io/) or [JSFiddle](http://jsfiddle.net/) to demonstrate the bug online. Enter your JS, CSS, HTML, and JSON and wire up all the relevant dependencies (jQuery, Moment, etc). To help you get started, here are some **debugging templates:**
 
 <div style='margin:2em 0 2em 2em'>
-  <div style='font-weight:bold'>FullCalendar Standard</div>
+  <div style='font-weight:bold'>V4 FullCalendar Standard</div>
+  <div style='margin-top:.5em'>
+    <a data-codepen='{{ site.baseurl }}/docs/initialize-globals-demo'>simple template</a> |
+    <a data-codepen='{{ site.baseurl }}/docs/debug-json-feed'>JSON feed template</a>
+  </div>
+</div>
+
+<div style='margin:2em 0 2em 2em'>
+  <div style='font-weight:bold'>V4 Scheduler Add-on</div>
+  <div style='margin-top:.5em'>
+    <a data-codepen='{{ site.baseurl }}/docs/debug-scheduler'>simple template</a> |
+    <a data-codepen='{{ site.baseurl }}/docs/debug-scheduler-json-feed'>JSON feed template</a>
+  </div>
+</div>
+
+<div style='margin:2em 0 2em 2em'>
+  <div style='font-weight:bold'>V3 FullCalendar Standard</div>
   <div style='margin-top:.5em'>
     <a data-codepen='{{ site.baseurl }}/docs/v3/initialization-demo'>simple template</a> |
     <a data-codepen='{{ site.baseurl }}/docs/v3/debug-json-feed'>JSON feed template</a>
@@ -30,7 +46,7 @@ Use a service like [Codepen](http://codepen.io/) or [JSFiddle](http://jsfiddle.n
 </div>
 
 <div style='margin:2em 0 2em 2em'>
-  <div style='font-weight:bold'>Scheduler Add-on</div>
+  <div style='font-weight:bold'>V3 Scheduler Add-on</div>
   <div style='margin-top:.5em'>
     <a data-codepen='{{ site.baseurl }}/docs/v3/timeline-standard-view-demo'>simple template</a> |
     <a data-codepen='{{ site.baseurl }}/docs/v3/debug-scheduler-json-feed'>JSON feed template</a>
