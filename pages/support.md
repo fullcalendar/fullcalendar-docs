@@ -5,8 +5,6 @@ title: Support
 layout: text
 ---
 
-{% assign needs_core_version = "1.9.4" %}
-
 <div class='sidenote-layout'>
 <div class='sidenote-layout__main' markdown='1'>
 
@@ -33,10 +31,6 @@ The latest version of FullCalendar is compatible with:
 - Firefox, Chrome, Safari, IE 9+
 - jQuery 2.0.0+
 - Moment 2.9.0+
-
-The latest version of [FullCalendar Scheduler]({{ site.baseurl }}/scheduler) requires:
-
-- FullCalendar Core version >={{ needs_core_version }}
 
 </div>
 <div class='sidenote-layout__sidenote' markdown='1'>
