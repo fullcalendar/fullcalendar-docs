@@ -4,9 +4,6 @@ title: Download Scheduler
 layout: scheduler-text
 ---
 
-{% assign latest_version = "1.9.4" %}
-
-
 # Free Trial
 
 Scheduler can be downloaded and evaluated for an unlimited amount of time, free of charge.
@@ -28,9 +25,9 @@ $('#calendar').fullCalendar({
 
 <h2>
   Download:
-  <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ latest_version }}/fullcalendar-scheduler-{{ latest_version }}.zip'
-    onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ latest_version }}.zip')"
-    >fullcalendar-scheduler-{{ latest_version }}.zip</a>
+  <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.fullcalendar_scheduler_latest.version }}/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip'
+    onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip')"
+    >fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip</a>
 </h2>
 
 [View changelog and all releases &raquo;]({{ site.fullcalendar_scheduler_repo }}/releases)

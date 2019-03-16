@@ -4,16 +4,14 @@ title: Download
 layout: text
 ---
 
-{% assign latest_version = "3.10.0" %}
-
 <div class='sidenote-layout'>
 <div class='sidenote-layout__main' markdown='1'>
 
 <h2>
   Latest:
-  <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ latest_version }}/fullcalendar-{{ latest_version }}.zip'
-    onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ latest_version }}.zip')"
-    >fullcalendar-{{ latest_version }}.zip</a>
+  <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.fullcalendar_latest.version }}/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip'
+    onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip')"
+    >fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip</a>
 </h2>
 
 Includes a **basic stylesheet**, the **Google Calendar extension**, and the necessary **jQuery** and **Moment** files.
@@ -51,9 +49,9 @@ after a release**, as it takes some time for them to get approved and uploaded,
 so keep that in mind. Here are the URLs of the latest files:
 
 ```
-https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ latest_version }}/fullcalendar.min.js
-https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ latest_version }}/fullcalendar.min.css
-https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ latest_version }}/fullcalendar.print.css
+https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ site.data.fullcalendar_latest.version }}/fullcalendar.min.js
+https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ site.data.fullcalendar_latest.version }}/fullcalendar.min.css
+https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ site.data.fullcalendar_latest.version }}/fullcalendar.print.css
 ```
 
 </div>
