@@ -14,38 +14,19 @@ layout: text
     >fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip</a>
 </h2>
 
-Includes a **basic stylesheet**, the **Google Calendar extension**, and the necessary **jQuery** and **Moment** files.
-
 [Changelog + All Releases &raquo;]({{ site.fullcalendar_repo }}/releases)
 
 
 ## Package Managers
 
-You can install FullCalendar via [NPM](https://www.npmjs.com/):
-
-```
-$ npm install jquery moment fullcalendar
-```
-
-You can also install FullCalendar via [Bower](https://bower.io/):
-
-```
-$ bower install jquery moment fullcalendar
-```
+FullCalendar is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). [Follow the instructions &raquo;]({{ site.baseurl }}/docs/initialize-es6)
 
 
-## CDNJS
+## CDN
 
-[CDNJS](http://cdnjs.com/) is kind enough to host FullCalendar's files through a reliable CDN,
-which you can directly link to from your site. However, the files **might not be immediately available
-after a release**, as it takes some time for them to get approved and uploaded,
-so keep that in mind. Here are the URLs of the latest files:
+A number of free CDNs host FullCalendar's dist files. A clever way to choose a CDN and figure out the URLs of the files you need is to visit the package on [Yarn](https://yarnpkg.com/). For example, visit the [@fullcalendar/core](https://yarnpkg.com/en/package/@fullcalendar/core) package. Then, look at the "CDNs" area on the sidebar.
 
-```
-https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ site.data.fullcalendar_latest.version }}/fullcalendar.min.js
-https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ site.data.fullcalendar_latest.version }}/fullcalendar.min.css
-https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/{{ site.data.fullcalendar_latest.version }}/fullcalendar.print.css
-```
+You'll be manually initializing FullCalendar with [script tags and globals]({{ site.baseurl }}/docs/initialize-globals), so make sure you've included all the necessary files for whatever [plugins you choose]({{ site.baseurl }}/docs/plugin-index).
 
 </div>
 <div class='sidenote-layout__sidenote' markdown='1'>

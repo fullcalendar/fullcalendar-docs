@@ -36,7 +36,7 @@ Under the GPL license, you may use Scheduler without charge. You may even modify
 If you decide to use the GPL license and would like to remove the license key warning,use the following license key:
 
 ```js
-$('#calendar').fullCalendar({
+var calendar = new Calendar(calendarEl, {
   schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'
 });
 ```

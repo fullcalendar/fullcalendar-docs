@@ -19,7 +19,7 @@ For more info on this technique, read [Reduced Test Cases](http://css-tricks.com
 
 ## Step 2: Post a public demonstration of the bug
 
-Use a service like [Codepen](http://codepen.io/) or [JSFiddle](http://jsfiddle.net/) to demonstrate the bug online. Enter your JS, CSS, HTML, and JSON and wire up all the relevant dependencies (jQuery, Moment, etc). To help you get started, here are some **debugging templates:**
+Use a service like [Codepen](http://codepen.io/) or [JSFiddle](http://jsfiddle.net/) to demonstrate the bug online. Enter your JS, CSS, HTML, and JSON and wire up all the relevant dependencies. To help you get started, here are some **debugging templates:**
 
 <div style='margin:2em 0 2em 2em'>
   <div style='font-weight:bold'>V4 FullCalendar Standard</div>

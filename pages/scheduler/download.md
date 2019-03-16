@@ -18,8 +18,8 @@ of source code modifications nor use in commercial production websites or produc
 While developing, in order to hide the license warning, use the following key:
 
 ```js
-$('#calendar').fullCalendar({
-  schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
+var calendar = new Calendar(calendarEl, {
+  schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'
 });
 ```
 
@@ -35,14 +35,4 @@ $('#calendar').fullCalendar({
 
 ## Package Managers
 
-You can install Scheduler via [NPM](https://www.npmjs.com/):
-
-```
-$ npm install fullcalendar-scheduler
-```
-
-You can also install Scheduler via [Bower](https://bower.io/):
-
-```
-$ bower install fullcalendar-scheduler
-```
+FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). [Follow the instructions &raquo;]({{ site.baseurl }}/docs/initialize-es6)
