@@ -2,7 +2,7 @@
 title: Add resources dynamically with addResource
 description: Click the "+room" button to dynamically add a resource
 layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline, interaction ]
+plugins: [ interaction, timeline, resource-common, resource-timeline ]
 ---
 <script>
 
@@ -11,7 +11,7 @@ plugins: [ timeline, resource-common, resource-timeline, interaction ]
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       timeZone: 'UTC',
-      plugins: [ 'resourceTimeline', 'interaction' ],
+      plugins: [ 'interaction', 'resourceTimeline' ],
       header: {
         left: 'promptResource today prev,next',
         center: 'title',

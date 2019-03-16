@@ -3,7 +3,7 @@ title: Dynamically switch between locales
 layout: demo-v4
 disable_base_styles: true
 needs_locales: true
-plugins: [ daygrid, timegrid, list, interaction ]
+plugins: [ interaction, daygrid, timegrid, list ]
 ---
 <script>
 
@@ -13,7 +13,7 @@ plugins: [ daygrid, timegrid, list, interaction ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid', 'timeGrid', 'list', 'interaction' ],
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
       header: {
         left: 'prev,next today',
         center: 'title',

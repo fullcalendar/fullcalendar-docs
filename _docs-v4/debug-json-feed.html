@@ -1,7 +1,7 @@
 ---
 description: json events with standard calendar
 layout: demo-v4
-plugins: [ daygrid, timegrid, interaction ]
+plugins: [ interaction, daygrid, timegrid ]
 ---
 <script>
 
@@ -9,7 +9,7 @@ plugins: [ daygrid, timegrid, interaction ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid', 'timeGrid', 'interaction' ],
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
       timeZone: 'UTC',
       defaultView: 'dayGridMonth',
       header: {

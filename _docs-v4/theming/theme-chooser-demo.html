@@ -1,7 +1,7 @@
 ---
 title: Theme Chooser Demo
 layout: demo-v4
-plugins: [ daygrid, timegrid, list, bootstrap, interaction ]
+plugins: [ interaction, daygrid, timegrid, list, bootstrap ]
 ---
 <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
 <script src='{{ site.baseurl }}/assets/theme-chooser.js'></script>
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       init: function(themeSystem) {
         calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+          plugins: [ 'interaction', 'bootstrap', 'dayGrid', 'timeGrid', 'list' ],
           themeSystem: themeSystem,
           header: {
             left: 'prev,next today',
