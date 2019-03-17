@@ -42,48 +42,18 @@ Version {{ site.data.fullcalendar_latest.version }} is now available. When the 4
 
 - Recurring events (a ["simple" implementation](recurring-events) and an [RRule plugin](rrule-plugin))
 - Event drag & drop between two calendars. [Demo](other-calendar-dragging-demo)
-- Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this.
+- Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this. [Demo](http://fullcalendar.test/docs/external-dragging-demo)
 - Connector plugins for [Moment JS](moment-plugins), [Moment Timezone](moment-plugins#moment-timezone), and [Luxon](luxon-plugin)
 - Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled. [Issue 2761](https://github.com/fullcalendar/fullcalendar/issues/2761)
 - Touch scrolling works better with event and date unselecting. [Issue 3530](https://github.com/fullcalendar/fullcalendar/issues/3530)
 
 <br />
 
-**What's yet to be done?**
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs)
 
-There are a few minor regressions and open-questions that will be addressed before launch:
-[#479](https://github.com/fullcalendar/fullcalendar-scheduler/issues/479),
-[#480](https://github.com/fullcalendar/fullcalendar-scheduler/issues/480),
-[#481](https://github.com/fullcalendar/fullcalendar-scheduler/issues/481),
-[#482](https://github.com/fullcalendar/fullcalendar-scheduler/issues/482),
-[#4420](https://github.com/fullcalendar/fullcalendar/issues/4420),
-[#4421](https://github.com/fullcalendar/fullcalendar/issues/4421),
-[#4489](https://github.com/fullcalendar/fullcalendar/issues/4489),
-[#4490](https://github.com/fullcalendar/fullcalendar/issues/4490)
+**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
-<br />
-
-**Getting the code:**
-
-Read the instructions for [use within an ES6 build system](initialize-es6). Essentially, you'll do something like this:
-
-```
-npm install @fullcalendar/core @fullcalendar/daygrid
-```
-
-Or download directly:
-
-- [fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v{{ site.data.fullcalendar_latest.version }}/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip)
-- [fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v{{ site.data.fullcalendar_scheduler_latest.version }}/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip)
-
-
-<br />
-
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs). They are a work in progress.
-
-**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs). Please include "v4" in the title.
-
-**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2019/02/v4-beta-release).
+**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2019/02/v4-beta-release)
 
 </div>
 <div class='sidenote-layout__sidenote' id='toc' markdown='1'>
@@ -187,8 +157,6 @@ You'll need to manually include the necessary CSS files on your page like so:
 <link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
 <link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
 ```
-
-The CSS aspect might seem a little clunky to some people. [Please chime into the GitHub issue](https://github.com/fullcalendar/fullcalendar/issues/4490) to have you voice heard.
 
 Also, many of the views have been renamed:
 
@@ -1818,44 +1786,28 @@ The <a href='eventAllow'>eventAllow</a> setting for associated events.
 
 </table>
 
-The resulting [Resource object](resource-object) is rather minimal, with the following properties/methods:
-
-- id
-- title
-- extendedProps
-- [getParent()](Resource-getParent)
-- [getChildren()](Resource-getChildren)
-- [getEvents()](Resource-getEvents)
-- [remove()](Resource-remove)
-
-The following properties in the [Resource object](resource-object) have been removed:
+The plain object will eventually be parsed into a proper [Resource object](resource-object), which has a number of differences from v3:
 
 <table>
 
 <tr>
 <th markdown='1'><del>parent</del></th>
 <td markdown='1'>
-Use [getParent](Resource-getParent) instead.
+Removed. Use [getParent](Resource-getParent) instead.
 </td>
 </tr>
 
 <tr>
 <th markdown='1'><del>children</del></th>
 <td markdown='1'>
-Use [getChildren](Resource-getChildren) instead.
+Removed. Use [getChildren](Resource-getChildren) instead.
 </td>
 </tr>
 
 <tr>
-<th markdown='1'>*many others...*</th>
+<th markdown='1'>`extendedProps`</th>
 <td markdown='1'>
-<del>eventColor</del>,
-<del>eventBackgroundColor</del>,
-<del>eventBorderColor</del>,
-<del>eventTextColor</del>,
-<del>eventClassNames</del>,
-<del>businessHours</del>
-are no longer available for reading (though they can still be specified upon resource parsing/creation). [Issue 482](https://github.com/fullcalendar/fullcalendar-scheduler/issues/482)
+Where all non-standard properties are stored. Previously, non-standard properties would be stored in the top-level object.
 </td>
 </tr>
 
@@ -1949,7 +1901,7 @@ Support has been dropped.
 <tr>
 <th>Composer</th>
 <td markdown='1'>
-Support has been temporarily dropped, but this will be addressed before the official v4 release. It might be possible to use [Asset Packagist](https://asset-packagist.org/). You can read and comment on [the discussion](https://github.com/fullcalendar/fullcalendar/issues/4489).
+Support has been dropped. [More info](https://github.com/fullcalendar/fullcalendar/issues/4489).
 </td>
 </tr>
 

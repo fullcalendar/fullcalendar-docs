@@ -59,15 +59,24 @@ Specifying anything else (like an array of strings) will not work!
 
 ## CSS
 
-FullCalendar's core module, in addition to its plugins, provide stylesheets that must be included on your page. Currently, you must include these stylesheets manually like this:
+FullCalendar's core module, in addition to its plugins, provide stylesheets that must be included on your page. In the above example, you would need to somehow include the following files:
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/timegrid/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/list/main.css' rel='stylesheet' />
+node_modules/@fullcalendar/core/main.css
+node_modules/@fullcalendar/daygrid/main.css
+node_modules/@fullcalendar/timegrid/main.css
+node_modules/@fullcalendar/list/main.css
 ```
 
-You may want to concatenate them together before serving them to your users. Or, you may way to include all of them from a CSS preprocessor like [Sass](https://sass-lang.com/), which will have the same effect.
+One way to do this is to write a build script that concatenates these together. Then, serve the concatenated file.
 
-We know this technique is not as elegant as you'd might like. [Please chime into the Github Issue to have your opinion heard &raquo;](https://github.com/fullcalendar/fullcalendar/issues/4490)
+Alternatively, you could use a system like Webpack with a [css-loader](https://github.com/webpack-contrib/css-loader). You would then be able to import your stylesheets **from your JavaScript**:
+
+```js
+import '@fullcalendar/core/main.css';
+import '@fullcalendar/daygrid/main.css';
+import '@fullcalendar/timegrid/main.css';
+import '@fullcalendar/list/main.css';
+```
+
+A different approach is to use [SASS](https://sass-lang.com/). Assuming you have `node_modules` in your `includePaths`, you could include the stylesheets **from your SASS files**.

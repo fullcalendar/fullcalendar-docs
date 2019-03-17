@@ -8,19 +8,17 @@ Provides a way to filter which external elements can be dropped onto the calenda
 String/Function, *default*: `"*"`
 </div>
 
-By default, after setting a calendar' [droppable](droppable) option to `true`, the calendar will accept any draggables that are dropped onto the calendar. The `dropAccept` option allows the calendar be more selective about which elements can/can't be dropped.
+By default, after setting a calendar's [droppable](droppable) option to `true`, the calendar will accept any draggables that are dropped onto the calendar. The `dropAccept` option makes the calendar more selective about which elements can/can't be dropped.
 
 The value of `dropAccept` can be a string [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). It can also be a function that accepts the draggable item as a single argument, and returns `true` if the element can be dropped onto the calendar.
 
 In the following example, the first draggable (with id `"draggable1"`) can be dropped on the calendar, while the second draggable (with id `"draggable2"`) cannot:
 
 ```html
-...
 <div id='calendar'></div>
 
 <div id='draggable1' class='cool-event'></div>
 <div id='draggable2'></div>
-...
 ```
 
 and here is the JavaScript:

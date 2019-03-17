@@ -9,6 +9,13 @@ Each resource has the following properties:
 - `id` - the unique string identifier for this resource
 - `title` - the string title of this resource
 - `extendedProps` - a hash of non-standard props that were specified during [parsing](resource-parsing)
+- `eventConstraint`
+- `eventOverlap`
+- `eventAllow`
+- `eventBackgroundColor`
+- `eventBorderColor`
+- `eventTextColor`
+- `eventClassNames`
 
 The following essential methods are offered:
 
