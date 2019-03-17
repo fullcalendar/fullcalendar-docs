@@ -587,14 +587,14 @@ These props were never officially supported. Use `startTime`, `endTime`, and `da
 
 </table>
 
-The outputted object, which is now an instance if the `Event` class, has properties that differ from the previous-available massaged plain-object:
+The outputted object, which is now an instance if the `Event` class, has properties that differ from the previously-available massaged plain-object:
 
 <table>
 
 <tr>
 <th><del>_id</del></th>
 <td markdown='1'>
-`_id` is no longer available. If you need a unique ID for each event, generate it yourself put it in the `id`.
+`_id` is no longer available. If you need a unique ID for each event, generate it yourself and put it in the `id`.
 </td>
 </tr>
 
@@ -632,6 +632,20 @@ Access `backgroundColor` and `borderColor` instead. Color is an alias for settin
 Previously, any non-standard properties would be preserved as top-level keys. Now, they are moved into the `extendedProps` hash.
 
 It is also possible to specify an explicit `extendedProps` hash in the plain object. [Issue 3228](https://github.com/fullcalendar/fullcalendar/issues/3228)
+</td>
+</tr>
+
+<tr>
+<th><del>resourceId</del></th>
+<td markdown='1'>
+Removed. Use [getResources](Event-getResources) instead, like `event.getResources()[0].id`
+</td>
+</tr>
+
+<tr>
+<th><del>resourceIds</del></th>
+<td markdown='1'>
+Removed. Use [getResources](Event-getResources) instead, like `event.getResources().map((resource) => resource.id)`
 </td>
 </tr>
 
