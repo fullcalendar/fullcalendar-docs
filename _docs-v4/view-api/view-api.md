@@ -5,8 +5,8 @@ children:
   - view-object
   - title: Methods
     children:
+      - Calendar-view
       - Calendar-changeView
-      - Calendar-getView
   - title: Callbacks
     children:
       - viewSkeletonRender
