@@ -44,8 +44,10 @@ Version {{ site.data.fullcalendar_latest.version }} is now available. When the 4
 - Event drag & drop between two calendars. [Demo](other-calendar-dragging-demo)
 - Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this. [Demo](http://fullcalendar.test/docs/external-dragging-demo)
 - Connector plugins for [Moment JS](moment-plugins), [Moment Timezone](moment-plugins#moment-timezone), and [Luxon](luxon-plugin)
+- A new default skin. Button and event styling are more flat. View [any of the demos](timegrid-standard-view-demo) to see.
 - Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled. [Issue 2761](https://github.com/fullcalendar/fullcalendar/issues/2761)
 - Touch scrolling works better with event and date unselecting. [Issue 3530](https://github.com/fullcalendar/fullcalendar/issues/3530)
+- For sticky text while scrolling, Timeline view leverages the native CSS prop `position:sticky` when possible. Much more performant.
 
 <br />
 
@@ -91,6 +93,7 @@ Version {{ site.data.fullcalendar_latest.version }} is now available. When the 4
 - [Resource Fetching](#resource-fetching)
 - [Resource Model](#resource-model)
 - [Resource Rendering](#resource-rendering)
+- [Versioning Scheme](#versioning-scheme)
 - [Package Managers](#package-managers)
 
 </div>
@@ -1883,7 +1886,14 @@ Previously rerendered all resources **AND** events. Now only renders the areas o
 </table>
 
 
-### Package Managers
+## Versioning Scheme
+
+Previously, the Core package was at version `3.x.x` and the Scheduler package was at `1.x.x`. There was no rhyme or reason as to which versions were compatible.
+
+Now, all of v4's plugins will be at `4.x.x` including Scheduler functionality. All plugins with the same minor version (like `4.1.x`) are implied to be compatible.
+
+
+## Package Managers
 
 Support for NPM (and Yarn) is strong, but here's what happened to support for other package managers:
 
