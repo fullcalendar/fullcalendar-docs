@@ -19,7 +19,7 @@ This will only return options that are global to the calendar. This method will 
 
 Since version 2.9.0, it is possible to dynamically set options after initalization. These option modifications will be applied to all views. It is not currently possible to set [View-Specific Options](view-specific-options) in this manner.
 
-Can you dynamically set a single option:
+You can dynamically set a single option:
 
 ```js
 $('#calendar').fullCalendar('option', 'locale', 'fr');
