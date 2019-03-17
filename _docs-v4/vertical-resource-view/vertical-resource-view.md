@@ -46,6 +46,7 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/timegrid/main.js'></script>
+<script src='fullcalendar/resource-common/main.js'></script>
 <script src='fullcalendar/resource-timegrid/main.js'></script>
 <script>
 ...

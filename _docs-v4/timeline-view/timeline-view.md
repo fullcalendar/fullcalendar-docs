@@ -71,6 +71,7 @@ Or you can choose to initialized the Timeline views [entirely with script tags](
 
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/timeline/main.js'></script>
+<script src='fullcalendar/resource-common/main.js'></script>
 <script src='fullcalendar/resource-timeline/main.js'></script>
 <script>
 ...

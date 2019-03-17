@@ -38,6 +38,7 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/daygrid/main.js'></script>
+<script src='fullcalendar/resource-common/main.js'></script>
 <script src='fullcalendar/resource-daygrid/main.js'></script>
 <script>
 ...
