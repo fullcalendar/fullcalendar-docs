@@ -33,7 +33,7 @@ Version {{ site.data.fullcalendar_latest.version }} is now available. When the 4
   - Native Date objects are used in place of Moment objects.
   - Time zone support was reworked and is now more intuitive.
   - Date formatting is delegated to the native [DateTimeFormat API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat).
-- A modular plugin-based API.
+- A modular plugin-based API. [See the list of plugin](plugin-index).
 - A more object-oriented API. There are distinct `Calendar`, `EventSource`, and `Event` classes.
 - Many settings and callbacks have been renamed, reworked, or their arguments have changed.
 - IE 9 & 10 support has been dropped. Only IE11 and Edge are supported.
@@ -61,7 +61,7 @@ Version {{ site.data.fullcalendar_latest.version }} is now available. When the 4
 
 - [Initialization](#initialization)
 - [Scheduler](#scheduler)
-- [Other Core Changes](#other-core-changes)
+- [Core Changes](#core-changes)
 - [Date Library](#date-library)
 - [Time Zone](#time-zone)
 - [Locales](#locales)
@@ -160,39 +160,37 @@ You'll need to manually include the necessary CSS files on your page like so:
 
 Also, many of the views have been renamed:
 
-- <del><strong>month</strong></del> renamed to **dayGridMonth** (uses the [dayGrid](daygrid-view) plugin, but has [its own article](month-view))
-- <del><strong>basicWeek</strong></del> renamed to **dayGridWeek** (uses the [dayGrid](daygrid-view) plugin)
-- <del><strong>basicDay</strong></del> renamed to **dayGridDay** (uses the [dayGrid](daygrid-view) plugin)
-- <del><strong>agendaWeek</strong></del> renamed to **timeGridWeek** (uses the [timeGrid](timegrid-view) plugin)
-- <del><strong>agendaDay</strong></del> renamed to **timeGridDay** (uses the [timeGrid](timegrid-view) plugin)
+- <del><strong>month</strong></del> renamed to **dayGridMonth** (requires the [daygrid](daygrid-view) plugin, but has [its own article](month-view))
+- <del><strong>basicWeek</strong></del> renamed to **dayGridWeek** (requires the [daygrid](daygrid-view) plugin)
+- <del><strong>basicDay</strong></del> renamed to **dayGridDay** (requires the [daygrid](daygrid-view) plugin)
+- <del><strong>agendaWeek</strong></del> renamed to **timeGridWeek** (requires the [timegrid](timegrid-view) plugin)
+- <del><strong>agendaDay</strong></del> renamed to **timeGridDay** (requires the [timegrid](timegrid-view) plugin)
 
 
 ## Scheduler
 
-The [premium Scheduler product]({{ site.baseurl }}/scheduler) has been broken into a number of separate plugins:
+The [premium Scheduler product]({{ site.baseurl }}/scheduler) has been broken into a number of separate plugins. Also, the names and meanings of each view have changed.
 
-- The "timeline" views:
-  - In the likely event that you need resources, use the [resourceTimeline](timeline-view) plugin along with the following views:
-    - `resourceTimelineDay`
-    - `resourceTimelineWeek`
-    - `resourceTimelineMonth`
-    - `resourceTimelineYear`
-  - If you want to use timeline view, [but don't need resources](timeline-view-no-resources), use the `timeline` plugin along with the following views:
-    - `timelineDay`
-    - `timelineWeek`
-    - `timelineMonth`
-    - `timelineYear`
-- The "vertical resource" views:
-  - For the `timeGrid` views (previously named "<del>agenda</del>" views), you must explicitly use the [resourceTimeGrid](vertical-resource-view) plugin along with the following views:
-    - `resourceTimeGridDay`
-    - `resourceTimeGridWeek`
-  - For the `dayGrid` views (previously named "<del>basic</del>" views), you must explicitly use the [resourceDayGrid](resource-daygrid-view) plugin along with the following views:
-    - `resourceDayGridDay`
-    - `resourceDayGridWeek`
+Previously, to display a resource view, you would specify the `resources` option, and if working with vertical resource view, you might specify `groupByResource` or `groupByDateAndResource` as well. In v4, things are much more explicit. To display a resource view, you must choose one of the following views:
 
-Gone are the days where you could simply specify a `resources` settings or a `groupByResource` / `groupByDateAndResource` setting and have the calendar infer that you want a resource view.
+- **resourceTimeGridWeek** - use instead of <del><strong>agendaWeek</strong></del> for resources (requires the [resource-timegrid](vertical-resource-view) plugin)
+- **resourceTimeGridDay** - use instead of <del><strong>agendaDay</strong></del> for resources (requires the [resource-timegrid](vertical-resource-view) plugin)
+- **resourceDayGridWeek** - use instead of <del><strong>basicWeek</strong></del> for resources (requires the [resource-daygrid](resource-daygrid-view) plugin)
+- **resourceDayGridDay** - use instead of <del><strong>basicDay</strong></del> for resources (requires the [resource-daygrid](resource-daygrid-view) plugin)
+- **resourceTimelineYear** - use instead of <strong>timelineYear</strong> for resources (requires the [resource-timeline](timeline-view) plugin)
+- **resourceTimelineMonth** - use instead of <strong>timelineMonth</strong> for resources (requires the [resource-timeline](timeline-view) plugin)
+- **resourceTimelineWeek** - use instead of <strong>timelineWeek</strong> for resources (requires the [resource-timeline](timeline-view) plugin)
+- **resourceTimelineDay** - use instead of <strong>timelineDay</strong> for resources (requires the [resource-timeline](timeline-view) plugin)
 
-## Other Core Changes
+The following views previouly might have displayed resources, but in v4, they are guaranteed to **NOT** display resources:
+
+- **timelineYear** - will **NOT** display resources (requires the [timeline](timeline-view-no-resources) plugin)
+- **timelineMonth** - will **NOT** display resources (requires the [timeline](timeline-view-no-resources) plugin)
+- **timelineWeek** - will **NOT** display resources (requires the [timeline](timeline-view-no-resources) plugin)
+- **timelineDay** - will **NOT** display resources (requires the [timeline](timeline-view-no-resources) plugin)
+
+
+## Core Changes
 
 <table>
 
