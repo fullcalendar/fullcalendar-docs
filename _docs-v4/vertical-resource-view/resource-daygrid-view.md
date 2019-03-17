@@ -28,7 +28,6 @@ Then you'll need to ensure the correct stylesheets are loaded:
 ```html
 <link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
 <link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/resource-daygrid/main.css' rel='stylesheet' />
 ```
 
 Or you can choose to initialized it [entirely with script tags](initialize-globals):
@@ -36,7 +35,6 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 ```html
 <link href='fullcalendar/core/main.css' rel='stylesheet' />
 <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
-<link href='fullcalendar/resource-daygrid/main.css' rel='stylesheet' />
 
 <script src='fullcalendar/core/main.js'></script>
 <script src='fullcalendar/daygrid/main.js'></script>
