@@ -26,10 +26,13 @@ plugins: [ daygrid, list, google-calendar ]
       // US Holidays
       events: 'en.usa#holiday@group.v.calendar.google.com',
 
-      eventClick: function(event) {
+      eventClick: function(arg) {
+
         // opens events in a popup window
-        window.open(event.url, '_blank', 'width=700,height=600');
-        return false;
+        window.open(arg.event.url, '_blank', 'width=700,height=600');
+
+        // prevents current tab from navigating
+        arg.jsEvent.preventDefault();
       }
 
     });
