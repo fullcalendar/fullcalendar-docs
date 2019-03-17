@@ -44,7 +44,7 @@ class CustomView extends View {
 }
 
 export default createPlugin({
-  viewConfigs: {
+  views: {
     custom: CustomView
   }
 });
