@@ -1,8 +1,9 @@
 ---
 title: Initialize with ES6 Build System
+excerpt_separator: <!--more-->
 ---
 
-For non-trivial projects, it is recommended to use an ES6-compatible build system like [Webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org) along with a package manager like [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com). A setup like this will ensure all necessary files are compiled together into a unified bundle. You won't need to worry about manually including `<script>` tags on the page.
+For non-trivial projects, it is recommended to use an ES6-compatible build system like [Webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org) along with a package manager like [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com).<!--more--> A setup like this will ensure all necessary files are compiled together into a unified bundle. You won't need to worry about manually including `<script>` tags on the page.
 
 You'll first need to install FullCalendar's `core` package as well as any plugins. We'll demonstrate the [DayGrid plugin](daygrid-view) with NPM:
 

@@ -40,7 +40,7 @@ plugins: [ interaction, timeline, resource-common, resource-timeline ]
         right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
       },
       resourceLabelText: 'Rooms',
-      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json&with-nesting&with-colors',
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json?with-nesting&with-colors',
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar
       drop: function(info) {

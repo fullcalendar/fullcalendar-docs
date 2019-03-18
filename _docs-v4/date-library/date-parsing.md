@@ -1,8 +1,9 @@
 ---
 title: Date Parsing
+excerpt_separator: <!--more-->
 ---
 
-FullCalendar's API accepts date information in many places, such as when you set the [defaultDate](defaultDate) or define an [event's](event-parsing) `start`/`end`. FullCalendar accepts a number of formats for these dates:
+FullCalendar's API accepts date information in many places, such as when you set the [defaultDate](defaultDate) or define an [event's](event-parsing) `start`/`end`.<!--more--> FullCalendar accepts a number of formats for these dates:
 
 
 ## ISO8601 strings

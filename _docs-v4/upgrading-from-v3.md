@@ -22,7 +22,7 @@ layout: text
 <div class='sidenote-layout__main' id='summary' markdown='1'>
 ## Summary of Changes
 
-Version {{ site.data.fullcalendar_latest.version }} is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
+Version 4 is the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
 
 **Major breaking changes:**
 
