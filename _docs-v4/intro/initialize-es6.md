@@ -11,7 +11,7 @@ You'll first need to install FullCalendar's `core` package as well as any plugin
 npm install --save @fullcalendar/core @fullcalendar/daygrid
 ```
 
-Then, you'll need to set up your build system. Setting up a system like Webpack can be a little complicated. Please read some tutorials on the internet or browse the [Webpack Example Repo](https://github.com/fullcalendar/webpack-example/tree/v4).
+Then, you'll need to set up your build system. Setting up a system like Webpack can be a little complicated. Please read some tutorials on the internet or browse the [Webpack Example Repo](https://github.com/fullcalendar/webpack-example).
 
 In your entrypoint file you will want to write something like this:
 

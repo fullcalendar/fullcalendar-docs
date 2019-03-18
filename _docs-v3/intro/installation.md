@@ -32,7 +32,7 @@ Use NPM to install FullCalendar:
 npm install jquery moment fullcalendar
 ```
 
-Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/webpack-example)
+Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/webpack-example/tree/v3)
 
 Then, write a module that imports both jQuery and FullCalendar:
 
