@@ -55,7 +55,7 @@ Version 4 is the biggest FullCalendar release to date. It sheds a number of outd
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
-**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2019/02/v4-beta-release)
+**Have a comment?** [Comment on the blog post](https://fullcalendar.io/blog/2019/03/v4-officially-released)
 
 </div>
 <div class='sidenote-layout__sidenote' id='toc' markdown='1'>
