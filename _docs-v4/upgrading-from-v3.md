@@ -42,7 +42,7 @@ Version 4 is the biggest FullCalendar release to date. It sheds a number of outd
 
 - Recurring events (a ["simple" implementation](recurring-events) and an [RRule plugin](rrule-plugin))
 - Event drag & drop between two calendars. [Demo](other-calendar-dragging-demo)
-- Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this. [Demo](http://fullcalendar.test/docs/external-dragging-demo)
+- Built-in draggable API for external elements/events. Consequently, jQuery UI is no longer needed for this. [Demo](external-dragging-demo)
 - Connector plugins for [Moment JS](moment-plugins), [Moment Timezone](moment-plugins#moment-timezone), and [Luxon](luxon-plugin)
 - A new default skin. Button and event styling are more flat. View [any of the demos](timegrid-standard-view-demo) to see.
 - Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled. [Issue 2761](https://github.com/fullcalendar/fullcalendar/issues/2761)
@@ -1106,6 +1106,22 @@ The [getDate](Calendar-getDate) method will return a [Date object](date-object) 
 
 ## Date Clicking & Selecting
 
+The [interaction plugin is now required](selectable#loading-the-interaction-plugin) to detect date clicking and selecting:
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
+
+let calendar = new Calendar(calendarEl, {
+  plugins: [ interactionPlugin ],
+  selectable: true,
+  select: function(info) { },
+  dateClick: function(info) { }
+});
+```
+
+Other breaking changes:
+
 <table>
 
 <tr>
@@ -1343,6 +1359,20 @@ Renamed to [eventMouseLeave](eventMouseLeave). Where previously received ordered
 
 
 ## Event Dragging & Resizing
+
+The [interaction plugin is now required](editable#required-plugin) to do event drag-n-drop and resizing:
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import interactionPlugin from '@fullcalendar/interaction';
+
+let calendar = new Calendar(calendarEl, {
+  plugins: [ interactionPlugin ],
+  editable: true
+});
+```
+
+Other breaking changes:
 
 <table>
 
@@ -1706,6 +1736,13 @@ Breaking changes:
 <th><a href='resourceColumns'>resourceColumns</a></th>
 <td markdown='1'>
 The `render` function's first argument is **always** a [Resource object](resource-object). Previously, it would vary depending on whether there was a `field` specified or not.
+</td>
+</tr>
+
+<tr>
+<th>User-resizable columns and resource-area</th>
+<td markdown='1'>
+The user is able to resize the [resourceAreaWidth](resourceAreaWidth) as well as the columns created by [resourceColumns](resourceColumns). Previously it "just worked," but <strong>now you'll need to load the [interaction plugin](editable#required-plugin)</strong>.
 </td>
 </tr>
 
