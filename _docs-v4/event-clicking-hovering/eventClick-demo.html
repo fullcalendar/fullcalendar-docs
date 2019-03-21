@@ -23,7 +23,7 @@ plugins: [ daygrid ]
 
           window.open(eventObj.url);
 
-          return false; // prevents browser from following link in current tab.
+          info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
         } else {
           alert('Clicked ' + eventObj.title);
         }
