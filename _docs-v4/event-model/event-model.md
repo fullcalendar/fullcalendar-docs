@@ -28,8 +28,9 @@ children:
       - Event-moveDates
       - Event-formatRange
       - Event-remove
+      - Event-getResources
+      - Event-setResources
 related:
-  - Event-getResources
   - resources-and-events
 demos:
   - Calendar-addEvent-demo

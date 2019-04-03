@@ -20,12 +20,10 @@ children:
       - Resource-getChildren
       - Resource-getEvents
       - Resource-remove
-      - Event-getResources
-
 related:
-  - businessHours-per-resource
   - Event-getResources
-  - Resource-getEvents
+  - Event-setResources
+  - businessHours-per-resource
   - loading
 demos:
   - addResource-demo
