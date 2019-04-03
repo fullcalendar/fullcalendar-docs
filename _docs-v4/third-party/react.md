@@ -3,23 +3,28 @@ title: React Component
 title_for_landing: React
 ---
 
-mention samples project. mention typescript project too.
-uses babel (with a "react preset") and sass
-has main.jsx file that mounts the component
+FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's regular API.
 
+ATTRIBUTION
 
-npm install (main lib)
+REPORTING BUGS
+
+This document does not go into depth about initializing a React project. However, we have provided an example project for you to consult, which this document roughly follows. It leverages [Webpack], [Babel], and [Sass]. [View the example project &raquo;][example project]
+
+The first step is to install the FullCalendar-related dependencies. You'll need the React adapter, the core package, and any additional plugins you plan to use:
 
 ```bash
 npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid
 ```
+
+You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.jsx]):
 
 ```jsx
 import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
-import './main.scss'
+import './main.scss' // webpack must be configured to do this
 
 export default class DemoApp extends React.Component {
 
@@ -32,7 +37,26 @@ export default class DemoApp extends React.Component {
 }
 ```
 
-All attributes are just options! including events
+You must initialized your calendar with at least one plugin that provides a view!
+
+
+## CSS
+
+The above example includes a `.scss` file from *JavaScript*. To get this to work with Webpack, you need to set up `style-loader`, `css-loader`, `sass-loader`, and `node-sass`. [More info &raquo;][sass-loader]
+
+You must then manually include the stylesheets for FullCalendar's core and plugins. In `main.scss`:
+
+```scss
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+```
+
+The prefixed `~` tells Sass to look in the `node_modules` directory.
+
+
+## Props
+
+The `<FullCalendar>` component is equipped with [all of FullCalendar's options][docs toc]! Just pass them in as props. Example:
 
 ```jsx
 <FullCalendar
@@ -46,14 +70,10 @@ All attributes are just options! including events
   />
 ```
 
-you see the main.scss?
 
-```scss
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-```
+## Callbacks
 
-callbacks
+A callback function can be passed into a React component and it will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date:
 
 ```jsx
 export default class DemoApp extends React.Component {
@@ -65,13 +85,22 @@ export default class DemoApp extends React.Component {
   }
 
   handleDateClick = (arg) => { // bind it!
-    alert('clicked ' + arg.dateStr)
+    alert(arg.dateStr)
   }
 
 }
 ```
 
-calling api methods? (discourage, but mention defaultDate situation)
+Make sure your callbacks methods are [bound to your component's context][callback-method-binding]!
+
+
+## Accessing FullCalendar's API
+
+Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
+
+This is especially useful for controlling the current date. The [defaultDate](defaultDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
+
+To do something like this, you'll need to get ahold of the component's ref (short for "reference"). Once you do that, you call the `getApi` method of the "current" component instance:
 
 ```jsx
 export default class DemoApp extends React.Component {
@@ -91,3 +120,26 @@ export default class DemoApp extends React.Component {
 
 }
 ```
+
+
+## Scheduler
+
+How do you use [FullCalendar Scheduler's](scheduler) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example.
+
+
+## TypeScript
+
+React goes really well with [TypeScript]! To show you how to integrate the two, we've prepared [another sample project &raquo;][typescript project]
+
+
+[React]: https://reactjs.org/
+[Webpack]: https://webpack.js.org/
+[Babel]: https://babeljs.io/
+[Sass]: https://sass-lang.com/
+[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react
+[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/react/src/DemoApp.jsx
+[sass-loader]: https://github.com/webpack-contrib/sass-loader#readme
+[docs toc]: https://fullcalendar.io/docs#toc
+[callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
+[TypeScript]: https://www.typescriptlang.org/
+[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript
