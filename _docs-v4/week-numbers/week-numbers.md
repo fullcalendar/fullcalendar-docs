@@ -4,7 +4,7 @@ children:
   - weekNumbers
   - weekNumbersWithinDays
   - weekNumberCalculation
-  - weekNumberTitle
+  - weekLabel
 demos:
   - weekNumbers-demo
   - weekNumbersWithinDays-demo

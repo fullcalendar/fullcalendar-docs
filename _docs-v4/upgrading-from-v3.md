@@ -81,6 +81,7 @@ Version 4 is the biggest FullCalendar release to date. It sheds a number of outd
 - [Event Clicking & Hovering](#event-clicking--hovering)
 - [Event Dragging & Resizing](#event-dragging--resizing)
 - [Dragging External Elements & Events](#dragging-external-elements--events)
+- [Week Numbers](#week-numbers)
 - [Event Popover](#event-popover)
 - [Business Hours](#business-hours)
 - [Toolbar](#toolbar)
@@ -1583,6 +1584,20 @@ The [eventDrop](eventDrop) callback previously received a single [Event object](
 Instead of ordered arguments `( date, jsEvent, ui, resourceId )` it will receive a single object `{ draggedEl, date, resource, allDay, jsEvent, view }`. The `date` property is a [Date object](date-object) not a Moment. `allDay` is a boolean. `resource` is a [Resource object](resource-object) if applicable.
 
 If dropped on an all-day slot, the `date` property will always have a `00:00:00` time, regardless of the `startTime` in the event data, whereas previously the `startTime` would have been added.
+</td>
+</tr>
+
+</table>
+
+
+## Week Numbers
+
+<table>
+
+<tr>
+<th><del>weekNumberTitle</del></th>
+<td markdown='1'>
+Renamed to [weekLabel](weekLabel). Will now affect week text in date formatting.
 </td>
 </tr>
 

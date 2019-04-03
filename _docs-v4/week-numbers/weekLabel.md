@@ -1,8 +1,8 @@
 ---
-title: weekNumberTitle
+title: weekLabel
 ---
 
-The heading text for week numbers.
+The heading text for week numbers. Also affects weeks in [date formatting](date-formatting).
 
 <div class='spec' markdown='1'>
 String, *default*: `"W"`

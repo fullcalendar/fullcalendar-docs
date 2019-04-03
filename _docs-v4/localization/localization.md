@@ -9,7 +9,7 @@ related:
   - columnHeaderFormat
   - titleFormat
   - buttonText
-  - weekNumberTitle
+  - weekLabel
   - eventLimitText
   - dayPopoverFormat
 demos:
