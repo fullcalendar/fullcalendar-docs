@@ -15,7 +15,7 @@ If specified, it must return either `true` or `false` as to whether the calendar
 ```js
 eventAllow: function(dropLocation, draggedEvent) {
   if (draggedEvent.id === '999') {
-    return dropLocation.start.isAfter('2016-01-01'); // a boolean
+    return dropLocation.start < new Date(2016, 0, 1); // a boolean
   }
   else {
     return true;
@@ -36,12 +36,7 @@ In addition to receiving information about which date the user is attempting to 
 
 ```js
 eventAllow: function(dropLocation, draggedEvent) {
-  if (draggedEvent.id === '999') {
-    return String(dropLocation.resourceId).indexOf('a') >= 0; // boolean
-  }
-  else {
-    return true;
-  }
+  return /^a/.test(dropLocation.resourceId); // starts with 'a' ?
 }
 ```
 
