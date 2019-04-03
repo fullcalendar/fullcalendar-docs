@@ -1,6 +1,6 @@
 ---
 title: TypeScript Support
-layout: docs-sublanding
+title_for_landing: TypeScript
 excerpt_separator: <!--more-->
 ---
 

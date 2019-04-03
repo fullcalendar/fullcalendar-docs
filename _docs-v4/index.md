@@ -52,8 +52,13 @@ children:
     children:
       - localization
       - timeZone
-  - title: Misc
+  - title: Third Party
+    children:
+      - typescript
+      - react
+      - vue
+      - angular
+  - title: Accessibility
     children:
       - touch
-      - typescript
 ---
