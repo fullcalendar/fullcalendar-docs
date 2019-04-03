@@ -57,7 +57,7 @@ FullCalendar offers the following packages:
       <code>dayGridMonth</code>,
       <code>dayGridWeek</code>,
       <code>dayGridDay</code>,
-      <code>dayGrid</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>dayGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/daygrid'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/daygrid/main.min.js'>JS</a></td>
@@ -72,7 +72,7 @@ FullCalendar offers the following packages:
       Offers <a href='timegrid-view'>TimeGrid</a> views:<br />
       <code>timeGridWeek</code>,
       <code>timeGridDay</code>,
-      <code>timeGrid</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>timeGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/timegrid'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/timegrid/main.min.js'>JS</a></td>
@@ -89,7 +89,7 @@ FullCalendar offers the following packages:
       <code>listMonth</code>,
       <code>listWeek</code>,
       <code>listDay</code>,
-      <code>list</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>list</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/list'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/list/main.min.js'>JS</a></td>
@@ -106,7 +106,7 @@ FullCalendar offers the following packages:
       <code>timelineMonth</code>,
       <code>timelineWeek</code>,
       <code>timelineDay</code>,
-      <code>timeline</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>timeline</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/timeline'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/timeline/main.min.js'>JS</a></td>
@@ -133,7 +133,7 @@ FullCalendar offers the following packages:
       <code>resourceDayGridMonth</code>,
       <code>resourceDayGridWeek</code>,
       <code>resourceDayGridDay</code>,
-      <code>resourceDayGrid</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>resourceDayGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-daygrid'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/resource-daygrid/main.min.js'>JS</a></td>
@@ -148,7 +148,7 @@ FullCalendar offers the following packages:
       Offers <a href='vertical-resource-view'>resource-enabled TimeGrid</a> views:
       <code>resourceTimeGridWeek</code>,
       <code>resourceTimeGridDay</code>,
-      <code>resourceTimeGrid</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>resourceTimeGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-timegrid'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/resource-timegrid/main.min.js'>JS</a></td>
@@ -165,7 +165,7 @@ FullCalendar offers the following packages:
       <code>resourceTimelineMonth</code>,
       <code>resourceTimelineWeek</code>,
       <code>resourceTimelineDay</code>,
-      <code>resourceTimeline</code> (<a href='http://fullcalendar.test/docs/custom-view-with-settings'>generic</a>)
+      <code>resourceTimeline</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-timeline'>Yarn</a></td>
     <td><a href='https://unpkg.com/@fullcalendar/resource-timeline/main.min.js'>JS</a></td>
