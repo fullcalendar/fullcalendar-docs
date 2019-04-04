@@ -3,9 +3,11 @@ title: Vue Component
 title_for_landing: Vue
 ---
 
-FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's regular API.
+FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-REPORTING BUGS
+<div class='spec' markdown='1' style='font-family:inherit'>
+This package is in **beta**. [More info &raquo;](#)
+</div>
 
 This document does not go into depth about initializing a Vue project. However, we have provided an example project for you to consult, which this document roughly follows. It leverages [Webpack] and [Sass]. [View the example project &raquo;][example project]
 
@@ -132,6 +134,11 @@ Notice how property *values* must remain in their original case.
 ## Scheduler
 
 How do you use [FullCalendar Scheduler's](scheduler) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example.
+
+
+## Misc
+
+This package is released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](#). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
 
 
 [Vue]: https://vuejs.org/

@@ -3,11 +3,13 @@ title: React Component
 title_for_landing: React
 ---
 
-FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's regular API.
+FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-ATTRIBUTION
+<div class='spec' markdown='1' style='font-family:inherit'>
+This package is in **beta**. [More info &raquo;](#)
+</div>
 
-REPORTING BUGS
+This component is built and maintained by [Josh Ruff](https://github.com/joshuaRuff) of [Sardius Media](http://sardius.media/) in partnership with the maintainers of FullCalendar. It is the official React connector, released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](#). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
 
 This document does not go into depth about initializing a React project. However, we have provided an example project for you to consult, which this document roughly follows. It leverages [Webpack], [Babel], and [Sass]. [View the example project &raquo;][example project]
 
@@ -84,7 +86,7 @@ export default class DemoApp extends React.Component {
     )
   }
 
-  handleDateClick = (arg) => { // bind it!
+  handleDateClick = (arg) => { // bind with an arrow function
     alert(arg.dateStr)
   }
 

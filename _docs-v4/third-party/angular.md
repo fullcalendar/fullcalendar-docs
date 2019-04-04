@@ -3,11 +3,13 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
-FullCalendar seamlessly integrates with the [Angular] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's regular API.
+FullCalendar seamlessly integrates with the [Angular] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-ATTRIBUTION
+<div class='spec' markdown='1' style='font-family:inherit'>
+This package is in **beta**. [More info &raquo;](#)
+</div>
 
-REPORTING BUGS
+This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](#). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
 
 This document does not go into depth about initializing an Angular project. However, we have provided an example project for you to consult, which this document roughly follows. It was initially set up with the `ng new` command of the [Angular CLI], but with testing and linting stripped out to make it more minimal. [View the example project &raquo;][example project]
 
