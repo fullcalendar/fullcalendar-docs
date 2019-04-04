@@ -6,7 +6,7 @@ title_for_landing: Vue
 FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 <div class='spec' markdown='1' style='font-family:inherit'>
-This package is in **beta**. [More info &raquo;](#)
+This package is in **beta**.
 </div>
 
 This document does not go into depth about initializing a Vue project. However, we have provided an example project for you to consult, which this document roughly follows. It leverages [Webpack] and [Sass]. [View the example project &raquo;][example project]
@@ -23,7 +23,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 <script>
 
 import FullCalendar from '@fullcalendar/vue'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin
+import dayGridPlugin from '@fullcalendar/daygrid'
 
 export default {
   components: {
@@ -133,12 +133,43 @@ Notice how property *values* must remain in their original case.
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's](scheduler) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example.
+How do you use [FullCalendar Scheduler's](scheduler) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+
+```html
+<script>
+import FullCalendar from '@fullcalendar/vue'
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
+
+export default {
+  components: {
+    FullCalendar
+  },
+  data() {
+    return {
+      calendarPlugins: [ resourceTimelinePlugin ]
+    }
+  }
+}
+
+</script>
+
+<template>
+  <FullCalendar schedulerLicenseKey="XXX" :plugins="calendarPlugins" />
+</template>
+
+<style lang='scss'>
+
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/timeline/main.css';
+@import '~@fullcalendar/resource-timeline/main.css';
+
+</style>
+```
 
 
 ## Misc
 
-This package is released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](#). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
+This package is released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](https://github.com/fullcalendar/fullcalendar-vue). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
 
 
 [Vue]: https://vuejs.org/
