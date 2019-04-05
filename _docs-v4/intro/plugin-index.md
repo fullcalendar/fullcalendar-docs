@@ -243,5 +243,38 @@ FullCalendar offers the following packages:
     <td><a href='https://unpkg.com/@fullcalendar/moment-timezone/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
+  <tr>
+    <td>
+      <strong>@fullcalendar/react</strong>
+    </td>
+    <td>
+      Offers a React component. <a href='react'>More info</a>
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/react'>Yarn</a></td>
+    <td><a href='https://unpkg.com/@fullcalendar/react'>JS</a></td>
+    <td>n/a</td>
+  </tr>
+  <tr>
+    <td>
+      <strong>@fullcalendar/vue</strong>
+    </td>
+    <td>
+      Offers a Vue component. <a href='vue'>More info</a>
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/vue'>Yarn</a></td>
+    <td><a href='https://unpkg.com/@fullcalendar/vue'>JS</a></td>
+    <td>n/a</td>
+  </tr>
+  <tr>
+    <td>
+      <strong>@fullcalendar/angular</strong>
+    </td>
+    <td>
+      Offers an Angular component. <a href='angular'>More info</a>
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/angular'>Yarn</a></td>
+    <td><a href='https://unpkg.com/@fullcalendar/angular'>JS</a></td>
+    <td>n/a</td>
+  </tr>
 </tbody>
 </table>
