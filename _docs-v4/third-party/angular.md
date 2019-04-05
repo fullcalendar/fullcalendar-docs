@@ -3,7 +3,7 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
-FullCalendar seamlessly integrates with the [Angular] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar seamlessly integrates with the [Angular]. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 <div class='spec' markdown='1' style='font-family:inherit'>
 This package is in **beta**.
