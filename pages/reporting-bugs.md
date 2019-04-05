@@ -31,18 +31,6 @@ At this point, anyone should be able to open up your JSFiddle demonstration, rea
 
 If this is true, please move on to the appropriate issue tracker. Please enter only one bug per issue and do not combine issues.
 
-<div style='margin:2em 0 2em 2em'>
-    <div style='font-weight:bold'>FullCalendar Standard</div>
-    <div style='margin-top:.5em'>
-        <a href='{{ site.fullcalendar_repo }}/issues'>Issue tracker &raquo;</a>
-    </div>
-</div>
+{% include issue-tracker-links.html %}
 
-<div style='margin:2em 0 2em 2em'>
-    <div style='font-weight:bold'>Scheduler Add-on</div>
-    <div style='margin-top:.5em'>
-        <a href='{{ site.fullcalendar_scheduler_repo }}/issues'>Issue tracker &raquo;</a>
-    </div>
-</div>
-
-It is a good idea to search through the list to see if someone has already reported your bug. If so, <strong>vote with a</strong> <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" width="20" height="20" style="vertical-align:baseline" alt='thumbsup' /> reaction on the topmost description of the issue (<a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">help</a>) and press the <strong style="background-image: linear-gradient(#fcfcfc, #eee); border: 1px solid #d5d5d5; color: #333; padding: 0 5px; border-radius: 3px">Subscribe</strong> button to receive updates when progress is made.
+It is a good idea to search through the list to see if someone has already reported your bug. If so, <strong>vote with a</strong> <img src="{{ site.baseurl }}/assets/images/thumbsup-emoji.png" width="20" height="20" style="vertical-align:baseline" alt='thumbsup' /> reaction on the topmost description of the issue (<a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">help</a>) and press the <strong style="background-image: linear-gradient(#fcfcfc, #eee); border: 1px solid #d5d5d5; color: #333; padding: 0 5px; border-radius: 3px">Subscribe</strong> button to receive updates when progress is made.

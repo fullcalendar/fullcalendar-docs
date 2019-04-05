@@ -40,18 +40,6 @@ For API improvements, such as new options or methods, please write some example 
 
 If you are confident you have followed all the above steps, enter your feature request into the appropriate issue tracker:
 
-<div style='margin:2em 0 2em 2em'>
-    <div style='font-weight:bold'>FullCalendar Standard</div>
-    <div style='margin-top:.5em'>
-        <a href='{{ site.fullcalendar_repo }}/issues'>Issue tracker &raquo;</a>
-    </div>
-</div>
-
-<div style='margin:2em 0 2em 2em'>
-    <div style='font-weight:bold'>Scheduler Add-on</div>
-    <div style='margin-top:.5em'>
-        <a href='{{ site.fullcalendar_scheduler_repo }}/issues'>Issue tracker &raquo;</a>
-    </div>
-</div>
+{% include issue-tracker-links.html %}
 
 Please enter only one feature request per issue and do not combine issues.
