@@ -169,7 +169,9 @@ export default {
 
 ## Misc
 
-This package is released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](https://github.com/fullcalendar/fullcalendar-vue). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
+We've adapted this example to run in a code playground. [View the runnable example &raquo;]({{ site.fullcalendar_vue_playground }})
+
+This package is released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo]({{ site.fullcalendar_vue_repo }}). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
 
 
 [Vue]: https://vuejs.org/

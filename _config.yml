@@ -17,10 +17,18 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+production_baseurl: https://fullcalendar.io
+
 fullcalendar_org: https://github.com/fullcalendar
 fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
 fullcalendar_scheduler_repo: https://github.com/fullcalendar/fullcalendar-scheduler
-production_baseurl: https://fullcalendar.io
+fullcalendar_react_repo: https://github.com/fullcalendar/fullcalendar-react
+fullcalendar_vue_repo: https://github.com/fullcalendar/fullcalendar-vue
+fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
+
+fullcalendar_react_playground: https://codesandbox.io/s/2z6wp2jozn
+fullcalendar_vue_playground: https://codesandbox.io/s/8xyz32l0r8
+fullcalendar_angular_playground: https://stackblitz.com/github/fullcalendar/fullcalendar-example-projects/tree/master/angular
 
 # ordered by how they should appear in UI
 available_versions:
