@@ -14,6 +14,13 @@ custom_js: docs
       </h1>
     </div>
 
+    {% if page.version.id == "v4" %}
+      <div class='hero__warning'>
+        Just released:
+        <a href='https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors'>React, Vue, and Angular connectors</a>
+      </div>
+    {% endif %}
+
     {% include docs-version-warning.html %}
 
     <div class='hero__controls'>
