@@ -6,7 +6,7 @@ title_for_landing: React
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 <div class='spec' markdown='1' style='font-family:inherit'>
-This package is in **beta**.
+This package is in **beta**. [Learn more &raquo;](https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors)
 </div>
 
 This component is built and maintained by [Josh Ruff](https://github.com/joshuaRuff) of [Sardius Media](http://sardius.media/) in partnership with the maintainers of FullCalendar. It is the official React connector, released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo](https://github.com/fullcalendar/fullcalendar-react). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).

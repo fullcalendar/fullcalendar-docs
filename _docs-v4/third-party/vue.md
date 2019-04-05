@@ -6,7 +6,7 @@ title_for_landing: Vue
 FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 <div class='spec' markdown='1' style='font-family:inherit'>
-This package is in **beta**.
+This package is in **beta**. [Learn more &raquo;](https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors)
 </div>
 
 This document does not go into depth about initializing a Vue project. However, we have provided an example project for you to consult, which this document roughly follows. It leverages [Webpack] and [Sass]. [View the example project &raquo;][example project]

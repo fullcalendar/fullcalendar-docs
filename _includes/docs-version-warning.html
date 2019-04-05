@@ -1,5 +1,10 @@
 
-{% if page.version.id == "v3" %}
+{% if page.version.id == "v4" %}
+  <div class='hero__warning'>
+    Just released:
+    <a href='https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors'>React, Vue, and Angular connectors</a>
+  </div>
+{% elsif page.version.id == "v3" %}
   <div class='hero__warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/docs/upgrading-from-v3'>
