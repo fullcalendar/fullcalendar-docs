@@ -24,7 +24,7 @@ var calendar = new Calendar(calendarEl, {
       businessHours: {
         startTime: '11:00',
         endTime: '17:00',
-        daysOfWeek: ['1', '3', '5']
+        daysOfWeek: [ 1, 3, 5 ] // Mon,Wed,Fri
       }
     }
   ]
