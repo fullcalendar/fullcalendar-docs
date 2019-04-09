@@ -9,9 +9,14 @@ FullCalendar seamlessly integrates with the [Angular] 7. It provides a component
 This package is in **beta**. [Learn more &raquo;](https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors)
 </div>
 
-This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo]({{ site.fullcalendar_angular_repo }}). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
+This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
-This document does not go into depth about initializing an Angular project. However, we have provided an example project for you to consult, which this document roughly follows. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. [View the example project &raquo;][example project]
+- [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
+- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
+- [Example project][example project]. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. The code in this guide loosely follows it.
+- [Runnable project]({{ site.fullcalendar_angular_playground }}) in a code playground
+
+This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
 
 The first step is to install the FullCalendar-related dependencies. You'll need the Angular adapter, the core package, and any additional plugins you plan to use:
 
@@ -178,12 +183,6 @@ export class AppComponent {
 ```
 
 Also, make sure all the correct stylesheets are being included.
-
-
-## Runnable Example
-
-We've adapted this example to run in a code playground. [View the runnable example &raquo;]({{ site.fullcalendar_angular_playground }})
-
 
 
 [Angular]: https://angular.io/

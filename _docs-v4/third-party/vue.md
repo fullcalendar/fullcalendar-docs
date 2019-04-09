@@ -9,7 +9,14 @@ FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provi
 This package is in **beta**. [Learn more &raquo;](https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors)
 </div>
 
-This document does not go into depth about initializing a Vue project. However, we have provided an example project for you to consult, which this document roughly follows. It leverages [Webpack] and [Sass]. [View the example project &raquo;][example project]
+This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
+
+- [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
+- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
+- [Example project][example project] leveraging [Webpack] and [Sass] (the code in this guide loosely follows it)
+- [Runnable project]({{ site.fullcalendar_vue_playground }}) in a code playground
+
+This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
 The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter, the core package, and any additional plugins you plan to use:
 
@@ -165,13 +172,6 @@ export default {
 
 </style>
 ```
-
-
-## Misc
-
-We've adapted this example to run in a code playground. [View the runnable example &raquo;]({{ site.fullcalendar_vue_playground }})
-
-This package is released under an MIT license, the same license the standard version of FullCalendar uses. Feel free to [browse the repo]({{ site.fullcalendar_vue_repo }}). Please don't forget the [bug report instructions]({{ site.baseurl }}/reporting-bugs).
 
 
 [Vue]: https://vuejs.org/
