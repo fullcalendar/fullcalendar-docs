@@ -14,16 +14,17 @@ var calendar = new Calendar(calendarEl, {
       id: 'a',
       title: 'Resource A',
       businessHours: {
-        start: '10:00',
-        end: '18:00'
+        startTime: '10:00',
+        endTime: '18:00'
       }
     },
     {
       id: 'b',
       title: 'Resource B',
       businessHours: {
-        start: '11:00',
-        end: '17:00'
+        startTime: '11:00',
+        endTime: '17:00',
+        daysOfWeek: ['1', '3', '5']
       }
     }
   ]
