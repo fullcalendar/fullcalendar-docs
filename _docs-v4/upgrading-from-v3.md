@@ -254,7 +254,7 @@ Instead of using jQuery to get options like `$().fullCalendar('option', 'optionN
 var optionValue = calendar.getOption('optionName');
 ```
 
-And instead of using jQuery to get options like `$().fullCalendar('option', 'optionName', 'optionValue')`, use `setOption`:
+And instead of using jQuery to set options like `$().fullCalendar('option', 'optionName', 'optionValue')`, use `setOption`:
 
 ```js
 calendar.setOption('optionName', 'optionValue');
@@ -940,7 +940,7 @@ In parity with how view names have been renamed, instead of specifying `agenda` 
 <tr>
 <th><a href='custom-view-with-js'>custom views written in JS</a></th>
 <td markdown='1'>
-When subclassing the `View` class, the methods that must be implemented have changed quote a bit. [More info](custom-view-with-js).
+When subclassing the `View` class, the methods that must be implemented have changed quite a bit. [More info](custom-view-with-js).
 </td>
 </tr>
 
@@ -1063,6 +1063,13 @@ The following settings have been affected:
 <th><a href='columnHeaderFormat'>columnHeaderFormat</a></th>
 <td markdown='1'>
 No longer accepts a format-string out of the box. [Use a date-formatting object instead](date-formatting).
+</td>
+</tr>
+
+<tr>
+<th><del>columnFormat</del></th>
+<td markdown='1'>
+This deprecated alias of [columnHeaderFormat](columnHeaderFormat) has been removed. Use [columnHeaderFormat](columnHeaderFormat) instead.
 </td>
 </tr>
 
@@ -1400,9 +1407,11 @@ Previously accepted ordered arguments `( event, delta, revertFunc, jsEvent, ui, 
 var calendar = new Calendar(calendarEl, {
   eventDrop: function(info) {
     console.log(info.event);
-    console.log(info.prevEvent); // data before the drop
+    console.log(info.oldEvent); // data before the drop
     console.log(info.delta); // how far it was moved
     console.log(info.jsEvent);
+    console.log(info.newResource); // if using a resource view
+    console.log(info.oldResource); // if using a resource view
 
     if (confirm('revert change?')) {
       info.revert();
@@ -1411,7 +1420,7 @@ var calendar = new Calendar(calendarEl, {
 })
 ```
 
-The `delta` property is a [Duration object](duration-object), no longer a Moment Duration. The `prevEvent` property is a new feature that allows you to inspect the event's values prior to the mutation.
+The `delta` property is a [Duration object](duration-object), no longer a Moment Duration. The `oldEvent` property is a new feature that allows you to inspect the event's values prior to the mutation.
 </td>
 </tr>
 
@@ -1574,7 +1583,7 @@ External events that are dropped on all-day areas can be given a default time. T
 <td markdown='1'>
 Event creation upon drop and firing of the [eventReceive](eventReceive) callback will happen by default. To prevent this from happening, specify `{ create: false }` in your event data. [More information](external-dragging#other-draggable-settings).
 
-The [eventDrop](eventDrop) callback previously received a single [Event object](event-object) argument. It now receives an object `{ event, draggedEl, view }`. Also, it will now also be called when an [event from another calendar has been dropped](other-calendar-dragging).
+The [eventReceive](eventReceive) callback previously received a single [Event object](event-object) argument. It now receives an object `{ event, draggedEl, view }`. Also, it will now also be called when an [event from another calendar has been dropped](other-calendar-dragging).
 </td>
 </tr>
 
