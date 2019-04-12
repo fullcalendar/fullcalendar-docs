@@ -12,5 +12,9 @@
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
+	
+	{% if page.layout == "blog" or  page.layout == "post" %}	
+		<script id="dsq-count-scr" src="//adamshawsblog.disqus.com/count.js" async></script>
+	{% endif %}
   </body>
 </html>
