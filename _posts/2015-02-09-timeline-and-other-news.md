@@ -5,12 +5,9 @@ date: 2015-02-09T15:13:23+00:00
 author: arshaw
 layout: post
 guid: http://blog.arshaw.com/?p=120
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "3500946281"
-categories:
-  - Uncategorized
 ---
 [<img class="alignright wp-image-121" style="margin-top: ‐10px;" src="/assets/images/blog/2015/02/timeline-view.png" alt="timeline-view" width="213" height="136" sizes="(max-width: 213px) 100vw, 213px" />](#preview)This post is an update on the highly-requested <a href="https://code.google.com/p/fullcalendar/issues/detail?id=150#footer" target="_blank">horizontal resource view</a> (aka _Timeline_). This feature allows the assigning of events to _resources_ (things like team members or conference rooms) and portrays time left-to-right and resources top-to-bottom. Please ☆ the <a href="https://code.google.com/p/fullcalendar/issues/detail?id=150#footer" target="_blank">issue tracker ticket</a> to receive further updates.<!--more-->
 

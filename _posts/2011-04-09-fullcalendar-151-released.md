@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://10
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "1735759927"
-categories:
-  - Uncategorized
 ---
 <div style="margin: 1em 0; text-align: left;">
   FullCalendar 1.5.1 has been released. This is a minor bugfix release and has been tested and bundled with jQuery 1.5.2.<!--more-->

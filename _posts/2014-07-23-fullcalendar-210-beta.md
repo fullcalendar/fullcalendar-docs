@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://blog.arshaw.com/?p=75
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "2868228638"
-categories:
-  - Uncategorized
 ---
 **Version 2.1.0 (now in beta) contains a large internal refactor** of the view rendering code. This refactor allowed for a whopping [30 issues](https://code.google.com/p/fullcalendar/issues/list?can=2&q=milestone=skeleton) to be addressed, most importantly [problems with printing](https://code.google.com/p/fullcalendar/issues/detail?id=35) and scrolling-related issues for [Month](https://code.google.com/p/fullcalendar/issues/detail?id=728) and [Agenda](https://code.google.com/p/fullcalendar/issues/detail?id=521) views. FullCalendar&#8217;s HTML/CSS skeleton has changed a lot, but API compatibility with previous version has been maintained.<!--more-->
 

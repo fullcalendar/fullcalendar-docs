@@ -5,12 +5,9 @@ date: 2014-11-14T15:44:45+00:00
 author: arshaw
 layout: post
 guid: http://blog.arshaw.com/?p=116
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "3225832287"
-categories:
-  - Uncategorized
 ---
 **Version 2.2.0 has been released.** It contains some highly-demanded features:<!--more-->
 

@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://9
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "1735759529"
-categories:
-  - Uncategorized
 ---
 <div style="margin: 1em 0; text-align: left;">
   This is bugfix release to fix <a title="" href="http://code.google.com/p/fullcalendar/issues/detail?id=1168">issue 1168</a>, making FullCalendar compatible jQuery 1.7 / jQuery UI 1.8.16 and onward.

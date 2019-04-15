@@ -5,12 +5,9 @@ date: 2016-09-05T06:50:35+00:00
 author: arshaw
 layout: post
 guid: http://fullcalendar.io/blog/?p=214
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "5120084972"
-categories:
-  - Uncategorized
 ---
 After being in beta for three weeks, FullCalendar v3 has been released. It implements two very long standing features, and introduces some noteworthy breaking changes. A new version of the [premium Scheduler plugin](https://fullcalendar.io/scheduler/) has also been released.<!--more-->
 

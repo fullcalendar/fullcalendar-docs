@@ -5,12 +5,9 @@ date: 2017-08-31T17:07:14+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=257
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "6110202193"
-categories:
-  - Uncategorized
 ---
 FullCalendar 3.5.0 and [Scheduler](https://fullcalendar.io/scheduler/) 1.7.0 offers built-in <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3</a> theme support. Include a Bootstrap theme&#8217;s stylesheet on your page, set the [`themeSystem`](https://fullcalendar.io/docs/display/themeSystem/) options to `'bootstrap3'` and you&#8217;re off to the races. Big thanks to <a href="https://github.com/joankaradimov" target="_blank">@joankaradimov</a> for the bulk of the implementation.<!--more-->
 

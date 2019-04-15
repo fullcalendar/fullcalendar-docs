@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://blog.arshaw.com/?p=53
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "2729863017"
-categories:
-  - Uncategorized
 ---
 After a ton of work, I&#8217;m happy to say that FullCalendar version 2.0.0 has been released. It contains some huge improvements, namely internationalization support, timezone support, and [MomentJS](http://momentjs.com) integration, which is a new dependency. It is important to note that many of the API changes are backwards-incompatible with 1.x versions.<!--more-->
 

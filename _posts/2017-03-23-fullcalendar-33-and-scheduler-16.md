@@ -5,12 +5,9 @@ date: 2017-03-23T22:42:40+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=247
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "5659767448"
-categories:
-  - Uncategorized
 ---
 The latest releases of FullCalendar and Scheduler gives drastically more control over which dates are displayed within a view as well as which dates the user can interact with.<!--more-->
 

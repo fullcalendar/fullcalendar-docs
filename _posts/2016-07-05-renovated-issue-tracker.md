@@ -5,12 +5,9 @@ date: 2016-07-05T00:51:06+00:00
 author: arshaw
 layout: post
 guid: http://fullcalendar.io/blog/?p=204
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "4961123377"
-categories:
-  - Uncategorized
 ---
 FullCalendar&#8217;s issue tracker had grown out of control. The list of issues was incredibly hard to navigate, both for project maintainers and project users. Also, since moving to Github, the issue list became incredibly hard to sort and prioritize. Some much needed renovation was in order.<!--more-->
 

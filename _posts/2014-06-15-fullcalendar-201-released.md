@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://blog.arshaw.com/?p=69
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "2767717163"
-categories:
-  - Uncategorized
 ---
 As a followup to releasing [FullCalendar v2](http://blog.arshaw.com/1/post/2014/06/fullcalendar-2-released.html) two weeks ago, today I have released version 2.0.1, mainly a bugfix release. <!--more-->The only backwards incompatibility with v2 is the newly introduced 
 

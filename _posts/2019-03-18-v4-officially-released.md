@@ -5,12 +5,9 @@ date: 2019-03-18T06:17:50+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=353
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7301964058"
-categories:
-  - Uncategorized
 ---
 A year after the project first began, version 4 is _finally_ released. A tremendous amount of work went into it.<!--more--> To summarize the advancements over v3:
 

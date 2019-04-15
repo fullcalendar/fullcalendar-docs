@@ -5,12 +5,9 @@ date: 2018-04-13T20:04:10+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=316
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "6612040761"
-categories:
-  - Uncategorized
 ---
 Removing jQuery from the codebase will make FullCalendar more lightweight and allow for better integration with React/Vue/Angular. We have completed the detangling process!<!--more-->
 

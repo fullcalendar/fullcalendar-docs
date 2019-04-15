@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://8
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "1735759363"
-categories:
-  - Uncategorized
 ---
 <div style="margin: 1em 0; text-align: left;">
   Version 1.6 is the most feature-packed release in a while. The feature list was mainly driven by pull requests I received through Github. I want to make FullCalendar a more community-based project, so this is a good place to start. Thank you to all the contributors!<!--more-->

@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://blog.arshaw.com/?p=63
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "2767687100"
-categories:
-  - Uncategorized
 ---
 I&#8217;m trying to create a list of well-known and semi-well-known companies that use FullCalendar. I eventually want to post this list on the website to let others know how awesome and battle-tested FullCalendar is. If your company uses FullCalendar, please let us know!<!--more-->
 

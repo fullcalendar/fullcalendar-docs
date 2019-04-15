@@ -5,12 +5,9 @@ date: 2016-03-26T08:47:19+00:00
 author: arshaw
 layout: post
 guid: http://fullcalendar.io/blog/?p=177
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "4694438964"
-categories:
-  - Uncategorized
 ---
 Touch device support has been added to FullCalendar Core and the [Scheduler](http://fullcalendar.io/scheduler/), represented by the long-standing [issue 994](https://github.com/fullcalendar/fullcalendar/issues/994):<!--more-->
 

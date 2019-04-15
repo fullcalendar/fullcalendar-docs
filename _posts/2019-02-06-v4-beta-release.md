@@ -5,12 +5,9 @@ date: 2019-02-06T05:22:16+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=341
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7213172625"
-categories:
-  - Uncategorized
 ---
 The FullCalendar v4 **beta** has just been released. It contains almost exactly the same API as the previous alpha version except for one big thing: all functionality is broken up into **plugins**. There is a **core** package, but it won&#8217;t do anything on its own. You must load plugins for everything, including each type of view.<!--more-->
 

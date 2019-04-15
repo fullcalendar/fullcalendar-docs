@@ -5,12 +5,9 @@ date: 2014-09-05T03:45:54+00:00
 author: arshaw
 layout: post
 guid: http://blog.arshaw.com/?p=106
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "2990371123"
-categories:
-  - Uncategorized
 ---
 Spiffy new redesign and trendy .io domain name. About time! [See it for yourself](http://fullcalendar.io/), or enjoy this screenshot:<!--more-->
 

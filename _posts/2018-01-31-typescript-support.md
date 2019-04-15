@@ -5,12 +5,9 @@ date: 2018-01-31T00:09:12+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=292
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "6448857282"
-categories:
-  - Uncategorized
 ---
 FullCalendar and Scheduler now officially support [TypeScript](https://www.typescriptlang.org/)! TypeScript is a popular type-aware superset of the JavaScript language that is great for larger projects.<!--more-->
 

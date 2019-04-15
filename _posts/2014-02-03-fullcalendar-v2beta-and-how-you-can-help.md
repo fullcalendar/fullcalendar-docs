@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://blog.arshaw.com/?p=48
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "2213587711"
-categories:
-  - Uncategorized
 ---
 I have just released a second iteration of v2 beta. I&#8217;m calling it v2.0.0-beta2.
 

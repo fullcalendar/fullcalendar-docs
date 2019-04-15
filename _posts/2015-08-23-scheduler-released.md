@@ -5,12 +5,9 @@ date: 2015-08-23T01:41:02+00:00
 author: arshaw
 layout: post
 guid: http://blog.arshaw.com/?p=157
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "4058567706"
-categories:
-  - Uncategorized
 ---
 The Scheduler add-on has finally been released! To see demos, docs, and licensing information, go to [fullcalendar.io/scheduler](http://fullcalendar.io/scheduler/)<!--more-->
 

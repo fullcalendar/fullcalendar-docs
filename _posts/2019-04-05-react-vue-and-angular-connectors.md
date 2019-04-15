@@ -6,12 +6,9 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: https://fullcalendar.io/blog/?p=363
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7338642522"
-categories:
-  - Uncategorized
 ---
 I&#8217;m happy to announce the release of three new FullCalendar subprojects. They provide components for the three most popular front-end JavaScript frameworks: [React](https://reactjs.org), [Vue](https://vuejs.org/), and [Angular](https://angular.io/).<!--more--> In order to do this, I needed to enlist some help:
 

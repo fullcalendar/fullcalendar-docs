@@ -6,11 +6,8 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: http://blog.arshaw.com/?p=41
-permalink: blog/:year/:month/:title/
 dsq_thread_id:
   - "1747549948"
-categories:
-  - Uncategorized
 ---
 I haven&#8217;t blogged in a while, but don&#8217;t worry, I&#8217;ve been hard at work doing FullCalendar-related things! I want to let everyone know about some developments with the project, both major and minor.<!--more-->
 

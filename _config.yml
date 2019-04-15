@@ -32,6 +32,8 @@ fullcalendar_angular_playground: https://stackblitz.com/github/fullcalendar/full
 
 excerpt_separator: true
 
+permalink: /blog/:year/:month/:title/
+
 ### pagination
 gems:
   - jekyll-paginate

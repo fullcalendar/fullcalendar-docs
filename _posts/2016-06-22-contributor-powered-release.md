@@ -5,12 +5,9 @@ date: 2016-06-22T05:20:24+00:00
 author: arshaw
 layout: post
 guid: http://fullcalendar.io/blog/?p=200
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "4929340067"
-categories:
-  - Uncategorized
 ---
 Version 2.8.0 is the first release to contain mostly code that I did NOT write: it was written by contributors of the project who submitted their modifications via [Pull Request](https://help.github.com/articles/using-pull-requests/). Here is a summary of those changes:<!--more-->
 

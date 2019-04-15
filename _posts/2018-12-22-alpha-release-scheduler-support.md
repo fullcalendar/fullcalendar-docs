@@ -5,12 +5,9 @@ date: 2018-12-22T02:50:56+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=328
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7122579818"
-categories:
-  - Uncategorized
 ---
 Version 4.0.0-alpha.3 of both FullCalendar Core and Scheduler has been released. This release finally catches up Scheduler with the [large API refactor](https://fullcalendar.io/blog/2018/10/release-v4-alpha2) of the previous alpha release.<!--more-->
 

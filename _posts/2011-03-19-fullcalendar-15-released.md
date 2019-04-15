@@ -5,12 +5,9 @@ date: 2011-03-19T17:00:00+00:00
 author: arshaw
 layout: post
 guid: http://7
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "1735760452"
-categories:
-  - Uncategorized
 ---
 <div style="margin: 1em 0; text-align: left;">
   Today marks the release of FullCalendar 1.5, which contains improvements in theming and visual customization, as well as increased flexibility with the JavaScript API. It also marks the first time a release has been announced on this shiny new blog, an upgrade from the boring changelog format.<!--more-->

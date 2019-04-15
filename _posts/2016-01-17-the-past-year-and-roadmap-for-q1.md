@@ -5,12 +5,9 @@ date: 2016-01-17T23:54:03+00:00
 author: arshaw
 layout: post
 guid: http://fullcalendar.io/blog/?p=164
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "4500261432"
-categories:
-  - Uncategorized
 ---
 **The past year was a good year for FullCalendar!** Aside from the usual bugfixing, three out of the five top requested features were implemented:<!--more-->
 

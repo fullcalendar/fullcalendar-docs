@@ -5,12 +5,9 @@ date: 2018-02-28T07:48:40+00:00
 author: arshaw
 layout: post
 guid: https://fullcalendar.io/blog/?p=297
-permalink: blog/:year/:month/:title/
 excerpt_separator: <!--more-->
 dsq_thread_id:
   - "6510440611"
-categories:
-  - Uncategorized
 ---
 After years of accumulating dozens and dozens of new articles and settings and essentially resembling one huge wall of poorly-organized links, the documentation page has been refactored to be more approachable for first-time users of the project.<!--more--> The index of the documentation page now sports an array of illustrations that abstractly depict each given feature. You can click into each section to see the child articles.
 
