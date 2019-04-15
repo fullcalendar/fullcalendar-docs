@@ -18,7 +18,7 @@ This callback is *guaranteed* to be triggered after the user drags an event, eve
 <tr>
 <th>event</th>
 <td markdown='1'>
-An [Event Object](event-object) that holds information about the event (date, title, etc) **after** the drop.
+An [Event Object](event-object) that holds information about the event (date, title, etc) **before** the drop.
 </td>
 </tr>
 
