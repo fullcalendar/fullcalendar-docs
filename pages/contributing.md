@@ -1,5 +1,6 @@
 ---
 permalink: /contributing
+is_community: true
 title: Contributing
 layout: text
 ---
