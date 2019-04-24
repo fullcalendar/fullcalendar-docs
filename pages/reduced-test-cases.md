@@ -1,6 +1,6 @@
 ---
 permalink: /reduced-test-cases
-is_support: true
+is_community: true
 title: Reduced Test Cases
 layout: text
 custom_js: demo-to-codepen

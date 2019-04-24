@@ -1,6 +1,6 @@
 ---
 permalink: /reporting-bugs
-is_support: true
+is_community: true
 title: Reporting Bugs
 layout: text
 ---

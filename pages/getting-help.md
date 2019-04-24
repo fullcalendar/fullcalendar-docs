@@ -1,14 +1,12 @@
 ---
-permalink: /support
-is_support: true
-title: Support
+permalink: /getting-help
+is_community: true
+title: Getting Help
 layout: text
 ---
 
 <div class='sidenote-layout'>
 <div class='sidenote-layout__main' markdown='1'>
-
-## Getting Help
 
 Have a tough problem you can't figure out? Try searching the [documentation]({{ site.baseurl }}/docs) first. If you can't find what you're looking for, try Googling around.
 

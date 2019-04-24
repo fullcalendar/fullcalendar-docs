@@ -1,6 +1,6 @@
 ---
 permalink: /requesting-features
-is_support: true
+is_community: true
 title: Requesting Features
 layout: text
 ---

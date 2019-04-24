@@ -16,14 +16,21 @@
           <span>Docs</span>
         </a>
       </li>
-      <li class='header__nav-item {% if page.is_support %}header__nav-item--selected{% endif %}'>
-        <a href='{{ site.baseurl }}/support' class='header__nav-link'>
-          <span>Support</span>
+      <li class='header__nav-item {% if page.is_community %}header__nav-item--selected{% endif %}'>
+        <a href='{{ site.baseurl }}/getting-help' class='header__nav-link'>
+          <span>help</span>
         </a>
-      </li>
-      <li class='header__nav-item {% if page.url == "/contributing" %}header__nav-item--selected{% endif %}'>
+        /
+        <a href='{{ site.baseurl }}/reporting-bugs' class='header__nav-link'>
+          <span>bugs</span>
+        </a>
+        /
+        <a href='{{ site.baseurl }}/requesting-features' class='header__nav-link'>
+          <span>ftrs</span>
+        </a>
+        /
         <a href='{{ site.baseurl }}/contributing' class='header__nav-link'>
-          <span>Contribute</span>
+          <span>ctrb</span>
         </a>
       </li>
       <li class='header__nav-item {%
