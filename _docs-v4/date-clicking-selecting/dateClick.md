@@ -120,6 +120,6 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 ```
 
-This is only available with the [Scheduler plugin]({{ site.baseurl }}/scheduler).
+This is only available with the [Scheduler plugin]({{ site.baseurl }}/purchase).
 
 [See a demo of dateClick with resources](date-clicking-selecting-resource-demo).

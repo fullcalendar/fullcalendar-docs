@@ -12,7 +12,7 @@ demos:
   - vertical-resource-resourceRender-demo
 ---
 
-The [Scheduler add-on]({{ site.baseurl }}/scheduler) provides [agenda view](agenda-view) and [basic view](basic-view) with the ability to display **resources as columns**.
+The [Scheduler add-on]({{ site.baseurl }}/purchase) provides [agenda view](agenda-view) and [basic view](basic-view) with the ability to display **resources as columns**.
 
 To activate this functionality in a single-day view, simply use `agendaDay` or `basicDay` view and specify the `resources` setting:
 

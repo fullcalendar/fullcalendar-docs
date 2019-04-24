@@ -29,7 +29,7 @@ You'll be manually initializing FullCalendar with [script tags and globals]({{ s
 
 
 
-# FullCalendar Scheduler Stuff
+<h1 id='scheduler'>FullCalendar Scheduler Stuff</h1><!-- fragment is important -->
 
 ## Free Trial
 

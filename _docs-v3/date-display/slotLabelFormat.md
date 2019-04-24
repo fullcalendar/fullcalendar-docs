@@ -25,7 +25,7 @@ slotLabelFormat: [
 ]
 ```
 
-Only available with the [Scheduler plugin]({{ site.baseurl }}/scheduler).
+Only available with the [Scheduler plugin]({{ site.baseurl }}/purchase).
 
 
 

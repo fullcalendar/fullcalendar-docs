@@ -4,7 +4,7 @@ title_for_landing: TypeScript
 excerpt_separator: <!--more-->
 ---
 
-It is possible to use FullCalendar and [Scheduler]({{ site.baseurl }}/scheduler) with **TypeScript**, a type-aware superset of the JavaScript language that compiles down to JavaScript.<!--more--> TypeScript is great for the maintainability of large JavaScript projects, however, it is probably overkill for smaller projects. [Learn more about TypeScript &raquo;](https://www.typescriptlang.org/)
+It is possible to use FullCalendar and [Scheduler]({{ site.baseurl }}/purchase) with **TypeScript**, a type-aware superset of the JavaScript language that compiles down to JavaScript.<!--more--> TypeScript is great for the maintainability of large JavaScript projects, however, it is probably overkill for smaller projects. [Learn more about TypeScript &raquo;](https://www.typescriptlang.org/)
 
 You will then need to set up some sort of build system that compiles TypeScript to JavaScript. You can use the `tsc` compiler directly or you can use a more sophisticated system like [Webpack](https://webpack.js.org/).
 

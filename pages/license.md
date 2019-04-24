@@ -18,7 +18,7 @@ This is the same license that the <a href='http://jquery.com/'>jQuery project</a
 
 ## FullCalendar Scheduler
 
-The <a href='{{ site.baseurl }}/scheduler'>FullCalendar Scheduler</a> add-on is released under different
+The <a href='{{ site.baseurl }}/purchase'>FullCalendar Scheduler</a> add-on is released under different
 licensing terms than the standard edition of Fullcalendar. There are more restrictions on how it can be used.
 
 <a href='{{ site.baseurl }}/license/premium'>More information &raquo;</a>
