@@ -11,7 +11,7 @@ var calendar = new Calendar(calendarEl, {
 
   views: {
     dayGridMonth: { // name of view
-      titleFormat: 'YYYY, MM, DD'
+      titleFormat: { year: 'numeric', month: '2-digit', day: '2-digit' }
       // other view-specific options here
     }
   }

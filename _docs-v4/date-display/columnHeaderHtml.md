@@ -14,11 +14,11 @@ Example:
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  columnHeaderHtml: function(mom) {
-    if (mom.weekday() === 5) {
+  columnHeaderHtml: function(date) {
+    if (date.getUTCDay() === 5) {
       return '<b>Friday!</b>';
     } else {
-      return '<i>' + mom.format('LLL') + '</i>';
+      return '<i>other day</i>';
     }
   }
 });
