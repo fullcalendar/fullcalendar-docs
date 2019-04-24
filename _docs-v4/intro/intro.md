@@ -1,6 +1,7 @@
 ---
 title: Introduction
 children:
+  - getting-started
   - initialize-globals
   - initialize-es6
   - plugin-index
