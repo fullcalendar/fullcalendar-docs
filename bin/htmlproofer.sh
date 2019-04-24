@@ -8,9 +8,9 @@ set -e # always immediately exit upon error
 cd "`dirname $0`/.." # start in project root
 
 # ignore paths we know will exist once live including:
-# license-premium-commercial
-# license-premium-faq
-url_ignores="/^\/(releases|issues|license-premium-(commercial|faq))(\/|$)/"
+# license/premium-commercial
+# license/premium-faq
+url_ignores="/^\/(releases|issues|license\/premium-(commercial|faq))(\/|$)/"
 
 other_flags=""
 
