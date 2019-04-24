@@ -9,7 +9,7 @@ Triggered when event dragging stops.
 function( *info* ) { }
 </div>
 
-This callback is *guaranteed* to be triggered after the user drags an event, even if the event doesn't change date/time. It is triggered before the event's information has been modified (if moved to a new date/time) and before the [eventDrop](eventDrop) callback is triggered.
+This callback is *guaranteed* to be triggered after the user drags an event, even if the event doesn't change date/time. It is triggered **before** the event's information has been modified (if moved to a new date/time) and before the [eventDrop](eventDrop) callback is triggered.
 
 `info` is a plain object with the following properties:
 
