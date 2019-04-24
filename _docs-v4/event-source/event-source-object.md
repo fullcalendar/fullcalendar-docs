@@ -32,7 +32,7 @@ Event-generating function:
 
 ```js
 {
-  events: function(start, end, timezone, callback) {
+  events: function(info, successCallback, failureCallback) {
     // ...
   },
   color: 'yellow',   // an option!
