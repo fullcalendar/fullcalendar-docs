@@ -20,6 +20,9 @@ children:
   - title: Callbacks
     children:
       - dayRender
+  - title: Methods
+    children:
+      - scrollToTime
 related:
   - firstDay
   - showNonCurrentDates
