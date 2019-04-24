@@ -15,7 +15,7 @@ dsq_thread_id:
 
 **The [too many events issue](https://code.google.com/p/fullcalendar/issues/detail?id=304) has been implemented**, the most demanded feature. When [eventLimit](http://arshaw.com/fullcalendar/docs/display/eventLimit/) is enabled, a link will appear on days that have lots of events, with the option to see more. When enabled, the default behavior is to display a popover panel with all the events. This behavior can be fine-tuned with [eventLimitClick](http://arshaw.com/fullcalendar/docs/display/eventLimitClick/).
 
-<img class="alignnone wp-image-91 size-full" style="vertical-align: top;" src="/assets/images/blog/2014/08/more_before_open.gif" alt="more_before_open" width="191" height="163" />                 <img class="alignnone wp-image-92 size-full" style="vertical-align: top;" src="/assets/images/blog/2014/08/more_after_open.gif" alt="more_after_open" width="260" height="190" />
+<img class="alignnone wp-image-91 size-full" style="vertical-align: top;" src="/assets/images/blog/2014/08/more_before_open.gif" alt="more_before_open" width="191" height="163" />                 <img class="alignnone wp-image-92 size-full"  src="/assets/images/blog/2014/08/more_after_open.gif" alt="more_after_open" width="260" height="190" />
 
 **[Rendering for printers](https://code.google.com/p/fullcalendar/issues/detail?id=35) has been greatly improved.** In the past, this behavior was rather glitchy, especially cross-browser, but it has been fixed with robust tailored CSS for each view.
 

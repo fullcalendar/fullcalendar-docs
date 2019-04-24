@@ -9,6 +9,4 @@ guid: http://12
 dsq_thread_id:
   - "1735761195"
 ---
-<div style="margin: 1em 0; text-align: left;">
-  This release contains just one bugfix (<a title="" href="http://code.google.com/p/fullcalendar/issues/detail?id=750">issue 750</a>), which involves parsing ISO8601 dates.I know FullCalendar updates have been few and far between recently, but I promise there are some cool stuff in the works.</p>
-</div>
+This release contains just one bugfix (<a title="" href="http://code.google.com/p/fullcalendar/issues/detail?id=750">issue 750</a>), which involves parsing ISO8601 dates.I know FullCalendar updates have been few and far between recently, but I promise there are some cool stuff in the works.

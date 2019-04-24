@@ -26,4 +26,3 @@ dsq_thread_id:
 
 **I want to achieve full automated test coverage** before officially releasing v2.1.0. If you would like to help speed this process along, which would be awesome, please see the [Automated Test Readme](https://github.com/arshaw/fullcalendar/wiki/Automated-Tests).
 
-&nbsp;

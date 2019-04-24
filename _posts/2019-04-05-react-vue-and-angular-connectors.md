@@ -10,26 +10,24 @@ excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7338642522"
 ---
-I&#8217;m happy to announce the release of three new FullCalendar subprojects. They provide components for the three most popular front-end JavaScript frameworks: [React](https://reactjs.org), [Vue](https://vuejs.org/), and [Angular](https://angular.io/).<!--more--> In order to do this, I needed to enlist some help:
+I'm happy to announce the release of three new FullCalendar subprojects. They provide components for the three most popular front-end JavaScript frameworks: [React](https://reactjs.org), [Vue](https://vuejs.org/), and [Angular](https://angular.io/).<!--more--> In order to do this, I needed to enlist some help:
 
-<li style='margin-bottom:1em'>
-  <a href="https://github.com/joshuaRuff">Josh Ruff</a> (of <a href="http://sardius.media/">Sardius Media</a>) had developed <em>sardius-fullcalendar-wrapper</em>, a high-quality connector between React and FullCalendar v4.
-</li>
+- [https://github.com/joshuaRuff](Josh Ruff) (of [http://sardius.media/](Sardius Media)) had developed *sardius-fullcalendar-wrapper*, a high-quality connector between React and FullCalendar v4.
   * [irustm](https://github.com/irustm) had developed _ng-fullcalendar_, the most popular connector between Angular and FullCalendar.
 
 I worked with Josh and irustm to get their components to API-parity with FullCalendar v4, write docs, write tests, and do a million other things to prepare these projects to be part of the FullCalendar family. In just a week and a half, we did it! Please check them out:
 
 <table>
   <tr>
-    <th style="text-align: left;">
+    <th>
       Github Project
     </th>
     
-    <th style="text-align: left;">
+    <th>
       NPM Package
     </th>
     
-    <th style="text-align: left;">
+    <th >
       Docs
     </th>
   </tr>
@@ -77,6 +75,6 @@ I worked with Josh and irustm to get their components to API-parity with FullCal
   </tr>
 </table>
 
-In case you&#8217;re wondering, I (Adam Shaw) built the Vue connector. You&#8217;re welcome.
+In case you're wondering, I (Adam Shaw) built the Vue connector. You're welcome.
 
 All three of these projects are in beta and need people to play with them. Please check them out!

@@ -13,7 +13,7 @@ The latest releases of FullCalendar and Scheduler gives drastically more contr
 
 The most notable features:
 
-  * [visibleRange](https://fullcalendar.io/docs/current_date/visibleRange/) &#8211; programmatic control over a view&#8217;s date range
+  * [visibleRange](https://fullcalendar.io/docs/current_date/visibleRange/) &#8211; programmatic control over a view's date range
   * [validRange](https://fullcalendar.io/docs/current_date/validRange/) &#8211; restrict the user from interacting with certain dates
   * [showNonCurrentDates](https://fullcalendar.io/docs/display/showNonCurrentDates/) &#8211; enables/disables render of dates outside the current month
 

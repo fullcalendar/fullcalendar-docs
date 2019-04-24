@@ -13,13 +13,13 @@ After years of accumulating dozens and dozens of new articles and settings and 
 
 [Visit the new docs page »](https://fullcalendar.io/docs)
 
-However, if you&#8217;ve grown accustomed to the old documentation and prefer one huge table-of-contents, then move your mouse on over to this icon:
+However, if you've grown accustomed to the old documentation and prefer one huge table-of-contents, then move your mouse on over to this icon:
 
 <img class="alignnone size-full wp-image-299" src="/assets/images/blog/2018/02/docs-toc-icon.png" alt="" width="97" height="75" /> 
 
 This will convert the docs page into a hierarchy of links, all accessible from a single page. Upon subsequent visits to the docs, the site will remember your preference. The groupings of each article are different than before, so apologies if it requires a bit of relearning.
 
-We plan to implement a search feature, probably with <a href="https://www.algolia.com/" target="_blank">Algolia</a>. Until then, please make due with your browser&#8217;s Cmd/Ctl+F functionality on the table-of-contents page.
+We plan to implement a search feature, probably with [Algolia](https://www.algolia.com/). Until then, please make due with your browser's Cmd/Ctl+F functionality on the table-of-contents page.
 
 Best of all, there are more **interactive demos** with runnable source-code, which can be edited in CodePen. The end-goal is to make runnable code samples available for every single setting, and we&#8217;re off to a good start. The demos are listed on the right hand side of each section and are linked-to from various sub-articles.
 

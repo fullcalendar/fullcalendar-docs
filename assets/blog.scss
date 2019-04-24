@@ -17,7 +17,20 @@
     padding-bottom: 24px;
     padding-bottom: 1.714285714rem;
 }
-.post-detail {padding-left: 0.4em;}
+.post-detail {
+	padding-left: 0.4em;
+	.entry-content{
+		ul {
+			margin:0 0 1.714285714rem;
+			li{
+				margin:0 0 0 2.571428571rem;
+			}
+		
+		}
+		p{display:block; margin: 0 0 1.714285714rem;
+    line-height: 1.714285714;}
+	}
+}
 
 .nav-previous, .previous-image {
     float: left;

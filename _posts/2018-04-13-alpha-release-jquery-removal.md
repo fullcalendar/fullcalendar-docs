@@ -15,11 +15,11 @@ Removing jQuery as a dependency is a non-backwards-compatible change of course, 
 
 Prior to v4.0.0, we wanted to release an alpha containing the jQuery removal. If you are interested in playing around with it, here are some things you should know about the API:
 
-  * Initializing a calendar and calling a calendar&#8217;s methods are now done in an object-oriented way.
+  * Initializing a calendar and calling a calendar's methods are now done in an object-oriented way.
   * All parts of the API that previously exposed jQuery objects now expose raw DOM nodes or arrays of raw DOM nodes.
-  * We now rely on <a href="https://visionmedia.github.io/superagent/" target="_blank">SuperAgent</a> for ajax requests. We will eventually provide a way for you to [tree-shake](https://webpack.js.org/guides/tree-shaking/) it away if you don&#8217;t need it.
-  * Drag-and-drop of external elements into a calendar instance can still be done with jQuery UI, but you&#8217;ll need to use a connector. We&#8217;ve provided this connector, along with a connector for <a href="https://bevacqua.github.io/dragula/" target="_blank">Dragula</a> if you want to use that instead.
-  * We&#8217;ve dropped support for IE9
+  * We now rely on [SuperAgent](https://visionmedia.github.io/superagent/) for ajax requests. We will eventually provide a way for you to [tree-shake](https://webpack.js.org/guides/tree-shaking/) it away if you don't need it.
+  * Drag-and-drop of external elements into a calendar instance can still be done with jQuery UI, but you'll need to use a connector. We've provided this connector, along with a connector for [Dragula](https://bevacqua.github.io/dragula/) if you want to use that instead.
+  * We've dropped support for IE9
 
 For API examples and downloads:
 

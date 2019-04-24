@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7213172625"
 ---
-The FullCalendar v4 **beta** has just been released. It contains almost exactly the same API as the previous alpha version except for one big thing: all functionality is broken up into **plugins**. There is a **core** package, but it won&#8217;t do anything on its own. You must load plugins for everything, including each type of view.<!--more-->
+The FullCalendar v4 **beta** has just been released. It contains almost exactly the same API as the previous alpha version except for one big thing: all functionality is broken up into **plugins**. There is a **core** package, but it won't do anything on its own. You must load plugins for everything, including each type of view.<!--more-->
 
 [View the list of plugins »](https://fullcalendar.io/docs/v4/plugin-index)
 
@@ -20,7 +20,7 @@ Each plugin has its own NPM package. Many of the views have been renamed to be m
   * **month** view has been renamed to **dayGridMonth**
   * **timeline** view has been renamed to **resourceTimeline** (resourceTimelineWeek, etc)
 
-Also, it&#8217;s important to note that date clicking, date selecting, event drag-n-drop, and event resizing require the **interaction** plugin.
+Also, it's important to note that date clicking, date selecting, event drag-n-drop, and event resizing require the **interaction** plugin.
 
 In addition, Bootstrap 3 theme support and jQuery UI theme support have both been dropped. And there are some minor setting renames. Also, **superagent** has been dropped as a dependency for JSON feed requests, which was introduced in a previous alpha.
 
@@ -28,15 +28,16 @@ For more info, see the [changelog](https://github.com/fullcalendar/fullcalendar
 
 Because FullCalendar has been broken up into plugins, it&#8217;s possible to bundle only the functionality you need, saving space. This, combined with the shedding of jQuery and Moment as dependencies, has drastically reduced the total filesize of a simplest-case app. For example, if all you want to do is display a read-only month-view calendar, you would bundle the following packages:
 
-<p style="margin-left: 2em;">
-  <strong>@fullcalendar/core</strong> + <strong>@fullcalendar/daygrid</strong><br /> = <strong>43k</strong> (minified and gzipped)
-</p>
+
+  **@fullcalendar/core** + **@fullcalendar/daygrid**<br>= **43k** (minified and gzipped)
+
 
 Whereas before you needed to bundle much more:
 
-<p style="margin-left: 2em;">
-  <strong>fullcalendar</strong> + <strong>jquery</strong> + <strong>moment</strong><br /> = <strong>101k</strong> (minified and gzipped)
-</p>
+
+  **fullcalendar** + **jquery** + **moment**<br>
+  = **101k** (minified and gzipped)
+
 
 The size of the required JS is less than half!
 

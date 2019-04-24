@@ -25,8 +25,7 @@ Touch device support has been added to FullCalendar Core and the [Scheduler](htt
   * [Download ZIP](https://github.com/fullcalendar/fullcalendar/releases/download/v2.7.0-beta/fullcalendar-2.7.0-beta.zip)
   * [View a demo!](http://fullcalendar.io/js/fullcalendar-2.7.0-beta/demos/selectable.html) (use a touch device)
 
-<div style="clear: both;">
-</div>
+
 
 <img class="alignright wp-image-178" src="/assets/images/blog/2016/03/scheduler_example.png" alt="" width="314" height="164" sizes="(max-width: 314px) 100vw, 314px" /> 
 
