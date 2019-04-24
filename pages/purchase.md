@@ -1,7 +1,7 @@
 ---
-permalink: /scheduler/purchase
+permalink: /purchase
 title: Purchase Scheduler
-layout: scheduler-text
+layout: text
 ---
 
 This page is hosted by a different CMS.
