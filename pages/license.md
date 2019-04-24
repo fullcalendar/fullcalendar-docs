@@ -1,5 +1,5 @@
 ---
-permalink: /license
+permalink: /license/ # must end in slash for linting to work. accessible at /license nonetheless
 title: License
 layout: text
 is_license: true

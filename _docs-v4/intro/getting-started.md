@@ -63,4 +63,3 @@ var calendar = new Calendar(calendarEl, {
 ## Package Managers
 
 FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). [Follow the instructions &raquo;]({{ site.baseurl }}/docs/initialize-es6)
-

@@ -6,7 +6,7 @@ It's possible to manually include the necessary `<script>` tags in the head of y
 
 This technique is simple because you don't need to worry about a build system. However, it's less maintainable in the long-run because you need to manually ensure all dependencies are included and all script tags are ordered correctly. If you need something more advanced, read the article on [Initializing with an ES6 build system](initialize-es6).
 
-The first step is to download and unzip a ZIP archive from the [Downloads page](/download). Alternatively, you can use a CDN like [UNPKG](https://unpkg.com/). Once you get ahold of the files, do something like this:
+The first step is to download and unzip a ZIP archive from the [Downloads page](/docs/getting-started). Alternatively, you can use a CDN like [UNPKG](https://unpkg.com/). Once you get ahold of the files, do something like this:
 
 ```html
 <!DOCTYPE html>
