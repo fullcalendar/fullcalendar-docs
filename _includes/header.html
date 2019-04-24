@@ -34,6 +34,15 @@
         </a>
       </li>
       <li class='header__nav-item {%
+        if page.is_license or layout.is_license
+      %}header__nav-item--selected{%
+        endif
+      %}'>
+        <a href='{{ site.baseurl }}/license' class='header__nav-link'>
+          <span>License</span>
+        </a>
+      </li>
+      <li class='header__nav-item {%
         if page.is_scheduler or layout.is_scheduler
       %}header__nav-item--selected{%
         endif

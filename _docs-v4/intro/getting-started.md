@@ -37,7 +37,7 @@ Scheduler can be downloaded and evaluated for an unlimited amount of time, free 
 This evaluation version is licensed under a Creative Commons license that does not allow distribution
 of source code modifications nor use in commercial production websites or products.
 
-[Read more about licensing &raquo;]({{ site.baseurl }}/scheduler/license)
+[Read more about licensing &raquo;]({{ site.baseurl }}/license-premium)
 
 
 ## License Key

@@ -2,6 +2,7 @@
 permalink: /license
 title: License
 layout: text
+is_license: true
 ---
 
 ## FullCalendar (Standard Edition)
@@ -20,4 +21,4 @@ This is the same license that the <a href='http://jquery.com/'>jQuery project</a
 The <a href='{{ site.baseurl }}/scheduler'>FullCalendar Scheduler</a> add-on is released under different
 licensing terms than the standard edition of Fullcalendar. There are more restrictions on how it can be used.
 
-<a href='{{ site.baseurl }}/scheduler/license'>More information &raquo;</a>
+<a href='{{ site.baseurl }}/license-premium'>More information &raquo;</a>

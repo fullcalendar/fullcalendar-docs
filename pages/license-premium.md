@@ -1,10 +1,9 @@
 ---
-permalink: /scheduler/license
-title: License for Scheduler
-layout: scheduler-text
+permalink: /license-premium
+title: FullCalendar Scheduler License
+layout: text
+is_license: true
 ---
-
-# FullCalendar Scheduler License
 
 FullCalendar Scheduler is tri-licensed, **meaning you must choose one of three licenses to use**. Each license has its own set of conditions, so please carefully choose one. Here is an overview of each:
 
@@ -13,9 +12,9 @@ FullCalendar Scheduler is tri-licensed, **meaning you must choose one of three l
 
 A commercial license, [which must be purchased]({{ site.baseurl }}/scheduler/purchase), allows Scheduler's use in commercial projects. You may make modifications to the source code but you may not redistribute those modifications. This license is what most people choose.
 
-[Read frequently asked questions (FAQs) &raquo;]({{ site.baseurl }}/scheduler/license-faq)
+[Read frequently asked questions (FAQs) &raquo;]({{ site.baseurl }}/license-premium-faq)
 
-[Read the full license agreement &raquo;]({{ site.baseurl }}/scheduler/license-details)
+[Read the full license agreement &raquo;]({{ site.baseurl }}/license-premium-commercial)
 
 
 ## Option 2)&nbsp; Non-Commercial Creative Commons
