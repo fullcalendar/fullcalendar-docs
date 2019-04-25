@@ -6,7 +6,6 @@ author: arshaw
 layout: post
 excerpt_separator: <!--more-->
 guid: https://fullcalendar.io/blog/?p=363
-excerpt_separator: <!--more-->
 dsq_thread_id:
   - "7338642522"
 ---
@@ -22,53 +21,51 @@ I worked with Josh and irustm to get their components to API-parity with FullCal
     <th>
       Github Project
     </th>
-    
     <th>
       NPM Package
     </th>
-    
-    <th >
+    <th>
       Docs
     </th>
   </tr>
-  
+
   <tr>
     <td>
       <a style="font-weight: bold; color: #000;" href="https://github.com/fullcalendar/fullcalendar-react">fullcalendar-react</a><span style="display: inline-block; vertical-align: middle; position: relative; top: 2px; left: 5px;"><a class="github-button" href="https://github.com/fullcalendar/fullcalendar-react" data-icon="octicon-star">Star</a></span>
     </td>
-    
+
     <td>
       @fullcalendar/react
     </td>
-    
+
     <td>
       <a href="https://fullcalendar.io/docs/react">view the docs »</a>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <a style="font-weight: bold; color: #000;" href="https://github.com/fullcalendar/fullcalendar-angular">fullcalendar-angular</a><span style="display: inline-block; vertical-align: middle; position: relative; top: 2px; left: 5px;"><a class="github-button" href="https://github.com/fullcalendar/fullcalendar-angular" data-icon="octicon-star">Star</a></span>
     </td>
-    
+
     <td>
       @fullcalendar/angular
     </td>
-    
+
     <td>
       <a href="https://fullcalendar.io/docs/angular">view the docs »</a>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <a style="font-weight: bold; color: #000;" href="https://github.com/fullcalendar/fullcalendar-vue">fullcalendar-vue</a><span style="display: inline-block; vertical-align: middle; position: relative; top: 2px; left: 5px;"><a class="github-button" href="https://github.com/fullcalendar/fullcalendar-vue" data-icon="octicon-star">Star</a></span>
     </td>
-    
+
     <td>
       @fullcalendar/vue
     </td>
-    
+
     <td>
       <a href="https://fullcalendar.io/docs/vue">view the docs »</a>
     </td>
