@@ -3,7 +3,7 @@ title: 'Alpha Release: Scheduler Support for v4'
 date: 2018-12-22T02:50:56+00:00
 ---
 
-Version 4.0.0-alpha.3 of both FullCalendar Core and Scheduler has been released. This release finally catches up Scheduler with the [large API refactor](https://fullcalendar.io/blog/2018/10/release-v4-alpha2) of the previous alpha release.
+Version 4.0.0-alpha.3 of both FullCalendar Core and Scheduler has been released. This release finally catches up Scheduler with the [large API refactor]({{ site.baseurl }}/blog/2018/10/release-v4-alpha2) of the previous alpha release.
 
 **Update (Jan 11, 2019)** &#8211; Another alpha has been released. [FullCalendar v4.0.0-alpha.4](https://github.com/fullcalendar/fullcalendar/releases/tag/v4.0.0-alpha.4) and [Scheduler v4.0.0-alpha.4](https://github.com/fullcalendar/fullcalendar-scheduler/releases/tag/v4.0.0-alpha.4)
 

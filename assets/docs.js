@@ -6,7 +6,7 @@ jQuery(function($) {
 
   var V2_WARNING_HTML =
     'Version 3 is nearly API-compatible with version 2. ' +
-    '<a href="https://fullcalendar.io/blog/2016/09/feature-packed-releases/">More Information</a>';
+    '<a href="/blog/2016/09/feature-packed-releases">More Information</a>'; // TODO: use baseurl
 
   $('.hero-select__select').each(function(i, node) {
     var $select = $(node).on('change', function() {

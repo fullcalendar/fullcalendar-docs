@@ -6,7 +6,7 @@ title_for_landing: Vue
 FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 <div class='spec' markdown='1' style='font-family:inherit'>
-This package is in **beta**. [Learn more &raquo;](https://fullcalendar.io/blog/2019/04/react-vue-and-angular-connectors)
+This package is in **beta**. [Learn more &raquo;]({{ site.baseurl }}/blog/2019/04/react-vue-and-angular-connectors)
 </div>
 
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
