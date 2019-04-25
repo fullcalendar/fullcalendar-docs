@@ -34,10 +34,8 @@ fullcalendar_react_playground: https://codesandbox.io/s/2z6wp2jozn
 fullcalendar_vue_playground: https://codesandbox.io/s/8xyz32l0r8
 fullcalendar_angular_playground: https://stackblitz.com/github/fullcalendar/fullcalendar-example-projects/tree/master/angular
 
-# for blog
-permalink: /blog/:year/:month/:title
 paginate: 10
-paginate_path: "/blog/page:num"
+paginate_path: /blog/page:num
 
 # ordered by how they should appear in UI
 available_versions:
@@ -71,3 +69,14 @@ collections:
   docs-v1:
     output: true
     permalink: /docs/v1/:slug
+
+  posts: # will output by default
+    permalink: /blog/:year/:month/:title
+
+defaults:
+  # will apply default values to all posts
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

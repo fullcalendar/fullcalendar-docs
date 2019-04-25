@@ -3,7 +3,6 @@ id: 363
 title: React, Vue, and Angular Connectors
 date: 2019-04-05T05:41:48+00:00
 author: arshaw
-layout: post
 excerpt_separator: <!--more-->
 guid: https://fullcalendar.io/blog/?p=363
 dsq_thread_id:
