@@ -1,4 +1,4 @@
-jQuery(function($) {
+document.addEventListener('DOMContentLoaded', function() {
 
   // Version Chooser
   // ------------------------------------------------------------------------------------------
@@ -8,14 +8,17 @@ jQuery(function($) {
     'Version 3 is nearly API-compatible with version 2. ' +
     '<a href="/blog/2016/09/feature-packed-releases">More Information</a>'; // TODO: use baseurl
 
-  $('.hero-select__select').each(function(i, node) {
-    var $select = $(node).on('change', function() {
-      window.location.href = $select.children(':selected').data('url');
+  querySelectorAll('.hero-select__select').forEach(function(selectEl) {
+
+    selectEl.addEventListener('change', function() {
+      var selectedOptionEl = selectEl.options[selectEl.selectedIndex];
+
+      window.location.href = selectedOptionEl.getAttribute('data-url');
     });
 
     function processHash(hash) {
       if (hash === 'v2') {
-        $select.val('v2');
+        selectEl.value = 'v2';
         showV2Warning();
       }
     }
@@ -23,20 +26,25 @@ jQuery(function($) {
     processHash(extractUrlHash(window.location.href));
 
     window.addEventListener('hashchange', function(ev) {
-      processHash(extractUrlHash(ev.newURL));
+      processHash(
+        extractUrlHash(ev.newURL || document.URL) // IE11 doesn't have newURL
+      );
     });
+
   });
 
   function showV2Warning() {
-    $('.hero__warning').html(V2_WARNING_HTML).show();
+    var warningEl = document.querySelector('.hero__warning');
+    warningEl.innerHTML = V2_WARNING_HTML;
+    warningEl.style.display = ''; // show
   }
 
   // Docs Index Layout Chooser
   // ------------------------------------------------------------------------------------------
 
-  $('.docs-layout-toggler').each(function(i, node) {
+  querySelectorAll('.docs-layout-toggler').forEach(function(togglerEl) {
     var SELECTED_CLASS = 'hero-toggler__choice--selected';
-    var $items = $(node).find('.hero-toggler__choice');
+    var itemEls = querySelectorAll('.hero-toggler__choice', togglerEl);
     var choices = []; // array of strings
     var choicesToItems = {}; // map of strings to jquery clickable items
     var choicesToContainers = {}; // map of strings to jquery containers
@@ -44,14 +52,17 @@ jQuery(function($) {
     var initialChoice;
     var storedChoice;
 
-    $items.each(function(i, node) {
-      var $item = $(this);
-      var choice = extractUrlHash($item.attr('href'));
+    itemEls.forEach(function(itemEl) {
+      var choice = extractUrlHash(itemEl.getAttribute('href'));
+      var choiceContainer;
+
       if (choice) {
         choices.push(choice);
-        choicesToItems[choice] = $item;
-        choicesToContainers[choice] = $('#' + choice)
-          .removeAttr('id'); // prevents scrolling when url changed
+        choicesToItems[choice] = itemEl;
+
+        choiceContainer = document.getElementById(choice);
+        choicesToContainers[choice] = choiceContainer;
+        choiceContainer.removeAttribute('id'); // prevents scrolling when url changed
       }
     });
 
@@ -71,7 +82,8 @@ jQuery(function($) {
     }
 
     window.addEventListener('hashchange', function(ev) {
-      var newChoice = extractUrlHash(ev.newURL);
+      var newChoice = extractUrlHash(ev.newURL || document.URL); // IE11 doesn't have newURL
+
       if (isValidChoice(newChoice)) {
         select(newChoice);
       }
@@ -79,10 +91,10 @@ jQuery(function($) {
 
     function select(newChoice) {
       if (newChoice !== currentChoice) {
-        choicesToItems[newChoice].addClass(SELECTED_CLASS);
-        choicesToItems[currentChoice].removeClass(SELECTED_CLASS);
-        choicesToContainers[newChoice].show();
-        choicesToContainers[currentChoice].hide(); // do after .show(), as to not lose scroll position
+        choicesToItems[newChoice].classList.add(SELECTED_CLASS);
+        choicesToItems[currentChoice].classList.remove(SELECTED_CLASS);
+        choicesToContainers[newChoice].style.display = ''; // show
+        choicesToContainers[currentChoice].style.display = 'none'; // do after show, as to not lose scroll position
         localStorage.setItem('docs-landing-view', newChoice);
         currentChoice = newChoice;
       }
@@ -101,6 +113,12 @@ jQuery(function($) {
     if (match) {
       return match[1];
     }
+  }
+
+  function querySelectorAll(selector, parent) {
+    return Array.prototype.slice.call( // an array
+      (parent || document).querySelectorAll(selector)
+    )
   }
 
 });

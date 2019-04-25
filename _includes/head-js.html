@@ -7,14 +7,6 @@
   <!-- no Google Analytics. need this comment for linting -->
 {% endif %}
 
-{% if layout.needs_jquery %}
-  {% if jekyll.environment == "production" %}
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  {% else %}
-    <script src='{{ site.baseurl }}/assets/jquery.min.js'></script>
-  {% endif %}
-{% endif %}
-
 {% if layout.needs_disqus_count %}
   <script id='dsq-count-scr' src='https://{{ site.disqus_shortname }}.disqus.com/count.js' async></script>
 {% endif %}
