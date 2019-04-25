@@ -18,7 +18,7 @@ Visit the **[V4 Release Notes and Upgrade Guide »](https://fullcalendar.io/doc
 
 And the icing on the cake, the toolbar and event styling has been updated:
 
-<img src="/assets/images/blog/2019/03/v4-styling-300x208.png" alt="new toolbar styling" />
+<img src="{{ site.baseurl }}/assets/images/blog/2019/03/v4-styling-300x208.png" alt="new toolbar styling" />
 
 Anyway, I&#8217;m tired of writing blog posts about v4, so I&#8217;ll end it here. I want to thank all those who beta tested and submitted bug reports and PRs. It was incredibly helpful!
 

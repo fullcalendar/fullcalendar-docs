@@ -9,15 +9,15 @@ date: 2014-08-26T00:35:11+00:00
 
 **The [too many events issue](https://code.google.com/p/fullcalendar/issues/detail?id=304) has been implemented**, the most demanded feature. When [eventLimit](http://arshaw.com/fullcalendar/docs/display/eventLimit/) is enabled, a link will appear on days that have lots of events, with the option to see more. When enabled, the default behavior is to display a popover panel with all the events. This behavior can be fine-tuned with [eventLimitClick](http://arshaw.com/fullcalendar/docs/display/eventLimitClick/).
 
-<img class="alignnone wp-image-91 size-full" style="vertical-align: top;" src="/assets/images/blog/2014/08/more_before_open.gif" alt="more_before_open" width="191" height="163" />                 <img class="alignnone wp-image-92 size-full"  src="/assets/images/blog/2014/08/more_after_open.gif" alt="more_after_open" width="260" height="190" />
+<img class="alignnone wp-image-91 size-full" style="vertical-align: top;" src="{{ site.baseurl }}/assets/images/blog/2014/08/more_before_open.gif" alt="more_before_open" width="191" height="163" />                 <img class="alignnone wp-image-92 size-full"  src="{{ site.baseurl }}/assets/images/blog/2014/08/more_after_open.gif" alt="more_after_open" width="260" height="190" />
 
 **[Rendering for printers](https://code.google.com/p/fullcalendar/issues/detail?id=35) has been greatly improved.** In the past, this behavior was rather glitchy, especially cross-browser, but it has been fixed with robust tailored CSS for each view.
 
-[<img class="alignnone size-full wp-image-97" src="/assets/images/blog/2014/08/printing_example.gif" alt="printing_example" width="481" height="238" />](/assets/images/blog/2014/08/printing_example.gif)
+[<img src="{{ site.baseurl }}/assets/images/blog/2014/08/printing_example.gif" alt="printing_example" width="481" height="238" />](/assets/images/blog/2014/08/printing_example.gif)
 
 **jQuery UI has been dropped as a dependency** due to this version&#8217;s alternate techniques to event drag-n-drop and resizing. You no longer need to include any jQuery UI scripts on your page for anything FullCalendar-related.
 
-[<img class="alignnone size-full wp-image-101" src="/assets/images/blog/2014/08/no_jqui.gif" alt="no_jqui" width="310" height="140" />](/assets/images/blog/2014/08/no_jqui.gif)
+[<img src="{{ site.baseurl }}/assets/images/blog/2014/08/no_jqui.gif" alt="no_jqui" width="310" height="140" />](/assets/images/blog/2014/08/no_jqui.gif)
 
 Ironically, with addition of many new features and the removal of a dependency, because of smart code reuse, the file size of the minified JS stayed roughly the same.
 

@@ -11,7 +11,7 @@ Touch device support has been added to FullCalendar Core and the [Scheduler](htt
 
 **UPDATE (4/23/16):** [this has been officially released!](https://github.com/fullcalendar/fullcalendar/issues/994#issuecomment-213891492)
 
-<img src="/assets/images/blog/2016/03/agenda_screenshot_retina-1.png" alt="agenda screenshot" width="257" height="164" />
+<img src="{{ site.baseurl }}/assets/images/blog/2016/03/agenda_screenshot_retina-1.png" alt="agenda screenshot" width="257" height="164" />
 
 
 ### FullCalendar Core 2.7.0-beta
@@ -20,7 +20,7 @@ Touch device support has been added to FullCalendar Core and the [Scheduler](htt
 * [Download ZIP](https://github.com/fullcalendar/fullcalendar/releases/download/v2.7.0-beta/fullcalendar-2.7.0-beta.zip)
 * [View a demo!](http://fullcalendar.io/js/fullcalendar-2.7.0-beta/demos/selectable.html) (use a touch device)
 
-<img src="/assets/images/blog/2016/03/scheduler_example.png" alt="scheduler example" width="314" height="164" />
+<img src="{{ site.baseurl }}/assets/images/blog/2016/03/scheduler_example.png" alt="scheduler example" width="314" height="164" />
 
 
 ### FullCalendar Scheduler 1.3.0-beta

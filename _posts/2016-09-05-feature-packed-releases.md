@@ -9,7 +9,7 @@ After being in beta for three weeks, FullCalendar v3 has been released. It imp
 
 Events can now be displayed in a flat list, grouped by day, with the new &#8220;list&#8221; views:
 
-<img class="alignnone size-medium wp-image-215" style="box-shadow: 0 1px 5px rgba(0, 0, 0, .25);" src="/assets/images/blog/2016/08/listWeek-300x166.png" alt="listWeek" width="300" height="166"  sizes="(max-width: 300px) 100vw, 300px" />
+<img class="alignnone size-medium wp-image-215" style="box-shadow: 0 1px 5px rgba(0, 0, 0, .25);" src="{{ site.baseurl }}/assets/images/blog/2016/08/listWeek-300x166.png" alt="listWeek" width="300" height="166"  sizes="(max-width: 300px) 100vw, 300px" />
 
 <a href="https://fullcalendar.io/js/fullcalendar-3.0.0/demos/list-views.html" target="_blank">Demo</a> | [Docs](https://fullcalendar.io/docs/list_view/intro/) | <a href="https://github.com/fullcalendar/fullcalendar/issues/560" target="_blank">Ticket</a>
 
@@ -17,7 +17,7 @@ Events can now be displayed in a flat list, grouped by day, with the new &#8220;
 
 Users can now navigate to other days and weeks by clicking links within the calendar:
 
-<img class="alignnone size-medium wp-image-216" style="box-shadow: 0 1px 5px rgba(0, 0, 0, .25);" src="/assets/images/blog/2016/08/navLinks-300x169.png" alt="navLinks" width="300" height="169"  sizes="(max-width: 300px) 100vw, 300px" />
+<img class="alignnone size-medium wp-image-216" style="box-shadow: 0 1px 5px rgba(0, 0, 0, .25);" src="{{ site.baseurl }}/assets/images/blog/2016/08/navLinks-300x169.png" alt="navLinks" width="300" height="169"  sizes="(max-width: 300px) 100vw, 300px" />
 
 <a href="https://fullcalendar.io/js/fullcalendar-3.0.0/demos/agenda-views.html" target="_blank">Demo</a> | [Docs](https://fullcalendar.io/docs/mouse/navLinks/) | <a href="https://github.com/fullcalendar/fullcalendar/issues/424" target="_blank">Ticket</a>
 

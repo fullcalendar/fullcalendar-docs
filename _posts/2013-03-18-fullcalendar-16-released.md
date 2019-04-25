@@ -8,7 +8,7 @@ Version 1.6 is the most feature-packed release in a while. The feature list was 
 
 ## New Look
 
-<img class="size-full wp-image-22 alignright" alt="6972035_orig" src="/assets/images/blog/2013/03/6972035_orig.png" width="297" height="176" /> First off, FullCalendar got a facelift. The default look now sports Bootstrap-inspired buttons and colors for a much more updated look. It utilizes CSS3, but degrades nicely on older browsers.
+<img class="size-full wp-image-22 alignright" alt="6972035_orig" src="{{ site.baseurl }}/assets/images/blog/2013/03/6972035_orig.png" width="297" height="176" /> First off, FullCalendar got a facelift. The default look now sports Bootstrap-inspired buttons and colors for a much more updated look. It utilizes CSS3, but degrades nicely on older browsers.
 
 On a related note, the HTML markup that comprises buttons and events has been simplified. It will hopefully easier to style. If you are upgrading to this version and have custom CSS that depends on the old HTML skeletons for buttons or events, you might need to rework your CSS a bit.
 
