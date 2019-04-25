@@ -7,12 +7,12 @@
       {% if paginator.previous_page %}
         <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">«</a></li>
       {% else %}
-        <li class="disabled"><a href="#">«</a></li>
+        <li class="disabled"><a>«</a></li>
       {% endif %}
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
-          <li class="disabled active"><a href="#">{{ page }}</a></li>
+          <li class="disabled active"><a>{{ page }}</a></li>
         {% elsif page == 1 %}
           <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
         {% else %}
@@ -23,7 +23,7 @@
       {% if paginator.next_page %}
         <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">»</a></li>
       {% else %}
-        <li class="disabled"><a href="#">»</a></li>
+        <li class="disabled"><a>»</a></li>
       {% endif %}
 
     {% endif %}

@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 
 I'm happy to announce the release of three new FullCalendar subprojects. They provide components for the three most popular front-end JavaScript frameworks: [React](https://reactjs.org), [Vue](https://vuejs.org/), and [Angular](https://angular.io/).<!--more--> In order to do this, I needed to enlist some help:
 
-- [https://github.com/joshuaRuff](Josh Ruff) (of [http://sardius.media/](Sardius Media)) had developed *sardius-fullcalendar-wrapper*, a high-quality connector between React and FullCalendar v4.
+- [Josh Ruff](https://github.com/joshuaRuff) (of [Sardius Media](http://sardius.media/)) had developed *sardius-fullcalendar-wrapper*, a high-quality connector between React and FullCalendar v4.
 - [irustm](https://github.com/irustm) had developed _ng-fullcalendar_, the most popular connector between Angular and FullCalendar.
 
 I worked with Josh and irustm to get their components to API-parity with FullCalendar v4, write docs, write tests, and do a million other things to prepare these projects to be part of the FullCalendar family. In just a week and a half, we did it! Please check them out:

@@ -1,8 +1,8 @@
 <div class="archive">
-	<h2>RECENT POSTS</h2>
-	<ul>
-		{% for post in site.posts offset:1 limit:3 %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
+  <h2>RECENT POSTS</h2>
+  <ul>
+    {% for post in site.posts offset:1 limit:3 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
