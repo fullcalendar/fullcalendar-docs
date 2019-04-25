@@ -1,15 +1,9 @@
 ---
-id: 88
 title: FullCalendar 2.1.0 Released
 date: 2014-08-26T00:35:11+00:00
-author: arshaw
-layout: post
-guid: http://blog.arshaw.com/?p=88
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "2959841210"
 ---
-**Version 2.1.0 has been officially release today**, after being [in beta](http://blog.arshaw.com/1/post/2014/07/fullcalendar-210-beta.html) for a month. It is jam-packed with features and bugfixes. [32 issues](https://code.google.com/p/fullcalendar/issues/list?can=1&q=milestone%3Dskeleton) have been closed, many of which are major and required a significant code refactor.<!--more-->
+
+**Version 2.1.0 has been officially release today**, after being [in beta](http://blog.arshaw.com/1/post/2014/07/fullcalendar-210-beta.html) for a month. It is jam-packed with features and bugfixes. [32 issues](https://code.google.com/p/fullcalendar/issues/list?can=1&q=milestone%3Dskeleton) have been closed, many of which are major and required a significant code refactor.
 
 **Many of the calendar&#8217;s CSS class-names have changed**, which is a backwards-compatibility concern. And the base CSS has been almost completely rewritten. So if you have custom CSS styling an old version of FullCalendar, it probably won&#8217;t work on the newest version. JavaScript API compatibility has been maintained however.
 

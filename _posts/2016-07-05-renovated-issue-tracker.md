@@ -1,15 +1,9 @@
 ---
-id: 204
 title: The Issue Tracker Has Been Renovated
 date: 2016-07-05T00:51:06+00:00
-author: arshaw
-layout: post
-guid: http://fullcalendar.io/blog/?p=204
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "4961123377"
 ---
-FullCalendar&#8217;s issue tracker had grown out of control. The list of issues was incredibly hard to navigate, both for project maintainers and project users. Also, since moving to Github, the issue list became incredibly hard to sort and prioritize. Some much needed renovation was in order.<!--more-->
+
+FullCalendar&#8217;s issue tracker had grown out of control. The list of issues was incredibly hard to navigate, both for project maintainers and project users. Also, since moving to Github, the issue list became incredibly hard to sort and prioritize. Some much needed renovation was in order.
 
 Over the past two months, I&#8217;ve been finding time to clean out old issues, flesh out many half-baked feature request ideas, merge outstanding PRs, and categorize all issues with a new **label system**. There are now <a href="https://github.com/fullcalendar/fullcalendar/labels" target="_blank">33 labels</a> used for categorization, making issues easier to browse.
 
@@ -21,6 +15,6 @@ I've open-sourced the code for creating this UI. It's a new project called <a hr
 
 **Please remember, the best way to express your interest is to make a<img style="vertical-align: middle;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" width="20" height="20" /> reaction on the description of the issue** (<a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments" target="_blank">learn how</a>). Also, if you&#8217;d like to receive email notifications when progress is made, press the <strong style="background-image: linear-gradient(#fcfcfc, #eee); border: 1px solid #d5d5d5; color: #333; padding: 0 5px; border-radius: 3px;">Subscribe</strong> button.
 
-Comments such as +1 or &#8220;when will this be ready&#8221; will not only receive a penalty in the ranking system, they will spam other watchers of the thread<img style="vertical-align: middle;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f615.png" width="20" height="20" /> 
+Comments such as +1 or &#8220;when will this be ready&#8221; will not only receive a penalty in the ranking system, they will spam other watchers of the thread<img style="vertical-align: middle;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f615.png" width="20" height="20" />
 
 Looking at the issue tracker, it&#8217;s easy to see there are a lot of feature requests with a lot of demand. Now that this necessary housekeeping is over with, there will be more time for actually implementing these features <img style="vertical-align: middle;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png" width="20" height="20" />

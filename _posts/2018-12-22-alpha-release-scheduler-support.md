@@ -1,15 +1,9 @@
 ---
-id: 328
 title: 'Alpha Release: Scheduler Support for v4'
 date: 2018-12-22T02:50:56+00:00
-author: arshaw
-layout: post
-guid: https://fullcalendar.io/blog/?p=328
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "7122579818"
 ---
-Version 4.0.0-alpha.3 of both FullCalendar Core and Scheduler has been released. This release finally catches up Scheduler with the [large API refactor](https://fullcalendar.io/blog/2018/10/release-v4-alpha2) of the previous alpha release.<!--more-->
+
+Version 4.0.0-alpha.3 of both FullCalendar Core and Scheduler has been released. This release finally catches up Scheduler with the [large API refactor](https://fullcalendar.io/blog/2018/10/release-v4-alpha2) of the previous alpha release.
 
 **Update (Jan 11, 2019)** &#8211; Another alpha has been released. [FullCalendar v4.0.0-alpha.4](https://github.com/fullcalendar/fullcalendar/releases/tag/v4.0.0-alpha.4) and [Scheduler v4.0.0-alpha.4](https://github.com/fullcalendar/fullcalendar-scheduler/releases/tag/v4.0.0-alpha.4)
 
@@ -25,10 +19,12 @@ Please start using FullCalendar/Scheduler 4.0.0-alpha.3 and [report bugs you fin
 
 Get 4.0.0-alpha.4 via NPM:
 
-<pre>npm install fullcalendar@alpha
-npm install fullcalendar-scheduler@alpha</pre>
+<pre>
+npm install fullcalendar@alpha
+npm install fullcalendar-scheduler@alpha
+</pre>
 
 Or download directly:
 
-  * [fullcalendar-4.0.0-alpha.4.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-alpha.3/fullcalendar-4.0.0-alpha.4.zip)
-  * [fullcalendar-scheduler-4.0.0-alpha.4.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-alpha.3/fullcalendar-scheduler-4.0.0-alpha.4.zip)
+* [fullcalendar-4.0.0-alpha.4.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v4.0.0-alpha.3/fullcalendar-4.0.0-alpha.4.zip)
+* [fullcalendar-scheduler-4.0.0-alpha.4.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v4.0.0-alpha.3/fullcalendar-scheduler-4.0.0-alpha.4.zip)

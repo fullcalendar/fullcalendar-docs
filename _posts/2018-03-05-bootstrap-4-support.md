@@ -1,15 +1,9 @@
 ---
-id: 305
 title: Bootstrap 4 Support
 date: 2018-03-05T14:54:04+00:00
-author: arshaw
-layout: post
-guid: https://fullcalendar.io/blog/?p=305
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "6523364164"
 ---
-Bootstrap 4 support has been released in FullCalendar [v3.9.0](https://github.com/fullcalendar/fullcalendar/releases/tag/v3.9.0). Big thanks to <a href="https://github.com/geekjosh" target="_blank"><strong>@GeekJosh</strong></a> for the [PR](https://github.com/fullcalendar/fullcalendar/pull/4065)!<!--more-->
+
+Bootstrap 4 support has been released in FullCalendar [v3.9.0](https://github.com/fullcalendar/fullcalendar/releases/tag/v3.9.0). Big thanks to <a href="https://github.com/geekjosh" target="_blank"><strong>@GeekJosh</strong></a> for the [PR](https://github.com/fullcalendar/fullcalendar/pull/4065)!
 
 Just set your [themeSystem](https://fullcalendar.io/docs/themeSystem) setting to &#8216;bootstrap4&#8217; and make sure to include a Bootstrap 4 stylesheet AND a FontAwesome stylesheet.
 

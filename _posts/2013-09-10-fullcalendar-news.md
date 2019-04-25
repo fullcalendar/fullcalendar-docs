@@ -1,28 +1,25 @@
 ---
-id: 41
 title: FullCalendar News
 date: 2013-09-10T23:38:05+00:00
-author: arshaw
-layout: post
-excerpt_separator: <!--more-->
-guid: http://blog.arshaw.com/?p=41
-dsq_thread_id:
-  - "1747549948"
 ---
-I haven&#8217;t blogged in a while, but don&#8217;t worry, I&#8217;ve been hard at work doing FullCalendar-related things! I want to let everyone know about some developments with the project, both major and minor.<!--more-->
+
+I haven&#8217;t blogged in a while, but don&#8217;t worry, I&#8217;ve been hard at work doing FullCalendar-related things! I want to let everyone know about some developments with the project, both major and minor.
+
 
 ## New Releases
 
 There have been four releases over the past few months: 1.6.1, 1.6.2, 1.6.3, and 1.6.4. They provide a variety of bugfixes and improvements to the API. For more information, [see the changelog](https://github.com/arshaw/fullcalendar/blob/0dfc25afcb99c4d1e89f51f8a1ebf71790aa3cf1/changelog.md).
 
+
 ## Housekeeping
 
-  * Reduced open [issue tracker](https://code.google.com/p/fullcalendar/issues/list) ticket count from over 900 to **150**
-  * Reduced open [pull requests](https://github.com/arshaw/fullcalendar/pulls) count from 68 to **32**
-  * Much needed improvements to the [Support](http://arshaw.com/fullcalendar/wiki/Support/) pages
-  * Much needed [Contribute](http://arshaw.com/fullcalendar/wiki/Contribute/) and [License](http://arshaw.com/fullcalendar/license/) pages
-  * Instructions for Bower and CDNJS on the [Downloads](http://arshaw.com/fullcalendar/download/) page
-  * New blog and Disqus comment system (no more spam!)
+* Reduced open [issue tracker](https://code.google.com/p/fullcalendar/issues/list) ticket count from over 900 to **150**
+* Reduced open [pull requests](https://github.com/arshaw/fullcalendar/pulls) count from 68 to **32**
+* Much needed improvements to the [Support](http://arshaw.com/fullcalendar/wiki/Support/) pages
+* Much needed [Contribute](http://arshaw.com/fullcalendar/wiki/Contribute/) and [License](http://arshaw.com/fullcalendar/license/) pages
+* Instructions for Bower and CDNJS on the [Downloads](http://arshaw.com/fullcalendar/download/) page
+* New blog and Disqus comment system (no more spam!)
+
 
 ## Roadmap
 

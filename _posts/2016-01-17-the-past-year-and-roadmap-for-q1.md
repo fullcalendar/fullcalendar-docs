@@ -1,19 +1,13 @@
 ---
-id: 164
 title: The Past Year and Roadmap for Q1
 date: 2016-01-17T23:54:03+00:00
-author: arshaw
-layout: post
-guid: http://fullcalendar.io/blog/?p=164
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "4500261432"
 ---
-**The past year was a good year for FullCalendar!** Aside from the usual bugfixing, three out of the five top requested features were implemented:<!--more-->
 
-  * [horizontal resource view](http://fullcalendar.io/scheduler/) (aka &#8220;Timeline&#8221;)
-  * [vertical resource view](http://fullcalendar.io/docs/vertical_resource_view/getting_started/)
-  * [current time indicator](http://fullcalendar.io/docs/current_date/nowIndicator/)
+**The past year was a good year for FullCalendar!** Aside from the usual bugfixing, three out of the five top requested features were implemented:
+
+* [horizontal resource view](http://fullcalendar.io/scheduler/) (aka &#8220;Timeline&#8221;)
+* [vertical resource view](http://fullcalendar.io/docs/vertical_resource_view/getting_started/)
+* [current time indicator](http://fullcalendar.io/docs/current_date/nowIndicator/)
 
 The resource views were particularly time intensive to build. They have been bundled into [Scheduler, a premium add-on](http://fullcalendar.io/scheduler/) introduced in 2015 as well.
 
@@ -25,18 +19,18 @@ The quarter will be sprinkled with a number of bugfix releases, including a soon
 
 In addition, accessibility-related features will be addressed early in the quarter:
 
-  * <a href="https://github.com/fullcalendar/fullcalendar/issues/994" target="_blank">drag-n-drop / resize / selection with touch devices</a>
-  * <a href="https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3Ai18n" target="_blank">i18n contributions</a>
+* <a href="https://github.com/fullcalendar/fullcalendar/issues/994" target="_blank">drag-n-drop / resize / selection with touch devices</a>
+* <a href="https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3Ai18n" target="_blank">i18n contributions</a>
 
 Afterwards, features considered to be high-impact, low-effort will be tackled:
 
-  * <a href="https://github.com/fullcalendar/fullcalendar/issues/429" target="_blank">restrict date range</a>
-  * <a href="https://github.com/fullcalendar/fullcalendar/issues/424" target="_blank">clickable day numbers for easier navigation</a>
+* <a href="https://github.com/fullcalendar/fullcalendar/issues/429" target="_blank">restrict date range</a>
+* <a href="https://github.com/fullcalendar/fullcalendar/issues/424" target="_blank">clickable day numbers for easier navigation</a>
 
 Then, there will be some general internal refactoring to allow for:
 
-  * <a href="https://github.com/fullcalendar/fullcalendar/issues/564" target="_blank">dynamic setters for all options</a>
-  * groundwork for additional views
+* <a href="https://github.com/fullcalendar/fullcalendar/issues/564" target="_blank">dynamic setters for all options</a>
+* groundwork for additional views
 
 ## Beyond Q1
 

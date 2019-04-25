@@ -1,15 +1,9 @@
 ---
-id: 157
 title: Scheduler Released!
 date: 2015-08-23T01:41:02+00:00
-author: arshaw
-layout: post
-guid: http://blog.arshaw.com/?p=157
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "4058567706"
 ---
-The Scheduler add-on has finally been released! To see demos, docs, and licensing information, go to [fullcalendar.io/scheduler](http://fullcalendar.io/scheduler/)<!--more-->
+
+The Scheduler add-on has finally been released! To see demos, docs, and licensing information, go to [fullcalendar.io/scheduler](http://fullcalendar.io/scheduler/)
 
 A quick refresher: Scheduler is a premium add-on for FullCalendar that provides features related to _resources_ (things like team members or conference rooms). It comes with a new calendar view called _Timeline_ which portrays time left-to-right and resources top-to-bottom. This was a very [highly requested](https://code.google.com/p/fullcalendar/issues/detail?id=150) feature and it feels good to finally get it done. For more background information, view the [feature announcement post](http://blog.arshaw.com/1/post/2015/02/timeline-and-other-news.html).
 

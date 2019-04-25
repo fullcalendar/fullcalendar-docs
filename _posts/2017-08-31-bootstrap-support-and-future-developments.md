@@ -1,15 +1,9 @@
 ---
-id: 257
 title: Bootstrap Support and Future Developments
 date: 2017-08-31T17:07:14+00:00
-author: arshaw
-layout: post
-guid: https://fullcalendar.io/blog/?p=257
-excerpt_separator: <!--more-->
-dsq_thread_id:
-  - "6110202193"
 ---
-FullCalendar 3.5.0 and [Scheduler](https://fullcalendar.io/scheduler/) 1.7.0 offers built-in <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3</a> theme support. Include a Bootstrap theme&#8217;s stylesheet on your page, set the [`themeSystem`](https://fullcalendar.io/docs/display/themeSystem/) options to `'bootstrap3'` and you&#8217;re off to the races. Big thanks to <a href="https://github.com/joankaradimov" target="_blank">@joankaradimov</a> for the bulk of the implementation.<!--more-->
+
+FullCalendar 3.5.0 and [Scheduler](https://fullcalendar.io/scheduler/) 1.7.0 offers built-in <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3</a> theme support. Include a Bootstrap theme&#8217;s stylesheet on your page, set the [`themeSystem`](https://fullcalendar.io/docs/display/themeSystem/) options to `'bootstrap3'` and you&#8217;re off to the races. Big thanks to <a href="https://github.com/joankaradimov" target="_blank">@joankaradimov</a> for the bulk of the implementation.
 
 Try out different themes with the <a href="https://fullcalendar.io/js/fullcalendar-3.5.0/demos/themes.html" target="_blank">new theme browser »</a>
 
@@ -31,16 +25,16 @@ Some of you may have noticed that in the past few months, there has been a lot o
 
 Examples of features that will be much easier to implement:
 
-  * new views, like <a href="https://github.com/fullcalendar/fullcalendar/issues/1140" target="_blank">year view</a> and <a href="https://github.com/fullcalendar/fullcalendar/issues/470" target="_blank">multi-month</a> view
-  * better <a href="https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen%20is%3Aissue%20label%3AResponsive" target="_blank">responsive rendering</a> and more sane HTML markup
-  * <a href="https://github.com/fullcalendar/fullcalendar-scheduler/issues/110" target="_blank">horizontal scrolling in agenda views</a>
-  * <a href="https://github.com/fullcalendar/fullcalendar/issues/387" target="_blank">recurring events</a>
+* new views, like <a href="https://github.com/fullcalendar/fullcalendar/issues/1140" target="_blank">year view</a> and <a href="https://github.com/fullcalendar/fullcalendar/issues/470" target="_blank">multi-month</a> view
+* better <a href="https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen%20is%3Aissue%20label%3AResponsive" target="_blank">responsive rendering</a> and more sane HTML markup
+* <a href="https://github.com/fullcalendar/fullcalendar-scheduler/issues/110" target="_blank">horizontal scrolling in agenda views</a>
+* <a href="https://github.com/fullcalendar/fullcalendar/issues/387" target="_blank">recurring events</a>
 
 After 3.6.0 is released, many of the above features will be tackled. Then, we will start gearing up for 4.0.0, which will be a backwards-incompatible release that will include:
 
-  * removal of jQuery as a dependency
-  * better <a href="https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3ATimezone" target="_blank">timezone handling</a>
-  * selective feature loading via ES6 modules
-  * reworked settings, callback signatures, and exposed models
+* removal of jQuery as a dependency
+* better <a href="https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3ATimezone" target="_blank">timezone handling</a>
+* selective feature loading via ES6 modules
+* reworked settings, callback signatures, and exposed models
 
 Please comment if you have feedback!

@@ -1,14 +1,9 @@
 ---
-id: 69
 title: FullCalendar 2.0.1 Released
 date: 2014-06-15T16:40:56+00:00
-author: arshaw
-layout: post
 excerpt_separator: <!--more-->
-guid: http://blog.arshaw.com/?p=69
-dsq_thread_id:
-  - "2767717163"
 ---
+
 As a followup to releasing [FullCalendar v2](http://blog.arshaw.com/1/post/2014/06/fullcalendar-2-released.html) two weeks ago, today I have released version 2.0.1, mainly a bugfix release. <!--more-->The only backwards incompatibility with v2 is the newly introduced 
 
 _delta_ argument in the [eventDrop](http://arshaw.com/fullcalendar/docs/event_ui/eventDrop/) and [eventResize](http://arshaw.com/fullcalendar/docs/event_ui/eventResize/) handlers. **This affects the argument order**, so if you use **revertFunc**, please be aware.
