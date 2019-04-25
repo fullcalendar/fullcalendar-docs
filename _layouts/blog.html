@@ -1,0 +1,20 @@
+---
+layout: base
+custom_css: blog
+pagination:
+  enabled: true
+---
+
+<div class='hero'>
+  <div class='hero__container container'>
+    <h1 class='hero__title'>
+      {{ page.title | escape }}
+    </h1>
+  </div>
+</div>
+
+<div class='page-content'>
+  <div class='page-content__container container text-content'>
+    {{ content }}
+  </div>
+</div>

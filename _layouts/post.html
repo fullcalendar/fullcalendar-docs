@@ -1,0 +1,52 @@
+---
+layout: base
+custom_css: blog
+pagination:
+  enabled: true
+---
+
+
+
+<div class='hero'>
+  <div class='hero__container container'>
+    <h1 class='hero__title'>
+      Blog
+    </h1>
+  </div>
+</div>
+
+<div class='page-content'>
+  <div class='page-content__container container text-content'>
+	<div class='sidenote-layout'>
+		<div class='sidenote-layout__main' markdown='1'>
+			<article class="post type-post post-detail">
+				<header class="entry-header">
+					<h1 class="entry-title">{{ page.title | escape }}</h1>
+					<div class="comments-link">
+					
+					<a href="https://fullcalendar.io{{ page.url }}#disqus_thread">0 Comments</a>
+					
+					</div><!-- .comments-link -->
+				</header><!-- .entry-header -->
+				<div class="entry-content">{{ content }}</div><!-- .entry-content -->
+				<!-- .entry-meta -->
+			</article>
+			<nav class="nav-single">
+				{% if page.previous.url %}
+					<span class="nav-previous"><a href="{{page.previous.url}}" rel="prev"><span class="meta-nav">←</span> {{page.previous.title}}</a></span>					
+				{% endif %}
+				{% if page.next.url %}
+					<span class="nav-next"><a href="{{page.next.url}}" rel="next">{{page.next.title}} <span class="meta-nav">→</span></a></span>
+				{% endif %}
+			</nav>
+			{% include disqus.html %}
+		</div>
+		<div class='sidenote-layout__sidenote' markdown='1'>			
+			{% include recent-blog.html %}
+		</div>
+	</div>
+	</div>
+</div>
+
+
+
