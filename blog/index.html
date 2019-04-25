@@ -1,8 +1,9 @@
 ---
-is_support: false
 custom_css: blog
 title: Blog
 layout: blog
+
+# NOTE: this file needs to live in blog/index.html for pagination to work
 ---
 
 <div class='sidenote-layout'>
@@ -28,11 +29,11 @@ layout: blog
       </article>
     {% endfor %}
 
-    {% include pagination.html %}
+    {% include blog-pagination.html %}
   </div>
 
   <div class='sidenote-layout__sidenote' markdown='1'>
-    {% include recent-blog.html %}
+    {% include blog-recent-posts.html %}
   </div>
 
 </div>
