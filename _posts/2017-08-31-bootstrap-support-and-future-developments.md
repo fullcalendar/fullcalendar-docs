@@ -7,7 +7,7 @@ FullCalendar 3.5.0 and [Scheduler](https://fullcalendar.io/scheduler/) 1.7.0 off
 
 Try out different themes with the <a href="https://fullcalendar.io/js/fullcalendar-3.5.0/demos/themes.html" target="_blank">new theme browser »</a>
 
-<a href="https://fullcalendar.io/js/fullcalendar-3.5.0/demos/themes.html" target="_blank"><img style="margin-left: 10px;" src="{{ site.baseurl }}/assets/images/blog/2017/08/theme-chooser.png" alt="" width="358" height="289" alt="theme chooser" /></a>
+<a href="https://fullcalendar.io/js/fullcalendar-3.5.0/demos/themes.html" target="_blank"><img style="margin-left: 10px;" src="{{ site.baseurl }}/assets/images/blog/theme-chooser.png" alt="" width="358" height="289" alt="theme chooser" /></a>
 
 The [`theme`](https://fullcalendar.io/docs/display/theme/) option is now deprecated, but will continue to function. Use [`themeSystem`](https://fullcalendar.io/docs/display/themeSystem/) instead.
 

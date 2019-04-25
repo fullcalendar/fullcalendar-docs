@@ -10,7 +10,7 @@ After years of accumulating dozens and dozens of new articles and settings and 
 
 However, if you've grown accustomed to the old documentation and prefer one huge table-of-contents, then move your mouse on over to this icon:
 
-<img src="{{ site.baseurl }}/assets/images/blog/2018/02/docs-toc-icon.png" alt="toc icon" width="97" height="75" />
+<img src="{{ site.baseurl }}/assets/images/blog/docs-toc-icon.png" alt="toc icon" width="97" height="75" />
 
 This will convert the docs page into a hierarchy of links, all accessible from a single page. Upon subsequent visits to the docs, the site will remember your preference. The groupings of each article are different than before, so apologies if it requires a bit of relearning.
 
@@ -26,4 +26,4 @@ Please leave a comment with your reactions and suggestions for the new docs. We 
 
 **Update (March 10th): **based on feedback, the &#8220;hierarchy of links&#8221;, the mode for powerusers, has been redesigned to fit more links on the page. See this screenshot:
 
-[<img src="{{ site.baseurl }}/assets/images/blog/2018/02/Screen-Shot-2018-03-10-at-11.04.18-PM-300x252.png" width="300" height="252" alt="docs screenshot" />](https://fullcalendar.io/docs#toc)
+[<img src="{{ site.baseurl }}/assets/images/blog/docs-toc-screenshot.png" width="384" height="323" alt="docs screenshot" />](https://fullcalendar.io/docs#toc)
