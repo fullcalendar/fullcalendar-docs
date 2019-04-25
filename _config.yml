@@ -12,6 +12,10 @@ exclude:
   - gulpfile.js
   - README.md
 
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
+
 markdown: kramdown
 kramdown:
   input: GFM
@@ -32,16 +36,13 @@ fullcalendar_angular_playground: https://stackblitz.com/github/fullcalendar/full
 
 excerpt_separator: true
 
+# TODO: better way?
 permalink: /blog/:year/:month/:title/
-
-### pagination
-gems:
-  - jekyll-paginate
-  - jekyll-archives
 
 ### pagination
 paginate: 10
 paginate_path: "/blog/page:num/"
+
 # ordered by how they should appear in UI
 available_versions:
 
