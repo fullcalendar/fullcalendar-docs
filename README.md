@@ -38,10 +38,8 @@ Then, run the following:
 
 ```sh
 bundler install
-
 npm install
-
-jekyll serve --watch
+npm run watch
 ```
 
 A url will pop up, probably `http://127.0.0.1:4000`, which you can then view in a browser. If you used the `--watch` parameter, the built site will rebuild with every edit. If you want a speedier build, use the `--incremental` parameter, but be aware of its shortcoming.

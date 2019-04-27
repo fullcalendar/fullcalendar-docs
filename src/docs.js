@@ -1,3 +1,5 @@
+import './styles/docs.scss';
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // Version Chooser

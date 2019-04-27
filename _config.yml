@@ -3,12 +3,14 @@
 # (except for dotfiles which are automatically excluded)
 exclude:
   - node_modules
-  - vendor
   - bin
+  - src
+  - vendor # rubygems in TravisCI
   - Gemfile
   - Gemfile.lock
   - package.json
   - package-lock.json
+  - webpack.config.js
   - gulpfile.js
   - README.md
 

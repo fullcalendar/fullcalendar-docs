@@ -1,3 +1,5 @@
+import './styles/demo-to-codepen.scss'; // TODO: change references to this file
+
 document.addEventListener('DOMContentLoaded', function(event) {
   var settings = {
     collapseHtml: true,

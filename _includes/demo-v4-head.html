@@ -6,7 +6,7 @@
   </title>
 {% endif %}
 
-<link href='{{ site.baseurl }}/assets/demo-topbar.css' rel='stylesheet' />
+<link href='{{ site.baseurl }}/assets/built/demo-to-codepen.css' rel='stylesheet' />
 
 {% unless page.disable_base_styles %}
   <style>
@@ -32,7 +32,7 @@
   {% package_css_tag {{ plugin_name }} 4 %}
 {% endfor %}
 
-<script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
+<script src='{{ site.baseurl }}/assets/built/demo-to-codepen.js'></script>
 
 {% package_js_tag core 4 %}
 
