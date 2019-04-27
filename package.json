@@ -1,7 +1,17 @@
 {
   "name": "fullcalendar-site-static",
   "version": "1.0.0",
+  "license": "ISC",
+  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "description": "Documentation for the FullCalendar project",
+  "homepage": "https://github.com/fullcalendar/fullcalendar-site-static#readme",
+  "bugs": {
+    "url": "https://github.com/fullcalendar/fullcalendar/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
+  },
   "scripts": {
     "build": "npm run webpack-build && npm run jekyll-build",
     "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
@@ -23,16 +33,7 @@
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
-    "webpack": "^4.30.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
-  },
-  "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fullcalendar/fullcalendar/issues"
-  },
-  "homepage": "https://github.com/fullcalendar/fullcalendar-site-static#readme"
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
 }
