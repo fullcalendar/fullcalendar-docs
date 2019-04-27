@@ -11,9 +11,14 @@
   <script id='dsq-count-scr' src='https://{{ site.disqus_shortname }}.disqus.com/count.js' async></script>
 {% endif %}
 
-{% for name in layout.custom_js %}
-  <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ name | escape }}.js?{{ cachebuster }}'></script>
+{% for path in layout.assets %}
+  {% if path contains '.js' %}
+    <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
+  {% endif %}
 {% endfor %}
-{% for name in page.custom_js %}
-  <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ name | escape }}.js?{{ cachebuster }}'></script>
+
+{% for path in page.assets %}
+  {% if path contains '.js' %}
+    <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
+  {% endif %}
 {% endfor %}

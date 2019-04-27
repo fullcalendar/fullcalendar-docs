@@ -15,6 +15,14 @@
 
 <link href='{{ site.baseurl }}/assets/built/base.css?{{ cachebuster }}' rel='stylesheet' />
 
-{% for name in layout.custom_css %}
-  <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ name | escape }}.css?{{ cachebuster }}' />
+{% for path in layout.assets %}
+  {% if path contains '.css' %}
+    <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}' />
+  {% endif %}
+{% endfor %}
+
+{% for path in page.assets %}
+  {% if path contains '.css' %}
+    <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}' />
+  {% endif %}
 {% endfor %}
