@@ -37,7 +37,6 @@ Then, `cd` into the `fullcalendar-site-static` directory you cloned.
 Then, run the following:
 
 ```sh
-bundler install
 npm install
 npm run watch
 ```

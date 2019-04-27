@@ -13,7 +13,8 @@
     "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
   },
   "scripts": {
-    "build": "npm run webpack-build && npm run jekyll-build",
+    "install": "bundler install",
+    "build": "npm run clean && npm run webpack-build && npm run jekyll-build",
     "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
     "clean": "npm run webpack-clean && npm run jekyll-clean",
     "jekyll-build": "JEKYLL_ENV=production && bundle exec jekyll build",
@@ -22,7 +23,7 @@
     "webpack-build": "webpack --mode production",
     "webpack-watch": "webpack --watch",
     "webpack-clean": "rm -rf assets/built",
-    "lint": "./bin/lint.sh"
+    "lint": "npm run build && gulp lintspaces && ./bin/htmlproofer.sh"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
