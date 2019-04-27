@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Documentation for the FullCalendar project",
   "scripts": {
-    "clean": "npm run webpack-clean && npm run jekyll-clean",
     "build": "npm run webpack-build && npm run jekyll-build",
     "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
+    "clean": "npm run webpack-clean && npm run jekyll-clean",
     "jekyll-build": "JEKYLL_ENV=production && bundle exec jekyll build",
     "jekyll-watch": "npm run jekyll-clean && bundle exec jekyll serve --watch --incremental",
     "jekyll-clean": "bundle exec jekyll clean",

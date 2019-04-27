@@ -8,6 +8,5 @@ cd "`dirname $0`/.." # start in project root
 
 gulp lintspaces
 
-./bin/update.sh production
-
+./bin/update.sh
 ./bin/htmlproofer.sh

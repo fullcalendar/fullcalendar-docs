@@ -8,4 +8,5 @@ cd "`dirname $0`/.." # start in project root
 
 bundler install # installs rubygems
 npm install
+npm run clean
 npm run build
