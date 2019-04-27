@@ -7,6 +7,7 @@ gulp.task('lintspaces', function() {
     '_docs-*/**/*.{html,md}',
     '_saas/**/*.scss',
     'assets/**/*.{js,css,scss}',
+    '!assets/built/**',
     '_plugins/**/*.rb',
     'bin/**/*.sh',
     '_config.yml', // top level
