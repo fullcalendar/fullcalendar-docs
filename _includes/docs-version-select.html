@@ -1,6 +1,6 @@
 
-<span class='docs-version-select hero-select {% if include.is_condensed %}hero-select--condensed{% endif %}'>
-  <select class='hero-select__select'>
+<span class='docs-version-select nav-tray-select {% if include.is_condensed %}nav-tray-select--condensed{% endif %}'>
+  <select class='nav-tray-select__select'>
     {% for version in page.all_versions %}
       <option value='{{ version.id | escape }}'
         data-url='{{ site.baseurl }}{{ version.url | escape }}'
@@ -9,5 +9,5 @@
         >{{ version.id | escape }}</option>
     {% endfor %}
   </select>
-  <span class='hero-select__arrow'></span>
+  <span class='nav-tray-select__arrow'></span>
 </span>

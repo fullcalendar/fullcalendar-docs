@@ -3,22 +3,22 @@ layout: base
 assets: [ 'built/docs.css', 'built/docs.js' ]
 ---
 
-<div class='hero'>
-  <div class='hero__container container'>
+<div class='nav-tray'>
+  <div class='nav-tray__container container'>
 
-    <div class='hero__main'>
-      <h1 class='hero__title'>
+    <div class='nav-tray__main'>
+      <h1 class='nav-tray__title'>
         Documentation
       </h1>
     </div>
 
     {% include docs-version-warning.html %}
 
-    <div class='hero__controls'>
-      <div class='hero__control'>
+    <div class='nav-tray__controls'>
+      <div class='nav-tray__control'>
         {% include docs-layout-toggler.html %}
       </div>
-      <div class='hero__control'>
+      <div class='nav-tray__control'>
         {% include docs-version-select.html %}
       </div>
     </div>

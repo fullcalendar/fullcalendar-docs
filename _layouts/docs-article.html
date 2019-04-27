@@ -3,27 +3,27 @@ layout: base
 assets: [ 'built/docs.css', 'built/docs.js' ]
 ---
 
-<div class='hero hero--condensed'>
-  <div class='hero__container container'>
+<div class='nav-tray nav-tray--condensed'>
+  <div class='nav-tray__container container'>
 
-    <div class='hero__main'>
-      <div class='hero__title'>
+    <div class='nav-tray__main'>
+      <div class='nav-tray__title'>
         <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
-        <span class='hero__title-separator'></span>
+        <span class='nav-tray__title-separator'></span>
         <a href='{{ site.baseurl }}{{ page.category.url | escape }}'>{{ page.category.title | escape }}</a>
       </div>
     </div>
 
     {% include docs-version-warning.html %}
 
-    <div class='hero__controls'>
-      <div class='hero__control'>
-        <a class='hero-button hero-button--condensed'
+    <div class='nav-tray__controls'>
+      <div class='nav-tray__control'>
+        <a class='nav-tray-button nav-tray-button--condensed'
           target='_blank'
           href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
           >edit doc</a>
       </div>
-      <div class='hero__control'>
+      <div class='nav-tray__control'>
         {% include docs-version-select.html is_condensed=true %}
       </div>
     </div>

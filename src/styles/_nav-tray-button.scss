@@ -1,5 +1,5 @@
 
-.hero-button {
+.nav-tray-button {
   @include control-focus-border;
   display: inline-block;
   vertical-align: top; // hack for all controls
@@ -12,17 +12,17 @@
   cursor: pointer;
 }
 
-a.hero-button { // resets for native <a>
+a.nav-tray-button { // resets for native <a>
   text-decoration: none;
 }
 
-button.hero-button { // resets for native <button>
+button.nav-tray-button { // resets for native <button>
   @include reset-appearance;
   background: none;
   font-family: inherit;
 }
 
-.hero-button--condensed {
+.nav-tray-button--condensed {
   height: $control-height-condensed;
   line-height: $control-height-condensed - 2px;
   padding-left: $control-h-padding - 2px;

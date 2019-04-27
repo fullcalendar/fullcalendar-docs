@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     'Version 3 is nearly API-compatible with version 2. ' +
     '<a href="/blog/2016/09/feature-packed-releases">More Information</a>' // TODO: use baseurl
 
-  querySelectorAll('.hero-select__select').forEach(function(selectEl) {
+  querySelectorAll('.nav-tray-select__select').forEach(function(selectEl) {
 
     selectEl.addEventListener('change', function() {
       var selectedOptionEl = selectEl.options[selectEl.selectedIndex]
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
   function showV2Warning() {
-    var warningEl = document.querySelector('.hero__warning')
+    var warningEl = document.querySelector('.nav-tray__warning')
     warningEl.innerHTML = V2_WARNING_HTML
     warningEl.style.display = '' // show
   }
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // ------------------------------------------------------------------------------------------
 
   querySelectorAll('.docs-layout-toggler').forEach(function(togglerEl) {
-    var SELECTED_CLASS = 'hero-toggler__choice--selected'
-    var itemEls = querySelectorAll('.hero-toggler__choice', togglerEl)
+    var SELECTED_CLASS = 'nav-tray-toggler__choice--selected'
+    var itemEls = querySelectorAll('.nav-tray-toggler__choice', togglerEl)
     var choices = [] // array of strings
     var choicesToItems = {} // map of strings to jquery clickable items
     var choicesToContainers = {} // map of strings to jquery containers

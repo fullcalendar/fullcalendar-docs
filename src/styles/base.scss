@@ -10,7 +10,7 @@
 
 // page-structure components
 @import 'topbar';
-@import 'hero';
+@import 'nav-tray';
 @import 'page-content';
 @import 'footer';
 
@@ -26,6 +26,6 @@
 @import 'external-theme';
 
 // controls
-@import 'hero-button';
-@import 'hero-toggler';
-@import 'hero-select';
+@import 'nav-tray-button';
+@import 'nav-tray-toggler';
+@import 'nav-tray-select';

@@ -1,20 +1,20 @@
 
-$hero-select-arrow-container-width: 18px;
-$hero-select-arrow-width: 10px;
-$hero-select-arrow-height: 8px;
+$nav-tray-select-arrow-container-width: 18px;
+$nav-tray-select-arrow-width: 10px;
+$nav-tray-select-arrow-height: 8px;
 
-.hero-select {
+.nav-tray-select {
   position: relative; // for arrow
   display: inline-block;
   vertical-align: top; // hack for all controls
 }
 
-.hero-select__select { // a <select>
+.nav-tray-select__select { // a <select>
   @include control-focus-border;
   @include reset-appearance;
   display: block;
   height: $control-height-normal;
-  padding: 0 ($hero-select-arrow-container-width + $control-h-padding) 0 $control-h-padding;
+  padding: 0 ($nav-tray-select-arrow-container-width + $control-h-padding) 0 $control-h-padding;
   border: 1px solid $control-border-color;
   border-radius: 0; // for reset
   line-height: $control-height-normal - 2px; // minus border
@@ -29,27 +29,27 @@ $hero-select-arrow-height: 8px;
   }
 }
 
-.hero-select--condensed {
-  .hero-select__select {
+.nav-tray-select--condensed {
+  .nav-tray-select__select {
     height: $control-height-condensed;
     line-height: $control-height-condensed - 2px;
   }
 }
 
-.hero-select__arrow {
+.nav-tray-select__arrow {
   position: absolute;
   top: 1px;    // for border
   right: 1px;  // "
   bottom: 1px; // "
-  width: $hero-select-arrow-container-width;
+  width: $nav-tray-select-arrow-container-width;
   border-left: 1px solid $control-border-color;
   padding: 0 3px;
   background: rgba(0, 0, 0, .125);
   pointer-events: none;
 
   &:after {
-    @include down-triangle($hero-select-arrow-width, $hero-select-arrow-height, rgba(0, 0, 0, .35));
-    @include absolutely-center($hero-select-arrow-width, $hero-select-arrow-height);
+    @include down-triangle($nav-tray-select-arrow-width, $nav-tray-select-arrow-height, rgba(0, 0, 0, .35));
+    @include absolutely-center($nav-tray-select-arrow-width, $nav-tray-select-arrow-height);
     content: '';
   }
 }
