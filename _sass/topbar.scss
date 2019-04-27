@@ -1,0 +1,134 @@
+
+$dark-bg-color: #20232A;
+$darker-bg-color: #121419;
+$blue-highlight-color: #61DAFB;
+$yellow-highlight-color: #FAC863;
+
+.topbar {
+  background: $dark-bg-color;
+  color: #fff; // TODO: default link color?
+}
+
+.topbar__container {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.topbar__branding,
+.topbar__notice,
+.topbar__github {
+  flex-grow: 0;
+}
+
+.topbar__nav {
+  padding-left: 50px;
+  flex-grow: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+}
+
+.topbar__nav-item {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topbar__nav-handle {
+  padding: 14px 0;
+  cursor: default; // override text cursor
+}
+
+a.topbar__nav-handle {
+  cursor: pointer;
+}
+
+.topbar__nav-item--selected {
+  background-color: $darker-bg-color;
+
+  .topbar__nav-handle {
+    color: $yellow-highlight-color;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.topbar__flyout-wrap {
+  position: relative;
+  height: 0;
+}
+
+.topbar__flyout {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $dark-bg-color;
+  border-top: 2px solid $blue-highlight-color;
+  padding: 6px 0;
+  min-width: 150px;
+}
+
+.topbar__nav-item:hover .topbar__flyout {
+  display: block;
+}
+
+.topbar__nav-handle,
+.topbar__flyout-handle {
+  display: block;
+  font-weight: $font-weight-thin;
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+
+  &:hover {
+    color: $blue-highlight-color;
+  }
+}
+
+.topbar__flyout-handle {
+  padding: 12px 15px;
+}
+
+.topbar__notice-link {
+  font-weight: $font-weight-bold;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid $yellow-highlight-color;
+}
+
+
+// MISC -----------------------------------------------------
+
+.button {
+  // TODO: resets
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  padding: 10px 8px;
+}
+
+.button--lightblue {
+
+  &.button--outlined {
+    border-color: $blue-highlight-color;
+    color: #fff;
+
+    &:hover {
+      background: $blue-highlight-color;
+      color: $dark-bg-color;
+    }
+  }
+}
+
+a.branding {
+  color: #fff;
+  text-decoration: none;
+}
+
+.branding-text {
+  font-weight: 800; // TODO: use png
+  font-size: 30px;
+}
