@@ -133,7 +133,17 @@ a.topbar__nav-handle {
   display: inline-block;
   border: 2px solid transparent;
   border-radius: 2px;
-  padding: 8px;
+  padding: .5em;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+button.button,
+input.button {
+  font-size: inherit;
+  font-family: inherit; // more props?
 }
 
 .button--lightblue {
@@ -143,8 +153,21 @@ a.topbar__nav-handle {
     color: #fff;
 
     &:hover {
-      background: $blue-highlight-color;
+      background-color: $blue-highlight-color;
       color: $dark-bg-color;
+    }
+  }
+}
+
+.button--yellow {
+
+  &.button--filled {
+    background-color: $yellow-highlight-color;
+    color: #20232A; // var? why???
+
+    &:hover {
+      border-color: $yellow-highlight-color;
+      background-color: transparent;
     }
   }
 }

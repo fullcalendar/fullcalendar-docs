@@ -1,0 +1,25 @@
+
+.hero {
+  background: #fff url(./images/checker.png) repeat;
+  background-size: 57px 48px;
+  text-align: center;
+  border-bottom: 1px solid red;
+  font-size: 22px;
+}
+
+.hero__container {
+  padding-top: 66px;
+  padding-bottom: 50px;
+}
+
+.hero__supertitle {
+  font-weight: $font-weight-thin;
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 56px;
+  color: #20232A; // var??? why
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
