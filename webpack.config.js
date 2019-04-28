@@ -28,6 +28,12 @@ module.exports = (env, options) => {
             { loader: 'css-loader' },
             { loader: 'sass-loader' }
           ]
+        },
+        {
+          test: /\.(png|jpg|gif)$/i, // TODO: better to use src/styles/images/* instead
+          use: [
+            { loader: 'url-loader' }
+          ]
         }
       ]
     },
