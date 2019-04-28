@@ -1,9 +1,4 @@
 
-$dark-bg-color: #20232A;
-$darker-bg-color: #121419;
-$blue-highlight-color: #61DAFB;
-$yellow-highlight-color: #FAC863;
-
 .topbar {
   background: $dark-bg-color;
   color: #fff; // TODO: default link color?
@@ -46,7 +41,7 @@ a.topbar__nav-handle {
 }
 
 .topbar__nav-item--selected {
-  background-color: $darker-bg-color;
+  background-color: $dark-bg-color-darker;
 
   .topbar__nav-handle {
     color: $yellow-highlight-color;
