@@ -22,3 +22,18 @@ body > .footer {
   max-width: ($page-max-content-width + ($page-gutter * 2)); // because border-box
   padding: 0 $page-gutter;
 }
+
+.topbar {
+  position: relative;
+  z-index: 2;
+}
+
+// get the topbar's flyouts about the content. makes sense?
+.topbar {
+  position: relative;
+  z-index: 2;
+}
+.page-content {
+  position: relative;
+  z-index: 1;
+}

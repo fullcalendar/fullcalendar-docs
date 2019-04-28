@@ -7,7 +7,7 @@
 .topbar__container {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 74px;
 }
 
 .topbar__branding,
@@ -45,7 +45,7 @@ a.topbar__nav-handle {
 
   .topbar__nav-handle {
     color: $yellow-highlight-color;
-    font-weight: $font-weight-bold;
+    // font-weight: $font-weight-bold;
   }
 }
 
@@ -86,6 +86,11 @@ a.topbar__nav-handle {
   padding: 12px 15px;
 }
 
+.topbar__notice {
+  padding-right: 20px;
+  font-size: 13px;
+}
+
 .topbar__notice-link {
   font-weight: $font-weight-bold;
   color: #fff;
@@ -95,6 +100,32 @@ a.topbar__nav-handle {
 }
 
 
+.topbar__github {
+  display: flex;
+  align-items: center;
+}
+
+.topbar__github-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.topbar__github-text {
+  font-size: 13px;
+  padding-right: 10px;
+}
+
+.topbar__github-graphic {
+  width: 32px;
+  height: 32px;
+  background: url(./images/github-logo-white.png) no-repeat;
+  background-size: contain;
+}
+
+
+
 // MISC -----------------------------------------------------
 
 .button {
@@ -102,7 +133,7 @@ a.topbar__nav-handle {
   display: inline-block;
   border: 2px solid transparent;
   border-radius: 2px;
-  padding: 10px 8px;
+  padding: 8px;
 }
 
 .button--lightblue {
@@ -118,12 +149,25 @@ a.topbar__nav-handle {
   }
 }
 
+.branding {
+  display: flex;
+  align-items: center;
+}
+
 a.branding {
   color: #fff;
   text-decoration: none;
 }
 
+.branding-graphic {
+  width: 32px;
+  height: 32px;
+  background: url(./images/logo.png) no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+}
+
 .branding-text {
   font-weight: 800; // TODO: use png
-  font-size: 30px;
+  font-size: 24px;
 }
