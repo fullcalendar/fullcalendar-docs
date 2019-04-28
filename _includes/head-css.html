@@ -1,17 +1,11 @@
 
 {% assign cachebuster = site.time | date: '%s' %}
 
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli:300,400,600,800,900' />
-{% comment %}
-  TEMPORARY
-  TODO: remove extrabold in logo (800), make an image
-
-  {% if jekyll.environment == "production" %}
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,400,700' />
-  {% else %}
-    <link rel='stylesheet' href='{{ site.baseurl }}/assets/lato/lato-100-400-700.css' />
-  {% endif %}
-{% endcomment %}
+{% if jekyll.environment == "production" %}
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli:300,400,600,800,900' />
+{% else %}
+  <link rel='stylesheet' href='{{ site.baseurl }}/assets/muli/muli-300-400-600-800-900.css' />
+{% endif %}
 
 <link href='{{ site.baseurl }}/assets/built/base.css?{{ cachebuster }}' rel='stylesheet' />
 
