@@ -1,6 +1,13 @@
 
 {% if page.category.child_groups %}
   <div class='docs-article__sidebar'>
+
+    <div>
+      <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
+      <span class='nav-tray__title-separator'></span>
+      <a href='{{ site.baseurl }}{{ page.category.url | escape }}'>{{ page.category.title | escape }}</a>
+    </div>
+
     <ul>
       {% for child_group in page.category.child_groups %}
         <li>

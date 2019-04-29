@@ -3,34 +3,6 @@ layout: base
 assets: [ 'built/docs.css', 'built/docs.js' ]
 ---
 
-<div class='nav-tray nav-tray--condensed'>
-  <div class='nav-tray__container container'>
-
-    <div class='nav-tray__main'>
-      <div class='nav-tray__title'>
-        <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
-        <span class='nav-tray__title-separator'></span>
-        <a href='{{ site.baseurl }}{{ page.category.url | escape }}'>{{ page.category.title | escape }}</a>
-      </div>
-    </div>
-
-    {% include docs-version-warning.html %}
-
-    <div class='nav-tray__controls'>
-      <div class='nav-tray__control'>
-        <a class='nav-tray-button nav-tray-button--condensed'
-          target='_blank'
-          href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
-          >edit doc</a>
-      </div>
-      <div class='nav-tray__control'>
-        {% include docs-version-select.html is_condensed=true %}
-      </div>
-    </div>
-
-  </div>
-</div>
-
 <div class='docs-article'>
   <div class='docs-article__container container'>
 
@@ -38,9 +10,25 @@ assets: [ 'built/docs.css', 'built/docs.js' ]
 
       <div class='docs-article__main text-content docs-content'>
 
-        {% include docs-premium-notice.html %}
+        <div class='doc-article__something'>
+          <div class='doc-article__something-item'>
+            {% include docs-premium-notice.html %}
+          </div>
+          <div class='doc-article__something-item'>
+            {% include docs-version-warning.html %}
+          </div>
+          <div class='doc-article__something-item'>
+            <a class='nav-tray-button nav-tray-button--condensed'
+              target='_blank'
+              href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
+              >edit doc</a>
+          </div>
+          <div class='doc-article__something-item'>
+            {% include docs-version-select.html is_condensed=true %}
+          </div>
+        </div>
 
-        <h1>
+        <h1 class='page-content__title'>
           {{ page.title | escape }}
 
           {% if page.since_scheduler_version %}

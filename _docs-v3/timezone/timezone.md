@@ -1,7 +1,6 @@
 ---
 title: timezone
 title_for_landing: Timezone
-title_for_hero: Timezone
 layout: docs-sublanding
 related:
   - timezoneParam
