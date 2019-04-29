@@ -38,8 +38,8 @@
 
 .feature-cols__container {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 44px;
 }
 
 .feature-cols__col {
@@ -49,12 +49,51 @@
 
 .feature-cols__title {
   font-weight: $font-weight-bold;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .feature-cols__description {
   text-align: justify;
   line-height: 1.8; // TODO: paragraph lineheight (is there a reset to 1 somewhere?)
+}
+
+
+.demos {
+  margin-bottom: 100px; // temp
+}
+
+.demos__container {
+  display: flex;
+}
+
+.demos__sidebar {
+  width: 230px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 60px;
+
+  .fc-event,
+  select,
+  input,
+  button { // hack
+    margin: 8px 0;
+  }
+}
+
+.demos__sidebar-title {
+  font-weight: $font-weight-bold;
+  font-size: 22px;
+  margin: 20px 0 20px 12px; // 12px is same as accorion
+}
+
+.demos__main {
+  flex-grow: 1;
+  background: #fff;
+  padding: 20px 16px 24px; // TODO: move to calendar
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  border-top: 4px solid $yellow-highlight-color;
+  font-size: 14px;
+  margin-top: 36px;
 }
