@@ -3,11 +3,11 @@
 }
 
 .page-content__container {
-  margin-top: 34px;
-  margin-bottom: 54px;
+  // margin-top: 34px; // I DONT LIKE THIS
+  // margin-bottom: 54px;
 }
 
-.page-content__title {
+.page-content__title { // f'd up how this is used
   font-weight: 900;
   font-size: 34px; // VAR
   margin: 1.5em 0;
