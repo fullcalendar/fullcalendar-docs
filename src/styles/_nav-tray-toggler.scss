@@ -19,12 +19,22 @@
   padding: 0 8px;
   line-height: $control-height-normal - 2px;
   text-decoration: none;
-  color: #fff;
+  color: $control-text-color;
   cursor: pointer;
 
   img { // hack for completely-white 18x18 icons
     margin-top: 6px;
-    opacity: .8;
+    opacity: .5;
+  }
+
+  &:first-child {
+    border-top-left-radius: 2px; // VAR
+    border-bottom-left-radius: 2px; // VAR
+  }
+
+  &:last-child {
+    border-top-right-radius: 2px; // VAR
+    border-bottom-right-radius: 2px; // VAR
   }
 }
 

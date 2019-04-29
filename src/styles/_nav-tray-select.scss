@@ -1,6 +1,6 @@
 
 $nav-tray-select-arrow-container-width: 18px;
-$nav-tray-select-arrow-width: 10px;
+$nav-tray-select-arrow-width: 8px;
 $nav-tray-select-arrow-height: 8px;
 
 .nav-tray-select {
@@ -16,12 +16,12 @@ $nav-tray-select-arrow-height: 8px;
   height: $control-height-normal;
   padding: 0 ($nav-tray-select-arrow-container-width + $control-h-padding) 0 $control-h-padding;
   border: 1px solid $control-border-color;
-  border-radius: 0; // for reset
+  border-radius: 2px; // needs SOMETHING for a reset. TODO: VAR
   line-height: $control-height-normal - 2px; // minus border
   background: transparent; // for reset
   font-size: $control-font-size; // for reset
   font-family: inherit; // for reset
-  color: inherit; // for reset
+  color: $control-text-color; // needs SOMETHING for a reset
 
   option {
     padding: 0; // FF has default inner padding
@@ -43,6 +43,8 @@ $nav-tray-select-arrow-height: 8px;
   bottom: 1px; // "
   width: $nav-tray-select-arrow-container-width;
   border-left: 1px solid $control-border-color;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   padding: 0 3px;
   background: rgba(0, 0, 0, .125);
   pointer-events: none;

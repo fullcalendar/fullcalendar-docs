@@ -1,8 +1,7 @@
 
 .nav-tray {
   line-height: $line-height;
-  // background-color: $nav-tray-bg-color;
-  // color: #fff;
+  background-color: #f4f5f7; // var
 }
 
 
@@ -18,11 +17,11 @@
 }
 
 .nav-tray__title {
+  font-weight: $font-weight-bold;
   font-size: 26px;
   margin: 4px 0;
 
   a {
-    color: #fff;
     text-decoration: none;
     padding-bottom: 3px;
 
@@ -36,6 +35,7 @@
   margin-left: .3em;
   margin-right: .3em;
   color: $control-border-color;
+  font-weight: $font-weight-thin;
 
   &:after {
     content: '/';
@@ -50,12 +50,7 @@
   padding: 2px 8px;
   border-radius: 4px;
   line-height: 1.6em;
-  background: #206c94;
-}
-
-.nav-tray__warning,
-.nav-tray__warning a {
-  color: #fff;
+  background: #dcdcdc;
 }
 
 .nav-tray__controls {

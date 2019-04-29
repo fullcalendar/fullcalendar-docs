@@ -6,9 +6,10 @@
   height: $control-height-normal;
   padding: 0 $control-h-padding;
   border: 1px solid $control-border-color;
+  border-radius: 2px; // VAR
   font-size: $control-font-size;
   line-height: $control-height-normal - 2px; // minus border
-  color: #fff;
+  color: $control-text-color;
   cursor: pointer;
 }
 
