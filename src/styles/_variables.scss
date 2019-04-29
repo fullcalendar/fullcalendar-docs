@@ -5,27 +5,25 @@ $dark-bg-color-lighter: #393F4B;
 $blue-highlight-color: #61DAFB;
 $yellow-highlight-color: #FAC863;
 
-$line-height: 1.7em; // for natural text, not the reset
+$font-size: 16px; // applied globally
+$font-family: 'Muli', sans-serif; // applied globally
+$font-color: #20232A; // applied globally
+$font-weight-thin: 300; // must be used manually
+$font-weight-normal: 400; // applied globally
+$font-weight-bold: 600; // applied to all b/strong tags
+$line-height: 1.7em; // must be used manually
 
-$font-size: 16px;
-$font-family: 'Muli', sans-serif;
-$font-weight-thin: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 600;
-$font-color: #20232A;
-
-$link-color: #1976D2;
-$link-dark-color: #18557b;
+$link-color: #1976D2; // must be used manually
+$link-color-darker: #18557b; // must be used manually
 
 $code-font-size: .8em;
 $code-font-family: Monaco, Consolas, "Lucida Console", monospace;
 $code-line-height: 1.8em;
 
-$yellow-font-color: #FFEEBC; // !!!
-
 $page-max-content-width: 1200px;
 $page-gutter: 30px;
 
+// TODO: audit
 $control-height-normal: 32px;
 $control-height-condensed: 26px;
 $control-font-size: 14px;
