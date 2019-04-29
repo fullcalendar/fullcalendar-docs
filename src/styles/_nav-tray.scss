@@ -2,6 +2,7 @@
 .nav-tray {
   line-height: $line-height;
   background-color: #f4f5f7; // var
+  color: #20232A; // var
 }
 
 
@@ -17,11 +18,12 @@
 }
 
 .nav-tray__title {
-  font-weight: $font-weight-bold;
+  font-weight: 900;
   font-size: 26px;
   margin: 4px 0;
 
   a {
+    color: #20232A; // var
     text-decoration: none;
     padding-bottom: 3px;
 
@@ -50,7 +52,12 @@
   padding: 2px 8px;
   border-radius: 4px;
   line-height: 1.6em;
-  background: #dcdcdc;
+  background: $dark-bg-color;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
 }
 
 .nav-tray__controls {
