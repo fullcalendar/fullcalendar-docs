@@ -6,3 +6,10 @@
   margin-top: 34px;
   margin-bottom: 54px;
 }
+
+.page-content__title {
+  font-weight: 900;
+  font-size: 34px; // VAR
+  margin: 1.5em 0;
+  line-height: $line-height; // GAHHH for text-content
+}

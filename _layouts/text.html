@@ -2,16 +2,16 @@
 layout: base
 ---
 
-<div class='nav-tray'>
-  <div class='nav-tray__container container'>
-    <h1 class='nav-tray__title'>
-      {{ page.title | escape }}
-    </h1>
-  </div>
-</div>
-
 <div class='page-content'>
-  <div class='page-content__container container text-content'>
-    {{ content }}
+  <div class='page-content__container container'>
+
+    <h1 class='page-content__title'>
+        {{ page.title | escape }}
+    </h1>
+
+    <div class='text-content'>
+      {{ content }}
+    </div>
+
   </div>
 </div>

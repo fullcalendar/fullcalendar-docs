@@ -70,8 +70,8 @@ a.docs-sublanding__image {
   margin: 2.5em 0;
 }
 
-.docs-sublanding__child-group-title {
+.docs-sublanding__child-group-title { // TODO: make DRY with .docs-article__sidebar-title
   margin-bottom: 1.5em;
-  text-transform: uppercase;
   color: #999;
+  font-weight: $font-weight-bold;
 }

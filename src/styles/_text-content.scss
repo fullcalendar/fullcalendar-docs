@@ -7,15 +7,17 @@
   line-height: $line-height;
 
   h1 {
-    margin: 1.4em 0;
-    font-weight: $font-weight-bold;
+    // TODO: DRY with page-content
+    font-weight: 900;
+    margin: 1.5em 0;
+    line-height: $line-height; // GAHHH for text-content
   }
 
   h2,
   h3,
   h4 {
     margin: 2.3em 0 1.3em;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
   }
 
   > h2:first-child,
@@ -25,7 +27,8 @@
   }
 
   h1 {
-    font-size: 26px;
+    // TODO: DRY with page-content
+    font-size: 34px; // VAR
   }
 
   h2 {
