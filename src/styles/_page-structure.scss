@@ -17,23 +17,18 @@ body > .footer {
   flex-grow: 1;
 }
 
+.topbar {
+  position: relative;
+  z-index: 2; // put above page-content, for flyout
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
 .container {
   margin: 0 auto;
   max-width: ($page-max-content-width + ($page-gutter * 2)); // because border-box
   padding: 0 $page-gutter;
-}
-
-.topbar {
-  position: relative;
-  z-index: 2;
-}
-
-// get the topbar's flyouts about the content. makes sense?
-.topbar {
-  position: relative;
-  z-index: 2;
-}
-.page-content {
-  position: relative;
-  z-index: 1;
 }

@@ -1,14 +1,12 @@
 
-.page-content {
-}
+// .page-content
 
 .page-content__container {
+  @include clearfix;
+
   padding-bottom: 50px;
 }
 
-.page-content__title { // f'd up how this is used
-  font-weight: 900;
-  font-size: 34px; // VAR
-  margin: 1.5em 0;
-  line-height: $line-height; // GAHHH for text-content
+.page-content__title { // TODO: survey uses
+  @include big-title;
 }

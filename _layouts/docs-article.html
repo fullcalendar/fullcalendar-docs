@@ -3,29 +3,19 @@ layout: base
 assets: [ 'built/docs.css', 'built/docs.js' ]
 ---
 
-<div class='docs-article'>
-  <div class='docs-article__container container'>
+<div class='page-content'>
+  <div class='page-content__container container'>
 
+    <div class='docs-article'>
       {% include docs-article-sidebar.html %}
 
-      <div class='docs-article__main text-content docs-content'>
+      <div class='docs-article__main'>
 
-        <div class='doc-article__something'>
-          <div class='doc-article__something-item'>
-            {% include docs-premium-notice.html %}
-          </div>
-          <div class='doc-article__something-item'>
-            {% include docs-version-warning.html %}
-          </div>
-          <div class='doc-article__something-item'>
-            <a class='nav-tray-button nav-tray-button--condensed'
-              target='_blank'
-              href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
-              >edit doc</a>
-          </div>
-          <div class='doc-article__something-item'>
-            {% include docs-version-select.html is_condensed=true %}
-          </div>
+        <div class='docs-controls'>
+          {% include docs-controls/premium-notice.html %}
+          {% include docs-controls/version-warning.html %}
+          {% include docs-controls/edit-button.html is_condensed=true %}
+          {% include docs-controls/version-select.html is_condensed=true %}
         </div>
 
         <h1 class='page-content__title'>
@@ -40,8 +30,11 @@ assets: [ 'built/docs.css', 'built/docs.js' ]
           {% endif %}
         </h1>
 
-        {{ content }}
+        <div class='text-content docs-content'>
+          {{ content }}
+        </div>
       </div>
+    </div>
 
   </div>
 </div>

@@ -1,21 +1,13 @@
 
 .footer {
+  @include text-dark-bg;
+
   font-size: 14px;
   line-height: $line-height;
-  color: #fff;
   background: $dark-bg-color;
 
   p, ul, li {
     margin-bottom: 1em;
-  }
-
-  a {
-    color: #6dd2f4;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 

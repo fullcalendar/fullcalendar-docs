@@ -2,7 +2,6 @@
 $docs-toc-column-space: 20px;
 
 .docs-toc {
-  @include link-hover-underline;
   line-height: $line-height;
   margin-right: -$docs-toc-column-space; // compensate for table's right margin
 }

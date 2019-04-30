@@ -5,8 +5,8 @@ title: Getting Help
 layout: text
 ---
 
-<div class='sidenote-layout'>
-<div class='sidenote-layout__main' markdown='1'>
+<div class='sidebar-layout'>
+<div class='sidebar-layout__main' markdown='1'>
 
 Have a tough problem you can't figure out? Try searching the [documentation]({{ site.baseurl }}/docs) first. If you can't find what you're looking for, try Googling around.
 
@@ -27,7 +27,7 @@ Have an idea for a new feature? Please carefully follow the [feature request ins
 The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, Edge, and IE 11+.
 
 </div>
-<div class='sidenote-layout__sidenote' markdown='1'>
+<div class='sidebar-layout__sidebar text-content' markdown='1'>
 
 ### Need help with the Scheduler?
 

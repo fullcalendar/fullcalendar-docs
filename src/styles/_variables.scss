@@ -6,6 +6,7 @@ $blue-highlight-color: #61DAFB;
 $yellow-highlight-color: #FAC863;
 
 $font-size: 16px; // applied globally
+$font-size-title: 22px; // must be used manually
 $font-family: 'Muli', sans-serif; // applied globally
 $font-color: #20232A; // applied globally
 $font-weight-thin: 300; // must be used manually
@@ -14,7 +15,9 @@ $font-weight-bold: 600; // applied to all b/strong tags
 $line-height: 1.7em; // must be used manually
 
 $link-color: #1976D2; // must be used manually
-$link-color-darker: #18557b; // must be used manually
+$link-color-dark: #18557b; // must be used manually
+
+// TODO: default border radius
 
 $code-font-size: .8em;
 $code-font-family: Monaco, Consolas, "Lucida Console", monospace;

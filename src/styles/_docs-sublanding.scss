@@ -4,19 +4,17 @@
 $docs-sublanding-sidebar-width: 300px + 14px;
 
 .docs-sublanding {
-}
-
-.docs-sublanding__container {
   display: flex;
 }
 
 .docs-sublanding__main {
   flex-grow: 1;
-  margin-bottom: 3em;
 }
 
 .docs-sublanding__content {
-  margin-top: 2em;
+  > :first-child {
+    margin-top: 0;
+  }
 }
 
 .docs-sublanding__sidebar {
@@ -25,17 +23,10 @@ $docs-sublanding-sidebar-width: 300px + 14px;
   width: $docs-sublanding-sidebar-width + 60px;
   padding-left: 60px;
   margin-bottom: 2em;
-  line-height: $line-height;
-
-  .docs-premium-notice {
-    float: right;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+  line-height: $line-height; // try to match line alignment of main content
 }
 
 .docs-sublanding__sidebar-title {
-  margin-top: 2em;
   margin-bottom: -1em;
   font-weight: $font-weight-bold;
 }

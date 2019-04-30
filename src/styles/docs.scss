@@ -3,10 +3,23 @@
 @import 'variables';
 @import 'mixins';
 
-@import 'docs-premium-notice';
+// controls
+@import 'control-button';
+@import 'control-toggler';
+@import 'control-select';
+
+// misc components
+@import 'external-theme'; // TODO: rename
+@import 'term-table';
+
+// text-based components
+@import 'breadcrumb-title';
+@import 'docs-content';
+
+@import 'docs-controls';
+
+// types of docs pages
 @import 'docs-landing';
 @import 'docs-toc';
 @import 'docs-sublanding';
 @import 'docs-article';
-@import 'docs-content';
-@import 'term-table';

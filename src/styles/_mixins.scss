@@ -1,4 +1,33 @@
 
+// ???
+
+@mixin big-title {
+  font-weight: 900;
+  font-size: 34px;
+  margin: 1.5em 0;
+  line-height: 1;
+}
+
+@mixin link-normal {
+  color: $link-color;
+  text-decoration: underline;
+}
+
+@mixin link-dark-bg {
+  @include hover-underline;
+  color: $blue-highlight-color;
+}
+
+@mixin text-dark-bg {
+  color: #fff;
+
+  a {
+    @include link-dark-bg;
+  }
+}
+
+// ???
+
 @mixin clearfix {
   &:before,
   &:after {
@@ -13,12 +42,6 @@
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-@mixin link-hover-underline { // used on the container of the <a> tags
-  a {
-    @include hover-underline;
   }
 }
 

@@ -1,20 +1,20 @@
 
 {% if page.version.id == "v3" %}
-  <div class='nav-tray__warning'>
+  <div class='docs-controls__control docs-controls__control--text' id='docs-controls-warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/docs/upgrading-from-v3'>
       Info on upgrading to v4
     </a>
   </div>
 {% elsif page.version.id == "v1" %}
-  <div class='nav-tray__warning'>
+  <div class='docs-controls__control docs-controls__control--text' id='docs-controls-warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/docs/v3/upgrading-from-v1'>
       Info on upgrading to version 2/3
     </a>
   </div>
 {% else %}
-  <div class='nav-tray__warning' style='display:none'>
+  <div class='docs-controls__control docs-controls__control--text' id='docs-controls-warning' style='display:none'>
     {% comment %}for JS to dynamically inject warning{% endcomment %}
   </div>
 {% endif %}

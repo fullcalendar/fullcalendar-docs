@@ -2,15 +2,11 @@
 // a div that contains markup for rich text, like markup derived from markdown
 
 .text-content {
-  @include link-hover-underline;
 
   line-height: $line-height;
 
   h1 {
-    // TODO: DRY with page-content
-    font-weight: 900;
-    margin: 1.5em 0;
-    line-height: $line-height; // GAHHH for text-content
+    @include big-title;
   }
 
   h2,
@@ -20,19 +16,8 @@
     font-weight: $font-weight-bold;
   }
 
-  > h2:first-child,
-  > h3:first-child,
-  > h4:first-child {
-    margin-top: 1.3em;
-  }
-
-  h1 {
-    // TODO: DRY with page-content
-    font-size: 34px; // VAR
-  }
-
   h2 {
-    font-size: 22px; // TODO: make it a var
+    font-size: $font-size-title;
   }
 
   h3 {
@@ -48,7 +33,7 @@
   }
 
   a {
-    color: $link-color;
+    @include link-normal;
   }
 
   ul,
@@ -94,13 +79,9 @@
     background-color: #f2f2f2;
   }
 
-  td > p:first-child {
-    margin-top: 0
-  }
-
-  td > p:last-child {
-    margin-bottom: 0
-  }
+  // mainly for markdown within td's
+  td > p:first-child { margin-top: 0 }
+  td > p:last-child { margin-bottom: 0 }
 
   code { // applies inline AND block-level code example
     border-style: solid;

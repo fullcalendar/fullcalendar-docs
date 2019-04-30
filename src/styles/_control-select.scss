@@ -1,20 +1,20 @@
 
-$nav-tray-select-arrow-container-width: 18px;
-$nav-tray-select-arrow-width: 8px;
-$nav-tray-select-arrow-height: 8px;
+$control-select-arrow-container-width: 18px;
+$control-select-arrow-width: 8px;
+$control-select-arrow-height: 8px;
 
-.nav-tray-select {
+.control-select {
   position: relative; // for arrow
   display: inline-block;
   vertical-align: top; // hack for all controls
 }
 
-.nav-tray-select__select { // a <select>
+.control-select__select { // a <select>
   @include control-focus-border;
   @include reset-appearance;
   display: block;
   height: $control-height-normal;
-  padding: 0 ($nav-tray-select-arrow-container-width + $control-h-padding) 0 $control-h-padding;
+  padding: 0 ($control-select-arrow-container-width + $control-h-padding) 0 $control-h-padding;
   border: 1px solid $control-border-color;
   border-radius: 2px; // needs SOMETHING for a reset. TODO: VAR
   line-height: $control-height-normal - 2px; // minus border
@@ -29,19 +29,19 @@ $nav-tray-select-arrow-height: 8px;
   }
 }
 
-.nav-tray-select--condensed {
-  .nav-tray-select__select {
+.control-select--condensed {
+  .control-select__select {
     height: $control-height-condensed;
     line-height: $control-height-condensed - 2px;
   }
 }
 
-.nav-tray-select__arrow {
+.control-select__arrow {
   position: absolute;
   top: 1px;    // for border
   right: 1px;  // "
   bottom: 1px; // "
-  width: $nav-tray-select-arrow-container-width;
+  width: $control-select-arrow-container-width;
   border-left: 1px solid $control-border-color;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -50,8 +50,8 @@ $nav-tray-select-arrow-height: 8px;
   pointer-events: none;
 
   &:after {
-    @include down-triangle($nav-tray-select-arrow-width, $nav-tray-select-arrow-height, rgba(0, 0, 0, .35));
-    @include absolutely-center($nav-tray-select-arrow-width, $nav-tray-select-arrow-height);
+    @include down-triangle($control-select-arrow-width, $control-select-arrow-height, rgba(0, 0, 0, .35));
+    @include absolutely-center($control-select-arrow-width, $control-select-arrow-height);
     content: '';
   }
 }

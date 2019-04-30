@@ -1,5 +1,5 @@
 
-.nav-tray-button {
+.control-button {
   @include control-focus-border;
   display: inline-block;
   vertical-align: top; // hack for all controls
@@ -13,17 +13,17 @@
   cursor: pointer;
 }
 
-a.nav-tray-button { // resets for native <a>
+a.control-button { // resets for native <a>
   text-decoration: none;
 }
 
-button.nav-tray-button { // resets for native <button>
+button.control-button { // resets for native <button>
   @include reset-appearance;
   background: none;
   font-family: inherit;
 }
 
-.nav-tray-button--condensed {
+.control-button--condensed {
   height: $control-height-condensed;
   line-height: $control-height-condensed - 2px;
   padding-left: $control-h-padding - 2px;

@@ -18,8 +18,8 @@ layout: text
 </style>
 
 
-<div class='sidenote-layout'>
-<div class='sidenote-layout__main' id='summary' markdown='1'>
+<div class='sidebar-layout'>
+<div class='sidebar-layout__main' id='summary' markdown='1'>
 ## Summary of Changes
 
 Version 4 is the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
@@ -58,7 +58,7 @@ Version 4 is the biggest FullCalendar release to date. It sheds a number of outd
 **Have a comment?** [Comment on the blog post]({{ site.baseurl }}/blog/2019/03/v4-officially-released)
 
 </div>
-<div class='sidenote-layout__sidenote' id='toc' markdown='1'>
+<div class='sidebar-layout__sidebar' id='toc' markdown='1'>
 ## Table of Contents
 
 - [Initialization](#initialization)

@@ -3,50 +3,40 @@ layout: base
 assets: [ 'built/docs.css', 'built/docs.js' ]
 ---
 
-<div class='docs-sublanding'>
-  <div class='docs-sublanding__container container'>
+<div class='page-content'>
+  <div class='page-content__container container'>
 
-    <div class='docs-sublanding__main'>
-
-      <div class='doc-sublanding__something'>
-        <div class='doc-sublanding__something-item'>
-          {% include docs-premium-notice.html %}
-        </div>
-        <div class='doc-sublanding__something-item'>
-          {% include docs-version-warning.html %}
-        </div>
-        <div class='doc-sublanding__something-item'>
-          <a class='nav-tray-button nav-tray-button--condensed'
-            target='_blank'
-            href='https://github.com/fullcalendar/fullcalendar-site-static/edit/master/{{ page.path | escape }}'
-            >edit doc</a>
-        </div>
-        <div class='doc-sublanding__something-item'>
-          {% include docs-version-select.html %}
-        </div>
-      </div>
-
-      <h1 class='page-content__title'>
-        <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
-        <span class='nav-tray__title-separator'></span>
-        {{ page.title | escape }}
-      </h1>
-
-      <div class='docs-sublanding__content docs-content text-content'>
-        {{ content }}
-      </div>
-
-      <div class='docs-sublanding__children'>
-        {% include docs-sublanding-children.html %}
-      </div>
-
-      {% if page.bottom_content_include %}
-        {% include {{ page.bottom_content_include }} %}
-      {% endif %}
-
+    <div class='docs-controls'>
+      {% include docs-controls/premium-notice.html %}
+      {% include docs-controls/version-warning.html %}
+      {% include docs-controls/edit-button.html %}
+      {% include docs-controls/version-select.html %}
     </div>
 
-    {% include docs-sublanding-sidebar.html %}
+    <h1 class='page-content__title breadcrumb-title'>
+      <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
+      <span class='breadcrumb-title__separator'></span>
+      {{ page.title | escape }}
+    </h1>
 
+    <div class='docs-sublanding'>
+      <div class='docs-sublanding__main'>
+
+        <div class='docs-sublanding__content docs-content text-content'>
+          {{ content }}
+        </div>
+
+        <div class='docs-sublanding__children'>
+          {% include docs-sublanding-children.html %}
+        </div>
+
+        {% if page.bottom_content_include %}
+          {% include {{ page.bottom_content_include }} %}
+        {% endif %}
+
+      </div>
+
+      {% include docs-sublanding-sidebar.html %}
+    </div>
   </div>
 </div>

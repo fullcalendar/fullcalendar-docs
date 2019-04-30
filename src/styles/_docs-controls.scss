@@ -1,0 +1,20 @@
+
+.docs-controls {
+  float: right;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.docs-controls__control {
+  padding-left: 10px;
+}
+
+.docs-controls__control--text {
+  padding-right: 10px;
+  font-size: 14px;
+
+  a {
+    @include link-normal;
+  }
+}

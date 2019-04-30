@@ -13,6 +13,35 @@ pagination:
       <a href='{{ site.baseurl }}/blog'>Blog</a>
     </h1>
 
-    {{ content }}
+    <div class='sidebar-layout'>
+      <div class='sidebar-layout__main'>
+
+        {% for post in paginator.posts %}
+          <article class="post type-post status-publish format-standard hentry category-uncategorized">
+            <header class="entry-header">
+              <h1 class="entry-title">
+              <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
+              </h1>
+              <div class="comments-link">
+                <a href="https://fullcalendar.io{{ post.url }}#disqus_thread">0 Comments</a>
+              </div><!-- .comments-link -->
+            </header>
+            <div class="entry-content">
+              {{ post.excerpt }}
+              {% if post.excerpt != post.content %}
+                <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Continue reading  <span class="meta-nav">→</span></a>
+              {% endif %}
+            </div><!-- .entry-content -->
+          </article>
+        {% endfor %}
+
+        {% include blog-pagination.html %}
+      </div>
+
+      <div class='sidebar-layout__sidebar text-content' markdown='1'>
+        {% include blog-recent-posts.html %} <!-- TODO: common sidebar -->
+      </div>
+    </div>
+
   </div>
 </div>

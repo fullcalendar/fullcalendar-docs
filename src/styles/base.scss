@@ -11,9 +11,9 @@
 // page-structure components
 @import 'topbar';
 @import 'hero';
-@import 'nav-tray';
 @import 'page-content';
 @import 'footer';
+@import 'sidebar-layout';
 
 // text-based components
 @import 'inline-list';
@@ -21,12 +21,5 @@
 @import 'text-content';
 @import 'code-highlight';
 
-// other components
-@import 'sidenote-layout';
-@import 'sidebar-layout';
-@import 'external-theme';
-
-// controls
-@import 'nav-tray-button';
-@import 'nav-tray-toggler';
-@import 'nav-tray-select';
+// whole pages
+@import 'homepage';

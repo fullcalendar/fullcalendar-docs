@@ -6,16 +6,11 @@ assets: [ 'built/docs.css', 'built/docs.js' ]
 <div class='page-content'>
   <div class='page-content__container container'>
 
-    <div class='something'>
-      <div class='something-item'>
-        {% include docs-version-warning.html %}
-      </div>
-      <div class='something-item'>
-        {% include docs-layout-toggler.html %}
-      </div>
-      <div class='something-item'>
-        {% include docs-version-select.html %}
-      </div>
+    <div class='docs-controls'>
+      {% include docs-controls/premium-notice.html %}
+      {% include docs-controls/version-warning.html %}
+      {% include docs-controls/layout-toggler.html %}
+      {% include docs-controls/version-select.html %}
     </div>
 
     <h1 class='page-content__title'>

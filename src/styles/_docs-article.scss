@@ -1,8 +1,5 @@
 
 .docs-article {
-}
-
-.docs-article__container {
   display: flex;
 }
 
@@ -17,6 +14,12 @@
   > ul {
     margin: 2em 0 3em;
   }
+}
+
+.docs-article__breadcrumbs {
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  margin: 58px 0 42px;
 }
 
 .docs-article__sidebar-title {
@@ -34,7 +37,7 @@
     display: block;
     padding: .5em 0;
     text-decoration: none;
-    color: $link-color-darker;
+    color: $link-color-dark;
 
     span {
       position: relative;
@@ -77,12 +80,6 @@
 
 .docs-article__main {
   flex-grow: 1;
-  padding-bottom: 3em;
-
-  .docs-premium-notice {
-    float: right;
-    margin-top: 2em;
-  }
 }
 
 .docs-article__version {

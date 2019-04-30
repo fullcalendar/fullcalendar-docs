@@ -7,28 +7,21 @@
 
 .sidebar-layout__main {
   flex-grow: 1;
+  padding-right: 40px;
 
   > *:first-child {
-    margin-top: 0; // margins compound now :( hack
+    margin-top: 0;
   }
 }
 
 .sidebar-layout__sidebar { // no specified width. will shrink by default
-  @include link-hover-underline;
-  padding-left: 45px;
-  white-space: nowrap;
-
-  h3 {
-    font-size: 16px;
-    margin: 3em 0 1.4em;
-  }
-
-  li {
-    font-size: 14px;
-    margin: 1.2em 0;
-  }
+  flex-basis: 25%;
+  flex-shrink: 0;
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+  padding-bottom: 1em;
 
   > *:first-child {
-    margin-top: .4em; // margins compound now :( hack
+    margin-top: 0;
   }
 }
