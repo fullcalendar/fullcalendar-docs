@@ -8,7 +8,7 @@
   font-size: $control-font-size;
   color: $control-text-color;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center; // for .control-button__text
 }
 
@@ -21,4 +21,16 @@ button.control-button { // resets for native <button>
 .control-button--highlighted {
   color: $link-color;
   border-color: $link-color;
+}
+
+.control-button--filled {
+  color: #fff;
+  border-color: transparent;
+  background-color: $link-color;
+}
+
+.control-button--small {
+  font-size: 11px;
+  line-height: 14px;
+  padding: 1px 3px;
 }

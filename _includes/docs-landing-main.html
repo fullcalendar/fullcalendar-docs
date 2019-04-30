@@ -27,12 +27,11 @@
                     {{ article.title | escape }}
                   {% endif %}
                   {% if article.is_premium %}
-                    <img class='inline-thunderbolt'
-                      src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png'
-                      width='12' height='19'
-                      title='needs Scheduler'
-                      alt='lightning bolt'
-                      />
+                    <div>
+                      <span class='control-button control-button--small control-button--filled'>
+                        <span class='control-button__text'>Premium</span>
+                      </span>
+                    </div>
                   {% endif %}
                 </span>
               </a>

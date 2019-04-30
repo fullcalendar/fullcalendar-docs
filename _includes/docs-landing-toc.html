@@ -37,17 +37,18 @@
             <div class='docs-toc-card'>
 
               <div class='docs-toc-card__head'>
-                <a href='{{ site.baseurl }}{{ article.url | escape }}'>
+                <a class='docs-toc-card__head-link'
+                  href='{{ site.baseurl }}{{ article.url | escape }}'
+                  >
                   {{ article.title | escape }}
-                  {% if article.is_premium %}
-                    <img class='inline-thunderbolt'
-                      src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png'
-                      width='12' height='19'
-                      title='needs Scheduler'
-                      alt='lightning bolt'
-                      />
-                  {% endif %}
                 </a>
+                {% if article.is_premium %}
+                  <a class='control-button control-button--small control-button--filled'
+                    href='{{ site.baseurl }}/purchase'
+                    >
+                    <span class='control-button__text'>Premium</span>
+                  </a>
+              {% endif %}
               </div>
 
               {% if article.own_child_groups %}

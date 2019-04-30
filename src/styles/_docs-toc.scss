@@ -4,10 +4,6 @@ $docs-toc-column-space: 20px;
 .docs-toc {
   line-height: $line-height;
   margin-right: -$docs-toc-column-space; // compensate for table's right margin
-
-  a {
-    @include link-subtle;
-  }
 }
 
 .docs-toc__table {
@@ -39,7 +35,15 @@ $docs-toc-column-space: 20px;
 .docs-toc-card__head {
   background: $control-fill-color;
   border-bottom: 1px solid $control-border-color-light;
-  padding: .7em 1em;
+  padding: .7em .7em .7em 1em;
+  display: flex;
+  justify-content: space-between; // make premium badge go right
+  align-items: center;
+}
+
+.docs-toc-card__head-link,
+.docs-toc-card__body a {
+  @include link-subtle;
 }
 
 .docs-toc-card__body {
