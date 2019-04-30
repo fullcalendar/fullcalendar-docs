@@ -39,7 +39,7 @@ $control-select-arrow-height: 8px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   padding: 0 3px;
-  background: rgba(0, 0, 0, .125);
+  background: $control-fill-color;
   pointer-events: none;
 
   &:after {

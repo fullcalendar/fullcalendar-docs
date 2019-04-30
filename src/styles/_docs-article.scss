@@ -32,12 +32,11 @@
 .docs-article__sidebar-item {
 
   a {
+    @include link-subtle;
     position: relative;
     z-index: 1;
     display: block;
     padding: .5em 0;
-    text-decoration: none;
-    color: $link-color-dark;
 
     span {
       position: relative;
@@ -55,12 +54,8 @@
       top: .5em; // same as top-padding
       left: 0;
       right: 0;
-      border-bottom: 1px dotted #ccc;
+      border-bottom: 1px dotted $control-border-color-light;
       margin-top: -7px;
-    }
-
-    &:hover {
-      color: $link-color;
     }
   }
 }
@@ -86,7 +81,7 @@
   display: inline-block;
   vertical-align: middle;
   margin: -50% 0 -50% 4px;
-  border: 1px solid #ccc;
+  border: 1px solid $control-border-color-light;
   padding: 0 2px;
   font-size: 12px;
   line-height: 16px;

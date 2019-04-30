@@ -29,7 +29,7 @@
 
 .external-theme__img-wrap {
   position: relative;
-  border: 7px solid #ccc;
+  border: 7px solid $control-border-color-light;
   margin-right: 10px;
 
   img {
@@ -56,7 +56,7 @@
   position: relative;
   width: 0;
   height: 0;
-  border: 20px solid #ccc;
+  border: 20px solid $control-border-color-light;
   border-radius: 20px;
 
   &:after {

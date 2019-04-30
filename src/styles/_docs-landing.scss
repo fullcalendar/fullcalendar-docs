@@ -29,7 +29,7 @@
 .docs-landing__illustrations {
   @include clearfix(); // for the illustration floats
   padding: 0 0 0 30px;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid $control-border-color-light;
 }
 
 .docs-landing__illustration {

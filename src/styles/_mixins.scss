@@ -13,6 +13,14 @@
   color: $link-color;
 }
 
+@mixin link-subtle { // TODO: search for link-color-dark
+  color: $link-color-dark;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
 @mixin link-dark-bg {
   @include hover-underline;
   color: $blue-highlight-color;
@@ -29,7 +37,7 @@
 @mixin control-focus-border {
   &:focus {
     outline: 0; // reset browser default
-    border: 1px solid $control-focus-border-color;
+    border: 1px solid $control-border-color-dark;
   }
 }
 

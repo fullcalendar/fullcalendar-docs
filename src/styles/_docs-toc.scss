@@ -4,6 +4,10 @@ $docs-toc-column-space: 20px;
 .docs-toc {
   line-height: $line-height;
   margin-right: -$docs-toc-column-space; // compensate for table's right margin
+
+  a {
+    @include link-subtle;
+  }
 }
 
 .docs-toc__table {
@@ -16,7 +20,7 @@ $docs-toc-column-space: 20px;
 }
 
 .docs-toc__title {
-  font-size: 22px;
+  font-size: $font-size-title;
   margin: 2em 0 1em;
 
   &:first-child {
@@ -25,7 +29,7 @@ $docs-toc-column-space: 20px;
 }
 
 .docs-toc-card {
-  border: 1px solid #ccc;
+  border: 1px solid $control-border-color-light;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
   margin-right: $docs-toc-column-space;
   margin-bottom: 1em;
@@ -33,20 +37,20 @@ $docs-toc-column-space: 20px;
 }
 
 .docs-toc-card__head {
-  background: #ececec;
-  border-bottom: 1px solid #ccc;
-  padding: .5em 1em;
+  background: $control-fill-color;
+  border-bottom: 1px solid $control-border-color-light;
+  padding: .7em 1em;
 }
 
 .docs-toc-card__body {
-  padding-right: .5em;
-  padding-bottom: .5em;
+  padding-right: .7em;
+  padding-bottom: .7em;
 
   ul {
-    margin: .5em 0 .5em 1em;
+    margin: .7em 0 .7em 1em;
   }
 
   li {
-    margin: .5em 0;
+    margin: .7em 0;
   }
 }

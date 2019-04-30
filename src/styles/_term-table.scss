@@ -17,7 +17,7 @@ $term-table-entry-title-width: 250px;
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px dotted $control-border-color-light;
     margin-top: -8px; // move up to baseline
   }
 }
