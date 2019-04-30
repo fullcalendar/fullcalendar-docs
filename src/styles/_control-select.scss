@@ -16,12 +16,12 @@ $control-select-arrow-height: 8px;
   height: 100%;
   padding: $control-v-padding ($control-select-arrow-container-width + $control-h-padding) $control-v-padding $control-h-padding;
   border: 1px solid $control-border-color;
-  border-radius: 2px; // needs SOMETHING for a reset. TODO: VAR
+  border-radius: $border-radius;
   line-height: $control-line-height;
   background: transparent; // for reset
   font-size: $control-font-size; // for reset
   font-family: inherit; // for reset
-  color: $control-text-color; // needs SOMETHING for a reset
+  color: $control-text-color;
 
   option {
     padding: 0; // FF has default inner padding

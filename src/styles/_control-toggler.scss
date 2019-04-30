@@ -21,13 +21,13 @@
   align-items: center;
 
   &:first-child {
-    border-top-left-radius: 2px; // VAR
-    border-bottom-left-radius: 2px; // VAR
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
   }
 
   &:last-child {
-    border-top-right-radius: 2px; // VAR
-    border-bottom-right-radius: 2px; // VAR
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   img { // hack for completely-white 18x18 icons

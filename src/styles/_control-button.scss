@@ -3,7 +3,7 @@
   @include control-focus-border;
   padding: $control-v-padding $control-h-padding;
   border: 1px solid $control-border-color;
-  border-radius: 2px; // VAR
+  border-radius: $border-radius;
   line-height: $control-line-height;
   font-size: $control-font-size;
   color: $control-text-color;
