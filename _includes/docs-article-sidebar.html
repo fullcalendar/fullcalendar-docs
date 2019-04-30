@@ -2,9 +2,7 @@
 {% if page.category.child_groups %}
   <div class='docs-article__sidebar'>
 
-    <div class='docs-article__breadcrumbs breadcrumb-title'>
-      <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
-      <span class='breadcrumb-title__separator'></span>
+    <div class='docs-article__sidebar-supertitle'>
       <a href='{{ site.baseurl }}{{ page.category.url | escape }}'>{{ page.category.title | escape }}</a>
     </div>
 

@@ -3,7 +3,6 @@
   position: relative;
   z-index: 1;
   display: inline-flex;
-  vertical-align: top; // hack for all controls
   padding-left: 1px; // for negative left margin of children
   font-size: $control-font-size;
 }
@@ -12,20 +11,14 @@
   @include control-focus-border;
   position: relative;
   z-index: 2;
-  height: $control-height-normal;
   margin-left: -1px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
   border: 1px solid $control-border-color;
-  padding: 0 8px;
-  line-height: $control-height-normal - 2px;
-  text-decoration: none;
-  color: $control-text-color;
+  padding: $control-v-padding $control-h-padding;
+  line-height: $control-line-height;
   cursor: pointer;
-
-  img { // hack for completely-white 18x18 icons
-    margin-top: 6px;
-    opacity: .5;
-  }
+  display: flex;
+  align-items: center;
 
   &:first-child {
     border-top-left-radius: 2px; // VAR
@@ -36,12 +29,9 @@
     border-top-right-radius: 2px; // VAR
     border-bottom-right-radius: 2px; // VAR
   }
-}
 
-.control-toggler--condensed {
-  .control-toggler__choice {
-    height: $control-height-condensed;
-    line-height: $control-height-condensed - 2px;
+  img { // hack for completely-white 18x18 icons
+    opacity: .5;
   }
 }
 

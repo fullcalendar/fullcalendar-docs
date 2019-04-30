@@ -3,9 +3,6 @@ title: Getting Started
 ---
 
 
-
-# FullCalendar Normal Stuff
-
 <h2>
   Latest:
   <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.fullcalendar_latest.version }}/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip'

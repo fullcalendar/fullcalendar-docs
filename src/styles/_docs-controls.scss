@@ -1,20 +1,36 @@
 
 .docs-controls {
   float: right;
+}
+
+.docs-controls__warning {
+  height: 63px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
-}
-
-.docs-controls__control {
-  padding-left: 10px;
-}
-
-.docs-controls__control--text {
-  padding-right: 10px;
-  font-size: 14px;
+  font-size: 13px;
 
   a {
     @include link-normal;
   }
+}
+
+.docs-controls__controls {
+  display: flex; // will stretch items by default
+  justify-content: flex-end;
+
+  > * {
+    margin-left: 10px;
+  }
+}
+
+.docs-controls--big {
+
+  .docs-controls__warning {
+    height: 60px; // shorter
+  }
+
+  .docs-controls__controls {
+    height: 34px; // taller
+  }
+
 }

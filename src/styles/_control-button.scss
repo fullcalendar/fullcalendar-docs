@@ -1,31 +1,24 @@
 
 .control-button {
   @include control-focus-border;
-  display: inline-block;
-  vertical-align: top; // hack for all controls
-  height: $control-height-normal;
-  padding: 0 $control-h-padding;
+  padding: $control-v-padding $control-h-padding;
   border: 1px solid $control-border-color;
   border-radius: 2px; // VAR
+  line-height: $control-line-height;
   font-size: $control-font-size;
-  line-height: $control-height-normal - 2px; // minus border
   color: $control-text-color;
   cursor: pointer;
-}
-
-a.control-button { // resets for native <a>
-  text-decoration: none;
+  display: flex;
+  align-items: center; // for .control-button__text
 }
 
 button.control-button { // resets for native <button>
-  @include reset-appearance;
+  @include reset-appearance; // TODO: make a mixin
   background: none;
   font-family: inherit;
 }
 
-.control-button--condensed {
-  height: $control-height-condensed;
-  line-height: $control-height-condensed - 2px;
-  padding-left: $control-h-padding - 2px;
-  padding-right: $control-h-padding - 2px;
+.control-button--highlighted {
+  color: $link-color;
+  border-color: $link-color;
 }

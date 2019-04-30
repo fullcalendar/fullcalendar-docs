@@ -4,8 +4,8 @@
 @mixin big-title {
   font-weight: 900;
   font-size: 34px;
-  margin: 1.5em 0;
-  line-height: 1;
+  margin: 1.4em 0;
+  line-height: $line-height;
 }
 
 @mixin link-normal {
@@ -23,6 +23,13 @@
 
   a {
     @include link-dark-bg;
+  }
+}
+
+@mixin control-focus-border {
+  &:focus {
+    outline: 0; // reset browser default
+    border: 1px solid $control-focus-border-color;
   }
 }
 
@@ -62,13 +69,6 @@
   top: 50%;
   left: 50%;
   margin: ($height / -2) 0 0 ($width / -2);
-}
-
-@mixin control-focus-border {
-  &:focus {
-    outline: 0; // reset browser default
-    border: 1px solid $control-focus-border-color;
-  }
 }
 
 @mixin reset-appearance {

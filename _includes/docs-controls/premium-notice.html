@@ -1,15 +1,10 @@
 
 {% if page.is_premium %}
-  <div class='docs-controls__control docs-controls__control--text'>
-    <a href='{{ site.baseurl }}/purchase'>
-      requires Scheduler
-      <img
-        class='inline-thunderbolt'
-        src='{{ site.baseurl }}/assets/images/bolt-grey-12x19@2x.png'
-        width='12' height='19'
-        title='needs Scheduler'
-        alt='lightning bolt'
-        />
-    </a>
-  </div>
+  <a class='control-button control-button--highlighted'
+    href='{{ site.baseurl }}/purchase'
+    >
+    <span class='control-button__text'>
+      requires Premium
+    </span>
+  </a>
 {% endif %}

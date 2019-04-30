@@ -6,7 +6,7 @@
 .docs-article__sidebar {
   flex-shrink: 0;
   flex-grow: 0;
-  flex-basis: 220px;
+  width: 220px;
   margin-right: 60px;
   line-height: $line-height;
   font-size: 14px;
@@ -16,14 +16,14 @@
   }
 }
 
-.docs-article__breadcrumbs {
+.docs-article__sidebar-supertitle {
   font-size: 20px;
   font-weight: $font-weight-bold;
-  margin: 58px 0 42px;
+  margin: 60px 0 44px;
 }
 
 .docs-article__sidebar-title {
-  margin: 2em 0 .5em;
+  margin: 2.2em 0 .5em;
   font-size: 14px;
   color: #999;
   font-weight: $font-weight-bold;

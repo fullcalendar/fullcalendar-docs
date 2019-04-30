@@ -13,11 +13,11 @@ $control-select-arrow-height: 8px;
   @include control-focus-border;
   @include reset-appearance;
   display: block;
-  height: $control-height-normal;
-  padding: 0 ($control-select-arrow-container-width + $control-h-padding) 0 $control-h-padding;
+  height: 100%;
+  padding: $control-v-padding ($control-select-arrow-container-width + $control-h-padding) $control-v-padding $control-h-padding;
   border: 1px solid $control-border-color;
   border-radius: 2px; // needs SOMETHING for a reset. TODO: VAR
-  line-height: $control-height-normal - 2px; // minus border
+  line-height: $control-line-height;
   background: transparent; // for reset
   font-size: $control-font-size; // for reset
   font-family: inherit; // for reset
@@ -26,13 +26,6 @@ $control-select-arrow-height: 8px;
   option {
     padding: 0; // FF has default inner padding
     color: #000; // for IE, so that when expanded, options aren't whited-out
-  }
-}
-
-.control-select--condensed {
-  .control-select__select {
-    height: $control-height-condensed;
-    line-height: $control-height-condensed - 2px;
   }
 }
 

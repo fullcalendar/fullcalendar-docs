@@ -1,19 +1,13 @@
 
-<div class='docs-controls__control'>
-  <span class='control-select {%
-    if include.is_condensed
-  %}control-select--condensed{%
-    endif
-  %}'>
-    <select class='control-select__select'>
-      {% for version in page.all_versions %}
-        <option value='{{ version.id | escape }}'
-          data-url='{{ site.baseurl }}{{ version.url | escape }}'
-          {% if version.is_selected %}selected{% endif %}
-          {% unless version.url %}disabled{% endunless %}
-          >{{ version.id | escape }}</option>
-      {% endfor %}
-    </select>
-    <span class='control-select__arrow'></span>
-  </span>
-</div>
+<span class='control-select'>
+  <select class='control-select__select'>
+    {% for version in page.all_versions %}
+      <option value='{{ version.id | escape }}'
+        data-url='{{ site.baseurl }}{{ version.url | escape }}'
+        {% if version.is_selected %}selected{% endif %}
+        {% unless version.url %}disabled{% endunless %}
+        >{{ version.id | escape }}</option>
+    {% endfor %}
+  </select>
+  <span class='control-select__arrow'></span>
+</span>

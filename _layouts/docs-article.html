@@ -12,10 +12,14 @@ assets: [ 'built/docs.css', 'built/docs.js' ]
       <div class='docs-article__main'>
 
         <div class='docs-controls'>
-          {% include docs-controls/premium-notice.html %}
-          {% include docs-controls/version-warning.html %}
-          {% include docs-controls/edit-button.html is_condensed=true %}
-          {% include docs-controls/version-select.html is_condensed=true %}
+          <div class='docs-controls__warning'>
+            {% include docs-controls/version-warning.html %}
+          </div>
+          <div class='docs-controls__controls'>
+            {% include docs-controls/premium-notice.html %}
+            {% include docs-controls/edit-button.html %}
+            {% include docs-controls/version-select.html %}
+          </div>
         </div>
 
         <h1 class='page-content__title'>

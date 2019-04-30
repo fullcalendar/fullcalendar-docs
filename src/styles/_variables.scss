@@ -12,7 +12,7 @@ $font-color: #20232A; // applied globally
 $font-weight-thin: 300; // must be used manually
 $font-weight-normal: 400; // applied globally
 $font-weight-bold: 600; // applied to all b/strong tags
-$line-height: 1.7em; // must be used manually
+$line-height: 1.7; // must be used manually. don't use em's here!
 
 $link-color: #1976D2; // must be used manually
 $link-color-dark: #18557b; // must be used manually
@@ -26,11 +26,10 @@ $code-line-height: 1.8em;
 $page-max-content-width: 1200px;
 $page-gutter: 30px;
 
-// TODO: audit
-$control-height-normal: 32px;
-$control-height-condensed: 26px;
 $control-font-size: 14px;
+$control-line-height: 18px;
 $control-text-color: #656667;
 $control-border-color: #949496;
 $control-focus-border-color: #555;
+$control-v-padding: 4px; // very "condensed", but will stretch height
 $control-h-padding: 8px;
