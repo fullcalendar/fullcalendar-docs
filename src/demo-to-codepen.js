@@ -1,4 +1,4 @@
-import './styles/demo-to-codepen.scss' // TODO: change references to this file
+import './styles/demo-to-codepen.scss'
 
 document.addEventListener('DOMContentLoaded', function(event) {
   var settings = {

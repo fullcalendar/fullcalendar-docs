@@ -9,8 +9,8 @@
 }
 
 @mixin link-normal {
+  @include hover-underline;
   color: $link-color;
-  text-decoration: underline;
 }
 
 @mixin link-dark-bg {
