@@ -6,6 +6,15 @@
   font-size: 34px;
   margin: 1.4em 0;
   line-height: $line-height;
+
+  a:hover {
+    color: $link-color;
+  }
+}
+
+@mixin title { // won't give margins
+  font-weight: $font-weight-bold;
+  font-size: $font-size-title;
 }
 
 @mixin link-normal {

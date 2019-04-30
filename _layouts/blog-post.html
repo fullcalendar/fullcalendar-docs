@@ -16,32 +16,47 @@ pagination:
     <div class='sidebar-layout'>
       <div class='sidebar-layout__main'>
 
-        <article class='post type-post post-detail'>
-          <header class='entry-header'>
-            <h1 class='entry-title'>{{ page.title | escape }}</h1>
-            <div class='comments-link'>
-              <a href='{{ site.production_baseurl }}{{ page.url }}#disqus_thread'>0 Comments</a>
-            </div><!-- .comments-link -->
-          </header><!-- .entry-header -->
-          <div class='entry-content'>{{ content }}</div><!-- .entry-content -->
-          <!-- .entry-meta -->
-        </article>
+        <div class='blog-post'>
+          <h1 class='blog-post__title'>
+            <a href='{{ site.baseurl }}{{ page.url }}'>
+              {{ page.title | escape }}
+            </a>
+          </h1>
+          <div class='blog-post__comment-count'>
+            <a href='{{ site.production_baseurl }}{{ page.url }}#disqus_thread'>0 Comments</a>
+          </div>
+          <div class='blog-post__content text-content'>
+            {{ content }}
+          </div>
+          <div class='blog-post__meta'>
+            Posted {{ page.date | date: '%B %d, %Y' }}
+          </div>
+        </div>
 
-        <nav class='nav-single'>
+        <div class='blog-pager'>
           {% if page.previous.url %}
-            <span class='nav-previous'><a href='{{ page.previous.url }}' rel='prev'><span class='meta-nav'>←</span> {{page.previous.title}}</a></span>
+            <a href='{{ page.previous.url }}' class='blog-pager__prev' rel='prev'>
+              {{ page.previous.title }}
+            </a>
           {% endif %}
           {% if page.next.url %}
-            <span class='nav-next'><a href='{{ page.next.url }}' rel='next'>{{page.next.title}} <span class='meta-nav'>→</span></a></span>
+            <a href='{{ page.next.url }}' rel='next' class='blog-pager__next'>
+              {{ page.next.title }}
+            </a>
           {% endif %}
-        </nav>
+        </div>
+
+        <div class='comment-warning'>
+          Psst... there are separate pages for
+          <a href='{{ site.baseurl }}/requesting-features'>feature requests</a>,
+          <a href='{{ site.baseurl }}/reporting-bugs'>bug reports</a>, and
+          <a href='{{ site.baseurl }}/getting-help'>getting help</a>.
+        </div>
 
         {% include blog-disqus.html %}
       </div>
 
-      <div class='sidebar-layout__sidebar text-content'>
-        {% include blog-recent-posts.html %}
-      </div>
+      {% include blog-sidebar.html %}
     </div>
 
   </div>

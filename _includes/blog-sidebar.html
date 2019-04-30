@@ -1,0 +1,14 @@
+
+<div class='sidebar-layout__sidebar blog-post-sidebar'>
+
+  <h2 class='blog-post-sidebar__title'>Recent Posts</h2>
+
+  <ul class='blog-post-sidebar__list'>
+    {% for post in site.posts offset:1 limit:3 %}
+      <li>
+        <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

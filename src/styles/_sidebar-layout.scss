@@ -17,7 +17,7 @@
 .sidebar-layout__sidebar { // no specified width. will shrink by default
   flex-basis: 25%;
   flex-shrink: 0;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid $control-border-color-light;
   padding-left: 20px;
   padding-bottom: 1em;
 

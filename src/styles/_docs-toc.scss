@@ -16,7 +16,7 @@ $docs-toc-column-space: 20px;
 }
 
 .docs-toc__title {
-  font-size: $font-size-title;
+  @include title;
   margin: 2em 0 1em;
 
   &:first-child {

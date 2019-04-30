@@ -17,30 +17,43 @@ pagination:
       <div class='sidebar-layout__main'>
 
         {% for post in paginator.posts %}
-          <article class="post type-post status-publish format-standard hentry category-uncategorized">
-            <header class="entry-header">
-              <h1 class="entry-title">
-              <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a>
-              </h1>
-              <div class="comments-link">
-                <a href="https://fullcalendar.io{{ post.url }}#disqus_thread">0 Comments</a>
-              </div><!-- .comments-link -->
-            </header>
-            <div class="entry-content">
-              {{ post.excerpt }}
+          <div class='blog-post'>
+            <h2 class='blog-post__title'>
+              <a href='{{ site.baseurl }}{{ post.url }}'>
+                {{ post.title | escape }}
+              </a>
+            </h2>
+            <div class='blog-post__comment-count'>
+              <a href='{{ site.production_baseurl }}{{ post.url }}#disqus_thread'>0 Comments</a>
+            </div>
+            <div class='blog-post__content text-content'>
               {% if post.excerpt != post.content %}
-                <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Continue reading  <span class="meta-nav">→</span></a>
+                {{ post.excerpt | replace: "</p>", "" }}
+                <a href='{{ site.baseurl }}{{ post.url }}' class='blog-post__more-link'>Continue reading</a>
+                </p><!-- ends the excerpt content -->
+              {% else %}
+                {{ post.excerpt }}
               {% endif %}
-            </div><!-- .entry-content -->
-          </article>
+            </div>
+          </div>
         {% endfor %}
 
-        {% include blog-pagination.html %}
+        <div class='blog-pager'>
+          {% if paginator.previous_page %}
+            <a href='{{ site.baseurl }}{{ paginator.previous_page_path }}' rel='prev' class='blog-pager__prev'>
+              Newer Posts
+            </a>
+          {% endif %}
+          {% if paginator.next_page %}
+            <a href='{{ site.baseurl }}{{ paginator.next_page_path }}' rel='next' class='blog-pager__next'>
+              Older Posts
+            </a>
+          {% endif %}
+        </div>
+
       </div>
 
-      <div class='sidebar-layout__sidebar text-content' markdown='1'>
-        {% include blog-recent-posts.html %} <!-- TODO: common sidebar -->
-      </div>
+      {% include blog-sidebar.html %}
     </div>
 
   </div>
