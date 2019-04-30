@@ -73,7 +73,6 @@ a.topbar__nav-handle {
 .topbar__flyout-handle {
   display: block;
   font-weight: $font-weight-thin;
-  text-decoration: none;
   color: #fff;
   white-space: nowrap;
 
@@ -94,7 +93,6 @@ a.topbar__nav-handle {
 .topbar__notice-link {
   font-weight: $font-weight-bold;
   color: #fff;
-  text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 2px solid $yellow-highlight-color;
 }
@@ -107,7 +105,6 @@ a.topbar__nav-handle {
 
 .topbar__github-link {
   color: #fff;
-  text-decoration: none;
   display: flex;
   align-items: center;
 }
@@ -134,10 +131,6 @@ a.topbar__nav-handle {
   border: 2px solid transparent;
   border-radius: $border-radius;
   padding: .5em;
-}
-
-a.button {
-  text-decoration: none;
 }
 
 button.button,
@@ -179,7 +172,6 @@ input.button {
 
 a.branding {
   color: #fff;
-  text-decoration: none;
 }
 
 .branding-graphic {

@@ -3,12 +3,7 @@
   margin: 2em 0;
 
   a {
-    text-decoration: none;
-    color: $link-color-dark;
-
-    &:hover {
-      color: $link-color;
-    }
+    @include link-subtle;
   }
 }
 
