@@ -7,6 +7,10 @@
   padding-bottom: 50px;
 }
 
-.page-content__title { // TODO: survey uses
+.page-content__title {
   @include big-title;
+}
+
+.page-content__title--small {
+  font-size: 24px;
 }

@@ -69,7 +69,7 @@ $blog-margin-small: 35px;
 
 .comment-warning {
   margin: $blog-margin-big 0;
-  background: $yellow-highlight-color;
+  border: 3px solid $yellow-highlight-color;
   padding: 4px 8px;
   border-radius: 4px;
 

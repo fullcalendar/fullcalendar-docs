@@ -49,6 +49,11 @@
   }
 }
 
+@mixin docs-group-title {
+  color: $font-color-weak;
+  text-transform: uppercase;
+}
+
 // ???
 
 @mixin clearfix {

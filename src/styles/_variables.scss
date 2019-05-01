@@ -6,6 +6,9 @@ $dark-bg-color-lighter: #393F4B;
 $blue-primary-color: #1976D2;
 $blue-highlight-color: #61DAFB;
 $yellow-highlight-color: #FAC863;
+$red-highlight-color: #FF697A;
+$red-primary-color: #ae0000; // TODO: make match better
+$green-primary-color: #007c00; // TODO: make match better
 
 $line-height: 1.7; // applied globally
 $font-size: 16px; // applied globally
@@ -15,7 +18,7 @@ $font-color: #20232A; // applied globally
 $font-color-weak: #989ba2;
 $font-weight-thin: 300; // must be used manually
 $font-weight-normal: 400; // applied globally
-$font-weight-bold: 600; // applied to all b/strong tags
+$font-weight-bold: 600; // applied to all b/strong tags // NOTE: some places manually use 800
 
 $link-color: $blue-primary-color; // must be used manually
 $link-color-dark: #0b4d8e; // must be used manually

@@ -56,8 +56,7 @@ a.docs-sublanding__image {
   margin: 0 0 2.8em;
 }
 
-.docs-sublanding__child-group-title { // TODO: make DRY with .docs-article__sidebar-title
+.docs-sublanding__child-group-title {
+  @include docs-group-title;
   margin-bottom: 1.5em;
-  color: #999;
-  font-weight: $font-weight-bold;
 }

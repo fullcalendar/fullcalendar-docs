@@ -2,7 +2,7 @@
 {% if page.category.child_groups %}
   <div class='docs-article__sidebar'>
 
-    <div class='docs-article__sidebar-supertitle'>
+    <div class='docs-article__sidebar-title'>
       <a href='{{ site.baseurl }}{{ page.category.url | escape }}'>{{ page.category.title | escape }}</a>
     </div>
 
@@ -10,9 +10,9 @@
       {% for child_group in page.category.child_groups %}
         <li>
           {% if child_group.is_related %}
-            <h3 class='docs-article__sidebar-title'>See Also</h3>
+            <h3 class='docs-article__sidebar-group-title'>See Also</h3>
           {% elsif child_group.title %}
-            <h3 class='docs-article__sidebar-title'>{{ child_group.title | escape }}</h3>
+            <h3 class='docs-article__sidebar-group-title'>{{ child_group.title | escape }}</h3>
           {% endif %}
           <ul>
             {% for article in child_group.children %}
