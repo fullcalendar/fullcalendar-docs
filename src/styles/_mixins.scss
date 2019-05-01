@@ -54,6 +54,17 @@
   text-transform: uppercase;
 }
 
+@mixin raised-card {
+  border: 1px solid $control-border-color-light;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+  background: #fff;
+}
+
+@mixin raised-card-subtle {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  background: #fff;
+}
+
 // ???
 
 @mixin clearfix {

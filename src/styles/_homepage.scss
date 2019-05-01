@@ -49,10 +49,9 @@
 }
 
 .demos__main {
+  @include raised-card-subtle;
   flex-grow: 1;
-  background: #fff;
   padding: 20px 16px 24px; // TODO: move to calendar
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
   border-top: 4px solid $yellow-highlight-color;
   font-size: 14px;
   margin-top: 36px;
