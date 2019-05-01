@@ -23,7 +23,6 @@ $docs-sublanding-sidebar-width: 300px + 14px;
   width: $docs-sublanding-sidebar-width + 60px;
   padding-left: 60px;
   margin-bottom: 2em;
-  line-height: $line-height; // try to match line alignment of main content
 }
 
 .docs-sublanding__sidebar-title {
@@ -51,10 +50,6 @@ a.docs-sublanding__image {
   margin: .5em 0;
   font-size: 14px;
   line-height: 1.4;
-}
-
-.docs-sublanding__children {
-  line-height: $line-height;
 }
 
 .docs-sublanding__child-group {

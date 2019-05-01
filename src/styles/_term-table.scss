@@ -26,7 +26,6 @@ $term-table-entry-title-width: 250px;
   position: relative;
   z-index: 3; // above line
   float: left;
-  min-height: $line-height;
   padding-right: 10px;
   margin-right: 10px;
   font-weight: $font-weight-bold;
@@ -38,7 +37,6 @@ $term-table-entry-title-width: 250px;
   z-index: 2; // above line
   margin-left: $term-table-entry-title-width;
   padding-left: 10px;
-  min-height: $line-height;
   background: #fff;
 }
 

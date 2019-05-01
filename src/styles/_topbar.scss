@@ -28,11 +28,11 @@
   padding: 0 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; // vertically center handle and flyout-wrap
 }
 
 .topbar__nav-handle {
-  padding: 14px 0;
+  padding: 8px 0;
   cursor: default; // override text cursor
 }
 
@@ -82,7 +82,7 @@ a.topbar__nav-handle {
 }
 
 .topbar__flyout-handle {
-  padding: 12px 15px;
+  padding: 8px 15px;
 }
 
 .topbar__notice {
@@ -130,7 +130,7 @@ a.topbar__nav-handle {
   display: inline-block;
   border: 2px solid transparent;
   border-radius: $border-radius;
-  padding: .5em;
+  padding: .2em .5em;
 }
 
 button.button,

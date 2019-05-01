@@ -14,7 +14,6 @@ $blog-margin-small: 35px;
   font-weight: $font-weight-bold;
   font-size: 26px;
   margin-bottom: $blog-margin-small;
-  line-height: $line-height;
 
   a:hover {
     color: $link-color;
@@ -39,7 +38,6 @@ $blog-margin-small: 35px;
 
 .blog-post__meta {
   margin-top: $blog-margin-small;
-  line-height: $line-height;
   color: $font-color-weak;
 }
 
@@ -49,7 +47,6 @@ $blog-margin-small: 35px;
 
   a {
     @include link-normal;
-    line-height: $line-height;
   }
 }
 
@@ -73,7 +70,6 @@ $blog-margin-small: 35px;
 .comment-warning {
   margin: $blog-margin-big 0;
   background: $yellow-highlight-color;
-  line-height: $line-height;
   padding: 4px 8px;
   border-radius: 4px;
 
@@ -89,7 +85,6 @@ $blog-margin-small: 35px;
 }
 
 .blog-post-sidebar__list {
-  line-height: $line-height;
 
   a {
     @include link-normal;
