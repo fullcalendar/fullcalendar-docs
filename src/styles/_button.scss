@@ -1,0 +1,54 @@
+
+.button {
+  // TODO: resets
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  padding: .2em .5em;
+}
+
+button.button,
+input.button {
+  font-size: inherit;
+  font-family: inherit; // more props?
+}
+
+.button--blue {
+
+  &.button--filled {
+    background-color: $blue-primary-color;
+    color: #fff;
+
+    &:hover {
+      border-color: $blue-primary-color;
+      background-color: transparent;
+      color: $font-color;
+    }
+  }
+}
+
+.button--lightblue {
+
+  &.button--outlined {
+    border-color: $blue-highlight-color;
+    color: #fff;
+
+    &:hover {
+      background-color: $blue-highlight-color;
+      color: $font-color;
+    }
+  }
+}
+
+.button--yellow {
+
+  &.button--filled {
+    background-color: $yellow-highlight-color;
+    color: $font-color;
+
+    &:hover {
+      border-color: $yellow-highlight-color;
+      background-color: transparent;
+    }
+  }
+}

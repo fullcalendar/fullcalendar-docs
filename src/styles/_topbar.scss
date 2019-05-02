@@ -1,7 +1,7 @@
 
 .topbar {
   background: $dark-bg-color;
-  color: #fff; // TODO: default link color?
+  color: #fff;
 }
 
 .topbar__container {
@@ -45,7 +45,6 @@ a.topbar__nav-handle {
 
   .topbar__nav-handle {
     color: $yellow-highlight-color;
-    // font-weight: $font-weight-bold;
   }
 }
 
@@ -73,7 +72,6 @@ a.topbar__nav-handle {
 .topbar__flyout-handle {
   display: block;
   font-weight: $font-weight-thin;
-  color: #fff;
   white-space: nowrap;
 
   &:hover {
@@ -122,48 +120,7 @@ a.topbar__nav-handle {
 }
 
 
-
 // MISC -----------------------------------------------------
-
-.button {
-  // TODO: resets
-  display: inline-block;
-  border: 2px solid transparent;
-  border-radius: $border-radius;
-  padding: .2em .5em;
-}
-
-button.button,
-input.button {
-  font-size: inherit;
-  font-family: inherit; // more props?
-}
-
-.button--lightblue {
-
-  &.button--outlined {
-    border-color: $blue-highlight-color;
-    color: #fff;
-
-    &:hover {
-      background-color: $blue-highlight-color;
-      color: $dark-bg-color;
-    }
-  }
-}
-
-.button--yellow {
-
-  &.button--filled {
-    background-color: $yellow-highlight-color;
-    color: #20232A; // var? why???
-
-    &:hover {
-      border-color: $yellow-highlight-color;
-      background-color: transparent;
-    }
-  }
-}
 
 .branding {
   display: flex;
