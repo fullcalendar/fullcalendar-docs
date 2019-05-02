@@ -18,7 +18,7 @@ pagination:
 
         {% for post in paginator.posts %}
           <div class='blog-post'>
-            <h2 class='blog-post__title'>
+            <h2 class='blog-post__title blog-post__title--link'>
               <a href='{{ site.baseurl }}{{ post.url }}'>
                 {{ post.title | escape }}
               </a>

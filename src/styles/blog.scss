@@ -16,6 +16,12 @@ $blog-margin-small: 35px;
   margin-bottom: $blog-margin-small;
 
   a:hover {
+    color: $link-color; // always have a hover effect
+  }
+}
+
+.blog-post__title--link { // will display it as a link
+  a {
     color: $link-color;
   }
 }
