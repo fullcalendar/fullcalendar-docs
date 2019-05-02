@@ -1,0 +1,30 @@
+
+// NOTE: demos are in own stylesheet
+
+
+.feature-cols__container {
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 44px;
+}
+
+.feature-cols__col {
+  margin: 0 40px;
+  flex: 1 1 0;
+}
+
+.feature-cols__title {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-title;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.feature-cols__description {
+  text-align: justify;
+}
+
+
+.approach-explanation {
+  margin: 80px 0;
+}
