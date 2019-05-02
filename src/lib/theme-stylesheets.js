@@ -12,14 +12,15 @@ settings:
 export function loadThemeStylesheets(settings) {
   let callback = settings.callback || function() { }
   let loadingCallback = settings.loadingCallback || function() { }
+  let stylesheetUrls = [ FONT_AWESOME_URL ]
   let themeStylesheetUrl = generateThemeStylesheetUrl(settings.themeSystemName, settings.themeName)
 
-  loadingCallback(true)
+  if (themeStylesheetUrl) {
+    stylesheetUrls.push(themeStylesheetUrl)
+  }
 
-  loadStylesheets([
-    FONT_AWESOME_URL,
-    themeStylesheetUrl
-  ], function() {
+  loadingCallback(true)
+  loadStylesheets(stylesheetUrls, function() {
     loadingCallback(false)
     callback()
   })
