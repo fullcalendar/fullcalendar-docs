@@ -22,15 +22,3 @@ button.control-button { // resets for native <button>
   color: $link-color;
   border-color: $link-color;
 }
-
-.control-button--filled {
-  color: #fff;
-  border-color: transparent;
-  background-color: $link-color;
-}
-
-.control-button--small {
-  font-size: 11px;
-  line-height: 14px;
-  padding: 1px 3px;
-}

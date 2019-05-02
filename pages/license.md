@@ -1,24 +1,68 @@
 ---
 permalink: /license/ # must end in slash for linting to work. accessible at /license nonetheless
-title: License
+title: License Information
 layout: text
 is_license: true
 ---
 
-## FullCalendar (Standard Edition)
+There are two FullCalendar products: <strong>STANDARD</strong> and <strong>PREMIUM</strong> (called "Scheduler").
+Here is how they differ:
 
-The standard release of FullCalendar is released under the
-<a href='{{ site.fullcalendar_repo }}/blob/master/LICENSE.txt'>MIT License</a>,
-which puts almost no restrictions
-on how you can use it. <b>You can even freely use it in a commercial project.</b>
-The only stipulation is that you leave the copyright header at the top of each file intact.
-This is the same license that the <a href='http://jquery.com/'>jQuery project</a> uses.
-
-<a href='http://en.wikipedia.org/wiki/MIT_License' target='_blank'>More Information &raquo;</a>
-
-## FullCalendar Scheduler
-
-The <a href='{{ site.baseurl }}/purchase'>FullCalendar Scheduler</a> add-on is released under different
-licensing terms than the standard edition of Fullcalendar. There are more restrictions on how it can be used.
-
-<a href='{{ site.baseurl }}/license/premium'>More information &raquo;</a>
+<table class='bold-table'>
+  <thead>
+    <tr>
+      <th></th>
+      <th>FullCalendar Standard</th>
+      <th>FullCalendar Scheduler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>License</th>
+      <td>
+        <strong>MIT license</strong>,
+        which puts almost no restrictions on how you can use it.
+        <a href='{{ site.fullcalendar_repo }}/blob/master/LICENSE.txt'>Read the license text &raquo;</a>
+      </td>
+      <td>
+        <strong>Custom commercial license</strong> for most usecases.<br />
+        <a href='{{ site.baseurl }}/license/premium'>Learn more &raquo;</a>
+      </td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td>
+        <strong>Free</strong>, even for commercial use.
+      </td>
+      <td>
+        <strong>$90 and above</strong>. <a href='{{ site.baseurl }}/purchase'>Learn more &raquo;</a>
+      </td>
+    </tr>
+    <tr>
+      <th>Features</th>
+      <td>
+        Nearly all the features you see
+        <a href='{{ site.baseurl }}/docs'>in the docs</a>.
+      </td>
+      <td>
+        Any of the resource-related features you see
+        <a href='{{ site.baseurl }}/docs'>in the docs</a>.<br />
+        Identified by the word
+        <span class='badge'>
+          Premium
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <th>Open Source</th>
+      <td>
+        <strong>Yes</strong>, in the
+        <a href='{{ site.fullcalendar_repo }}'>fullcalendar</a> repo.
+      </td>
+      <td>
+        <strong>Yes</strong>, in the
+        <a href='{{ site.fullcalendar_scheduler_repo }}'>fullcalendar-scheduler</a> repo.
+      </td>
+    </tr>
+  </tbody>
+</table>

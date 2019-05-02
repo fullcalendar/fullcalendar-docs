@@ -16,10 +16,11 @@
 @import 'sidebar-layout';
 
 // text-based components
+@import 'badge';
 @import 'inline-list';
-@import 'inline-thunderbolt';
 @import 'text-content';
 @import 'code-highlight';
+@import 'bold-table';
 
 // whole pages
 @import 'homepage';

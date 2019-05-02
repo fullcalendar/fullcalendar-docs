@@ -43,10 +43,8 @@
                   {{ article.title | escape }}
                 </a>
                 {% if article.is_premium %}
-                  <a class='control-button control-button--small control-button--filled'
-                    href='{{ site.baseurl }}/purchase'
-                    >
-                    <span class='control-button__text'>Premium</span>
+                  <a class='badge' href='{{ site.baseurl }}/purchase'>
+                    Premium
                   </a>
               {% endif %}
               </div>

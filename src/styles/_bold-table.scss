@@ -1,0 +1,21 @@
+
+.bold-table {
+
+  thead th,
+  strong {
+    font-weight: 800;
+  }
+
+  th, td {
+    padding: 20px;
+  }
+
+  th {
+    white-space: nowrap;
+  }
+
+  td {
+    width: 50%;
+  }
+
+}
