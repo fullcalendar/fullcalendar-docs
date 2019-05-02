@@ -15,8 +15,9 @@ $blog-margin-small: 35px;
   font-size: 26px;
   margin-bottom: $blog-margin-small;
 
-  a:hover {
-    color: $link-color; // always have a hover effect
+  a:hover { // always have a hover effect
+    color: $link-color;
+    text-decoration: underline;
   }
 }
 
