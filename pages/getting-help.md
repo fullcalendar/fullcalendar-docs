@@ -29,10 +29,10 @@ The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, E
 </div>
 <div class='sidebar-layout__sidebar text-content' markdown='1'>
 
-### Need help with the Scheduler?
+### Need help with Scheduler?
 
 <a href='{{ site.baseurl }}/purchase'>
-  The Scheduler plugin comes with<br />1 year of email support
+  FullCalendar Scheduler comes with<br />1 year of email support
 </a>
 
 </div>

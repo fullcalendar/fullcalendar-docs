@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       return !url.match(/\/demo-to-codepen\.js$/)
     },
     filterCssUrl: function(url) {
-      return !url.match(/\/demo-topbar\.css$/)
+      return !url.match(/\/demo-to-codepen\.css$/)
     },
     filterJs: function(js) {
       return js
