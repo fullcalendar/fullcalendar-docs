@@ -38,7 +38,7 @@ module.exports = (env, options) => {
       ]
     },
     output: {
-      path: path.join(__dirname, 'assets/built'),
+      path: path.join(__dirname, 'assets'),
       filename: '[name].js' // will produce a JS file we won't use
     }
   }

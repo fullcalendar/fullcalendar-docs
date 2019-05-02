@@ -22,7 +22,7 @@
     "jekyll-clean": "bundle exec jekyll clean",
     "webpack-build": "webpack --mode production",
     "webpack-watch": "webpack --watch",
-    "webpack-clean": "rm -rf assets/built",
+    "webpack-clean": "rm -rf assets/*.*",
     "lint": "npm run build && gulp lintspaces && ./bin/htmlproofer.sh"
   },
   "devDependencies": {

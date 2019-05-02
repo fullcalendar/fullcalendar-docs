@@ -3,7 +3,7 @@ permalink: /reduced-test-cases
 is_community: true
 title: Reduced Test Cases
 layout: text
-assets: [ 'built/demo-to-codepen.js' ]
+assets: [ 'demo-to-codepen.js' ]
 ---
 
 ## Step 1: Isolate the bug on your end

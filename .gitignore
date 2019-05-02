@@ -11,4 +11,5 @@ node_modules
 # rubygems in TravisCI
 vendor
 
-assets/built
+# built assets
+assets/*.*
