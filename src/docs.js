@@ -1,3 +1,4 @@
+import { querySelectorAll } from './lib/util'
 import './styles/docs.scss'
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -115,12 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (match) {
       return match[1]
     }
-  }
-
-  function querySelectorAll(selector, parent) {
-    return Array.prototype.slice.call( // an array
-      (parent || document).querySelectorAll(selector)
-    )
   }
 
 })
