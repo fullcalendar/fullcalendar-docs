@@ -1,8 +1,9 @@
+import { querySelectorAll } from './lib/util'
+import { loadThemeStylesheets } from './lib/theme-stylesheets'
 
 window.initThemeChooser = function(settings) {
   var isInitialized = false
-  var currentThemeSystem // don't set this directly. use setThemeSystem
-  var currentStylesheetEl
+  var currentThemeSystemName // don't set this directly. use setThemeSystem
   var loadingEl = document.getElementById('loading')
   var systemSelectEl = document.querySelector('#theme-system-selector select')
   var themeSelectWrapEls = Array.prototype.slice.call( // convert to real array
@@ -20,22 +21,22 @@ window.initThemeChooser = function(settings) {
 
     themeSelectWrapEl.addEventListener('change', function() {
       setTheme(
-        currentThemeSystem,
+        currentThemeSystemName,
         themeSelectEl.options[themeSelectEl.selectedIndex].value
       )
     })
   })
 
 
-  function setThemeSystem(themeSystem) {
+  function setThemeSystem(themeSystemName) {
     var selectedTheme
 
-    currentThemeSystem = themeSystem
+    currentThemeSystemName = themeSystemName
 
     themeSelectWrapEls.forEach(function(themeSelectWrapEl) {
       var themeSelectEl = themeSelectWrapEl.querySelector('select')
 
-      if (themeSelectWrapEl.getAttribute('data-theme-system') === themeSystem) {
+      if (themeSelectWrapEl.getAttribute('data-theme-system') === themeSystemName) {
         selectedTheme = themeSelectEl.options[themeSelectEl.selectedIndex].value
         themeSelectWrapEl.style.display = 'inline-block'
       } else {
@@ -43,68 +44,35 @@ window.initThemeChooser = function(settings) {
       }
     })
 
-    setTheme(themeSystem, selectedTheme)
+    setTheme(themeSystemName, selectedTheme)
   }
 
 
-  function setTheme(themeSystem, themeName) {
-    var stylesheetUrl = generateStylesheetUrl(themeSystem, themeName)
-    var stylesheetEl
-
-    function done() {
-      if (!isInitialized) {
-        isInitialized = true
-        settings.init(themeSystem)
-      }
-      else {
-        settings.change(themeSystem)
-      }
-
-      showCredits(themeSystem, themeName)
-    }
-
-    if (stylesheetUrl) {
-      stylesheetEl = document.createElement('link')
-      stylesheetEl.setAttribute('rel', 'stylesheet')
-      stylesheetEl.setAttribute('href', stylesheetUrl)
-      document.querySelector('head').appendChild(stylesheetEl)
-
-      loadingEl.style.display = 'inline'
-
-      whenStylesheetLoaded(stylesheetEl, function() {
-        if (currentStylesheetEl) {
-          currentStylesheetEl.parentNode.removeChild(currentStylesheetEl)
+  function setTheme(themeSystemName, themeName) {
+    loadThemeStylesheets({
+      themeSystemName,
+      themeName,
+      loadingCallback(bool) {
+        loadingEl.style.display = bool ? 'inline' : 'none'
+      },
+      callback() {
+        if (!isInitialized) {
+          isInitialized = true
+          settings.init(themeSystemName)
         }
-        currentStylesheetEl = stylesheetEl
-        loadingEl.style.display = 'none'
-        done()
-      })
-    } else {
-      if (currentStylesheetEl) {
-        currentStylesheetEl.parentNode.removeChild(currentStylesheetEl)
-        currentStylesheetEl = null
+        else {
+          settings.change(themeSystemName)
+        }
+        showCredits(themeSystemName, themeName)
       }
-      done()
-    }
+    })
   }
 
 
-  function generateStylesheetUrl(themeSystem, themeName) {
-    if (themeSystem === 'bootstrap') {
-      if (themeName) {
-        return 'https://bootswatch.com/4/' + themeName + '/bootstrap.min.css'
-      }
-      else { // the default bootstrap theme
-        return 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
-      }
-    }
-  }
-
-
-  function showCredits(themeSystem, themeName) {
+  function showCredits(themeSystemName, themeName) {
     var creditId
 
-    if (themeSystem.match('bootstrap')) {
+    if (themeSystemName.match('bootstrap')) {
       if (themeName) {
         creditId = 'bootstrap-custom'
       }
@@ -113,9 +81,7 @@ window.initThemeChooser = function(settings) {
       }
     }
 
-    Array.prototype.slice.call( // convert to real array
-      document.querySelectorAll('.credits')
-    ).forEach(function(creditEl) {
+    querySelectorAll('.credits').forEach(function(creditEl) {
       if (creditEl.getAttribute('data-credit-id') === creditId) {
         creditEl.style.display = 'block'
       } else {
@@ -124,18 +90,4 @@ window.initThemeChooser = function(settings) {
     })
   }
 
-
-  function whenStylesheetLoaded(linkNode, callback) {
-    var isReady = false
-
-    function ready() {
-      if (!isReady) { // avoid double-call
-        isReady = true
-        callback()
-      }
-    }
-
-    linkNode.onload = ready // does not work cross-browser
-    setTimeout(ready, 2000) // max wait. also handles browsers that don't support onload
-  }
 }
