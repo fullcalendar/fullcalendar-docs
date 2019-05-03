@@ -8,7 +8,8 @@ Allows a user to highlight multiple days or timeslots by clicking and dragging.
 Boolean, *default*: `false`
 </div>
 
-To let the user make selections by clicking and dragging, the `interaction` plugin **must be loaded** and this option must be set to `true`. [See a demo &raquo;](date-clicking-selecting-demo)
+To let the user make selections by clicking and dragging, the `interaction` plugin **must be loaded** and this option must be set to `true`.
+<a href='date-clicking-selecting-demo' class='more-link'>See a demo</a>
 
 The [select](select-callback) and [unselect](unselect-callback) callbacks will be useful for monitoring when selections are made and cleared.
 

@@ -10,7 +10,8 @@ Boolean
 
 The default value is inherited from the master [editable](editable) flag, which is `false` by default.
 
-You must enable the `interaction` plugin before using this setting. [See code samples on the `editable` article &raquo;](editable)
+You must enable the `interaction` plugin before using this setting.
+<a href='editable' class='more-link'>See code samples on the `editable` article</a>
 
 A variation of this property called `resourceEditable` can be set on an [Event Object](event-object) for more granular control:
 

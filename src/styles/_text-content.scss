@@ -101,3 +101,13 @@
     line-height: $code-line-height;
   }
 }
+
+// weird place for this
+
+.more-link {
+  white-space: nowrap;
+
+  &:after {
+    content: " \000BB"; // right arrow
+  }
+}
