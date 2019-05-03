@@ -32,3 +32,7 @@ body > .footer {
   max-width: ($page-max-content-width + ($page-gutter * 2)); // because border-box
   padding: 0 $page-gutter;
 }
+
+.container--wide {
+  max-width: 1400px;
+}
