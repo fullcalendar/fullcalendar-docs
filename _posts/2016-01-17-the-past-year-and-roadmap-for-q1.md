@@ -5,11 +5,11 @@ date: 2016-01-17T23:54:03+00:00
 
 **The past year was a good year for FullCalendar!** Aside from the usual bugfixing, three out of the five top requested features were implemented:
 
-* [horizontal resource view]({{ site.baseurl }}/scheduler/) (aka &#8220;Timeline&#8221;)
-* [vertical resource view]({{ site.baseurl }}/docs/vertical_resource_view/getting_started/)
-* [current time indicator]({{ site.baseurl }}/docs/current_date/nowIndicator/)
+* [horizontal resource view]({{ site.baseurl }}/purchase) (aka &#8220;Timeline&#8221;)
+* [vertical resource view]({{ site.baseurl }}/docs/scheduler)
+* [current time indicator]({{ site.baseurl }}/docs/nowIndicator)
 
-The resource views were particularly time intensive to build. They have been bundled into [Scheduler, a premium add-on]({{ site.baseurl }}/scheduler/) introduced in 2015 as well.
+The resource views were particularly time intensive to build. They have been bundled into [Scheduler, a premium add-on]({{ site.baseurl }}/purchase) introduced in 2015 as well.
 
 Scheduler sales of are doing well, and as a result, the health and productivity of the project is better than ever. Thank you to those who purchased licenses!
 

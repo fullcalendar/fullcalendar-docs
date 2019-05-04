@@ -7,7 +7,7 @@ Bootstrap 4 support has been released in FullCalendar [v3.9.0](https://github.co
 
 Just set your [themeSystem]({{ site.baseurl }}/docs/themeSystem) setting to &#8216;bootstrap4&#8217; and make sure to include a Bootstrap 4 stylesheet AND a FontAwesome stylesheet.
 
-[View an example »]({{ site.baseurl }}/docs/bootstrap4-theme-demo)
+[View an example »]({{ site.baseurl }}/docs/bootstrap-theme-demo)
 
 Unlike Bootstrap 3 which comes with Glyphicons, [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) does not come with a defacto icon set. In order to create a connector for FullCalendar we had to choose an icon set, so we chose FontAwesome. To learn more, read the <a href="https://fontawesome.com/get-started" target="_blank">FontAwesome Getting Started</a> page as well the FullCalendar [bootstrapFontAwesome]({{ site.baseurl }}/docs/bootstrapFontAwesome) setting.
 
