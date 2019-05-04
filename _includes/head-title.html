@@ -16,6 +16,6 @@
     {% else %}
       {{ page.title | escape }}
     {% endif %}
-    | FullCalendar
+    | FullCalendar {% if page.layout == 'blog-post' %}Blog{% endif %}
   {% endif %}
 </title>
