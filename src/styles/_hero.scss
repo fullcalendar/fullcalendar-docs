@@ -26,6 +26,10 @@
   margin: 4px 0;
 }
 
+.hero__title ~ .hero__subtitle {
+  margin-top: 8px;
+}
+
 .hero__cta {
   font-size: 20px;
   margin-top: 28px;
