@@ -58,6 +58,8 @@ I worked with Josh and irustm to get their components to API-parity with FullCal
   </tr>
 </table>
 
+<script src='https://buttons.github.io/buttons.js'></script>
+
 In case you're wondering, I (Adam Shaw) built the Vue connector. You're welcome.
 
 All three of these projects are in beta and need people to play with them. Please check them out!
