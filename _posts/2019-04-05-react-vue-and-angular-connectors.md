@@ -31,7 +31,7 @@ I worked with Josh and irustm to get their components to API-parity with FullCal
       @fullcalendar/react
     </td>
     <td>
-      <a href="https://fullcalendar.io/docs/react">view the docs »</a>
+      <a href="{{ site.baseurl }}/docs/react">view the docs »</a>
     </td>
   </tr>
   <tr>
@@ -42,7 +42,7 @@ I worked with Josh and irustm to get their components to API-parity with FullCal
       @fullcalendar/angular
     </td>
     <td>
-      <a href="https://fullcalendar.io/docs/angular">view the docs »</a>
+      <a href="{{ site.baseurl }}/docs/angular">view the docs »</a>
     </td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ I worked with Josh and irustm to get their components to API-parity with FullCal
       @fullcalendar/vue
     </td>
     <td>
-      <a href="https://fullcalendar.io/docs/vue">view the docs »</a>
+      <a href="{{ site.baseurl }}/docs/vue">view the docs »</a>
     </td>
   </tr>
 </table>

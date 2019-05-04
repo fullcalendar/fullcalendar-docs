@@ -9,7 +9,7 @@ This post is an update on the highly-requested <a href="https://code.google.com/
 
 **Update (8/23/2015):** [Scheduler has been officially released!](http://blog.arshaw.com/1/post/2015/08/scheduler-released.html)
 
-**Summary:** To build _Timeline_ the right way™ requires a lot of work. I&#8217;m a big supporter of open-source but, given the time commitment to get it off the ground and maintain, it only makes sense to release this feature as a premium product. I have a <a href="http://fullcalendar.io/timeline/" target="_blank">preview</a> of _Timeline_ to show you and have released <a href="https://github.com/arshaw/fullcalendar/releases" target="_blank">FullCalendar v2.2.7</a>.
+**Summary:** To build _Timeline_ the right way™ requires a lot of work. I&#8217;m a big supporter of open-source but, given the time commitment to get it off the ground and maintain, it only makes sense to release this feature as a premium product. I have a <a href="{{ site.baseurl }}/purchase" target="_blank">preview</a> of _Timeline_ to show you and have released <a href="https://github.com/arshaw/fullcalendar/releases" target="_blank">FullCalendar v2.2.7</a>.
 
 ### Timeline Development
 
@@ -37,17 +37,17 @@ So, **I will be making _Timeline_ a paid premium feature** when used in commer
   * obviously separate from the core and should be implemented as a plugin
   * beyond what a basic JavaScript calendar should be
 
-If the feature meets all these qualifications, it is a candidate for a premium feature. The core code will always be free, with a robust API and plugin system for creating things like <a href="http://fullcalendar.io/docs/views/Custom_Views/" target="_blank">Custom Views</a>.
+If the feature meets all these qualifications, it is a candidate for a premium feature. The core code will always be free, with a robust API and plugin system for creating things like <a href="{{ site.baseurl }}/docs/custom-views" target="_blank">Custom Views</a>.
 
 **I would love to get your thoughts on this new approach.** Please comment away!
 
 ### <span id="preview">Preview of Timeline</span>
 
-Back to Timeline. I&#8217;ve been hard at work, and even though my code is pre-alpha and not fit for download, <a href="http://fullcalendar.io/timeline/" target="_blank">I&#8217;ve prepared a live demo:</a>
+Back to Timeline. I&#8217;ve been hard at work, and even though my code is pre-alpha and not fit for download, <a href="{{ site.baseurl }}/purchase" target="_blank">I&#8217;ve prepared a live demo:</a>
 
-<a href="http://fullcalendar.io/timeline/" target="_blank"><img class="alignnone wp-image-121 size-full" src="{{ site.baseurl }}/assets/images/blog/2015/02/timeline-view.png" alt="timeline-view" width="946" height="606" sizes="(max-width: 946px) 100vw, 946px" /></a>
+<a href="{{ site.baseurl }}/purchase" target="_blank"><img class="alignnone wp-image-121 size-full" src="{{ site.baseurl }}/assets/images/blog/2015/02/timeline-view.png" alt="timeline-view" width="946" height="606" sizes="(max-width: 946px) 100vw, 946px" /></a>
 
-I&#8217;ve also prepared some <a href="http://fullcalendar.io/docs/timeline/" target="_blank">preliminary documentation</a>.
+I&#8217;ve also prepared some <a href="{{ site.baseurl }}/docs/timeline-view" target="_blank">preliminary documentation</a>.
 
 **To offer input on Timeline&#8217;s specs and features,** please participate in the <a href="https://code.google.com/p/fullcalendar/issues/detail?id=150#footer" target="_blank">issue tracker discussion</a>.
 

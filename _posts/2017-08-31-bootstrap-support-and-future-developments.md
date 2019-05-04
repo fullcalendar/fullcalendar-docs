@@ -5,9 +5,9 @@ date: 2017-08-31T17:07:14+00:00
 
 FullCalendar 3.5.0 and [Scheduler]({{ site.baseurl }}/purchase) 1.7.0 offers built-in <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3</a> theme support. Include a Bootstrap theme&#8217;s stylesheet on your page, set the [`themeSystem`]({{ site.baseurl }}/docs/themeSystem) options to `'bootstrap3'` and you&#8217;re off to the races. Big thanks to <a href="https://github.com/joankaradimov" target="_blank">@joankaradimov</a> for the bulk of the implementation.
 
-Try out different themes with the <a href="https://fullcalendar.io/js/fullcalendar-3.5.0/demos/themes.html" target="_blank">new theme browser »</a>
+Try out different themes with the <a href="{{ site.baseurl }}/js/fullcalendar-3.5.0/demos/themes.html" target="_blank">new theme browser »</a>
 
-<a href="https://fullcalendar.io/js/fullcalendar-3.5.0/demos/themes.html" target="_blank"><img style="margin-left: 10px;" src="{{ site.baseurl }}/assets/images/blog/theme-chooser.png" alt="" width="358" height="289" alt="theme chooser" /></a>
+<a href="{{ site.baseurl }}/js/fullcalendar-3.5.0/demos/themes.html" target="_blank"><img style="margin-left: 10px;" src="{{ site.baseurl }}/assets/images/blog/theme-chooser.png" alt="" width="358" height="289" alt="theme chooser" /></a>
 
 The [`theme`]({{ site.baseurl }}/docs/v3/theme) option is now deprecated, but will continue to function. Use [`themeSystem`]({{ site.baseurl }}/docs/themeSystem) instead.
 
