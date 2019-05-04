@@ -31,4 +31,4 @@ We are hiring for two paid contractor positions. These positions will help out w
 * Test Automation Engineer
 * Technical Documentation Writer
 
-[More information + How to Apply »](https://fullcalendar.io/opportunities)
+[More information + How to Apply »]({{ site.baseurl }}/opportunities)

@@ -7,7 +7,7 @@ FullCalendar and Scheduler now officially support [TypeScript](https://www.types
 
 In prior versions of FullCalendar, you needed [DefinitelyTyped](http://definitelytyped.org/) for the definition files, but as of FullCalendar version [3.8.2](https://github.com/fullcalendar/fullcalendar/releases/tag/v3.8.2) and Scheduler version [1.9.2](https://github.com/fullcalendar/fullcalendar-scheduler/releases/tag/v1.9.2), the definition files are bundled with the libraries when you npm-install them. (Actually, they were bundled since 3.8.0, but some kinks needed to be worked out).
 
-* [How to use TypeScript with FullCalendar »](https://fullcalendar.io/docs/typescript/)
+* [How to use TypeScript with FullCalendar »]({{ site.baseurl }}/docs/typescript/)
 * [Example repo with FullCalendar »](https://github.com/fullcalendar/typescript-example)
 * [Example repo with Scheduler »](https://github.com/fullcalendar/scheduler-typescript-example)
 

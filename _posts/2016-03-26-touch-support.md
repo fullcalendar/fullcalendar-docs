@@ -3,7 +3,7 @@ title: Touch Support in Beta Releases
 date: 2016-03-26T08:47:19+00:00
 ---
 
-Touch device support has been added to FullCalendar Core and the [Scheduler](http://fullcalendar.io/scheduler/), represented by the long-standing [issue 994](https://github.com/fullcalendar/fullcalendar/issues/994):
+Touch device support has been added to FullCalendar Core and the [Scheduler]({{ site.baseurl }}/scheduler/), represented by the long-standing [issue 994](https://github.com/fullcalendar/fullcalendar/issues/994):
 
 * smooth scrolling
 * press-and-hold dragging and resizing of events
@@ -18,7 +18,7 @@ Touch device support has been added to FullCalendar Core and the [Scheduler](htt
 
 * [Release Notes](https://github.com/fullcalendar/fullcalendar/releases/tag/v2.7.0-beta)
 * [Download ZIP](https://github.com/fullcalendar/fullcalendar/releases/download/v2.7.0-beta/fullcalendar-2.7.0-beta.zip)
-* [View a demo!](http://fullcalendar.io/js/fullcalendar-2.7.0-beta/demos/selectable.html) (use a touch device)
+* [View a demo!]({{ site.baseurl }}/js/fullcalendar-2.7.0-beta/demos/selectable.html) (use a touch device)
 
 <img src="{{ site.baseurl }}/assets/images/blog/2016/03/scheduler_example.png" alt="scheduler example" width="314" height="164" />
 
@@ -27,7 +27,7 @@ Touch device support has been added to FullCalendar Core and the [Scheduler](htt
 
 * [Release Notes](https://github.com/fullcalendar/fullcalendar-scheduler/releases/tag/v1.3.0-beta)
 * [Download ZIP](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v1.3.0-beta/fullcalendar-scheduler-1.3.0-beta.zip)
-* [View a demo!](http://fullcalendar.io/js/fullcalendar-scheduler-1.3.0-beta/demos/selectable.html) (use a touch device)
+* [View a demo!]({{ site.baseurl }}/js/fullcalendar-scheduler-1.3.0-beta/demos/selectable.html) (use a touch device)
 
 
 ### Bug Reports
