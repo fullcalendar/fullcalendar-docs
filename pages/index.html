@@ -6,24 +6,80 @@ title: Home
 
 <div class='hero'>
   <div class='hero__container container'>
-    <h2 class='hero__supertitle'>
+    <div class='hero__subtitle'>
       the most popular full-sized
-    </h2>
+    </div>
     <h1 class='hero__title'>
       JavaScript Calendar
     </h1>
-    <a class='button button--filled button--yellow' href='{{ site.baseurl }}/docs/getting-started'>
-      Get Started
-    </a>
+    <div class='hero__cta'>
+      <a class='button button--filled button--yellow' href='{{ site.baseurl }}/docs/getting-started'>
+        Get Started
+      </a>
+    </div>
   </div>
 </div>
 
-<div class='page-content'>
-  <div class='page-content__container container'>
-    <div class='text-content'>
-      <p>
-        This page is hosted by a different CMS.
-      </p>
+<div class='page-content-tray'>
+
+  <div class='feature-cols'>
+    <div class='feature-cols__container container'>
+      <div class='feature-cols__col'>
+        <h2 class='feature-cols__title'>
+          Powerful and Lightweight
+        </h2>
+        <div class='feature-cols__description text-content'>
+          Has over 100 customizable settings.
+          Built as module packages to keep filesize down.
+          <a href='{{ site.baseurl }}/docs'>View the docs</a>
+        </div>
+      </div>
+      <div class='feature-cols__col'>
+        <h2 class='feature-cols__title'>
+          Developer-Friendly
+        </h2>
+        <div class='feature-cols__description text-content'>
+          Has connectors for
+          <a href='{{ site.baseurl }}/docs/react'>React</a>,
+          <a href='{{ site.baseurl }}/docs/vue'>Vue</a>,
+          and
+          <a href='{{ site.baseurl }}/docs/angular'>Angular</a>
+          and provides high-quality
+          <a href='{{ site.baseurl }}/docs/typescript'>TypeScript</a>
+          definitions.
+        </div>
+      </div>
+      <div class='feature-cols__col'>
+        <h2 class='feature-cols__title'>
+          Open Source
+        </h2>
+        <div class='feature-cols__description text-content'>
+          All code is open source and hosted on GitHub.
+          There is a non-free “premium” edition however.
+          <a href='{{ site.baseurl }}/license'>Learn more</a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div id='demos'>
+    <div class='container text-content'>
+      <h2>Demos</h2>
+      By the way, the real homepage is hosted by a different CMS.
+    </div>
+  </div>
+
+  <div class='approach-explanation'>
+    <div class='container'>
+      <div class='text-content'>
+        <h2>The FullCalendar Approach</h2>
+        <p>
+          FullCalendar is great for displaying events, but it isn't a complete solution for event content-management.
+          Beyond dragging an event to a different time/day, you cannot change an event's name or other associated data.
+          It is up to you to add this functionality through FullCalendar's event hooks.
+        </p>
+      </div>
+    </div>
+  </div>
+
 </div>
