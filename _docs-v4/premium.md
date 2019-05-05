@@ -21,10 +21,7 @@ Scheduler can be downloaded and evaluated for an unlimited amount of time, free 
 This evaluation version is licensed under a Creative Commons license that does not allow distribution
 of source code modifications nor use in commercial production websites or products.
 
-
-### License Key
-
-While developing, in order to hide the license warning, use the following key:
+During the free trial, in order to hide the license warning, use the following key:
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -32,16 +29,27 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-<h3>
-  Download:
-  <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.fullcalendar_scheduler_latest.version }}/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip'
-    onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip')"
-    >fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip</a>
-</h3>
-
-[View changelog and all releases &raquo;]({{ site.fullcalendar_scheduler_repo }}/releases)
+But first, you must install the necessary plugins...
 
 
-### Package Managers
+## Package Managers
 
-FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). [Follow the instructions &raquo;]({{ site.baseurl }}/docs/initialize-es6)
+FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). You'll first need to install FullCalendar’s `core` package as well as the premium plugins you plan to use. For example, the following is how you install [Resource Timeline View](timeline-view):
+
+```sh
+npm install --save @fullcalendar/core @fullcalendar/resource-timeline
+```
+
+To initialize a calendar, <a href='initialize-es6' class='more-link'>read about using an ES6 build system</a>
+
+
+## Download
+
+You can also download the library manually:
+
+**Latest:** <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.fullcalendar_scheduler_latest.version }}/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip')">
+  fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip
+</a>
+(<a href='{{ site.fullcalendar_scheduler_repo }}/releases'>view all releases</a>)
+
+Once you've downloaded it, you can initialize a calendar <a href='initialize-globals' class='more-link'>using script tags and browser globals</a>

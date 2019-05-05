@@ -2,20 +2,31 @@
 title: Getting Started
 ---
 
-
-<h2>
-  Latest:
-  <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.fullcalendar_latest.version }}/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip'
-    onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip')"
-    >fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip</a>
-</h2>
-
-[Changelog + All Releases &raquo;]({{ site.fullcalendar_repo }}/releases)
+There are a few different ways to install the FullCalendar library.
 
 
-## Package Managers
+## Package Manager
 
-FullCalendar is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). [Follow the instructions &raquo;]({{ site.baseurl }}/docs/initialize-es6)
+FullCalendar is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). You'll first need to install FullCalendar’s `core` package as well as any plugins. Example:
+
+```sh
+npm install --save @fullcalendar/core @fullcalendar/daygrid
+```
+
+To initialize a calendar, <a href='initialize-es6' class='more-link'>read about using an ES6 build system</a>
+
+
+## Download
+
+You can also download the library manually:
+
+**Latest:** <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.fullcalendar_latest.version }}/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip')">
+  fullcalendar-{{ site.data.fullcalendar_latest.version }}.zip
+</a>
+(<a href='{{ site.fullcalendar_repo }}/releases'>view all releases</a>)
+
+Once you've downloaded it, you can initialize a calendar <a href='initialize-globals' class='more-link'>using script tags and browser globals</a>
+
 
 
 ## CDN
