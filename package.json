@@ -14,7 +14,7 @@
   },
   "scripts": {
     "install": "bundler install",
-    "build": "npm run clean && npm run webpack-build && npm run jekyll-build",
+    "build": "npm run webpack-build && npm run jekyll-build",
     "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
     "clean": "npm run webpack-clean && npm run jekyll-clean",
     "jekyll-build": "JEKYLL_ENV=production && bundle exec jekyll build",
