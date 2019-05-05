@@ -9,7 +9,7 @@ children:
   - title: Getting Started
     children:
       - intro
-      - scheduler
+      - premium
       - date-library
   - title: Overall Display
     children:

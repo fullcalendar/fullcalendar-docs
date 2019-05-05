@@ -1,5 +1,6 @@
 ---
 title: Scheduler Plugin
+illustration: premium
 layout: docs-sublanding
 demos:
   - timeline-standard-view-demo
