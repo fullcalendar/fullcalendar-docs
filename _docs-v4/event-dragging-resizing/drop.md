@@ -30,7 +30,7 @@ The [Date](date-object) of where the draggable was dropped.
 <tr>
 <th>resource</th>
 <td markdown='1'>
-If the current view is a resource-view, the [Resource Object](resource-object) the element was dropped on. Must be using the [Scheduler plugin](scheduler).
+If the current view is a resource-view, the [Resource Object](resource-object) the element was dropped on. Must be using one of the [resource plugins](premium).
 </td>
 </tr>
 

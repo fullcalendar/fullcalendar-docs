@@ -13,4 +13,4 @@ Triggered with a `true` argument when the calendar begins fetching events via AJ
 
 This function is often used to show/hide a loading indicator.
 
-When the [Scheduler](scheduler) plugin is loaded, this callback is also fired when resources are fetched.
+When one of the [resource plugins](premium) are loaded, this callback is also fired when resources are fetched.

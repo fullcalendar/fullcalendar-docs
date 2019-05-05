@@ -19,4 +19,4 @@ The `end` parameter is exclusive, meaning if you want to your last full-day sele
 
 The `end` parameter is optional.
 
-If the [Scheduler plugin](scheduler) is installed, the `resourceId` argument can be a [Resource Object's](resource-object) ID that you would like to select. If the current view supports resources but this value is not specified, the given range is selected across all resources.
+If one of the [resource plugins](premium) are installed, the `resourceId` argument can be a [Resource Object's](resource-object) ID that you would like to select. If the current view supports resources but this value is not specified, the given range is selected across all resources.

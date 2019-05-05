@@ -16,4 +16,4 @@ The `selectInfo` object will have the following properties:
 
 - `start` (a [Date](date-object))
 - `end` exclusive end date/time (a [Date](date-object))
-- `resourceId` if you are using a [Resource View](scheduler)
+- `resourceId` if you are using a [Resource View](premium)
