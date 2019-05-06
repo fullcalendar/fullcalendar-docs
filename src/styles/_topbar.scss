@@ -101,7 +101,12 @@ a.topbar__nav-handle {
   color: #fff;
   padding-bottom: 2px;
   border-bottom: 2px solid $yellow-highlight-color;
-  white-space: nowrap;
+}
+
+.responsive-enabled {
+  .topbar__notice-link {
+    white-space: nowrap; // goes well with the h scrolling
+  }
 }
 
 
