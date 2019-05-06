@@ -18,7 +18,9 @@ $font-color: #20232A; // applied globally
 $font-color-weak: #989ba2;
 $font-weight-thin: 300; // must be used manually
 $font-weight-normal: 400; // applied globally
-$font-weight-bold: 600; // applied to all b/strong tags // NOTE: some places manually use 800
+$font-weight-bold: 600; // applied to all b/strong tags
+  // NOTE: some places manually use 800
+  // even in blog-sidebar.html
 
 $link-color: $blue-primary-color; // must be used manually
 $link-color-dark: #0b4d8e; // must be used manually
