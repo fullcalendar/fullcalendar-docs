@@ -16,6 +16,8 @@ The Y Combinator Days
 ---------------------
 -1 year (2008 - 2009)
 
+<img src='{{ site.baseurl }}/assets/images/10-year/yc.svg' width='200' style='float:right; margin: 0 -100px 40px 40px' />
+
 A friend and I were accepted into the world's most prestigious startup incubator: [Y Combinator](#). We had the noble goal of creating another Content Management System the world didn't need. That's a bit harsh, we had the goal of fixing "group-based" "collaborative" website publishing, but the results were lackluster. When Paul Graham, our coding idol, told us our product was shit, it didn't feel very good!
 
 We flailed around, switching ideas, changing names from "Orgu" (yuck!) to "People and Pages", and eventually throwing in the towel. I was depressed, but at least I had a big heap of useless JS and PHP to keep me company. I needed a new job. What's the best way to prove you're a good potential engineering hire? Have open source contributions! So, I took the event-scheduling functionality of our defunct product, extracted the JS, and open sourced it.
@@ -27,34 +29,38 @@ Birth Day (Apr 2009)
 
 I spent one afternoon turning the calendar functionality into a proper jQuery plugin. I then published v1 on the now-defunct jQuery Plugin Registry. Guess what happened? John Resig, THE creator of jQuery, saw it and tweeted about it!
 
-(insert tweet here)
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I really like the jQuery Full Calendar plugin: http://bit.ly/Dp71L if it used the jQuery UI Themeroller it&#39;d be perfect.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/1642888023?ref_src=twsrc%5Etfw">April 28, 2009</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-So cool! My website received a huge spike in traffic and all of a sudden I was the maintainer or a semi-popular open-source JS project. I rode that high for quite a while, gleefully improving the API and fixing bugs. I encountered just about every DST-related bug known to man in the first 6 months. Turns out not everyone is in the America/Chicago timezone.
+So cool! My website received a huge spike in traffic and all of a sudden I was the maintainer of a semi-popular open-source JS project. I rode that high for quite a while, gleefully improving the API and fixing bugs. I encountered just about every DST-related bug known to man in the first 6 months. Turns out not everyone is in the America/Chicago timezone.
 
 
 Turning Up
 ----------
 Apr 2009 - Apr 2011
 
-I continued to add features and usage continued to increase. I added jQuery UI theme support (just like John requested) and added a few new calendar "views". By April 2011, I was getting about 30k unique visitors and counting.
+I continued to add features and usage continued to increase. I added jQuery UI theme support (just like John requested) and added a few new calendar "views". By April 2011, I was getting about 38k unique visitors and counting.
 
-(graphic of Google Analytics traffic)
+<img src='{{ site.baseurl }}/assets/images/10-year/ga.png' width='650' />
 
 
 Burnout
 -------
 May 2011 - Feb 2013
 
+<img src='{{ site.baseurl }}/assets/images/10-year/hustle-and-bustle.jpg' width='350' style='float:right; margin: 0 -230px 40px 40px' />
+
 After about three years of being a happy-go-lucky maintainer, I began to have doubts. Why was I investing all this time on nights and weekends? Why was I doing all this work for free when others were using it for profit? Why are people such a-holes on the issue tracker? What's the POINT!?
 
 What followed was a period of relative inactivity for about 2 years. I made a bugfix release here and there, but I had essentially checked out. Ironically, usage continued to increase, to the point where I had about 60k uniques each month. The issue tracker, which was hosted on Google Code at the time, grew out of control. At one point there were 750 untriaged tickets.
-
-(graphic of dude who is burnt out)
 
 
 Rebirth
 -------
 Mar 2013
+
+<img src='{{ site.baseurl }}/assets/images/10-year/momentjs.png' width='300' style='float:right; margin: 0 -200px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/karma.png' width='300' style='clear: right; float:right; margin: 40px -200px 40px 40px' />
 
 The history of FullCalendar is intertwined with my employment at [Weebly](#). I joined Weebly as their second engineer when I needed a job after my failed company. The company grew to over 200 employees and I eventually became an engineering manager. While I enjoyed exercising my soft skills as a manager, I missed coding.
 
@@ -62,10 +68,9 @@ The lack of coding, combined with the vague idea of FullCalendar being a potenti
 
 I overhauled FullCalendar's internal date system, opting to rely on [MomentJS](#). With the help of the community, I built an automated test suite. As a self-identified gunslinging code ninja, I had always been opposed to automated tests, but man, these tests turned out to be SUCH a worthwhile investment. Refactors suddenly became a possibility.
 
-(graphic of momentjs logo)
 
-(graphic of karma logo)
 
+<img src='{{ site.baseurl }}/assets/images/10-year/newsite.png' width='350' style='float:right; margin: 0 -230px 40px 40px' />
 
 New Website
 -----------
@@ -74,8 +79,6 @@ Sep 2014
 The project finally got its own website and domain name, fullcalendar.io. Throw your hands up for the Indian Ocean!
 
 Unfortunately my [*personal* website](#) is still hosted at the same place. For having dedicated my whole career to improving website publishing for the masses, wow that sure is embarrassing!
-
-(thumbnail of fc website)
 
 
 Added a PayPal Button
@@ -86,37 +89,39 @@ Anyone who's ever had a pet project knows there are certain features you don't *
 
 Combine that with the state of mind I was in at the time. I wanted to make FullCalendar my "Full"-time gig. A LOT of people were using the project at that point. They weren't paying, but given the sheer numbers and my knowledge of "freemium", I figured I had to be an idiot if I couldn't generate *some* type of revenue. Maybe something similar to CKEditor, which was also a freemium JS lib.
 
+<img src='{{ site.baseurl }}/assets/images/10-year/shut-up.jpg' width='350' style='float:right; margin: 0 -230px 40px 40px' />
+
 So I took that hairy Issue 1234 and asked the FullCalendar community what they thought if I made it a *paid* feature. I had fears this would constitute selling out, abandoning my loyalty to open source. But instead, there was resounding approval, as depicted by the graphic @asdfasdf posted (TODO: get person's name) in the blog comments at the time.
 
 I moonlighted the implementation of it over the course of a year. I released it with a simple PayPay button connected to an API hook that sent out an email with a license key. The next day I got 8 sales! (TODO: verify this number)
-
-(graphic of what @asdfasdf posted - https://a.disquscdn.com/uploads/mediaembed/images/2098/8495/original.jpg)
 
 
 Beer Money
 ----------
 (date TODO)
 
+<img src='{{ site.baseurl }}/assets/images/10-year/beer.jpg' width='350' style='float:right; margin: 0 -230px 40px 40px' />
+
 Sales slowly but steadily began to climb. I added another highly requested feature to the premium offering that boosted sales even more (Issue 4567). My revenue went from beer money, to rent money, to enough money to live off of. I promised myself if the revenue ever eclipsed the salary from my day job, I would quit and pursue FullCalendar full-time. That happened around the summer of 1989 (TODO: get correct date) and I followed through with my promise.
 
 A cool guy by the name of Dylan eventually came aboard and began to own all customer support duties, both on the private support inbox and on GitHub issues. Dylan has freed up sooo much of my time to be able to work on core development, where my time is best spent.
-
-(graphic of person chugging beer?)
 
 
 Modernizing
 -----------
 (date TODO)
 
-I *could* have continued to crank out premium features to increase revenue, but instead I chose to address the increasingly audible grumbling I heard from developers. Developers didn't like that FullCalendar relied on jQuery. They also weren't thrilled about the dependency on Moment, and tangentially, they were confused by how time zones operated with FullCalendar's Moment-reliant API.
+<img src='{{ site.baseurl }}/assets/images/10-year/react.svg' width='275' style='clear:right; float:right; margin:-20px -138px 0 -20px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/vue.png' width='160' style='clear:right; float:right; margin:0 -80px 0 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/angular.svg' width='200' style='clear:right; float:right; margin:0 -100px 40px 40px' />
+
+I *could* have continued to crank out premium features to increase revenue, but instead I chose to address the increasingly audible grumbling I heard from developers. Developers didn't like that FullCalendar relied on jQuery. They also weren't thrilled about the dependency on Moment, and tangentially, they were confused by how timezones operated with FullCalendar's Moment-reliant API.
 
 Boy do times change! Just a few years back, I was touting jQuery and Moment as key selling points!
 
 I understood the criticism however. The DOM is much easier to work with these days, weakening the case for jQuery. Lots of developers use frameworks like React, Vue, and Angular. Having to load one of those PLUS jQuery just feels dirty. The built-in [Intl API](#) could now be relied upon for date formatting, weakening the case for Moment. These complaints were actually valid.
 
-So, I stripped out jQuery, Moment, overhauled timezone support, modernized the whole API, switched over to a Redux-style data flow, built connectors for React/Vue/Angular (thanks to Rustam and Josh) and it only took ... drumroll please ... an entire freakin' year (ugh). Note to self: release things more incrementally.
-
-(graphic of React/Vue/Angular logos?)
+So, I stripped out jQuery, Moment, overhauled timezone support, modernized the whole API, switched over to a Redux-style data flow, built connectors for React/Vue/Angular (thanks to Rustam and Josh) and it only took ... drumroll please ... an entire freakin' year (ugh). Note to self: release things more incrementally. That being said, the final product was spectacular.
 
 
 10 Years Old
@@ -127,5 +132,5 @@ I redesigned the website and wrote this blog post to celebrate the 10 year anniv
 
 Happy birthday FullCalendar!
 
-(graphic of cake)
+<img src='{{ site.baseurl }}/assets/images/10-year/cake.jpg' width='400' />
 
