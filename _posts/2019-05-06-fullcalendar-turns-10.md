@@ -3,7 +3,7 @@ title: 'From Dead Code to Company: The FullCalendar JS Lib Turns 10'
 date: 2019-05-06T00:00:00+00:00
 advanced_sidebar: true
 hacker_news_url: https://news.ycombinator.com/newest
-reddit_url: https://www.reddit.com/r/javascript/
+reddit_url: https://www.reddit.com/r/javascript/comments/bldgkv/from_dead_code_to_company_the_fullcalendar_js_lib/
 ---
 
 I've been working on the FullCalendar for a really long time. Though I couldn't remember exactly *how* long, so I dove into the archives of old releases. I found the source code for [version 1.0.0](https://github.com/fullcalendar/fullcalendar/blob/v1.0.0/fullcalendar.js). Wow, I sure did love deeply nested functions and nonsensical variable names like `bo` (body odor?). And tabs!? I'm a different person now, don't worry.
