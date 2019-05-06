@@ -190,9 +190,19 @@ $vtimeline-fade: 40px;
   float: right;
 }
 
+.indented {
+  margin-left: 2em;
+}
+
 @media only screen and (max-width: $one-col-breakpoint) {
+
   .float-image {
     float: none;
     margin: 0 !important;
   }
+
+  .indented {
+    margin-left: 0;
+  }
+
 }

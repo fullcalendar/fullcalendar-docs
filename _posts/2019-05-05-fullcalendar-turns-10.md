@@ -33,7 +33,7 @@ We flailed around, switching ideas, changing names from "Orgu" (yuck!) to "Peopl
 
 I spent one afternoon turning the calendar functionality into a proper jQuery plugin. I then published v1 on the now-defunct jQuery Plugin Registry. Guess what happened? John Resig, THE creator of jQuery, saw it and tweeted about it!
 
-<div style='margin:2em'>
+<div class='indented' style='margin-top:2em; margin-bottom:2em'>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I really like the jQuery Full Calendar plugin: http://bit.ly/Dp71L if it used the jQuery UI Themeroller it&#39;d be perfect.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/1642888023?ref_src=twsrc%5Etfw">April 28, 2009</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
@@ -49,7 +49,7 @@ So cool! My website received a huge spike in traffic and all of a sudden I was t
 
 I continued to add features and usage continued to increase. I added jQuery UI theme support just like John requested and also added a few new calendar "views". By April 2011, I was getting about 38k unique visitors and counting.
 
-<img src='{{ site.baseurl }}/assets/images/10-year/ga.png' width='650' height='187' style='margin-left:2em' />
+<img src='{{ site.baseurl }}/assets/images/10-year/ga.png' width='650' height='187' class='indented' />
 
 
 </div>
