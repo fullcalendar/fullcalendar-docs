@@ -4,6 +4,14 @@
   color: #fff;
 }
 
+@media only screen and (max-width: $one-col-breakpoint) {
+  .responsive-enabled {
+    .topbar {
+      overflow: auto;
+    }
+  }
+}
+
 .topbar__container {
   display: flex;
   align-items: center;
@@ -93,6 +101,7 @@ a.topbar__nav-handle {
   color: #fff;
   padding-bottom: 2px;
   border-bottom: 2px solid $yellow-highlight-color;
+  white-space: nowrap;
 }
 
 

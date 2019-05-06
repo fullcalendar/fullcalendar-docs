@@ -48,6 +48,12 @@ $blog-margin-small: 35px;
   color: $font-color-weak;
 }
 
+.blog-post__content {
+  img {
+    max-width: 100%;
+  }
+}
+
 
 .blog-pager {
   @include clearfix;
@@ -176,4 +182,16 @@ $vtimeline-fade: 40px;
   font-weight: $font-weight-normal;
   color: $font-color-weak;
   margin-left: 10px;
+}
+
+.float-image {
+  clear: right;
+  float: right;
+}
+
+@media only screen and (max-width: $one-col-breakpoint) {
+  .float-image {
+    float: none;
+    margin: 0 !important;
+  }
 }

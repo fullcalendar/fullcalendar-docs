@@ -2,13 +2,17 @@
 <html lang='en'>
   <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    {% if layout.responsive %}
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% endif %}
+
     {% include head-title.html %}
     {% include head-description.html %}
     {% include head-favicon.html %}
     {% include head-css.html %}
     {% include head-js.html %}
   </head>
-  <body>
+  <body {% if layout.responsive %}class='responsive-enabled'{% endif %}>
     {% include topbar.html %}
     {{ content }}
     {% include footer.html %}

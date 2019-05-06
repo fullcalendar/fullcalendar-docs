@@ -19,7 +19,7 @@ This blog post is a stroll down memory lane, an attempt to summarize what the he
 
 ## The Y Combinator Days <span class='vtimeline__date'>1 year prior</span>
 
-<img src='{{ site.baseurl }}/assets/images/10-year/yc.svg' width='200' height='200' style='float:right; margin: 0 -125px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/yc.svg' width='200' height='200' class='float-image' style='margin: 0 -125px 40px 40px' />
 
 A friend and I were accepted into the world's most prestigious startup incubator: [Y Combinator](https://www.ycombinator.com/). We had the noble goal of creating another Content Management System the world didn't need. That's a bit harsh, we had the goal of fixing "group-based" "collaborative" website publishing, but the results were lackluster. When Paul Graham, our coding idol, told us our product was shit, it didn't feel very good!
 
@@ -59,7 +59,7 @@ I continued to add features and usage continued to increase. I added jQuery UI t
 
 ## Burning Out <span class='vtimeline__date'>May 2011</span>
 
-<img src='{{ site.baseurl }}/assets/images/10-year/hustle-and-bustle.jpg' width='350' height='258' style='float:right; margin: 0 -255px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/hustle-and-bustle.jpg' width='350' height='258' class='float-image' style='margin: 0 -255px 40px 40px' />
 
 After about three years of being a happy-go-lucky maintainer, I began to have doubts. Why was I investing all this time on nights and weekends? Why was I doing all this work for free when others were using it for profit? Why are people such a-holes on the issue tracker? What's the POINT!?
 
@@ -72,8 +72,8 @@ What followed was a period of relative inactivity for about 2 years. I made a bu
 
 ## Rebirth <span class='vtimeline__date'>Mar 2013</span>
 
-<img src='{{ site.baseurl }}/assets/images/10-year/momentjs.png' width='300' height='124' style='float:right; margin: 0 -225px 40px 40px' />
-<img src='{{ site.baseurl }}/assets/images/10-year/karma.png' width='300' height='70' style='clear: right; float:right; margin: 40px -225px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/momentjs.png' width='300' height='124' class='float-image' style='margin: 0 -225px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/karma.png' width='300' height='70' class='float-image' style='margin: 40px -225px 40px 40px' />
 
 The history of FullCalendar is intertwined with my employment at [Weebly](https://www.weebly.com/). I joined Weebly as their second engineer when I needed a job after my failed company. The company grew to over 200 employees and I eventually became an engineering manager. While I enjoyed exercising my soft skills as a manager, I missed coding.
 
@@ -86,7 +86,7 @@ I overhauled FullCalendar's internal date system, opting to rely on [MomentJS](h
 <div class='vtimeline__event' markdown='1'>
 
 
-<img src='{{ site.baseurl }}/assets/images/10-year/newsite.png' width='350' height='366' style='float:right; margin: 0 -255px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/newsite.png' width='350' height='366' class='float-image' style='margin: 0 -255px 40px 40px' />
 
 ## New Website <span class='vtimeline__date'>Sep 2014</span>
 
@@ -105,7 +105,7 @@ Anyone who's ever had a pet project knows there are certain features you don't *
 
 Combine that with the state of mind I was in at the time. I wanted to make FullCalendar my "Full"-time gig. A LOT of people were using the project at that point. They weren't paying, but given the sheer numbers and my knowledge of "freemium", I figured I had to be an idiot if I couldn't generate *some* type of revenue.
 
-<img src='{{ site.baseurl }}/assets/images/10-year/shut-up.jpg' width='350' height='219' style='float:right; margin: 0 -255px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/shut-up.jpg' width='350' height='219' class='float-image' style='margin: 0 -255px 40px 40px' />
 
 So I took that hairy Issue 150 and asked the FullCalendar community what they thought if I made it a *paid* feature. I had fears this would constitute selling out, abandoning my loyalty to open source. But instead, there was resounding approval, as depicted in the [graphic one of the commenters posted on the blog](https://fullcalendar.io/blog/2015/02/timeline-and-other-news#comment-2050746271).
 
@@ -118,7 +118,7 @@ I moonlighted the implementation of it over the course of a year. I released it 
 
 ## Beer Money <span class='vtimeline__date'>Nov 2015</span>
 
-<img src='{{ site.baseurl }}/assets/images/10-year/beer.jpg' width='350' height='263' style='float:right; margin: 0 -255px 40px 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/beer.jpg' width='350' height='263' class='float-image' style='margin: 0 -255px 40px 40px' />
 
 Sales slowly but steadily began to climb. I added another highly requested feature to the premium offering that boosted sales even more ([Issue 5](https://github.com/fullcalendar/fullcalendar-scheduler/issues/5)). My revenue went from beer money, to rent money, to enough money to live off of. I promised myself if the revenue ever eclipsed the salary from my day job, I would quit and pursue FullCalendar full-time. That happened in 2016 and I followed through with my promise.
 
@@ -131,9 +131,9 @@ A cool guy by the name of Dylan eventually came aboard and began to own all cust
 
 ## Modernizing <span class='vtimeline__date'>Mar 2018</span>
 
-<img src='{{ site.baseurl }}/assets/images/10-year/react.svg' width='275' height='194' style='clear:right; float:right; margin:-20px -163px 0 -20px' />
-<img src='{{ site.baseurl }}/assets/images/10-year/vue.png' width='160' height='160' style='clear:right; float:right; margin:0 -105px 0 40px' />
-<img src='{{ site.baseurl }}/assets/images/10-year/angular.svg' width='200' height='200' style='clear:right; float:right; margin:0 -125px 0 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/react.svg' width='275' height='194' class='float-image' style='margin:-20px -163px 0 -20px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/vue.png' width='160' height='160' class='float-image' style='margin:0 -105px 0 40px' />
+<img src='{{ site.baseurl }}/assets/images/10-year/angular.svg' width='200' height='200' class='float-image' style='margin:0 -125px 0 40px' />
 
 I *could* have continued to crank out premium features to increase revenue, but instead I chose to address the increasingly audible grumbling I heard from developers. Developers didn't like that FullCalendar relied on jQuery. They also weren't thrilled about the dependency on Moment, and tangentially, they were confused by how timezones operated with FullCalendar's Moment-reliant API.
 

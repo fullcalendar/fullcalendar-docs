@@ -18,6 +18,14 @@
   margin-bottom: 40px;
 }
 
+@media only screen and (max-width: $one-col-breakpoint) {
+  .responsive-enabled {
+    .footer__container {
+      display: block;
+    }
+  }
+}
+
 .footer__left,
 .footer__right {
   margin-bottom: -1em;
