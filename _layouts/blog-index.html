@@ -17,25 +17,27 @@ pagination:
       <div class='sidebar-layout__main'>
 
         {% for post in paginator.posts %}
-          <div class='blog-post'>
-            <h2 class='blog-post__title blog-post__title--link'>
-              <a href='{{ site.baseurl }}{{ post.url }}'>
-                {{ post.title | escape }}
-              </a>
-            </h2>
-            <div class='blog-post__comment-count'>
-              <a href='{{ site.production_baseurl }}{{ post.url }}#disqus_thread'>0 Comments</a>
+          {% unless post.is_secret %}
+            <div class='blog-post'>
+              <h2 class='blog-post__title blog-post__title--link'>
+                <a href='{{ site.baseurl }}{{ post.url }}'>
+                  {{ post.title | escape }}
+                </a>
+              </h2>
+              <div class='blog-post__comment-count'>
+                <a href='{{ site.production_baseurl }}{{ post.url }}#disqus_thread'>0 Comments</a>
+              </div>
+              <div class='blog-post__content text-content'>
+                {% if post.excerpt != post.content %}
+                  {{ post.excerpt | replace: "</p>", "" }}
+                  <a href='{{ site.baseurl }}{{ post.url }}' class='blog-post__more-link'>Continue reading</a>
+                  </p><!-- ends the excerpt content -->
+                {% else %}
+                  {{ post.excerpt }}
+                {% endif %}
+              </div>
             </div>
-            <div class='blog-post__content text-content'>
-              {% if post.excerpt != post.content %}
-                {{ post.excerpt | replace: "</p>", "" }}
-                <a href='{{ site.baseurl }}{{ post.url }}' class='blog-post__more-link'>Continue reading</a>
-                </p><!-- ends the excerpt content -->
-              {% else %}
-                {{ post.excerpt }}
-              {% endif %}
-            </div>
-          </div>
+          {% endunless %}
         {% endfor %}
 
         <div class='blog-pager'>
