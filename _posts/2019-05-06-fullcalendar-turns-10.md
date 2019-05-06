@@ -1,6 +1,6 @@
 ---
 title: 'From Dead Code to Company: The FullCalendar JS Lib Turns 10'
-date: 2019-05-05T00:00:00+00:00
+date: 2019-05-06T00:00:00+00:00
 advanced_sidebar: true
 hacker_news_url: https://news.ycombinator.com/newest
 reddit_url: https://www.reddit.com/r/javascript/
