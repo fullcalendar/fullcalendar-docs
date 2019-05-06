@@ -101,3 +101,75 @@ $blog-margin-small: 35px;
     margin: .8em 0;
   }
 }
+
+
+// For the 10-year birthday post
+
+$vtimeline-line: 2px;
+$vtimeline-dot-radius: 7px;
+$vtimeline-dot-top: 14px;
+$vtimeline-dot-left: -28px;
+$vtimeline-fade: 40px;
+
+.vtimeline {
+  border-left: $vtimeline-line solid $control-border-color-light;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: $vtimeline-line;
+    height: $vtimeline-fade;
+    position: absolute;
+    top: -$vtimeline-fade;
+    left: -$vtimeline-line;
+    background: linear-gradient(180deg, #fff 0%, $control-border-color-light 100%);
+  }
+
+  &:after {
+    content: "";
+    width: $vtimeline-line;
+    height: $vtimeline-fade;
+    position: absolute;
+    left: -$vtimeline-line;
+    bottom: 0;
+    background: linear-gradient(0deg, #fff 0%, $control-border-color-light 100%);
+  }
+}
+
+.vtimeline__event {
+  padding-left: 20px;
+  clear: both;
+
+  h2 {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: $vtimeline-dot-top;
+      left: $vtimeline-dot-left;
+      width: 0;
+      height: 0;
+      border-radius: $vtimeline-dot-radius;
+      border: $vtimeline-dot-radius solid $control-border-color-light;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: $vtimeline-dot-top + $vtimeline-line;
+      left: $vtimeline-dot-left + $vtimeline-line;
+      width: 0;
+      height: 0;
+      border-radius: $vtimeline-dot-radius - $vtimeline-line;
+      border: ($vtimeline-dot-radius - $vtimeline-line) solid #fff;
+    }
+  }
+}
+
+.vtimeline__date {
+  font-size: $font-size;
+  font-weight: $font-weight-normal;
+  color: $font-color-weak;
+  margin-left: 10px;
+}
