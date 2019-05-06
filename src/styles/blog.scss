@@ -86,6 +86,10 @@ $blog-margin-small: 35px;
 }
 
 
+.blog-post-sidebar__advanced {
+  margin-bottom: 3em;
+}
+
 .blog-post-sidebar__title {
   @include title;
   margin-bottom: 1em;

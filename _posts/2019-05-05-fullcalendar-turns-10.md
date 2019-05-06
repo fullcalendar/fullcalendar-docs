@@ -2,6 +2,9 @@
 title: 'From Dead Code to Company: The FullCalendar JS Lib Turns 10'
 date: 2019-05-05T00:00:00+00:00
 is_secret: true
+advanced_sidebar: true
+hacker_news_url: https://news.ycombinator.com/
+reddit_url: https://reddit.com/
 ---
 
 I've been working on the FullCalendar for a really long time. Though I couldn't remember exactly *how* long, so I dove into the archives of old releases. I found the source code for [version 1.0.0](#). Wow, I sure did love deeply nested functions and nonsensical variable names (does `bo` stand for body odor?). And tabs!? I'm a different person now, don't worry.
@@ -14,7 +17,7 @@ This blog post is a stroll down memory lane, an attempt to summarize what the he
 <div class='vtimeline__event' markdown='1'>
 
 
-## The Y Combinator Days <span class='vtimeline__date'>-1 year (2008 - 2009)</span>
+## The Y Combinator Days <span class='vtimeline__date'>1 year prior</span>
 
 <img src='{{ site.baseurl }}/assets/images/10-year/yc.svg' width='200' height='200' style='float:right; margin: 0 -125px 40px 40px' />
 
@@ -27,7 +30,7 @@ We flailed around, switching ideas, changing names from "Orgu" (yuck!) to "Peopl
 <div class='vtimeline__event' markdown='1'>
 
 
-## Thanks John Resig! <span class='vtimeline__date'>Birth Day (Apr 2009)</span>
+## Thanks John Resig! <span class='vtimeline__date'>Birth Day - Apr 2009</span>
 
 I spent one afternoon turning the calendar functionality into a proper jQuery plugin. I then published v1 on the now-defunct jQuery Plugin Registry. Guess what happened? John Resig, THE creator of jQuery, saw it and tweeted about it!
 
@@ -43,7 +46,7 @@ So cool! My website received a huge spike in traffic and all of a sudden I was t
 <div class='vtimeline__event' markdown='1'>
 
 
-## Turning Up <span class='vtimeline__date'>Apr 2009 - Apr 2011</span>
+## Turning Up <span class='vtimeline__date'>Apr 2009</span>
 
 I continued to add features and usage continued to increase. I added jQuery UI theme support (just like John requested) and added a few new calendar "views". By April 2011, I was getting about 38k unique visitors and counting.
 
@@ -54,7 +57,7 @@ I continued to add features and usage continued to increase. I added jQuery UI t
 <div class='vtimeline__event' markdown='1'>
 
 
-## Burning Out <span class='vtimeline__date'>May 2011 - Feb 2013</span>
+## Burning Out <span class='vtimeline__date'>May 2011</span>
 
 <img src='{{ site.baseurl }}/assets/images/10-year/hustle-and-bustle.jpg' width='350' height='258' style='float:right; margin: 0 -255px 40px 40px' />
 
@@ -113,7 +116,7 @@ I moonlighted the implementation of it over the course of a year. I released it 
 <div class='vtimeline__event' markdown='1'>
 
 
-## Beer Money <span class='vtimeline__date'>(date TODO)</span>
+## Beer Money <span class='vtimeline__date'>Nov 2015</span>
 
 <img src='{{ site.baseurl }}/assets/images/10-year/beer.jpg' width='350' height='263' style='float:right; margin: 0 -255px 40px 40px' />
 
@@ -126,7 +129,7 @@ A cool guy by the name of Dylan eventually came aboard and began to own all cust
 <div class='vtimeline__event' markdown='1'>
 
 
-## Modernizing <span class='vtimeline__date'>(date TODO)</span>
+## Modernizing <span class='vtimeline__date'>Mar 2018</span>
 
 <img src='{{ site.baseurl }}/assets/images/10-year/react.svg' width='275' height='194' style='clear:right; float:right; margin:-20px -163px 0 -20px' />
 <img src='{{ site.baseurl }}/assets/images/10-year/vue.png' width='160' height='160' style='clear:right; float:right; margin:0 -105px 0 40px' />
@@ -145,7 +148,7 @@ So, I stripped out jQuery, Moment, overhauled timezone support, modernized the w
 <div class='vtimeline__event' markdown='1'>
 
 
-## 10 Years Old <span class='vtimeline__date'>(May 2019)</span>
+## 10 Years Old <span class='vtimeline__date'>Apr 2019</span>
 
 I redesigned the website and wrote this blog post to celebrate the 10 year anniversary of FullCalendar! Also, the homepage now sports a call-to-action button and a direct link to the purchase page, which I've been told by smart people is a good idea for business.
 
