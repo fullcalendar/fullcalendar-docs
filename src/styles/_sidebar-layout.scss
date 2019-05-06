@@ -5,20 +5,23 @@
   align-items: flex-start;
 }
 
-@media only screen and (max-width: $one-col-breakpoint) {
-  .responsive-enabled {
-    .sidebar-layout {
-      display: block; // kill flexbox, will stack
-    }
-  }
-}
-
 .sidebar-layout__main {
   flex-grow: 1;
   padding-right: 40px;
 
   > *:first-child {
     margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: $one-col-breakpoint) {
+  .responsive-enabled {
+    .sidebar-layout {
+      display: block; // kill flexbox, will stack
+    }
+    .sidebar-layout__main {
+      padding-right: 0;
+    }
   }
 }
 
