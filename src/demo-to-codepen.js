@@ -1,4 +1,5 @@
 import './styles/demo-to-codepen.scss'
+import { querySelectorAll, htmlEscape } from './lib/util'
 
 document.addEventListener('DOMContentLoaded', function(event) {
   var settings = {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   }
 
-  document.querySelectorAll('a[data-codepen], button[data-codepen]').forEach(function(el) {
+  querySelectorAll('a[data-codepen], button[data-codepen]').forEach(function(el) {
     el.addEventListener('click', function() {
       var url = el.getAttribute('data-codepen')
       openEditor(
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       newWindow.document.write(
         '<html><body>' +
         '<form action="https://codepen.io/pen/define" method="POST">' +
-        '<input type="hidden" name="data" value="' + escapeHtml(JSON.stringify(codepenData)) + '" />' +
+        '<input type="hidden" name="data" value="' + htmlEscape(JSON.stringify(codepenData)) + '" />' +
         '</form>' +
         '<script>document.forms[0].submit()</script>' +
         '</body></html>'
@@ -231,14 +232,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
       }
     }
     xhr.send()
-  }
-
-  function escapeHtml(s) {
-    return s.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/'/g, '&#039;')
-      .replace(/"/g, '&quot;')
   }
 
 })
