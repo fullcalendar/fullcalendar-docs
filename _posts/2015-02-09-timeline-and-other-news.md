@@ -5,7 +5,7 @@ date: 2015-02-09T15:13:23+00:00
 
 This post is an update on the highly-requested <a href="https://code.google.com/p/fullcalendar/issues/detail?id=150#footer" target="_blank">horizontal resource view</a> (aka _Timeline_). This feature allows the assigning of events to _resources_ (things like team members or conference rooms) and portrays time left-to-right and resources top-to-bottom. Please ☆ the <a href="https://code.google.com/p/fullcalendar/issues/detail?id=150#footer" target="_blank">issue tracker ticket</a> to receive further updates.
 
-[<img style="margin-top: ‐10px;" src="{{ site.baseurl }}/assets/images/blog/2015/02/timeline-view.png" alt="timeline-view" width="213" height="136" sizes="(max-width: 213px) 100vw, 213px" />](#preview)
+[<img style="margin-top: ‐10px;" src="{{ site.baseurl }}/assets/images/blog/timeline-view.png" alt="timeline-view" width="213" height="136" sizes="(max-width: 213px) 100vw, 213px" />](#preview)
 
 **Update (8/23/2015):** [Scheduler has been officially released!](http://blog.arshaw.com/1/post/2015/08/scheduler-released.html)
 
@@ -45,7 +45,7 @@ If the feature meets all these qualifications, it is a candidate for a premium�
 
 Back to Timeline. I&#8217;ve been hard at work, and even though my code is pre-alpha and not fit for download, <a href="{{ site.baseurl }}/purchase" target="_blank">I&#8217;ve prepared a live demo:</a>
 
-<a href="{{ site.baseurl }}/purchase" target="_blank"><img class="alignnone wp-image-121 size-full" src="{{ site.baseurl }}/assets/images/blog/2015/02/timeline-view.png" alt="timeline-view" width="946" height="606" sizes="(max-width: 946px) 100vw, 946px" /></a>
+<a href="{{ site.baseurl }}/purchase" target="_blank"><img class="alignnone wp-image-121 size-full" src="{{ site.baseurl }}/assets/images/blog/timeline-view.png" alt="timeline-view" width="946" height="606" sizes="(max-width: 946px) 100vw, 946px" /></a>
 
 I&#8217;ve also prepared some <a href="{{ site.baseurl }}/docs/timeline-view" target="_blank">preliminary documentation</a>.
 
