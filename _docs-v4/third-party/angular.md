@@ -100,6 +100,63 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 ```
 
 
+### Modifying Properties
+
+By default, FullCalendar will only know to rerender when a property's *reference* has changed. So, for adding an item to an array or modifying a property of an object, you need to create a *new* object instead of using the old one:
+
+```js
+export class AppComponent {
+
+  calendarEvents = [
+    { title: 'event 1', date: '2019-04-01' }
+  ];
+
+  addEvent() {
+    this.calendarEvents = this.calendarEvents.concat({ // creates a new array!
+      { title: 'event 2', date: '2019-04-02' }
+    });
+  }
+
+  modifyTitle(eventIndex, newTitle) {
+    let calendarEvents = this.calendarEvents.slice(); // a clone
+    let singleEvent = Object.assign({}, calendarEvents[eventIndex]); // a clone
+    singleEvent.title = newTitle;
+    calendarEvents[eventIndex] = singleEvent;
+    this.calendarEvents = calendarEvents; // reassign the array
+  }
+
+}
+```
+
+If this design pattern is too awkward for your app, you can still directly modify the objects, but you need to specify the `deepChangeDetection` prop. Please note, this will result in less optimal performance:
+
+```
+<full-calendar deepChangeDetection="true"></full-calendar>
+```
+
+Then, in your component's JavaScript:
+
+```js
+export class AppComponent {
+
+  calendarEvents = [
+    { title: 'event 1', date: '2019-04-01' }
+  ];
+
+  addEvent() {
+    this.calendarEvents.push({
+      { title: 'event 2', date: '2019-04-02' }
+    });
+  }
+
+  modifyTitle(eventIndex, newTitle) {
+    this.calendarEvents[eventIndex].title = newTitle;
+  }
+
+}
+```
+
+
 ## Emitted Events
 
 A listener can be passed into an Angular component that will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date. The way you pass these into the `<full-calendar>` component is different than properties:

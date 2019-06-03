@@ -59,6 +59,8 @@ When recurrences of this event end. Something that will [parse into a Date](date
 
 If any of these properties are specified, the event is assumed to be recurring and there is no need to specify the normal `start` and `end` properties.
 
+For a multi-day all-day event, specify the `duration` property (a [duration input](duration-object)).
+
 
 ## Recurrence with the RRule Plugin
 
