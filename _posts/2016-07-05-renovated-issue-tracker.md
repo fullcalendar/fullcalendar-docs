@@ -9,7 +9,7 @@ Over the past two months, I&#8217;ve been finding time to clean out old issues
 
 I've also created a new interface for ranking issues by demand. It takes a number of factors into account, including  the number of +1/<img style='vertical-align: text-bottom;' src='{{ site.baseurl }}/assets/images/thumbsup-emoji.png' width='20' height='20' alt='thumbups' /> reactions, comments, and old Google Code issue statistics. <a href='{{ site.baseurl }}/issues' target='_blank'>Click to view this new UI:</a>
 
-<a href='{{ site.baseurl }}/issues' target='_blank'><img style='border-radius: 3px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);' src='/assets/images/blog/2016/07/Screen-Shot-2016-07-04-at-5.38.53-PM-300x254.png' width='300' height='254' alt='issue tracker screenshot' /></a>
+<a href='{{ site.baseurl }}/issues' target='_blank'><img style='border-radius: 3px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);' src='/assets/images/blog/renovated-issue-tracker.png' width='300' height='254' alt='issue tracker screenshot' /></a>
 
 I've open-sourced the code for creating this UI. It's a new project called <a href='https://github.com/arshaw/ghi-scoreboard' target='_blank'><strong>ghi-scoreboard</strong> (view it on Github)</a>. It&#8217;s easily configurable, so feel free to use it on your own Github-hosted projects.
 

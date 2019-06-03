@@ -10,11 +10,11 @@ Today marks the release of FullCalendar 1.5, which contains improvements in them
 
 FullCalendar has always provided a default styling for its buttons that looks consistent across all browsers (including the IEs) without using any image dependencies. That styling now looks more sleek and modern:
 
-<img alt="after" src="{{ site.baseurl }}/assets/images/blog/2011/03/after.png" width="210" height="106" />
+<img alt="after" src="{{ site.baseurl }}/assets/images/blog/after.png" width="210" height="106" />
 
 compared to the old version:
 
-<img alt="before" src="{{ site.baseurl }}/assets/images/blog/2011/03/before.png" width="205" height="104" />
+<img alt="before" src="{{ site.baseurl }}/assets/images/blog/before.png" width="205" height="104" />
 
 
 ## HTML/CSS Restructuring and jQuery UI Theming
@@ -26,7 +26,7 @@ This changes the way FullCalendar inherits jQuery UI theme styles (for the bette
 
 Here is how the stock &#8220;Cupertino&#8221; theme looks, which is now bundled with FullCalendar:
 
-<img alt="8854370" src="{{ site.baseurl }}/assets/images/blog/2011/03/8854370.png" width="438" height="354" sizes="(max-width: 438px) 100vw, 438px" />
+<img alt="8854370" src="{{ site.baseurl }}/assets/images/blog/8854370.png" width="438" height="354" sizes="(max-width: 438px) 100vw, 438px" />
 
 
 ## Event Colors
