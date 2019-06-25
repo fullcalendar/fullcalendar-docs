@@ -20,7 +20,7 @@ FullCalendar.formatDate( *start*, *end*, *settings* )
 Example:
 
 ```js
-import { formatDate } from '@fullcalendar/core'
+import { formatRange } from '@fullcalendar/core'
 
 let str = formatRange('2018-09-01', '2018-09-15', {
   month: 'long',
