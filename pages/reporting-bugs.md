@@ -33,4 +33,6 @@ If this is true, please move on to the appropriate issue tracker. Please enter o
 
 {% include issue-tracker-links.html %}
 
+Please first try to recreate the bug **without** React/Vue/etc. It might be a "core" bug that belongs on the main issue tracker.
+
 It is a good idea to search through the list to see if someone has already reported your bug. If so, <strong>vote with a</strong> <img src="{{ site.baseurl }}/assets/images/thumbsup-emoji.png" width="20" height="20" style="vertical-align:baseline" alt='thumbsup' /> reaction on the topmost description of the issue (<a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">help</a>) and press the <strong style="background-image: linear-gradient(#fcfcfc, #eee); border: 1px solid #d5d5d5; color: #333; padding: 0 5px; border-radius: 3px">Subscribe</strong> button to receive updates when progress is made.
