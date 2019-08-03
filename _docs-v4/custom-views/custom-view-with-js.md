@@ -4,16 +4,19 @@ type: guide
 excerpt_separator: <!--more-->
 ---
 
-For advanced developers, FullCalendar provides an API for building custom views with the unlimited flexibility of JavaScript code.<!--more--> Using [OOP programming principals](http://en.wikipedia.org/wiki/Object-oriented_programming), one can *subclass* the base `View` class, implementing or overriding each specific behavior as methods like so:
+For advanced developers, FullCalendar provides an API for building custom views with the unlimited flexibility of JavaScript code.<!--more--> Using [OOP programming principals](http://en.wikipedia.org/wiki/Object-oriented_programming), one can *subclass* the base `View` class, implementing or overriding each specific behavior as methods, demonstrated below.
+
+Create a new file to contain your custom view. In this example, this file will be named NameOfMyCustomViewHere.js
 
 ```js
 import { View, createPlugin } from '@fullcalendar/core';
 
-class CustomView extends View {
+class NameOfMyCustomViewHere extends View {
 
   initialize() {
     // called once when the view is instantiated, when the user switches to the view.
     // initialize member variables or do other setup tasks.
+    console.log('NameOfMyCustomViewHere custom view has been initialized');
   }
 
   renderSkeleton() {
@@ -45,19 +48,20 @@ class CustomView extends View {
 
 export default createPlugin({
   views: {
-    custom: CustomView
+    NameOfMyCustomViewHere: NameOfMyCustomViewHere
   }
 });
 ```
 
-Then, in another file:
+
+Then, in another file that holds the main calendar instantiation logic, import your new custom view from NameOfMyCustomViewHere.js:
 
 ```js
-import customViewPlugin from './custom-view-file.js';
+import NameOfMyCustomViewHere from './NameOfMyCustomViewHere.js';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ customViewPlugin ],
-  defaultView: 'custom'
+  plugins: [ NameOfMyCustomViewHere ],
+  defaultView: 'NameOfMyCustomViewHere'
 })
 ...
 ```
