@@ -31,6 +31,7 @@ fi
 bundle exec htmlproofer ./_site \
   --check-html \
   --assume-extension \
+  --file-ignore '/\.\/_site\/assets\/.*/' \
   --url-ignore "$url_ignores" \
   $other_flags
 

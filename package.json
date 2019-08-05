@@ -23,7 +23,7 @@
     "webpack-build": "webpack --mode production",
     "webpack-watch": "webpack --watch",
     "webpack-clean": "rm -rf assets/*.*",
-    "lint": "npm run build && gulp lintspaces && ./scripts/htmlproofer.sh"
+    "lint": "./scripts/lint.sh"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
