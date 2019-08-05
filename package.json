@@ -1,5 +1,5 @@
 {
-  "name": "fullcalendar-site-static",
+  "private": true,
   "version": "1.0.0",
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
@@ -13,7 +13,7 @@
     "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
   },
   "scripts": {
-    "install": "bundler install",
+    "install": "bundler install && ./bin/install-version-deps.sh",
     "build": "npm run webpack-build && npm run jekyll-build",
     "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
     "clean": "npm run webpack-clean && npm run jekyll-clean",

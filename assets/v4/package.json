@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "dependencies": {
+    "@fullcalendar/bootstrap": "^4.0.0",
+    "@fullcalendar/core": "^4.0.0",
+    "@fullcalendar/daygrid": "^4.0.0",
+    "@fullcalendar/google-calendar": "^4.0.0",
+    "@fullcalendar/interaction": "^4.0.0",
+    "@fullcalendar/list": "^4.0.0",
+    "@fullcalendar/luxon": "^4.0.0",
+    "@fullcalendar/moment": "^4.0.0",
+    "@fullcalendar/moment-timezone": "^4.0.0",
+    "@fullcalendar/resource-common": "^4.0.0",
+    "@fullcalendar/resource-daygrid": "^4.0.0",
+    "@fullcalendar/resource-timegrid": "^4.0.0",
+    "@fullcalendar/resource-timeline": "^4.0.0",
+    "@fullcalendar/rrule": "^4.0.0",
+    "@fullcalendar/timegrid": "^4.0.0",
+    "@fullcalendar/timeline": "^4.0.0",
+    "luxon": "^1.17.2",
+    "moment": "^2.24.0",
+    "rrule": "^2.6.2"
+  }
+}
