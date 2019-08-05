@@ -47,8 +47,8 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 You can also download the library manually:
 
-**Latest:** <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.fullcalendar_scheduler_latest.version }}/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip')">
-  fullcalendar-scheduler-{{ site.data.fullcalendar_scheduler_latest.version }}.zip
+**Latest:** <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">
+  fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip
 </a>
 (<a href='{{ site.fullcalendar_scheduler_repo }}/releases'>view all releases</a>)
 
