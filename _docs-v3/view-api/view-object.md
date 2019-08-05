@@ -3,9 +3,7 @@ title: View Object
 type: guide
 ---
 
-An object containing information about a calendar view, such as title and date range.
-
-A View Object with information about the current view is passed into nearly every [handler](handlers).
+A View object contains information about a calendar view, such as title and date range. This information about the current view is passed into nearly every [handler](handlers).
 
 
 ## Properties
@@ -18,7 +16,7 @@ A View Object with information about the current view is passed into nearly ever
 
 `start`
 :   A [Moment](moment) that is the first visible day.
-    In month-view, this value is often before the 1st day of the month, because most months do not begin on the first day-of-week.
+    In month view, this value is often before the 1st day of the month, because most months do not begin on the first day-of-week.
 
 `end`
 :   A [Moment](moment) that is the exclusive last visible day.
@@ -31,5 +29,8 @@ A View Object with information about the current view is passed into nearly ever
 :   A [Moment](moment) that is the exclusive end of the interval the view is trying to represent.
     For example, in month view, this will be the day after the last day of the month (because it is exclusive).
     This value disregards hidden days.
+
+`visibleRange`
+:   A [visibleRange](visibleRange) object, that must have `start`/`end` properties that are instances of [Moment](moment). _(Introduced in v3.3.0)_
 
 For all views, `start`, `end`, `intervalStart`, and `intervalEnd` will be [ambiguously-timed moments](moment#ambiguously-timed)
