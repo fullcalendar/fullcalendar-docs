@@ -10,6 +10,11 @@ do
   echo "installing $dir..."
 
   cd "$dir"
-  npm ci
+
+  # would want to do `npm ci`
+  # but server doesn't have it
+  rm -rf node_modules
+  npm install
+
   cd -
 done
