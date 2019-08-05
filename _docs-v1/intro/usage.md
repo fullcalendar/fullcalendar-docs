@@ -1,6 +1,6 @@
 ---
 title: Basic Usage
-description: How to get started. Learn FullCalendar's basic principals.
+description: How to get started. Learn FullCalendar's basic principles.
 ---
 
 The first step in embedding a calendar on a web page is to have the right JavaScript and CSS files.
