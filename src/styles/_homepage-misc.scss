@@ -4,13 +4,17 @@
 
 .feature-cols__container {
   display: flex;
+  justify-content: space-evenly;
   padding-top: 70px;
   padding-bottom: 44px;
 }
 
 .feature-cols__col {
-  margin: 0 40px;
-  flex: 1 1 0;
+  flex: 0 1 330px;
+}
+
+.feature-cols__col:first-child {
+  margin-left: 0;
 }
 
 .feature-cols__title {
@@ -18,10 +22,6 @@
   font-size: $font-size-title;
   text-align: center;
   margin-bottom: 24px;
-}
-
-.feature-cols__description {
-  text-align: justify;
 }
 
 
