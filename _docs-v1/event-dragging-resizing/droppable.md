@@ -31,7 +31,7 @@ $('#calendar').fullCalendar({
 
 Good question. It is a common need to have an "external list of events" that can be dragged onto the calendar.
 
-While the `droppable` option deals with generic jQuery UI draggables and is not specifically tailored to adding events, it is possible to achieve this with a few lines of code. Follow the **external-dragging.html** example in FullCalendar's download. You can also view the [example online]({% package_baseurl fullcalendar 1 %}/demos/external-dragging.html).
+While the `droppable` option deals with generic jQuery UI draggables and is not specifically tailored to adding events, it is possible to achieve this with a few lines of code. Follow the **external-dragging.html** example in FullCalendar's download. You can also view the [example online]({{ site.baseurl }}/releases/fullcalendar/1.6.6/demos/external-dragging.html).
 
 In short, you must call [renderEvent](renderEvent) yourself in the [drop](drop) callback.
 
