@@ -9,7 +9,7 @@ gulp.task('lintspaces', function() {
     'assets/**/*.{js,css,scss}',
     '!assets/*.*',
     '_plugins/**/*.rb',
-    'bin/**/*.sh',
+    'scripts/**/*.sh',
     '_config.yml', // top level
     'gulpfile.js' // top level
   ])
