@@ -1,6 +1,4 @@
 
-QUERY_PACKAGE_RELEASE = __dir__ + '/../../bin/query-package-release'
-$can_query_package_release = File.exist?(QUERY_PACKAGE_RELEASE)
 $cache = {}
 
 module Jekyll
@@ -17,7 +15,7 @@ module Jekyll
       release = get_package_release(rendered_input)
 
       if release
-        url = release['baseUrl'] + '/main.min.js'
+        url = release['base_url'] + '/main.min.js'
         "<script src='#{url}'></script>"
       else
         puts "Could not identify release by '#{rendered_input}'"
@@ -38,8 +36,8 @@ module Jekyll
       release = get_package_release(rendered_input)
 
       if release
-        if release['hasCss']
-          url = release['baseUrl'] + '/main.min.css'
+        if release['has_css']
+          url = release['base_url'] + '/main.min.css'
           "<link href='#{url}' rel='stylesheet' />"
         else
           ''
@@ -63,7 +61,7 @@ module Jekyll
       release = get_package_release(rendered_input)
 
       if release
-        release['baseUrl']
+        release['base_url']
       else
         puts "Could not identify release by '#{rendered_input}'"
         ''
@@ -77,7 +75,6 @@ Liquid::Template.register_tag('package_js_tag', Jekyll::PackageJsTag)
 Liquid::Template.register_tag('package_css_tag', Jekyll::PackageCssTag)
 Liquid::Template.register_tag('package_baseurl', Jekyll::PackageBaseUrl)
 
-
 def get_package_release(arg_str)
   if not $cache[arg_str]
     $cache[arg_str] = query_package_release(arg_str)
@@ -89,25 +86,25 @@ def get_package_release(arg_str)
 end
 
 def query_package_release(arg_str)
-  if $can_query_package_release
-    json = `#{QUERY_PACKAGE_RELEASE} #{arg_str}`
-
-    if json
-      JSON.parse(json)
-    end
-  else
-    fabricate_package_release(arg_str)
-  end
-end
-
-def fabricate_package_release(arg_str)
   parts = arg_str.split(' ')
   package_name = parts[0]
-  semver = parts[1]
+  major_version = parts[1]
+
+  dir = "assets/v#{major_version}/node_modules/#{package_name}"
+  json_str = File.read("#{dir}/package.json")
+  json_data = JSON.parse(json_str)
+  version = json_data['version']
+  has_css = File.exist?("#{dir}/main.css")
+  base_url =
+    if ENV['JEKYLL_ENV'] === 'production'
+    then "https://unpkg.com/#{package_name}@#{version}"
+    else "/#{dir}" # TODO: use site.baseurl
+    end
+
   {
     'name' => package_name,
-    'version' => semver,
-    'baseUrl' => "https://unpkg.com/@fullcalendar/#{package_name}@#{semver}",
-    'hasCss' => true
+    'version' => version,
+    'base_url' => base_url,
+    'has_css' => has_css
   }
 end

@@ -26,20 +26,20 @@
   </style>
 {% endunless %}
 
-{% package_css_tag core 4 %}
+{% package_css_tag @fullcalendar/core 4 %}
 
 {% for plugin_name in page.plugins %}
-  {% package_css_tag {{ plugin_name }} 4 %}
+  {% package_css_tag @fullcalendar/{{ plugin_name }} 4 %}
 {% endfor %}
 
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
 
-{% package_js_tag core 4 %}
+{% package_js_tag @fullcalendar/core 4 %}
 
 {% if page.needs_locales %}
-  <script src='{% package_baseurl core 4 %}/locales-all.js'></script>
+  <script src='{% package_baseurl @fullcalendar/core 4 %}/locales-all.js'></script>
 {% endif %}
 
 {% for plugin_name in page.plugins %}
-  {% package_js_tag {{ plugin_name }} 4 %}
+  {% package_js_tag @fullcalendar/{{ plugin_name }} 4 %}
 {% endfor %}

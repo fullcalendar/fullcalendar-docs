@@ -13,27 +13,27 @@
 
 <link href='{{ site.baseurl }}/assets/demo-to-codepen.css' rel='stylesheet' />
 
-<link href='{% package_baseurl fullcalendar 3 %}/fullcalendar.min.css' rel='stylesheet' />
-<link href='{% package_baseurl fullcalendar 3 %}/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='{% package_baseurl fullcalendar 3 %}/dist/fullcalendar.min.css' rel='stylesheet' />
+<link href='{% package_baseurl fullcalendar 3 %}/dist/fullcalendar.print.css' rel='stylesheet' media='print' />
 
 {% if page.needs_scheduler %}
-  <link href='{% package_baseurl fullcalendar-scheduler 1 %}/scheduler.min.css' rel='stylesheet' />
+  <link href='{% package_baseurl fullcalendar-scheduler 3 %}/dist/scheduler.min.css' rel='stylesheet' />
 {% endif %}
 
-<script src='{% package_baseurl fullcalendar 3 %}/lib/moment.min.js'></script>
-<script src='{% package_baseurl fullcalendar 3 %}/lib/jquery.min.js'></script>
-<script src='{% package_baseurl fullcalendar 3 %}/fullcalendar.min.js'></script>
+<script src='{% package_baseurl moment 3 %}/min/moment.min.js'></script>
+<script src='{% package_baseurl jquery 3 %}/dist/jquery.min.js'></script>
+<script src='{% package_baseurl fullcalendar 3 %}/dist/fullcalendar.min.js'></script>
 
 {% if page.needs_locales %}
-  <script src='{% package_baseurl fullcalendar 3 %}/locale-all.js'></script>
+  <script src='{% package_baseurl fullcalendar 3 %}/dist/locale-all.js'></script>
 {% endif %}
 
 {% if page.needs_google_calendar %}
-  <script src='{% package_baseurl fullcalendar 3 %}/gcal.min.js'></script>
+  <script src='{% package_baseurl fullcalendar 3 %}/dist/gcal.min.js'></script>
 {% endif %}
 
 {% if page.needs_scheduler %}
-  <script src='{% package_baseurl fullcalendar-scheduler 1 %}/scheduler.min.js'></script>
+  <script src='{% package_baseurl fullcalendar-scheduler 3 %}/dist/scheduler.min.js'></script>
 {% endif %}
 
 <script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
