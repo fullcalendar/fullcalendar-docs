@@ -39,3 +39,7 @@ The color of background events can be manipulated by targeting the `fc-bgevent` 
 The spans of time *not* occupied by an event can be colored by setting the `rendering` property to `"inverse-background"`. Events that share the same `id` will be grouped together when this rendering happens.
 
 <img src='background-events-inverse.png' width='500' alt='inverse background example' />
+
+## Modifying Events
+
+The [editable](editable) property of a calendar determines whether the events on it can be modified. However, Background Events are not editable. They can not be *dragged* or *resized*.   
