@@ -169,6 +169,20 @@ A reference to the [Event Source](event-source-object) this event came from. If 
 </td>
 </tr>
 
+<tr>
+<th>resourceId</th>
+<td markdown='1'>
+String. The `id` of a [Resource](resource-object) that this event is associated with. (**requires premium**)
+</td>
+</tr>
+
+<tr>
+<th>resourceIds</th>
+<td markdown='1'>
+Array of strings. When an event is associated with multiple resources, each element of this array is the `id` of a [Resource](resource-object). (**requires premium**)
+</td>
+</tr>
+
 </table>
 
 All properties are read-only. If you want to modify them, use the various methods of the Event object, such as [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setDates](Event-setDates), etc.
