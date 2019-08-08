@@ -172,14 +172,14 @@ A reference to the [Event Source](event-source-object) this event came from. If 
 <tr>
 <th>resourceId</th>
 <td markdown='1'>
-String. The `id` of a [Resource](resource-object) that this event is associated with. (**requires premium**)
+String. The `id` of a [Resource](resource-object) that this event is associated with. (**[requires premium](premium)**)
 </td>
 </tr>
 
 <tr>
 <th>resourceIds</th>
 <td markdown='1'>
-Array of strings. When an event is associated with multiple resources, each element of this array is the `id` of a [Resource](resource-object). (**requires premium**)
+Array of strings. When an event is associated with multiple resources, each element of this array is the `id` of a [Resource](resource-object). (**[requires premium](premium)**)
 </td>
 </tr>
 
