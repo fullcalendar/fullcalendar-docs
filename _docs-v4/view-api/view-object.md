@@ -30,5 +30,4 @@ A View object contains information about a calendar view, such as title and date
     For example, in month view, this will be the day after the last day of the month (because it is exclusive).
     This value disregards hidden days.
 
-`visibleRange`
-:   A [visibleRange](visibleRange) object, that must have `start`/`end` properties that [parse into Dates](date-parsing).
+These properties of the View object can only be read. A [custom view with settings](custom-view-with-settings) is the way to set any of them.
