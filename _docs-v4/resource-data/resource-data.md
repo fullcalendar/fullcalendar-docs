@@ -29,4 +29,4 @@ demos:
   - addResource-demo
 ---
 
-How to get resources onto your calendar and how to manipulate event data thereafter.
+How to get resources onto your calendar and how to manipulate resource data thereafter.
