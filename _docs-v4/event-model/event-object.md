@@ -3,7 +3,7 @@ title: Event Object
 type: guide
 ---
 
-A standard JavaScript object that FullCalendar uses to store information about a calendar event. It is exposed in various places of the API such as [getEventById](Calendar-getEventById) and provides methods for dynamic manipulation. It was originally [parsed from a plain object](event-parsing).
+A JavaScript object that FullCalendar uses to store information about a calendar event. It is exposed in various places of the API such as [getEventById](Calendar-getEventById) and provides methods for dynamic manipulation. It was originally [parsed from a plain object](event-parsing).
 
 ```js
 var calendar = new Calendar(calendarEl, {
