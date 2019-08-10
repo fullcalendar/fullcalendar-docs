@@ -64,7 +64,7 @@ Something [date-parseable](date-parsing). When your event ends. If your event is
 <tr>
 <th>daysOfWeek</th>
 <td markdown='1'>
-Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for events that repeat on Sundays and Mondays. 
+Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for an event that repeats on Sundays and Mondays. 
 </td>
 </tr>
 
