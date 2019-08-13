@@ -4,7 +4,7 @@ type: guide
 excerpt_separator: <!--more-->
 ---
 
-A standard JavaScript object that FullCalendar uses to store information about a calendar event.<!--more--> Here are its properties:
+A plain JavaScript object that FullCalendar uses to store information about a calendar event.<!--more--> Here are its properties:
 
 
 <!-- TODO: get this out of a table! -->
