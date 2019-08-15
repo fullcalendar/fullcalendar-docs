@@ -14,8 +14,8 @@ If your calendar has only one view, you can set the visible range explicitly:
 var calendar = new Calendar(calendarEl, {
   defaultView: 'timeGrid',
   visibleRange: {
-    start: '2017-03-22',
-    end: '2017-03-25'
+    start: '2020-03-22',
+    end: '2020-03-25'
   }
 });
 ```
@@ -27,12 +27,36 @@ You can also specify a function that dynamically generates a range from the curr
 ```js
 var calendar = new Calendar(calendarEl, {
   defaultView: 'timeGrid',
-  visibleRange: function(currentDate) {
+  visibleRange: (currentDate) => {
+    // Generate a new date 1 day in the past from the current active date
+    var startDate = new Date(currentDate.valueOf());
+    startDate.setDate(startDate.getDate() - 1);
+  
+    // Format the date to YYYY-MM-DD
+    var start = '' +
+      startDate.getFullYear() +
+      '-' +
+      ('0' + (startDate.getMonth() + 1).toString()).slice(-2) +
+      '-' +
+      ('0' + startDate.getDate().toString()).slice(-2);
+
+    // Generate a new date 2 days in the future from the current active date
+    var endDate = new Date(currentDate.valueOf());
+    endDate.setDate(endDate.getDate() + 2);
+  
+    // Format the date to YYYY-MM-DD
+    var end = '' +
+      endDate.getFullYear() +
+      '-' +
+      ('0' + (endDate.getMonth() + 1).toString()).slice(-2) +
+      '-' +
+      ('0' + endDate.getDate().toString()).slice(-2);
+
     return {
-      start: currentDate.clone().subtract(1, 'days'),
-      end: currentDate.clone().add(3, 'days') // exclusive end, so 3
+      start:  start,
+      end:    end
     };
-  }
+  },
 });
 ```
 
@@ -43,10 +67,34 @@ var calendar = new Calendar(calendarEl, {
   defaultView: 'pastAndFutureView',
   views: {
     pastAndFutureView: {
-      visibleRange: function(currentDate) {
+      visibleRange: (currentDate) => {
+        // Generate a new date 1 day in the past from the current active date
+        var startDate = new Date(currentDate.valueOf());
+        startDate.setDate(startDate.getDate() - 1);
+  
+        // Format the date to YYYY-MM-DD
+        var start = '' +
+          startDate.getFullYear() +
+          '-' +
+          ('0' + (startDate.getMonth() + 1).toString()).slice(-2) +
+          '-' +
+          ('0' + startDate.getDate().toString()).slice(-2);
+
+        // Generate a new date 2 days in the future from the current active date
+        var endDate = new Date(currentDate.valueOf());
+        endDate.setDate(endDate.getDate() + 2);
+  
+        // Format the date to YYYY-MM-DD
+        var end = '' +
+          endDate.getFullYear() +
+          '-' +
+          ('0' + (endDate.getMonth() + 1).toString()).slice(-2) +
+          '-' +
+          ('0' + endDate.getDate().toString()).slice(-2);
+
         return {
-          start: currentDate.clone().subtract(1, 'days'),
-          end: currentDate.clone().add(3, 'days') // exclusive end, so 3
+          start:  start,
+          end:    end
         };
       }
     }
