@@ -22,20 +22,21 @@ var calendar = new Calendar(calendarEl, {
 
 The `visibleRange` object must have `start`/`end` properties that [parse into Dates](date-parsing). The `end` date is exclusive, just like all other places in the API.
 
-You can also specify a function that dynamically generates a range from the current date marker. The following example renders one day before the current date, and two days after:
+You can also specify a function that dynamically generates a range from the current date marker. The following example renders one day before the current view date, and two days after:
 
 ```js
 var calendar = new Calendar(calendarEl, {
   defaultView: 'timeGrid',
   visibleRange: function(currentDate) {
-    // Generate a new date for manipulating, based on the current date
+    // Generate a new date for manipulating in the next step
     var startDate = new Date(currentDate.valueOf());
     var endDate = new Date(currentDate.valueOf());
 
-    return {
-      start: startDate.setDate(startDate.getDate() - 1), // One day in the past
-      end: endDate.setDate(endDate.getDate() + 2) // Two days in the future
-    };
+    // Adjust the start & end dates, respectively
+    startDate.setDate(startDate.getDate() - 1); // One day in the past
+    endDate.setDate(endDate.getDate() + 2); // Two days into the future
+
+    return { start: startDate, end: endDate };
   }
 });
 ```
@@ -48,14 +49,15 @@ var calendar = new Calendar(calendarEl, {
   views: {
     pastAndFutureView: {
       visibleRange: function(currentDate) {
-        // Generate a new date for manipulating, based on the current date
+        // Generate a new date for manipulating in the next step
         var startDate = new Date(currentDate.valueOf());
         var endDate = new Date(currentDate.valueOf());
 
-        return {
-          start: startDate.setDate(startDate.getDate() - 1), // One day in the past
-          end: endDate.setDate(endDate.getDate() + 2) // Two days in the future
-        };
+        // Adjust the start & end dates, respectively
+        startDate.setDate(startDate.getDate() - 1); // One day in the past
+        endDate.setDate(endDate.getDate() + 2); // Two days into the future
+
+        return { start: startDate, end: endDate };
       }
     }
   }
