@@ -33,8 +33,8 @@ var calendar = new Calendar(calendarEl, {
     var endDate = new Date(currentDate.valueOf());
 
     return {
-      start:  startDate.setDate(startDate.getDate() - 1), // One day in the past
-      end:    endDate.setDate(endDate.getDate() + 2) // Two days in the future
+      start: startDate.setDate(startDate.getDate() - 1), // One day in the past
+      end: endDate.setDate(endDate.getDate() + 2) // Two days in the future
     };
   }
 });
@@ -53,8 +53,8 @@ var calendar = new Calendar(calendarEl, {
         var endDate = new Date(currentDate.valueOf());
 
         return {
-          start:  startDate.setDate(startDate.getDate() - 1), // One day in the past
-          end:    endDate.setDate(endDate.getDate() + 2) // Two days in the future
+          start: startDate.setDate(startDate.getDate() - 1), // One day in the past
+          end: endDate.setDate(endDate.getDate() + 2) // Two days in the future
         };
       }
     }
