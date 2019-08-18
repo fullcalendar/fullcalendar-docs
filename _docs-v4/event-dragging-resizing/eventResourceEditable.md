@@ -1,5 +1,6 @@
 ---
 title: eventResourceEditable
+is_premium: true
 ---
 
 Determines whether the user can drag events between resources.
