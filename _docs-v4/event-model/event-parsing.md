@@ -229,7 +229,27 @@ Every other non-standard prop will be transferred over to the `extendedProps` ha
 
 </table>
 
+## Events and Dates
 
-## Inferring `allDay`
+There are 3 date-related properties of events to highlight:
 
-If your event object does not explicitly define an `allDay` value, FullCalendar will do its best to guess. It will look at the `start` and `end` values of your supplied event, and if both are ISO8601 strings in the format `2018-09-01` without time parts, it will infer `allDay` as `true`.
+### `allDay`
+
+If an event object does not explicitly define an `allDay` value, FullCalendar will do its best to guess whether it is an all-day event or not. It will look at the `start` and `end` values of your supplied event, and if, for example, both are ISO8601 strings in the format `2018-09-01` without time parts, it will infer `allDay` as `true`. If the time parts of only `start` or `end` is provided, FullCalendar assumes that `allDay` is `false`.
+
+### `start`
+
+As defined above, this is the date when an event begins. In other words, the event starts from this given date value and continues onwards. This value specifies the **inclusive** start of the event. In effect, if `allDay` is not explicitly set to `true` and `start` is `2018-09-01`, internally, this is recognised as `2018-09-01T00:00:00`.   
+
+### `end`
+
+As defined above, this is the date when an event finishes. In other words, the event continues up to this cut-off point in time. This value specifies the **exclusive** end of the event. Since the event is not expected to continue beyond the given `end` date it may also be described as non-inclusive. 
+
+Again, if `allDay` is not explicitly set to `true` and `end` is `2018-09-07`, internally this is recognised as `2018-09-07T00:00:00`. It is that point in time, at the final part of `2018-09-06` and beginning of `2018-09-07`. Also, this may be interpreted as `2018-09-06T23:59:59` or `2018-09-07T00:00:00`.
+
+Whether the `start` or `end` dates should be **inclusive** or **exclusive** is discussed in the [iCalendar Specifications (RFC 5545)](https://icalendar.org/iCalendar-RFC-5545/3-6-1-event-component.html). In the [Google Calendar API](https://developers.google.com/calendar/v3/reference/events/list) documentation, this is expressed in a similar way:
+
+- timeMin (equivalent to `start`) - Lower bound (exclusive) for an event's end time to filter by.
+- timeMax (equivalent to `end`) - Upper bound (exclusive) for an event's start time to filter by. 
+
+In summary, `start` date is **inclusive** while `end` date is **exclusive**. In order to avoid inconsistencies, applications should consider passing [ISO8601 strings](https://en.wikipedia.org/wiki/ISO_8601) with datetime values for `start` and `end` dates to FullCalendar, if `allDay` is `false`.
