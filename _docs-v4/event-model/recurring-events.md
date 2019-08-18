@@ -28,21 +28,21 @@ The days of the week this event repeats. An array of integers. Each integer repr
 <tr>
 <th>startTime</th>
 <td markdown='1'>
-What time-of-day this event starts. Something that will [parse into a Duration](duration-object). If defined, `allDay:false` will be assumed. Otherwise, `allDay:true` will be assumed.
+The time of day this event starts. Something that will [parse into a Duration](duration-object). If defined, `allDay:false` will be assumed. Otherwise, `allDay:true` is assumed.
 </td>
 </tr>
 
 <tr>
 <th>endTime</th>
 <td markdown='1'>
-What time-of-day this event ends. Something that will [parse into a Duration](duration-object). If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
+The time of day this event ends. Something that will [parse into a Duration](duration-object). If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
 </td>
 </tr>
 
 <tr>
 <th>startRecur</th>
 <td markdown='1'>
-When recurrences of this event begin. Something that will [parse into a Date](date-parsing). If not specified, recurrences will extend infinitely into the past.
+When recurrences of this event start. Something that will [parse into a Date](date-parsing). If not specified, recurrences will extend infinitely into the past.
 </td>
 </tr>
 
@@ -51,7 +51,7 @@ When recurrences of this event begin. Something that will [parse into a Date](da
 <td markdown='1'>
 When recurrences of this event end. Something that will [parse into a Date](date-parsing). If not specified, recurrences will extend infinitely into the future.
 
-**This value is exclusive! I repeat, this value is exclusive!!!** Just like every other end-date in the API. For all-day recurring events, make the `endRecur` the day **after** you want your last recurrence.
+**Note: This value is exclusive.** Just like every other end-date in the API. For all-day recurring events, make the `endRecur` the day **after** you want your last recurrence.
 </td>
 </tr>
 

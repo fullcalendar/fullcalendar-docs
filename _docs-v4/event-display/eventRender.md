@@ -89,3 +89,7 @@ var calendar = new Calendar(calendarEl, {
 Note that `description` is a non-standard [Event Object](event-object) field, which is allowed.
 
 [See a live demo with Tooltip.js &raquo;](event-tooltip-demo)
+
+A single event can also have multiple elements. This can be seen in the case of a `timeGridWeek` event spanning multiple columns, where each event “segment” (individual span of time after slicing) is rendered with individual elements. DOM manipulation is allowed on each element in the event instead of just the first element.
+
+A single registered callback will be triggered for each segment of the event. In other words, an event spanning two columns will trigger two callbacks, with three columns triggering three callbacks, and so forth.

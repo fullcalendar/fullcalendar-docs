@@ -56,3 +56,7 @@ The current [View Object](view-object).
 </tr>
 
 </table>
+
+In a similar way to [eventRender](eventRender), when a single event has multiple elements, DOM manipulation is allowed on each element in the event. For example, if a `timeGridWeek` event spans multiple columns, each event “segment” (individual span of time after slicing) is rendered with individual elements.
+
+The `eventPositioned` callback is triggered for each segment of the event. In other words, an event spanning two columns will trigger two callbacks, with three columns triggering three callbacks, and so forth.

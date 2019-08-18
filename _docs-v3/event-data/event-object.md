@@ -4,7 +4,7 @@ type: guide
 excerpt_separator: <!--more-->
 ---
 
-A standard JavaScript object that FullCalendar uses to store information about a calendar event.<!--more--> Here are its properties:
+A plain JavaScript object that FullCalendar uses to store information about a calendar event.<!--more--> Here are its properties:
 
 
 <!-- TODO: get this out of a table! -->
@@ -231,6 +231,24 @@ textColor
 <td>
 Sets an event's text color just like
 the calendar-wide <a href='eventTextColor'>eventTextColor</a> option.
+</td>
+</tr>
+<!-- ------------------- -->
+<tr>
+<th>
+resourceId
+</th>
+<td>
+String. The <code>id</code> of a <a href='resource-object'>Resource</a> that this event is associated with. (<strong><a href='/purchase'>requires premium</a></strong>)
+</td>
+</tr>
+<!-- ------------------- -->
+<tr>
+<th>
+resourceIds
+</th>
+<td>
+Array of strings. When an event is associated with multiple resources, each element of this array is the <code>id</code> of a <a href='resource-object'>Resource</a>. (<strong><a href='/purchase'>requires premium</a></strong>)
 </td>
 </tr>
 </table>

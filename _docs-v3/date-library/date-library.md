@@ -5,6 +5,7 @@ children:
   - moment
   - moment-duration
   - date-formatting-string
+  - defaultRangeSeparator
   - formatRange
 ---
 

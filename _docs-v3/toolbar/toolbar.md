@@ -4,6 +4,7 @@ children:
   - header
   - footer
   - titleFormat
+  - titleRangeSeparator
   - buttonText
   - buttonIcons
   - customButtons

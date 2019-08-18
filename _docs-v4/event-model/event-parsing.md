@@ -57,43 +57,42 @@ Something [date-parseable](date-parsing). When your event begins. If your event 
 <td markdown='1'>
 Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour/minutes/seconds/ms will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
 
-**This value is exclusive! I repeat, this value is exclusive!!!**
-If you have an all-day event that has an `end` of `2018-09-03`, then it will appear to span through the 2nd of the month, but will end before the start of the 3rd of the month.
+**Note: This value is exclusive.** If you have an all-day event that has an `end` of `2018-09-03`, then it will span through the 2nd of the month and end before the start of the 3rd of the month.
 </td>
 </tr>
 
 <tr>
 <th>daysOfWeek</th>
 <td markdown='1'>
-For defining a [simple recurring event](recurring-events).
+Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for an event that repeats on Sundays and Mondays. 
 </td>
 </tr>
 
 <tr>
 <th>startTime</th>
 <td markdown='1'>
-For defining a [simple recurring event](recurring-events).
+ Something [duration-parseable](duration-object). (For defining a [simple recurring event](recurring-events)). The time of day the event starts.
 </td>
 </tr>
 
 <tr>
 <th>endTime</th>
 <td markdown='1'>
-For defining a [simple recurring event](recurring-events).
+Something [duration-parseable](duration-object). (For defining a [simple recurring event](recurring-events)). The time of day the event ends.
 </td>
 </tr>
 
 <tr>
 <th>startRecur</th>
 <td markdown='1'>
-For defining a [simple recurring event](recurring-events).
+Something [date-parseable](date-parsing). (For defining a [simple recurring event](recurring-events)). When recurrences of the event start.
 </td>
 </tr>
 
 <tr>
 <th>endRecur</th>
 <td markdown='1'>
-For defining a [simple recurring event](recurring-events).
+Something [date-parseable](date-parsing). (For defining a [simple recurring event](recurring-events)). When recurrences of the event end.
 </td>
 </tr>
 

@@ -79,11 +79,13 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 A callback function can be passed into a React component and it will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date:
 
 ```jsx
+import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
+
 export default class DemoApp extends React.Component {
 
   render() {
     return (
-      <FullCalendar dateClick={this.handleDateClick} plugins={[ dayGridPlugin ]} />
+      <FullCalendar dateClick={this.handleDateClick} plugins={[ dayGridPlugin, interactionPlugin ]} />
     )
   }
 
