@@ -20,7 +20,7 @@ If `"auto"` is specified, the view's contents will assume a natural height and n
 Example usage of `contentHeight`:
 
 ```js
-var calendar = new Calendar(calendarEl, {
+var calendar = new FullCalendar.Calendar(calendarEl, {
   contentHeight: 600
 });
 ```
@@ -30,5 +30,5 @@ var calendar = new Calendar(calendarEl, {
 You can dynamically set a calendar's contentHeight after initialization:
 
 ```js
-calendar.option('contentHeight', 650);
+calendar.setOption('contentHeight', 650);
 ```
