@@ -13,23 +13,9 @@ Only affects timed events that appear on whole-days. Whole-day cells occur in [D
 For example, if `nextDayThreshold` were `'09:00'` (9am), the following event would appear to take up only one day:
 
 ```js
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-
   var calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin, timeGridPlugin ],
-    defaultView: 'dayGridMonth',
-    defaultDate: '2014-02-01',
+    // other options...
     nextDayThreshold: '09:00:00',
-    header: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay'
-    },
     events: [    
       {
         // Goes from 8pm to 2am the next day.
@@ -39,31 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     ]
   });
-
-  calendar.render();
-});
 ```
 
 Whereas, the following event would appear to take up two days:
 
 ```js
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-
   var calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin, timeGridPlugin ],
-    defaultView: 'dayGridMonth',
-    defaultDate: '2014-02-01',
+    // other options...
     nextDayThreshold: '09:00:00',
-    header: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay'
-    },
     events: [    
       {
         // Goes from 8pm to 10am the next day.
@@ -73,9 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     ]
   });
-
-  calendar.render();
-});
 ```
 
 It is important to stress that this `nextDayThreshold` option, set on the Calendar itself, is ignored when `allDay` is `true`. Generally, as discussed when defining an [Event object](event-parsing), `allDay`, `start` and `end` properties are sufficient for specifying an event that lasts an entire day. 
