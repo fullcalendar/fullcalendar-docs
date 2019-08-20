@@ -29,7 +29,7 @@ An event object has a number of properties and methods. **All properties are rea
 <tr>
 <th>id</th>
 <td markdown='1'>
-String. Will uniquely identify your event. Useful for [getEventById](Calendar-getEventById).
+String. A unique identifier of an event. Useful for [getEventById](Calendar-getEventById).
 </td>
 </tr>
 
@@ -50,16 +50,16 @@ Boolean (`true` or `false`). Determines if the event is shown in the "all-day" s
 <tr>
 <th>start</th>
 <td markdown='1'>
-[Date object](date-object) that obeys the current [timeZone](timeZone). When your event begins.
+[Date object](date-object) that obeys the current [timeZone](timeZone). When an event begins.
 </td>
 </tr>
 
 <tr>
 <th>end</th>
 <td markdown='1'>
-[Date object](date-object) that obeys the current [timeZone](timeZone). When your event ends. It could be `null` if you an end wasn't specified.
+[Date object](date-object) that obeys the current [timeZone](timeZone). When an event ends. It could be `null` if an end wasn't specified.
 
-**Note: This value is exclusive**. An event with the `end` of `2018-09-03` will appear to span through the 2nd of the month, but will end before the start of the 3rd of the month. See how events are [are parsed from a plain object](event-parsing) for further details. 
+**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through the 2nd of the month, but will end before the start of the 3rd of the month. See how events are [are parsed from a plain object](event-parsing) for further details. 
 
 </td>
 </tr>
