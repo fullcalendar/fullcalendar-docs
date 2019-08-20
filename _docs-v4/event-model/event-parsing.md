@@ -39,7 +39,7 @@ String or Integer. Events that share a `groupId` will be dragged and resized tog
 <tr>
 <th>allDay</th>
 <td markdown='1'>
-Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of the view, if applicable. Determines if time text is displayed in the event. If this value is not specified, it will be inferred by the `start`/`end`. See notes below.
+Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of the view, if applicable. Determines if time text is displayed in the event. If this value is not specified, it will be inferred by the `start` and `end` properties. See notes below.
 
 **Do not put quotes around this value**. That would make it a string, not a boolean.
 </td>
@@ -48,14 +48,14 @@ Boolean (`true` or `false`). Determines if the event is shown in the "all-day" s
 <tr>
 <th>start</th>
 <td markdown='1'>
-Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour/minutes/seconds/ms will be ignored.
+Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored.
 </td>
 </tr>
 
 <tr>
 <th>end</th>
 <td markdown='1'>
-Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour/minutes/seconds/ms will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
+Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
 
 **Note: This value is exclusive.** If you have an all-day event that has an `end` of `2018-09-03`, then it will span through the 2nd of the month and end before the start of the 3rd of the month.
 </td>
@@ -113,35 +113,35 @@ String. A URL that will be visited when this event is clicked by the user. For m
 <tr>
 <th><div style='white-space:nowrap'>className or</div> classNames</th>
 <td markdown='1'>
-A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
+String or Array. A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
 </td>
 </tr>
 
 <tr>
 <th>editable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [editable](editable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [editable](editable) option for this single event.
 </td>
 </tr>
 
 <tr>
 <th>startEditable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventStartEditable](eventStartEditable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [eventStartEditable](eventStartEditable) option for this single event.
 </td>
 </tr>
 
 <tr>
 <th>durationEditable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventDurationEditable](eventDurationEditable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [eventDurationEditable](eventDurationEditable) option for this single event.
 </td>
 </tr>
 
 <tr>
 <th>resourceEditable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
 Requires one of the [resource plugins](premium).
 </td>
 </tr>
@@ -149,7 +149,7 @@ Requires one of the [resource plugins](premium).
 <tr>
 <th>resourceId</th>
 <td markdown='1'>
-A string ID of a [Resource](resource-object).
+String. The string ID of a [Resource](resource-object).
 See [Associating Events with Resources](resources-and-events).
 Requires one of the [resource plugins](premium).
 </td>
@@ -158,7 +158,7 @@ Requires one of the [resource plugins](premium).
 <tr>
 <th>resourceIds</th>
 <td markdown='1'>
-An array of string IDs of [Resources](resource-object).
+Array. An array of string IDs of [Resources](resource-object).
 See [Associating Events with Resources](resources-and-events).
 Requires one of the [resource plugins](premium).
 </td>
@@ -174,7 +174,7 @@ Allows alternate rendering of the event, like background events. Can be empty, `
 <tr>
 <th>overlap</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventOverlap](eventOverlap) option for this single event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
+Boolean (`true` or `false`). Overrides the master [eventOverlap](eventOverlap) option for this single event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
 </td>
 </tr>
 
@@ -216,14 +216,14 @@ Sets an event's text color just like the calendar-wide [eventTextColor](eventTex
 <tr>
 <th>extendedProps</th>
 <td markdown='1'>
-A plain object of miscellaneous other properties you want to store. Will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). It is often useful to use these props in a custom [eventRender callback](eventRender).
+Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in a custom [eventRender callback](eventRender).
 </td>
 </tr>
 
 <tr>
-<th><em>any other prop!</em></th>
+<th><em>any other property!</em></th>
 <td markdown='1'>
-Every other non-standard prop will be transferred over to the `extendedProps` hash in the [Event Object](event-object). However, it is recommended to explicitly define these in the `extendedProps` hash.
+Every other non-standard property will be transferred over to the `extendedProps` hash in the [Event Object](event-object). However, it is recommended to explicitly define these in the `extendedProps` hash.
 </td>
 </tr>
 
