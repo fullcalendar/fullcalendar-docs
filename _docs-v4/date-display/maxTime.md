@@ -2,7 +2,7 @@
 title: maxTime
 ---
 
-Determines the last time slot that will be displayed for each day. Specified as an **exclusive** end time.
+Determines the last time slot that will be displayed for each day. In line with the discussion about the [Event object](event-parsing), it is important to stress that this should be specified as an **exclusive** end time.
 
 <div class='spec' markdown='1'>
 [Duration](duration-object), *default*: `"24:00:00"`
