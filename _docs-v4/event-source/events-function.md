@@ -26,7 +26,7 @@ A [Date](date-object) for the beginning of the range the calendar needs events f
 <td markdown='1'>
 A [Date](date-object) for the end of the range the calendar needs events for.
 
-**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through the 2nd of the month, but will end before the start of the 3rd of the month. See how events are [are parsed from a plain object](event-parsing) for further details. 
+**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through `2018-09-02`, but end before the start of `2018-09-03`. See how events are [are parsed from a plain object](event-parsing) for further details. 
 
 </td>
 </tr>
