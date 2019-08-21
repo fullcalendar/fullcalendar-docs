@@ -67,7 +67,7 @@ var calendar = new Calendar(calendarEl, {
 If you need to change the `visibleRange` after initialization, you can do that using the standard technique for [setting options dynamically](dynamic-options):
 
 ```js
-calendar.option('visibleRange', {
+calendar.setOption('visibleRange', {
   start: '2017-04-01',
   end: '2017-04-05'
 });
