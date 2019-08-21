@@ -57,7 +57,7 @@ Something [date-parseable](date-parsing). When your event begins. If your event 
 <td markdown='1'>
 Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
 
-**Note: This value is exclusive.** If you have an all-day event that has an `end` of `2018-09-03`, then it will span through the 2nd of the month and end before the start of the 3rd of the month.
+**Note: This value is exclusive.** For example, if you have an all-day event that has an `end` of `2018-09-03`, then it will span through the 2nd of the month and end before the start of the 3rd of the month.
 </td>
 </tr>
 
