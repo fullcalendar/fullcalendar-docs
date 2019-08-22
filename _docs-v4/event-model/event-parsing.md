@@ -39,7 +39,7 @@ String or Integer. Events that share a `groupId` will be dragged and resized tog
 <tr>
 <th>allDay</th>
 <td markdown='1'>
-Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of the view, if applicable. Determines if time text is displayed in the event. If this value is not specified, it will be inferred by the `start`/`end`. See notes below.
+Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of the view, if applicable. Determines if time text is displayed in the event. If this value is not specified, it will be inferred by the `start` and `end` properties. See notes below.
 
 **Do not put quotes around this value**. That would make it a string, not a boolean.
 </td>
@@ -48,16 +48,16 @@ Boolean (`true` or `false`). Determines if the event is shown in the "all-day" s
 <tr>
 <th>start</th>
 <td markdown='1'>
-Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour/minutes/seconds/ms will be ignored.
+Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored.
 </td>
 </tr>
 
 <tr>
 <th>end</th>
 <td markdown='1'>
-Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour/minutes/seconds/ms will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
+Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
 
-**Note: This value is exclusive.** If you have an all-day event that has an `end` of `2018-09-03`, then it will span through the 2nd of the month and end before the start of the 3rd of the month.
+**Note: This value is exclusive.** For example, if you have an all-day event that has an `end` of `2018-09-03`, then it will span through `2018-09-02` and end before the start of `2018-09-03`.
 </td>
 </tr>
 
@@ -113,35 +113,35 @@ String. A URL that will be visited when this event is clicked by the user. For m
 <tr>
 <th><div style='white-space:nowrap'>className or</div> classNames</th>
 <td markdown='1'>
-A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
+String or Array. A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
 </td>
 </tr>
 
 <tr>
 <th>editable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [editable](editable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [editable](editable) option for this single event.
 </td>
 </tr>
 
 <tr>
 <th>startEditable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventStartEditable](eventStartEditable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [eventStartEditable](eventStartEditable) option for this single event.
 </td>
 </tr>
 
 <tr>
 <th>durationEditable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventDurationEditable](eventDurationEditable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [eventDurationEditable](eventDurationEditable) option for this single event.
 </td>
 </tr>
 
 <tr>
 <th>resourceEditable</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
+Boolean (`true` or `false`). Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
 Requires one of the [resource plugins](premium).
 </td>
 </tr>
@@ -149,7 +149,7 @@ Requires one of the [resource plugins](premium).
 <tr>
 <th>resourceId</th>
 <td markdown='1'>
-A string ID of a [Resource](resource-object).
+String. The string ID of a [Resource](resource-object).
 See [Associating Events with Resources](resources-and-events).
 Requires one of the [resource plugins](premium).
 </td>
@@ -158,7 +158,7 @@ Requires one of the [resource plugins](premium).
 <tr>
 <th>resourceIds</th>
 <td markdown='1'>
-An array of string IDs of [Resources](resource-object).
+Array. An array of string IDs of [Resources](resource-object).
 See [Associating Events with Resources](resources-and-events).
 Requires one of the [resource plugins](premium).
 </td>
@@ -174,7 +174,7 @@ Allows alternate rendering of the event, like background events. Can be empty, `
 <tr>
 <th>overlap</th>
 <td markdown='1'>
-`true` or `false`. Overrides the master [eventOverlap](eventOverlap) option for this single event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
+Boolean (`true` or `false`). Overrides the master [eventOverlap](eventOverlap) option for this single event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
 </td>
 </tr>
 
@@ -216,20 +216,40 @@ Sets an event's text color just like the calendar-wide [eventTextColor](eventTex
 <tr>
 <th>extendedProps</th>
 <td markdown='1'>
-A plain object of miscellaneous other properties you want to store. Will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). It is often useful to use these props in a custom [eventRender callback](eventRender).
+Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in a custom [eventRender callback](eventRender).
 </td>
 </tr>
 
 <tr>
-<th><em>any other prop!</em></th>
+<th><em>any other property!</em></th>
 <td markdown='1'>
-Every other non-standard prop will be transferred over to the `extendedProps` hash in the [Event Object](event-object). However, it is recommended to explicitly define these in the `extendedProps` hash.
+Every other non-standard property will be transferred over to the `extendedProps` hash in the [Event Object](event-object). However, it is recommended to explicitly define these in the `extendedProps` hash.
 </td>
 </tr>
 
 </table>
 
+## Events and Dates
 
-## Inferring `allDay`
+There are 3 date-related properties of events to highlight:
 
-If your event object does not explicitly define an `allDay` value, FullCalendar will do its best to guess. It will look at the `start` and `end` values of your supplied event, and if both are ISO8601 strings in the format `2018-09-01` without time parts, it will infer `allDay` as `true`.
+### `allDay`
+
+If an event object does not explicitly define an `allDay` value, FullCalendar will do its best to guess whether it is an all-day event or not. It will look at the `start` and `end` values of your supplied event, and if, for example, both are ISO8601 strings in the format `2018-09-01` without time parts, it will infer `allDay` as `true`. If the time parts of only `start` or `end` is provided, FullCalendar assumes that `allDay` is `false`.
+
+### `start`
+
+As defined above, this is the date when an event begins. In other words, the event starts from this given date value and continues onwards. This value specifies the **inclusive** start of the event. In effect, if `allDay` is not explicitly set to `true` and `start` is `2018-09-01`, internally, this is recognised as `2018-09-01T00:00:00`.   
+
+### `end`
+
+As defined above, this is the date when an event finishes. In other words, the event continues up to this cut-off point in time. This value specifies the **exclusive** end of the event. Since the event is not expected to continue beyond the given `end` date it may also be described as non-inclusive. 
+
+Again, if `allDay` is not explicitly set to `true` and `end` is `2018-09-07`, internally this is recognised as `2018-09-07T00:00:00`. It is that point in time, at the final part of `2018-09-06` and beginning of `2018-09-07`. Also, this may be interpreted as `2018-09-06T23:59:59` or `2018-09-07T00:00:00`.
+
+Whether the `start` or `end` dates should be **inclusive** or **exclusive** is discussed in the [iCalendar Specifications (RFC 5545)](https://icalendar.org/iCalendar-RFC-5545/3-6-1-event-component.html). In the [Google Calendar API](https://developers.google.com/calendar/v3/reference/events/list) documentation, this is expressed in a similar way:
+
+- timeMin (equivalent to `start`) - Lower bound (exclusive) for an event's end time to filter by.
+- timeMax (equivalent to `end`) - Upper bound (exclusive) for an event's start time to filter by. 
+
+In summary, `start` date is **inclusive** while `end` date is **exclusive**. In order to avoid inconsistencies, applications should consider passing [ISO8601 strings](https://en.wikipedia.org/wiki/ISO_8601) with datetime values for `start` and `end` dates to FullCalendar, if `allDay` is `false`.

@@ -29,7 +29,7 @@ An event object has a number of properties and methods. **All properties are rea
 <tr>
 <th>id</th>
 <td markdown='1'>
-String. Will uniquely identify your event. Leveraged by [getEventById](Calendar-getEventById).
+String. A unique identifier of an event. Useful for [getEventById](Calendar-getEventById).
 </td>
 </tr>
 
@@ -43,24 +43,24 @@ String. Events that share a `groupId` will be dragged and resized together autom
 <tr>
 <th>allDay</th>
 <td markdown='1'>
-`true` or `false`. If the event is shown in the "all-day" section of the view if applicable. If the time text is displayed in the event.
+Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of relevant views. In addition, if `true` the time text is not displayed with the event.
 </td>
 </tr>
 
 <tr>
 <th>start</th>
 <td markdown='1'>
-[Date object](date-object) that obeys the current [timeZone](timeZone). When your event begins.
+[Date object](date-object) that obeys the current [timeZone](timeZone). When an event begins.
 </td>
 </tr>
 
 <tr>
 <th>end</th>
 <td markdown='1'>
-[Date object](date-object) that obeys the current [timeZone](timeZone). When your event ends. Could be `null` if you never specified an end.
+[Date object](date-object) that obeys the current [timeZone](timeZone). When an event ends. It could be `null` if an end wasn't specified.
 
-**This value is exclusive! I repeat, this value is exclusive!!!**
-An event with the `end` of `2018-09-03` will appear to span through the 2nd of the month, but will end before the start of the 3rd of the month.
+**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through `2018-09-02` but end before the start of `2018-09-03`. See how events are [are parsed from a plain object](event-parsing) for further details. 
+
 </td>
 </tr>
 
@@ -81,35 +81,35 @@ String. A URL that will be visited when this event is clicked by the user. For m
 <tr>
 <th>classNames</th>
 <td markdown='1'>
-Array of className strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
+An array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
 </td>
 </tr>
 
 <tr>
 <th>editable</th>
 <td markdown='1'>
-`true`, `false`, or `null`. The value overriding the [editable](editable) setting for this specific event.
+Boolean (`true` or `false`) or `null`. The value overriding the [editable](editable) setting for this specific event.
 </td>
 </tr>
 
 <tr>
 <th>startEditable</th>
 <td markdown='1'>
-`true`, `false`, or `null`. The value overriding the [eventStartEditable](eventStartEditable) setting for this specific event.
+Boolean (`true` or `false`) or `null`. The value overriding the [eventStartEditable](eventStartEditable) setting for this specific event.
 </td>
 </tr>
 
 <tr>
 <th>durationEditable</th>
 <td markdown='1'>
-`true`, `false`, or `null`. The value overriding the [eventDurationEditable](eventDurationEditable) setting for this specific event.
+Boolean (`true` or `false`) or `null`. The value overriding the [eventDurationEditable](eventDurationEditable) setting for this specific event.
 </td>
 </tr>
 
 <tr>
 <th>resourceEditable</th>
 <td markdown='1'>
-`true`, `false`, or `null`. The value overriding the [eventResourceEditable](eventResourceEditable) setting for this specific event.
+Boolean (`true` or `false`) or `null`. The value overriding the [eventResourceEditable](eventResourceEditable) setting for this specific event.
 </td>
 </tr>
 
@@ -172,3 +172,5 @@ A reference to the [Event Source](event-source-object) this event came from. If 
 </table>
 
 All properties are read-only. If you want to modify them, use the various methods of the Event object, such as [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setDates](Event-setDates), etc.
+
+The expected values for `allDay`, `start` and `end` have been discussed in detail on the subject of [parsing events](event-parsing). It is vital to understand how the `end` date is **exclusive** throughout the FullCalendar API.     
