@@ -3,20 +3,22 @@ title: Calendar::select
 type: method
 ---
 
-A method for programmatically selecting a period of time.
+A method for programmatically selecting a period of time. It accepts two different signatures:
 
-<div class='spec' markdown='1'>
-calendar.select( *start*, [ *end* ] )<br>
--or-<br>
-calendar.select( { *start*, *end*, *allDay*, *resourceId* } )
-</div>
+```js
+calendar.select( *start*, [ *end* ] )
+```
 
-The method has two different signatures: one that accepts individual `start`/`end` arguments and another that accepts an object with keys.
+The first method accepts individual `start` and `end` parameters, with the `end` being optional.
 
-`start` and `end` are [parsable Dates](date-parsing).
 
-The `end` parameter is exclusive, meaning if you want to your last full-day selection to be Thursday, then specify Friday.
+```js
+calendar.select( { *start*, *end* , *allDay* , *resourceId* } )
+```
 
-The `end` parameter is optional.
+The second method accepts an object with `start`, `end`, `allDay` and `resourceId` keys. Only the `start` key is required.
 
-If one of the [resource plugins](premium) are installed, the `resourceId` argument can be a [Resource Object's](resource-object) ID that you would like to select. If the current view supports resources but this value is not specified, the given range is selected across all resources.
+The values of `start` and `end` are [parsable dates](date-parsing). In line with the discussion about the [Event object](event-parsing), it is important to stress that the `end` date parameter (or key) is **exclusive**. In practice, this might mean that if you want to your last full-day selection to be Thursday, then specify Friday.
+
+If a [resource plugin](premium) is installed, the `resourceId` key can be the ID of the [Resource object](resource-object) you would like to select. If the current view supports resources but this value is not specified, the given range is selected across all resources.
+
