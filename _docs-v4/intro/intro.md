@@ -21,4 +21,4 @@ related:
   - view-api
 ---
 
-How to get FullCalendar's code, initialize a calendar, and other basic principals.
+How to get FullCalendar's code, initialize a calendar, and other basic principles.
