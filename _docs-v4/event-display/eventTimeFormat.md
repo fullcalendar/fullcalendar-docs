@@ -61,8 +61,8 @@ The `eventTimeFormat` object also accepts an hour12 property, a boolean like mer
 
 ```js
 var calendar = new Calendar(calendarEl, {
-// other options ...
-eventTimeFormat: { // like '14:30:00'
+  // other options ...
+  eventTimeFormat: { // like '14:30:00'
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
