@@ -73,6 +73,13 @@ For use with the [resource plugins](premium) only.
 </td>
 </tr>
 
+<tr>
+<th>el</th>
+<td markdown='1'>
+The HTML element that was dragged.
+</td>
+</tr>
+
 </table>
 
 eventDrop *does not* get called when an external event lands on the calendar. [eventReceive](eventReceive) is called instead.
