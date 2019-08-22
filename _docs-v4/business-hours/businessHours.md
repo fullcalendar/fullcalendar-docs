@@ -5,7 +5,7 @@ title: businessHours
 Emphasizes certain time slots on the calendar. By default, Monday-Friday, 9am-5pm.
 
 <div class='spec' markdown='1'>
-boolean / object. *default*: `false`
+boolean / object / array. *default*: `false`
 </div>
 
 If `true`, the default business hours will be emphasized ([view live demo](businessHours-demo)). If `false` (the default), there will be no emphasis.
@@ -22,7 +22,7 @@ businessHours: {
 }
 ```
 
-You may also break your business hour declaration into parts for additional control:
+You may also break your business hour declaration into parts, in an array of objects, for additional control:
 
 ```js
 businessHours: [ // specify an array instead

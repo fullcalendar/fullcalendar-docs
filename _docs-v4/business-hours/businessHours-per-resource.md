@@ -4,7 +4,7 @@ is_premium: true
 excerpt_separator: <!--more-->
 ---
 
-The [main `businessHours` settings](businessHours) can be applied more granularly to individual resources via the `businessHours` property on the [Resource input](resource-parsing)<!--more--> like so:
+The main [`businessHours`](businessHours) settings can be applied more granularly to individual resources via the `businessHours` property on the [Resource input](resource-parsing)<!--more--> like so:
 
 ```js
 var calendar = new Calendar(calendarEl, {

@@ -37,42 +37,42 @@ function( *info* )
 <tr>
 <th>date</th>
 <td markdown='1'>
-the [Date](date-object) date of the day
+The [Date object](date-object) representation of the day
 </td>
 </tr>
 
 <tr>
 <th>dayEl</th>
 <td markdown='1'>
-the HTML element for the day cell
+The HTML element for the day cell.
 </td>
 </tr>
 
 <tr>
 <th>moreEl</th>
 <td markdown='1'>
-the HTML element for the "more" link
+The HTML element for the "more" link.
 </td>
 </tr>
 
 <tr>
 <th>segs</th>
 <td markdown='1'>
-array of all event "segment" objects for the given day. More information below.
+An array of all event "segment" objects for the given day. More information below.
 </td>
 </tr>
 
 <tr>
 <th>hiddenSegs</th>
 <td markdown='1'>
-array of only the segment objects that were not displayed prior
+An array of only the segment objects that were not displayed prior.
 </td>
 </tr>
 
 <tr>
 <th>jsEvent</th>
 <td markdown='1'>
-holds the native JavaScript event for the click
+The native JavaScript event for the click.
 </td>
 </tr>
 
@@ -88,35 +88,35 @@ A callback function can return a string value, like `"day"`, that will be proces
 <tr>
 <th>event</th>
 <td markdown='1'>
-the [Event Object](event-object)
+The [Event Object](event-object)
 </td>
 </tr>
 
 <tr>
 <th>start</th>
 <td markdown='1'>
-the [Date](date-object) for when this stretch of the event begins
+The [Date](date-object) for when this stretch of the event begins
 </td>
 </tr>
 
 <tr>
 <th>end</th>
 <td markdown='1'>
-the [Date](date-object) for when this stretch of the event ends (exclusive)
+The [Date](date-object) for when this stretch of the event ends. In line with the discussion about the [Event object](event-parsing), it is important to stress that the `end` date is **exclusive**.
 </td>
 </tr>
 
 <tr>
 <th>isStart</th>
 <td markdown='1'>
-boolean if this is chronologically the first segment for the event
+Boolean (`true` or `false`). Determines whether this is, chronologically, the first segment for the event.
 </td>
 </tr>
 
 <tr>
 <th>isEnd</th>
 <td markdown='1'>
-boolean if this is chronologically the last segment for the event
+Boolean (`true` or `false`). Determines whether this is, chronologically, the last segment for the event.
 </td>
 </tr>
 

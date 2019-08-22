@@ -23,11 +23,13 @@ eventAllow: function(dropLocation, draggedEvent) {
 }
 ```
 
-The `dropLocation` object will have the following properties:
+The `dropLocation` object has the following properties:
 
 - `start` (a [Date](date-object))
-- `end` exclusive end date/time (a [Date](date-object))
-- `resourceId` if you are using a [Resource View](premium)
+- `end` (a [Date](date-object))
+- `resourceId` (if you are using a [Resource View](premium))
+
+In line with the discussion about the [Event object](event-parsing), it is important to stress that the `end` date property is **exclusive**.
 
 
 ## Resources

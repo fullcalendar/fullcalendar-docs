@@ -66,14 +66,15 @@ A [Date](date-object) for the beginning of the range the calendar needs events f
 <td markdown='1'>
 A [Date](date-object) for the end of the range the calendar needs events for.
 
-**It is an exclusive value.**
+**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through `2018-09-02`, but end before the start of `2018-09-03`. See how events are [are parsed from a plain object](event-parsing) for further details.
+
 </td>
 </tr>
 
 <tr>
 <th>startStr</th>
 <td markdown='1'>
-An ISO8601 string representation of the start date. Will have a time zone offset according to the calendar's [timeZone](timeZone) like `2018-09-01T12:30:00-05:00`.
+An [ISO8601 string](https://en.wikipedia.org/wiki/ISO_8601) representation of the start date. Will have a time zone offset according to the calendar's [timeZone](timeZone) like `2018-09-01T12:30:00-05:00`.
 </td>
 </tr>
 
