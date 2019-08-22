@@ -55,6 +55,20 @@ The current [View Object](view-object).
 </td>
 </tr>
 
+<tr>
+<th>el</th>
+<td markdown='1'>
+The HTML element that was being dragged.
+</td>
+</tr>
+
+<tr>
+<th>jsEvent</th>
+<td markdown='1'>
+The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
 </table>
 
 Here is an example demonstrating most of these properties:
