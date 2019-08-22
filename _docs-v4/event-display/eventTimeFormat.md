@@ -36,7 +36,7 @@ As noted above, each view has a specific default. Get fine-tuned control with [V
 
 Time-text will only be displayed for [Event Objects](event-object) that have `allDay` equal to `false`.
 
-Here is an example of displaying all events in a 24-hour format:
+Here is an example of displaying all events in a 24-hour format without meridiem, i.e. AM or PM::
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -51,7 +51,22 @@ var calendar = new Calendar(calendarEl, {
   eventTimeFormat: { // like '14:30:00'
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit'
+    second: '2-digit',
+    meridiem: false
+  }
+});
+```
+
+The `eventTimeFormat` object also accepts an hour12 property, a boolean like meridiem:
+
+```js
+var calendar = new Calendar(calendarEl, {
+// other options ...
+eventTimeFormat: { // like '14:30:00'
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
   }
 });
 ```
