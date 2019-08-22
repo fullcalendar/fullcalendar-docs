@@ -55,6 +55,13 @@ The current [View Object](view-object).
 </td>
 </tr>
 
+<tr>
+<th>dateStr</th>
+<td markdown='1'>
+The [ISO8601 string](https://en.wikipedia.org/wiki/ISO_8601) representation of where the draggable was dropped.
+</td>
+</tr>
+
 </table>
 
 If you need an Event object, see [eventReceive](eventReceive) instead.
