@@ -257,3 +257,9 @@ Array of strings. When an event is associated with multiple resources, each elem
 ## Non-standard Fields
 
 In addition to the fields above, you may also include your own non-standard fields in each Event Object. FullCalendar will not modify or delete these fields. For example, developers often include a `description` field for use in callbacks such as [eventRender](eventRender).
+
+## Events and Dates
+
+To summarise, the value of `start` is the **inclusive** start date of the event. The event continues up to the specified `end` date. This value is **exclusive** because it is the cut-off point of the event. FullCalendar handles these dates in the same way as discussed in the [iCalendar Specifications (RFC 5545)](https://icalendar.org/iCalendar-RFC-5545/3-6-1-event-component.html) and [Google Calendar API](https://developers.google.com/calendar/v3/reference/events/list) documentation.
+
+Furthermore, there is a [`nextDayThreshold`](nextDayThreshold) option which can be set on the calendar itself. It is ignored when `allDay` is `true`. However, when `allDay` is `false`, the `nextDayThreshold` property allows an override of the default behaviour of exclusive end dates by setting the cut-off point for the event to be rendered on that date. The default is 09:00:00.
