@@ -174,3 +174,30 @@ A reference to the [Event Source](event-source-object) this event came from. If 
 All properties are read-only. If you want to modify them, use the various methods of the Event object, such as [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setDates](Event-setDates), etc.
 
 The expected values for `allDay`, `start` and `end` have been discussed in detail on the subject of [parsing events](event-parsing). It is vital to understand how the `end` date is **exclusive** throughout the FullCalendar API.     
+
+
+## Non-standard Fields
+
+In addition to the fields above, you may also include your own non-standard fields in each Event object. FullCalendar will not modify or delete these fields. For example, developers often include a `description` field for use in callbacks such as [eventRender](eventRender). Any non-standard properites are moved into the `extendedProps` hash during [event parsing](event-parsing).
+
+```js
+var calendar = new Calendar(calendarEl, {
+  events: [
+    {
+      title: 'BCH237',
+      start: '2019-08-12T10:30:00',
+      end: '2019-08-12T11:30:00',
+      extendedProps: {
+        department: 'BioChemistry'
+      },
+      description: 'Lecture'
+    }
+    // more events ...
+  ],
+  eventRender: function (info) {
+    console.log(info.event.extendedProps);
+    // {description: "Lecture", department: "BioChemistry"}
+  }
+  
+});
+```
