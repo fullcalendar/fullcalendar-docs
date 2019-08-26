@@ -19,7 +19,7 @@ The function can also return a brand new element that will be used for rendering
 
 The function can also return `false` to completely cancel the rendering of the event.
 
-`eventRender` is a great way to attach other jQuery plugins to event elements, such as a [qTip](http://craigsworks.com/projects/qtip/) tooltip effect:
+`eventRender` is a great way to attach other jQuery plugins to event elements, such as a [Tooltip.js](https://popper.js.org/tooltip-examples.html) tooltip effect:
 
 ```js
 $('#calendar').fullCalendar({
@@ -31,15 +31,21 @@ $('#calendar').fullCalendar({
     }
     // more events here
   ],
-  eventRender: function(event, element) {
-    element.qtip({
-      content: event.description
+  eventRender: function(eventObj, $el) {
+    $el.popover({
+      title: eventObj.title,
+      content: eventObj.description,
+      trigger: 'hover',
+      placement: 'top',
+      container: 'body'
     });
   }
 });
 ```
 
 Note that `description` is a non-standard Event Object field, which is allowed.
+
+[See a live demo with Tooltip.js &raquo;](event-tooltip-demo)
 
 A single event can also have multiple elements. This can be seen in the case of an agendaWeek event spanning multiple columns, where each event “segment” (individual span of time after slicing) is rendered with individual elements. DOM manipulation is allowed on each element in the event instead of just the first element.
 
