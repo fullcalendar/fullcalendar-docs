@@ -85,7 +85,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         // Change color of dot marker.
         elt.setAttribute("style", "background-color:white;");
         // Change background color of row and text color.
-        info.el.style.cssText = "background-color:red; color:white;";        
+        info.el.style.cssText = "background-color:red; color:white;";  
+        // To change only the background color of row.
+        // info.el.style.backgroundColor = 'grey';      
       }               
     }
   }
