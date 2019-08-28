@@ -14,23 +14,9 @@ function( *eventResizeInfo* ) { }
 <table>
 
 <tr>
-<th>event</th>
+<th>el</th>
 <td markdown='1'>
-An [Event Object](event-object) that holds information about the event (date, title, etc) **after** the resize.
-</td>
-</tr>
-
-<tr>
-<th>prevEvent</th>
-<td markdown='1'>
-An [Event Object](event-object) that holds information about the event **before** the resize.
-</td>
-</tr>
-
-<tr>
-<th>startDelta</th>
-<td markdown='1'>
-A [Duration Object](duration-object) that represents the amount of time the event's **start date** was moved by.
+The HTML element that was being dragged.
 </td>
 </tr>
 
@@ -42,9 +28,37 @@ A [Duration Object](duration-object) that represents the amount of time the even
 </tr>
 
 <tr>
+<th>event</th>
+<td markdown='1'>
+An [Event Object](event-object) that holds information about the event (date, title, etc) **after** the resize.
+</td>
+</tr>
+
+<tr>
+<th>jsEvent</th>
+<td markdown='1'>
+The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
+<tr>
+<th>prevEvent</th>
+<td markdown='1'>
+An [Event Object](event-object) that holds information about the event **before** the resize.
+</td>
+</tr>
+
+<tr>
 <th>revert</th>
 <td markdown='1'>
 A function that, if called, reverts the event's start/end date to the values before the drag. This is useful if an ajax call should fail.
+</td>
+</tr>
+
+<tr>
+<th>startDelta</th>
+<td markdown='1'>
+A [Duration Object](duration-object) that represents the amount of time the event's **start date** was moved by.
 </td>
 </tr>
 
