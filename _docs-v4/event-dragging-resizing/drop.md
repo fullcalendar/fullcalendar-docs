@@ -14,9 +14,9 @@ function( *dropInfo* ) { }
 <table>
 
 <tr>
-<th>draggedEl</th>
+<th>allDay</th>
 <td markdown='1'>
-The HTML element that was being dragged.
+`true` or `false` whether dropped on one of the all-day cells.
 </td>
 </tr>
 
@@ -28,16 +28,16 @@ The [Date](date-object) of where the draggable was dropped.
 </tr>
 
 <tr>
-<th>resource</th>
+<th>dateStr</th>
 <td markdown='1'>
-If the current view is a resource-view, the [Resource Object](resource-object) the element was dropped on. Must be using one of the [resource plugins](premium).
+The [ISO8601 string](https://en.wikipedia.org/wiki/ISO_8601) representation of where the draggable was dropped.
 </td>
 </tr>
 
 <tr>
-<th>allDay</th>
+<th>draggedEl</th>
 <td markdown='1'>
-`true` or `false` whether dropped on one of the all-day cells.
+The HTML element that was being dragged.
 </td>
 </tr>
 
@@ -45,6 +45,13 @@ If the current view is a resource-view, the [Resource Object](resource-object) t
 <th>jsEvent</th>
 <td markdown='1'>
 The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
+<tr>
+<th>resource</th>
+<td markdown='1'>
+If the current view is a resource-view, the [Resource Object](resource-object) the element was dropped on. Must be using one of the [resource plugins](premium).
 </td>
 </tr>
 

@@ -247,9 +247,6 @@ As defined above, this is the date when an event finishes. In other words, the e
 
 Again, if `allDay` is not explicitly set to `true` and `end` is `2018-09-07`, internally this is recognised as `2018-09-07T00:00:00`. It is that point in time, at the final part of `2018-09-06` and beginning of `2018-09-07`. Also, this may be interpreted as `2018-09-06T23:59:59` or `2018-09-07T00:00:00`.
 
-Whether the `start` or `end` dates should be **inclusive** or **exclusive** is discussed in the [iCalendar Specifications (RFC 5545)](https://icalendar.org/iCalendar-RFC-5545/3-6-1-event-component.html). In the [Google Calendar API](https://developers.google.com/calendar/v3/reference/events/list) documentation, this is expressed in a similar way:
-
-- timeMin (equivalent to `start`) - Lower bound (exclusive) for an event's end time to filter by.
-- timeMax (equivalent to `end`) - Upper bound (exclusive) for an event's start time to filter by. 
+FullCalendar handles these dates in the same way as discussed in the [iCalendar Specifications (RFC 5545)](https://icalendar.org/iCalendar-RFC-5545/3-6-1-event-component.html) and [Google Calendar API](https://developers.google.com/calendar/v3/reference/events/list) documentation.
 
 In summary, `start` date is **inclusive** while `end` date is **exclusive**. In order to avoid inconsistencies, applications should consider passing [ISO8601 strings](https://en.wikipedia.org/wiki/ISO_8601) with datetime values for `start` and `end` dates to FullCalendar, if `allDay` is `false`.
