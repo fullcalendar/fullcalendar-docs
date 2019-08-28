@@ -52,7 +52,7 @@ If you'd like a different interval of time, you can create a [custom view](custo
 
 The following settings are specific to list-view. However, many other settings throughout the API also affect list-view as well, such as [eventRender](eventRender) and [eventClick](eventClick).
 
-## Appearance
+## Event Appearance
 
 FullCalendar options and Event properties control the appearance of events in list view. For example, the color of the event dot marker is the same as the event `backgroundColor`. However, a lot more can be achieved in the [`eventRender`](eventRender) callback, where the style object of the [Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) can be modified.
 
@@ -80,14 +80,12 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
   eventRender: function(info) {
     if (info.event.extendedProps.status === 'done') {
       // Get the event dot marker element.
-      var elt = info.el.getElementsByClassName('fc-event-dot')[0];
-      if (elt) {
+      var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
+      if (dotEl) {
         // Change color of dot marker.
-        elt.setAttribute("style", "background-color:white;");
-        // Change background color of row and text color.
-        info.el.style.cssText = "background-color:red; color:white;";  
-        // To change only the background color of row.
-        // info.el.style.backgroundColor = 'grey';      
+        dotEl.style.backgroundColor = 'white';
+        // Change background color of row.
+        info.el.style.backgroundColor = 'red';      
       }               
     }
   }
