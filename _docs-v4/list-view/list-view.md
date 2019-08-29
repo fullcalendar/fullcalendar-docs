@@ -62,7 +62,7 @@ In the following example, we pass non-standard information about events through 
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'list' ],
   defaultView: 'listWeek',
-  events: [     
+  events: [
     {
       title: 'Meeting',
       start: '2019-08-12T14:30:00',
@@ -85,8 +85,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         // Change color of dot marker.
         dotEl.style.backgroundColor = 'white';
         // Change background color of row.
-        info.el.style.backgroundColor = 'red';      
-      }               
+        info.el.style.backgroundColor = 'red';
+      }
     }
   }
 
