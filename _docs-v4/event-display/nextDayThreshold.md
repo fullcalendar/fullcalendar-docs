@@ -16,7 +16,7 @@ For example, if `nextDayThreshold` were `'09:00'` (9am), the following event wou
   var calendar = new Calendar(calendarEl, {
     // other options...
     nextDayThreshold: '09:00:00',
-    events: [    
+    events: [
       {
         // Goes from 8pm to 2am the next day.
         title: 'Event 1',
@@ -33,7 +33,7 @@ Whereas, the following event would appear to take up two days:
   var calendar = new Calendar(calendarEl, {
     // other options...
     nextDayThreshold: '09:00:00',
-    events: [    
+    events: [
       {
         // Goes from 8pm to 10am the next day.
         title: 'Event 2',
@@ -44,7 +44,6 @@ Whereas, the following event would appear to take up two days:
   });
 ```
 
-It is important to stress that this `nextDayThreshold` option, set on the Calendar itself, is ignored when `allDay` is `true`. Generally, as discussed when defining an [Event object](event-parsing), `allDay`, `start` and `end` properties are sufficient for specifying an event that lasts an entire day. 
+It is important to stress that this `nextDayThreshold` option, set on the Calendar itself, is ignored when `allDay` is `true`. Generally, as discussed when defining an [Event object](event-parsing), `allDay`, `start` and `end` properties are sufficient for specifying an event that lasts an entire day.
 
 However, when `allDay` is `false`, this additional `nextDayThreshold` property allows an override of the default behaviour of exclusive end dates by setting the cut-off point (or minimum) for the event to be rendered on that date.
-    

@@ -61,7 +61,7 @@ The native JavaScript event with low-level information such as click coordinates
 <tr>
 <th>view</th>
 <td markdown='1'>
-[View object](view-object). The current Calendar view. 
+[View object](view-object). The current Calendar view.
 </td>
 </tr>
 

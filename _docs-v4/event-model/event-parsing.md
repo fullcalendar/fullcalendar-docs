@@ -64,7 +64,7 @@ Something [date-parseable](date-parsing). When your event ends. If your event is
 <tr>
 <th>daysOfWeek</th>
 <td markdown='1'>
-Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for an event that repeats on Sundays and Mondays. 
+Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for an event that repeats on Sundays and Mondays.
 </td>
 </tr>
 
@@ -239,11 +239,11 @@ If an event object does not explicitly define an `allDay` value, FullCalendar wi
 
 ### `start`
 
-As defined above, this is the date when an event begins. In other words, the event starts from this given date value and continues onwards. This value specifies the **inclusive** start of the event. In effect, if `allDay` is not explicitly set to `true` and `start` is `2018-09-01`, internally, this is recognised as `2018-09-01T00:00:00`.   
+As defined above, this is the date when an event begins. In other words, the event starts from this given date value and continues onwards. This value specifies the **inclusive** start of the event. In effect, if `allDay` is not explicitly set to `true` and `start` is `2018-09-01`, internally, this is recognised as `2018-09-01T00:00:00`.
 
 ### `end`
 
-As defined above, this is the date when an event finishes. In other words, the event continues up to this cut-off point in time. This value specifies the **exclusive** end of the event. Since the event is not expected to continue beyond the given `end` date it may also be described as non-inclusive. 
+As defined above, this is the date when an event finishes. In other words, the event continues up to this cut-off point in time. This value specifies the **exclusive** end of the event. Since the event is not expected to continue beyond the given `end` date it may also be described as non-inclusive.
 
 Again, if `allDay` is not explicitly set to `true` and `end` is `2018-09-07`, internally this is recognised as `2018-09-07T00:00:00`. It is that point in time, at the final part of `2018-09-06` and beginning of `2018-09-07`. Also, this may be interpreted as `2018-09-06T23:59:59` or `2018-09-07T00:00:00`.
 

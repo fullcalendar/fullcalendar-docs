@@ -42,4 +42,4 @@ The spans of time *not* occupied by an event can be colored by setting the `rend
 
 ## Modifying Events
 
-The [editable](editable) property of a calendar determines whether the events on it can be modified. However, Background Events are not editable. They can not be *dragged* or *resized*.   
+The [editable](editable) property of a calendar determines whether the events on it can be modified. However, Background Events are not editable. They can not be *dragged* or *resized*.
