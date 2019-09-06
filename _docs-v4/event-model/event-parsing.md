@@ -22,210 +22,210 @@ Here are all the available properties, **all of which are optional**:
 
 <table>
 
-<tr>
-<th>id</th>
-<td markdown='1'>
-String or Integer. Will uniquely identify your event. Useful for [getEventById](Calendar-getEventById).
-</td>
-</tr>
+  <tr>
+  <th>id</th>
+  <td markdown='1'>
+  String or Integer. Will uniquely identify your event. Useful for [getEventById](Calendar-getEventById).
+  </td>
+  </tr>
 
-<tr>
-<th>groupId</th>
-<td markdown='1'>
-String or Integer. Events that share a `groupId` will be dragged and resized together automatically.
-</td>
-</tr>
+  <tr>
+  <th>groupId</th>
+  <td markdown='1'>
+  String or Integer. Events that share a `groupId` will be dragged and resized together automatically.
+  </td>
+  </tr>
 
-<tr>
-<th>allDay</th>
-<td markdown='1'>
-Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of the view, if applicable. Determines if time text is displayed in the event. If this value is not specified, it will be inferred by the `start` and `end` properties. See notes below.
+  <tr>
+  <th>allDay</th>
+  <td markdown='1'>
+  Boolean (`true` or `false`). Determines if the event is shown in the "all-day" section of the view, if applicable. Determines if time text is displayed in the event. If this value is not specified, it will be inferred by the `start` and `end` properties. See notes below.
 
-**Do not put quotes around this value**. That would make it a string, not a boolean.
-</td>
-</tr>
+  **Do not put quotes around this value**. That would make it a string, not a boolean.
+  </td>
+  </tr>
 
-<tr>
-<th>start</th>
-<td markdown='1'>
-Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored.
-</td>
-</tr>
+  <tr>
+  <th>start</th>
+  <td markdown='1'>
+  Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored.
+  </td>
+  </tr>
 
-<tr>
-<th>end</th>
-<td markdown='1'>
-Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
+  <tr>
+  <th>end</th>
+  <td markdown='1'>
+  Something [date-parseable](date-parsing). When your event ends. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored. If omitted, your events will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
 
-**Note: This value is exclusive.** For example, if you have an all-day event that has an `end` of `2018-09-03`, then it will span through `2018-09-02` and end before the start of `2018-09-03`.
-</td>
-</tr>
+  **Note: This value is exclusive.** For example, if you have an all-day event that has an `end` of `2018-09-03`, then it will span through `2018-09-02` and end before the start of `2018-09-03`.
+  </td>
+  </tr>
 
-<tr>
-<th>daysOfWeek</th>
-<td markdown='1'>
-Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for an event that repeats on Sundays and Mondays. 
-</td>
-</tr>
+  <tr>
+  <th>daysOfWeek</th>
+  <td markdown='1'>
+  Array. (For defining a [simple recurring event](recurring-events)). The days of the week this event repeats. An array of integers representing days e.g. `[0, 1]` for an event that repeats on Sundays and Mondays.
+  </td>
+  </tr>
 
-<tr>
-<th>startTime</th>
-<td markdown='1'>
- Something [duration-parseable](duration-object). (For defining a [simple recurring event](recurring-events)). The time of day the event starts.
-</td>
-</tr>
+  <tr>
+  <th>startTime</th>
+  <td markdown='1'>
+  Something [duration-parseable](duration-object). (For defining a [simple recurring event](recurring-events)). The time of day the event starts.
+  </td>
+  </tr>
 
-<tr>
-<th>endTime</th>
-<td markdown='1'>
-Something [duration-parseable](duration-object). (For defining a [simple recurring event](recurring-events)). The time of day the event ends.
-</td>
-</tr>
+  <tr>
+  <th>endTime</th>
+  <td markdown='1'>
+  Something [duration-parseable](duration-object). (For defining a [simple recurring event](recurring-events)). The time of day the event ends.
+  </td>
+  </tr>
 
-<tr>
-<th>startRecur</th>
-<td markdown='1'>
-Something [date-parseable](date-parsing). (For defining a [simple recurring event](recurring-events)). When recurrences of the event start.
-</td>
-</tr>
+  <tr>
+  <th>startRecur</th>
+  <td markdown='1'>
+  Something [date-parseable](date-parsing). (For defining a [simple recurring event](recurring-events)). When recurrences of the event start.
+  </td>
+  </tr>
 
-<tr>
-<th>endRecur</th>
-<td markdown='1'>
-Something [date-parseable](date-parsing). (For defining a [simple recurring event](recurring-events)). When recurrences of the event end.
-</td>
-</tr>
+  <tr>
+  <th>endRecur</th>
+  <td markdown='1'>
+  Something [date-parseable](date-parsing). (For defining a [simple recurring event](recurring-events)). When recurrences of the event end.
+  </td>
+  </tr>
 
-<tr>
-<th>title</th>
-<td markdown='1'>
-String. The text that will appear on an event.
-</td>
-</tr>
+  <tr>
+  <th>title</th>
+  <td markdown='1'>
+  String. The text that will appear on an event.
+  </td>
+  </tr>
 
-<tr>
-<th>url</th>
-<td markdown='1'>
-String. A URL that will be visited when this event is clicked by the user. For more information on controlling this behavior, see the [eventClick](eventClick) callback.
-</td>
-</tr>
+  <tr>
+  <th>url</th>
+  <td markdown='1'>
+  String. A URL that will be visited when this event is clicked by the user. For more information on controlling this behavior, see the [eventClick](eventClick) callback.
+  </td>
+  </tr>
 
-<tr>
-<th><div style='white-space:nowrap'>className or</div> classNames</th>
-<td markdown='1'>
-String or Array. A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
-</td>
-</tr>
+  <tr>
+  <th><div style='white-space:nowrap'>className or</div> classNames</th>
+  <td markdown='1'>
+  String or Array. A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
+  </td>
+  </tr>
 
-<tr>
-<th>editable</th>
-<td markdown='1'>
-Boolean (`true` or `false`). Overrides the master [editable](editable) option for this single event.
-</td>
-</tr>
+  <tr>
+  <th>editable</th>
+  <td markdown='1'>
+  Boolean (`true` or `false`). Overrides the master [editable](editable) option for this single event.
+  </td>
+  </tr>
 
-<tr>
-<th>startEditable</th>
-<td markdown='1'>
-Boolean (`true` or `false`). Overrides the master [eventStartEditable](eventStartEditable) option for this single event.
-</td>
-</tr>
+  <tr>
+  <th>startEditable</th>
+  <td markdown='1'>
+  Boolean (`true` or `false`). Overrides the master [eventStartEditable](eventStartEditable) option for this single event.
+  </td>
+  </tr>
 
-<tr>
-<th>durationEditable</th>
-<td markdown='1'>
-Boolean (`true` or `false`). Overrides the master [eventDurationEditable](eventDurationEditable) option for this single event.
-</td>
-</tr>
+  <tr>
+  <th>durationEditable</th>
+  <td markdown='1'>
+  Boolean (`true` or `false`). Overrides the master [eventDurationEditable](eventDurationEditable) option for this single event.
+  </td>
+  </tr>
 
-<tr>
-<th>resourceEditable</th>
-<td markdown='1'>
-Boolean (`true` or `false`). Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
-Requires one of the [resource plugins](premium).
-</td>
-</tr>
+  <tr>
+  <th>resourceEditable</th>
+  <td markdown='1'>
+  Boolean (`true` or `false`). Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
+  Requires one of the [resource plugins](premium).
+  </td>
+  </tr>
 
-<tr>
-<th>resourceId</th>
-<td markdown='1'>
-String. The string ID of a [Resource](resource-object).
-See [Associating Events with Resources](resources-and-events).
-Requires one of the [resource plugins](premium).
-</td>
-</tr>
+  <tr>
+  <th>resourceId</th>
+  <td markdown='1'>
+  String. The string ID of a [Resource](resource-object).
+  See [Associating Events with Resources](resources-and-events).
+  Requires one of the [resource plugins](premium).
+  </td>
+  </tr>
 
-<tr>
-<th>resourceIds</th>
-<td markdown='1'>
-Array. An array of string IDs of [Resources](resource-object).
-See [Associating Events with Resources](resources-and-events).
-Requires one of the [resource plugins](premium).
-</td>
-</tr>
+  <tr>
+  <th>resourceIds</th>
+  <td markdown='1'>
+  Array. An array of string IDs of [Resources](resource-object).
+  See [Associating Events with Resources](resources-and-events).
+  Requires one of the [resource plugins](premium).
+  </td>
+  </tr>
 
-<tr>
-<th>rendering</th>
-<td markdown='1'>
-Allows alternate rendering of the event, like background events. Can be empty, `"background"`, or `"inverse-background"`
-</td>
-</tr>
+  <tr>
+  <th>rendering</th>
+  <td markdown='1'>
+  Allows alternate rendering of the event, like background events. Can be empty, `"background"`, or `"inverse-background"`
+  </td>
+  </tr>
 
-<tr>
-<th>overlap</th>
-<td markdown='1'>
-Boolean (`true` or `false`). Overrides the master [eventOverlap](eventOverlap) option for this single event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
-</td>
-</tr>
+  <tr>
+  <th>overlap</th>
+  <td markdown='1'>
+  Boolean (`true` or `false`). Overrides the master [eventOverlap](eventOverlap) option for this single event. If `false`, prevents this event from being dragged/resized over other events. Also prevents other events from being dragged/resized over this event.
+  </td>
+  </tr>
 
-<tr>
-<th>constraint</th>
-<td markdown='1'>
-A **groupId** belonging to other events, `"businessHours"`, or an object. Overrides the master [eventConstraint](eventConstraint) option for this single event.
-</td>
-</tr>
+  <tr>
+  <th>constraint</th>
+  <td markdown='1'>
+  A **groupId** belonging to other events, `"businessHours"`, or an object. Overrides the master [eventConstraint](eventConstraint) option for this single event.
+  </td>
+  </tr>
 
-<tr>
-<th>color</th>
-<td markdown='1'>
-String. An alias for specifying the **backgroundColor** and **borderColor** at the same time.
-</td>
-</tr>
+  <tr>
+  <th>color</th>
+  <td markdown='1'>
+  String. An alias for specifying the **backgroundColor** and **borderColor** at the same time.
+  </td>
+  </tr>
 
-<tr>
-<th>backgroundColor</th>
-<td markdown='1'>
-Sets an event's background color just like the calendar-wide [eventBackgroundColor](eventBackgroundColor) option.
-</td>
-</tr>
+  <tr>
+  <th>backgroundColor</th>
+  <td markdown='1'>
+  Sets an event's background color just like the calendar-wide [eventBackgroundColor](eventBackgroundColor) option.
+  </td>
+  </tr>
 
-<tr>
-<th>borderColor</th>
-<td markdown='1'>
-Sets an event's border color just like the calendar-wide [eventBorderColor](eventBorderColor) option.
-</td>
-</tr>
+  <tr>
+  <th>borderColor</th>
+  <td markdown='1'>
+  Sets an event's border color just like the calendar-wide [eventBorderColor](eventBorderColor) option.
+  </td>
+  </tr>
 
-<tr>
-<th>textColor</th>
-<td markdown='1'>
-Sets an event's text color just like the calendar-wide [eventTextColor](eventTextColor) option.
-</td>
-</tr>
+  <tr>
+  <th>textColor</th>
+  <td markdown='1'>
+  Sets an event's text color just like the calendar-wide [eventTextColor](eventTextColor) option.
+  </td>
+  </tr>
 
-<tr>
-<th>extendedProps</th>
-<td markdown='1'>
-Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in a custom [eventRender callback](eventRender).
-</td>
-</tr>
+  <tr>
+  <th>extendedProps</th>
+  <td markdown='1'>
+  Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in a custom [eventRender callback](eventRender).
+  </td>
+  </tr>
 
-<tr>
-<th><em>any other property!</em></th>
-<td markdown='1'>
-Every other non-standard property will be transferred over to the `extendedProps` hash in the [Event Object](event-object). However, it is recommended to explicitly define these in the `extendedProps` hash.
-</td>
-</tr>
+  <tr>
+  <th><em>any other property!</em></th>
+  <td markdown='1'>
+  Every other non-standard property will be transferred over to the `extendedProps` hash in the [Event Object](event-object). However, it is recommended to explicitly define these in the `extendedProps` hash.
+  </td>
+  </tr>
 
 </table>
 
@@ -239,11 +239,11 @@ If an event object does not explicitly define an `allDay` value, FullCalendar wi
 
 ### `start`
 
-As defined above, this is the date when an event begins. In other words, the event starts from this given date value and continues onwards. This value specifies the **inclusive** start of the event. In effect, if `allDay` is not explicitly set to `true` and `start` is `2018-09-01`, internally, this is recognised as `2018-09-01T00:00:00`.   
+As defined above, this is the date when an event begins. In other words, the event starts from this given date value and continues onwards. This value specifies the **inclusive** start of the event. In effect, if `allDay` is not explicitly set to `true` and `start` is `2018-09-01`, internally, this is recognised as `2018-09-01T00:00:00`.
 
 ### `end`
 
-As defined above, this is the date when an event finishes. In other words, the event continues up to this cut-off point in time. This value specifies the **exclusive** end of the event. Since the event is not expected to continue beyond the given `end` date it may also be described as non-inclusive. 
+As defined above, this is the date when an event finishes. In other words, the event continues up to this cut-off point in time. This value specifies the **exclusive** end of the event. Since the event is not expected to continue beyond the given `end` date it may also be described as non-inclusive.
 
 Again, if `allDay` is not explicitly set to `true` and `end` is `2018-09-07`, internally this is recognised as `2018-09-07T00:00:00`. It is that point in time, at the final part of `2018-09-06` and beginning of `2018-09-07`. Also, this may be interpreted as `2018-09-06T23:59:59` or `2018-09-07T00:00:00`.
 

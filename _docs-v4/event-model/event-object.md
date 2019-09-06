@@ -59,7 +59,7 @@ Boolean (`true` or `false`). Determines if the event is shown in the "all-day" s
 <td markdown='1'>
 [Date object](date-object) that obeys the current [timeZone](timeZone). When an event ends. It could be `null` if an end wasn't specified.
 
-**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through `2018-09-02` but end before the start of `2018-09-03`. See how events are [are parsed from a plain object](event-parsing) for further details. 
+**Note: This value is exclusive**. For example, an event with the `end` of `2018-09-03` will appear to span through `2018-09-02` but end before the start of `2018-09-03`. See how events are [are parsed from a plain object](event-parsing) for further details.
 
 </td>
 </tr>
@@ -173,7 +173,7 @@ A reference to the [Event Source](event-source-object) this event came from. If 
 
 All properties are read-only. If you want to modify them, use the various methods of the Event object, such as [setProp](Event-setProp), [setExtendedProp](Event-setExtendedProp), [setDates](Event-setDates), etc.
 
-The expected values for `allDay`, `start` and `end` have been discussed in detail on the subject of [parsing events](event-parsing). It is vital to understand how the `end` date is **exclusive** throughout the FullCalendar API.     
+The expected values for `allDay`, `start` and `end` have been discussed in detail on the subject of [parsing events](event-parsing). It is vital to understand how the `end` date is **exclusive** throughout the FullCalendar API.
 
 
 ## Non-standard Fields
@@ -198,6 +198,6 @@ var calendar = new Calendar(calendarEl, {
     console.log(info.event.extendedProps);
     // {description: "Lecture", department: "BioChemistry"}
   }
-  
+
 });
 ```

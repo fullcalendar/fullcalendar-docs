@@ -19,7 +19,7 @@ A View object contains information about a calendar view, such as title and date
     In month view, this value is often before the 1st day of the month, because most months do not begin on the first day-of-week.
 
 `activeEnd`
-:   A [Date](date-object) that is the last visible day. **Note: This value is exclusive**. See how events are [are parsed from a plain object](event-parsing) for further details. 
+:   A [Date](date-object) that is the last visible day. **Note: This value is exclusive**. See how events are [are parsed from a plain object](event-parsing) for further details.
 
 `currentStart`
 :   A [Date](date-object) that is the start of the interval the view is trying to represent.
