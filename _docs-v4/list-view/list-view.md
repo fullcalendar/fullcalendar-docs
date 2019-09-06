@@ -79,13 +79,14 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
   ],
   eventRender: function(info) {
     if (info.event.extendedProps.status === 'done') {
-      // Get the event dot marker element.
+
+      // Change background color of row
+      info.el.style.backgroundColor = 'red';
+
+      // Change color of dot marker
       var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
       if (dotEl) {
-        // Change color of dot marker.
         dotEl.style.backgroundColor = 'white';
-        // Change background color of row.
-        info.el.style.backgroundColor = 'red';
       }
     }
   }
