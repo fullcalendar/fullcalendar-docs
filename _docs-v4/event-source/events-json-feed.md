@@ -180,3 +180,58 @@ var calendar = new Calendar(calendarEl, {
 
 });
 ```
+
+## Dates
+
+Date parameters in JSON feeds should be provided as anything that will [parse into a Date Object](date-parsing) such as [ISO8601 strings](https://en.wikipedia.org/wiki/ISO_8601) and milliseconds. However, it is not possible to serialize native JavaScript dates into JSON. Therefore, there is no support for Date object parameters in FullCalendar.
+
+For example, the following JSON strings will work:
+
+```js
+  [
+    {
+      "title": "Event 1",
+      "start": "2019-09-05T09:00:00",
+      "end": "2019-09-05T18:00:00"
+    },
+    {
+      "title": "Event 2",
+      "start": "2019-09-08",
+      "end": "2019-09-10"
+    }
+  ]
+```
+
+and
+
+```js
+  [
+    {
+      "title": "Event 1",
+      "start": 1567674000,
+      "end": 1567706400
+    },
+    {
+      "title": "Event 2",
+      "start": 1567900800,
+      "end": 1568073600
+    }
+  ]
+```
+
+Something like this will **NOT** work:
+
+```js
+  [
+    {
+      "title": "Event 1",
+      "start": "new Date(2019, 8, 5, 9, 0, 0)",  // will not parse into object
+      "end": "new Date(2019, 8, 5, 18, 0, 0)"   // will not parse into object
+    },
+    {
+      "title": "Event 2",
+      "start": "new Date(2019, 8, 8)",  // will not parse into object
+      "end": "new Date(2019, 8, 10)"  // will not parse into object
+    }
+  ]
+```
