@@ -63,12 +63,12 @@ CustomView = View.extend({
     // <your custom cleanup-code here>
 
     // call the super-class's method, forwarding all arguments
-    View.prototype.destroy.apply(this, arguments);
+    View.prototype.triggerViewDestroy.apply(this, arguments);
   }
 
 });
 ```
 
-The above documentation is helpful for building a barebones view, but making it full-featured and interactive is a further challenging. A robust view should be right-to-left compatible, locale-customizable, allow event dragging and resizing, allow user selections, and more...
+The above documentation is helpful for building a barebones view, but making it full-featured and interactive is a further challenge. A robust view should be right-to-left compatible, locale-customizable, allow event dragging and resizing, allow user selections, and more...
 
 Making a full-featured view is beyond the scope of this document. Further documentation should be written and further APIs should be formalized, but for now, it would be best to browse FullCalendar's [source on GitHub]({{ site.fullcalendar_repo }}). Pay attention to how [BasicView](https://github.com/fullcalendar/fullcalendar/blob/master/src/basic/BasicView.ts) and [AgendaView](https://github.com/fullcalendar/fullcalendar/blob/master/src/agenda/AgendaView.ts) are implemented.
