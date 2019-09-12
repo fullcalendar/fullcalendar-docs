@@ -225,13 +225,13 @@ Something like this will **NOT** work:
   [
     {
       "title": "Event 1",
-      "start": "new Date(2019, 8, 5, 9, 0, 0)",  // will not parse into object
-      "end": "new Date(2019, 8, 5, 18, 0, 0)"   // will not parse into object
+      "start": "new Date(2019, 8, 5, 9, 0, 0)",  // will NOT parse into object
+      "end": "new Date(2019, 8, 5, 18, 0, 0)"   // will NOT parse into object
     },
     {
       "title": "Event 2",
-      "start": "new Date(2019, 8, 8)",  // will not parse into object
-      "end": "new Date(2019, 8, 10)"  // will not parse into object
+      "start": "new Date(2019, 8, 8)",  // will NOT parse into object
+      "end": "new Date(2019, 8, 10)"  // will NOT parse into object
     }
   ]
 ```
