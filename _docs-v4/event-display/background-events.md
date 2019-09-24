@@ -41,16 +41,16 @@ The spans of time *not* occupied by an event can be colored by setting the `rend
 ```js
 var calendar = new Calendar(calendarEl, {
   plugins: [ 'timeGrid' ],
-    defaultDate: '2014-11-10',
-    defaultView: 'timeGridWeek',
-    events: [
-      {
-        groupId: 'testGroupId',
-        start: '2014-11-10T10:00:00',
-        end: '2014-11-10T16:00:00',
-        rendering: 'inverse-background'
-      }
-    ]
+  defaultDate: '2014-11-10',
+  defaultView: 'timeGridWeek',
+  events: [
+    {
+      groupId: 'testGroupId',
+      start: '2014-11-10T10:00:00',
+      end: '2014-11-10T16:00:00',
+      rendering: 'inverse-background'
+    }
+  ]
 });
 ```
 
