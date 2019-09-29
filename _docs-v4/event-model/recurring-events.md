@@ -55,6 +55,13 @@ When recurrences of this event end. Something that will [parse into a Date](date
 </td>
 </tr>
 
+<tr>
+<th>groupId</th>
+<td markdown='1'>
+String. An identifier for events to be handled together as a group for certain actions e.g. when dragging or resizing events with the `interaction` plugin.
+</td>
+</tr>
+
 </table>
 
 If any of these properties are specified, the event is assumed to be recurring and there is no need to specify the normal `start` and `end` properties.
