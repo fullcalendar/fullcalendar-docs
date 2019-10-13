@@ -74,3 +74,6 @@ For a multi-day all-day event, specify the `duration` property (a [duration inpu
 If the built-in recurrence functionality is too limited for you, you can leverage the [rrule library](https://github.com/jakubroztocil/rrule). FullCalendar has a connector plugin to make it easy to work with.
 
 [Read about the RRule plugin &raquo;](rrule-plugin)
+
+## Recurrence with the Interaction Plugin
+
