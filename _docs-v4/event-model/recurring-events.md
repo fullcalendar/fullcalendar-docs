@@ -55,6 +55,13 @@ When recurrences of this event end. Something that will [parse into a Date](date
 </td>
 </tr>
 
+<tr>
+<th>groupId</th>
+<td markdown='1'>
+String. An identifier for events to be handled together as a group for certain actions e.g. when dragging or resizing events with the `interaction` plugin.
+</td>
+</tr>
+
 </table>
 
 If any of these properties are specified, the event is assumed to be recurring and there is no need to specify the normal `start` and `end` properties.
@@ -67,3 +74,28 @@ For a multi-day all-day event, specify the `duration` property (a [duration inpu
 If the built-in recurrence functionality is too limited for you, you can leverage the [rrule library](https://github.com/jakubroztocil/rrule). FullCalendar has a connector plugin to make it easy to work with.
 
 [Read about the RRule plugin &raquo;](rrule-plugin)
+
+## Recurrence with the Interaction Plugin
+
+When using the `Interaction` plugin, for example to [drag or resize events](event-dragging-resizing), if you want all the recurring events in a definition to move together, you need to specify a `groupId`. This is a string which will serve as the identifier for that group of events. It doesn't matter whether you intend to use this ID for any other purpose. For example:
+
+```js
+var calendar = new Calendar(calendarEl, {
+  plugins: [ 'dayGrid', 'interaction' ],
+      events: [
+        {
+          groupId: 'blueEvents', // recurrent events in this group move together
+          daysOfWeek: ["4"],
+          startTime: "10:45:00",
+          endTime: "12:45:00"
+        },
+        {
+          daysOfWeek: ["3"], // these recurrent events move separately
+          startTime: "11:00:00",
+          endTime: "11:30:00",
+          color: 'red'
+        }
+      ],
+      editable: true,
+});
+```
