@@ -36,9 +36,29 @@ The color of background events can be manipulated by targeting the `fc-bgevent` 
 
 ## Inverse Backgrounds
 
-The spans of time *not* occupied by an event can be colored by setting the `rendering` property to `"inverse-background"`. Events that share the same `id` will be grouped together when this rendering happens.
+The spans of time *not* occupied by an event can be colored by setting the `rendering` property to `"inverse-background"`:
+
+```js
+var calendar = new Calendar(calendarEl, {
+  plugins: [ 'timeGrid' ],
+  defaultDate: '2014-11-10',
+  defaultView: 'timeGridWeek',
+  events: [
+    {
+      groupId: 'testGroupId',
+      start: '2014-11-10T10:00:00',
+      end: '2014-11-10T16:00:00',
+      rendering: 'inverse-background'
+    }
+  ]
+});
+```
+
+Result:
 
 <img src='background-events-inverse.png' width='500' alt='inverse background example' />
+
+Events that share the same `groupId` will be grouped together when this rendering happens.
 
 ## Modifying Events
 
