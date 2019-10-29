@@ -43,7 +43,7 @@ In either of these examples, if one of these external elements is dropped on a c
 If you associate event data with the draggable element, it can create an event on the calendar when dropped. You can do this in a few different ways. First, you can attach an HTML `data-event` attribute to the element with JSON that holds the event data:
 
 ```html
-<div id='draggable-el' data-event='{ title: "my event", duration: "02:00" }'>drag me</div>
+<div id='draggable-el' data-event='{ "title": "my event", "duration": "02:00" }'>drag me</div>
 ```
 
 This must be used in tandem with instantiating a `new Draggable`. Also, make sure your **JSON is valid**! For example, property names must be enclosed in double quotes!
