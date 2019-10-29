@@ -82,20 +82,20 @@ When using the `Interaction` plugin, for example to [drag or resize events](even
 ```js
 var calendar = new Calendar(calendarEl, {
   plugins: [ 'dayGrid', 'interaction' ],
-      events: [
-        {
-          groupId: 'blueEvents', // recurrent events in this group move together
-          daysOfWeek: ["4"],
-          startTime: "10:45:00",
-          endTime: "12:45:00"
-        },
-        {
-          daysOfWeek: ["3"], // these recurrent events move separately
-          startTime: "11:00:00",
-          endTime: "11:30:00",
-          color: 'red'
-        }
-      ],
-      editable: true,
+  events: [
+    {
+      groupId: 'blueEvents', // recurrent events in this group move together
+      daysOfWeek: [ '4' ],
+      startTime: '10:45:00',
+      endTime: '12:45:00'
+    },
+    {
+      daysOfWeek: [ '3' ], // these recurrent events move separately
+      startTime: '11:00:00',
+      endTime: '11:30:00',
+      color: 'red'
+    }
+  ],
+  editable: true
 });
 ```
