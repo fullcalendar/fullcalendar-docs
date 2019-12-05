@@ -19,7 +19,7 @@ Also, a function argument can be provided that executes arbitrary code:
 var calendar = new Calendar(calendarEl, {
   navLinks: true,
   navLinkWeekClick: function(weekStart, jsEvent) {
-    console.log('week start', weekStart.format()); // weekStart is a moment
+    console.log('week start', weekStart.toISOString());
     console.log('coords', jsEvent.pageX, jsEvent.pageY);
   }
 });
