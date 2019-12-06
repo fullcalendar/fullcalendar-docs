@@ -8,8 +8,8 @@ It is possible to use FullCalendar and [Scheduler]({{ site.baseurl }}/purchase) 
 
 You will then need to set up some sort of build system that compiles TypeScript to JavaScript. You can use the `tsc` compiler directly or you can use a more sophisticated system like [Webpack](https://webpack.js.org/).
 
-- [View the **FullCalendar + TypeScript + Webpack** example repo &raquo;](https://github.com/fullcalendar/typescript-example)
-- [View the **FullCalendar Scheduler + TypeScript + Webpack** example repo &raquo;](https://github.com/fullcalendar/scheduler-typescript-example)
+- [View the **FullCalendar + TypeScript + Webpack** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/typescript)
+- [View the **FullCalendar Scheduler + TypeScript + Webpack** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/typescript-scheduler)
 
 Once you have your build system set up, you can begin to write type-aware code like this:
 
