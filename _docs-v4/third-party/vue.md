@@ -123,6 +123,40 @@ calendarApi.next()
 ```
 
 
+## Localizing the calendar
+
+Import the locale(s) you want to use at the top of your Vue component.
+
+```js
+import deLocale from '@fullcalendar/core/locales/de';
+import esLocale from '@fullcalendar/core/locales/es';
+```
+
+Next create a variable for the modules in the data part of your component.
+
+```js
+  data() {
+    return {
+      calendarPlugins: [ dayGridPlugin ],
+      calendarLocales: [deLocale, esLocale],
+    }
+  }
+```
+
+And use it Fullcalendar, like this:
+
+```html
+<FullCalendar
+  defaultView="dayGridMonth"
+  :plugins="calendarPlugins"
+  :locales="calendarLocales"
+  locale="es"
+  />
+```
+
+You can also load all locales, see the documentation on locale for more on this topic.
+
+
 ## Kebab-case in Markup
 
 Some people prefer to write component names and prop names in kebab-case when writing markup. This will work fine:
