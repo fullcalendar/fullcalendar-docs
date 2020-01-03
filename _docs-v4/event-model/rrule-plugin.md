@@ -2,7 +2,7 @@
 title: RRule Plugin
 ---
 
-The RRule plugin is a connector to the [rrule js library](https://github.com/jakubroztocil/rrule). It is powerful for specifying recurring events, moreso than FullCalendar's built-in [simple event recurrence](recurring-events).
+The RRule plugin is a connector to the [rrule js library](https://github.com/jakubroztocil/rrule). It is powerful for specifying recurring events, more so than FullCalendar's built-in [simple event recurrence](recurring-events).
 
 It introduces some new [event properties](event-parsing):
 
