@@ -42,7 +42,7 @@ The `rrule` property accepts whatever the rrule lib accepts for a `new RRule`. [
 If you're specifying an object, you can write some of the properties in a way that's more convenient than what rrule requires:
 
 - You don't need to use the RRule constants like `RRule.WEEKLY`. You can just specify the string `'weekly'`. This is better for JSON serialization.
-- You can specify `dtstart` as an [ISO8601 string](date-parsing). If the string does not have a time part, the event will be all-day. The time part will determine each recurrence's start time. If it doesn't have a UTC offset, it will be parsed according to the current [timeZone](timeZone).
+- You can specify `dtstart` as an [ISO8601 string](date-parsing) in the [extended format](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates). If the string does not have a time part, the event will be all-day. The time part will determine each recurrence's start time. If it doesn't have a UTC offset, it will be parsed according to the current [timeZone](timeZone).
 - You can specify `until` as an [ISO8601 string](date-parsing) in the [extended format](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates). If it doesn't have a UTC offset, it will be parsed according to the current [timeZone](timeZone).
 
 The `duration` property must be something that [parses into a Duration](duration-object). If not specified, each event will appear to have the default duration. See [defaultAllDayEventDuration](defaultAllDayEventDuration), [defaultTimedEventDuration](defaultTimedEventDuration), and [forceEventDuration](forceEventDuration) for more info.
