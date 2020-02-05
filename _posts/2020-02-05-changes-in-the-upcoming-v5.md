@@ -23,14 +23,14 @@ FullCalendar's CSS is being rewritten and DOM structure reduced and simplified, 
 
 It will also be possible to override certain CSS "variables" such as the padding within cells, background colors, and borders. You'll be able to apply a [PostCSS] transform to achieve this (more info to come).
 
-As part of this refactor, horizontal scrolling in daygrid and timegrid views (both resource and non-resource variations) will be possible ([#3022]), a highly requested feature. Also, better height-expanding will be possible ([#265], [#4897], [#4650]).
+As part of this refactor, horizontal scrolling in daygrid and timegrid views (both resource and non-resource variations) will be possible ([#3022]), a highly requested feature. Also, better height-expanding will be possible ([#265], [#4897], [#4650]) as well as sticky headers ([#3473]).
 
 Our technique for printer-friendly rendering is also being overhauled. Instead of sharing the same DOM structure for print and screen, the cause of lots of gnarly wrappers and whatnot, we're able to conditionally render when listening to the [onbeforeprint] browser event. This allows for a printer-friendly timeline view ([#4813]).
 
 
 ## Packaging and Distribution
 
-Consuming FullCalendar's CSS packages will get simpler in some ways and more complicated in others. Packages that come with CSS files will now `import` them themselves. This means you'll need a build system solution for handling CSS. For example, [css-loader] for Webpack, which you likely already use.
+Consuming FullCalendar's NPM packages will get simpler in some ways and more complicated in others. Packages that come with CSS files will now `import` them themselves. This means you'll need a build system solution for handling CSS. For example, [css-loader] for Webpack, which you likely already use.
 
 The win here is that you'll no longer need to import each package's CSS file manually. This is especially important for packages like `@fullcalendar/timegrid` which depends on `@fullcalendar/daygrid`, whose CSS file needs to be included as well. You won't be forced to understand the dependency graph to know which CSS files to include.
 
@@ -68,3 +68,4 @@ Stay tuned for future developments!
 [#265]: https://github.com/fullcalendar/fullcalendar/issues/265
 [#4897]: https://github.com/fullcalendar/fullcalendar/issues/4897
 [#4650]: https://github.com/fullcalendar/fullcalendar/issues/4650
+[#3473]: https://github.com/fullcalendar/fullcalendar/issues/3473
