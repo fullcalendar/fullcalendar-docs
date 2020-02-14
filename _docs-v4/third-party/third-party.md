@@ -5,6 +5,7 @@ children:
   - react
   - vue
   - angular
+  - ember
 related:
   - plugin-index
 ---
