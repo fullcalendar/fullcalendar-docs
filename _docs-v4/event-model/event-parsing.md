@@ -250,3 +250,32 @@ Again, if `allDay` is not explicitly set to `true` and `end` is `2018-09-07`, in
 FullCalendar handles these dates in the same way as discussed in the [iCalendar Specifications (RFC 5545)](https://icalendar.org/iCalendar-RFC-5545/3-6-1-event-component.html) and [Google Calendar API](https://developers.google.com/calendar/v3/reference/events/list) documentation.
 
 In summary, `start` date is **inclusive** while `end` date is **exclusive**. In order to avoid inconsistencies, applications should consider passing [ISO8601 strings](https://en.wikipedia.org/wiki/ISO_8601) with datetime values for `start` and `end` dates to FullCalendar, if `allDay` is `false`.
+
+## Compatibility with RFC 5545 and other date handling libraries
+
+### `Introduction`
+
+Exchanging calendar data on the internet is complicated. For this reason, the international standard [iCalendar](https://en.wikipedia.org/wiki/ICalendar) was developed. The file format is specified in a proposed internet standard [RFC 5545](https://tools.ietf.org/html/rfc5545) for calendar data exchange. While this standard could help to unify the naming scheme of calendar data elements, only few applications and libraries are actually employing it. Therefore it might be necessary to parse elements from RFC 5545 to the language specific library and it will often be necessary to parse elements from that library to Fullcalendar compatible names. To get an overview how things are called in different libraries and application please refer to this overview.
+
+### `Naming convention overview`
+
+This table is not complete. Feel free to contribute the naming scheme that your library or application is understanding.
+
+|Short explanation| RFC 5545 | [Fullcalendar simple event object](https://fullcalendar.io/docs/event-object) | [Fullcalendar event object with simple recurrence](https://fullcalendar.io/docs/recurring-events) | [Fullcalendar event with rrule recurrence](https://fullcalendar.io/docs/recurring-events)|[Ruby Icalendar](https://github.com/icalendar/icalendar)|
+|---|---|---|---|---|---|
+| The inclusive start of the event| DTSTART | start  | start | dtstart (**included in rrule part of date object!**) | dtstart  |
+| Short summary or subject | SUMMARY  | title | title | title  | summary |
+| Globally unique element identifier| UID | id  | id  | id | uid  |
+| Date and time event ends | DTEND | end | end | **unknown** | dtend |
+| Properties that contain a recurrence rule specification | RRULE | n/a | n/a | rrule | rrule|
+| Type of recurrence rule | FREQ | n/a | daysOfWeek (not capable of reflecting full iCalendar complexity) | freq | frequency|
+| Defines a DATE or DATE-TIME value that bounds the recurrence rule in an inclusive manner | UNTIL (Note: [basic ISO8601 date standard](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates)) | n/a | endRecur (Note: This value is exclusive) | until (Note: [extended ISO8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) (inherited from [rrule.js](https://github.com/jakubroztocil/rrule)))| until|
+| Defines the number of occurrences at which to range-bound the recurrence. | COUNT | n/a | not supported | count | count |
+| Representationn at which intervals the recurrence rule repeats | INTERVAL | n/a | not supported | interval | interval |
+| [BYxxx rule parts modify the recurrence in some manner](https://tools.ietf.org/html/rfc5545#section-3.3.10) | BYDAY | n/a | not supported | byweekday (due to dependency on [rrule.js](https://github.com/jakubroztocil/rrule)| by_day |
+||BYMONTHDAY|n/a|not supported|bymonthday|by_month_day|
+||BYYEARDAY|n/a|not supported|bymonthday|by_month_day|
+||BYWEEKNO|n/a|not supported|byweekno|by_week_number|
+||BYMONTH|n/a|not supported|bymonth|by_month|
+||BYSETPOS|n/a|not supported|bysetpos|by_set_position|
+|Specifies the day on which the workweek starts|WKST|n/a|not supported|wkst|week_start|
