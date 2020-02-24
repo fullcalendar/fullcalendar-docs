@@ -9,9 +9,9 @@ Object/`false`, *default:*
 
 ```js
 {
-  left:   'title',
-  center: '',
-  right:  'today prev,next'
+  left:   'today prev,next',
+  center: 'title',
+  right:  'dayGridMonth,dayGridWeek,listMonth'
 }
 ```
 </div>
@@ -20,6 +20,15 @@ Setting the header options to `false` will display no header. An object can be s
 
 `title`
 :   text containing the current month/week/day
+
+`dayGridMonth`
+:   text containing the month wise
+
+`dayGridWeek`
+:   text containing the Week wise
+
+`listMonth`
+:   text containing the list format of month wise
 
 `prev`
 :   button for moving the calendar back one month/week/day
