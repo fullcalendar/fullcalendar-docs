@@ -13,7 +13,7 @@
     "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
   },
   "scripts": {
-    "install": "bundler install && ./scripts/install-version-deps.sh",
+    "install": "bundle install && ./scripts/install-version-deps.sh",
     "build": "npm run webpack-build && npm run jekyll-build",
     "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
     "clean": "npm run webpack-clean && npm run jekyll-clean",
@@ -32,7 +32,7 @@
     "gulp": "^3.9.1",
     "gulp-lintspaces": "^0.5.0",
     "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "url-loader": "^1.1.2",
