@@ -1,0 +1,20 @@
+---
+title: Business-hours on timeGridWeek view
+layout: demo-v4
+plugins: [ daygrid, timegrid ]
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'timeGrid' ],
+      defaultView: 'timeGridWeek',
+      businessHours: true
+    });
+
+    calendar.render();
+  });
+
+</script>

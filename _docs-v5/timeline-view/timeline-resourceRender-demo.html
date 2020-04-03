@@ -1,0 +1,44 @@
+---
+title: Using resourceRender with a popover in timeline-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceRender
+layout: demo-v4
+plugins: [ timeline, resource-common, resource-timeline ]
+---
+{% include popper-css.html %}
+<script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+<script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'resourceTimeline' ],
+      header: {
+        left: 'today prev,next',
+        center: 'title',
+        right: 'resourceTimelineDay,resourceTimelineWeek'
+      },
+      defaultView: 'resourceTimelineDay',
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json',
+
+      resourceRender: function(info) {
+        var questionMark = document.createElement('strong');
+        questionMark.innerText = ' (?) ';
+
+        info.el.querySelector('.fc-cell-text')
+          .appendChild(questionMark);
+
+        var tooltip = new Tooltip(questionMark, {
+          title: info.resource.title + '!!!',
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body'
+        });
+      }
+    });
+
+    calendar.render();
+  });
+
+</script>

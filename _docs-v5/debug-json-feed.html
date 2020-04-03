@@ -1,0 +1,46 @@
+---
+description: json events with standard calendar
+layout: demo-v4
+plugins: [ interaction, daygrid, timegrid ]
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+      timeZone: 'UTC',
+      defaultView: 'dayGridMonth',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      editable: true,
+
+      // JSON FEED INSTRUCTIONS
+      //
+      // 1. Open a new browser tab. Go to https://www.npoint.io/
+      //
+      // 2. Click "+New" at the top.
+      //
+      // 3. Paste your JSON into the text area.
+      //
+      // 4. Click "Save" at the top.
+      //
+      // 5. Click "Share". A box will show up. Copy the first URL.
+      //
+      // 6. Paste this URL below:
+      //
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+
+      // 7. Then, enter a date for defaultDate that best displays your events:
+      //
+      // defaultDate: 'XXXX-XX-XX'
+    });
+
+    calendar.render();
+  });
+
+</script>

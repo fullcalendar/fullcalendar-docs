@@ -1,0 +1,35 @@
+---
+title: Assorted list views
+layout: demo-v4
+plugins: [ list ]
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'list' ],
+      timeZone: 'UTC',
+      defaultView: 'listWeek',
+
+      // customize the button names,
+      // otherwise they'd all just say "list"
+      views: {
+        listDay: { buttonText: 'list day' },
+        listWeek: { buttonText: 'list week' },
+        listMonth: { buttonText: 'list month' }
+      },
+
+      header: {
+        left: 'title',
+        center: '',
+        right: 'listDay,listWeek,listMonth'
+      },
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

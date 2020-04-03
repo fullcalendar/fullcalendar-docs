@@ -1,0 +1,52 @@
+---
+title: Background Events
+description: Click between month and week view to see background events
+layout: demo-v4
+plugins: [ daygrid, timegrid ]
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid' ],
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek'
+      },
+      defaultDate: '{{ ym }}-12',
+      events: [
+        {
+          start: '{{ ym }}-11T10:00:00',
+          end: '{{ ym }}-11T16:00:00',
+          rendering: 'background',
+          color: '#ff9f89'
+        },
+        {
+          start: '{{ ym }}-13T10:00:00',
+          end: '{{ ym }}-13T16:00:00',
+          rendering: 'background',
+          color: '#ff9f89'
+        },
+        {
+          start: '{{ ym }}-24',
+          end: '{{ ym }}-28',
+          overlap: false,
+          rendering: 'background'
+        },
+        {
+          start: '{{ ym }}-06',
+          end: '{{ ym }}-08',
+          overlap: false,
+          rendering: 'background'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>

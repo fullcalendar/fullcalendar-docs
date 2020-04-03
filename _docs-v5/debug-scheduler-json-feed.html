@@ -1,0 +1,55 @@
+---
+description: json events with scheduler plugin
+layout: demo-v4
+plugins: [ interaction, daygrid, timegrid, timeline, resource-common, resource-daygrid, resource-timegrid, resource-timeline ]
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'resourceTimeline', 'resourceTimeGrid' ],
+      timeZone: 'UTC',
+      editable: true,
+      defaultView: 'resourceTimelineDay',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'resourceTimelineDay,resourceTimeGridDay'
+      },
+      resourceLabelText: 'Rooms',
+      views: {
+        resourceTimelineDay: { buttonText: 'timeline' },
+        resourceTimeGridDay: { buttonText: 'timeGrid' }
+      },
+
+      // RESOURCES JSON FEED INSTRUCTIONS
+      //
+      // 1. Open a new browser tab. Go to https://www.npoint.io/
+      //
+      // 2. Click "+New" at the top.
+      //
+      // 3. Paste your JSON into the text area.
+      //
+      // 4. Click "Save" at the top.
+      //
+      // 5. Click "Share". A box will show up. Copy the first URL.
+      //
+      // 6. Paste this URL below:
+      //
+      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json?max=4',
+
+      // 7. do the same for the events JSON feed:
+      //
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources'
+
+      // 8. Then, enter a date for defaultDate that best displays your events:
+      //
+      // defaultDate: 'XXXX-XX-XX'
+    });
+
+    calendar.render();
+  });
+
+</script>

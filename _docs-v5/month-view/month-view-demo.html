@@ -1,0 +1,21 @@
+---
+title: Month View
+layout: demo-v4
+plugins: [ daygrid ]
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid' ],
+      timeZone: 'UTC',
+      defaultView: 'dayGridMonth',
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

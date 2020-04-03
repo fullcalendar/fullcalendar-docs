@@ -1,0 +1,27 @@
+---
+title: dayGridDay and dayGridWeek views
+layout: demo-v4
+plugins: [ interaction, daygrid ]
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid' ],
+      timeZone: 'UTC',
+      defaultView: 'dayGridWeek',
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'dayGridDay,dayGridWeek'
+      },
+      editable: true,
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>
