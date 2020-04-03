@@ -1,5 +1,12 @@
 
-{% if page.version.id == "v3" %}
+{% if page.version.id == "v5" %}
+  <div id='docs-controls-warning'>
+    These docs are for a BETA release. They are a work in progress.
+    <a href='{{ site.baseurl }}/docs/v5/upgrading-from-v4'>
+      Info on upgrading to v5
+    </a>
+  </div>
+{% elsif page.version.id == "v3" %}
   <div id='docs-controls-warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/docs/upgrading-from-v3'>

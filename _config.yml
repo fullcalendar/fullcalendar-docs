@@ -44,6 +44,9 @@ paginate_path: /blog/page:num
 # ordered by how they should appear in UI
 available_versions:
 
+  - id: v5
+    collection: docs-v5
+
   - id: v4
     collection: docs-v4
     is_latest: true
@@ -61,6 +64,10 @@ available_versions:
 # NOTE: if you change the permalink structure, you must also change
 # the permalinks in the _docs-*/index.md files.
 collections:
+
+  docs-v5:
+    output: true
+    permalink: /docs/v5/:slug
 
   docs-v4:
     output: true
