@@ -10,7 +10,7 @@ related:
   - titleFormat
   - buttonText
   - weekText
-  - moreLinkContent
+  - more-link-render-hooks
   - dayPopoverFormat
 demos:
   - locale-demo
