@@ -1,5 +1,5 @@
 const path = require('path')
-const glob = require('glob')
+const globby = require('globby')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
@@ -46,7 +46,7 @@ module.exports = (env, options) => {
 
 function buildEntryMap() {
   let map = {}
-  let jsPaths = glob.sync('./src/*.js')
+  let jsPaths = globby.sync('./src/*.js')
 
   for (let jsPath of jsPaths) {
     let name = path.basename(jsPath, '.js')
