@@ -19,4 +19,3 @@ In list view, the “No events to display” message.
 When the `noEventsDidMount` and `noEventsWillUnmount` hooks are specified as a function in the form `function(arg)`, the `arg` is an object with the following properties:
 
 - `el` - the element
-

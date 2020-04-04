@@ -240,7 +240,7 @@ To use a bundle, do something like this:
 
 You'll still need to include the CSS file. You won't need to define the `plugins` array anymore.
 
-For initializing [scheduler]({{ site.baseurl }}/scheduler), do something like this:
+For initializing [scheduler](premium), do something like this:
 
 ```html
 <link ref='fullcalendar-scheduler/main.css' rel='stylesheet' />

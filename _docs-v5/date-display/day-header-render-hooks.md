@@ -3,7 +3,7 @@ title: Day Header Render Hooks
 ---
 
 
-Customize the header elements above the day cells in daygrid and timegrid views with the following options. Also, the title elements for each day in list view. For the timeline view, see [slot rendering](slot-rendering).
+Customize the header elements above the day cells in daygrid and timegrid views with the following options. Also, the title elements for each day in list view. For the timeline view, see the [slot render hooks](slot-render-hooks).
 
 `dayHeaderClassNames` - a [ClassName Input](classname-input) for adding classNames to the header `<th>` cell
 

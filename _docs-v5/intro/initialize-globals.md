@@ -44,7 +44,7 @@ The `main.js` file does <strong>NOT</strong> include the following plugins:
 
 ## Scheduler
 
-If you want to use any of the premium [Scheduler]({{ site.baseurl }}/scheduler) functionality, use the `fullcalendar-scheduler` bundle instead. Its ZIP and CDN links are also listed on the [Getting Started page](getting-started). The code will be virtually the same:
+If you want to use any of the [premium Scheduler functionality](premium), use the `fullcalendar-scheduler` bundle instead. Its ZIP and CDN links are also listed on the [Getting Started page](getting-started). The code will be virtually the same:
 
 ```html
 <!DOCTYPE html>
