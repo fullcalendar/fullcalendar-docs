@@ -5,21 +5,20 @@ children:
     children:
       - weekends
       - hiddenDays
-      - columnHeader
-      - columnHeaderFormat
-      - columnHeaderText
-      - columnHeaderHtml
+      - dayHeaders
+      - dayHeaderFormat
+      - dayMinWidth
+      - day-header-render-hooks
+      - day-cell-render-hooks
   - title: Time-Axis Settings
     children:
       - slotDuration
       - slotLabelInterval
       - slotLabelFormat
-      - minTime
-      - maxTime
+      - slotMinTime
+      - slotMaxTime
       - scrollTime
-  - title: Callbacks
-    children:
-      - dayRender
+      - slot-render-hooks
   - title: Methods
     children:
       - scrollToTime

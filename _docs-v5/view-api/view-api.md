@@ -3,16 +3,9 @@ title: View API
 children:
   - defaultView
   - view-object
-  - title: Methods
-    children:
-      - Calendar-view
-      - Calendar-changeView
-  - title: Callbacks
-    children:
-      - viewSkeletonRender
-      - viewSkeletonDestroy
-      - datesRender
-      - datesDestroy
+  - view-render-hooks
+  - Calendar-view
+  - Calendar-changeView
 related:
   - view-specific-options
 ---

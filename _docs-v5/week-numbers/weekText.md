@@ -1,5 +1,5 @@
 ---
-title: weekLabel
+title: weekText
 ---
 
 The heading text for week numbers. Also affects weeks in [date formatting](date-formatting).

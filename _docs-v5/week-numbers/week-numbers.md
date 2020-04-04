@@ -4,10 +4,10 @@ children:
   - weekNumbers
   - weekNumbersWithinDays
   - weekNumberCalculation
-  - weekLabel
+  - weekText
+  - week-number-render-hooks
 demos:
   - weekNumbers-demo
-  - weekNumbersWithinDays-demo
 ---
 
 Display week numbers in various parts of your calendar views.

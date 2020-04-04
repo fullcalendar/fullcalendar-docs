@@ -5,7 +5,7 @@ title: height
 Sets the height of the entire calendar, including header and footer.
 
 <div class='spec' markdown='1'>
-Integer, Function, `"parent"`, `"auto"`
+Integer, `"auto"`, a CSS value like `"100%"`
 </div>
 
 By default, this option is unset and the calendar's height is calculated by [aspectRatio](aspectRatio).
@@ -13,11 +13,9 @@ By default, this option is unset and the calendar's height is calculated by [asp
 If an integer is specified, the height of the calendar will be guaranteed to be that exact pixel height.
 If the contents will not fit within the height, scrollbars will appear.
 
-If a function is specified, this function will be called every time a height update is requested. This function should return a pixel value.
-
-If `"parent"` is specified, the height of the calendar will match the height of its parent container element. [See an example](full-height-demo).
-
 If `"auto"` is specified, the view's contents will assume a natural height and no scrollbars will be used.
+
+If `"100%"` is specified, the height of the calendar will match the height of its parent container element. [See an example](full-height-demo). Any other valid CSS value is accepted as well.
 
 Example usage of `height`:
 

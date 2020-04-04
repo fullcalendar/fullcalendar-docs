@@ -1,5 +1,5 @@
 ---
-title: columnHeaderFormat
+title: dayHeaderFormat
 ---
 
 Determines the text that will be displayed on the calendar's column headings.

@@ -14,7 +14,11 @@ children:
       - render
       - destroy
       - rerenderDelay
+      - Calendar-render
       - Calendar-batchRendering
+      - classname-input
+      - content-injection
+      - css-variables
 related:
   - defaultDate
   - defaultView

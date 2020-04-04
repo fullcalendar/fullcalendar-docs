@@ -1,5 +1,5 @@
 ---
-title: columnHeader
+title: dayHeaders
 ---
 
 Whether the day headers should appear. For the Month, TimeGrid, and DayGrid views.

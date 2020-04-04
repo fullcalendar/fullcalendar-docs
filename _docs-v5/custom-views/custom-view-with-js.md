@@ -1,44 +1,83 @@
 ---
-title: Custom Views via JS classes
+title: Custom Views via JS
 type: guide
-excerpt_separator: <!--more-->
 ---
 
-For advanced developers, FullCalendar provides an API for building custom views with the unlimited flexibility of JavaScript code.<!--more--> Using [OOP programming principles](http://en.wikipedia.org/wiki/Object-oriented_programming), one can *subclass* the base `View` class, implementing or overriding each specific behavior as methods like so:
+For advanced developers, FullCalendar provides an API for building custom views with the unlimited flexibility of JavaScript code.
+
+
+## Config Object
+
+You can define an "config object" with functions that execute rendering. Example:
 
 ```js
-import { View, createPlugin } from '@fullcalendar/core';
+import { sliceEvents, createPlugin } from '@fullcalendar/core';
 
-class CustomView extends View {
+const CustomViewConfig = {
 
-  initialize() {
-    // called once when the view is instantiated, when the user switches to the view.
-    // initialize member variables or do other setup tasks.
+  classNames: [ 'custom-view' ],
+
+  content: function(props) {
+    let segs = sliceEvents(props, true); // allDay=true
+
+    let html =
+      '<div class="view-title">' +
+        props.dateProfile.currentRange.start.toUTCString() +
+      '</div>' +
+      '<div class="view-events">' +
+        segs.length + ' events' +
+      '</div>'
+
+    return { html: html }
   }
 
-  renderSkeleton() {
-    // responsible for displaying the skeleton of the view within the already-defined
-    // this.el, an HTML element
-  }
+}
 
-  unrenderSkeleton() {
-    // should undo what renderSkeleton did
+export default createPlugin({
+  views: {
+    custom: CustomViewConfig
   }
+});
+```
 
-  renderDates(dateProfile) {
-    // responsible for rendering the given dates
-  }
+The `classNames` property is a [ClassName Input](classname-input) and the `content` property is a [Content Injection Input](content-injection).
 
-  unrenderDates() {
-    // should undo whatever renderDates does
-  }
+Then, in another file:
 
-  renderEvents(eventStore, eventUiHash) {
-    // responsible for rendering events
-  }
+```js
+import customViewPlugin from './custom-view-file.js';
 
-  unrenderEvents() {
-    // should undo whatever renderEvents does
+let calendarEl = document.getElementById('calendar');
+let calendar = new Calendar(calendarEl, {
+  plugins: [ customViewPlugin ],
+  defaultView: 'custom'
+});
+```
+
+
+## Component
+
+It is also possible to specify a [Preact Component](https://preactjs.com/guide/v10/components/). In the future it will be possible to specify a React component when using the FullCalendar React connector. Here's an example that uses [JSX](https://reactjs.org/docs/introducing-jsx.html):
+
+```jsx
+import { Component, Fragment } from 'preact';
+import { sliceEvents, createPlugin } from '@fullcalendar/core';
+
+class CustomView extends Component {
+
+  render(props) {
+    let segs = sliceEvents(props, true); // allDay=true
+
+    return (
+      <Fragment>
+        <div class='view-title'>
+          {props.dateProfile.currentRange.start.toUTCString()}
+        </div>
+        <div class='view-events'>
+          {segs.length} events
+        </div>
+      </Fragment>
+    );
   }
 
 }
@@ -50,19 +89,13 @@ export default createPlugin({
 });
 ```
 
-Then, in another file:
 
-```js
-import customViewPlugin from './custom-view-file.js';
-...
-let calendar = new Calendar(calendarEl, {
-  plugins: [ customViewPlugin ],
-  defaultView: 'custom'
-})
-...
-```
+## Props
 
-The View class provides many other methods that can be overridden or leveraged. See the [View class' source](https://github.com/fullcalendar/fullcalendar/blob/master/src/View.ts) for more insight. It might be wise to *watch* the project on GitHub in case the API for any of the more advanced non-standard methods changes.
+Both the config and component techniques receive "props", an object with information about the current view. You'll need to look at the [FullCalendar v5 source code](https://github.com/fullcalendar/fullcalendar/blob/v5/packages/core/src/View.ts) to see exactly what's in `props`.
+
+
+## Other Considerations
 
 The above documentation is helpful for building a barebones view, but making it full-featured and interactive is a further challenge. A robust view should be right-to-left compatible, locale-customizable, allow event dragging and resizing, allow user selections, and more...
 

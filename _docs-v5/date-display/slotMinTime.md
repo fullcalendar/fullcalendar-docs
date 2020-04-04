@@ -1,5 +1,5 @@
 ---
-title: minTime
+title: slotMinTime
 ---
 
 Determines the first time slot that will be displayed for each day.

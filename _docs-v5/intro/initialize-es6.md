@@ -13,6 +13,8 @@ npm install --save @fullcalendar/core @fullcalendar/daygrid
 
 Then, you'll need to set up your build system. Setting up a system like Webpack can be a little complicated. Please read some tutorials on the internet or browse the [Webpack Example Repo](https://github.com/fullcalendar/webpack-example).
 
+Your build system will need to know how to process CSS files. This is because fullcalendar core and many of the plugins import their own stylesheets. For Webpack, you can use [css-loader](https://webpack.js.org/loaders/css-loader/).
+
 In your entrypoint file you will want to write something like this:
 
 ```js
@@ -55,29 +57,3 @@ let calendar = new Calendar(calendarEl, {
 });
 ...
 ```
-
-Specifying anything else (like an array of strings) will not work!
-
-## CSS
-
-FullCalendar's core module, in addition to its plugins, provide stylesheets that must be included on your page. In the above example, you would need to somehow include the following files:
-
-```html
-node_modules/@fullcalendar/core/main.css
-node_modules/@fullcalendar/daygrid/main.css
-node_modules/@fullcalendar/timegrid/main.css
-node_modules/@fullcalendar/list/main.css
-```
-
-One way to do this is to write a build script that concatenates these together. Then, serve the concatenated file.
-
-Alternatively, you could use a system like Webpack with a [css-loader](https://github.com/webpack-contrib/css-loader). You would then be able to import your stylesheets **from your JavaScript**:
-
-```js
-import '@fullcalendar/core/main.css';
-import '@fullcalendar/daygrid/main.css';
-import '@fullcalendar/timegrid/main.css';
-import '@fullcalendar/list/main.css';
-```
-
-A different approach is to use [SASS](https://sass-lang.com/). Assuming you have `node_modules` in your `includePaths`, you could include the stylesheets **from your SASS files**.

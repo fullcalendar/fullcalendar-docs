@@ -4,8 +4,8 @@ children:
   - title: List-View-specific Options
     children:
       - listDayFormat
-      - listDayAltFormat
-      - noEventsMessage
+      - listDaySideFormat
+      - no-events-render-hooks
 demos:
   - list-view-demo
 ---

@@ -1,5 +1,5 @@
 ---
-title: maxTime
+title: slotMaxTime
 ---
 
 Determines the last time slot that will be displayed for each day. In line with the discussion about the [Event object](event-parsing), it is important to stress that this should be specified as an **exclusive** end time.

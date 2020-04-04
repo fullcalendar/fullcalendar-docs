@@ -1,5 +1,5 @@
 ---
-title: slotWidth
+title: slotMinWidth
 ---
 
 Determines how wide each of the time-axis slots will be. Specified as a number of pixels.

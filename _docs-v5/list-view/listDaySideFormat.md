@@ -1,5 +1,5 @@
 ---
-title: listDayAltFormat
+title: listDaySideFormat
 ---
 
 A [Date Formatter](date-formatting) that affects the text on the right side of the day headings in list view.

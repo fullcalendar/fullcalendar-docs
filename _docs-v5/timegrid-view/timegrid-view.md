@@ -3,10 +3,10 @@ title: TimeGrid View
 children:
   - title: TimeGrid-specific Options
     children:
-      - allDaySlot
-      - allDayText
       - slotEventOverlap
       - timeGridEventMinHeight
+      - allDaySlot
+      - all-day-render-hooks
 related:
   - slotDuration
   - slotLabelFormat

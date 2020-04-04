@@ -5,12 +5,13 @@ children:
   - title: Timeline-specific Options
     children:
       - resourceGroupField
-      - resourceGroupText
       - resourceAreaWidth
-      - resourceLabelText
-      - resourceColumns
+      - resourceAreaColumns
       - resourcesInitiallyExpanded
-      - slotWidth
+      - slotMinWidth
+      - resource-render-hooks
+      - resource-group-render-hooks
+      - resource-area-header-render-hooks
       - timeline-view-no-resources
 related:
   - dateClick

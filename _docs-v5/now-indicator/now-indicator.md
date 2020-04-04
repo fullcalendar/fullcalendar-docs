@@ -3,6 +3,7 @@ title: Now Indicator
 children:
   - nowIndicator
   - now
+  - now-indicator-render-hooks
 demos:
   - timegrid-nowIndicator-demo
   - timeline-nowIndicator-demo

@@ -1,8 +1,8 @@
 ---
-title: eventLimit
+title: dayMaxEventRows
 ---
 
-Limits the number of events displayed on a day. The rest will show up in a popover.
+The max number of stacked event levels within a given day. This *includes* the +more link if present. The rest will show up in a popover.
 
 <div class='spec' markdown='1'>
 Boolean, Integer. *default:* `false`
@@ -20,10 +20,10 @@ For the all-day section in the TimeGrid views, a value of `true` will limit the 
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  eventLimit: true, // for all non-TimeGrid views
+  dayMaxEventRows: true, // for all non-TimeGrid views
   views: {
     timeGrid: {
-      eventLimit: 6 // adjust to 6 only for timeGridWeek/timeGridDay
+      dayMaxEventRows: 6 // adjust to 6 only for timeGridWeek/timeGridDay
     }
   }
 });

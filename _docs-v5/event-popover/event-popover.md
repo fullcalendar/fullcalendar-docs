@@ -1,9 +1,10 @@
 ---
 title: Event Popover
 children:
-  - eventLimit
-  - eventLimitClick
-  - eventLimitText
+  - dayMaxEventRows
+  - dayMaxEvents
+  - moreLinkClick
+  - more-link-render-hooks
   - dayPopoverFormat
 demos:
   - event-popover-demo

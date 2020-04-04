@@ -9,14 +9,14 @@ Object/`false`, *default:*
 
 ```js
 {
-  left:   'title',
+  start: 'title', // will normally be on the left. if RTL, will be on the right
   center: '',
-  right:  'today prev,next'
+  end: 'today prev,next' // will normally be on the right. if RTL, will be on the left
 }
 ```
 </div>
 
-Setting the header options to `false` will display no header. An object can be supplied with properties `left`, `center`, and `right`. These properties contain strings with comma/space separated values. Values separated by a comma will be displayed adjacently. Values separated by a space will be displayed with a small gap in between. Strings can contain any of the following values:
+Setting the header options to `false` will display no header. An object can be supplied with properties `start/center/end` or `left/center/right`. These properties contain strings with comma/space separated values. Values separated by a comma will be displayed adjacently. Values separated by a space will be displayed with a small gap in between. Strings can contain any of the following values:
 
 `title`
 :   text containing the current month/week/day

@@ -1,6 +1,7 @@
 ---
 title: Event Display
 children:
+  - event-render-hooks
   - eventColor
   - eventBackgroundColor
   - eventBorderColor
@@ -11,11 +12,6 @@ children:
   - nextDayThreshold
   - eventOrder
   - progressiveEventRendering
-  - title: Callbacks
-    children:
-      - eventRender
-      - eventPositioned
-      - eventDestroy
   - title: Methods
     children:
       - Calendar-rerenderEvents

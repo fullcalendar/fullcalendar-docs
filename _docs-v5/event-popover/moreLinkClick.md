@@ -1,5 +1,5 @@
 ---
-title: eventLimitClick
+title: moreLinkClick
 ---
 
 Determines the action taken when the user clicks on a "more" link created by the [eventLimit](eventLimit) option.
@@ -42,21 +42,7 @@ The [Date object](date-object) representation of the day
 </tr>
 
 <tr>
-<th>dayEl</th>
-<td markdown='1'>
-The HTML element for the day cell.
-</td>
-</tr>
-
-<tr>
-<th>moreEl</th>
-<td markdown='1'>
-The HTML element for the "more" link.
-</td>
-</tr>
-
-<tr>
-<th>segs</th>
+<th>allSegs</th>
 <td markdown='1'>
 An array of all event "segment" objects for the given day. More information below.
 </td>
