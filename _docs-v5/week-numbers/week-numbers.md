@@ -2,7 +2,6 @@
 title: Week Numbers
 children:
   - weekNumbers
-  - weekNumbersWithinDays
   - weekNumberCalculation
   - weekText
   - week-number-render-hooks

@@ -12,9 +12,6 @@ children:
   - nextDayThreshold
   - eventOrder
   - progressiveEventRendering
-  - title: Methods
-    children:
-      - Calendar-rerenderEvents
 demos:
   - event-colors-demo
   - event-tooltip-demo

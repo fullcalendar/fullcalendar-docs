@@ -18,7 +18,7 @@ plugins: [ interaction, daygrid, timegrid ]
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
       editable: true,
-      eventLimit: true, // when too many events in a day, show the popover
+      dayMaxEvents: true, // when too many events in a day, show the popover
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'
     });
 

@@ -17,14 +17,14 @@ plugins: [ timeline, resource-common, resource-timeline ]
       },
       defaultView: 'resourceTimelineDay',
       aspectRatio: 1.5,
-      resourceColumns: [
+      resourceAreaColumns: [
         {
-          labelText: 'Room',
-          field: 'title'
+          field: 'title',
+          headerContent: 'Room'
         },
         {
-          labelText: 'Occupancy',
-          field: 'occupancy'
+          field: 'occupancy',
+          headerContent: 'Occupancy'
         }
       ],
       resources: [

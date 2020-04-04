@@ -29,6 +29,6 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-Resource groups will have a gray divider at the top of each group. The text at the top of each group will be determined by [resourceGroupText](resourceGroupText).
+Resource groups will have a gray divider at the top of each group. The text at the top of each group will be determined by [resourceGroupLabelContent](resourceGroupLabelContent).
 
 [See a demo of resourceGroupField](timeline-resourceGroupField-demo).

@@ -18,8 +18,8 @@ related:
   - slotDuration
   - slotLabelFormat
   - slotLabelInterval
-  - minTime
-  - maxTime
+  - slotMinTime
+  - slotMaxTime
   - nowIndicator
   - scrollTime
   - eventDrop
@@ -28,8 +28,8 @@ demos:
   - timeline-standard-view-demo
   - timeline-custom-view-demo
   - timeline-resourceGroupField-demo
-  - resourceColumns-demo
-  - resourceColumns-grouping-demo
+  - resourceAreaColumns-demo
+  - resourceAreaColumns-grouping-demo
   - timeline-resourceRender-demo
 ---
 

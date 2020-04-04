@@ -18,19 +18,19 @@ plugins: [ timeline, resource-common, resource-timeline, interaction ]
       aspectRatio: 1.5,
       defaultView: 'resourceTimelineDay',
       resourceAreaWidth: '40%',
-      resourceColumns: [
+      resourceAreaColumns: [
         {
           group: true,
-          labelText: 'Building',
-          field: 'building'
+          field: 'building',
+          headerContent: 'Building'
         },
         {
-          labelText: 'Room',
-          field: 'title'
+          field: 'title',
+          headerContent: 'Room'
         },
         {
-          labelText: 'Occupancy',
-          field: 'occupancy'
+          field: 'occupancy',
+          headerContent: 'Occupancy'
         }
       ],
       resources: [

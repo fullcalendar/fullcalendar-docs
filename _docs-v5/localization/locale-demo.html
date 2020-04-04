@@ -24,7 +24,7 @@ plugins: [ interaction, daygrid, timegrid, list ]
       weekNumbers: true,
       navLinks: true, // can click day/week names to navigate views
       editable: true,
-      eventLimit: true, // allow "more" link when too many events
+      dayMaxEvents: true, // allow "more" link when too many events
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'
     });
 

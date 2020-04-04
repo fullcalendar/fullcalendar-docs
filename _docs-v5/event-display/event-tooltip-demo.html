@@ -1,6 +1,6 @@
 ---
-title: Event tooltip with eventRender
-description: Event tooltip with eventRender and Tooltip.js
+title: Event tooltip with eventDidMount
+description: Event tooltip with eventDidMount and Tooltip.js
 layout: demo-v4
 plugins: [ daygrid ]
 ---
@@ -18,7 +18,7 @@ plugins: [ daygrid ]
       defaultView: 'dayGridMonth',
       defaultDate: '{{ ym }}-12',
 
-      eventRender: function(info) {
+      eventDidMount: function(info) {
         var tooltip = new Tooltip(info.el, {
           title: info.event.extendedProps.description,
           placement: 'top',

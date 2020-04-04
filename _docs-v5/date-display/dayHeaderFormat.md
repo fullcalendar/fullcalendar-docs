@@ -21,4 +21,4 @@ Determines the text that will be displayed on the calendar's column headings.
 
 As noted above, each view has a specific default. Get fine-tuned control with [View-Specific Options](view-specific-options). A single string alone will set the value for all views.
 
-If you need programmatic control, use [columnHeaderText](columnHeaderText) or [columnHeaderHtml](columnHeaderHtml) instead.
+If you need programmatic control, use the [day-header render hooks](day-header-render-hooks) instead.

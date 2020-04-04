@@ -8,7 +8,7 @@ The max number of stacked event levels within a given day. This *includes* the +
 Boolean, Integer. *default:* `false`
 </div>
 
-When there are too many events, a link that looks like "+2 more" is displayed. The exact action that happens when the user clicks the link is determined by [eventLimitClick](eventLimitClick).
+When there are too many events, a link that looks like "+2 more" is displayed. The exact action that happens when the user clicks the link is determined by [moreLinkClick](moreLinkClick).
 
 A value of `false` (the default) will display all events as-is.
 

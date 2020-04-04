@@ -2,7 +2,7 @@
 title: moreLinkClick
 ---
 
-Determines the action taken when the user clicks on a "more" link created by the [eventLimit](eventLimit) option.
+Determines the action taken when the user clicks on a "more" link created by the [dayMaxEventRows](dayMaxEventRows) or [dayMaxEvents](dayMaxEvents) options.
 
 <div class='spec' markdown='1'>
 "popover", "week", "day", view name (string), function

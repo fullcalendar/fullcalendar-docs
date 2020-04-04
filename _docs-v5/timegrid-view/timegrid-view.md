@@ -4,15 +4,14 @@ children:
   - title: TimeGrid-specific Options
     children:
       - slotEventOverlap
-      - timeGridEventMinHeight
       - allDaySlot
       - all-day-render-hooks
 related:
   - slotDuration
   - slotLabelFormat
   - slotLabelInterval
-  - minTime
-  - maxTime
+  - slotMinTime
+  - slotMaxTime
   - nowIndicator
   - scrollTime
 demos:

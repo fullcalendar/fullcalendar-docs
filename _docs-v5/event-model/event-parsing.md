@@ -2,7 +2,7 @@
 title: Event Parsing
 ---
 
-When you give your calendar event data, whether it's through [an array](events-array), [a json feed](events-json-feed), or the [addEvent method](Calendar-addEvent), you specify the event as a plain JavaScript object with properties. This object then gets "parsed" into a proper [Event Object](event-object) that is then exposed in other parts of the API, like the [eventRender](eventRender) method.
+When you give your calendar event data, whether it's through [an array](events-array), [a json feed](events-json-feed), or the [addEvent method](Calendar-addEvent), you specify the event as a plain JavaScript object with properties. This object then gets "parsed" into a proper [Event Object](event-object) that is then exposed in other parts of the API, like the [event render hooks](event-render-hooks) method.
 
 This article describes all the properties you may supply in your plain, pre-parsed object. To demonstrate the simplest case:
 
@@ -216,7 +216,7 @@ Here are all the available properties, **all of which are optional**:
   <tr>
   <th>extendedProps</th>
   <td markdown='1'>
-  Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in a custom [eventRender callback](eventRender).
+  Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in [event render hooks](event-render-hooks).
   </td>
   </tr>
 

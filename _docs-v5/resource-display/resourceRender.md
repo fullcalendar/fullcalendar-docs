@@ -50,4 +50,4 @@ var calendar = new Calendar(calendarEl, {
 
 See an example of resourceRender [with timeline view](timeline-resourceRender-demo) and [with vertical resource view](vertical-resource-resourceRender-demo).
 
-This callback will not allow manipulating of *event* elements, as they will not yet have been drawn at the time of invocation. Use [eventRender](eventRender) for that.
+This callback will not allow manipulating of *event* elements, as they will not yet have been drawn at the time of invocation. Use the [event render hooks](event-render-hooks) for that.

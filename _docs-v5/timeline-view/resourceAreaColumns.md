@@ -10,12 +10,12 @@ An array of objects can be provided, each with information about a column:
 var calendar = new Calendar(calendarEl, {
   resourceAreaColumns: [
     {
-      labelText: 'First Name',
-      field: 'fname'
+      field: 'fname',
+      headerContent: 'First Name'
     },
     {
-      labelText: 'Last Name',
-      field: 'lname'
+      field: 'lname',
+      headerContent: 'Last Name'
     }
   ]
   resources: [
@@ -113,9 +113,9 @@ called right before the `<td>` will be removed from the DOM
 </table>
 
 
-[See a simple demo of resourceAreaColumns](resourceColumns-demo).
+[See a simple demo of resourceAreaColumns](resourceAreaColumns-demo).
 
-[See a demo of resourceAreaColumns with **grouping**](resourceColumns-grouping-demo).
+[See a demo of resourceAreaColumns with **grouping**](resourceAreaColumns-grouping-demo).
 
 
 Here is an example that incorporates `cellClassNames` and `cellContent`:
@@ -123,7 +123,7 @@ Here is an example that incorporates `cellClassNames` and `cellContent`:
 ```js
 resourceAreaColumns: [
   {
-    labelText: 'My Column',
+    headerContent: 'My Column',
 
     cellClassNames: function(arg) {
       var extendedProps = arg.resource.extendedProps;

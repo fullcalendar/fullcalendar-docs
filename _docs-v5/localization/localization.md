@@ -6,11 +6,11 @@ children:
   - firstDay
 related:
   - eventTimeFormat
-  - columnHeaderFormat
+  - dayHeaderFormat
   - titleFormat
   - buttonText
-  - weekLabel
-  - eventLimitText
+  - weekText
+  - moreLinkContent
   - dayPopoverFormat
 demos:
   - locale-demo

@@ -2,7 +2,7 @@
 title: dayPopoverFormat
 ---
 
-Determines the date format of title of the popover created by the [eventLimitClick](eventLimitClick) option.
+Determines the date format of title of the popover created by the [moreLinkClick](moreLinkClick) option.
 
 <div class='spec' markdown='1'>
 [Date Formatter](date-formatting), *default*:

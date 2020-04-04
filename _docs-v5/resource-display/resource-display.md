@@ -4,13 +4,7 @@ is_premium: true
 children:
   - resourceOrder
   - filterResourcesWithEvents
-  - resourceText
-  - title: Methods
-    children:
-      - rerenderResources
-  - title: Callbacks
-    children:
-      - resourceRender
+  - resource-render-hooks
 related:
   - timeline-view
   - vertical-resource-view

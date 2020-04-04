@@ -16,8 +16,6 @@ children:
       - Calendar-incrementDate
       - Calendar-getDate
 related:
-  - datesRender
-  - datesDestroy
   - date-nav-links
 demos:
   - date-api-buttons-demo

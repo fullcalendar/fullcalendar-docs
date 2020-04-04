@@ -4,7 +4,7 @@ title: Date Formatting
 
 The term "date formatting" means taking a Date object and converting it into a string. The string can either be a standard string format like ISO8601 (ex: `'2018-05-01'`) or it can be something more custom that you can display to users.
 
-There are settings that define how a date is displayed, such as [eventTimeFormat](eventTimeFormat), [titleFormat](titleFormat), [columnHeaderFormat](columnHeaderFormat), and others. These settings accept "date formatting configs". These are objects that define what information will outputted into the resulting string. Example:
+There are settings that define how a date is displayed, such as [eventTimeFormat](eventTimeFormat), [titleFormat](titleFormat), [dayHeaderFormat](dayHeaderFormat), and others. These settings accept "date formatting configs". These are objects that define what information will outputted into the resulting string. Example:
 
 ```js
 var calendar = new Calendar(calendarEl, {

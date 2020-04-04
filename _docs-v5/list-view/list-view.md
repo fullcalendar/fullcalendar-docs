@@ -10,7 +10,7 @@ demos:
   - list-view-demo
 ---
 
-A list view displays events in a simple vertical list for a specific interval of time. If there are no events during a specific interval of time, the [noEventsMessage](noEventsMessage) is displayed. There are 4 preset list views: **listDay**, **listWeek**, **listMonth**, and **listYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
+A list view displays events in a simple vertical list for a specific interval of time. If there are no events during a specific interval of time, the "No events to display" screen is displayed, which can be customized via [render hooks](no-events-render-hooks). There are 4 preset list views: **listDay**, **listWeek**, **listMonth**, and **listYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```js
 import { Calendar } from '@fullcalendar/core';
@@ -50,11 +50,11 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 If you'd like a different interval of time, you can create a [custom view](custom-view-with-settings) with type `'list'`.
 
-The following settings are specific to list-view. However, many other settings throughout the API also affect list-view as well, such as [eventRender](eventRender) and [eventClick](eventClick).
+The following settings are specific to list-view. However, many other settings throughout the API also affect list-view as well, such as  in the [event render hooks](event-render-hooks) and [eventClick](eventClick).
 
 ## Event Appearance
 
-FullCalendar options and Event properties control the appearance of events in list view. For example, the color of the event dot marker is the same as the event `backgroundColor`. However, a lot more can be achieved in the [`eventRender`](eventRender) callback, where the style object of the [Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) can be modified.
+FullCalendar options and Event properties control the appearance of events in list view. For example, the color of the event dot marker is the same as the event `backgroundColor`. However, a lot more can be achieved in the [event render hooks](event-render-hooks), where the style object of the [Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) can be modified.
 
 In the following example, we pass non-standard information about events through the `extendedProps` hash property. Then, we change the display of the event row and dot marker depending on a custom _status_ property:
 
@@ -77,7 +77,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
       borderColor: 'green'
     }
   ],
-  eventRender: function(info) {
+  eventDidMount: function(info) {
     if (info.event.extendedProps.status === 'done') {
 
       // Change background color of row

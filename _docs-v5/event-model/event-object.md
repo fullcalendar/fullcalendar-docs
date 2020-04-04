@@ -178,7 +178,7 @@ The expected values for `allDay`, `start` and `end` have been discussed in detai
 
 ## Non-standard Fields
 
-In addition to the fields above, you may also include your own non-standard fields in each Event object. FullCalendar will not modify or delete these fields. For example, developers often include a `description` field for use in callbacks such as [eventRender](eventRender). Any non-standard properites are moved into the `extendedProps` hash during [event parsing](event-parsing).
+In addition to the fields above, you may also include your own non-standard fields in each Event object. FullCalendar will not modify or delete these fields. For example, developers often include a `description` field for use in callbacks like [event render hooks](event-render-hooks). Any non-standard properites are moved into the `extendedProps` hash during [event parsing](event-parsing).
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -194,7 +194,7 @@ var calendar = new Calendar(calendarEl, {
     }
     // more events ...
   ],
-  eventRender: function (info) {
+  eventDidMount: function(info) {
     console.log(info.event.extendedProps);
     // {description: "Lecture", department: "BioChemistry"}
   }
