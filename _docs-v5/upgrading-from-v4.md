@@ -104,7 +104,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 - rendering optimizations. we now internally use a virtual DOM ([see below](#virtual-dom))
 - ability to inject custom content almost anywhere in the calendar
-- horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](#). Requires a premium plugin.
+- horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](dayMinWidth). Requires a premium plugin.
 - expanding the height of timegrid slots ([#265](https://github.com/fullcalendar/fullcalendar/issues/265))
 - expanding the height of resource rows in timeline view ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
 - pre-built bundles that require minimal configuration and no build system ([see below](#pre-built-bundles))
@@ -119,11 +119,11 @@ This guide outlines the changes between v4 and v5-beta.
 
 <br />
 
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/v5/docs)
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs/v5)
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
-**Have a comment?** [Comment on the blog post](#)
+<!-- **Have a comment?** [Comment on the blog post](#) -->
 
 </div>
 <div class='sidebar-layout__sidebar' id='toc' markdown='1'>
@@ -170,7 +170,7 @@ FullCalendar now internally uses a miniature virtual-DOM library called [Preact]
 
 Just because we use a virtual DOM doesn't mean we no longer think about performance. We still care about limiting the amount of rerender execution, even though it performs fewer real DOM operations. This will continue to be a priority as we further develop the beta.
 
-How does this affect FullCalendar's API? It doesn't really. From any of the content-injection options like `eventContent` you are able to construct and return a virtual DOM node. [Learn more in this article](#). Aside from that, you won't need to think about the virtual DOM.
+How does this affect FullCalendar's API? It doesn't really. From any of the content injection options like `eventContent` you are able to construct and return a virtual DOM node. [Learn more in this article](content-injection#vdom). Aside from that, you won't need to think about the virtual DOM.
 
 
 ## CSS and DOM Structure
@@ -181,7 +181,7 @@ The CSS has been completely rewritten. Most importantly, the selectors are flatt
 
 As a result, if you've written custom styling, <strong>it will most likely need to be rewritten for v5</strong>, or at the very least you will need to swap out your classNames. To help you do this, we will likely release a className-upgrade document prior to the official release.
 
-<strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='#'>how to use CSS variables &raquo;</a>
+<strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='css-variables'>how to use CSS variables &raquo;</a>
 
 
 ## CSS Importing
@@ -220,6 +220,8 @@ Configuring your build system to handle CSS is beyond the scope of this document
 
 What if you want to avoid using a build system? What if you prefer manual `<script>` tags and browser globals? This is why we are beginning to offer pre-built bundles of plugins ([#4566](https://github.com/fullcalendar/fullcalendar/issues/4566)). In fact, using the pre-built bundles will be the <strong>ONLY</strong> way to use manual `<script>` tags going forward. The individual plugins will no longer provide browser-runnable UMD files.
 
+First, [get the bundle distro files on the Getting Started page &raquo;](getting-started#pre-built-bundles)
+
 To use a bundle, do something like this:
 
 ```html
@@ -238,7 +240,7 @@ To use a bundle, do something like this:
 
 You'll still need to include the CSS file. You won't need to define the `plugins` array anymore.
 
-For initializing [scheduler](#), do something like this:
+For initializing [scheduler]({{ site.baseurl }}/scheduler), do something like this:
 
 ```html
 <link ref='fullcalendar-scheduler/main.css' rel='stylesheet' />
@@ -256,24 +258,13 @@ For initializing [scheduler](#), do something like this:
 
 When using the scheduler bundle, you don't need to include both the standard bundle <strong>AND</strong> the scheduler bundle. The scheduler bundle already <strong>INCLUDES</strong> the standard plugins.
 
-The bundles do <strong>NOT</strong> include the following plugins:
+The `main.js` file does <strong>NOT</strong> include the following plugins:
 
 - `google-calendar` - write a separate script tag for `<bundle-dir>/google-calendar.js`
-- `rrule` - write separate script tag for `<bundle-dir>/rrule.js` and the [rrule JS file](#)
-- `luxon` - write separate script tag for `<bundle-dir>/luxon.js` and the [luxon JS file](#)
-- `moment` - write separate script tag for `<bundle-dir>/moment.js` and the [moment JS file](#)
-- `moment-timezone` - write separate script tag for `<bundle-dir>/moment-timezone.js` and the [moment-timezone JS file(s)](#)
-
-
-How do you actually get the code for the bundles?
-
-- visit the [downloads page](#)
-- use a CDN
-  - <strong>fullcalendar:</strong> [JS](#), [CSS](#)
-  - <strong>fullcalendar-scheduler:</strong> [JS](#), [CSS](#)
-- install via NPM
-  - `npm install fullcalendar`
-  - `npm install fullcalendar-scheduler`
+- `rrule` - write separate script tag for `<bundle-dir>/rrule.js` and the [rrule JS file](https://www.jsdelivr.com/package/npm/rrule?path=dist%2Fes5)
+- `luxon` - write separate script tag for `<bundle-dir>/luxon.js` and the [luxon JS file](https://www.jsdelivr.com/package/npm/luxon?path=build%2Fglobal)
+- `moment` - write separate script tag for `<bundle-dir>/moment.js` and the [moment JS file](https://www.jsdelivr.com/package/npm/moment)
+- `moment-timezone` - write separate script tag for `<bundle-dir>/moment-timezone.js` and the [moment-timezone JS file(s)](https://www.jsdelivr.com/package/npm/moment-timezone)
 
 
 ## Toolbar
@@ -296,7 +287,7 @@ When specifying [header](header) and [footer](footer), the `{ left, center, righ
     </td>
     <td>
       <p>
-        Use the <a href='#'>view render hooks</a> instead:
+        Use the <a href='view-render-hooks'>view render hooks</a> instead:
       </p>
       <ul class='diff-list'>
         <li>
@@ -331,7 +322,7 @@ The header elements above the day cells in daygrid and timegrid views. Also, the
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>dayHeaders</a>
+          <a href='dayHeaders' class='diff-added'>dayHeaders</a>
           - simply renamed. Accepts <code>true</code> or <code>false</code> for enabling headers.
         </li>
       </ul>
@@ -346,7 +337,7 @@ The header elements above the day cells in daygrid and timegrid views. Also, the
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>dayHeaderFormat</a>
+          <a href='dayHeaderFormat' class='diff-added'>dayHeaderFormat</a>
           - simply renamed
         </li>
       </ul>
@@ -361,7 +352,7 @@ The header elements above the day cells in daygrid and timegrid views. Also, the
     </td>
     <td>
       <p>
-        Use the <a href='#'>day-header render hooks</a> instead:
+        Use the <a href='day-header-render-hooks'>day-header render hooks</a> instead:
       </p>
       <ul class='diff-list'>
         <li>
@@ -395,7 +386,7 @@ The days cells in daygrid and timegrid views:
     </td>
     <td>
       <p>
-        Use the <a href='#'>day-cell render hooks</a> instead:
+        Use the <a href='day-cell-render-hooks'>day-cell render hooks</a> instead:
       </p>
       <ul class='diff-list'>
         <li>
@@ -421,7 +412,7 @@ The days cells in daygrid and timegrid views:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>dayMinWidth</a>
+          <a href='dayMinWidth' class='diff-added'>dayMinWidth</a>
           - creates a horizontal scrollbar if day cells get any narrower. For daygrid and timegrid views only. Requires the <code>@fullcalendar/scrollgrid</code> premium plugin.
         </li>
       </ul>
@@ -443,7 +434,7 @@ The days cells in daygrid and timegrid views:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>slotMinTime</a>
+          <a href='slotMinTime' class='diff-added'>slotMinTime</a>
           - simply renamed
         </li>
       </ul>
@@ -458,7 +449,7 @@ The days cells in daygrid and timegrid views:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>slotMaxTime</a>
+          <a href='slotMaxTime' class='diff-added'>slotMaxTime</a>
           - simply renamed
         </li>
       </ul>
@@ -473,7 +464,7 @@ The days cells in daygrid and timegrid views:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>slotMinWidth</a> - simply renamed. same exact behavior. only applies to timeline view
+          <a href='slotMinWidth' class='diff-added'>slotMinWidth</a> - simply renamed. same exact behavior. only applies to timeline view
         </li>
       </ul>
     </td>
@@ -482,7 +473,7 @@ The days cells in daygrid and timegrid views:
     <td></td>
     <td>
       <p>
-        The following <a href='#'>slot render hooks</a> are now available:
+        The following <a href='slot-render-hooks'>slot render hooks</a> are now available:
       </p>
       <ul class='diff-list'>
         <li class='diff-added'>slotLabelClassNames</li>
@@ -496,7 +487,7 @@ The days cells in daygrid and timegrid views:
     <td></td>
     <td>
       <p>
-        You can now customize the long span of content next to the slot's date/time text. In timegrid view, this is the horizontal space that passes under all of the days. In timeline view, this is the vertical space that passes through the resources. Use the following <a href='#'>slot render hooks</a>:
+        You can now customize the long span of content next to the slot's date/time text. In timegrid view, this is the horizontal space that passes under all of the days. In timeline view, this is the vertical space that passes through the resources. Use the following <a href='slot-render-hooks'>slot render hooks</a>:
       </p>
       <ul class='diff-list'>
         <li class='diff-added'>slotLaneClassNames</li>
@@ -534,9 +525,9 @@ Date rendering, in aggregate:
     <td>
       <p>
         No direct replacement. Instead, handle <em>individual</em> date cells via the
-        <a href='#'>day header</a>,
-        <a href='#'>day cell</a>, or
-        <a href='#'>slot</a>
+        <a href='day-header-render-hooks'>day header</a>,
+        <a href='day-cell-render-hooks'>day cell</a>, or
+        <a href='slot-render-hooks'>slot</a>
         render hooks.
       </p>
     </td>
@@ -570,7 +561,7 @@ Week numbers:
     <td>
       <p>
         This is now the default behavior. The <code>weekNumbersWithinDays:false</code> behavior has been retired.
-        <a href='#'>See the old docs</a> for an illustration of the difference.
+        <a href='{{ site.baseurl }}/docs/weekNumbersWithinDays'>See the old docs</a> for an illustration of the difference.
       </p>
     </td>
   </tr>
@@ -583,7 +574,7 @@ Week numbers:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>weekText</a>
+          <a href='weekText' class='diff-added'>weekText</a>
           - simply renamed. the text that gets prefixed to the formatted week number
         </li>
       </ul>
@@ -593,7 +584,7 @@ Week numbers:
     <td></td>
     <td>
       <p>
-        The following <a href='#'>week-number render hooks</a> are now available:
+        The following <a href='week-number-render-hooks'>week-number render hooks</a> are now available:
       </p>
       <ul class='diff-list'>
         <li class='diff-added'>weekNumberClassNames</li>
@@ -617,7 +608,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
     </td>
     <td>
       <p>
-        Use the <a href='#'>all-day render hooks</a> instead:
+        Use the <a href='all-day-render-hooks'>all-day render hooks</a> instead:
       </p>
       <ul class='diff-list'>
         <li>
@@ -625,8 +616,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
         </li>
         <li>
           <span class='diff-added'>allDayContent</span>
-          - for emulating <span class='diff-removed'>allDayText</span>, assign a string.
-          For emulating <span class='diff-removed'>allDayHtml</span>, assign an object like <code>{ html: '' }</code>
+          - for emulating <span class='diff-removed'>allDayText</span>, assign a string. For emulating <span class='diff-removed'>allDayHtml</span>, assign an object like <code>{ html: '' }</code>
         </li>
         <li>
           <span class='diff-added'>allDayDidMount</span>
@@ -652,7 +642,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
     </td>
     <td>
       <p>
-        Use the new <a href='#'>event render hooks</a> instead:
+        Use the new <a href='event-render-hooks'>event render hooks</a> instead:
       </p>
       <ul class='diff-list'>
         <li>
@@ -682,7 +672,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
     </td>
     <td>
       <p>
-        No direct replacement. You can use <a href='#' class='diff-added'>eventDidMount</a> to know when the element
+        No direct replacement. You can use <span class='diff-added'>eventDidMount</span> to know when the element
         has been inserted into the DOM, but it's no longer possible to know when its position has stabilized.
       </p>
     </td>
@@ -708,7 +698,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
       </ul>
     </td>
     <td>
-      Call <a href='render-method'><span class='diff-unchanged'>Calendar::render</span></a> after initialization to rerender everything.
+      Call <a href='Calendar-render' class='diff-unchanged'>Calendar::render</a> after initialization to rerender everything.
     </td>
   </tr>
   <tr>
@@ -729,7 +719,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
     </td>
 <td markdown='1'>
 
-Background events now display their title (addresses [#2746](https://github.com/fullcalendar/fullcalendar/issues/2746)). They previously did not. To prevent this, don't assign a `title` to the <a href='#'>Event Object Input</a>. Alternatively, you can override the rendering like this:
+Background events now display their title (addresses [#2746](https://github.com/fullcalendar/fullcalendar/issues/2746)). They previously did not. To prevent this, don't assign a `title` to the <a href='event-parsing'>Event Object Input</a>. Alternatively, you can override the rendering like this:
 
 ```js
 eventContent: function(arg) {
@@ -755,7 +745,7 @@ When there are too many events to fit within a single day:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>dayMaxEventRows</a>
+          <a href='dayMaxEventRows' class='diff-added'>dayMaxEventRows</a>
           - the max number of stacked event levels within a given day. This <em>includes</em> the +more link if present. This is the same behavior as v4's <span class='diff-removed'>eventLimit</span>. Just as in v4, setting it to <code>true</code> uses the cell's natural dimensions to limit events.
         </li>
       </ul>
@@ -766,7 +756,7 @@ When there are too many events to fit within a single day:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>dayMaxEvents</a>
+          <a href='dayMaxEvents' class='diff-added'>dayMaxEvents</a>
           - the max number of events within a given day, <em>not</em> counting the +more link (addresses <a href='https://github.com/fullcalendar/fullcalendar/issues/3035'>#3035</a>)
         </li>
       </ul>
@@ -781,8 +771,8 @@ When there are too many events to fit within a single day:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>moreLinkClick</a>
-          - renamed from <span class='diff-removed'>eventLimitClick</span>. No longer receives the <code>moreEl</code> property.
+          <a href='moreLinkClick' class='diff-added'>moreLinkClick</a>
+          - renamed from <span class='diff-removed'>eventLimitClick</span>. No longer receives the <code>moreEl</code> or <code>dayEl</code> properties. The <code>segs</code> property has been rename to <code>allSegs</code>.
         </li>
       </ul>
     </td>
@@ -795,7 +785,7 @@ When there are too many events to fit within a single day:
     </td>
     <td>
       <p>
-        Use the <a href='#'>more link render hooks</a> instead:
+        Use the <a href='more-link-render-hooks'>more link render hooks</a> instead:
       </p>
       <ul class='diff-list'>
         <li>
@@ -832,7 +822,7 @@ When there are too many events to fit within a single day:
         A resource "label" is anywhere the name of a resource is displayed. They exist in the header of vertical resource view and the side section of resource timeline view.
       </p>
       <p>
-        Use the <a href='#'>resource label render hooks</a> going forward:
+        Use the following <a href='resource-render-hooks'>resource render hooks</a> going forward:
       </p>
       <ul class='diff-list'>
         <li>
@@ -860,7 +850,7 @@ When there are too many events to fit within a single day:
         A resource "lane" is an element in resource-timeline view. It runs horizontally across the timeline slots for each resource.
       </p>
       <p>
-        The following <a href='#'>resource lane render hooks</a> are now available:
+        The following <a href='resource-render-hooks'>resource render hooks</a> are now available:
       </p>
       <ul class='diff-list'>
         <li>
@@ -888,7 +878,7 @@ When there are too many events to fit within a single day:
     </td>
     <td>
       <p>
-        Call <a href='#' class='diff-unchanged'>Calendar::render</a> after initialization to rerender everything.
+        Call <a href='Calendar-render' class='diff-unchanged'>Calendar::render</a> after initialization to rerender everything.
       </p>
     </td>
   </tr>
@@ -908,7 +898,7 @@ When resources are grouped together in resource-timeline view:
         A resource group "label" is where a group's name is displayed.
       </p>
       <p>
-        Use the <a href='#'>resource group label render hooks</a> going forward:
+        Use the following <a href='resource-group-render-hooks'>resource group render hooks</a> going forward:
       </p>
       <ul class='diff-list'>
         <li>
@@ -934,7 +924,7 @@ When resources are grouped together in resource-timeline view:
         A resource group "lane" is the horizontal area running along the time slots.
       </p>
       <p>
-        The following <a href='#'>resource group lane render hooks</a> are now available:
+        The following <a href='resource-group-render-hooks'>resource group render hooks</a> are now available:
       </p>
       <ul class='diff-list'>
         <li class='diff-added'>resourceGroupLaneClassNames</li>
@@ -957,10 +947,10 @@ The area on the side of resource-timeline view that contains resource names and 
     </td>
     <td>
       <p>
-        The "resource area header" is above the resource data and displays the text "Resources" by default. It was previously called the "resource label", a term which is now being used to describe something else! When <a href='#' class='diff-added'>resourceAreaColumns</a> is activated, it will not be displayed.
+        The "resource-area header" is above the resource data and displays the text "Resources" by default. It was previously called the "resource label", a term which is now being used to describe something else! When <a href='resourceAreaColumns' class='diff-added'>resourceAreaColumns</a> is activated, it will not be displayed.
       </p>
       <p>
-        Use the <a href='#'>resource area header render hooks</a> going forward:
+        Use the <a href='resource-area-header-render-hooks'>resource-area header render hooks</a> going forward:
       </p>
       <ul class='diff-list'>
         <li>
@@ -988,7 +978,7 @@ The area on the side of resource-timeline view that contains resource names and 
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>resourceAreaColumns</a> - simply renamed
+          <a href='resourceAreaColumns' class='diff-added'>resourceAreaColumns</a> - simply renamed
         </li>
       </ul>
     </td>
@@ -1004,7 +994,7 @@ The area on the side of resource-timeline view that contains resource names and 
     </td>
     <td>
       <p>
-        Renamed to these properties within <a href='#' class='diff-added'>resourceAreaColumns</a>:
+        Renamed to these properties within <a href='resourceAreaColumns' class='diff-added'>resourceAreaColumns</a>:
       </p>
       <ul class='diff-list'>
         <li>
@@ -1035,7 +1025,7 @@ The area on the side of resource-timeline view that contains resource names and 
     </td>
     <td>
       <p>
-        Renamed to these properties within <a href='#' class='diff-added'>resourceAreaColumns</a>:
+        Renamed to these properties within <a href='resourceAreaColumns' class='diff-added'>resourceAreaColumns</a>:
       </p>
       <ul class='diff-list'>
         <li>
@@ -1072,7 +1062,7 @@ In list view, the "No events to display" message.
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='#' class='diff-added'>listDaySideFormat</a>
+          <a href='listDaySideFormat' class='diff-added'>listDaySideFormat</a>
           - simply renamed
         </li>
       </ul>
@@ -1086,7 +1076,7 @@ In list view, the "No events to display" message.
     </td>
     <td>
       <p>
-        The following <a href='#'>render hooks</a> are now available:
+        The following <a href='no-events-render-hooks'>render hooks</a> are now available:
       </p>
       <ul class='diff-list'>
         <li>
@@ -1115,7 +1105,7 @@ In list view, the "No events to display" message.
     <td></td>
     <td>
       <p>
-        The following <a href='#'>render hooks</a> are now available for customizing the <a href='#'>now indicator</a>:
+        The following <a href='now-indicator-render-hooks'>render hooks</a> are now available for customizing the <a href='nowIndicator'>now indicator</a>:
       </p>
       <ul class='diff-list'>
         <li class='diff-added'>nowIndicatorClassNames</li>
@@ -1133,21 +1123,21 @@ In list view, the "No events to display" message.
 <table>
   <tr>
     <td>
-      <p><a href='#' class='diff-unchanged'>contentHeight</a></p>
+      <p><a href='contentHeight' class='diff-unchanged'>contentHeight</a></p>
     </td>
     <td>
       <p>
-        No longer accepts a function. Reassign imperatively via <a href='#'>setOption</a>.
+        No longer accepts a function. Reassign imperatively via <a href='dynamic-options#setting'>setOption</a>.
       </p>
     </td>
   </tr>
   <tr>
     <td>
-      <p><a href='#' class='diff-unchanged'>height</a></p>
+      <p><a href='height' class='diff-unchanged'>height</a></p>
     </td>
     <td>
       <p>
-        No longer accepts a function. Reassign imperatively via <a href='#'>setOption</a>.
+        No longer accepts a function. Reassign imperatively via <a href='dynamic-options#setting'>setOption</a>.
       </p>
       <p>
         No longer accepts the <code>'parent'</code> value. Instead, assign <code>'100%'</code> (addresses <a href='https://github.com/fullcalendar/fullcalendar/issues/4650'>#4650</a>). Any other valid css values are accepted as well.
@@ -1159,7 +1149,7 @@ In list view, the "No events to display" message.
 
 ## Custom JS Views
 
-Custom views written as JavaScript classes will need to be refactored to work. Subclasses of `View` are no longer accepted. Instead, you [specify a plain configuration object](#).
+Custom views written as JavaScript classes will need to be refactored to work. Subclasses of `View` are no longer accepted. Instead, you [specify a plain configuration object](custom-view-with-js#config-object).
 
 In the old way, you had different methods that were called when different pieces of data changed:
 
@@ -1206,9 +1196,9 @@ const CustomViewConfig = { // a plain object. this is the NEW way
 }
 ```
 
-You can return any of the available [content injection formats](#) such as HTML, real DOM nodes, or virtual DOM nodes.
+You can return any of the available [content injection formats](content-injection) such as HTML, real DOM nodes, or virtual DOM nodes.
 
-If you want to maintain state across calls to `content`, you are better off writing a Preact/React component instead. [More information &raquo;](#)
+If you want to maintain state across calls to `content`, you are better off writing a Preact/React component instead. [More information &raquo;](custom-view-with-js#component)
 
 
 ## Other Misc Changes
@@ -1224,10 +1214,10 @@ If you want to maintain state across calls to `content`, you are better off writ
 
 Many developers will be upgrading from <strong>v3</strong> instead of v4. We will likely release a separate guide for this process before the official v5 is released. In the meantime, here are some tips for upgrading from v3 -> v5 in lieu of a full guide:
 
-1. Follow the [v3 -> v4 upgrade guide](#) but ignore the following areas:
+1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/docs/upgrading-from-v3) but ignore the following areas:
   - "Initialization" and anything related to `<script>` tags or stylesheets
-  - anything related to content-inject, such as options with the words `render`, `text`, or `html` in them
-2. Learn how to install and initialize a v5 calendar [from this article](#).
+  - anything related to content injection, such as options with the words `render`, `text`, or `html` in them
+2. Learn how to install and initialize a v5 calendar from the [Getting Started article](getting-started).
 2. Follow this v4 -> v5 upgrade guide afterwards.
 
 
