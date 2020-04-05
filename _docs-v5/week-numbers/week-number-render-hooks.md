@@ -1,5 +1,5 @@
 ---
-title: Week Number Render Hooks
+title: Week-Number Render Hooks
 ---
 
 `weekNumberClassNames` - a [ClassName Input](classname-input)

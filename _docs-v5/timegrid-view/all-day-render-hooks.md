@@ -2,6 +2,9 @@
 title: All-Day Render Hooks
 ---
 
+Customize parts of the UI that typically display the text "all-day".
+
+
 `allDayClassNames` - a [ClassName Input](classname-input)
 
 `allDayContent` - a [Content Injection Input](content-injection)

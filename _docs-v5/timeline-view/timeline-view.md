@@ -9,11 +9,11 @@ children:
       - resourceAreaColumns
       - resourcesInitiallyExpanded
       - slotMinWidth
-      - resource-render-hooks
       - resource-group-render-hooks
       - resource-area-header-render-hooks
       - timeline-view-no-resources
 related:
+  - resource-render-hooks
   - dateClick
   - slotDuration
   - slotLabelFormat

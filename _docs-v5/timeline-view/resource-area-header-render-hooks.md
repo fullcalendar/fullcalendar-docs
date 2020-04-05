@@ -1,5 +1,5 @@
 ---
-title: Resource Area Header Render Hooks
+title: Resource-Area Header Render Hooks
 ---
 
 The "resource-area header" is above the resource data and displays the text "Resources" by default.

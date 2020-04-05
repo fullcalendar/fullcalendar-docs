@@ -1,5 +1,5 @@
 ---
-title: Day Cell Render Hooks
+title: Day-Cell Render Hooks
 ---
 
 

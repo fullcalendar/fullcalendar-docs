@@ -1,5 +1,5 @@
 ---
-title: Day Header Render Hooks
+title: Day-Header Render Hooks
 ---
 
 

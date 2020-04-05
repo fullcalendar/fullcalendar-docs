@@ -1,5 +1,5 @@
 ---
-title: More Link Render Hooks
+title: More-Link Render Hooks
 ---
 
 

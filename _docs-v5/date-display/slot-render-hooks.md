@@ -2,8 +2,12 @@
 title: Slot Render Hooks
 ---
 
+The horizontal time slots in timegrid view or the vertical datetime slots in timeline view.
+
 
 ## Label Hooks
+
+Where the date/time text is displayed.
 
 `slotLabelClassNames` - a [ClassName Input](classname-input)
 
@@ -15,6 +19,8 @@ title: Slot Render Hooks
 
 
 ## Lane Hooks
+
+The long span of content next to the slot's date/time text. In timegrid view, this is the horizontal space that passes under all of the days. In timeline view, this is the vertical space that passes through the resources.
 
 `slotLaneClassNames` - a [ClassName Input](classname-input)
 
