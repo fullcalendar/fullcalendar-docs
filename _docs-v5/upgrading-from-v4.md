@@ -124,7 +124,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
-<!-- **Have a comment?** [Comment on the blog post](#) -->
+**Have a comment?** [Comment on the blog post]({{ site.baseurl }}/blog/2020/04/v5-beta-released)
 
 </div>
 <div class='sidebar-layout__sidebar' id='toc' markdown='1'>
