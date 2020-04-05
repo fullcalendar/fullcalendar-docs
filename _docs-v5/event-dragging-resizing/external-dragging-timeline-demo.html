@@ -1,14 +1,14 @@
 ---
 title: Drag-n-drop external events onto Timeline views
-layout: demo-v4
+layout: demo-v5
 disable_base_styles: true
-plugins: [ interaction, timeline, resource-common, resource-timeline ]
+needs_premium: true
 ---
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
     var Calendar = FullCalendar.Calendar;
-    var Draggable = FullCalendarInteraction.Draggable;
+    var Draggable = FullCalendar.Draggable;
 
     var containerEl = document.getElementById('external-events');
     var calendarEl = document.getElementById('calendar');
@@ -30,7 +30,6 @@ plugins: [ interaction, timeline, resource-common, resource-timeline ]
     // -----------------------------------------------------------------
 
     var calendar = new Calendar(calendarEl, {
-      plugins: [ 'interaction', 'resourceTimeline' ],
       timeZone: 'UTC',
       defaultView: 'resourceTimelineDay',
       aspectRatio: 1.5,
@@ -105,11 +104,11 @@ plugins: [ interaction, timeline, resource-common, resource-timeline ]
     <p>
       <strong>Draggable Events</strong>
     </p>
-    <div class='fc-event'>My Event 1</div>
-    <div class='fc-event'>My Event 2</div>
-    <div class='fc-event'>My Event 3</div>
-    <div class='fc-event'>My Event 4</div>
-    <div class='fc-event'>My Event 5</div>
+    <div class='fc-event fc-h-event fc-timeline-event'>My Event 1</div>
+    <div class='fc-event fc-h-event fc-timeline-event'>My Event 2</div>
+    <div class='fc-event fc-h-event fc-timeline-event'>My Event 3</div>
+    <div class='fc-event fc-h-event fc-timeline-event'>My Event 4</div>
+    <div class='fc-event fc-h-event fc-timeline-event'>My Event 5</div>
     <p>
       <input type='checkbox' id='drop-remove' />
       <label for='drop-remove'>remove after drop</label>

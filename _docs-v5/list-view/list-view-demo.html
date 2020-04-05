@@ -1,7 +1,6 @@
 ---
 title: Assorted list views
-layout: demo-v4
-plugins: [ list ]
+layout: demo-v5
 ---
 <script>
 
@@ -9,7 +8,6 @@ plugins: [ list ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'list' ],
       timeZone: 'UTC',
       defaultView: 'listWeek',
 

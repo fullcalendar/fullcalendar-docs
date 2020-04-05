@@ -1,8 +1,7 @@
 ---
 title: Constrain event dragging by certain criteria
 description: Prevents events from dragging into the red. Events in green must stay in green
-layout: demo-v4
-plugins: [ interaction, daygrid, timegrid ]
+layout: demo-v5
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
@@ -11,7 +10,6 @@ plugins: [ interaction, daygrid, timegrid ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
       header: {
         left: 'prev,next today',
         center: 'title',

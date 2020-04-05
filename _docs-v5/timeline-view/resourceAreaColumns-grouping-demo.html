@@ -1,7 +1,7 @@
 ---
 title: Timeline view with column grouping
-layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline, interaction ]
+layout: demo-v5
+needs_premium: true
 ---
 <script>
 
@@ -9,7 +9,6 @@ plugins: [ timeline, resource-common, resource-timeline, interaction ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'resourceTimeline', 'interaction' ],
       header: {
         left: 'today prev,next',
         center: 'title',

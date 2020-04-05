@@ -1,7 +1,6 @@
 ---
 description: initialization of calendar with browser globals
-layout: demo-v4
-plugins: [ interaction, daygrid, timegrid ]
+layout: demo-v5
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
@@ -10,7 +9,6 @@ plugins: [ interaction, daygrid, timegrid ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
       defaultView: 'dayGridMonth',
       defaultDate: '{{ ym }}-07',
       header: {

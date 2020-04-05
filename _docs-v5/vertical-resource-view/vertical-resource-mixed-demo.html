@@ -1,7 +1,7 @@
 ---
 title: Vertical Resource View
-layout: demo-v4
-plugins: [ interaction, daygrid, timegrid, resource-common, resource-daygrid, resource-timegrid ]
+layout: demo-v5
+needs_premium: true
 ---
 <script>
 
@@ -9,7 +9,6 @@ plugins: [ interaction, daygrid, timegrid, resource-common, resource-daygrid, re
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'resourceDayGrid', 'resourceTimeGrid' ],
       timeZone: 'UTC',
       defaultView: 'resourceTimeGridDay',
       editable: true,

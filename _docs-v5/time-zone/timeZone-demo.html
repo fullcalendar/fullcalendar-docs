@@ -1,8 +1,7 @@
 ---
 title: Dynamically switch between timezones
-layout: demo-v4
+layout: demo-v5
 disable_base_styles: true
-plugins: [ interaction, daygrid, timegrid, list ]
 ---
 <script>
 
@@ -13,7 +12,6 @@ plugins: [ interaction, daygrid, timegrid, list ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
       timeZone: initialTimeZone,
       header: {
         left: 'prev,next today',

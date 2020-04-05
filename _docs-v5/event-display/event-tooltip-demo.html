@@ -1,8 +1,7 @@
 ---
 title: Event tooltip with eventDidMount
 description: Event tooltip with eventDidMount and Tooltip.js
-layout: demo-v4
-plugins: [ daygrid ]
+layout: demo-v5
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 {% include popper-css.html %}
@@ -14,7 +13,6 @@ plugins: [ daygrid ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid' ],
       defaultView: 'dayGridMonth',
       defaultDate: '{{ ym }}-12',
 

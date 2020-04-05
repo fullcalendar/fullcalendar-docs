@@ -1,8 +1,8 @@
 ---
 title: Clicking and selecting on resources
 description: Use your mouse or touch device to click/select dates/times on the resoureces
-layout: demo-v4
-plugins: [ interaction, timeline, resource-common, resource-timeline, daygrid, timegrid ]
+layout: demo-v5
+needs_premium: true
 ---
 <script>
 
@@ -10,7 +10,6 @@ plugins: [ interaction, timeline, resource-common, resource-timeline, daygrid, t
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'resourceTimeline', 'timeGrid' ],
       selectable: true,
       defaultView: 'resourceTimelineWeek',
       header: {

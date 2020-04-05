@@ -1,7 +1,7 @@
 ---
 title: Various Resource-Timeline Views
-layout: demo-v4
-plugins: [ interaction, timeline, resource-common, resource-timeline ]
+layout: demo-v5
+needs_premium: true
 ---
 <script>
 
@@ -9,7 +9,6 @@ plugins: [ interaction, timeline, resource-common, resource-timeline ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'resourceTimeline' ],
       timeZone: 'UTC',
       defaultView: 'resourceTimelineDay',
       aspectRatio: 1.5,

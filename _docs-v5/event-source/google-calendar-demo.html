@@ -1,7 +1,7 @@
 ---
 title: US holidays from Google Calendar
-layout: demo-v4
-plugins: [ daygrid, list, google-calendar ]
+layout: demo-v5
+extra_plugins: [ 'google-calendar' ]
 ---
 <script>
 
@@ -9,7 +9,6 @@ plugins: [ daygrid, list, google-calendar ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid', 'list', 'googleCalendar' ],
       header: {
         left: 'prev,next today',
         center: 'title',

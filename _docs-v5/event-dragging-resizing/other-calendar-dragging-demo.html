@@ -1,7 +1,6 @@
 ---
 title: Dragging Events Between Two Calendars
-layout: demo-v4
-plugins: [ interaction, daygrid ]
+layout: demo-v5
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
@@ -11,7 +10,6 @@ plugins: [ interaction, daygrid ]
     var destCalendarEl = document.getElementById('destination-calendar');
 
     var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
-      plugins: [ 'interaction', 'dayGrid' ],
       editable: true,
       defaultDate: '{{ ym }}-12',
       events: [
@@ -32,7 +30,6 @@ plugins: [ interaction, daygrid ]
     });
 
     var destCalendar = new FullCalendar.Calendar(destCalendarEl, {
-      plugins: [ 'interaction', 'dayGrid' ],
       defaultDate: '{{ ym }}-12',
       editable: true,
       droppable: true, // will let it receive events!

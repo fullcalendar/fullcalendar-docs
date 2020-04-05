@@ -1,7 +1,7 @@
 ---
 description: json events with scheduler plugin
-layout: demo-v4
-plugins: [ interaction, daygrid, timegrid, timeline, resource-common, resource-daygrid, resource-timegrid, resource-timeline ]
+layout: demo-v5
+needs_premium: true
 ---
 <script>
 
@@ -9,7 +9,6 @@ plugins: [ interaction, daygrid, timegrid, timeline, resource-common, resource-d
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'resourceTimeline', 'resourceTimeGrid' ],
       timeZone: 'UTC',
       editable: true,
       defaultView: 'resourceTimelineDay',

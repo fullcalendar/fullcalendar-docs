@@ -1,7 +1,6 @@
 ---
 title: Bootstrap 4 theme
-layout: demo-v4
-plugins: [ daygrid, timegrid, list, bootstrap ]
+layout: demo-v5
 ---
 <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
@@ -11,7 +10,6 @@ plugins: [ daygrid, timegrid, list, bootstrap ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid', 'timeGrid', 'list', 'bootstrap' ],
       timeZone: 'UTC',
       themeSystem: 'bootstrap',
       header: {

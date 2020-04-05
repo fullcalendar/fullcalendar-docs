@@ -1,9 +1,8 @@
 ---
 title: Dynamically switch between locales
-layout: demo-v4
+layout: demo-v5
 disable_base_styles: true
 needs_locales: true
-plugins: [ interaction, daygrid, timegrid, list ]
 ---
 <script>
 
@@ -13,11 +12,10 @@ plugins: [ interaction, daygrid, timegrid, list ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridMonth,timeGridDay,listMonth'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
       locale: initialLocaleCode,
       buttonIcons: false, // show the prev/next text

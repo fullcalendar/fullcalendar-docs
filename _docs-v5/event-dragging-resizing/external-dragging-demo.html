@@ -1,15 +1,14 @@
 ---
 title: Drag-n-drop external events
 description: Drag external events into the calendar with the Draggable API
-layout: demo-v4
+layout: demo-v5
 disable_base_styles: true
-plugins: [ interaction, daygrid, timegrid ]
 ---
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
     var Calendar = FullCalendar.Calendar;
-    var Draggable = FullCalendarInteraction.Draggable;
+    var Draggable = FullCalendar.Draggable;
 
     var containerEl = document.getElementById('external-events');
     var calendarEl = document.getElementById('calendar');
@@ -31,7 +30,6 @@ plugins: [ interaction, daygrid, timegrid ]
     // -----------------------------------------------------------------
 
     var calendar = new Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -101,11 +99,11 @@ plugins: [ interaction, daygrid, timegrid ]
     <p>
       <strong>Draggable Events</strong>
     </p>
-    <div class='fc-event'>My Event 1</div>
-    <div class='fc-event'>My Event 2</div>
-    <div class='fc-event'>My Event 3</div>
-    <div class='fc-event'>My Event 4</div>
-    <div class='fc-event'>My Event 5</div>
+    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 1</div>
+    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 2</div>
+    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 3</div>
+    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 4</div>
+    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 5</div>
     <p>
       <input type='checkbox' id='drop-remove' />
       <label for='drop-remove'>remove after drop</label>

@@ -1,8 +1,7 @@
 ---
 title: Theme Chooser Demo
-layout: demo-v4
+layout: demo-v5
 disable_base_styles: true
-plugins: [ interaction, daygrid, timegrid, list, bootstrap ]
 ---
 <script src='{{ site.baseurl }}/assets/theme-chooser.js'></script>
 <script>
@@ -15,7 +14,6 @@ plugins: [ interaction, daygrid, timegrid, list, bootstrap ]
 
       init: function(themeSystem) {
         calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'interaction', 'bootstrap', 'dayGrid', 'timeGrid', 'list' ],
           themeSystem: themeSystem,
           header: {
             left: 'prev,next today',
@@ -105,7 +103,7 @@ plugins: [ interaction, daygrid, timegrid, list, bootstrap ]
   }
 
   #top,
-  #calendar.fc-unthemed {
+  #calendar.fc-theme-standard {
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   }
 

@@ -1,7 +1,7 @@
 ---
 title: Timeline-view now-indicator
-layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline ]
+layout: demo-v5
+needs_premium: true
 ---
 <script>
 
@@ -9,7 +9,6 @@ plugins: [ timeline, resource-common, resource-timeline ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'resourceTimeline' ],
       defaultView: 'resourceTimeline',
       nowIndicator: true,
       now: '2018-02-13T09:25:00', // just for demo

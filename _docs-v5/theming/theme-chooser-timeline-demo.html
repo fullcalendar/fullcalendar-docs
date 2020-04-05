@@ -1,8 +1,8 @@
 ---
 title: Theme Chooser for Timeline Views
-layout: demo-v4
+layout: demo-v5
 disable_base_styles: true
-plugins: [ interaction, bootstrap, timeline, resource-common, resource-timeline ]
+needs_premium: true
 ---
 <script src='{{ site.baseurl }}/assets/theme-chooser.js'></script>
 <script>
@@ -15,7 +15,6 @@ plugins: [ interaction, bootstrap, timeline, resource-common, resource-timeline 
 
       init: function(themeSystem) {
         calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'interaction', 'bootstrap', 'resourceTimeline' ],
           timeZone: 'UTC',
           themeSystem: themeSystem,
           header: {

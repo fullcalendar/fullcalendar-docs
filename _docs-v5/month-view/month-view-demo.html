@@ -1,7 +1,6 @@
 ---
 title: Month View
-layout: demo-v4
-plugins: [ daygrid ]
+layout: demo-v5
 ---
 <script>
 
@@ -9,7 +8,6 @@ plugins: [ daygrid ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid' ],
       timeZone: 'UTC',
       defaultView: 'dayGridMonth',
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
