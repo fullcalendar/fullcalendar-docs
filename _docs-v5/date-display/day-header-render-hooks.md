@@ -25,5 +25,5 @@ When the above hooks are specified as a function in the form `function(arg)`, th
 - `isFuture`
 - `isToday`
 - `isOther`
-- `resource` - if the date column lives under a specific resource in [vertical-resource-view](vertical-resource-view), this value will be the [Resource Object](resource-object)
+- `resource` - if the date column lives under a specific resource in [vertical resource view](vertical-resource-view), this value will be the [Resource Object](resource-object)
 - `el` - the `<th>` element. only available in `dayHeaderDidMount` and `dayHeaderWillUnmount`

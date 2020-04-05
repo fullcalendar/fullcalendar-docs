@@ -165,7 +165,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     console.log(arg.date.valueOf())
 
     // use the plugin for manipulation and formatting
-    let m = FullCalendarMoment.toMoment(calendar, arg.date)
+    let m = FullCalendar.toMoment(calendar, arg.date)
     console.log(m.format()) // something like '2018-09-01T12:30:00-05:00'
   }
 });

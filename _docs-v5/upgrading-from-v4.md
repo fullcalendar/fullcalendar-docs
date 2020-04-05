@@ -113,7 +113,8 @@ This guide outlines the changes between v4 and v5-beta.
 **Things that are NOT YET IMPLEMENTED but will be soon**:
 
 - sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473))
-- printer-friendly timeline view ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813))
+- rewrite the event-positioning strategy for timegrid (will solve [these issues](https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3A%22Event+Rendering%22+label%3A%22TimeGrid+View%22+label%3AConfirmed))
+- printer-friendly rendering is broken. will be fixed, including for timeline view, which is a major new feature ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813))
 - TypeScript definitions for new options are in a state of disarray. Until they are fixed, the options definitions have been relaxed to accept almost any input.
 - a pure-React distro without leveraging Preact (potentially)
 
@@ -135,19 +136,23 @@ This guide outlines the changes between v4 and v5-beta.
 - [CSS and DOM Structure](#css-and-dom-structure)
 - [CSS Importing](#css-importing)
 - [Pre-built Bundles](#pre-built-bundles)
+- [Toolbar](#toolbar)
 - [View Rendering](#view-rendering)
 - [Date Rendering](#date-rendering)
 - [Event Rendering](#event-rendering)
+- [More Events Popover](#more-events-popover)
 - [Resource Rendering](#resource-rendering)
 - [List View Rendering](#list-view-rendering)
 - [Now Indicator Rendering](#now-indicator-rendering)
 - [Calendar Sizing](#calendar-sizing)
 - [Custom JS Views](#custom-js-views)
+- [Interaction Plugin](#interaction-plugin)
+- [Moment and Luxon Plugins](#moment-and-luxon-plugins)
 - [Other Misc Changes](#other-misc-changes)
-- [Upgrading from v3](#upgrading-from-v3)
 - [React Connector](#react-connector)
 - [Vue Connector](#vue-connector)
 - [Angular Connector](#angular-connector)
+- [Upgrading from v3](#upgrading-from-v3)
 
 </div>
 </div>
@@ -583,6 +588,29 @@ Week numbers:
   <tr>
     <td></td>
     <td>
+      <ul class='diff-list'>
+        <li>
+          <a href='weekNumberFormat' class='diff-added'>weekNumberFormat</a>
+          - a <a href='date-formatting'>date formatting config</a> that controls how week numbers look. By default it's set to <code>{ week: 'narrow' }</code> and will look like "W6".
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        default week number formatting
+      </p>
+    </td>
+    <td>
+      <p>
+        Week numbers were previously formatted as plain numeric values like "6". Now, by default, they are formatted with their <a href='weekText' class='diff-added'>weekText</a> prefix, so they'll look like "W6". To change back to the old behavior, change <a href='weekNumberFormat' class='diff-added'>weekNumberFormat</a> to <code>{ week: 'numeric' }</code>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
       <p>
         The following <a href='week-number-render-hooks'>week-number render hooks</a> are now available:
       </p>
@@ -731,7 +759,22 @@ eventContent: function(arg) {
 
 </td>
   </tr>
+  <tr>
+    <td>
+      <p>
+        event classNames
+      </p>
+    </td>
+    <td>
+      <p>
+        Event elements now have more descriptive classNames about what dates they span. For example, <code>fc-event-past</code>, <code>fc-event-future</code>, and <code>fc-event-today</code>.
+      </p>
+    </td>
+  </tr>
 </table>
+
+
+## More Events Popover
 
 When there are too many events to fit within a single day:
 
@@ -1201,24 +1244,60 @@ You can return any of the available [content injection formats](content-injectio
 If you want to maintain state across calls to `content`, you are better off writing a Preact/React component instead. [More information &raquo;](custom-view-with-js#component)
 
 
+## Interaction Plugin
+
+The `@fullcalendar/interaction` plugin's **browser globals** have changed:
+
+```js
+new FullCalendarInteraction.Draggable(settings) // the OLD way
+
+new FullCalendar.Draggable(settings) // the NEW way
+```
+
+
+## Moment and Luxon Plugins
+
+The Moment plugin's **browser globals** have changed:
+
+```js
+// OLD
+FullCalendarMoment.toMoment
+FullCalendarMoment.toDuration
+
+// NEW
+FullCalendar.toMoment
+FullCalendar.toMomentDuration
+```
+
+The Moment plugin's **ES6 exports** have changed:
+
+```js
+// OLD
+import { toDuration } from '@fullcalendar/moment'
+
+// NEW
+import { toMomentDuration } from '@fullcalendar/moment'
+```
+
+The Luxon plugin's **ES6 exports** have changed:
+
+```js
+// OLD
+import { toDateTime, toDuration } from '@fullcalendar/luxon'
+
+// NEW
+import { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon'
+```
+
+
 ## Other Misc Changes
 
 - **feature:** you can force rerendering of anything on the calendar by calling the `Calendar::render` method again after initialization
+- **fix:** timeline event drag/resize when on second line, pops to top ([#4893](https://github.com/fullcalendar/fullcalendar/issues/4893))
 - **fix:** `rerenderDelay` causes selectable and editable lag ([#4770](https://github.com/fullcalendar/fullcalendar/issues/4770))
 - **fix:** CSP doesn't allow setting of inline CSS ([#4317](https://github.com/fullcalendar/fullcalendar/issues/4317))
 - **fix:** when `eventSourceSuccess` callback throws error, looks like JSON parsing failed ([#4947](https://github.com/fullcalendar/fullcalendar/pull/4947))
 - **fix:** always show more-link when supplying `0` ([#2978](https://github.com/fullcalendar/fullcalendar/issues/2978))
-
-
-## Upgrading from V3
-
-Many developers will be upgrading from <strong>v3</strong> instead of v4. We will likely release a separate guide for this process before the official v5 is released. In the meantime, here are some tips for upgrading from v3 -> v5 in lieu of a full guide:
-
-1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/docs/upgrading-from-v3) but ignore the following areas:
-  - "Initialization" and anything related to `<script>` tags or stylesheets
-  - anything related to content injection, such as options with the words `render`, `text`, or `html` in them
-2. Learn how to install and initialize a v5 calendar from the [Getting Started article](getting-started).
-2. Follow this v4 -> v5 upgrade guide afterwards.
 
 
 ## React Connector
@@ -1301,10 +1380,16 @@ You now have the ability to customize rendering with the use of [Vue scoped slot
 
 This is possible with any of the `*Content` options in the API.
 
+Also,
+
+- **fix:** Class instances in extendedProps are converted to plain objects ([vue#53](https://github.com/fullcalendar/fullcalendar-vue/issues/53))
+
 
 ## Angular Connector
 
-Previouly, when using the Angular connector, you specified each option as its own attribute in your template:
+Firstly, the Angular connector now requires [Angular 9](https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3).
+
+In v4, when using the Angular connector, you specified each option as its own attribute in your template:
 
 ```ng
 <!-- the old way -->
@@ -1341,3 +1426,14 @@ class AppComponent {
 ```
 
 This results in less duplication between your Angular component's JS and template. It also thankfully blurs the distinction between props and "handlers" for which you'd need to use `(parentheses)` instead of `[brackets]`. All properties are treated equally, resuling in a simpler API.
+
+
+## Upgrading from V3
+
+Many developers will be upgrading from <strong>v3</strong> instead of v4. We will likely release a separate guide for this process before the official v5 is released. In the meantime, here are some tips for upgrading from v3 -> v5 in lieu of a full guide:
+
+1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/docs/upgrading-from-v3) but ignore the following areas:
+  - "Initialization" and anything related to `<script>` tags or stylesheets
+  - anything related to content injection, such as options with the words `render`, `text`, or `html` in them
+2. Learn how to install and initialize a v5 calendar from the [Getting Started article](getting-started).
+2. Follow this v4 -> v5 upgrade guide afterwards.

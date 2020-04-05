@@ -61,7 +61,7 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-If you are using `<script>` tags and browser globals, you can access `FullCalendarMoment.toMoment` and `FullCalendarMoment.toDuration`.
+If you are using `<script>` tags and browser globals, you can access `FullCalendar.toMoment` and `FullCalendar.toMomentDuration`.
 
 
 <h2 id='moment-timezone'>Moment Timezone Plugin</h2>

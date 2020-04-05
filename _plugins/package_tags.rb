@@ -15,7 +15,7 @@ module Jekyll
       release = get_package_release(rendered_input)
 
       if release
-        url = release['base_url'] + '/main.min.js'
+        url = release['base_url'] + '/main.js'
         "<script src='#{url}'></script>"
       else
         puts "Could not identify release by '#{rendered_input}'"
@@ -37,7 +37,7 @@ module Jekyll
 
       if release
         if release['has_css']
-          url = release['base_url'] + '/main.min.css'
+          url = release['base_url'] + '/main.css'
           "<link href='#{url}' rel='stylesheet' />"
         else
           ''
