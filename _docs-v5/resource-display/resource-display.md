@@ -9,8 +9,8 @@ related:
   - timeline-view
   - vertical-resource-view
 demos:
-  - vertical-resource-resourceRender-demo
-  - timeline-resourceRender-demo
+  - vertical-resource-render-hook-demo
+  - timeline-resource-render-hook-demo
 ---
 
 Control the visual aspects of your resources, such as ordering and text.

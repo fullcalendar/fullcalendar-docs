@@ -1,8 +1,8 @@
 ---
-title: Using resourceRender with a popover in vertical-resource-view
-description: Mouseover each "(?)" to see a popover that was attached via resourceRender
-layout: demo-v4
-plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegrid ]
+title: Using resourceLabelDidMount with a popover in vertical-resource-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceLabelDidMount
+layout: demo-v5
+needs_premium: true
 ---
 {% include popper-css.html %}
 <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
@@ -13,9 +13,9 @@ plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegr
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'resourceTimeGrid' ],
       defaultView: 'resourceTimeGridDay',
-      resourceRender: function(info) {
+
+      resourceLabelDidMount: function(info) {
         var questionMark = document.createElement('span');
         questionMark.innerText = ' (?) ';
 
@@ -28,6 +28,7 @@ plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegr
           container: 'body'
         });
       },
+
       resources: [
         { id: 'a', title: 'Auditorium A' },
         { id: 'b', title: 'Auditorium B' },

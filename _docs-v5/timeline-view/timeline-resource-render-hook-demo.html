@@ -1,8 +1,8 @@
 ---
-title: Using resourceRender with a popover in timeline-view
-description: Mouseover each "(?)" to see a popover that was attached via resourceRender
-layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline ]
+title: Using resourceLabelDidMount with a popover in timeline-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceLabelDidMount
+layout: demo-v5
+needs_premium: true
 ---
 {% include popper-css.html %}
 <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
@@ -13,7 +13,6 @@ plugins: [ timeline, resource-common, resource-timeline ]
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'resourceTimeline' ],
       header: {
         left: 'today prev,next',
         center: 'title',
@@ -22,11 +21,11 @@ plugins: [ timeline, resource-common, resource-timeline ]
       defaultView: 'resourceTimelineDay',
       resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json',
 
-      resourceRender: function(info) {
+      resourceLabelDidMount: function(info) {
         var questionMark = document.createElement('strong');
         questionMark.innerText = ' (?) ';
 
-        info.el.querySelector('.fc-cell-text')
+        info.el.querySelector('.fc-datagrid-cell-main')
           .appendChild(questionMark);
 
         var tooltip = new Tooltip(questionMark, {

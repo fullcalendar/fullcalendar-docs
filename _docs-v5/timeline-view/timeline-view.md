@@ -30,7 +30,7 @@ demos:
   - timeline-resourceGroupField-demo
   - resourceAreaColumns-demo
   - resourceAreaColumns-grouping-demo
-  - timeline-resourceRender-demo
+  - timeline-resource-render-hook-demo
 ---
 
 The [Scheduler add-on]({{ site.baseurl }}/purchase) provides a new view called "timeline view" with a customizable horizontal time-axis and resources as rows.
