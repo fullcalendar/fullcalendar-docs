@@ -1,0 +1,55 @@
+<meta charset='utf-8' />
+
+{% if page.title %}
+  <title>
+    {{ page.title | escape }} - Demos | FullCalendar
+  </title>
+{% endif %}
+
+<link href='{{ site.baseurl }}/assets/demo-to-codepen.css' rel='stylesheet' />
+
+{% unless page.disable_base_styles %}
+  <style>
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    #calendar {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+  </style>
+{% endunless %}
+
+{% if page.needs_premium %}
+  {% package_css_tag fullcalendar-scheduler 5 %}
+  {% package_js_tag fullcalendar-scheduler 5 %}
+
+  {% if page.needs_locales %}
+    <script src='{% package_baseurl fullcalendar-scheduler 5 %}/locales-all.js'></script>
+  {% endif %}
+
+  {% for plugin_name in page.extra_plugins %}
+    <script src='{% package_baseurl fullcalendar-scheduler 5 %}/{{ plugin_name }}.js'></script>
+  {% endfor %}
+
+{% else %}
+  {% package_css_tag fullcalendar 5 %}
+  {% package_js_tag fullcalendar 5 %}
+
+  {% if page.needs_locales %}
+    <script src='{% package_baseurl fullcalendar 5 %}/locales-all.js'></script>
+  {% endif %}
+
+  {% for plugin_name in page.extra_plugins %}
+    <script src='{% package_baseurl fullcalendar 5 %}/{{ plugin_name }}.js'></script>
+  {% endfor %}
+
+{% endif %}
+
+<script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>

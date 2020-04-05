@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "dependencies": {
+    "fullcalendar": "*",
+    "fullcalendar-scheduler": "*",
+    "luxon": "^1.17.2",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
+    "rrule": "^2.6.2"
+  }
+}
