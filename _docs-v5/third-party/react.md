@@ -3,6 +3,8 @@ title: React Component
 title_for_landing: React
 ---
 
+<span style='color:red'>This article is out of date. <a href='upgrading-from-v4#react-connector' class='more-link'>Please read the changelog for now</a></span>
+
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [Josh Ruff](https://github.com/joshuaRuff) of [Sardius Media](http://sardius.media/) in partnership with the maintainers of FullCalendar. It is the official React connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:

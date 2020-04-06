@@ -3,6 +3,8 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
+<span style='color:red'>This article is out of date. <a href='upgrading-from-v4#angular-connector' class='more-link'>Please read the changelog for now</a></span>
+
 FullCalendar seamlessly integrates with the [Angular] 7. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:

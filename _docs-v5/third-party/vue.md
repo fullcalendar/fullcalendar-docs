@@ -3,6 +3,8 @@ title: Vue Component
 title_for_landing: Vue
 ---
 
+<span style='color:red'>This article is out of date. <a href='upgrading-from-v4#vue-connector' class='more-link'>Please read the changelog for now</a></span>
+
 FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
