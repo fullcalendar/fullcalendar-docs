@@ -16,4 +16,4 @@ While implementing these render hooks for events, I figured, why not implement t
 - [View the Docs]({{ site.baseurl }}/docs/v5) (they are a work-in-progress)
 - [Get the Code]({{ site.baseurl }}/docs/v5/getting-started)
 
-The plan is to make the official release in 3-4 weeks, so end of April early May. Until then I will be collecting bug reports, cleaning up and optimizing the code, and going through the "not yet implemented" items listed in the changelog.
+The plan is to make the official release in 4-6 weeks, so early to mid May. Until then I will be collecting bug reports, cleaning up and optimizing the code, and going through the "not yet implemented" items listed in the changelog.
