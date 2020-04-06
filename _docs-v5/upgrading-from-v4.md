@@ -114,6 +114,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 - sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473))
 - rewrite the event-positioning strategy for timegrid (will solve [these issues](https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3A%22Event+Rendering%22+label%3A%22TimeGrid+View%22+label%3AConfirmed))
+- a system for overriding FullCalendar's CSS variables
 - printer-friendly rendering is broken. will be fixed, including for timeline view, which is a major new feature ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813))
 - TypeScript definitions for new options are in a state of disarray. Until they are fixed, the options definitions have been relaxed to accept almost any input.
 - a pure-React distro without leveraging Preact (potentially)
@@ -186,7 +187,7 @@ The CSS has been completely rewritten. Most importantly, the selectors are flatt
 
 As a result, if you've written custom styling, <strong>it will most likely need to be rewritten for v5</strong>, or at the very least you will need to swap out your classNames. To help you do this, we will likely release a className-upgrade document prior to the official release.
 
-<strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='css-variables'>how to use CSS variables &raquo;</a>
+<!-- <strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='css-variables'>how to use CSS variables &raquo;</a> -->
 
 
 ## CSS Importing
