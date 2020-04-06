@@ -10,7 +10,7 @@ There are a few different ways to install the FullCalendar library.
 Use fullcalendar's individual packages if you use an ES6 build system like Webpack. First, install them from [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). You'll first need to install FullCalendar’s `core` package as well as any plugins. Example:
 
 ```sh
-npm install --save @fullcalendar/core@5.0.0-beta @fullcalendar/daygrid@5.0.0-beta
+npm install --save @fullcalendar/core@5.0.0-beta.1 @fullcalendar/daygrid@5.0.0-beta.1
 ```
 
 To initialize a calendar, <a href='initialize-es6' class='more-link'>read about using an ES6 build system</a>
@@ -21,13 +21,13 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 You might want to avoid a built system by [initializing fullcalendar with script tags and globals](initialize-globals). Or, you might simply want to avoid dealing with individual plugins. If so, use one of the pre-built bundles:
 
 - `fullcalendar`
-  - **Download**: [fullcalendar-5.0.0-beta.zip](#)
+  - **Download**: [fullcalendar-5.0.0-beta.1.zip](#)
   - **CDN:** [JS](#), [CSS](#)
-  - **NPM:** `npm install fullcalendar@5.0.0-beta`
+  - **NPM:** `npm install fullcalendar@5.0.0-beta.1`
 - `fullcalendar-scheduler` - [a premium product](premium)
-  - **Download**: [fullcalendar-scheduler-5.0.0-beta.zip](#)
+  - **Download**: [fullcalendar-scheduler-5.0.0-beta.1.zip](#)
   - **CDN:** [JS](#), [CSS](#)
-  - **NPM:** `npm install fullcalendar-scheduler@5.0.0-beta`
+  - **NPM:** `npm install fullcalendar-scheduler@5.0.0-beta.1`
 
 
 ## Bundle Contents
