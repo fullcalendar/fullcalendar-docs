@@ -3,6 +3,8 @@ title: Changes in the Upcoming v5
 date: 2020-02-05T00:00:00+00:00
 ---
 
+**Update (Apr 6):** v5 beta has been released. [Read the blog post.]({{ site.baseurl }}{% post_url 2020-04-06-v5-beta-released %})
+
 We've been hard at work on the next major release of FullCalendar, **version 5**. But first we'd like to apologize for the radio silence. We've been heads down in development the past few months and neglected to give a status update for a while.
 
 The v5 code is still in-development (see the [branch]) and the exact featureset is still evolving (see the [milestone]) but you can expect more info around March 2nd, when we'll be releasing a beta. Here are the main areas of focus:

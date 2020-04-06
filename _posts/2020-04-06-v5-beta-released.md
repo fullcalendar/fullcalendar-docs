@@ -4,7 +4,7 @@ date: 2020-04-06T08:15:24+00:00
 advanced_sidebar: true
 ---
 
-The v5 beta has been released! It contains all the high-level changes mentioned in the [previous blog post]({% post_url 2020-02-05-changes-in-the-upcoming-v5 %}), with one exception. It mentioned a "few" settings names would be changed. In fact, about 3 dozen were changed. Why?
+The v5 beta has been released! It contains all the high-level changes mentioned in the [previous blog post]({{ site.baseurl }}{% post_url 2020-02-05-changes-in-the-upcoming-v5 %}), with one exception. It mentioned a "few" settings names would be changed. In fact, about 3 dozen were changed. Why?
 
 Using a virtual DOM internally necessitated changing the API for how custom content is injected, for example, DOM manipulation done in `eventRender`, one of the most popular options in FullCalendar's API. It has been replaced by [Event Render Hooks]({{ site.baseurl }}/docs/v5/event-render-hooks). They offer everything `eventRender` offered, but with a cleaner API that's more compatible with FullCalendar's internals.
 
