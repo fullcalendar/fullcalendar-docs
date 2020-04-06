@@ -176,7 +176,7 @@ FullCalendar now internally uses a miniature virtual-DOM library called [Preact]
 
 Just because we use a virtual DOM doesn't mean we no longer think about performance. We still care about limiting the amount of rerender execution, even though it performs fewer real DOM operations. This will continue to be a priority as we further develop the beta.
 
-How does this affect FullCalendar's API? It doesn't really. From any of the content injection options like `eventContent` you are able to construct and return a virtual DOM node. [Learn more in this article](content-injection#vdom). Aside from that, you won't need to think about the virtual DOM.
+How does this affect FullCalendar's API? It doesn't really. From any of the content injection options like `eventContent` you are able to construct and return a virtual DOM node. [Learn more in this article](content-injection#virtual-dom). Aside from that, you won't need to think about the virtual DOM.
 
 
 ## CSS and DOM Structure
