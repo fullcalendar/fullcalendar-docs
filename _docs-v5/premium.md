@@ -47,9 +47,8 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 You can also download the library manually:
 
-**Latest:** <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">
-  fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip
-</a>
+**Latest:** [fullcalendar-scheduler-5.0.0-beta.1.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-beta.1/fullcalendar-scheduler-5.0.0-beta.1.zip)
+
 (<a href='{{ site.fullcalendar_scheduler_repo }}/releases'>view all releases</a>)
 
 Once you've downloaded it, you can initialize a calendar <a href='initialize-globals' class='more-link'>using script tags and browser globals</a>
