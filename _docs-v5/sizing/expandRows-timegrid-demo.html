@@ -1,0 +1,83 @@
+---
+title: expandRows demo for timegrid view
+description: Change the height of the window to see the rows expand
+layout: demo-v5
+disable_base_styles: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      slotMinTime: '08:00',
+      slotMaxTime: '20:00',
+      expandRows: true,
+      height: '100%',
+
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      defaultView: 'timeGridWeek',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      selectable: true,
+      nowIndicator: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+  html, body {
+    overflow: hidden; /* don't do scrollbars */
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .demo-topbar { /* will be stripped out */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+  }
+
+  .demo-topbar + #calendar-container { /* will be stripped out */
+    top: 40px;
+  }
+
+  .fc-header-toolbar {
+    /*
+    the calendar will be butting up against the edges,
+    but let's scoot in the header's buttons
+    */
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+</style>
+<body>
+
+  {% include demo-topbar.html %}
+
+  <div id='calendar-container'>
+    <div id='calendar'></div>
+  </div>
+
+</body>

@@ -4,6 +4,7 @@ children:
   - height
   - contentHeight
   - aspectRatio
+  - expandRows
   - updateSize
   - handleWindowResize
   - windowResizeDelay

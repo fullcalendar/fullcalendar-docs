@@ -12,6 +12,7 @@ related:
   - slotLabelInterval
   - slotMinTime
   - slotMaxTime
+  - expandRows
   - nowIndicator
   - scrollTime
 demos:
