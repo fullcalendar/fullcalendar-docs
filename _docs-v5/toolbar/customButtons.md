@@ -2,13 +2,13 @@
 title: customButtons
 ---
 
-Defines custom buttons that can be used in the header/footer.
+Defines custom buttons that can be used in the headerToolbar/footerToolbar.
 
 <div class='spec' markdown='1'>
 Object
 </div>
 
-Specify a hash of custom buttons. Then reference them from the `header` setting. Like this:
+Specify a hash of custom buttons. Then reference them from the `headerToolbar` setting. Like this:
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -20,7 +20,7 @@ var calendar = new Calendar(calendarEl, {
       }
     }
   },
-  header: {
+  headerToolbar: {
     left: 'prev,next today myCustomButton',
     center: 'title',
     right: 'dayGridMonth,timeGridWeek,timeGridDay'

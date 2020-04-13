@@ -2,7 +2,7 @@
 title: buttonText
 ---
 
-Text that will be displayed on buttons of the header/footer.
+Text that will be displayed on buttons of the headerToolbar/footerToolbar.
 
 <div class='spec' markdown='1'>
 Object, *default*:

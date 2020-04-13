@@ -12,7 +12,7 @@ A View object contains information about a calendar view, such as title and date
 :   Name of one of the available views (a string).
 
 `title`
-:   Title text that is displayed at the top of the header (such as "September 2009" or "Sep 7 - 13 2009").
+:   Title text that is displayed at the top of the headerToolbar (such as "September 2009" or "Sep 7 - 13 2009").
 
 `activeStart`
 :   A [Date](date-object) that is the first visible day.

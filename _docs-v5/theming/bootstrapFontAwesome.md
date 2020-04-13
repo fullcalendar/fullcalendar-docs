@@ -2,7 +2,7 @@
 title: bootstrapFontAwesome
 ---
 
-Determines which icons are displayed in buttons of the header/footer when Bootstrap 4 theming is on.
+Determines which icons are displayed in buttons of the headerToolbar/footerToolbar when Bootstrap 4 theming is on.
 
 <div class='spec' markdown='1'>
 Object, *default:*
@@ -20,7 +20,7 @@ Object, *default:*
 
 This option only applies to calendars that have [themeSystem](themeSystem) set to `'bootstrap'`. A FontAwesome stylesheet must be loaded before you can use Bootstrap 4 theming or customize the icons. [Getting started with FontAwesome](https://fontawesome.com/get-started).
 
-A hash must be supplied that maps button names (from the [header](header)) to icon strings. [See a full list of FontAwesome icons](https://fontawesome.com/icons).
+A hash must be supplied that maps button names (from the [headerToolbar](headerToolbar)) to icon strings. [See a full list of FontAwesome icons](https://fontawesome.com/icons).
 
 If a button does not have an entry, it falls back to using [buttonText](buttonText).
 

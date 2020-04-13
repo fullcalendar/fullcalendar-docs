@@ -2,7 +2,7 @@
 title: buttonIcons
 ---
 
-Icons that will be displayed in buttons of the header/footer.
+Icons that will be displayed in buttons of the headerToolbar/footerToolbar.
 
 <div class='spec' markdown='1'>
 Object, *default:*
@@ -19,7 +19,7 @@ Object, *default:*
 
 This setting only takes affect when [themeSystem](themeSystem) is `'standard'`. If you want to change icons when [themeSystem](themeSystem) is `'bootstrap'`, use [bootstrapFontAwesome](bootstrapFontAwesome) instead.
 
-A hash must be supplied that maps button names (from the [header](header)) to icon strings. These icon string are transformed into classNames which are styled by FullCalendar's CSS.
+A hash must be supplied that maps button names (from the [headerToolbar](headerToolbar)) to icon strings. These icon string are transformed into classNames which are styled by FullCalendar's CSS.
 
 If a button does not have an entry, it falls back to using [buttonText](buttonText).
 

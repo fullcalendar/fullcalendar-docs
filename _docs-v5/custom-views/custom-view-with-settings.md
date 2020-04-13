@@ -9,7 +9,7 @@ If you'd like to take one of the existing view types, like [dayGrid](daygrid-vie
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  header: {
+  headerToolbar: {
     center: 'dayGridMonth,timeGridFourDay' // buttons for switching between views
   },
   views: {

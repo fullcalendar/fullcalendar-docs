@@ -2,7 +2,7 @@
 title: titleFormat
 ---
 
-Determines the text that will be displayed in the header's title.
+Determines the text that will be displayed in the headerToolbar's title.
 
 <div class='spec' markdown='1'>
 [Date Formatter](date-formatting), *default*:

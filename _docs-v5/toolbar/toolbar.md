@@ -1,8 +1,8 @@
 ---
 title: Toolbar
 children:
-  - header
-  - footer
+  - headerToolbar
+  - footerToolbar
   - titleFormat
   - titleRangeSeparator
   - buttonText

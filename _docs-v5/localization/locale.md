@@ -4,7 +4,7 @@ title: locale
 
 The `locale` and `locales` options allow you to localize certain aspects of the calendar:
 
-- the text in buttons, as defined by [header](header)
+- the text in buttons, as defined by [headerToolbar](headerToolbar)
 - text that contains month or day-of-week strings
 - date formatting, such as [eventTimeFormat](eventTimeFormat)
 - [weekNumberCalculation](weekNumberCalculation)

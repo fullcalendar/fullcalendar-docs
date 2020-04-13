@@ -10,7 +10,7 @@ Object
 
 Dates outside of the valid range will be grayed-out. The user will not be able to drag or resize events into these areas.
 
-The prev/next buttons in the [header](header) will be grayed out to prevent the user from navigating to an invalid range.
+The prev/next buttons in the [headerToolbar](headerToolbar) will be grayed out to prevent the user from navigating to an invalid range.
 
 The `validRange` property can have `start` and `end` properties. You may specify one without specifying the other to create an open-ended range.
 

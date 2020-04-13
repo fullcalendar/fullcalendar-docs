@@ -1,5 +1,5 @@
 ---
-title: footer
+title: footerToolbar
 ---
 
 Defines the controls at the bottom of the calendar.
@@ -8,6 +8,6 @@ Defines the controls at the bottom of the calendar.
 Object / `false` (the default)
 </div>
 
-This settings accepts the same exact values as the [header](header) option.
+This settings accepts the same exact values as the [headerToolbar](headerToolbar) option.
 
 It is `false` by default, meaning no controls will be rendered at the foot of the calendar.

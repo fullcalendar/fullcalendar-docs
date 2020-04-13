@@ -275,7 +275,7 @@ The `main.js` file does <strong>NOT</strong> include the following plugins:
 
 ## Toolbar
 
-When specifying [header](header) and [footer](footer), the `{ left, center, right }` properties are still available to you. However, the following properties have been added to better support RTL locales:
+When specifying [headerToolbar](headerToolbar) and [footerToolbar](footerToolbar), the `{ left, center, right }` properties are still available to you. However, the following properties have been added to better support RTL locales:
 
 - `start` - if the calendar is left-to-right, it will appear on the left. if right-to-left, it will appear on the right.
 - `end` - if the calendar is left-to-right, it will appear on the right. if right-to-left, it will appear on the left.

@@ -12,10 +12,10 @@ Determines the action taken when the user clicks on a "more" link created by the
 :   Displays a rectangular panel over the cell with a full list of events for that day.
 
 `"week"`
-:   Goes to a week view, as determined by the views in the [header](header).
+:   Goes to a week view, as determined by the views in the [headerToolbar](headerToolbar).
 
 `"day"`
-:   Goes to a day view, as determined by the views in the [header](header).
+:   Goes to a day view, as determined by the views in the [headerToolbar](headerToolbar).
 
 *view name*
 :   A literal string name of any of the available views.

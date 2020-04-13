@@ -1,5 +1,5 @@
 ---
-title: header
+title: headerToolbar
 ---
 
 Defines the buttons and title at the top of the calendar.
@@ -16,7 +16,7 @@ Object/`false`, *default:*
 ```
 </div>
 
-Setting the header options to `false` will display no header. An object can be supplied with properties `start/center/end` or `left/center/right`. These properties contain strings with comma/space separated values. Values separated by a comma will be displayed adjacently. Values separated by a space will be displayed with a small gap in between. Strings can contain any of the following values:
+Setting the headerToolbar options to `false` will display no header toolbar. An object can be supplied with properties `start/center/end` or `left/center/right`. These properties contain strings with comma/space separated values. Values separated by a comma will be displayed adjacently. Values separated by a space will be displayed with a small gap in between. Strings can contain any of the following values:
 
 `title`
 :   text containing the current month/week/day

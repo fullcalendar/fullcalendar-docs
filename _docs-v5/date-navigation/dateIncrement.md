@@ -8,7 +8,7 @@ How far into the future/past the calendar navigates when prev/next is executed.
 [Duration](duration-object)-ish input
 </div>
 
-Determines how far the calendar will jump when the user presses the prev/next buttons in the [header](header) or when the [prev](Calendar-prev) or [next](Calendar-next) methods are executed.
+Determines how far the calendar will jump when the user presses the prev/next buttons in the [headerToolbar](headerToolbar) or when the [prev](Calendar-prev) or [next](Calendar-next) methods are executed.
 
 When using a standard view, it is unnecessary to specify `dateIncrement`.
 
