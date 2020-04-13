@@ -8,6 +8,8 @@ children:
   - updateSize
   - handleWindowResize
   - windowResizeDelay
+  - stickyHeaderDates
+  - stickyFooterScrollbar
   - title: Callbacks
     children:
       - windowResize
