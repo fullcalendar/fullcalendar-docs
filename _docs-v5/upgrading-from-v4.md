@@ -16,6 +16,7 @@ layout: text
   .text-content th,
   .text-content td {
     padding: 0 12px;
+    vertical-align: top;
   }
 
   .text-content td:first-child {
@@ -97,13 +98,16 @@ This guide outlines the changes between v4 and v5-beta.
 
 - the CSS and DOM structure has been refactored. any custom CSS you've written will break ([see below](#css-and-dom-structure))
 - no more manually importing fullcalendar stylesheets. however, your build system will need adjustment ([see below](#css-importing))
-- many options have been replaced, especially ones related to custom content injection. If an option name has the word `text`, `html`, or `render` in it, it has probably been replaced by something else.
+- Many options have been renamed, including the highly-used `defaultView` and `defaultDate`
+- Options related to custom content injection have been refactored. If an option name had the word `text`, `html`, or `render` in it, it has probably been replaced by something else.
 - the Vue and Angular connectors have different APIs for accepting options
 
 **Major new features:**
 
 - rendering optimizations. we now internally use a virtual DOM ([see below](#virtual-dom))
 - ability to inject custom content almost anywhere in the calendar
+- timed events in daygrid view appear with a small dot by default ([see below](#event-list-item-screenshot))
+- sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473)) - view demos of [timegrid](sticky-timegrid-demo), [timeline](sticky-timeline-demo), [vertical-resource](sticky-resource-timegrid-demo), and [list view](sticky-list-demo). See new flags in the [Calendar Sizing](#calendar-sizing) section below.
 - horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](dayMinWidth). Requires a premium plugin.
 - expanding the height of timegrid slots ([#265](https://github.com/fullcalendar/fullcalendar/issues/265))
 - expanding the height of resource rows in timeline view ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
@@ -112,7 +116,6 @@ This guide outlines the changes between v4 and v5-beta.
 
 **Things that are NOT YET IMPLEMENTED but will be soon**:
 
-- sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473))
 - rewrite the event-positioning strategy for timegrid (will solve [these issues](https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3A%22Event+Rendering%22+label%3A%22TimeGrid+View%22+label%3AConfirmed))
 - a system for overriding FullCalendar's CSS variables
 - printer-friendly rendering is broken. will be fixed, including for timeline view, which is a major new feature ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813))
@@ -138,7 +141,8 @@ This guide outlines the changes between v4 and v5-beta.
 - [CSS Importing](#css-importing)
 - [Pre-built Bundles](#pre-built-bundles)
 - [Toolbar](#toolbar)
-- [View Rendering](#view-rendering)
+- [View](#view)
+- [Current Date](#current-date)
 - [Date Rendering](#date-rendering)
 - [Event Rendering](#event-rendering)
 - [More Events Popover](#more-events-popover)
@@ -146,6 +150,8 @@ This guide outlines the changes between v4 and v5-beta.
 - [List View Rendering](#list-view-rendering)
 - [Now Indicator Rendering](#now-indicator-rendering)
 - [Calendar Sizing](#calendar-sizing)
+- [Event Sources](#event-sources)
+- [Locales](#locales)
 - [Custom JS Views](#custom-js-views)
 - [Interaction Plugin](#interaction-plugin)
 - [Moment and Luxon Plugins](#moment-and-luxon-plugins)
@@ -267,13 +273,40 @@ When using the scheduler bundle, you don't need to include both the standard bun
 The `main.js` file does <strong>NOT</strong> include the following plugins:
 
 - `google-calendar` - write a separate script tag for `<bundle-dir>/google-calendar.js`
-- `rrule` - write separate script tag for `<bundle-dir>/rrule.js` and the [rrule JS file](https://www.jsdelivr.com/package/npm/rrule?path=dist%2Fes5)
-- `luxon` - write separate script tag for `<bundle-dir>/luxon.js` and the [luxon JS file](https://www.jsdelivr.com/package/npm/luxon?path=build%2Fglobal)
-- `moment` - write separate script tag for `<bundle-dir>/moment.js` and the [moment JS file](https://www.jsdelivr.com/package/npm/moment)
-- `moment-timezone` - write separate script tag for `<bundle-dir>/moment-timezone.js` and the [moment-timezone JS file(s)](https://www.jsdelivr.com/package/npm/moment-timezone)
+- `rrule` - write separate script tag for the [rrule JS file](https://www.jsdelivr.com/package/npm/rrule?path=dist%2Fes5) and then `<bundle-dir>/rrule.js` after
+- `luxon` - write separate script tag for the [luxon JS file](https://www.jsdelivr.com/package/npm/luxon?path=build%2Fglobal) and then `<bundle-dir>/luxon.js` after
+- `moment` - write separate script tag for the [moment JS file](https://www.jsdelivr.com/package/npm/moment) and then `<bundle-dir>/moment.js` after
+- `moment-timezone` - write separate script tag for the [moment-timezone JS file(s)](https://www.jsdelivr.com/package/npm/moment-timezone) and then `<bundle-dir>/moment-timezone.js` after
 
 
 ## Toolbar
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>header</li>
+      </ul>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='headerToolbar' class='diff-added'>headerToolbar</a> - simply renamed</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>footer</li>
+      </ul>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='footerToolbar' class='diff-added'>footerToolbar</a> - simply renamed</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 When specifying [headerToolbar](headerToolbar) and [footerToolbar](footerToolbar), the `{ left, center, right }` properties are still available to you. However, the following properties have been added to better support RTL locales:
 
@@ -281,9 +314,21 @@ When specifying [headerToolbar](headerToolbar) and [footerToolbar](footerToolbar
 - `end` - if the calendar is left-to-right, it will appear on the right. if right-to-left, it will appear on the left.
 
 
-## View Rendering
+## View
 
 <table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>defaultView</li>
+      </ul>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='initialView' class='diff-added'>initialView</a> - simply renamed</li>
+      </ul>
+    </td>
+  </tr>
   <tr>
     <td>
       <ul class='diff-list'>
@@ -308,6 +353,26 @@ When specifying [headerToolbar](headerToolbar) and [footerToolbar](footerToolbar
           <span class='diff-added'>viewWillUnmount</span>
           - simply renamed from <span class='diff-removed'>viewSkeletonDestroy</span>
         </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+See below for changes to how [Custom JS Views](#custom-js-views) are implemented.
+
+
+## Current Date
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>defaultDate</li>
+      </ul>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='initialDate' class='diff-added'>initialDate</a> - simply renamed</li>
       </ul>
     </td>
   </tr>
@@ -529,13 +594,15 @@ Date rendering, in aggregate:
       </ul>
     </td>
     <td>
-      <p>
-        No direct replacement. Instead, handle <em>individual</em> date cells via the
-        <a href='day-header-render-hooks'>day header</a>,
-        <a href='day-cell-render-hooks'>day cell</a>, or
-        <a href='slot-render-hooks'>slot</a>
-        render hooks.
-      </p>
+      <ul class='diff-list'>
+        <li>
+          <a href='datesDidUpdate' class='diff-added'>datesDidUpdate</a> - renamed from <span class='diff-removed'>datesRender</span>. However, you are encouraged to use the render hooks on the <em>individual</em> date cells instead, like the
+          <a href='day-header-render-hooks'>day header</a>,
+          <a href='day-cell-render-hooks'>day cell</a>, and
+          <a href='slot-render-hooks'>slot</a>
+          render hooks.
+        </li>
+      </ul>
     </td>
   </tr>
   <tr>
@@ -727,7 +794,9 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
       </ul>
     </td>
     <td>
-      Call <a href='Calendar-render' class='diff-unchanged'>Calendar::render</a> after initialization to rerender everything.
+      <p>
+        Call <a href='Calendar-render' class='diff-unchanged'>Calendar::render</a> after initialization to rerender everything.
+      </p>
     </td>
   </tr>
   <tr>
@@ -739,6 +808,40 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
     <td>
       <p>
         Set a <code>min-height</code> on your event elements via CSS. The computed min-height is considered when positioning events.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li><span class='diff-removed'>rendering</span> setting within each <span style='white-space:nowrap'>Event Object</span></li>
+        <li><span class='diff-removed'>eventRendering</span> setting on the Calendar</li>
+      </ul>
+    </td>
+    <td>
+      <p>
+        These settings have been renamed to <span class='diff-added'>display</span> and <a href='eventDisplay' class='diff-added'>eventDisplay</a> respectively. They accept:
+      </p>
+      <ul>
+        <li><code>'block'</code> - new. always display as a solid rectangle in daygrid</li>
+        <li><code>'list-item'</code> - new. always display with a dot when in daygrid</li>
+        <li><code>'auto'</code> - new. the default. in daygrid, will display as 'block' if all-day or multi-day, otherwise will display as 'list-item'</li>
+        <li><code>'background'</code></li>
+        <li><code>'inverse-background'</code></li>
+        <li><code>'none'</code> - new. don't display at all</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        daygrid events
+      </p>
+    </td>
+    <td>
+      <p>
+        <img id='event-list-item-screenshot' src='event-list-item.png' width='170' height='146' style='float:left;margin:0 2em 1em 0' />
+        By default, single-day timed events in daygrid will render with a dot as opposed to a solid filled rectangle. To revert to the old behavior, set the calendar-wide <a href='eventDisplay' class='diff-added'>eventDisplay</a> option to <code>'block'</code>.
       </p>
     </td>
   </tr>
@@ -1188,6 +1291,54 @@ In list view, the "No events to display" message.
       </p>
     </td>
   </tr>
+  <tr>
+    <td></td>
+    <td>
+      <p>
+        New settings related to stickiness:
+      </p>
+      <ul class='diff-list'>
+        <li><a href='stickyHeaderDates' class='diff-added'>stickyHeaderDates</a> - whether to fix the date-headers while scrolling</li>
+        <li><a href='stickyFooterScrollbar' class='diff-added'>stickyFooterScrollbar</a> - whether to fix the view's bottom horizontal scrollbar while scrolling</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+## Event Sources
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>allDayDefault</li>
+      </ul>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='defaultAllDay' class='diff-added'>defaultAllDay</a> - simply renamed</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+## Locales
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>dir</li>
+      </ul>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='direction' class='diff-added'>direction</a> - simply renamed</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 
@@ -1295,6 +1446,7 @@ import { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon'
 
 - **feature:** you can force rerendering of anything on the calendar by calling the `Calendar::render` method again after initialization
 - **fix:** timeline event drag/resize when on second line, pops to top ([#4893](https://github.com/fullcalendar/fullcalendar/issues/4893))
+- **fix:** timeline scrolling sometimes gets out of sync when using a scroll wheel ([#4889](https://github.com/fullcalendar/fullcalendar/issues/4889))
 - **fix:** `rerenderDelay` causes selectable and editable lag ([#4770](https://github.com/fullcalendar/fullcalendar/issues/4770))
 - **fix:** CSP doesn't allow setting of inline CSS ([#4317](https://github.com/fullcalendar/fullcalendar/issues/4317))
 - **fix:** when `eventSourceSuccess` callback throws error, looks like JSON parsing failed ([#4947](https://github.com/fullcalendar/fullcalendar/pull/4947))
