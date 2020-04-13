@@ -10,8 +10,14 @@ needs_premium: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'resourceTimeGridWeek',
       initialDate: '{{ ym }}-07',
+      initialView: 'resourceTimeGridThreeDay',
+      views: {
+        resourceTimeGridThreeDay: {
+          type: 'resourceTimeGrid',
+          duration: { days: 3 }
+        }
+      },
       datesAboveResources: true,
 
       dayMinWidth: 200,
