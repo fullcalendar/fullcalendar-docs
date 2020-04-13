@@ -1,0 +1,60 @@
+---
+title: list view with natural height and sticky headers
+layout: none
+extra_plugins: [ 'rrule' ]
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://cdn.jsdelivr.net/npm/rrule@2.6.4/dist/es5/rrule.min.js'></script>
+    {% include demo-v5-head.html %}
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          timeZone: 'UTC',
+          initialView: 'listWeek',
+          initialDate: '{{ ym }}-09',
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'listDay,listWeek'
+          },
+          navLinks: true, // can click day/week names to navigate views
+          editable: true,
+
+          height: 'auto', // will activate stickyHeaderDates automatically!
+
+          events: [
+            {
+              title: 'repeating event',
+              rrule: {
+                dtstart: '{{ ym }}-09T13:00:00',
+                freq: 'hourly',
+                count: 100
+              },
+              duration: '00:30'
+            }
+          ]
+        });
+
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    {% include demo-topbar.html %}
+
+    <p style='text-align:center'>
+      As you scroll down, see how the header sticks<br />
+      &darr;<br />
+    </p>
+
+    <div id='calendar'></div>
+
+  </body>
+</html>
