@@ -20,7 +20,6 @@ When the above hooks are specified as a function in the form `function(arg)`, th
 
 - `date` - Date object
 - `text`
-- `navLinkData`
 - `isPast`
 - `isFuture`
 - `isToday`
