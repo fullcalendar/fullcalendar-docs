@@ -13,7 +13,7 @@ needs_premium: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'resourceTimeGridDay',
+      initialView: 'resourceTimeGridDay',
 
       resourceLabelDidMount: function(info) {
         var questionMark = document.createElement('span');

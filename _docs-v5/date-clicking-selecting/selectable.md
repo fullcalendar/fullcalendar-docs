@@ -26,7 +26,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'; // for dayGridMonth view
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ interactionPlugin, dayGridPlugin ],
-  defaultView: 'dayGridMonth',
+  initialView: 'dayGridMonth',
   selectable: true
 });
 ...
@@ -42,7 +42,7 @@ Alternatively, you can use [script tags and browser globals](initialize-globals)
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'interaction', 'dayGrid' ],
-  defaultView: 'dayGridMonth',
+  initialView: 'dayGridMonth',
   selectable: true
 });
 ...

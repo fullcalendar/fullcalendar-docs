@@ -65,7 +65,7 @@ export class AppComponent {
 Then, in your component's template file ([app.component.html]), you have access to the `<full-calendar>` tag. You must pass your plugins into this declaration!
 
 ```
-<full-calendar defaultView="dayGridMonth" [plugins]="calendarPlugins"></full-calendar>
+<full-calendar initialView="dayGridMonth" [plugins]="calendarPlugins"></full-calendar>
 ```
 
 
@@ -91,7 +91,7 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 
 ```
 <full-calendar
-  defaultView="dayGridMonth"
+  initialView="dayGridMonth"
   [plugins]="calendarPlugins"
   [weekends]="false"
   [events]="[
@@ -188,7 +188,7 @@ Don't mix up when to use properties versus events! For help deciding which is wh
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
 
-This is especially useful for controlling the current date. The [defaultDate](defaultDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
+This is especially useful for controlling the current date. The [initialDate](initialDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
 
 To do something like this, you'll need to get ahold of the [ViewChild reference][ViewChild]. In the template:
 

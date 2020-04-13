@@ -1,5 +1,5 @@
 ---
-title: defaultView
+title: initialView
 ---
 
 The initial view when the calendar loads.

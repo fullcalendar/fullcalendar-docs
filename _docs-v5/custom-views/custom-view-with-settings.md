@@ -35,7 +35,7 @@ When your calendar needs to display a *single* view with custom date range logic
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timeline', // the name of a generic view
+  initialView: 'timeline', // the name of a generic view
   duration: { days: 3 }
 });
 ```

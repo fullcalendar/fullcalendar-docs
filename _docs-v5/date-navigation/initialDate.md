@@ -1,5 +1,5 @@
 ---
-title: defaultDate
+title: initialDate
 ---
 
 The initial date displayed when the calendar first loads.

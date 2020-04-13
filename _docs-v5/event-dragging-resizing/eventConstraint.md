@@ -45,7 +45,7 @@ The `resourceId` and `resourceIds` (an array) properties can be applied to force
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timelineWeek',
+  initialView: 'timelineWeek',
   resources: [
     // resource data...
   ]

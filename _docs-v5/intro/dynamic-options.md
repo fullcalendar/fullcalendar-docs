@@ -29,8 +29,8 @@ calendar.setOption('locale', 'fr');
 
 Some options need to be **manipulated through methods**:
 
-- defaultDate - use [gotoDate](Calendar-gotoDate) instead
-- defaultView - use [changeView](Calendar-changeView) instead
+- initialDate - use [gotoDate](Calendar-gotoDate) instead
+- initialView - use [changeView](Calendar-changeView) instead
 
 Event Sources should be dynamically manipulated through methods like [addEventSource](Calendar-addEventSource) and [remove](EventSource-remove). Thusly, dynamic setting of the following options is **not applicable**:
 
@@ -39,9 +39,9 @@ Event Sources should be dynamically manipulated through methods like [addEventSo
 
 Some options affect processing of event data. Dynamically setting them will *not* change current event data, but *will* take effect for **future event fetches**:
 
-- defaultAllDayEventDuration
 - defaultTimedEventDuration
-- allDayDefault
+- defaultAllDayEventDuration
+- defaultAllDay
 - forceEventDuration
 - eventDataTransform
 - startParam

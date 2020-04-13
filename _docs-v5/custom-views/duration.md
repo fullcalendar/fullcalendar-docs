@@ -12,7 +12,7 @@ Example for a [Custom View](custom-view-with-settings):
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timeGridFourDay',
+  initialView: 'timeGridFourDay',
   views: {
     timeGridFourDay: {
       type: 'timeGrid',
@@ -26,7 +26,7 @@ Simpler example for a calendar with one view:
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timeGrid',
+  initialView: 'timeGrid',
   duration: { days: 4 }
 });
 ```
@@ -41,7 +41,7 @@ When setting the `duration` dynamically, it is important to note that it will on
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timeGridFourDay',
+  initialView: 'timeGridFourDay',
   duration: { days: 4 }, // the dynamic setter will change this
   views: {
     timeGrid: {
@@ -57,7 +57,7 @@ and:
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timeGridFourDay',
+  initialView: 'timeGridFourDay',
   views: {
     timeGridFourDay: {
       type: 'timeGrid',

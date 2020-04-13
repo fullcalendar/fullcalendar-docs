@@ -28,7 +28,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ timeGridPlugin ],
-  defaultView: 'timeGridWeek'
+  initialView: 'timeGridWeek'
 });
 ...
 ```
@@ -55,7 +55,7 @@ Or you can choose to initialized the TimeGrid views [entirely with script tags](
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'timeGrid' ],
-  defaultView: 'timeGridWeek'
+  initialView: 'timeGridWeek'
 });
 ...
 </script>

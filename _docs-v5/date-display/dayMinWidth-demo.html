@@ -10,8 +10,8 @@ needs_premium: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'resourceTimeGridWeek',
-      defaultDate: '{{ ym }}-07',
+      initialView: 'resourceTimeGridWeek',
+      initialDate: '{{ ym }}-07',
       datesAboveResources: true,
 
       dayMinWidth: 200,

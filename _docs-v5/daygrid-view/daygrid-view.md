@@ -13,7 +13,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ dayGridPlugin ],
-  defaultView: 'dayGridWeek'
+  initialView: 'dayGridWeek'
 });
 ...
 ```
@@ -37,7 +37,7 @@ Or you can choose to initialized DayGrid view [entirely with script tags](initia
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'dayGrid' ],
-  defaultView: 'dayGridWeek'
+  initialView: 'dayGridWeek'
 });
 ...
 </script>

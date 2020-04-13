@@ -12,7 +12,7 @@ disable_base_styles: true
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       timeZone: 'UTC',
-      defaultView: 'dayGridMonth',
+      initialView: 'dayGridMonth',
       height: '100%',
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
     });

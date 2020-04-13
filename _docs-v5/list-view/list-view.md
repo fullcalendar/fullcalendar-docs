@@ -18,7 +18,7 @@ import listPlugin from '@fullcalendar/list';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ listPlugin ],
-  defaultView: 'listWeek'
+  initialView: 'listWeek'
 });
 ...
 ```
@@ -42,7 +42,7 @@ Or you can choose to initialized the List views [entirely with script tags](init
 // ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'list' ],
-  defaultView: 'listWeek'
+  initialView: 'listWeek'
 });
 // ...
 </script>
@@ -61,7 +61,7 @@ In the following example, we pass non-standard information about events through 
 ```js
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'list' ],
-  defaultView: 'listWeek',
+  initialView: 'listWeek',
   events: [
     {
       title: 'Meeting',

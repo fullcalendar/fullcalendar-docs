@@ -8,9 +8,9 @@ children:
   - title: Event Data Parsing
     children:
       - eventDataTransform
-      - allDayDefault
-      - defaultTimedEventDuration
+      - defaultAllDay
       - defaultAllDayEventDuration
+      - defaultTimedEventDuration
       - forceEventDuration
   - title: Methods
     children:

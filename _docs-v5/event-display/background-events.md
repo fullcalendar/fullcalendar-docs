@@ -10,8 +10,8 @@ Events that appear as background highlights can be achieved by setting an [Event
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultDate: '2014-11-10',
-  defaultView: 'timeGridWeek',
+  initialDate: '2014-11-10',
+  initialView: 'timeGridWeek',
   events: [
     {
       start: '2014-11-10T10:00:00',
@@ -41,8 +41,8 @@ The spans of time *not* occupied by an event can be colored by setting the `rend
 ```js
 var calendar = new Calendar(calendarEl, {
   plugins: [ 'timeGrid' ],
-  defaultDate: '2014-11-10',
-  defaultView: 'timeGridWeek',
+  initialDate: '2014-11-10',
+  initialView: 'timeGridWeek',
   events: [
     {
       groupId: 'testGroupId',

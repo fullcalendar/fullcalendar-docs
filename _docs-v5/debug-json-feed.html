@@ -9,7 +9,7 @@ layout: demo-v5
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       timeZone: 'UTC',
-      defaultView: 'dayGridMonth',
+      initialView: 'dayGridMonth',
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -33,9 +33,9 @@ layout: demo-v5
       //
       events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
 
-      // 7. Then, enter a date for defaultDate that best displays your events:
+      // 7. Then, enter a date for initialDate that best displays your events:
       //
-      // defaultDate: 'XXXX-XX-XX'
+      // initialDate: 'XXXX-XX-XX'
     });
 
     calendar.render();

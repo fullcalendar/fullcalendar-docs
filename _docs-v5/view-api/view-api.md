@@ -1,7 +1,7 @@
 ---
 title: View API
 children:
-  - defaultView
+  - initialView
   - view-object
   - view-render-hooks
   - Calendar-view

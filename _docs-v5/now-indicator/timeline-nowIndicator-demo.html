@@ -9,7 +9,7 @@ needs_premium: true
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'resourceTimeline',
+      initialView: 'resourceTimeline',
       nowIndicator: true,
       now: '2018-02-13T09:25:00', // just for demo
       resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json'

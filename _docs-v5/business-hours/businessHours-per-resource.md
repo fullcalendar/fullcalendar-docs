@@ -8,7 +8,7 @@ The main [`businessHours`](businessHours) settings can be applied more granularl
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timelineWeek',
+  initialView: 'timelineWeek',
   resources: [
     {
       id: 'a',

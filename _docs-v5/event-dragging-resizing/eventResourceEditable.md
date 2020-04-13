@@ -18,7 +18,7 @@ A variation of this property called `resourceEditable` can be set on an [Event O
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timelineWeek',
+  initialView: 'timelineWeek',
   resources: [
     // resource data...
   ],
@@ -43,7 +43,7 @@ If you'd like to allow the user to drag-n-drop an event to a different resource,
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'timeline',
+  initialView: 'timeline',
   editable: false, // don't allow event dragging
   eventResourceEditable: true // except for between resources
 

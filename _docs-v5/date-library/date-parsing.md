@@ -3,7 +3,7 @@ title: Date Parsing
 excerpt_separator: <!--more-->
 ---
 
-FullCalendar's API accepts date information in many places, such as when you set the [defaultDate](defaultDate) or define an [event's](event-parsing) `start`/`end`.<!--more--> FullCalendar accepts a number of formats for these dates:
+FullCalendar's API accepts date information in many places, such as when you set the [initialDate](initialDate) or define an [event's](event-parsing) `start`/`end`.<!--more--> FullCalendar accepts a number of formats for these dates:
 
 
 ## ISO8601 strings
@@ -20,7 +20,7 @@ Example:
 ```js
 var calendar = new Calendar(calendarEl, {
   timeZone: 'local',
-  defaultDate: '2018-06-01' // will be parsed as local
+  initialDate: '2018-06-01' // will be parsed as local
 })
 ```
 
@@ -31,7 +31,7 @@ You can supply a millisecond time since the Unix epoch (Jan 1, 1970 UTC). Please
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultDate: 1537302134028 // Tue Sep 18 2018 16:22:14 GMT-0400
+  initialDate: 1537302134028 // Tue Sep 18 2018 16:22:14 GMT-0400
 })
 ```
 
@@ -43,7 +43,7 @@ You can specify a native JavaScript Date object. The native Date constructor acc
 ```js
 var calendar = new Calendar(calendarEl, {
   timeZone: 'local',
-  defaultDate: new Date(2018, 8, 1)
+  initialDate: new Date(2018, 8, 1)
 })
 ```
 
@@ -52,7 +52,7 @@ If you want to specify UTC values, use this technique:
 ```js
 var calendar = new Calendar(calendarEl, {
   timeZone: 'UTC',
-  defaultDate: new Date(Date.UTC(2018, 8, 1))
+  initialDate: new Date(Date.UTC(2018, 8, 1))
 })
 ```
 

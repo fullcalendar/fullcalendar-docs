@@ -10,7 +10,7 @@ import timelinePlugin from '@fullcalendar/timeline';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ timelinePlugin ],
-  defaultView: 'timelineWeek'
+  initialView: 'timelineWeek'
 });
 ...
 ```
@@ -34,7 +34,7 @@ Or you can choose to initialized the Timeline views [entirely with script tags](
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'timeline' ],
-  defaultView: 'timelineWeek'
+  initialView: 'timelineWeek'
 });
 ...
 </script>

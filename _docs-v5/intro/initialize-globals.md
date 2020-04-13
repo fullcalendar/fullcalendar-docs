@@ -18,7 +18,7 @@ The first step is to visit the [Getting Started page](getting-started) to downlo
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          defaultView: 'dayGridMonth'
+          initialView: 'dayGridMonth'
         });
         calendar.render();
       });
@@ -58,7 +58,7 @@ If you want to use any of the [premium Scheduler functionality](premium), use th
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          defaultView: 'resourceTimelineWeek'
+          initialView: 'resourceTimelineWeek'
         });
         calendar.render();
       });

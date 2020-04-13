@@ -15,7 +15,7 @@ import resourceDayGridPlugin from '@fullcalendar/resource-daygrid';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ resourceDayGridPlugin ],
-  defaultView: 'resourceDayGridDay',
+  initialView: 'resourceDayGridDay',
   resources: [
     // your list of resources
   ]
@@ -44,7 +44,7 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 ...
 let calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'resourceDayGrid' ],
-  defaultView: 'resourceDayGridDay',
+  initialView: 'resourceDayGridDay',
   resources: [
     // your list of resources
   ]

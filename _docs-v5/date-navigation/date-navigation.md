@@ -1,7 +1,7 @@
 ---
 title: Date Navigation
 children:
-  - defaultDate
+  - initialDate
   - dateIncrement
   - dateAlignment
   - validRange

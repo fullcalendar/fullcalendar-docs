@@ -15,7 +15,7 @@ Example for a [Custom View](custom-view-with-settings):
 ```js
 var calendar = new Calendar(calendarEl, {
   weekends: false,
-  defaultView: 'timeGridFourDay',
+  initialView: 'timeGridFourDay',
   views: {
     timeGridFourDay: {
       type: 'timeGrid',
@@ -30,7 +30,7 @@ Simpler example for a calendar with one view:
 ```js
 var calendar = new Calendar(calendarEl, {
   weekends: false,
-  defaultView: 'timeGrid',
+  initialView: 'timeGrid',
   dayCount: 4
 });
 ```

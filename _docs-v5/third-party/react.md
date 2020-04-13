@@ -35,7 +35,7 @@ export default class DemoApp extends React.Component {
 
   render() {
     return (
-      <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
+      <FullCalendar initialView="dayGridMonth" plugins={[ dayGridPlugin ]} />
     )
   }
 
@@ -65,7 +65,7 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 
 ```jsx
 <FullCalendar
-  defaultView="dayGridMonth"
+  initialView="dayGridMonth"
   plugins={calendarPlugins}
   weekends={false}
   events={[
@@ -105,7 +105,7 @@ Make sure your callbacks methods are [bound to your component's context][callbac
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
 
-This is especially useful for controlling the current date. The [defaultDate](defaultDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
+This is especially useful for controlling the current date. The [initialDate](initialDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
 
 To do something like this, you'll need to get ahold of the component's ref (short for "reference"). Once you do that, you call the `getApi` method of the "current" component instance:
 

@@ -19,8 +19,8 @@ children:
       - classname-input
       - content-injection
 related:
-  - defaultDate
-  - defaultView
+  - initialDate
+  - initialView
   - view-api
 ---
 

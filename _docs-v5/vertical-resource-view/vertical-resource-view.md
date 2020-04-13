@@ -23,7 +23,7 @@ import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ resourceTimeGridPlugin ],
-  defaultView: 'resourceTimeGridDay',
+  initialView: 'resourceTimeGridDay',
   resources: [
     // your list of resources
   ]
@@ -52,7 +52,7 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 ...
 let calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'resourceTimeGrid' ],
-  defaultView: 'resourceTimeGridDay',
+  initialView: 'resourceTimeGridDay',
   resources: [
     // your list of resources
   ]

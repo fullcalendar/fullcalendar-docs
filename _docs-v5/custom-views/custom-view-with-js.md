@@ -50,7 +50,7 @@ import customViewPlugin from './custom-view-file.js';
 let calendarEl = document.getElementById('calendar');
 let calendar = new Calendar(calendarEl, {
   plugins: [ customViewPlugin ],
-  defaultView: 'custom'
+  initialView: 'custom'
 });
 ```
 

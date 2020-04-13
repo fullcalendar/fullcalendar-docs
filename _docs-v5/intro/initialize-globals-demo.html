@@ -9,8 +9,8 @@ layout: demo-v5
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      defaultView: 'dayGridMonth',
-      defaultDate: '{{ ym }}-07',
+      initialView: 'dayGridMonth',
+      initialDate: '{{ ym }}-07',
       header: {
         left: 'prev,next today',
         center: 'title',

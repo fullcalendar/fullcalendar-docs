@@ -48,7 +48,7 @@ import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ resourceTimelinePlugin ],
-  defaultView: 'resourceTimeline',
+  initialView: 'resourceTimeline',
   resources: [
     // your resource list
   ]
@@ -79,7 +79,7 @@ Or you can choose to initialized the Timeline views [entirely with script tags](
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'resourceTimeline' ],
-  defaultView: 'resourceTimelineWeek',
+  initialView: 'resourceTimelineWeek',
   resources: [
     // your resource list
   ]
@@ -92,7 +92,7 @@ If you need a different duration, make a [custom view](custom-view-with-settings
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  defaultView: 'resourceTimelineFourDays',
+  initialView: 'resourceTimelineFourDays',
   views: {
     resourceTimelineFourDays: {
       type: 'resourceTimeline',

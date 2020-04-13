@@ -44,7 +44,7 @@ export default {
 </script>
 
 <template>
-  <FullCalendar defaultView="dayGridMonth" :plugins="calendarPlugins" />
+  <FullCalendar initialView="dayGridMonth" :plugins="calendarPlugins" />
 </template>
 ```
 
@@ -73,7 +73,7 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 
 ```html
 <FullCalendar
-  defaultView="dayGridMonth"
+  initialView="dayGridMonth"
   :plugins="calendarPlugins"
   :weekends="false"
   :events="[
@@ -109,7 +109,7 @@ Don't mix up when to use props versus events! For help deciding which is which, 
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
 
-This is especially useful for controlling the current date. The [defaultDate](defaultDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
+This is especially useful for controlling the current date. The [initialDate](initialDate) prop will set the *initial* date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
 
 To do something like this, you'll need to get ahold of the component's ref (short for "reference"). In the template:
 

@@ -169,10 +169,10 @@ Sets the <a href='eventAllow'>eventAllow</a> setting for every event in this sou
 </tr>
 <tr>
 <th>
-allDayDefault
+defaultAllDay
 </th>
 <td>
-Sets the <a href='allDayDefault'>allDayDefault</a> option, but only for this source.
+Sets the <a href='defaultAllDay'>defaultAllDay</a> option, but only for this source.
 </td>
 </tr>
 <tr>
