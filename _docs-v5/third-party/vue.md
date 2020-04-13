@@ -3,15 +3,13 @@ title: Vue Component
 title_for_landing: Vue
 ---
 
-<span style='color:red'>This article is out of date. <a href='upgrading-from-v4#vue-connector' class='more-link'>Please read the changelog for now</a></span>
-
 FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
-- [Example project][example project] leveraging [Webpack] and [Sass] (the code in this guide loosely follows it)
+- [Example project][example project] leveraging [Webpack] and [css-loader] (the code in this guide loosely follows it)
 - [Runnable project]({{ site.fullcalendar_vue_playground }}) in a code playground
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
@@ -26,7 +24,6 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 ```html
 <script>
-
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
@@ -36,73 +33,101 @@ export default {
   },
   data() {
     return {
-      calendarPlugins: [ dayGridPlugin ]
+      calendarOptions: {
+        plugins: [ dayGridPlugin ],
+        initialView: 'dayGridMonth'
+      }
     }
   }
 }
-
 </script>
-
 <template>
-  <FullCalendar initialView="dayGridMonth" :plugins="calendarPlugins" />
+  <FullCalendar :options="calendarOptions" />
 </template>
 ```
-
-Notice how you must define the plugins in the data method, and then pass them into the `<FullCalendar>` component. This is the only way!
 
 
 ## CSS
 
-You must manually include the stylesheets for FullCalendar's core and plugins. Assuming you have [Sass] set up, add a style block in the same `.vue` file:
+All of FullCalendar's CSS will be automatically loaded as long as your build system is able to process `.css` file imports. See [Initializing with an ES6 Build System](initialize-es6) for more information on configuring your build system.
+
+
+## Props and Emitted Events
+
+Vue has the concept of "props" (via `v-bind` or `:`) versus "events" (via `v-on` or `@`). For the FullCalendar connector, there is no distinction between props and events. Everything is passed into the master `options` object as key-value pairs. Here is an example that demonstrates passing in an `events` array and a `dateClick` handler:
 
 ```html
-<style lang='scss'>
+<script>
+import FullCalendar from '@fullcalendar/vue'
+import dayGridPlugin from '@fullcalendar/daygrid'
 
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-
-</style>
-```
-
-The prefixed `~` tells Sass to look in the `node_modules` directory.
-
-
-## Props
-
-The `<FullCalendar>` component is equipped with [all of FullCalendar's options][docs toc]! Just pass them in as props. Please be aware of when to prefix `:` (otherwise known as `v-bind:`) to the prop names. If you need a bound JavaScript expression, use `:`. Otherwise, use a normal attribute. Example:
-
-```html
-<FullCalendar
-  initialView="dayGridMonth"
-  :plugins="calendarPlugins"
-  :weekends="false"
-  :events="[
-    { title: 'event 1', date: '2019-04-01' },
-    { title: 'event 2', date: '2019-04-02' }
-  ]"
-  />
-```
-
-
-## Emitted Events
-
-A listener can be passed into a Vue component that will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date. The way you pass these into the `<FullCalendar>` component is different than props:
-
-```html
-<FullCalendar @dateClick="handleDateClick" :plugins="calendarPlugins" />
-```
-
-They are prefixed with `@` (otherwise known as `v-on:`). Then, in the JavaScript, write your handler method:
-
-```js
-methods: {
-  handleDateClick(arg) {
-    alert(arg.date)
+export default {
+  components: {
+    FullCalendar // make the <FullCalendar> tag available
+  },
+  data() {
+    return {
+      calendarOptions: {
+        plugins: [ dayGridPlugin ],
+        initialView: 'dayGridMonth',
+        dateClick: this.handleDateClick.bind(this), // bind is important!
+        events: [
+          { title: 'event 1', date: '2019-04-01' },
+          { title: 'event 2', date: '2019-04-02' }
+        ]
+      }
+    }
+  },
+  methods: {
+    handleDateClick: function(arg) {
+      alert('date click! ' + arg.dateStr)
+    }
   }
 }
+</script>
+<template>
+  <FullCalendar :options="calendarOptions" />
+</template>
 ```
 
-Don't mix up when to use props versus events! For help deciding which is which, consult the [giant list of props and events][component options] in the connector's source code.
+
+## Modifying Options
+
+You can modify your calendar's options after initialization by reassigning them within the options object. This is an example of changing the `weekends` options:
+
+```html
+<script>
+import FullCalendar from '@fullcalendar/vue'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+export default {
+  components: {
+    FullCalendar // make the <FullCalendar> tag available
+  },
+  data() {
+    return {
+      calendarOptions: {
+        plugins: [ dayGridPlugin ],
+        initialView: 'dayGridMonth',
+        weekends: false // initial value
+      }
+    }
+  },
+  methods: {
+    toggleWeekends: function() {
+      this.calendarOptions.weekends = !this.calendarOptions.weekends // toggle the boolean!
+    }
+  }
+}
+</script>
+<template>
+  <button @click="toggleWeekends">toggle weekends</button>
+  <FullCalendar :options="calendarOptions" />
+</template>
+```
+
+
+
 
 
 ## Accessing FullCalendar's API
@@ -114,7 +139,7 @@ This is especially useful for controlling the current date. The [initialDate](in
 To do something like this, you'll need to get ahold of the component's ref (short for "reference"). In the template:
 
 ```html
-<FullCalendar ref="fullCalendar" :plugins="calendarPlugins" />
+<FullCalendar ref="fullCalendar" :options="calendarOptions" />
 ```
 
 Once you have the ref, you can get the underlying `Calendar` object via the `getApi` method:
@@ -127,13 +152,13 @@ calendarApi.next()
 
 ## Kebab-case in Markup
 
-Some people prefer to write component names and prop names in kebab-case when writing markup. This will work fine:
+Some people prefer to write component names in kebab-case when writing markup. This will work fine:
 
 ```html
-<full-calendar default-view="dayGridMonth" :plugins="calendarPlugins" />
+<full-calendar :options="calendarOptions" />
 ```
 
-Notice how property *values* must remain in their original case.
+However, the properties within `calendarOptions` must have the same names.
 
 
 ## Scheduler
@@ -151,31 +176,24 @@ export default {
   },
   data() {
     return {
-      calendarPlugins: [ resourceTimelinePlugin ]
+      calendarOptions: {
+        plugins: [ resourceTimelinePlugin ],
+        schedulerLicenseKey: 'XXX'
+      }
     }
   }
 }
-
 </script>
-
 <template>
-  <FullCalendar schedulerLicenseKey="XXX" :plugins="calendarPlugins" />
+  <FullCalendar :options="calendarOptions" />
 </template>
-
-<style lang='scss'>
-
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/timeline/main.css';
-@import '~@fullcalendar/resource-timeline/main.css';
-
-</style>
 ```
 
 
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
-[Sass]: https://sass-lang.com/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue
-[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/vue/src/DemoApp.vue
+[css-loader]: https://webpack.js.org/loaders/css-loader/
+[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue
+[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v5/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
 [component options]: https://github.com/fullcalendar/fullcalendar-vue/blob/master/src/fullcalendar-options.js

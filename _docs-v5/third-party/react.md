@@ -3,15 +3,13 @@ title: React Component
 title_for_landing: React
 ---
 
-<span style='color:red'>This article is out of date. <a href='upgrading-from-v4#react-connector' class='more-link'>Please read the changelog for now</a></span>
-
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [Josh Ruff](https://github.com/joshuaRuff) of [Sardius Media](http://sardius.media/) in partnership with the maintainers of FullCalendar. It is the official React connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
-- [Example project][example project] leveraging [Webpack], [Babel], and [Sass] (the code in this guide loosely follows it)
+- [Example project][example project] leveraging [Webpack], [Babel], and [css-loader] (the code in this guide loosely follows it)
 - [Runnable project]({{ site.fullcalendar_react_playground }}) in a code playground
 
 This guide does not go into depth about initializing a React project. Please consult the aforementioned example/runnable projects for that.
@@ -29,8 +27,6 @@ import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
-import './main.scss' // webpack must be configured to do this
-
 export default class DemoApp extends React.Component {
 
   render() {
@@ -47,16 +43,7 @@ You must initialized your calendar with at least one plugin that provides a view
 
 ## CSS
 
-The above example includes a `.scss` file from *JavaScript*. To get this to work with Webpack, you need to set up `style-loader`, `css-loader`, `sass-loader`, and `node-sass`. [More info &raquo;][sass-loader]
-
-You must then manually include the stylesheets for FullCalendar's core and plugins. In `main.scss`:
-
-```scss
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-```
-
-The prefixed `~` tells Sass to look in the `node_modules` directory.
+All of FullCalendar's CSS will be automatically loaded as long as your build system is able to process `.css` file imports. See [Initializing with an ES6 Build System](initialize-es6) for more information on configuring your build system.
 
 
 ## Props
@@ -72,7 +59,7 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
     { title: 'event 1', date: '2019-04-01' },
     { title: 'event 2', date: '2019-04-02' }
   ]}
-  />
+/>
 ```
 
 
@@ -147,8 +134,6 @@ export default class DemoApp extends React.Component {
 }
 ```
 
-Also, make sure all the correct stylesheets are being included.
-
 
 ## TypeScript
 
@@ -158,11 +143,10 @@ React goes really well with [TypeScript]! To show you how to integrate the two, 
 [React]: https://reactjs.org/
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
-[Sass]: https://sass-lang.com/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react
-[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/react/src/DemoApp.jsx
-[sass-loader]: https://github.com/webpack-contrib/sass-loader#readme
+[css-loader]: https://webpack.js.org/loaders/css-loader/
+[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/react
+[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v5/react/src/DemoApp.jsx
 [docs toc]: https://fullcalendar.io/docs#toc
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/
-[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript
+[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/react-typescript
