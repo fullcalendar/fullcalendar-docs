@@ -1,7 +1,6 @@
 ---
 title: Event::setResources
 type: method
-since_version: 4.0.2
 ---
 
 Sets the [Resources](resource-object) associated with the given event.

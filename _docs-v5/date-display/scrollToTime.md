@@ -1,6 +1,5 @@
 ---
 title: scrollToTime
-since_version: 4.1.0
 ---
 
 Programatically scroll the current view to the given time.
