@@ -114,9 +114,9 @@ Boolean (`true` or `false`) or `null`. The value overriding the [eventResourceEd
 </tr>
 
 <tr>
-<th>rendering</th>
+<th>display</th>
 <td markdown='1'>
-The rendering type of this event. Can be empty (normal rendering), `"background"`, or `"inverse-background"`
+The rendering type of this event. Can be `'auto'`, `'block'`, `'list-item'`, `'background'`, `'inverse-background'`, or `'none'`
 </td>
 </tr>
 

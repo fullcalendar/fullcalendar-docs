@@ -6,7 +6,7 @@ demos:
   - background-events-demo
 ---
 
-Events that appear as background highlights can be achieved by setting an [Event Object](event-object)'s `rendering` property to `"background"`:
+Events that appear as background highlights can be achieved by setting an [Event Object](event-object)'s `display` property to `"background"`:
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -16,7 +16,7 @@ var calendar = new Calendar(calendarEl, {
     {
       start: '2014-11-10T10:00:00',
       end: '2014-11-10T16:00:00',
-      rendering: 'background'
+      display: 'background'
     }
   ]
 });
@@ -36,7 +36,7 @@ The color of background events can be manipulated by targeting the `fc-bgevent` 
 
 ## Inverse Backgrounds
 
-The spans of time *not* occupied by an event can be colored by setting the `rendering` property to `"inverse-background"`:
+The spans of time *not* occupied by an event can be colored by setting the `display` property to `"inverse-background"`:
 
 ```js
 var calendar = new Calendar(calendarEl, {
@@ -48,7 +48,7 @@ var calendar = new Calendar(calendarEl, {
       groupId: 'testGroupId',
       start: '2014-11-10T10:00:00',
       end: '2014-11-10T16:00:00',
-      rendering: 'inverse-background'
+      display: 'inverse-background'
     }
   ]
 });
