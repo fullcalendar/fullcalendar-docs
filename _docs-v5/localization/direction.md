@@ -1,5 +1,5 @@
 ---
-title: dir
+title: direction
 ---
 
 The direction that elements in the calendar are rendered. Either left-to-right or right-to-left.

@@ -2,7 +2,7 @@
 title: Locale
 children:
   - locale
-  - dir
+  - direction
   - firstDay
 related:
   - eventTimeFormat
