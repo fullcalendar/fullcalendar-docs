@@ -840,7 +840,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
     </td>
     <td>
       <p>
-        <img id='event-list-item-screenshot' src='event-list-item.png' width='170' height='146' style='float:left;margin:0 2em 1em 0' />
+        <img id='event-list-item-screenshot' src='event-list-item.png' alt='list-item event-display example' width='170' height='146' style='float:left;margin:0 2em 1em 0' />
         By default, single-day timed events in daygrid will render with a dot as opposed to a solid filled rectangle. To revert to the old behavior, set the calendar-wide <a href='eventDisplay' class='diff-added'>eventDisplay</a> option to <code>'block'</code>. See above for other choices.
       </p>
     </td>

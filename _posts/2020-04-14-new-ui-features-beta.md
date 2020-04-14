@@ -9,7 +9,7 @@ We've just released a second beta! This piggybacks off the [first beta release](
 
 ### List-item Event Display
 
-<img src='{{ site.baseurl }}/docs/v5/event-list-item.png' width='170' height='146' style='float:right;margin:-2em 2em 1em 2em' />
+<img src='{{ site.baseurl }}/docs/v5/event-list-item.png' alt='list-item event-display example' width='170' height='146' style='float:right;margin:-2em 2em 1em 2em' />
 
 In daygrid view, when an event has a time, it is displayed differently. See the screenshot. It has a little colored dot that is controlled by its background/border color. This new display setting is very configurable. See [eventDisplay]({{ site.baseurl }}/docs/v5/eventDisplay).
 
