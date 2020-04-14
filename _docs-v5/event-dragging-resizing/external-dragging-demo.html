@@ -75,8 +75,8 @@ disable_base_styles: true
   }
 
   #external-events .fc-event {
-    margin: 1em 0;
     cursor: move;
+    margin: 3px 0;
   }
 
   #calendar-container {
@@ -99,11 +99,23 @@ disable_base_styles: true
     <p>
       <strong>Draggable Events</strong>
     </p>
-    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 1</div>
-    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 2</div>
-    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 3</div>
-    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 4</div>
-    <div class='fc-event fc-h-event fc-daygrid-event'>My Event 5</div>
+
+    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+      <div class='fc-event-main'>My Event 1</div>
+    </div>
+    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+      <div class='fc-event-main'>My Event 2</div>
+    </div>
+    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+      <div class='fc-event-main'>My Event 3</div>
+    </div>
+    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+      <div class='fc-event-main'>My Event 4</div>
+    </div>
+    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+      <div class='fc-event-main'>My Event 5</div>
+    </div>
+
     <p>
       <input type='checkbox' id='drop-remove' />
       <label for='drop-remove'>remove after drop</label>
