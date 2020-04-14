@@ -167,7 +167,7 @@ Here are all the available properties, **all of which are optional**:
   <tr>
   <th>display</th>
   <td markdown='1'>
-  Allows alternate rendering of the event, like background events. Can be `'auto'` (the default), `'block'`, `'list-item'`, `'background'`, `'inverse-background'`, or `'none'`
+  Allows alternate rendering of the event, like background events. Can be `'auto'` (the default), `'block'`, `'list-item'`, `'background'`, `'inverse-background'`, or `'none'`. See [eventDisplay](eventDisplay).
   </td>
   </tr>
 

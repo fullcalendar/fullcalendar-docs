@@ -145,6 +145,14 @@ Sets every <a href='event-object'>Event Object's</a> <code>resourceEditable</cod
 </tr>
 <tr>
 <th>
+display
+</th>
+<td>
+Sets the <a href='eventDisplay'>eventDisplay</a> setting for every event in this source.
+</td>
+</tr>
+<tr>
+<th>
 overlap
 </th>
 <td>

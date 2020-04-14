@@ -6,6 +6,7 @@ children:
   - eventBackgroundColor
   - eventBorderColor
   - eventTextColor
+  - eventDisplay
   - eventTimeFormat
   - displayEventTime
   - displayEventEnd
