@@ -2,7 +2,7 @@
 title: datesDidUpdate
 ---
 
-Called after the calendar's date range has changed in some way and the DOM has been updated.
+Called after the calendar's date range has been initially set or changed in some way and the DOM has been updated.
 
 <div class='spec' markdown='1'>
 function()
