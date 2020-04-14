@@ -128,7 +128,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
-**Have a comment?** [Comment on the blog post]({{ site.baseurl }}{% post_url 2020-04-06-v5-beta-released %})
+**Have a comment?** [Comment on the latest blog post]({{ site.baseurl }}{% post_url 2020-04-14-new-ui-features-beta %})
 
 </div>
 <div class='sidebar-layout__sidebar' id='toc' markdown='1'>
