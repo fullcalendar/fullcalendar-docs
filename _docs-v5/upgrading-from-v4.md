@@ -109,8 +109,8 @@ This guide outlines the changes between v4 and v5-beta.
 - timed events in daygrid view appear with a small dot by default ([see below](#event-list-item-screenshot))
 - sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473)) - view demos of [timegrid](sticky-timegrid-demo), [timeline](sticky-timeline-demo), [vertical-resource](sticky-resource-timegrid-demo), and [list view](sticky-list-demo). See new flags in the [Calendar Sizing](#calendar-sizing) section below.
 - horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](dayMinWidth). Requires a premium plugin.
-- expanding the height of timegrid slots ([#265](https://github.com/fullcalendar/fullcalendar/issues/265))
-- expanding the height of resource rows in timeline view ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
+- expanding the height of timegrid slots with [expandRows](expandRows) ([#265](https://github.com/fullcalendar/fullcalendar/issues/265))
+- expanding the height of resource rows in timeline view with [expandRows](expandRows) ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
 - pre-built bundles that require minimal configuration and no build system ([see below](#pre-built-bundles))
 - the React and Vue connectors accept custom rendering functions/templates
 
@@ -1506,7 +1506,7 @@ const AppComponent = {
     return {
       calendarOptions: {
         weekends: false,
-        dateClick: this.handleDateClick.bind(this) // binding is important!
+        dateClick: this.handleDateClick
       }
     }
   },

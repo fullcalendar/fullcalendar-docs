@@ -10,7 +10,7 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
 - [Example project][example project] leveraging [Webpack] and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project]({{ site.fullcalendar_vue_playground }}) in a code playground
+- [Runnable project](https://codesandbox.io/s/fullcalendar-v5-vue-chof8?file=/src/DemoApp.vue) in a code playground
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
@@ -70,7 +70,7 @@ export default {
       calendarOptions: {
         plugins: [ dayGridPlugin ],
         initialView: 'dayGridMonth',
-        dateClick: this.handleDateClick.bind(this), // bind is important!
+        dateClick: this.handleDateClick,
         events: [
           { title: 'event 1', date: '2019-04-01' },
           { title: 'event 2', date: '2019-04-02' }

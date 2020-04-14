@@ -10,7 +10,7 @@ This component is built and maintained by [Josh Ruff](https://github.com/joshuaR
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
 - [Example project][example project] leveraging [Webpack], [Babel], and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project]({{ site.fullcalendar_react_playground }}) in a code playground
+- [Runnable project](https://codesandbox.io/s/fullcalendar-v5-react-7xi95?file=/src/DemoApp.jsx) in a code playground
 
 This guide does not go into depth about initializing a React project. Please consult the aforementioned example/runnable projects for that.
 
