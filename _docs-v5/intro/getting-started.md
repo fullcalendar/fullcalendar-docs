@@ -21,11 +21,11 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 You might want to avoid a built system by [initializing fullcalendar with script tags and globals](initialize-globals). Or, you might simply want to avoid dealing with individual plugins. If so, use one of the pre-built bundles:
 
 - `fullcalendar`
-  - **Download**: [fullcalendar-5.0.0-beta.2.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v5.0.0-beta.1/fullcalendar-5.0.0-beta.2.zip)
+  - **Download**: [fullcalendar-5.0.0-beta.2.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v5.0.0-beta.2/fullcalendar-5.0.0-beta.2.zip)
   - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar?version=5.0.0-beta.2)
   - **NPM:** `npm install fullcalendar@5.0.0-beta.2`
 - `fullcalendar-scheduler` - [a premium product](premium)
-  - **Download**: [fullcalendar-scheduler-5.0.0-beta.2.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-beta.1/fullcalendar-scheduler-5.0.0-beta.2.zip)
+  - **Download**: [fullcalendar-scheduler-5.0.0-beta.2.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-beta.2/fullcalendar-scheduler-5.0.0-beta.2.zip)
   - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler?version=5.0.0-beta.2)
   - **NPM:** `npm install fullcalendar-scheduler@5.0.0-beta.2`
 
