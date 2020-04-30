@@ -3,7 +3,7 @@
   "dependencies": {
     "fullcalendar": "^3.9.0",
     "fullcalendar-scheduler": "^1.9.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0"
   }
 }
