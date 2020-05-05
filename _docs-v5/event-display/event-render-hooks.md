@@ -27,3 +27,4 @@ When the above hooks are specified as a function in the form `function(arg)`, th
 - `isFuture`
 - `isToday`
 - `el` - the element. only available in `eventDidMount` and `eventWillUnmount`
+- `view` - [View Object](view-object)
