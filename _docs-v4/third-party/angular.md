@@ -248,5 +248,5 @@ Also, make sure all the correct stylesheets are being included.
 [styles.scss]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/styles.scss
 [angular.json]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/angular.json
 [docs toc]: https://fullcalendar.io/docs#toc
-[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/master/projects/fullcalendar/src/lib/fullcalendar-options.ts
+[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/v4/projects/fullcalendar/src/lib/fullcalendar-options.ts
 [ViewChild]: https://angular.io/api/core/ViewChild
