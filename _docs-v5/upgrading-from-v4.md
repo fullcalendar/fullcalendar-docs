@@ -105,6 +105,7 @@ This guide outlines the changes between v4 and v5-beta.
 **Major new features:**
 
 - rendering optimizations. we now internally use a virtual DOM ([see below](#virtual-dom))
+- a pure-React distribution of fullcalendar (the `@fullcalendar/react` package) ([see below](#real-react))
 - ability to inject custom content almost anywhere in the calendar
 - timed events in daygrid view appear with a small dot by default ([see below](#event-list-item-screenshot))
 - sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473)) - view demos of [timegrid](sticky-timegrid-demo), [timeline](sticky-timeline-demo), [vertical-resource](sticky-resource-timegrid-demo), and [list view](sticky-list-demo). See new flags in the [Calendar Sizing](#calendar-sizing) section below.
@@ -113,14 +114,13 @@ This guide outlines the changes between v4 and v5-beta.
 - expanding the height of resource rows in timeline view with [expandRows](expandRows) ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
 - pre-built bundles that require minimal configuration and no build system ([see below](#pre-built-bundles))
 - the React and Vue connectors accept custom rendering functions/templates
+- awesome Typescript definitions. FullCalendar's internals rely on them, so they won't fall out of date like before
+- console warnings when providing unknown options/props/listeners
 
 **Things that are NOT YET IMPLEMENTED but will be soon**:
 
-- rewrite the event-positioning strategy for timegrid (will solve [these issues](https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+label%3A%22Event+Rendering%22+label%3A%22TimeGrid+View%22+label%3AConfirmed))
-- a system for overriding FullCalendar's CSS variables
 - printer-friendly rendering is broken. will be fixed, including for timeline view, which is a major new feature ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813))
-- TypeScript definitions for new options are in a state of disarray. Until they are fixed, the options definitions have been relaxed to accept almost any input.
-- a pure-React distro without leveraging Preact (potentially)
+- a system for overriding FullCalendar's CSS variables
 
 <br />
 
@@ -183,6 +183,11 @@ FullCalendar now internally uses a miniature virtual-DOM library called [Preact]
 Just because we use a virtual DOM doesn't mean we no longer think about performance. We still care about limiting the amount of rerender execution, even though it performs fewer real DOM operations. This will continue to be a priority as we further develop the beta.
 
 How does this affect FullCalendar's API? It doesn't really. From any of the content injection options like `eventContent` you are able to construct and return a virtual DOM node. [Learn more in this article](content-injection#virtual-dom). Aside from that, you won't need to think about the virtual DOM.
+
+
+## Real React
+
+The `@fullcalendar/react` package is no longer merely a connector. It leverages the actual React virtual DOM engine the rest of your React app uses. It swaps out the Preact rendering engine it normally uses for real React, so you can take advantage of Fiber. This is sourcery that Adam will likely blog about in the future.
 
 
 ## CSS and DOM Structure
@@ -269,14 +274,6 @@ For initializing [scheduler](premium), do something like this:
 ```
 
 When using the scheduler bundle, you don't need to include both the standard bundle <strong>AND</strong> the scheduler bundle. The scheduler bundle already <strong>INCLUDES</strong> the standard plugins.
-
-The `main.js` file does <strong>NOT</strong> include the following plugins:
-
-- `google-calendar` - write a separate script tag for `<bundle-dir>/google-calendar.js`
-- `rrule` - write separate script tag for the [rrule JS file](https://www.jsdelivr.com/package/npm/rrule?path=dist%2Fes5) and then `<bundle-dir>/rrule.js` after
-- `luxon` - write separate script tag for the [luxon JS file](https://www.jsdelivr.com/package/npm/luxon?path=build%2Fglobal) and then `<bundle-dir>/luxon.js` after
-- `moment` - write separate script tag for the [moment JS file](https://www.jsdelivr.com/package/npm/moment) and then `<bundle-dir>/moment.js` after
-- `moment-timezone` - write separate script tag for the [moment-timezone JS file(s)](https://www.jsdelivr.com/package/npm/moment-timezone) and then `<bundle-dir>/moment-timezone.js` after
 
 
 ## Toolbar
@@ -1445,6 +1442,7 @@ import { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon'
 ## Other Misc Changes
 
 - **feature:** you can force rerendering of anything on the calendar by calling the `Calendar::render` method again after initialization
+- **feature**: full sourcemaps included for each NPM package ([#4719](https://github.com/fullcalendar/fullcalendar/issues/4719))
 - **fix:** timeline event drag/resize when on second line, pops to top ([#4893](https://github.com/fullcalendar/fullcalendar/issues/4893))
 - **fix:** timeline scrolling sometimes gets out of sync when using a scroll wheel ([#4889](https://github.com/fullcalendar/fullcalendar/issues/4889))
 - **fix:** `rerenderDelay` causes selectable and editable lag ([#4770](https://github.com/fullcalendar/fullcalendar/issues/4770))

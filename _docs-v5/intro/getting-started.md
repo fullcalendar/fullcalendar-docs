@@ -42,12 +42,7 @@ Here are the packages inside of each bundle:
     - `@fullcalendar/timegrid`
     - `@fullcalendar/list`
     - `@fullcalendar/bootstrap`
-  - the bundle includes the following packages in separate files within the same directory:
     - `@fullcalendar/google-calendar`
-    - `@fullcalendar/rrule`
-    - `@fullcalendar/luxon`
-    - `@fullcalendar/moment`
-    - `@fullcalendar/moment`
 - `fullcalendar-scheduler`
   - the `main.js` and `main.css` include the following packages:
     - `@fullcalendar/core`
@@ -56,15 +51,10 @@ Here are the packages inside of each bundle:
     - `@fullcalendar/timegrid`
     - `@fullcalendar/list`
     - `@fullcalendar/bootstrap`
+    - `@fullcalendar/google-calendar`
     - `@fullcalendar/scrollgrid` ([premium](premium))
     - `@fullcalendar/timeline` ([premium](premium))
     - `@fullcalendar/resource-common` ([premium](premium))
     - `@fullcalendar/resource-daygrid` ([premium](premium))
     - `@fullcalendar/resource-timegrid` ([premium](premium))
     - `@fullcalendar/resource-timeline` ([premium](premium))
-  - the bundle includes the following packages in separate files within the same directory:
-    - `@fullcalendar/google-calendar`
-    - `@fullcalendar/rrule`
-    - `@fullcalendar/luxon`
-    - `@fullcalendar/moment`
-    - `@fullcalendar/moment`
