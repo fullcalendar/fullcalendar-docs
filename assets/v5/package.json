@@ -1,8 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "fullcalendar": "5.0.0-beta.2",
-    "fullcalendar-scheduler": "5.0.0-beta.2",
+    "fullcalendar": "5.0.0-beta.3",
+    "fullcalendar-scheduler": "5.0.0-beta.3",
     "luxon": "^1.17.2",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
