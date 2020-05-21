@@ -32,10 +32,6 @@ fullcalendar_react_repo: https://github.com/fullcalendar/fullcalendar-react
 fullcalendar_vue_repo: https://github.com/fullcalendar/fullcalendar-vue
 fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
 
-fullcalendar_react_playground: https://codesandbox.io/s/2z6wp2jozn
-fullcalendar_vue_playground: https://codesandbox.io/s/8xyz32l0r8
-fullcalendar_angular_playground: https://stackblitz.com/github/fullcalendar/fullcalendar-example-projects/tree/master/angular
-
 disqus_shortname: adamshawsblog
 
 paginate: 10

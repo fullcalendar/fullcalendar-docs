@@ -10,7 +10,7 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
 - [Example project][example project] leveraging [Webpack] and [Sass] (the code in this guide loosely follows it)
-- [Runnable project]({{ site.fullcalendar_vue_playground }}) in a code playground
+- [Runnable project](https://codesandbox.io/s/8xyz32l0r8) in a code playground
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
