@@ -128,7 +128,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
-**Have a comment?** [Comment on the latest blog post]({{ site.baseurl }}{% post_url 2020-04-14-new-ui-features-beta %})
+**Have a comment?** [Comment on the latest blog post]({{ site.baseurl }}{% post_url 2020-05-20-react-ts-v5-beta %})
 
 </div>
 <div class='sidebar-layout__sidebar' id='toc' markdown='1'>
@@ -137,6 +137,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 - [Getting the Beta](#getting-the-beta)
 - [Virtual DOM](#virtual-dom)
+- [Real React](#real-react)
 - [CSS and DOM Structure](#css-and-dom-structure)
 - [CSS Importing](#css-importing)
 - [Pre-built Bundles](#pre-built-bundles)
