@@ -109,17 +109,17 @@ This guide outlines the changes between v4 and v5-beta.
 - ability to inject custom content almost anywhere in the calendar
 - timed events in daygrid view appear with a small dot by default ([see below](#event-list-item-screenshot))
 - sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473)) - view demos of [timegrid](sticky-timegrid-demo), [timeline](sticky-timeline-demo), [vertical-resource](sticky-resource-timegrid-demo), and [list view](sticky-list-demo). See new flags in the [Calendar Sizing](#calendar-sizing) section below.
-- horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](dayMinWidth). Requires a premium plugin.
+- horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](dayMinWidth). Requires a **premium plugin**.
 - expanding the height of timegrid slots with [expandRows](expandRows) ([#265](https://github.com/fullcalendar/fullcalendar/issues/265))
 - expanding the height of resource rows in timeline view with [expandRows](expandRows) ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
 - pre-built bundles that require minimal configuration and no build system ([see below](#pre-built-bundles))
+- better printer-friendly rendering with the new "adaptive" plugin ([see below](#better-printer-friendly-rendering))
 - the React and Vue connectors accept custom rendering functions/templates
 - awesome Typescript definitions. FullCalendar's internals rely on them, so they won't fall out of date like before
 - console warnings when providing unknown options/props/listeners
 
 **Things that are NOT YET IMPLEMENTED but will be soon**:
 
-- printer-friendly rendering is broken. will be fixed, including for timeline view, which is a major new feature ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813))
 - a system for overriding FullCalendar's CSS variables
 
 <br />
@@ -141,6 +141,7 @@ This guide outlines the changes between v4 and v5-beta.
 - [CSS and DOM Structure](#css-and-dom-structure)
 - [CSS Importing](#css-importing)
 - [Pre-built Bundles](#pre-built-bundles)
+- [Better Printer-Friendly Rendering](#better-printer-friendly-rendering)
 - [Toolbar](#toolbar)
 - [View](#view)
 - [Current Date](#current-date)
@@ -275,6 +276,14 @@ For initializing [scheduler](premium), do something like this:
 ```
 
 When using the scheduler bundle, you don't need to include both the standard bundle <strong>AND</strong> the scheduler bundle. The scheduler bundle already <strong>INCLUDES</strong> the standard plugins.
+
+
+
+## Better Printer-Friendly Rendering
+
+Rendering for print has been greatly improved, especially for timeline view ([#4813](https://github.com/fullcalendar/fullcalendar/issues/4813)). You must use the new `@fullcalendar/adaptive` plugin, which conditionally renders the calendar when the user clicks Print/Print-Preview in their browser. This new plugin is a **premium plugin**.
+
+<a href='print' class='more-link'>Learn more about rendering for print</a>
 
 
 ## Toolbar
@@ -482,7 +491,7 @@ The days cells in daygrid and timegrid views:
       <ul class='diff-list'>
         <li>
           <a href='dayMinWidth' class='diff-added'>dayMinWidth</a>
-          - creates a horizontal scrollbar if day cells get any narrower. For daygrid and timegrid views only. Requires the <code>@fullcalendar/scrollgrid</code> premium plugin.
+          - creates a horizontal scrollbar if day cells get any narrower. For daygrid and timegrid views only. Requires the <code>@fullcalendar/scrollgrid</code> <strong>premium plugin</strong>.
         </li>
       </ul>
     </td>
