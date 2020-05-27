@@ -6,7 +6,7 @@ is_premium: true
 A [DayGrid view](daygrid-view) like `dayGridDay` can be given resource functionality. It is initialized in an [ES6 setup](initialize-es6) like so:
 
 ```
-npm install --save @fullcalendar/core @fullcalendar/resource-daygrid
+npm install --save @fullcalendar/core@5.0.0-beta.4 @fullcalendar/resource-daygrid@5.0.0-beta.4
 ```
 
 ```js
