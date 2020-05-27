@@ -61,4 +61,5 @@ children:
   - title: Accessibility
     children:
       - touch
+      - print
 ---

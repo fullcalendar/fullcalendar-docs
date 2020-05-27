@@ -52,6 +52,7 @@ Here are the packages inside of each bundle:
     - `@fullcalendar/list`
     - `@fullcalendar/bootstrap`
     - `@fullcalendar/google-calendar`
+    - `@fullcalendar/adaptive` ([premium](premium))
     - `@fullcalendar/scrollgrid` ([premium](premium))
     - `@fullcalendar/timeline` ([premium](premium))
     - `@fullcalendar/resource-common` ([premium](premium))

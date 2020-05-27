@@ -21,8 +21,14 @@
 
     {% for image in page.images %}
       <div class='docs-sublanding__image'>
+
+        {% if image.url %}<a href='{{ image.url }}'>{% endif %}
+
         <img src='{{ image.filename | escape }}'
           alt='Screenshot: {{ image.caption | escape }}' />
+
+        {% if image.url %}</a>{% endif %}
+
         <div class='docs-sublanding__image-caption'>
           {{ image.caption | escape }}
         </div>
