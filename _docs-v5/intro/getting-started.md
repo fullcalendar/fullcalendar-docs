@@ -18,7 +18,7 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 ## Pre-built Bundles
 
-You might want to avoid a built system by [initializing fullcalendar with script tags and globals](initialize-globals). Or, you might simply want to avoid dealing with individual plugins. If so, use one of the pre-built bundles:
+You might want to avoid a built system by [initializing fullcalendar with script tags and globals](initialize-globals). If so, use one of the pre-built bundles:
 
 - `fullcalendar`
   - **Download**: [fullcalendar-5.0.0-beta.4.zip](https://github.com/fullcalendar/fullcalendar/releases/download/v5.0.0-beta.4/fullcalendar-5.0.0-beta.4.zip)
@@ -28,34 +28,3 @@ You might want to avoid a built system by [initializing fullcalendar with script
   - **Download**: [fullcalendar-scheduler-5.0.0-beta.4.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-beta.4/fullcalendar-scheduler-5.0.0-beta.4.zip)
   - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler?version=5.0.0-beta.4)
   - **NPM:** `npm install fullcalendar-scheduler@5.0.0-beta.4`
-
-
-## Bundle Contents
-
-Here are the packages inside of each bundle:
-
-- `fullcalendar`
-  - the `main.js` and `main.css` include the following packages:
-    - `@fullcalendar/core`
-    - `@fullcalendar/interaction`
-    - `@fullcalendar/daygrid`
-    - `@fullcalendar/timegrid`
-    - `@fullcalendar/list`
-    - `@fullcalendar/bootstrap`
-    - `@fullcalendar/google-calendar`
-- `fullcalendar-scheduler`
-  - the `main.js` and `main.css` include the following packages:
-    - `@fullcalendar/core`
-    - `@fullcalendar/interaction`
-    - `@fullcalendar/daygrid`
-    - `@fullcalendar/timegrid`
-    - `@fullcalendar/list`
-    - `@fullcalendar/bootstrap`
-    - `@fullcalendar/google-calendar`
-    - `@fullcalendar/adaptive` ([premium](premium))
-    - `@fullcalendar/scrollgrid` ([premium](premium))
-    - `@fullcalendar/timeline` ([premium](premium))
-    - `@fullcalendar/resource-common` ([premium](premium))
-    - `@fullcalendar/resource-daygrid` ([premium](premium))
-    - `@fullcalendar/resource-timegrid` ([premium](premium))
-    - `@fullcalendar/resource-timeline` ([premium](premium))

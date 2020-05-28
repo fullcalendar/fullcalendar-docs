@@ -33,14 +33,6 @@ The first step is to visit the [Getting Started page](getting-started) to downlo
 
 [View a runnable example &raquo;](initialize-globals-demo)
 
-The `main.js` file does <strong>NOT</strong> include the following plugins:
-
-- `google-calendar` - write a separate script tag for `<bundle-dir>/google-calendar.js`
-- `rrule` - write separate script tag for `<bundle-dir>/rrule.js` and the [rrule JS file](https://www.jsdelivr.com/package/npm/rrule?path=dist%2Fes5)
-- `luxon` - write separate script tag for `<bundle-dir>/luxon.js` and the [luxon JS file](https://www.jsdelivr.com/package/npm/luxon?path=build%2Fglobal)
-- `moment` - write separate script tag for `<bundle-dir>/moment.js` and the [moment JS file](https://www.jsdelivr.com/package/npm/moment)
-- `moment-timezone` - write separate script tag for `<bundle-dir>/moment-timezone.js` and the [moment-timezone JS file(s)](https://www.jsdelivr.com/package/npm/moment-timezone)
-
 
 ## Scheduler
 
@@ -74,6 +66,35 @@ If you want to use any of the [premium Scheduler functionality](premium), use th
 You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalendar` bundle. The `fullcalendar-scheduler` bundle includes everything.
 
 
-## Plugins
+## Bundle Contents
+
+Here are the packages inside of each bundle:
+
+- `fullcalendar` - the `main.js` and `main.css` files include the following packages:
+  - `@fullcalendar/core`
+  - `@fullcalendar/interaction`
+  - `@fullcalendar/daygrid`
+  - `@fullcalendar/timegrid`
+  - `@fullcalendar/list`
+  - `@fullcalendar/bootstrap`
+  - `@fullcalendar/google-calendar`
+- `fullcalendar-scheduler` - the `main.js` and `main.css` files include the following packages:
+  - `@fullcalendar/core`
+  - `@fullcalendar/interaction`
+  - `@fullcalendar/daygrid`
+  - `@fullcalendar/timegrid`
+  - `@fullcalendar/list`
+  - `@fullcalendar/bootstrap`
+  - `@fullcalendar/google-calendar`
+  - `@fullcalendar/adaptive` ([premium](premium))
+  - `@fullcalendar/scrollgrid` ([premium](premium))
+  - `@fullcalendar/timeline` ([premium](premium))
+  - `@fullcalendar/resource-common` ([premium](premium))
+  - `@fullcalendar/resource-daygrid` ([premium](premium))
+  - `@fullcalendar/resource-timegrid` ([premium](premium))
+  - `@fullcalendar/resource-timeline` ([premium](premium))
+
+
+## Different Approaches
 
 If you're already using a build system like [Webpack](https://webpack.js.org/), or you want a smaller build by trimming away plugins you don't use, look at how to set up FullCalendar with an [ES6 build system](initialize-es6).
