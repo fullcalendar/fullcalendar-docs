@@ -211,7 +211,7 @@ In v5, you no longer need to do this! The plugins will import their own styleshe
 
 ```js
 import { Calendar } from '@fullcalendar/core'
-import timeGridPlugin from '@fulllcalendar/timegrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
 
 // DON'T DO THIS ANYMORE! it will happen automatically
 // import '@fullcalendar/core/main.css';
