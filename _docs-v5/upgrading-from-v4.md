@@ -107,6 +107,7 @@ This guide outlines the changes between v4 and v5-beta.
 - rendering optimizations. we now internally use a virtual DOM ([see below](#virtual-dom))
 - a pure-React distribution of fullcalendar (the `@fullcalendar/react` package) ([see below](#real-react))
 - ability to inject custom content almost anywhere in the calendar
+- a system for overriding [FullCalendar's CSS variables](css-customization#css-variables)
 - timed events in daygrid view appear with a small dot by default ([see below](#event-list-item-screenshot))
 - sticky headers ([#3473](https://github.com/fullcalendar/fullcalendar/issues/3473)) - view demos of [timegrid](sticky-timegrid-demo), [timeline](sticky-timeline-demo), [vertical-resource](sticky-resource-timegrid-demo), and [list view](sticky-list-demo). See new flags in the [Calendar Sizing](#calendar-sizing) section below.
 - horizontal scrolling for vertical resource view ([#3022](https://github.com/fullcalendar/fullcalendar/issues/3022)). also applies to all daygrid/timegrid views. accomplished by setting [dayMinWidth](dayMinWidth). Requires a **premium plugin**.
@@ -117,10 +118,6 @@ This guide outlines the changes between v4 and v5-beta.
 - the React and Vue connectors accept custom rendering functions/templates
 - awesome Typescript definitions. FullCalendar's internals rely on them, so they won't fall out of date like before
 - console warnings when providing unknown options/props/listeners
-
-**Things that are NOT YET IMPLEMENTED but will be soon**:
-
-- a system for overriding FullCalendar's CSS variables
 
 <br />
 
@@ -200,7 +197,7 @@ The CSS has been completely rewritten. Most importantly, the selectors are flatt
 
 As a result, if you've written custom styling, <strong>it will most likely need to be rewritten for v5</strong>, or at the very least you will need to swap out your classNames. To help you do this, we will likely release a className-upgrade document prior to the official release.
 
-<!-- <strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='css-variables'>how to use CSS variables &raquo;</a> -->
+<strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='css-customization#css-variables'>how to use CSS variables &raquo;</a>
 
 
 ## CSS Importing

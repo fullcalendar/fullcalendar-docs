@@ -9,6 +9,7 @@ children:
   - methods
   - title: More Advanced
     children:
+      - css-customization
       - view-specific-options
       - dynamic-options
       - render
