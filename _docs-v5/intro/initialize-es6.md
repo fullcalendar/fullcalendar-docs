@@ -41,7 +41,11 @@ For a full list of plugins, visit the [Plugin Index &raquo;](plugin-index)
 Before using a plugin, you must install it view npm/yarn. You can install multiple plugins at once:
 
 ```
-npm install @fullcalendar/core@5.0.0-beta.4 @fullcalendar/daygrid@5.0.0-beta.4 @fullcalendar/timegrid@5.0.0-beta.4 @fullcalendar/list@5.0.0-beta.4
+npm install \
+  @fullcalendar/core@5.0.0-beta.4 \
+  @fullcalendar/daygrid@5.0.0-beta.4 \
+  @fullcalendar/timegrid@5.0.0-beta.4 \
+  @fullcalendar/list@5.0.0-beta.4
 ```
 
 When using an ES6 build system, you must pass in the references exported from each plugin module into the `plugins` array:
