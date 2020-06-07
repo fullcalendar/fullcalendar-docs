@@ -39,11 +39,15 @@ While this technique is rather simple to implement, it is brittle because if ful
 
 It's possible to customize fullcalendar's CSS in a more surgical way. FullCalendar's CSS source code was originally written with [custom CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), aka "CSS variables". These variables are compiled down to plain CSS statements that all supported browsers can understand. However, fullcalendar also leaves these variables in the compiled CSS code for you to override.
 
-In order to override these variables, you must be [using a build system](initialize-es6) like Webpack or Rollup. Then, for your respective build system, install [PostCSS](https://postcss.org/) (for Webpack, install [postcss-loader](https://webpack.js.org/loaders/postcss-loader/)). PostCSS is a system that allows you to transform your project's generated CSS in various ways.
+To override these variables, you must be [using a build system](initialize-es6) like Webpack or Rollup. Then, you must install the following:
 
-<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/webpack' class='more-link'>View an example repo that uses Webpack, PostCSS, and CSS variables</a>
+- [PostCSS](https://postcss.org/) - a system that allows you to transform your project's generated CSS in various ways. For Webpack, use [postcss-loader](https://webpack.js.org/loaders/postcss-loader/)
+- Either [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) or [postcss-css-variables](https://github.com/MadLittleMods/postcss-css-variables)
+- [postcss-calc](https://github.com/postcss/postcss-calc)
 
-Once you install PostCSS, you'll need to configure it. You can do this in a number of ways, but the easiest is to create a `postcss.config.js` in the root of your project:
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/webpack' class='more-link'>View an example repo that does all this</a>
+
+Once PostCSS and all necessary plugins are installed, begin to configure PostCSS. You can do this in a number of ways, but the easiest is to create a `postcss.config.js` in the root of your project:
 
 ```js
 module.exports = {
@@ -53,14 +57,15 @@ module.exports = {
       importFrom: [
         'src/fullcalendar-vars.css' // look here for the new values
       ]
-    })
+    }),
+    require('postcss-calc')
   ]
 }
 ```
 
 The above example uses the [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) plugin to compile the variables. You can use the [postcss-css-variables](https://github.com/MadLittleMods/postcss-css-variables) plugin instead, but be aware that you'll need to configure the `variables` key-value map instead of the `importFrom` setting.
 
-Once you've wired up `postcss-custom-properties`, write a `fullcalendar-vars.css` file that contains the new variable values:
+Once you've wired up `postcss-custom-properties`, write a `src/fullcalendar-vars.css` file that contains the new variable values:
 
 ```css
 :root {
