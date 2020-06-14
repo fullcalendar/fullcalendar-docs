@@ -1066,6 +1066,19 @@ When there are too many events to fit within a single day:
 ## Resource Rendering
 
 <table>
+
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='resourceOrder'>resourceOrder</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>
+        The default value will now force resources to be sorted by <code>id</code>. Previously, by default, resources were sorted in the order they were received.
+      </p>
+    </td>
+  </tr>
   <tr>
     <td>
       <ul class='diff-list'>
