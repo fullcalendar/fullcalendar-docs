@@ -21,6 +21,7 @@ children:
       - Resource-getChildren
       - Resource-getEvents
       - Resource-remove
+      - Resource-toPlainObject
 related:
   - Event-getResources
   - Event-setResources

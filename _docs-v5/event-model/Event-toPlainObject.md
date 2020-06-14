@@ -16,7 +16,7 @@ The optional `settings` argument contains properties that affect serialization:
 
 <tr>
 <th>collapseExtendedProps</th>
-<td>If set to <code>true</code>, the <code>extendedProperties</code> hash will be merged into the root outputted object. If <code>false</code> (the default), <code>extendedProperties</code> will be its own object nested within the root object.</td>
+<td>If set to <code>true</code>, the <code>extendedProps</code> hash will be merged into the root outputted object. If <code>false</code> (the default), <code>extendedProps</code> will be its own object nested within the root object.</td>
 </tr>
 
 <tr>
