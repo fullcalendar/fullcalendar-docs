@@ -8,7 +8,7 @@ Serializes a [Resource API Object](resource-object) to a plain object that would
 resource.toPlainObject( *settings* )
 </div>
 
-This methods attempts to aggregate all non-empty properties. If the resulting object does not look as desired, it is best to write your own serialization function from scratch.
+This methods attempts to aggregate all non-empty properties. Not all properties are supported. If the resulting object does not look as desired, it is best to write your own serialization function from scratch.
 
 The optional `settings` argument contains properties that affect serialization:
 

@@ -20,6 +20,8 @@ children:
       - Resource-getParent
       - Resource-getChildren
       - Resource-getEvents
+      - Resource-setProp
+      - Resource-setExtendedProp
       - Resource-remove
       - Resource-toPlainObject
 related:
