@@ -24,6 +24,12 @@ children:
       - Resource-setExtendedProp
       - Resource-remove
       - Resource-toPlainObject
+  - title: Callbacks
+    children:
+      - resourceAdd
+      - resourceChange
+      - resourceRemove
+      - resourcesSet
 related:
   - Event-getResources
   - Event-setResources
