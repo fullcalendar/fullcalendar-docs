@@ -8,7 +8,7 @@ Called after an event has been added to the calendar.
 function( addInfo )
 </div>
 
-This happens when [Calendar::addEvent](Calendar-addEvent) is called or when an external event is dropped from [outside the calendar](external-dragging) or from [a different calendar](other-calendar-dragging). If being called as a result of the latter two, `eventAdd` will be fired *after* [eventReceive](eventReceive).
+This fires after [Calendar::addEvent](Calendar-addEvent) is called or when an external event is dropped from [outside the calendar](external-dragging) or from [a different calendar](other-calendar-dragging). If being called as a result of the latter two, `eventAdd` will be fired *after* [eventReceive](eventReceive).
 
 The `addInfo` argument has the following properties:
 

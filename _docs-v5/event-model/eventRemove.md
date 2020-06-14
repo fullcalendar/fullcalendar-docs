@@ -8,7 +8,7 @@ Called after an event has been removed from the calendar.
 function( removeInfo )
 </div>
 
-This happens when [Event::remove](Event-remove) is called. It also happens when an event is being dragged [to another calendar](other-calendar-dragging), in which case `eventRemove` fires *after* [eventLeave](eventLeave).
+This fires after [Event::remove](Event-remove) is called. It also happens when an event is being dragged [to another calendar](other-calendar-dragging), in which case `eventRemove` fires *after* [eventLeave](eventLeave).
 
 The `removeInfo` argument has the following properties:
 

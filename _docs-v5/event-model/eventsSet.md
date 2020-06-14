@@ -2,7 +2,7 @@
 title: eventsSet
 ---
 
-Called when the event data is initialized and subsequently changed in any way.
+Called after event data is initialized **OR** changed in any way.
 
 <div class='spec'>
 function( events )

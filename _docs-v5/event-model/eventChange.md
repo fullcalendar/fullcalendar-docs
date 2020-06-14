@@ -8,7 +8,7 @@ Called after an event has been modified in some way.
 function( changeInfo )
 </div>
 
-This happens when any [Event Object](event-object) setter method is called, like [setStart](Event-setStart). It is also called after an event has been dragged or resized. `eventChange` will fire *after* [eventDrop](eventDrop) and [eventResize](eventResize).
+This fires after any [Event Object](event-object) setter method is called, like [setStart](Event-setStart). It is also called after an event has been dragged or resized. `eventChange` will fire *after* [eventDrop](eventDrop) and [eventResize](eventResize).
 
 The `changeInfo` argument has the following properties:
 
