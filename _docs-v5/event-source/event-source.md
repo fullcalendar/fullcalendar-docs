@@ -9,6 +9,7 @@ children:
   - eventSources
   - eventSourceSuccess
   - eventSourceFailure
+  - initialEvents
   - title: Event Requesting
     children:
       - startParam

@@ -9,6 +9,7 @@ children:
   - resource-object
   - resources-and-events
   - refetchResourcesOnNavigate
+  - initialResources
   - title: Methods
     children:
       - refetchResources
