@@ -42,7 +42,7 @@ I know it's not cool to release breaking changes in an "API-stable" beta, but we
 
 ### Bugs and Other Small Things
 
-We've also released a number of bugfixes based on your feedback. In addition, we've released the [datesDidUpdate]({{ site.baseurl }}/docs/v5/datesDidUpdate) callback.
+We've also released a number of bugfixes based on your feedback. In addition, we've released the [datesSet]({{ site.baseurl }}/docs/v5/datesSet) callback.
 
 Please keep the feedback coming!
 

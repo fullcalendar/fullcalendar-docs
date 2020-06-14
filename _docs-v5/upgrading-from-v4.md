@@ -600,7 +600,7 @@ Date rendering, in aggregate:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='datesDidUpdate' class='diff-added'>datesDidUpdate</a> - renamed from <span class='diff-removed'>datesRender</span>. However, you are encouraged to use the render hooks on the <em>individual</em> date cells instead, like the
+          <a href='datesSet' class='diff-added'>datesSet</a> - renamed from <span class='diff-removed'>datesRender</span>. However, you are encouraged to use the render hooks on the <em>individual</em> date cells instead, like the
           <a href='day-header-render-hooks'>day header</a>,
           <a href='day-cell-render-hooks'>day cell</a>, and
           <a href='slot-render-hooks'>slot</a>

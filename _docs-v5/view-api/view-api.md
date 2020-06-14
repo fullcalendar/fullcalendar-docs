@@ -6,7 +6,6 @@ children:
   - view-render-hooks
   - Calendar-view
   - Calendar-changeView
-  - datesDidUpdate
 related:
   - view-specific-options
 ---
