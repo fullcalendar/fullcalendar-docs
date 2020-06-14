@@ -30,6 +30,12 @@ children:
       - Event-remove
       - Event-getResources
       - Event-setResources
+  - title: Callbacks
+    children:
+      - eventAdd
+      - eventChange
+      - eventRemove
+      - eventsSet
 related:
   - resources-and-events
 demos:

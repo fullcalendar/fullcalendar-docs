@@ -14,20 +14,6 @@ function( *eventDropInfo* ) { }
 <table>
 
 <tr>
-<th>delta</th>
-<td markdown='1'>
-A [Duration Object](duration-object) that represents the amount of time the event was moved by.
-</td>
-</tr>
-
-<tr>
-<th>el</th>
-<td markdown='1'>
-The HTML element that was dragged.
-</td>
-</tr>
-
-<tr>
 <th>event</th>
 <td markdown='1'>
 An [Event Object](event-object) that holds information about the event (date, title, etc) **after** the drop.
@@ -35,19 +21,8 @@ An [Event Object](event-object) that holds information about the event (date, ti
 </tr>
 
 <tr>
-<th>jsEvent</th>
-<td markdown='1'>
-The native JavaScript event with low-level information such as click coordinates.
-</td>
-</tr>
-
-<tr>
-<th>newResource</th>
-<td markdown='1'>
-If the resource has changed, this is the [Resource Object](resource-object) the event **went to**.
-If the resource has not changed, this will be undefined.
-For use with the [resource plugins](premium) only.
-</td>
+<th>relatedEvents</th>
+<td>an array of other related <a href='event-object'>Event Objects</a> that were also dropped. an event might have other <a href='recurring-events'>recurring event</a> instances or might be linked to other events with the same <code>groupId</code></td>
 </tr>
 
 <tr>
@@ -67,6 +42,22 @@ For use with the [resource plugins](premium) only.
 </tr>
 
 <tr>
+<th>newResource</th>
+<td markdown='1'>
+If the resource has changed, this is the [Resource Object](resource-object) the event **went to**.
+If the resource has not changed, this will be undefined.
+For use with the [resource plugins](premium) only.
+</td>
+</tr>
+
+<tr>
+<th>delta</th>
+<td markdown='1'>
+A [Duration Object](duration-object) that represents the amount of time the event was moved by.
+</td>
+</tr>
+
+<tr>
 <th>revert</th>
 <td markdown='1'>
 A function that, if called, reverts the event's start/end date to the values before the drag. This is useful if an ajax call should fail.
@@ -80,9 +71,25 @@ The current [View Object](view-object).
 </td>
 </tr>
 
+<tr>
+<th>el</th>
+<td markdown='1'>
+The HTML element that was dragged.
+</td>
+</tr>
+
+<tr>
+<th>jsEvent</th>
+<td markdown='1'>
+The native JavaScript event with low-level information such as click coordinates.
+</td>
+</tr>
+
 </table>
 
-eventDrop *does not* get called when an external event lands on the calendar. [eventReceive](eventReceive) is called instead.
+This callback is fired *before* the [eventChange](eventChange) callback is fired.
+
+`eventDrop` *does not* get called when an external event lands on the calendar. [eventReceive](eventReceive) is called instead.
 
 Here is an example demonstrating most of these arguments:
 

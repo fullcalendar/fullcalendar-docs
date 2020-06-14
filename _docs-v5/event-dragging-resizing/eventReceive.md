@@ -14,16 +14,26 @@ function( *info* ) { }
 <table>
 
 <tr>
-<th>draggedEl</th>
+<th>event</th>
 <td markdown='1'>
-The HTML element that was being dragged.
+An [Event object](event-object) containing the newly created/received event.
 </td>
 </tr>
 
 <tr>
-<th>event</th>
+<th>relatedEvents</th>
+<td>an array of other related <a href='event-object'>Event Objects</a> that have also been received. an event might have other <a href='recurring-events'>recurring event</a> instances or might be linked to other events with the same <code>groupId</code></td>
+</tr>
+
+<tr>
+<th>revert</th>
+<td>a function that can be called to reverse this action</td>
+</tr>
+
+<tr>
+<th>draggedEl</th>
 <td markdown='1'>
-An [Event object](event-object) containing the newly created/received event.
+The HTML element that was being dragged.
 </td>
 </tr>
 
@@ -35,6 +45,8 @@ The current [View Object](view-object).
 </tr>
 
 </table>
+
+This callback is fired *before* the [eventAdd](eventAdd) callback is fired.
 
 
 ## Resources
