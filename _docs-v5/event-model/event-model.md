@@ -30,6 +30,7 @@ children:
       - Event-remove
       - Event-getResources
       - Event-setResources
+      - Event-toPlainObject
   - title: Callbacks
     children:
       - eventAdd
