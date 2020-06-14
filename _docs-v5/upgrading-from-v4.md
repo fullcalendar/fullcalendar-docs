@@ -904,12 +904,24 @@ eventContent: function(arg) {
   <tr>
     <td>
       <ul class='diff-list'>
+        <li><a href='eventDrop'>eventDrop</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>
+        A <code>relatedEvents</code> array is now supplied.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul class='diff-list'>
         <li><a href='eventResize'>eventResize</a></li>
       </ul>
     </td>
     <td>
       <p>
-        Within the given argument, the <code>prevEvent</code> property has been renamed to <code>oldEvent</code>.
+        Within the given argument, the <code>prevEvent</code> property has been renamed to <code>oldEvent</code>. Also, a <code>relatedEvents</code> array is now supplied.
       </p>
     </td>
   </tr>
@@ -922,7 +934,7 @@ eventContent: function(arg) {
     </td>
     <td>
       <p>
-        Both now receive a <code>revert</code> function that can be called to reverse the effects of the drag-n-drop.
+        Both now receive a <code>revert</code> function that can be called to reverse the effects of the drag-n-drop. Also, both now receive a <code>relatedEvents</code> array.
       </p>
     </td>
   </tr>
