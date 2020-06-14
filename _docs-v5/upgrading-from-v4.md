@@ -115,6 +115,7 @@ This guide outlines the changes between v4 and v5-beta.
 - expanding the height of resource rows in timeline view with [expandRows](expandRows) ([#4897](https://github.com/fullcalendar/fullcalendar/issues/4897))
 - pre-built bundles that require minimal configuration and no build system ([see below](#pre-built-bundles))
 - better printer-friendly rendering with the new "adaptive" plugin ([see below](#better-printer-friendly-rendering))
+- better way to monitor changes from [event manipulation](#event-manipulation) and [resource manipulation](#resource-manipulation)
 - the React and Vue connectors accept custom rendering functions/templates
 - awesome Typescript definitions. FullCalendar's internals rely on them, so they won't fall out of date like before
 - console warnings when providing unknown options/props/listeners
