@@ -26,7 +26,7 @@ The optional `settings` argument contains properties that affect serialization:
 
 </table>
 
-The `toPlainObject` method is aliased to the `toJSON` method so that [JSON.stringify] works.
+The `Event::toJSON` method is aliased to `Event::toPlainObject` to make [JSON.stringify] work.
 
 
 [JSON.stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify

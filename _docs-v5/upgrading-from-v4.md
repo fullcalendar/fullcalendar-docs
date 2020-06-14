@@ -144,8 +144,10 @@ This guide outlines the changes between v4 and v5-beta.
 - [Current Date](#current-date)
 - [Date Rendering](#date-rendering)
 - [Event Rendering](#event-rendering)
+- [Event Manipulation](#event-manipulation)
 - [More Events Popover](#more-events-popover)
 - [Resource Rendering](#resource-rendering)
+- [Resource Manipulation](#resource-manipulation)
 - [List View Rendering](#list-view-rendering)
 - [Now Indicator Rendering](#now-indicator-rendering)
 - [Calendar Sizing](#calendar-sizing)
@@ -573,7 +575,9 @@ The days cells in daygrid and timegrid views:
     </td>
   </tr>
   <tr>
-    <td>timeline slot classNames</td>
+    <td>
+      <p>timeline slot classNames</p>
+    </td>
     <td>
       <p>
         In timeline view, slots now have more descriptive classNames like
@@ -588,7 +592,7 @@ The days cells in daygrid and timegrid views:
   </tr>
 </table>
 
-Date rendering, in aggregate:
+Dates, in aggregate:
 
 <table>
   <tr>
@@ -600,7 +604,7 @@ Date rendering, in aggregate:
     <td>
       <ul class='diff-list'>
         <li>
-          <a href='datesSet' class='diff-added'>datesSet</a> - renamed from <span class='diff-removed'>datesRender</span>. However, you are encouraged to use the render hooks on the <em>individual</em> date cells instead, like the
+          <a href='datesSet' class='diff-added'>datesSet</a> - renamed from <span class='diff-removed'>datesRender</span>. Called after a view's dates are initialized or when they change. For rendering, you are encouraged to use the render hooks on the <em>individual</em> date cells instead, like the
           <a href='day-header-render-hooks'>day header</a>,
           <a href='day-cell-render-hooks'>day cell</a>, and
           <a href='slot-render-hooks'>slot</a>
@@ -617,7 +621,7 @@ Date rendering, in aggregate:
     </td>
     <td>
       <p>
-        No direct replacement. Instead, handle <em>individual</em> date cells via
+        No direct replacement. For rendering, handle <em>individual</em> date cells via
         <span class='diff-added'>dayHeaderWillUnmount</span>,
         <span class='diff-added'>dayCellWillUnmount</span>, or
         <span class='diff-added'>slotLabelWillUnmount</span>.
@@ -877,6 +881,94 @@ eventContent: function(arg) {
       <p>
         Event elements now have more descriptive classNames about what dates they span. For example, <code>fc-event-past</code>, <code>fc-event-future</code>, and <code>fc-event-today</code>.
       </p>
+    </td>
+  </tr>
+</table>
+
+
+## Event Manipulation
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='Calendar-addEvent'>Calendar::addEvent</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>
+        Can now specify <code>true</code> as the source argument to add to the <em>first</em> source.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='eventResize'>eventResize</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>
+        Within the given argument, the <code>prevEvent</code> property has been renamed to <code>oldEvent</code>.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li><a href='eventReceive'>eventReceive</a></li>
+        <li><a href='eventLeave'>eventLeave</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>
+        Both now receive a <code>revert</code> function that can be called to reverse the effects of the drag-n-drop.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <p>
+        Methods for monitoring changes in event data:
+      </p>
+      <ul class='diff-list'>
+        <li><a class='diff-added' href='eventAdd'>eventAdd</a></li>
+        <li><a class='diff-added' href='eventChange'>eventChange</a></li>
+        <li><a class='diff-added' href='eventRemove'>eventRemove</a></li>
+        <li><a class='diff-added' href='eventsSet'>eventsSet</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        Event sources
+      </p>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li>
+          <a class='diff-added' href='initialEvents'>initialEvents</a> -
+          A new way of supplying events when using React, Vue, or Angular
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        Event methods
+      </p>
+    </td>
+    <td>
+      <p>
+        For serialization:
+      </p>
+      <ul class='diff-list'>
+        <li><a class='diff-added' href='Event-toPlainObject'>Event::toPlainObject</a></li>
+        <li><span class='diff-added'>Event::toJSON</span> (an alias)</li>
+      </ul>
     </td>
   </tr>
 </table>
@@ -1193,6 +1285,60 @@ The area on the side of resource-timeline view that contains resource names and 
         <li>
           <span class='diff-added'>cellWillUnmount</span>
         </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+## Resource Manipulation
+
+<table>
+  <tr>
+    <td></td>
+    <td>
+      <p>
+        Methods for monitoring changes in resource data:
+      </p>
+      <ul class='diff-list'>
+        <li><a class='diff-added' href='resourceAdd'>resourceAdd</a></li>
+        <li><a class='diff-added' href='resourceChange'>resourceChange</a></li>
+        <li><a class='diff-added' href='resourceRemove'>resourceRemove</a></li>
+        <li><a class='diff-added' href='resourcesSet'>resourcesSet</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <ul class='diff-list'>
+        <li>
+          <a class='diff-added' href='initialResources'>initialResources</a> -
+          A new way of supplying resources when using React, Vue, or Angular
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        Resource methods
+      </p>
+    </td>
+    <td>
+      <p>
+        Setters:
+      </p>
+      <ul class='diff-list'>
+        <li><a class='diff-added' href='Resource-setProp'>Resource::setProp</a></li>
+        <li><a class='diff-added' href='Resource-setExtendedProp'>Resource::setExtendedProp</a></li>
+      </ul>
+      <p>
+        For serialization:
+      </p>
+      <ul class='diff-list'>
+        <li><a class='diff-added' href='Resource-toPlainObject'>Resource::toPlainObject</a></li>
+        <li><span class='diff-added'>Resource::toJSON</span> (an alias)</li>
       </ul>
     </td>
   </tr>
