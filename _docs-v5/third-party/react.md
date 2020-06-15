@@ -3,10 +3,6 @@ title: React Component
 title_for_landing: React
 ---
 
-<div class='warning'>
-Please chime in on a discussion about <a href='https://github.com/fullcalendar/fullcalendar-react/issues/65' class='more-link' target='_blank'>state-management best practices in v5</a>
-</div>
-
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [Josh Ruff](https://github.com/joshuaRuff) of [Sardius Media](http://sardius.media/) in partnership with the maintainers of FullCalendar. It is the official React connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
