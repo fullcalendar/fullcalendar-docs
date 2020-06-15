@@ -984,6 +984,22 @@ eventContent: function(arg) {
       </ul>
     </td>
   </tr>
+  <tr>
+    <td>
+      <p>
+        Event properties
+      </p>
+    </td>
+    <td>
+      <p>
+        A convenient way to get the start/end dates of an <a href='event-object'>Event Object</a> in ISO8601 string form:
+      </p>
+      <ul class='diff-list'>
+        <li><span class='diff-added'>Event::startStr</span></li>
+        <li><span class='diff-added'>Event::endStr</span></li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 

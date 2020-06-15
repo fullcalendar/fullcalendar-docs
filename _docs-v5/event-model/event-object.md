@@ -65,6 +65,16 @@ Boolean (`true` or `false`). Determines if the event is shown in the "all-day" s
 </tr>
 
 <tr>
+<th>startStr</th>
+<td>An ISO8601 string representation of the start date. If the event is all-day, there will not be a time part.</td>
+</tr>
+
+<tr>
+<th>endStr</th>
+<td>An ISO8601 string representation of the end date. If the event is all-day, there will not be a time part.</td>
+</tr>
+
+<tr>
 <th>title</th>
 <td markdown='1'>
 String. The text that will appear on an event.
