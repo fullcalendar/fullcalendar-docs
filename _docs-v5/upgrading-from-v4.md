@@ -363,6 +363,21 @@ When specifying [headerToolbar](headerToolbar) and [footerToolbar](footerToolbar
       </ul>
     </td>
   </tr>
+  <tr>
+    <td>
+      <p>
+        View object members
+      </p>
+    </td>
+    <td>
+      <ul class='diff-list'>
+        <li>
+          <span class='diff-added'>View::calendar</span>
+          - the master Calendar Object this view belongs to
+        </li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 See below for changes to how [Custom JS Views](#custom-js-views) are implemented.
