@@ -169,10 +169,10 @@ This guide outlines the changes between v4 and v5-beta.
 
 ## Getting the Beta
 
-You can install the packages via npm using the `@5.0.0-beta.4` postfix:
+You can install the packages via npm using the `@5.0.0-rc` postfix:
 
 ```sh
-npm install --save @fullcalendar/core@5.0.0-beta.4 @fullcalendar/daygrid@5.0.0-beta.4
+npm install --save @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
 ```
 
 Or, you can use one of the new pre-built bundles ([see below](#pre-built-bundles))

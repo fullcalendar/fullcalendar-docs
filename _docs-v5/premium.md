@@ -37,7 +37,7 @@ But first, you must install the necessary plugins...
 FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). You'll first need to install FullCalendar’s `core` package as well as the premium plugins you plan to use. For example, the following is how you install [Resource Timeline View](timeline-view):
 
 ```sh
-npm install --save @fullcalendar/core@5.0.0-beta.4 @fullcalendar/resource-timeline@5.0.0-beta.4
+npm install --save @fullcalendar/core@5.0.0-rc @fullcalendar/resource-timeline@5.0.0-rc
 ```
 
 To initialize a calendar, <a href='initialize-es6' class='more-link'>read about using an ES6 build system</a>
@@ -47,7 +47,7 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 You can also download the library manually:
 
-**Latest:** [fullcalendar-scheduler-5.0.0-beta.4.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-beta.4/fullcalendar-scheduler-5.0.0-beta.4.zip)
+**Latest:** [fullcalendar-scheduler-5.0.0-rc.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-rc/fullcalendar-scheduler-5.0.0-rc.zip)
 
 (<a href='{{ site.fullcalendar_scheduler_repo }}/releases'>view all releases</a>)
 

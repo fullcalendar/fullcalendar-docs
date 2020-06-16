@@ -17,7 +17,7 @@ This guide does not go into depth about initializing a React project. Please con
 The first step is to install the FullCalendar-related dependencies. You'll need the React adapter, the core package, and any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/react@5.0.0-beta.4 @fullcalendar/core@5.0.0-beta.4 @fullcalendar/daygrid@5.0.0-beta.4
+npm install --save @fullcalendar/react@5.0.0-rc @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.jsx]):
