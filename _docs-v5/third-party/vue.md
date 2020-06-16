@@ -190,6 +190,16 @@ export default {
 ```
 
 
+## TypeScript
+
+The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typescriptlang.org/) definitions. When using TypeScript in your Vue project, it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue-typescript' class='more-link'>example TypeScript project</a>
+
+
+## Vuex
+
+[Vuex](https://vuex.vuejs.org/) is a state management library for Vue. FullCalendar is surely compatible with Vuex, but we don't have an example project to show you just yet. <a href='https://github.com/fullcalendar/fullcalendar-vue/issues/94' class='more-link'>Help out by writing an example</a>
+
+
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
