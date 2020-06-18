@@ -1,7 +1,6 @@
 ---
 title: Event Display
 children:
-  - event-render-hooks
   - eventColor
   - eventBackgroundColor
   - eventBorderColor
@@ -13,6 +12,12 @@ children:
   - nextDayThreshold
   - eventOrder
   - progressiveEventRendering
+  - article: event-render-hooks
+    points:
+      - eventClassNames
+      - eventContent
+      - eventDidMount
+      - eventWillUnmount
 demos:
   - event-colors-demo
   - event-tooltip-demo

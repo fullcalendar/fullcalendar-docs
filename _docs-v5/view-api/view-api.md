@@ -3,9 +3,13 @@ title: View API
 children:
   - initialView
   - view-object
-  - view-render-hooks
   - Calendar-view
   - Calendar-changeView
+  - article: view-render-hooks
+    points:
+      - viewClassNames
+      - viewDidMount
+      - viewWillUnmount
 related:
   - view-specific-options
 ---

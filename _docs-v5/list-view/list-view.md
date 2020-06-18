@@ -5,7 +5,12 @@ children:
     children:
       - listDayFormat
       - listDaySideFormat
-      - no-events-render-hooks
+      - article: no-events-render-hooks
+        points:
+          - noEventsClassNames
+          - noEventsContent
+          - noEventsDidMount
+          - noEventsWillUnmount
 demos:
   - list-view-demo
 ---

@@ -4,8 +4,13 @@ children:
   - dayMaxEventRows
   - dayMaxEvents
   - moreLinkClick
-  - more-link-render-hooks
   - dayPopoverFormat
+  - article: more-link-render-hooks
+    points:
+      - moreLinkClassNames
+      - moreLinkContent
+      - moreLinkDidMount
+      - moreLinkWillUnmount
 demos:
   - event-popover-demo
 ---

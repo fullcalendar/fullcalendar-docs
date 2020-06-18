@@ -9,9 +9,23 @@ children:
       - resourceAreaColumns
       - resourcesInitiallyExpanded
       - slotMinWidth
-      - resource-group-render-hooks
-      - resource-area-header-render-hooks
       - timeline-view-no-resources
+      - article: resource-group-render-hooks
+        points:
+          - resourceGroupLabelClassNames
+          - resourceGroupLabelContent
+          - resourceGroupLabelDidMount
+          - resourceGroupLabelWillUnmount
+          - resourceGroupLaneClassNames
+          - resourceGroupLaneContent
+          - resourceGroupLaneDidMount
+          - resourceGroupLaneWillUnmount
+      - article: resource-area-header-render-hooks
+        points:
+          - resourceAreaHeaderClassNames
+          - resourceAreaHeaderContent
+          - resourceAreaHeaderDidMount
+          - resourceAreaHeaderWillUnmount
 related:
   - resource-render-hooks
   - dateClick

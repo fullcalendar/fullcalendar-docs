@@ -8,8 +8,18 @@ children:
       - dayHeaders
       - dayHeaderFormat
       - dayMinWidth
-      - day-header-render-hooks
-      - day-cell-render-hooks
+      - article: day-header-render-hooks
+        points:
+          - dayHeaderClassNames
+          - dayHeaderContent
+          - dayHeaderDidMount
+          - dayHeaderWillUnmount
+      - article: day-cell-render-hooks
+        points:
+          - dayCellClassNames
+          - dayCellContent
+          - dayCellDidMount
+          - dayCellWillUnmount
   - title: Time-Axis Settings
     children:
       - slotDuration
@@ -18,7 +28,16 @@ children:
       - slotMinTime
       - slotMaxTime
       - scrollTime
-      - slot-render-hooks
+      - article: slot-render-hooks
+        points:
+          - slotLabelClassNames
+          - slotLabelContent
+          - slotLabelDidMount
+          - slotLabelWillUnmount
+          - slotLaneClassNames
+          - slotLaneContent
+          - slotLaneDidMount
+          - slotLaneWillUnmount
   - title: Methods
     children:
       - scrollToTime

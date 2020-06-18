@@ -5,7 +5,13 @@ children:
     children:
       - slotEventOverlap
       - allDaySlot
-      - all-day-render-hooks
+      - article: all-day-render-hooks
+        points:
+          - allDayClassNames
+          - allDayContent
+          - allDayDidMount
+          - allDayWillUnmount
+
 related:
   - slotDuration
   - slotLabelFormat

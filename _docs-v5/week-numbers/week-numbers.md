@@ -5,7 +5,12 @@ children:
   - weekNumberCalculation
   - weekText
   - weekNumberFormat
-  - week-number-render-hooks
+  - article: week-number-render-hooks
+    points:
+      - weekNumberClassNames
+      - weekNumberContent
+      - weekNumberDidMount
+      - weekNumberWillUnmount
 demos:
   - weekNumbers-demo
 ---

@@ -3,7 +3,12 @@ title: Now Indicator
 children:
   - nowIndicator
   - now
-  - now-indicator-render-hooks
+  - article: now-indicator-render-hooks
+    points:
+      - nowIndicatorClassNames
+      - nowIndicatorContent
+      - nowIndicatorDidMount
+      - nowIndicatorWillUnmount
 demos:
   - timegrid-nowIndicator-demo
   - timeline-nowIndicator-demo
