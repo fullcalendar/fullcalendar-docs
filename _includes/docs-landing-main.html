@@ -5,28 +5,28 @@
       <h2 class='docs-landing__section-title'>{{ child_group.title | escape }}</h2>
       <div class='docs-landing__section-content'>
         <ul class='docs-landing__illustrations'>
-          {% for article in child_group.children %}
+          {% for node in child_group.children %}
             <li class='docs-landing__illustration'>
-              <a class='docs-landing__illustration-link' href='{{ site.baseurl }}{{ article.url | escape }}'>
+              <a class='docs-landing__illustration-link' href='{{ site.baseurl }}{{ node.article.url | escape }}'>
                 <img src='{{ site.baseurl }}/assets/images/docs-categories/{%
-                  if article.illustration
-                %}{{ article.illustration | escape }}{%
+                  if node.article.illustration
+                %}{{ node.article.illustration | escape }}{%
                   else
-                %}{{ article.slug | escape }}{%
+                %}{{ node.article.slug | escape }}{%
                   endif
                 %}@2x.png'
                   width='120'
                   height='120'
-                  alt='{{ article.title | escape }}'
+                  alt='{{ node.article.title | escape }}'
                   class='docs-landing__illustration-image'
                   />
                 <span class='docs-landing__illustration-title'>
-                  {% if article.title_for_landing %}
-                    {{ article.title_for_landing | escape }}
+                  {% if node.article.title_for_landing %}
+                    {{ node.article.title_for_landing | escape }}
                   {% else %}
-                    {{ article.title | escape }}
+                    {{ node.article.title | escape }}
                   {% endif %}
-                  {% if article.is_premium %}
+                  {% if node.article.is_premium %}
                     <div>
                       <span class='badge'>Premium</span>
                     </div>

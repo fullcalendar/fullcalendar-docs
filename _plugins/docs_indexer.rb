@@ -117,33 +117,15 @@ end
 def build_category_child_groups(raw_children, doc_hash)
   top_level_docs = []
   other_groups = []
-  related_docs = []
   groups = []
 
-  for node in raw_children
+  processed_children = process_raw_children(raw_children, doc_hash)
 
-    if node.instance_of?(String)
-      if doc_hash[node]
-        top_level_docs.push(doc_hash[node])
-      else
-        print "Could not find doc %s\n" % node
-      end
-
-    elsif node['children']
-      group = {
-        'title' => node['title'],
-        'children' => []
-      }
-
-      for subnode in node['children']
-        if doc_hash[subnode]
-          group['children'].push(doc_hash[subnode])
-        else
-          print "Could not find doc %s\n" % subnode
-        end
-      end
-
-      other_groups.push(group)
+  for processed_child in processed_children
+    if processed_child['children']
+      other_groups.push(processed_child)
+    else
+      top_level_docs.push(processed_child)
     end
   end
 
@@ -152,8 +134,41 @@ def build_category_child_groups(raw_children, doc_hash)
   end
 
   groups += other_groups
-
   groups
+end
+
+
+def process_raw_children(raw_children, doc_hash)
+  processed_children = []
+
+  for node in raw_children
+    full_node = nil
+
+    if (node.instance_of?(String))
+      full_node = { 'article' => node }
+    else
+      full_node = node
+    end
+
+    if full_node['article']
+      if doc_hash[full_node['article']]
+        full_node['article'] = doc_hash[full_node['article']]
+      else
+        print "Could not find doc %s\n" % full_node['article']
+      end
+    end
+
+    full_node['children'] =
+      if full_node['children'] and full_node['children'].length
+        process_raw_children(full_node['children'], doc_hash)
+      else
+        nil
+      end
+
+    processed_children.push(full_node)
+  end
+
+  processed_children
 end
 
 
@@ -163,7 +178,9 @@ def build_category_related_docs(raw_related, doc_hash)
   for node in raw_related
     if node.instance_of?(String)
       if doc_hash[node]
-        related_docs.push(doc_hash[node])
+        related_docs.push({
+          'article' => doc_hash[node]
+        })
       else
         print "Could not find doc %s\n" % node
       end
@@ -177,12 +194,12 @@ end
 def assign_category_to_articles(category_doc, child_groups)
   for child_group in child_groups
     if not child_group['is_related'] # only for real children
-      for doc in child_group['children']
-
-        doc.data['category'] = category_doc
+      for node in child_group['children']
+        article = node['article']
+        article.data['category'] = category_doc
 
         if category_doc.data['is_premium']
-          doc.data['is_premium'] = true
+          article.data['is_premium'] = true
         end
       end
     end

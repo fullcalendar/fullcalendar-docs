@@ -15,17 +15,17 @@
             <h3 class='docs-article__sidebar-group-title'>{{ child_group.title | escape }}</h3>
           {% endif %}
           <ul>
-            {% for article in child_group.children %}
+            {% for node in child_group.children %}
               <li class='docs-article__sidebar-item {%
-                if article.slug == page.slug
+                if node.article.slug == page.slug
               %}docs-article__sidebar-item--selected{%
                 endif
               %} {% if child_group.is_related
               %}docs-article__sidebar-item--related{%
                 endif
               %}'>
-                <a href='{{ site.baseurl }}{{ article.url | escape }}'>
-                  <span>{{ article.title | escape }}</span>
+                <a href='{{ site.baseurl }}{{ node.article.url | escape }}'>
+                  <span>{{ node.article.title | escape }}</span>
                 </a>
               </li>
             {% endfor %}

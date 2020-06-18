@@ -33,39 +33,46 @@
 
           <h2 class='docs-toc__title'>{{ child_group.title | escape }}</h2>
 
-          {% for article in child_group.children %}
+          {% for node in child_group.children %}
             <div class='docs-toc-card'>
 
               <div class='docs-toc-card__head'>
                 <a class='docs-toc-card__head-link'
-                  href='{{ site.baseurl }}{{ article.url | escape }}'
+                  href='{{ site.baseurl }}{{ node.article.url | escape }}'
                   >
-                  {{ article.title | escape }}
+                  {{ node.article.title | escape }}
                 </a>
-                {% if article.is_premium %}
+                {% if node.article.is_premium %}
                   <a class='badge' href='{{ site.baseurl }}/purchase'>
                     Premium
                   </a>
               {% endif %}
               </div>
 
-              {% if article.own_child_groups %}
+              {% if node.article.own_child_groups %}
                 <div class='docs-toc-card__body'>
                   <ul>
-                    {% for article_child_group in article.own_child_groups %}
-                      {% if article_child_group.title %}
+                    {% for group_node in node.article.own_child_groups %}
+                      {% if group_node.title %}
                         <li>
-                          {{ article_child_group.title | escape }}
+                          {{ group_node.title | escape }}
                           <ul>
                       {% endif %}
-                      {% for subarticle in article_child_group.children %}
+                      {% for child_node in group_node.children %}
                         <li>
-                          <a href='{{ site.baseurl }}{{ subarticle.url | escape }}'>
-                            {{ subarticle.title | escape }}
+                          <a href='{{ site.baseurl }}{{ child_node.article.url | escape }}'>
+                            {{ child_node.article.title | escape }}
                           </a>
+                          {% if child_node.points %}
+                            <ul>
+                              {% for point in child_node.points %}
+                                <li>{{ point | escape }}</li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
                         </li>
                       {% endfor %}
-                      {% if article_child_group.title %}
+                      {% if group_node.title %}
                           </ul>
                         </li>
                       {% endif %}

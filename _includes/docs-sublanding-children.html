@@ -7,16 +7,16 @@
       <div class='docs-sublanding__child-group-title'>{{ group.title | escape }}</div>
     {% endif %}
     <div class='term-table'>
-      {% for article in group.children %}
-        <a class='term-table__term' href='{{ site.baseurl }}{{ article.url | escape }}'>
+      {% for node in group.children %}
+        <a class='term-table__term' href='{{ site.baseurl }}{{ node.article.url | escape }}'>
           <div class='term-table__term-title'>
-            {{ article.title | escape }}
+            {{ node.article.title | escape }}
           </div>
           <div class='term-table__term-description'>
-            {% if article.description %}
-              {{ article.description | escape }}
+            {% if node.article.description %}
+              {{ node.article.description | escape }}
             {% else %}
-              {{ article.excerpt | strip_html | escape }}
+              {{ node.article.excerpt | strip_html | escape }}
             {% endif %}
           </div>
         </a>
