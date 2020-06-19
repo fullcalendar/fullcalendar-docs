@@ -135,6 +135,16 @@ export default class DemoApp extends React.Component {
 ```
 
 
+## State Management
+
+The above mentioned sample project uses a rather simple technique to store event data: it uses the FullCalendar component itself. It's possible to share this data with other parts of the application, but it's often useful to have a more sophisticated setup. For example, if you need access to event data when a FullCalendar component isn't visible.
+
+Please check out the following example projects that demonstrate usage with third-party state-management libraries:
+
+- [View the Redux example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/react-redux)
+- [View the MobX+TypeScript example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/react-mobx-typescript)
+
+
 ## TypeScript
 
 React goes really well with [TypeScript]! To show you how to integrate the two, we've prepared [another sample project &raquo;][typescript project]

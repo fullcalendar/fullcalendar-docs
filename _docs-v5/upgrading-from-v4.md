@@ -117,7 +117,8 @@ This guide outlines the changes between v4 and v5-beta.
 - better printer-friendly rendering with the new "adaptive" plugin ([see below](#better-printer-friendly-rendering))
 - better way to monitor changes from [event manipulation](#event-manipulation) and [resource manipulation](#resource-manipulation)
 - the React and Vue connectors accept custom rendering functions/templates
-- awesome Typescript definitions. FullCalendar's internals rely on them, so they won't fall out of date like before
+- typescript definitions from the Vue connector ([see below](#vue-connector))
+- greatly improved Typescript definitions. FullCalendar's internals rely on them, so they won't fall out of date like before
 - console warnings when providing unknown options/props/listeners
 
 <br />
@@ -866,6 +867,21 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
       <p>
         <img id='event-list-item-screenshot' src='event-list-item.png' alt='list-item event-display example' width='170' height='146' style='float:left;margin:0 2em 1em 0' />
         By default, single-day timed events in daygrid will render with a dot as opposed to a solid filled rectangle. To revert to the old behavior, set the calendar-wide <a href='eventDisplay' class='diff-added'>eventDisplay</a> option to <code>'block'</code>. See above for other choices.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        timegrid events
+      </p>
+    </td>
+    <td>
+      <p>
+        <strong>New feature:</strong> as the user scrolls down the timegrid, event title was still visible via sticky positioning.
+      </p>
+      <p>
+        <strong>Styling change:</strong> the resizer on the bottom of the event is no longer styled with a <code>=</code> icon when hovered. To simulate the old UI, add the CSS <a href='https://codepen.io/arshaw/pen/YzwNNLb?editors=0110'>in this codepen</a>
       </p>
     </td>
   </tr>
@@ -1743,6 +1759,7 @@ This is possible with any of the `*Content` options in the API.
 
 Also,
 
+- **feature:** included TypeScript definitions ([vue#31](https://github.com/fullcalendar/fullcalendar-vue/issues/31))
 - **fix:** Class instances in extendedProps are converted to plain objects ([vue#53](https://github.com/fullcalendar/fullcalendar-vue/issues/53))
 
 

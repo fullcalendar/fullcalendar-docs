@@ -197,7 +197,7 @@ The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typesc
 
 ## Vuex
 
-[Vuex](https://vuex.vuejs.org/) is a state management library for Vue. FullCalendar is surely compatible with Vuex, but we don't have an example project to show you just yet. <a href='https://github.com/fullcalendar/fullcalendar-vue/issues/94' class='more-link'>Help out by writing an example</a>
+[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue-vuex' class='more-link'>View an example project</a>
 
 
 [Vue]: https://vuejs.org/
