@@ -208,7 +208,7 @@ As a result, if you've written custom styling, <strong>it will most likely need 
 
 In v4, it was your responsibility to import all of fullcalendar's stylesheets. You may have done this in one your project's SASS files. Or, if you had a build system that handled CSS, you may have done this from your JavaScript.
 
-In v5, you no longer need to do this! The plugins will import their own stylesheets. So, you'll be able remove lines like these:
+In v5, you no longer need to do this! The plugins will import their own stylesheets (with the exception of the [bootstrap plugin](bootstrap-theme)). So, you'll be able remove lines like these:
 
 ```js
 import { Calendar } from '@fullcalendar/core'
@@ -772,7 +772,7 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
         </li>
         <li>
           <span class='diff-added'>eventContent</span>
-          - for if you injected DOM content via <span class='diff-removed'>eventRender</span>. You cannot cancel rendering by returning <code>false</code> however. Instead, attached a <code>display:'none'</code> property on the <a href='event-parsing'>Event Input</a>.
+          - for if you injected DOM content via <span class='diff-removed'>eventRender</span>. You cannot cancel rendering by returning <code>false</code> however. Instead, make sure your event object has its <code>display</code> property set to <code>'none'</code> before <code>eventContent</code> executes. You can do this dynamically by setting <code>event.setProp('display', 'none')</code>.
         </li>
         <li>
           <span class='diff-added'>eventDidMount</span>
