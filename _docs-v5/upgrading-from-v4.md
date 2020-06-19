@@ -157,7 +157,8 @@ This guide outlines the changes between v4 and v5-beta.
 - [Locales](#locales)
 - [Custom JS Views](#custom-js-views)
 - [Interaction Plugin](#interaction-plugin)
-- [Moment and Luxon Plugins](#moment-and-luxon-plugins)
+- [Moment Plugin](#moment-plugin)
+- [Luxon Plugin](#luxon-plugin)
 - [Other Misc Changes](#other-misc-changes)
 - [React Connector](#react-connector)
 - [Vue Connector](#vue-connector)
@@ -1630,21 +1631,11 @@ new FullCalendar.Draggable(settings) // the NEW way
 ```
 
 
-## Moment and Luxon Plugins
+## Moment Plugin
 
-The Moment plugin's **browser globals** have changed:
+The `@fullcalendar/moment` and `@fullcalendar/moment-timezone` packages can no longer be used with [script tags and browser globals](initialize-globals). They can **ONLY** be used used with an [ES6 build system](initialize-es6).
 
-```js
-// OLD
-FullCalendarMoment.toMoment
-FullCalendarMoment.toDuration
-
-// NEW
-FullCalendar.toMoment
-FullCalendar.toMomentDuration
-```
-
-The Moment plugin's **ES6 exports** have changed:
+Also, the `@fullcalendar/moment` package's **ES6 exports** have changed:
 
 ```js
 // OLD
@@ -1654,7 +1645,16 @@ import { toDuration } from '@fullcalendar/moment'
 import { toMomentDuration } from '@fullcalendar/moment'
 ```
 
-The Luxon plugin's **ES6 exports** have changed:
+Also, when used with Webpack, both plugins will now **import quite a bit of data that most people will not need**. The moment plugin imports all locale data. The moment-timezone plugin imports all zone data. In v4, this was not the case. Both plugins internally imported specific data-less files within the moment/moment-timezone dist directories. Now, in v5, both plugins import the standard `'moment'` and `'moment-timezone'`, so they now import lots of extra data by default.
+
+If you want to avoid this, use the `moment-locales-webpack-plugin` and `moment-timezone-data-webpack-plugin` packages, which exist precisely for this purpose. <a href='moment-plugins#usage-with-webpack' class='more-link'>More info</a>
+
+
+## Luxon Plugin
+
+The `@fullcalendar/luxon` package can no longer be used with [script tags and browser globals](initialize-globals). It can **ONLY** be used used with an [ES6 build system](initialize-es6).
+
+Also, the package's **ES6 exports** have changed:
 
 ```js
 // OLD
@@ -1699,6 +1699,8 @@ export const DemoApp(props) => (
   </div>
 )
 ```
+
+Also, any utilities that normally would be accessed via `@fullcalendar/core` can now be accessed via `@fullcalendar/react`. This will prevent you from needing to import the core package. [More info &raquo;](react#fullcalendar-utilities)
 
 
 ## Vue Connector
@@ -1757,6 +1759,8 @@ You now have the ability to customize rendering with the use of [Vue scoped slot
 
 This is possible with any of the `*Content` options in the API.
 
+Also, any utilities that normally would be accessed via `@fullcalendar/core` can now be accessed via `@fullcalendar/vue`. This will prevent you from needing to import the core package. [More info &raquo;](vue#fullcalendar-utilities)
+
 Also,
 
 - **feature:** included TypeScript definitions ([vue#31](https://github.com/fullcalendar/fullcalendar-vue/issues/31))
@@ -1804,6 +1808,8 @@ class AppComponent {
 ```
 
 This results in less duplication between your Angular component's JS and template. It also thankfully blurs the distinction between props and "handlers" for which you'd need to use `(parentheses)` instead of `[brackets]`. All properties are treated equally, resuling in a simpler API.
+
+Also, any utilities that normally would be accessed via `@fullcalendar/core` can now be accessed via `@fullcalendar/angular`. This will prevent you from needing to import the core package. [More info &raquo;](angular#fullcalendar-utilities)
 
 
 ## Upgrading from V3

@@ -19,7 +19,6 @@ const CustomViewConfig = {
 
   content: function(props) {
     let segs = sliceEvents(props, true); // allDay=true
-
     let html =
       '<div class="view-title">' +
         props.dateProfile.currentRange.start.toUTCString() +
@@ -57,10 +56,10 @@ let calendar = new Calendar(calendarEl, {
 
 ## Component
 
-It is also possible to specify a [Preact Component](https://preactjs.com/guide/v10/components/). In the future it will be possible to specify a React component when using the FullCalendar React connector. Here's an example that uses [JSX](https://reactjs.org/docs/introducing-jsx.html):
+It is also possible to specify a [Preact Component](https://preactjs.com/guide/v10/components/). Here's an example that uses JSX:
 
 ```jsx
-import { Component, Fragment } from 'preact';
+import { h, Component, Fragment } from 'preact';
 import { sliceEvents, createPlugin } from '@fullcalendar/core';
 
 class CustomView extends Component {
@@ -88,6 +87,8 @@ export default createPlugin({
   }
 });
 ```
+
+If you're using the React connector you can [specify a React component instead](react#custom-views-with-components).
 
 
 ## Props

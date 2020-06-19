@@ -26,7 +26,7 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `moment.js` dist file [from the Moment site](https://momentjs.com/) is included on your page first.
+The `@fullcalendar/moment` package can only be used with an [ES6 build system](initialize-es6), it **CANNOT** be used with [script tags and browser globals](initialize-globals).
 
 If you want to format a date *range*, you can group related date parts with curly brackets:
 
@@ -61,8 +61,6 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-If you are using `<script>` tags and browser globals, you can access `FullCalendar.toMoment` and `FullCalendar.toMomentDuration`.
-
 
 <h2 id='moment-timezone'>Moment Timezone Plugin</h2>
 
@@ -70,7 +68,7 @@ The Moment Timezone Plugin plugin, which is separate from the basic Moment plugi
 
 In addition to loading the plugin, you must also load moment-timezone's timezone data. You should consult the [moment-timezone docs on this matter](https://momentjs.com/timezone/docs/#/use-it/), but long story short, if you are using Node/Webpack, all time zone data will be automatically loaded, but if you are using script tags and browser globals, you must load a separate file.
 
-Example using Node/Webpack:
+Example using an [ES6 build system](initialize-es6):
 
 ```js
 import { Calendar } from '@fullcalendar/core';
@@ -83,4 +81,32 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `moment.js` and `moment-timezone.js` dist files [from the Moment site](https://momentjs.com/) is included on your page first.
+The `@fullcalendar/moment-timezone` package can only be used with an [ES6 build system](initialize-es6), it **CANNOT** be used with [script tags and browser globals](initialize-globals).
+
+
+## Usage with Webpack
+
+When the `moment` lib is imported into your project, it imports **ALL** locales for some reason. This is a known issue with Moment. It applies to `@fullcalendar/moment` as well. Luckily there is a workaround. Use [moment-locales-webpack-plugin](https://www.npmjs.com/package/moment-locales-webpack-plugin) to strip away these unused locales.
+
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/moment' class='more-link'>View an example moment project</a>
+
+In the same vein, whenever `moment-timezone` is imported into your project, it imports data for **ALL** time zones. Use [moment-timezone-data-webpack-plugin](https://www.npmjs.com/package/moment-timezone-data-webpack-plugin) to strip away this unused data.
+
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/moment-timezone' class='more-link'>View an example moment-timezone project</a>
+
+
+## Usage with TypeScript
+
+If you're using the `@fullcalendar/moment` plugin in a TypeScript project, you'll need to configure your `tsconfig.json` to have the `allowSyntheticDefaultImports` compiler option set to `true`:
+
+```json
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true
+  }
+}
+```
+
+This is necessary due to how the `moment` package exposes itself in an ES6 environment.
+
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/moment-typescript' class='more-link'>View an example moment+typescript project</a>

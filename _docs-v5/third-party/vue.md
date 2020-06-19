@@ -14,10 +14,10 @@ This package is released under an MIT license, the same license the standard ver
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter, the core package, and any additional plugins you plan to use:
+The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter and any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/vue@5.0.0-rc @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
+npm install --save @fullcalendar/vue@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.vue]):
@@ -127,10 +127,24 @@ export default {
 ```
 
 
+## FullCalendar Utilities
+
+All of FullCalendar's utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `@fullcalendar/vue`. The [formatDate](formatDate) utility for example. This prevents you from needing to add another dependency to your project.
+
+```js
+import { formatDate } from '@fullcalendar/vue';
+
+let str = formatDate(new Date(), {
+  month: 'long',
+  year: 'numeric',
+  day: 'numeric'
+});
+
+console.log(str);
+```
 
 
-
-## Accessing FullCalendar's API
+## Calendar API
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
 

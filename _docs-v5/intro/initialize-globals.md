@@ -76,7 +76,7 @@ Here are the packages inside of each bundle:
   - `@fullcalendar/daygrid`
   - `@fullcalendar/timegrid`
   - `@fullcalendar/list`
-  - `@fullcalendar/bootstrap`
+  - `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
   - `@fullcalendar/google-calendar`
 - `fullcalendar-scheduler` - the `main.js` and `main.css` files include the following packages:
   - `@fullcalendar/core`
@@ -84,7 +84,7 @@ Here are the packages inside of each bundle:
   - `@fullcalendar/daygrid`
   - `@fullcalendar/timegrid`
   - `@fullcalendar/list`
-  - `@fullcalendar/bootstrap`
+  - `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
   - `@fullcalendar/google-calendar`
   - `@fullcalendar/adaptive` ([premium](premium))
   - `@fullcalendar/scrollgrid` ([premium](premium))

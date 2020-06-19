@@ -14,19 +14,26 @@ This component is built and maintained by [irustm](https://github.com/irustm) in
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Angular adapter, the core package, and any additional plugins you plan to use:
+The first step is to install the FullCalendar-related dependencies. You'll need the Angular adapter and any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/angular@5.0.0-rc @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
+npm install --save @fullcalendar/angular@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
 ```
 
-You must then include the `FullCalendarModule` into your app's root module. An example module in its entirety ([app.module.ts]):
+You must then include the `FullCalendarModule` into your app's root module along with any plugins you plan to use. You'll then register these plugins with the FullCalendar module and subsequently register the FullCalendar module with your app. An example app ([app.module.ts]):
 
 ```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular'; // for FullCalendar!
+import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector. must go first
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin
 import { AppComponent } from './app.component';
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
 
 @NgModule({
   declarations: [
@@ -34,7 +41,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FullCalendarModule // for FullCalendar!
+    FullCalendarModule // register FullCalendar with you app
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -42,11 +49,13 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
+Your import of `@fullcalendar/angular` must go before any of the FullCalendar plugins or else a runtime error will occur.
+
 Then, in one of your app's component files ([app.component.ts]), you must prepare an object of options:
 
 ```js
 import { Component } from '@angular/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import { CalendarOptions } from '@fullcalendar/angular'; // useful for typechecking
 
 @Component({
   selector: 'app-root',
@@ -55,13 +64,14 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class AppComponent {
 
-  calendarOptions = {
-    plugins: [dayGridPlugin],
+  calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth'
   };
 
 }
 ```
+
+There's no need to specify `plugins` in this object of options. The plugins were already registered previously.
 
 Then, in your component's template file ([app.component.html]), you have access to the `<full-calendar>` tag. You must pass your options into this declaration!
 
@@ -81,7 +91,7 @@ Angular has the concept of props (aka "inputs", written with `[brackets]`) versu
 
 ```js
 import { Component } from '@angular/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import { CalendarOptions } from '@fullcalendar/angular';
 
 @Component({
   selector: 'app-root',
@@ -90,8 +100,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class AppComponent {
 
-  calendarOptions = {
-    plugins: [dayGridPlugin],
+  calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     dateClick: this.handleDateClick.bind(this), // bind is important!
     events: [
@@ -120,7 +129,7 @@ You can modify FullCalendar's options dynamically by reassigning them within the
 
 ```js
 import { Component } from '@angular/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import { CalendarOptions } from '@fullcalendar/angular';
 
 @Component({
   selector: 'app-root',
@@ -129,8 +138,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class AppComponent {
 
-  calendarOptions = {
-    plugins: [dayGridPlugin],
+  calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     weekends: false // initial value
   };
@@ -156,7 +164,24 @@ If you want to modify options that are complex objects, like [headerToolbar](hea
 ```
 
 
-## Accessing FullCalendar's API
+## FullCalendar Utilities
+
+All of FullCalendar's utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `@fullcalendar/angular`. The [formatDate](formatDate) utility for example. This prevents you from needing to add another dependency to your project.
+
+```js
+import { formatDate } from '@fullcalendar/angular';
+
+let str = formatDate(new Date(), {
+  month: 'long',
+  year: 'numeric',
+  day: 'numeric'
+});
+
+console.log(str);
+```
+
+
+## Calendar API
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
 
@@ -172,7 +197,7 @@ Once you've explicitly marked your child component (`#calendar`), you can get th
 
 ```js
 import { Component, ViewChild } from '@angular/core';
-import { FullCalendarComponent } from '@fullcalendar/angular';
+import { FullCalendarComponent, CalendarOptions } from '@fullcalendar/angular';
 
 @Component({
   selector: 'app-root',
@@ -184,8 +209,8 @@ export class AppComponent {
   // references the #calendar in the template
   @ViewChild('calendar') calendarComponent: FullCalendarComponent;
 
-  calendarOptions = {
-    plugins: [dayGridPlugin]
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth'
   };
 
   someMethod() {
@@ -199,11 +224,38 @@ export class AppComponent {
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's](premium) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example, but with [resourceTimelinePlugin](timeline-view) or whatever premium plugin you want to use:
+
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline'; // a plugin
+import { AppComponent } from './app.component';
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  resourceTimelinePlugin
+]);
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FullCalendarModule // register FullCalendar with you app
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Also, make sure to include your `schedulerLicenseKey` in the options object:
 
 ```js
 import { Component } from '@angular/core';
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import { CalendarOptions } from '@fullcalendar/angular';
 
 @Component({
   selector: 'app-root',
@@ -212,8 +264,7 @@ import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 })
 export class AppComponent {
 
-  calendarOptions = {
-    plugins: [resourceTimelinePlugin],
+  calendarOptions: CalendarOptions = {
     schedulerLicenseKey: 'XXX'
   };
 

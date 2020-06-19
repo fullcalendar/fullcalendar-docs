@@ -5,6 +5,8 @@ title_for_landing: React
 
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
+This is more than a mere "connector". It tells the core FullCalendar package to begin rendering with **React** virtual DOM nodes as opposed to the [Preact](https://preactjs.com/) nodes it normally uses, transforming FullCalendar into a "real" React component. You can learn a bit more [from this blog post]({{ site.baseurl }}{% post_url 2020-05-20-react-ts-v5-beta %}) (more info to come).
+
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
@@ -14,10 +16,10 @@ This package is released under an MIT license, the same license the standard ver
 
 This guide does not go into depth about initializing a React project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the React adapter, the core package, and any additional plugins you plan to use:
+The first step is to install the FullCalendar-related dependencies. You'll need the React adapter any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/react@5.0.0-rc @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
+npm install --save @fullcalendar/react@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.jsx]):
@@ -28,13 +30,14 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 export default class DemoApp extends React.Component {
-
   render() {
     return (
-      <FullCalendar initialView="dayGridMonth" plugins={[ dayGridPlugin ]} />
+      <FullCalendar
+        plugins={[ dayGridPlugin ]}
+        initialView="dayGridMonth"
+      />
     )
   }
-
 }
 ```
 
@@ -52,8 +55,8 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 
 ```jsx
 <FullCalendar
+  plugins={[ dayGridPlugin ]}
   initialView="dayGridMonth"
-  plugins={calendarPlugins}
   weekends={false}
   events={[
     { title: 'event 1', date: '2019-04-01' },
@@ -68,13 +71,19 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 A callback function can be passed into a React component and it will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date:
 
 ```jsx
+import React from 'react'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 
 export default class DemoApp extends React.Component {
 
   render() {
     return (
-      <FullCalendar dateClick={this.handleDateClick} plugins={[ dayGridPlugin, interactionPlugin ]} />
+      <FullCalendar
+        plugins={[ dayGridPlugin, interactionPlugin ]}
+        dateClick={this.handleDateClick}
+      />
     )
   }
 
@@ -88,7 +97,90 @@ export default class DemoApp extends React.Component {
 Make sure your callbacks methods are [bound to your component's context][callback-method-binding]!
 
 
-## Accessing FullCalendar's API
+## Content Injection
+
+There are many settings throughout the API for injecting custom content, like the `eventContent` [event render hook](event-render-hooks). The [Content Injection article](content-injection) explains the general concept. When you're using the React connector, it's possible to return React JSX nodes. Example:
+
+```jsx
+import React from 'react'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+export default class DemoApp extends React.Component {
+  render() {
+    return (
+      <FullCalendar
+        plugins={[ dayGridPlugin ]}
+        eventContent={renderEventContent}
+      />
+    )
+  }
+}
+
+function renderEventContent(eventInfo) {
+  return (
+    <>
+      <b>{eventInfo.timeText}</b>
+      <i>{eventInfo.event.title}</i>
+    </>
+  )
+}
+```
+
+
+## FullCalendar Utilities
+
+All of FullCalendar's utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `@fullcalendar/react`. The [formatDate](formatDate) utility for example. This prevents you from needing to add another dependency to your project.
+
+```js
+import { formatDate } from '@fullcalendar/react';
+
+let str = formatDate(new Date(), {
+  month: 'long',
+  year: 'numeric',
+  day: 'numeric'
+});
+
+console.log(str);
+```
+
+
+## Custom Views with Components
+
+It's possible to make calendar views that have custom rendering logic. The [Custom Views via JS](custom-view-with-js) article explains the general concept. When you're using the React connector, it's possible to specify a [React component](https://reactjs.org/docs/components-and-props.html). Example:
+
+```jsx
+import React from 'react';
+import { sliceEvents, createPlugin } from '@fullcalendar/react';
+
+class CustomView extends React.Component {
+
+  render(props) {
+    let segs = sliceEvents(props, true); // allDay=true
+
+    return (
+      <Fragment>
+        <div class='view-title'>
+          {props.dateProfile.currentRange.start.toUTCString()}
+        </div>
+        <div class='view-events'>
+          {segs.length} events
+        </div>
+      </Fragment>
+    );
+  }
+
+}
+
+export default createPlugin({
+  views: {
+    custom: CustomView
+  }
+});
+```
+
+
+## Calendar API
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
 
