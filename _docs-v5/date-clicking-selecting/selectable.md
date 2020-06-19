@@ -32,16 +32,14 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Alternatively, you can use [script tags and browser globals](initialize-globals):
+Alternatively, you can use [a global bundle](initialize-globals):
 
 ```html
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/interaction/main.js'></script>
-<script src='fullcalendar/daygrid/main.js'></script>
+<link href='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'interaction', 'dayGrid' ],
   initialView: 'dayGridMonth',
   selectable: true
 });

@@ -23,27 +23,14 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Then you'll need to ensure the correct stylesheets are loaded:
+Or, you can choose to initialize Timeline view with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
-```
-
-Or you can choose to initialized it [entirely with script tags](initialize-globals):
-
-```html
-<link href='fullcalendar/core/main.css' rel='stylesheet' />
-<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
-
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/daygrid/main.js'></script>
-<script src='fullcalendar/resource-common/main.js'></script>
-<script src='fullcalendar/resource-daygrid/main.js'></script>
+<link href='fullcalendar-scheduler/main.css' rel='stylesheet' />
+<script src='fullcalendar-scheduler/main.js'></script>
 <script>
 ...
-let calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'resourceDayGrid' ],
+var calendar = new FullCalendar.Calendar(calendarEl, {
   initialView: 'resourceDayGridDay',
   resources: [
     // your list of resources

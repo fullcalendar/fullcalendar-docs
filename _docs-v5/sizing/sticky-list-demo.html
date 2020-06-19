@@ -1,7 +1,6 @@
 ---
 title: list view with natural height and sticky headers
 layout: none
-extra_plugins: [ 'rrule' ]
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <!DOCTYPE html>
@@ -15,27 +14,41 @@ extra_plugins: [ 'rrule' ]
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
+          height: 'auto', // will activate stickyHeaderDates automatically!
+
           timeZone: 'UTC',
-          initialView: 'listWeek',
+          initialView: 'listMonth',
           initialDate: '{{ ym }}-09',
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'listDay,listWeek'
-          },
           navLinks: true, // can click day/week names to navigate views
           editable: true,
 
-          height: 'auto', // will activate stickyHeaderDates automatically!
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'listMonth,listYear'
+          },
+
+          // customize the button names,
+          // otherwise they'd all just say "list"
+          views: {
+            listMonth: { buttonText: 'list month' },
+            listYear: { buttonText: 'list year' }
+          },
 
           events: [
             {
-              title: 'repeating event',
-              rrule: {
-                dtstart: '{{ ym }}-09T13:00:00',
-                freq: 'hourly',
-                count: 100
-              },
+              title: 'repeating event 1',
+              daysOfWeek: [ 1, 2, 3 ],
+              duration: '00:30'
+            },
+            {
+              title: 'repeating event 2',
+              daysOfWeek: [ 1, 2, 3 ],
+              duration: '00:30'
+            },
+            {
+              title: 'repeating event 3',
+              daysOfWeek: [ 1, 2, 3 ],
               duration: '00:30'
             }
           ]

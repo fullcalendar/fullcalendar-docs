@@ -42,7 +42,7 @@ Or you can choose to initialized it [entirely with script tags](initialize-globa
 <script src='fullcalendar/resource-daygrid/main.js'></script>
 <script>
 ...
-let calendar = new FullCalendar.Calendar(calendarEl, {
+var calendar = new FullCalendar.Calendar(calendarEl, {
   plugins: [ 'resourceDayGrid' ],
   defaultView: 'resourceDayGridDay',
   resources: [

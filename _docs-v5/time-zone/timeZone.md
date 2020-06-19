@@ -144,31 +144,4 @@ let calendar = new Calendar(calendarEl, {
 });
 ```
 
-You can do something similar with [script tags and browser globals](initialize-globals):
-
-```html
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/moment/main.js'></script>
-<script src='fullcalendar/moment-timezone/main.js'></script>
-<script>
-...
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'momentTimezone' ],
-  timeZone: 'America/New_York',
-  events: [
-    { start: '2018-09-01T12:30:00Z' }, // will be shifted to America/New_York
-    { start: '2018-09-01T12:30:00+XX:XX' }, // will be shifted to America/New_York
-    { start: '2018-09-01T12:30:00' } // will be parsed as America/New_York
-  ],
-  dateClick: function(arg) {
-    // millisecond value is correctly in America/New_York
-    console.log(arg.date.valueOf())
-
-    // use the plugin for manipulation and formatting
-    let m = FullCalendar.toMoment(arg.date, calendar)
-    console.log(m.format()) // something like '2018-09-01T12:30:00-05:00'
-  }
-});
-...
-</script>
-```
+The moment-timezone plugin is **ONLY** compatible with an ES6 build system. It does **NOT** work in [global bundle](initialize-globals) context.

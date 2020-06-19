@@ -39,28 +39,14 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Then you'll need to ensure the correct stylesheets are loaded. Please note that TimeGrid depends on the [DayGrid plugin](daygrid-view), so you'll need to manually include that stylesheet too:
+Or you can choose to initialized the TimeGrid views [as a global bundle](initialize-globals):
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/timegrid/main.css' rel='stylesheet' />
-```
-
-Or you can choose to initialized the TimeGrid views [entirely with script tags](initialize-globals). Please note that TimeGrid depends on the [DayGrid plugin](daygrid-view), so you'll need to manually include those tags too:
-
-```html
-<link href='fullcalendar/core/main.css' rel='stylesheet' />
-<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
-<link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
-
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/daygrid/main.js'></script>
-<script src='fullcalendar/timegrid/main.js'></script>
+<link href='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'timeGrid' ],
   initialView: 'timeGridWeek'
 });
 ...

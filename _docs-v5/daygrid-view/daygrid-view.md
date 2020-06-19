@@ -18,25 +18,14 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Then you'll need to ensure the correct stylesheets are loaded:
+Or you can choose to initialized DayGrid view [as a global bundle](initialize-globals):
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
-```
-
-Or you can choose to initialized DayGrid view [entirely with script tags](initialize-globals):
-
-```html
-<link href='fullcalendar/core/main.css' rel='stylesheet' />
-<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
-
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/daygrid/main.js'></script>
+<link href='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'dayGrid' ],
   initialView: 'dayGridWeek'
 });
 ...

@@ -28,28 +28,17 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Then you'll need to ensure the correct stylesheets are loaded:
+Or you can choose to initialized the List views [as a global bundle](initialize-globals):
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/list/main.css' rel='stylesheet' />
-```
-
-Or you can choose to initialized the List views [entirely with script tags](initialize-globals):
-
-```html
-<link href='fullcalendar/core/main.css' rel='stylesheet' />
-<link href='fullcalendar/list/main.css' rel='stylesheet' />
-
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/list/main.js'></script>
+<link href='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
 <script>
-// ...
+...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'list' ],
   initialView: 'listWeek'
 });
-// ...
+...
 </script>
 ```
 
@@ -65,7 +54,6 @@ In the following example, we pass non-standard information about events through 
 
 ```js
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'list' ],
   initialView: 'listWeek',
   events: [
     {

@@ -39,5 +39,3 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 ...
 </script>
 ```
-
-TODO: write a demo

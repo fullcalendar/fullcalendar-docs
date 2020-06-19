@@ -70,29 +70,14 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Then you'll need to ensure the correct stylesheets are loaded:
+Or, you can choose to initialize Timeline view with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/timeline/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/resource-timeline/main.css' rel='stylesheet' />
-```
-
-Or you can choose to initialized the Timeline views [entirely with script tags](initialize-globals):
-
-```html
-<link href='fullcalendar/core/main.css' rel='stylesheet' />
-<link href='fullcalendar/timeline/main.css' rel='stylesheet' />
-<link href='fullcalendar/resource-timeline/main.css' rel='stylesheet' />
-
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/timeline/main.js'></script>
-<script src='fullcalendar/resource-common/main.js'></script>
-<script src='fullcalendar/resource-timeline/main.js'></script>
+<link href='fullcalendar-scheduler/main.css' rel='stylesheet' />
+<script src='fullcalendar-scheduler/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'resourceTimeline' ],
   initialView: 'resourceTimelineWeek',
   resources: [
     // your resource list

@@ -27,15 +27,15 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Alternatively, if you are using [script tags and browser globals](initialize-globals), you can do something like this:
+Alternatively, if you are using [a global bundle](initialize-globals), you can do something like this:
 
 ```html
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/core/interaction/main.js'></script>
+<link href='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'interaction' ],
+  // no plugin configuration required!
   editable: true
 })
 ...

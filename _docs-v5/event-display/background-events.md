@@ -40,7 +40,6 @@ The spans of time *not* occupied by an event can be colored by setting the `disp
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  plugins: [ 'timeGrid' ],
   initialDate: '2014-11-10',
   initialView: 'timeGridWeek',
   events: [

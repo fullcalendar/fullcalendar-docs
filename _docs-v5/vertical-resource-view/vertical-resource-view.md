@@ -31,27 +31,14 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Then you'll need to ensure the correct stylesheets are loaded:
+Or, you can choose to initialize it with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<link href='node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
-<link href='node_modules/@fullcalendar/timegrid/main.css' rel='stylesheet' />
-```
-
-Or you can choose to initialized it [entirely with script tags](initialize-globals):
-
-```html
-<link href='fullcalendar/core/main.css' rel='stylesheet' />
-<link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
-
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/timegrid/main.js'></script>
-<script src='fullcalendar/resource-common/main.js'></script>
-<script src='fullcalendar/resource-timegrid/main.js'></script>
+<link href='fullcalendar-scheduler/main.css' rel='stylesheet' />
+<script src='fullcalendar-scheduler/main.js'></script>
 <script>
 ...
-let calendar = new FullCalendar.Calendar(calendarEl, {
-  plugins: [ 'resourceTimeGrid' ],
+var calendar = new FullCalendar.Calendar(calendarEl, {
   initialView: 'resourceTimeGridDay',
   resources: [
     // your list of resources
