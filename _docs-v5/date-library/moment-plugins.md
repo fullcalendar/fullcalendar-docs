@@ -88,11 +88,11 @@ The `@fullcalendar/moment-timezone` package can only be used with an [ES6 build 
 
 When the `moment` lib is imported into your project, it imports **ALL** locales for some reason. This is a known issue with Moment. It applies to `@fullcalendar/moment` as well. Luckily there is a workaround. Use [moment-locales-webpack-plugin](https://www.npmjs.com/package/moment-locales-webpack-plugin) to strip away these unused locales.
 
-<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/moment' class='more-link'>View an example moment project</a>
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/moment' class='more-link'>View an example moment project</a>
 
 In the same vein, whenever `moment-timezone` is imported into your project, it imports data for **ALL** time zones. Use [moment-timezone-data-webpack-plugin](https://www.npmjs.com/package/moment-timezone-data-webpack-plugin) to strip away this unused data.
 
-<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/moment-timezone' class='more-link'>View an example moment-timezone project</a>
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/moment-timezone' class='more-link'>View an example moment-timezone project</a>
 
 
 ## Usage with TypeScript
@@ -109,4 +109,4 @@ If you're using the `@fullcalendar/moment` plugin in a TypeScript project, you'l
 
 This is necessary due to how the `moment` package exposes itself in an ES6 environment.
 
-<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/moment-typescript' class='more-link'>View an example moment+typescript project</a>
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/moment-typescript' class='more-link'>View an example moment+typescript project</a>

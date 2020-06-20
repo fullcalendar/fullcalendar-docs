@@ -3,7 +3,7 @@ title: Day-Cell Render Hooks
 ---
 
 
-Customize the days cells in daygrid and timegrid views with the following options:
+Customize the day cells in daygrid and timegrid views with the following options:
 
 `dayCellClassNames` - a [ClassName Input](classname-input) for adding classNames to the `<td>` cell
 
@@ -12,6 +12,11 @@ Customize the days cells in daygrid and timegrid views with the following option
 `dayCellDidMount` - called right after the `<td>` has been added to the DOM
 
 `dayCellWillUnmount` - called right before the `<td>` will be removed from the DOM
+
+
+## Timeline View
+
+For customizing the day cells in [Timeline view](timeline-view), use the [Slot Render Hooks](slot-render-hooks) instead. From an API-perspective they are considered "slots," not "days," because they can be any duration.
 
 
 ## Argument

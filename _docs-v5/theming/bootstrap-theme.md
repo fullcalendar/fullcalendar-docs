@@ -64,7 +64,7 @@ var calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Using `fontawesome-free` with webpack is a bit complicated because it relies on external font files that are not present in the main stylesheet. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/bootstrap' class='more-link'>See an example project that does it</a>
+Using `fontawesome-free` with webpack is a bit complicated because it relies on external font files that are not present in the main stylesheet. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/bootstrap' class='more-link'>See an example project that does it</a>
 
 
 ## 3rd Party Bootstrap Themes

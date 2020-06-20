@@ -10,7 +10,7 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
 - [Example project][example project] leveraging [Webpack] and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/v5/vue?file=/src/DemoApp.vue) in a code playground
+- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue) in a code playground
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
@@ -206,18 +206,18 @@ export default {
 
 ## TypeScript
 
-The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typescriptlang.org/) definitions. When using TypeScript in your Vue project, it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue-typescript' class='more-link'>example TypeScript project</a>
+The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typescriptlang.org/) definitions. When using TypeScript in your Vue project, it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript' class='more-link'>example TypeScript project</a>
 
 
 ## Vuex
 
-[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue-vuex' class='more-link'>View an example project</a>
+[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-vuex' class='more-link'>View an example project</a>
 
 
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue
-[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v5/vue/src/DemoApp.vue
+[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue
+[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
 [component options]: https://github.com/fullcalendar/fullcalendar-vue/blob/master/src/fullcalendar-options.js

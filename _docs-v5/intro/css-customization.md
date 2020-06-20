@@ -45,7 +45,7 @@ To override these variables, you must be [using a build system](initialize-es6) 
 - Either [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) or [postcss-css-variables](https://github.com/MadLittleMods/postcss-css-variables)
 - [postcss-calc](https://github.com/postcss/postcss-calc)
 
-<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/custom-css-vars' class='more-link'>View an example repo that does all this</a>
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/custom-css-vars' class='more-link'>View an example repo that does all this</a>
 
 Once PostCSS and all necessary plugins are installed, begin to configure PostCSS. You can do this in a number of ways, but the easiest is to create a `postcss.config.js` in the root of your project:
 
