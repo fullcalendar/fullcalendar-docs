@@ -42,10 +42,10 @@ available_versions:
 
   - id: v5
     collection: docs-v5
+    is_latest: true
 
   - id: v4
     collection: docs-v4
-    is_latest: true
 
   - id: v3
     collection: docs-v3
@@ -63,11 +63,11 @@ collections:
 
   docs-v5:
     output: true
-    permalink: /docs/v5/:slug
+    permalink: /docs/:slug
 
   docs-v4:
     output: true
-    permalink: /docs/:slug
+    permalink: /docs/v4/:slug
 
   docs-v3:
     output: true

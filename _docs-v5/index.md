@@ -1,7 +1,7 @@
 ---
 # we actually want "/docs" (without the trailing slash),
 # but wildcard URL for doc articles confuses things.
-permalink: /docs/v5/
+permalink: /docs/
 
 layout: docs-landing
 

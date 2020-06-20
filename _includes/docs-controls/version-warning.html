@@ -1,17 +1,22 @@
 
 {% if page.version.id == "v5" %}
+  {% if page.slug == "index" %}
+    <div id='docs-controls-warning'>
+      <img src='{{ site.baseurl }}/assets/images/rocket.svg' width='20' height='20' style='vertical-align:middle' />
+      This release is brand new! For older releases, use the switcher &darr;
+    </div>
+  {% endif %}
+{% elsif page.version.id == "v4" %}
   <div id='docs-controls-warning'>
-    These docs are a
-    <span style='background:#ffeac0;padding:0 2px'>work-in-progress</span>,
-    for a
-    <a href='{{ site.baseurl }}/docs/v5/upgrading-from-v4' style='background:#ffeac0;padding:0 2px;'>
-      beta release
+    These docs are for an old release.
+    <a href='{{ site.baseurl }}/docs/upgrading-from-v4'>
+      Info on upgrading to v5
     </a>
   </div>
 {% elsif page.version.id == "v3" %}
   <div id='docs-controls-warning'>
     These docs are for an old release.
-    <a href='{{ site.baseurl }}/docs/upgrading-from-v3'>
+    <a href='{{ site.baseurl }}/docs/v4/upgrading-from-v3'>
       Info on upgrading to v4
     </a>
   </div>
