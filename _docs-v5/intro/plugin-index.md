@@ -105,6 +105,15 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
+      <strong>@fullcalendar/adaptive</strong>
+    </td>
+    <td>
+      Offers <a href='print'>improved printing support</a>.
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/adaptive'>Yarn</a></td>
+  </tr>
+  <tr>
+    <td>
       <strong>@fullcalendar/resource-common</strong>
     </td>
     <td>
