@@ -17,7 +17,7 @@ This guide does not go into depth about initializing a Vue project. Please consu
 The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter and any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/vue@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
+npm install --save @fullcalendar/vue @fullcalendar/daygrid
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.vue]):

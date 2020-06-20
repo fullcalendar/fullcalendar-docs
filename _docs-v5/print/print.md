@@ -17,7 +17,7 @@ FullCalendar looks great on a computer screen, but by default it does not look v
 You will need to install `@fullcalendar/adaptive`, which is a [premium plugin](premium):
 
 ```
-npm install --save @fullcalendar/adaptive@5.0.0-rc
+npm install --save @fullcalendar/adaptive
 ```
 
 And then add it to your calendar's plugin list:

@@ -8,7 +8,7 @@ For non-trivial projects, it is recommended to use an ES6-compatible build syste
 You'll first need to install FullCalendar's `core` package as well as any plugins. We'll demonstrate the [DayGrid plugin](daygrid-view) with NPM:
 
 ```
-npm install --save @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
+npm install --save @fullcalendar/core @fullcalendar/daygrid
 ```
 
 Then, you'll need to set up your build system. Setting up a system like Webpack can be a little complicated. Please read some tutorials on the internet or browse the [Webpack Example Repo](https://github.com/fullcalendar/webpack-example).
@@ -41,11 +41,7 @@ For a full list of plugins, visit the [Plugin Index &raquo;](plugin-index)
 Before using a plugin, you must install it view npm/yarn. You can install multiple plugins at once:
 
 ```
-npm install \
-  @fullcalendar/core@5.0.0-rc \
-  @fullcalendar/daygrid@5.0.0-rc \
-  @fullcalendar/timegrid@5.0.0-rc \
-  @fullcalendar/list@5.0.0-rc
+npm install @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/list
 ```
 
 When using an ES6 build system, you must pass in the references exported from each plugin module into the `plugins` array:

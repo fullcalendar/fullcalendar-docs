@@ -18,12 +18,7 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 ## Download
 
-You can also download the library manually:
-
-**Latest:** <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.releases[0].version }}.zip')">
-  fullcalendar-{{ site.data.releases[0].version }}.zip
-</a>
-(<a href='{{ site.fullcalendar_repo }}/releases'>view all releases</a>)
+You can also download the library manually. <a href='{{ site.fullcalendar_repo }}/releases' class='more-link'>View all releases</a>
 
 Once you've downloaded it, you can initialize a calendar <a href='initialize-globals' class='more-link'>using script tags and browser globals</a>
 

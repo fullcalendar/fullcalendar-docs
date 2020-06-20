@@ -1,5 +1,5 @@
 ---
-title: V5-beta Release Notes and Upgrade Guide
+title: V5 Release Notes and Upgrade Guide
 layout: text
 ---
 
@@ -92,7 +92,7 @@ layout: text
 
 ## Summary of Changes
 
-This guide outlines the changes between v4 and v5-beta.
+This guide outlines the changes between v4 and v5.
 
 **Major breaking changes:**
 
@@ -134,7 +134,7 @@ This guide outlines the changes between v4 and v5-beta.
 
 ## Table of Contents
 
-- [Getting the Beta](#getting-the-beta)
+- [Getting the Code](#getting-the-code)
 - [Virtual DOM](#virtual-dom)
 - [Real React](#real-react)
 - [CSS and DOM Structure](#css-and-dom-structure)
@@ -169,12 +169,12 @@ This guide outlines the changes between v4 and v5-beta.
 </div>
 
 
-## Getting the Beta
+## Getting the Code
 
-You can install the packages via npm using the `@5.0.0-rc` postfix:
+You can install with npm just like in v4:
 
 ```sh
-npm install --save @fullcalendar/core@5.0.0-rc @fullcalendar/daygrid@5.0.0-rc
+npm install --save @fullcalendar/core @fullcalendar/daygrid
 ```
 
 Or, you can use one of the new pre-built bundles ([see below](#pre-built-bundles))
@@ -184,7 +184,7 @@ Or, you can use one of the new pre-built bundles ([see below](#pre-built-bundles
 
 FullCalendar now internally uses a miniature virtual-DOM library called [Preact](https://preactjs.com/). Aside from making the codebase more maintainable, it makes FullCalendar more performant to end-users. DOM manipulations and page reflows are kept to a minimum. This is especially true for rerendering events. FullCalendar no longer needs to rerender ALL events when just one event changes. It rerenders only what it needs to ([#3003](https://github.com/fullcalendar/fullcalendar/issues/3003)).
 
-Just because we use a virtual DOM doesn't mean we no longer think about performance. We still care about limiting the amount of rerender execution, even though it performs fewer real DOM operations. This will continue to be a priority as we further develop the beta.
+Just because we use a virtual DOM doesn't mean we no longer think about performance. We still care about limiting the amount of rerender execution, even though it performs fewer real DOM operations. This will continue to be a priority as we further develop FullCalendar.
 
 How does this affect FullCalendar's API? It doesn't really. From any of the content injection options like `eventContent` you are able to construct and return a virtual DOM node. [Learn more in this article](content-injection#virtual-dom). Aside from that, you won't need to think about the virtual DOM.
 

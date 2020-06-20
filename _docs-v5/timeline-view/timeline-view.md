@@ -53,7 +53,7 @@ The [Scheduler add-on]({{ site.baseurl }}/purchase) provides a new view called "
 The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```
-npm install --save @fullcalendar/core@5.0.0-rc @fullcalendar/resource-timeline@5.0.0-rc
+npm install --save @fullcalendar/core @fullcalendar/resource-timeline
 ```
 
 ```js

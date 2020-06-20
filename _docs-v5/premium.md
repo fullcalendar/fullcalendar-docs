@@ -37,7 +37,7 @@ But first, you must install the necessary plugins...
 FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). You'll first need to install FullCalendar’s `core` package as well as the premium plugins you plan to use. For example, the following is how you install [Resource Timeline View](timeline-view):
 
 ```sh
-npm install --save @fullcalendar/core@5.0.0-rc @fullcalendar/resource-timeline@5.0.0-rc
+npm install --save @fullcalendar/core @fullcalendar/resource-timeline
 ```
 
 To initialize a calendar, <a href='initialize-es6' class='more-link'>read about using an ES6 build system</a>
@@ -47,8 +47,9 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 You can also download the library manually:
 
-**Latest:** [fullcalendar-scheduler-5.0.0-rc.zip](https://github.com/fullcalendar/fullcalendar-scheduler/releases/download/v5.0.0-rc/fullcalendar-scheduler-5.0.0-rc.zip)
-
+**Latest:** <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">
+  fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip
+</a>
 (<a href='{{ site.fullcalendar_scheduler_repo }}/releases'>view all releases</a>)
 
 Once you've downloaded it, you can initialize a calendar <a href='initialize-globals' class='more-link'>using script tags and browser globals</a>
