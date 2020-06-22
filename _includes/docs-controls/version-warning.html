@@ -1,12 +1,10 @@
 
 {% if page.version.id == "v5" %}
-  {% if page.slug == "index" %}
-    <div id='docs-controls-warning'>
-      <img src='{{ site.baseurl }}/assets/images/rocket.svg' width='20' height='20' style='vertical-align:middle' />
-      This release is <a href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}' style='text-decoration:underline'>brand new!</a>
-      For older releases, use the switcher &darr;
-    </div>
-  {% endif %}
+  <div id='docs-controls-warning'>
+    <img src='{{ site.baseurl }}/assets/images/rocket.svg' width='20' height='20' style='vertical-align:middle' />
+    This release is <a href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}' style='text-decoration:underline'>brand new!</a>
+    For older releases, use the switcher &darr;
+  </div>
 {% elsif page.version.id == "v4" %}
   <div id='docs-controls-warning'>
     These docs are for an old release.
