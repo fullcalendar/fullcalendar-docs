@@ -3,7 +3,8 @@
   {% if page.slug == "index" %}
     <div id='docs-controls-warning'>
       <img src='{{ site.baseurl }}/assets/images/rocket.svg' width='20' height='20' style='vertical-align:middle' />
-      This release is brand new! For older releases, use the switcher &darr;
+      This release is <a href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}' style='text-decoration:underline'>brand new!</a>
+      For older releases, use the switcher &darr;
     </div>
   {% endif %}
 {% elsif page.version.id == "v4" %}
