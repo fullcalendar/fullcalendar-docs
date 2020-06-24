@@ -5,7 +5,7 @@ date: 2018-10-02T05:50:06+00:00
 
 Version 4.0.0-alpha.2 is now available. When the 4.0.0 is officially released, it will be the biggest FullCalendar release to date. It sheds a number of outdated dependencies and offers a more modern API. It is also the first time connector plugins to third-party libraries are offered.
 
-[View release notes and upgrade guide »]({{ site.baseurl }}/docs/upgrading-from-v3)
+[View release notes and upgrade guide »]({{ site.baseurl }}/docs/v4/upgrading-from-v3)
 
 **Major breaking changes:**
 
@@ -29,4 +29,4 @@ Version 4.0.0-alpha.2 is now available. When the 4.0.0 is officially released, i
 * Smoother auto-scrolling during dragging/resizing/selecting. Also, multiple containers can now be auto-scrolled. [Issue 2761](https://github.com/fullcalendar/fullcalendar/issues/2761)
 * Touch scrolling works better with event and date unselecting. [Issue 3530](https://github.com/fullcalendar/fullcalendar/issues/3530)
 
-[View release notes and upgrade guide »]({{ site.baseurl }}/docs/upgrading-from-v3)
+[View release notes and upgrade guide »]({{ site.baseurl }}/docs/v4/upgrading-from-v3)

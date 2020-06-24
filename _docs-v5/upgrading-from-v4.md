@@ -123,7 +123,7 @@ This guide outlines the changes between v4 and v5.
 
 <br />
 
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs/v5)
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs)
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
@@ -660,7 +660,7 @@ Week numbers:
     <td>
       <p>
         This is now the default behavior. The <code>weekNumbersWithinDays:false</code> behavior has been retired.
-        <a href='{{ site.baseurl }}/docs/weekNumbersWithinDays'>See the old docs</a> for an illustration of the difference.
+        <a href='{{ site.baseurl }}/docs/v4/weekNumbersWithinDays'>See the old docs</a> for an illustration of the difference.
       </p>
     </td>
   </tr>
@@ -1816,7 +1816,7 @@ Also, any utilities that normally would be accessed via `@fullcalendar/core` can
 
 Many developers will be upgrading from <strong>v3</strong> instead of v4. We will likely release a separate guide for this process before the official v5 is released. In the meantime, here are some tips for upgrading from v3 -> v5 in lieu of a full guide:
 
-1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/docs/upgrading-from-v3) but ignore the following areas:
+1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/docs/v4/upgrading-from-v3) but ignore the following areas:
   - "Initialization" and anything related to `<script>` tags or stylesheets
   - anything related to content injection, such as options with the words `render`, `text`, or `html` in them
 2. Learn how to install and initialize a v5 calendar from the [Getting Started article](getting-started).

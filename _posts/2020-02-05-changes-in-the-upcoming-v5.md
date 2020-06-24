@@ -47,7 +47,7 @@ How will you need to adjust your v4 code to work with v5?
 2. If you've written CSS customizing a calendar, you'll need to rewrite it to target different classnames.
 3. A few settings will simply be renamed. A few others will be removed in favor of more modern techniques.
 
-Overall, there will be *waaay* less breaking changes than from [v3 -> v4]({{ site.baseurl }}/docs/upgrading-from-v3).
+Overall, there will be *waaay* less breaking changes than from [v3 -> v4]({{ site.baseurl }}/docs/v4/upgrading-from-v3).
 
 Stay tuned for future developments!
 

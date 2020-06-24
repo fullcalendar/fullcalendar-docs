@@ -34,7 +34,7 @@ Compared to the transition between FullCalendar v1 and v2, this transition to v3
 ### Other Stuff
 
 * More control over where a user can drop an event ([eventAllow]({{ site.baseurl }}/docs/eventAllow)) and select ([selectAllow]({{ site.baseurl }}/docs/selectAllow)).
-* A new setting for rendering week numbers differently: [weekNumbersWithinDays]({{ site.baseurl }}/docs/weekNumbersWithinDays) (<a href="http://jsbin.com/sekohivetu" target="_blank">view demo</a>). Thanks peternowee!
+* A new setting for rendering week numbers differently: [weekNumbersWithinDays]({{ site.baseurl }}/docs/v4/weekNumbersWithinDays) (<a href="http://jsbin.com/sekohivetu" target="_blank">view demo</a>). Thanks peternowee!
 * The build system has been re-implemented with <a href="http://gulpjs.com/" target="_blank">Gulp</a>, making it much nicer and faster.
 
 <a href="https://github.com/fullcalendar/fullcalendar/releases/tag/v3.0.0" target="_blank">See the full Changelog »</a>

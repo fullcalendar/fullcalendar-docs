@@ -18,7 +18,7 @@ Also, it's important to note that date clicking, date selecting, event drag-n-dr
 
 In addition, Bootstrap 3 theme support and jQuery UI theme support have both been dropped. And there are some minor setting renames. Also, **superagent** has been dropped as a dependency for JSON feed requests, which was introduced in a previous alpha.
 
-For more info, see the [changelog](https://github.com/fullcalendar/fullcalendar/releases/tag/v4.0.0-beta.2), the updated [upgrade guide]({{ site.baseurl }}/docs/upgrading-from-v3), or the [updated docs]({{ site.baseurl }}/docs).
+For more info, see the [changelog](https://github.com/fullcalendar/fullcalendar/releases/tag/v4.0.0-beta.2), the updated [upgrade guide]({{ site.baseurl }}/docs/v4/upgrading-from-v3), or the [updated docs]({{ site.baseurl }}/docs).
 
 Because FullCalendar has been broken up into plugins, it&#8217;s possible to bundle only the functionality you need, saving space. This, combined with the shedding of jQuery and Moment as dependencies, has drastically reduced the total filesize of a simplest-case app. For example, if all you want to do is display a read-only month-view calendar, you would bundle the following packages:
 

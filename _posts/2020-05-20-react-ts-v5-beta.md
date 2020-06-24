@@ -17,6 +17,6 @@ FullCalendar v5.0.0-beta.3 has just been released! Updates:
 We're getting very close an official v5! We just need to fix printer-friendly rendering and then we're off to the races!
 
 
-- [View the Changelog and Upgrade Guide]({{ site.baseurl }}/docs/v5/upgrading-from-v4)
-- [View the Docs]({{ site.baseurl }}/docs/v5)
-- [Get the Code]({{ site.baseurl }}/docs/v5/getting-started)
+- [View the Changelog and Upgrade Guide]({{ site.baseurl }}/docs/upgrading-from-v4)
+- [View the Docs]({{ site.baseurl }}/docs)
+- [Get the Code]({{ site.baseurl }}/docs/getting-started)
