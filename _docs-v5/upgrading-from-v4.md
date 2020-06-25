@@ -896,7 +896,7 @@ Background events now display their title (addresses [#2746](https://github.com/
 
 ```js
 eventContent: function(arg) {
-  if (arg.event.rendering.match(/background/)) { // handles inverse-background too
+  if (arg.event.display.match(/background/)) { // handles inverse-background too
     return null
   }
 }

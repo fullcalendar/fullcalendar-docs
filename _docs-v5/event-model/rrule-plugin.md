@@ -37,8 +37,6 @@ let calendar = new Calendar(calendarEl, {
 
 The rrule plugin can **ONLY** be used with an [ES6 build system](initialize-es6). It **CANNOT** be used with [script tags and browser globals](initialize-globals).
 
-If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `rrule.js` dist file [from the rrule site](https://jakubroztocil.github.io/rrule/) is included on your page first.
-
 The `rrule` property accepts whatever the rrule lib accepts for a `new RRule`. [See the docs](https://github.com/jakubroztocil/rrule). You can specify a string or an object.
 
 If you're specifying an object, you can write some of the properties in a way that's more convenient than what rrule requires:
