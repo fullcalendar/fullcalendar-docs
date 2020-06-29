@@ -52,7 +52,7 @@ Overall, there will be *waaay* less breaking changes than from [v3 -> v4]({{ sit
 Stay tuned for future developments!
 
 
-[branch]: https://github.com/fullcalendar/fullcalendar/tree/v5
+[branch]: https://github.com/fullcalendar/fullcalendar/tree/master
 [milestone]: https://github.com/fullcalendar/fullcalendar/issues?q=is%3Aopen+is%3Aissue+milestone%3Av5
 [Preact]: https://preactjs.com/
 [PureComponent]: https://reactjs.org/docs/react-api.html#reactpurecomponent

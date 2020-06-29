@@ -21,9 +21,9 @@ The FullCalendar v5 release candidate has been released. If no major bugs are fo
 
 Additionally, these example projects have been updated to include best practices:
 
-- [React example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/react)
-- [React+Redux example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/react-redux)
-- [Vue example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue)
-- [Vue+TypeScript example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v5/vue-typescript)
+- [React example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react)
+- [React+Redux example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-redux)
+- [Vue example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue)
+- [Vue+TypeScript example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript)
 
 Let's cross our fingers that the release candidate goes well! I envision an official release later this week.
