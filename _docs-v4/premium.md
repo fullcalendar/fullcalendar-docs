@@ -25,7 +25,7 @@ During the free trial, in order to hide the license warning, use the following k
 
 ```js
 var calendar = new Calendar(calendarEl, {
-  schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'
+  schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
 });
 ```
 
