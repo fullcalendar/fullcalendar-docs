@@ -2,7 +2,7 @@
 title: longPressDelay
 ---
 
-For touch devices, the amount of time the user most hold down before an event becomes draggable or a date becomes selectable.
+For touch devices, the amount of time the user must hold down before an event becomes draggable or a date becomes selectable.
 
 <div class='spec' markdown='1'>
 Integer, *default*: `1000` (1 second)
