@@ -16,7 +16,7 @@ var calendar = new Calendar(calendarEl, {
   resources: [
     { id: 'a', title: 'Resource A', children: [
       { id: 'a1', title: 'Resource A1' },
-      { id: 'a2': title: 'Resource A2' }
+      { id: 'a2', title: 'Resource A2' }
     ] }
   ]
 });
