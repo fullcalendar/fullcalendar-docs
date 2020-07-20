@@ -220,4 +220,3 @@ The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typesc
 [example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue
 [DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
-[component options]: https://github.com/fullcalendar/fullcalendar-vue/blob/master/src/fullcalendar-options.js
