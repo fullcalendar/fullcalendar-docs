@@ -26,6 +26,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 <script>
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 
 export default {
   components: {
@@ -34,7 +35,7 @@ export default {
   data() {
     return {
       calendarOptions: {
-        plugins: [ dayGridPlugin ],
+        plugins: [ dayGridPlugin, interactionPlugin ],
         initialView: 'dayGridMonth'
       }
     }
@@ -60,6 +61,7 @@ Vue has the concept of "props" (via `v-bind` or `:`) versus "events" (via `v-on`
 <script>
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 
 export default {
   components: {
@@ -68,7 +70,7 @@ export default {
   data() {
     return {
       calendarOptions: {
-        plugins: [ dayGridPlugin ],
+        plugins: [ dayGridPlugin, interactionPlugin ],
         initialView: 'dayGridMonth',
         dateClick: this.handleDateClick,
         events: [
@@ -99,6 +101,7 @@ You can modify your calendar's options after initialization by reassigning them 
 <script>
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 
 export default {
   components: {
@@ -107,7 +110,7 @@ export default {
   data() {
     return {
       calendarOptions: {
-        plugins: [ dayGridPlugin ],
+        plugins: [ dayGridPlugin, interactionPlugin ],
         initialView: 'dayGridMonth',
         weekends: false // initial value
       }
