@@ -37,7 +37,7 @@ let calendar = new Calendar(calendarEl, {
 
 The rrule plugin can **ONLY** be used with an [ES6 build system](initialize-es6). It **CANNOT** be used with [script tags and browser globals](initialize-globals).
 
-The `rrule` property accepts whatever the rrule lib accepts for a `new RRule`. [See the docs](https://github.com/jakubroztocil/rrule). You can specify a string or an object.
+The `rrule` property accepts whatever the rrule lib accepts for a `new RRule`. [See the RRule docs](https://github.com/jakubroztocil/rrule). You can specify a string or an object. When specifying a string, you **can** use date and date-time formats in the [basic ISO8601 format](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates). With objects on the contrary, you **must** use the extended ISO8601 format (with hyphens).
 
 If you're specifying an object, you can write some of the properties in a way that's more convenient than what rrule requires:
 
