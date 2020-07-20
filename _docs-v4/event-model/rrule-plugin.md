@@ -37,7 +37,7 @@ let calendar = new Calendar(calendarEl, {
 
 If you are using `<script>` tags and browser globals, you must ensure the original non-plugin `rrule.js` dist file [from the rrule site](https://jakubroztocil.github.io/rrule/) is included on your page first.
 
-The `rrule` property accepts whatever the rrule lib accepts for a `new RRule`. [See the docs](https://github.com/jakubroztocil/rrule). You can specify a string or an object.
+The `rrule` property accepts whatever the rrule lib accepts for a `new RRule`. [See the docs](https://github.com/jakubroztocil/rrule). You can specify a string or an object. Note that in the string you CAN use date and date-time formats in the [basic ISO8601 format](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) as suggested in [RFC5545](https://tools.ietf.org/html/rfc5545#section-3.3.4). With objects on the contrary, you MUST use the extended ISO8601 format (with hyphens) as Fullcalendar may drop objects that use the basic format.
 
 If you're specifying an object, you can write some of the properties in a way that's more convenient than what rrule requires:
 
