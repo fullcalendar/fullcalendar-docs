@@ -8,4 +8,4 @@ demos:
   - eventClick-demo
 ---
 
-Handers to know when an event has been clicked or hovered over.
+Handlers to know when an event has been clicked or hovered over.
