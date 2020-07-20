@@ -36,7 +36,7 @@ Setting the headerToolbar options to `false` will display no header toolbar. An 
 `today`
 :   button for moving the calendar to the current month/week/day
 
-*a view name*
+*a view name*, like `dayGridMonth`
 :   button that will switch the calendar to any of the available views
 
 
