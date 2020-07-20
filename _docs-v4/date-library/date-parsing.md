@@ -15,6 +15,8 @@ FullCalendar's API accepts date information in many places, such as when you set
 - `2018-06-01T12:30:00` &mdash; no UTC offset specified. parsing will depend on the [timeZone](timeZone)
 - `2018-06-01` &mdash; no UTC offset specified. parsing will depend on the [timeZone](timeZone)
 
+Note that Fullcalendar is only accepting ISO8601 strings in the [extended format](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates). Therefore, 1981-04-05 will be accepted and 19810405 will not be accepted. An exeption to this behaviour is when the [RRule Plugin](rrule-plugin) is used AND the rrule is supplied as a string.
+
 Example:
 
 ```js
