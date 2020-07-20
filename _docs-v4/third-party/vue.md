@@ -17,7 +17,7 @@ This guide does not go into depth about initializing a Vue project. Please consu
 The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter, the core package, and any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/vue @fullcalendar/core @fullcalendar/daygrid
+npm install --save @fullcalendar/vue @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.vue]):
@@ -27,6 +27,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction';
 
 export default {
   components: {
@@ -34,7 +35,7 @@ export default {
   },
   data() {
     return {
-      calendarPlugins: [ dayGridPlugin ]
+      calendarPlugins: [ dayGridPlugin, interactionPlugin ]
     }
   }
 }
@@ -84,7 +85,7 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options][
 
 ## Emitted Events
 
-A listener can be passed into a Vue component that will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date. The way you pass these into the `<FullCalendar>` component is different than props:
+A listener can be passed into a Vue component that will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date. In order for this callback to fire, you must load the interaction plugin. If you are using an ES6 build system. The way you pass these into the `<FullCalendar>` component is different than props:
 
 ```html
 <FullCalendar @dateClick="handleDateClick" :plugins="calendarPlugins" />
