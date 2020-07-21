@@ -53,6 +53,10 @@ let calendar = new Calendar(calendarEl, {
 });
 ```
 
+<a class='more-link' href='custom-view-with-js-demo'>
+  View a runnable demo
+</a>
+
 
 ## Component
 
