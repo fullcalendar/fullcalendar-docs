@@ -139,7 +139,7 @@ This guide outlines the changes between v4 and v5.
 - [Virtual DOM](#virtual-dom)
 - [Real React](#real-react)
 - [CSS and DOM Structure](#css-and-dom-structure)
-- [Duration event property](#duration-event-property)
+- [Duration event property](#event-duration-property)
 - [CSS Importing](#css-importing)
 - [Pre-built Bundles](#pre-built-bundles)
 - [Better Printer-Friendly Rendering](#better-printer-friendly-rendering)
@@ -209,29 +209,39 @@ As a result, if you've written custom styling, <strong>it will most likely need 
 ## Event duration property
 
 In v4, the events using duration property were added to event.extendedProps and was accesible from there, however in v5 this property is now an Event class property and will not be accesible from event.extendedProps anymore, a workaround would be to provide an alternative name like in [this example](https://codepen.io/LiamBull/pen/mdVpwme)
-```js
- var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
-    initialDate: '2020-06-07',
-    headerToolbar: {
-      left: 'prevYear,prev,next,nextYear today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay'
-    },
-    events: [
-      {
-        id: 'a',
-        title: 'my event',
-        start: '2020-07-25',
-        myDuration: '15'
+```html
+<link ref='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar')
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      initialDate: '2020-07-26',
+      headerToolbar: {
+        left: 'prevYear,prev,next,nextYear today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-    ],
-    validRange: {
-      start: new Date()
-    },
-    eventContent: (info) => {
-      console.log(info.event.extendedProps.myDuration);
-    }
+      events: [
+        {
+          id: 'a',
+          title: 'my event',
+          start: '2020-07-25',
+          myDuration: '15'
+        },
+      ],
+      validRange: {
+        start: new Date()
+      },
+      eventContent: (info) => {
+        console.log(info.event.extendedProps.myDuration);
+      }
+    })
+    calendar.render()
+  })
+</script>
+});
 ```
 
 ## CSS Importing
