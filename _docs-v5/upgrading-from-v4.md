@@ -101,7 +101,6 @@ This guide outlines the changes between v4 and v5.
 - Many options have been renamed, including the highly-used `defaultView` and `defaultDate`
 - Options related to custom content injection have been refactored. If an option name had the word `text`, `html`, or `render` in it, it has probably been replaced by something else.
 - the Vue and Angular connectors have different APIs for accepting options
-- `event.duration` is now an official Event class property, it can't be accessed in `event.extendedProps` anymore, use an alternative name instead ([see below](#event-duration-property))
 
 **Major new features:**
 
@@ -139,7 +138,6 @@ This guide outlines the changes between v4 and v5.
 - [Virtual DOM](#virtual-dom)
 - [Real React](#real-react)
 - [CSS and DOM Structure](#css-and-dom-structure)
-- [Duration event property](#event-duration-property)
 - [CSS Importing](#css-importing)
 - [Pre-built Bundles](#pre-built-bundles)
 - [Better Printer-Friendly Rendering](#better-printer-friendly-rendering)
@@ -155,6 +153,7 @@ This guide outlines the changes between v4 and v5.
 - [List View Rendering](#list-view-rendering)
 - [Now Indicator Rendering](#now-indicator-rendering)
 - [Calendar Sizing](#calendar-sizing)
+- [Event Data](#event-data)
 - [Event Sources](#event-sources)
 - [Locales](#locales)
 - [Custom JS Views](#custom-js-views)
@@ -206,43 +205,6 @@ As a result, if you've written custom styling, <strong>it will most likely need 
 
 <strong>CSS variables</strong> are a new feature. They allow you to manipulate fullcalendar's CSS in a more surgical way than simply overriding existing rules. Some build-system magic is required for this. Read more on <a href='css-customization#css-variables'>how to use CSS variables &raquo;</a>
 
-## Event duration property
-
-In v4, the events using duration property were added to event.extendedProps and was accesible from there, however in v5 this property is now an Event class property and will not be accesible from event.extendedProps anymore, a workaround would be to provide an alternative name like in [this example](https://codepen.io/LiamBull/pen/mdVpwme)
-```html
-<link ref='fullcalendar/main.css' rel='stylesheet' />
-<script src='fullcalendar/main.js'></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar')
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      initialDate: '2020-07-26',
-      headerToolbar: {
-        left: 'prevYear,prev,next,nextYear today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
-      },
-      events: [
-        {
-          id: 'a',
-          title: 'my event',
-          start: '2020-07-25',
-          myDuration: '15'
-        },
-      ],
-      validRange: {
-        start: new Date()
-      },
-      eventContent: (info) => {
-        console.log(info.event.extendedProps.myDuration);
-      }
-    })
-    calendar.render()
-  })
-</script>
-});
-```
 
 ## CSS Importing
 
@@ -1568,6 +1530,40 @@ In list view, the "No events to display" message.
   </tr>
 </table>
 
+## Event Data
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>duration</li>
+      </ul>
+    </td>
+<td markdown='1'>
+
+In v4, the events using duration property were added to event.extendedProps and was accesible from there, however in v5 this property is now an Event class property and will not be accesible from event.extendedProps anymore, a workaround would be to provide an alternative name like in [this example](https://codepen.io/LiamBull/pen/mdVpwme)
+
+```js
+let calendar = new Calendar({
+  //...
+  events: [
+    {
+      id: 'a',
+      title: 'my event',
+      start: '2020-07-25',
+      myDuration: '15'
+    }
+  ],
+  eventContent: function(info) {
+    console.log(info.event.extendedProps.myDuration);
+  }
+  //...
+})
+```
+
+</td>
+  </tr>
+</table>
 
 ## Event Sources
 

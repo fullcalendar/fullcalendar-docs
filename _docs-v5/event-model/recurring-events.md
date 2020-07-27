@@ -62,6 +62,13 @@ String. An identifier for events to be handled together as a group for certain a
 </td>
 </tr>
 
+  <tr>
+  <th><div style='white-space:nowrap'>rrule</div> duration </th>
+  <td markdown='1'>
+  these are [RRule recurring](rrule-plugin) event properties
+  </td>
+  </tr>
+
 </table>
 
 If any of these properties are specified, the event is assumed to be recurring and there is no need to specify the normal `start` and `end` properties.
