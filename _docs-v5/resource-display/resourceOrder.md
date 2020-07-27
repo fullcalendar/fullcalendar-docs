@@ -42,4 +42,4 @@ var calendar = new Calendar(calendarEl, {
 
 In the above example, the resources would appear as `Resource C`, `Resource B`, `Resource A`.
 
-If no `resourceOrder` is given (the default), resources will appear in the order they were specified.
+If no `resourceOrder` is given (the default), resources will be ordered by their `id`, then by `title`.
