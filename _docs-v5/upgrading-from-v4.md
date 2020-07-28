@@ -1541,7 +1541,7 @@ In list view, the "No events to display" message.
     </td>
 <td markdown='1'>
 
-In v4, the events using duration property were added to event.extendedProps and was accesible from there, however in v5 this property is now an Event class property and will not be accesible from event.extendedProps anymore, a workaround would be to provide an alternative name like in [this example](https://codepen.io/LiamBull/pen/mdVpwme)
+In v4, the events using duration property were added to event.extendedProps and was accesible from there, however in v5 this property is now an Event class property and will not be accesible from event.extendedProps anymore, a workaround would be to provide an alternative name like in the example below:
 
 ```js
 let calendar = new Calendar({
