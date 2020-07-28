@@ -215,7 +215,8 @@ Here are all the available properties, **all of which are optional**:
 
   <tr>
   <th>
-  <div style='white-space:nowrap'>rrule</div> duration </th>
+  <div style='white-space:nowrap'>rrule</div> duration
+  </th>
   <td markdown='1'>
   these are [RRule recurring](rrule-plugin) event properties
   </td>
@@ -223,12 +224,12 @@ Here are all the available properties, **all of which are optional**:
 
   <tr>
   <th>
-    <div style='white-space:nowrap'>daysOfWeek</div>
-    <div style='white-space:nowrap'>startTime</div>
-    <div style='white-space:nowrap'>endTime</div>
-    <div style='white-space:nowrap'>startRecur</div>
-    <div style='white-space:nowrap'>endRecur</div>
-    <div style='white-space:nowrap'>groupId</div>    
+  <div style='white-space:nowrap'>daysOfWeek</div>
+  <div style='white-space:nowrap'>startTime</div>
+  <div style='white-space:nowrap'>endTime</div>
+  <div style='white-space:nowrap'>startRecur</div>
+  <div style='white-space:nowrap'>endRecur</div>
+  <div style='white-space:nowrap'>groupId</div>
   </th>
   <td markdown='1'>
   these are [Recurring](recurring-events) event properties
