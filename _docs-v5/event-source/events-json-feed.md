@@ -208,7 +208,7 @@ and
   [
     {
       "title": "Event 1",
-      "start": 1567674000000, // please specify dates in unix format in milliseconds, not seconds
+      "start": 1567674000000, // please specify dates in milliseconds, not seconds
       "end": 1567706400000
     },
     {
