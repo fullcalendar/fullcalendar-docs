@@ -214,6 +214,29 @@ Here are all the available properties, **all of which are optional**:
   </tr>
 
   <tr>
+  <th>
+  <div style='white-space:nowrap'>rrule</div> duration
+  </th>
+  <td markdown='1'>
+  these are [RRule recurring](rrule-plugin) event properties
+  </td>
+  </tr>
+
+  <tr>
+  <th>
+  <div style='white-space:nowrap'>daysOfWeek</div>
+  <div style='white-space:nowrap'>startTime</div>
+  <div style='white-space:nowrap'>endTime</div>
+  <div style='white-space:nowrap'>startRecur</div>
+  <div style='white-space:nowrap'>endRecur</div>
+  <div style='white-space:nowrap'>groupId</div>
+  </th>
+  <td markdown='1'>
+  these are [Recurring](recurring-events) event properties
+  </td>
+  </tr>
+
+  <tr>
   <th>extendedProps</th>
   <td markdown='1'>
   Object. A plain object with any miscellaneous properties. It will be directly transferred to the `extendedProps` hash in each [Event Object](event-object). Often, these props are useful in [event render hooks](event-render-hooks).

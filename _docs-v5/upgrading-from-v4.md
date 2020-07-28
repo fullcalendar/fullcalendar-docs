@@ -153,6 +153,7 @@ This guide outlines the changes between v4 and v5.
 - [List View Rendering](#list-view-rendering)
 - [Now Indicator Rendering](#now-indicator-rendering)
 - [Calendar Sizing](#calendar-sizing)
+- [Event Data](#event-data)
 - [Event Sources](#event-sources)
 - [Locales](#locales)
 - [Custom JS Views](#custom-js-views)
@@ -1529,6 +1530,40 @@ In list view, the "No events to display" message.
   </tr>
 </table>
 
+## Event Data
+
+<table>
+  <tr>
+    <td>
+      <ul class='diff-list'>
+        <li class='diff-removed'>duration</li>
+      </ul>
+    </td>
+<td markdown='1'>
+
+In v4, the events using duration property were added to event.extendedProps and was accesible from there, however in v5 this property is now an Event class property and will not be accesible from event.extendedProps anymore, a workaround would be to provide an alternative name like in the example below:
+
+```js
+let calendar = new Calendar({
+  //...
+  events: [
+    {
+      id: 'a',
+      title: 'my event',
+      start: '2020-07-25',
+      myDuration: '15'
+    }
+  ],
+  eventContent: function(info) {
+    console.log(info.event.extendedProps.myDuration);
+  }
+  //...
+})
+```
+
+</td>
+  </tr>
+</table>
 
 ## Event Sources
 
