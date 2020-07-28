@@ -5,7 +5,7 @@ title: resourceOrder
 Determines the ordering of the resource list.
 
 <div class='spec' markdown='1'>
-String
+String, **default:** `'id,title'`
 </div>
 
 Can be a single [Resource](resource-parsing) property name. The resources will be ordered ascendingly by the value of this property.
