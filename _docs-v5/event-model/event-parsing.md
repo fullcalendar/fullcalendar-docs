@@ -215,10 +215,11 @@ Here are all the available properties, **all of which are optional**:
 
   <tr>
   <th>
-  <div style='white-space:nowrap'>rrule</div> duration
+  <div style='white-space:nowrap'>rrule</div>
+  <div style='white-space:nowrap'>duration</div>
   </th>
   <td markdown='1'>
-  these are [RRule recurring](rrule-plugin) event properties
+  These properties are for [RRule recurrence](rrule-plugin).
   </td>
   </tr>
 
@@ -232,7 +233,7 @@ Here are all the available properties, **all of which are optional**:
   <div style='white-space:nowrap'>groupId</div>
   </th>
   <td markdown='1'>
-  these are [Recurring](recurring-events) event properties
+  These properties are for ["simple" recurrence](recurring-events).
   </td>
   </tr>
 
