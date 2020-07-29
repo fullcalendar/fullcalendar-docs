@@ -28,3 +28,5 @@ var calendar = new Calendar(calendarEl, {
   now: <?php echo json_encode($datetime_string) ?>
 });
 ```
+
+Once `now` date object was set it continually moves forward in time after being set even when navigating between the views, it can't be set dynamically after initialization.
