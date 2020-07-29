@@ -14,6 +14,18 @@ Determines the text that will be displayed in the headerToolbar's title.
 ```
 </div>
 
-As noted above, each view has a specific default. Get fine-tuned control with [View-Specific Options](view-specific-options). A single string alone will set the value for all views.
+As noted above, each view has a specific default. Get fine-tuned control with [View-Specific Options](view-specific-options).
 
 For views that display date-range text, to control the text between the two dates, customize [titleRangeSeparator](titleRangeSeparator).
+
+Here's an usage example of the property below:
+
+```js
+let calendar = new Calendar({
+    //...
+    titleFormat: { year: 'numeric', month: 'long', day: '2-digit'},
+    events: [
+    //...
+    ]
+});
+```
