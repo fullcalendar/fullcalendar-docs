@@ -252,3 +252,32 @@ React goes really well with [TypeScript]! To show you how to integrate the two, 
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/
 [typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript
+
+
+## FontAwesome JS
+
+If you're using [FontAwesome JS](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.js) instead of [FontAwesome CSS](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.css) you might get into issues using its SVG icons due the way how Preact (used in [@fullcalendar/core](https://github.com/fullcalendar/fullcalendar/tree/master/packages/core)) diffs vdom nodes, in order to avoid that use `autoReplaceSvg: nest` FontAwesome config option:
+
+<ul>
+<li markdown='1'>
+if you're using the [prebuilt bundle](getting-started#pre-built-bundles):
+
+```html
+<script>
+  window.FontAwesomeConfig = { autoReplaceSvg: 'nest' }
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.js'></script>
+```
+
+</li>
+<li markdown='1'>
+if you're using an [ES6 build system](initialize-es6):
+
+```js
+import { library, dom, config } from '@fortawesome/fontawesome-svg-core';
+config.autoReplaceSvg = 'nest';
+/* rest of the fontawesome config follows with the icons imports and dom.watch() */
+```
+
+</li>
+</ul>
