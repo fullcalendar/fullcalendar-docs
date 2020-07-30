@@ -34,3 +34,11 @@ A View object contains information about a calendar view, such as title and date
 :   The master Calendar Object this view belongs to.
 
 These properties of the View object can only be read. A [custom view with settings](custom-view-with-settings) is the way to set any of them.
+
+
+## View Types
+
+The available view types currently available are:
+- `list`, which combined with these options `Day`, `Week`, `Month`, `Year` results in `listDay`, `listWeek`, `listMonth`, `listYear` option values.
+- `timeGrid`, which combined with these options `Day`, `Week` results in `timeGridDay`. `timeGridWeek` option values.
+- `dayGrid`, which combined with these options `Week`, `Month` results in `dayGridWeek`, `dayGridMonth` option values.
