@@ -15,7 +15,8 @@ FullCalendar offers the following packages:
     <th>Names for <a href='initialize-es6'>ES6</a> and <a href='initialize-globals#plugins'>Global</a></th>
     <th>Functionality / Views</th>
     <th>Yarn</th>
-    <th colspan='2' style='text-align:center'>UNPKG</th>
+    <th colspan='2' style='text-align:center'>jsDelivr</th>
+      <!-- TODO: don't hardcode latest v4 version URLs -->
   </tr>
 </thead>
 <tbody>
@@ -27,8 +28,8 @@ FullCalendar offers the following packages:
       Offers the <code>Calendar</code> class among other things
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/core'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/core/main.min.js'>JS</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/core/main.min.css'>CSS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
@@ -44,7 +45,7 @@ FullCalendar offers the following packages:
       <a href='eventMouseEnter'>eventMouseEnter</a>/<a href='eventMouseLeave'>eventMouseLeave</a>.
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/interaction'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/interaction/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -60,8 +61,8 @@ FullCalendar offers the following packages:
       <code>dayGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/daygrid'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/daygrid/main.min.js'>JS</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/daygrid/main.min.css'>CSS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.4.2/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
@@ -75,8 +76,8 @@ FullCalendar offers the following packages:
       <code>timeGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/timegrid'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/timegrid/main.min.js'>JS</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/timegrid/main.min.css'>CSS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.4.2/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
@@ -92,8 +93,8 @@ FullCalendar offers the following packages:
       <code>list</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/list'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/list/main.min.js'>JS</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/list/main.min.css'>CSS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.4.2/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
@@ -109,8 +110,8 @@ FullCalendar offers the following packages:
       <code>timeline</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/timeline'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/timeline/main.min.js'>JS</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/timeline/main.min.css'>CSS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/timeline@4.4.2/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/timeline@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
@@ -120,7 +121,7 @@ FullCalendar offers the following packages:
       Offers base support for resources. Required for all resource-related plugins.
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-common'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/resource-common/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/resource-common@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -136,7 +137,7 @@ FullCalendar offers the following packages:
       <code>resourceDayGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-daygrid'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/resource-daygrid/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/resource-daygrid@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -151,7 +152,7 @@ FullCalendar offers the following packages:
       <code>resourceTimeGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-timegrid'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/resource-timegrid/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/resource-timegrid@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -168,8 +169,8 @@ FullCalendar offers the following packages:
       <code>resourceTimeline</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-timeline'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/resource-timeline/main.min.js'>JS</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/resource-timeline/main.min.css'>CSS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/resource-timeline@4.4.2/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/resource-timeline@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
@@ -180,7 +181,7 @@ FullCalendar offers the following packages:
       Offers <a href='bootstrap-theme'>Bootstrap theming</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/bootstrap'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/bootstrap/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -192,7 +193,7 @@ FullCalendar offers the following packages:
       For loading events from a public <a href='google-calendar'>Google Calendar feed</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/google-calendar'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/google-calendar/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -204,7 +205,7 @@ FullCalendar offers the following packages:
       For <a href='rrule-plugin'>leveraging the RRule library</a> for event recurrence
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/rrule'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/rrule/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -216,7 +217,7 @@ FullCalendar offers the following packages:
       Offers a named-timezone implementation, a formatting string implementation, and utilities for converting to Luxon DateTimes. <a href='luxon-plugin'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/luxon'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/luxon/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -228,7 +229,7 @@ FullCalendar offers the following packages:
       Offers a formatting string implementation and utilities fo convert to Moment objects. <a href='moment-plugins'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/moment/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/moment@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -240,7 +241,7 @@ FullCalendar offers the following packages:
       Offers a named timezone implementation. <a href='moment-plugins#moment-timezone'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment-timezone'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/moment-timezone/main.min.js'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/moment-timezone@4.4.2/main.min.js'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -251,7 +252,7 @@ FullCalendar offers the following packages:
       Offers a React component. <a href='react'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/react'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/react'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/react'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -262,7 +263,7 @@ FullCalendar offers the following packages:
       Offers a Vue component. <a href='vue'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/vue'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/vue'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/vue'>JS</a></td>
     <td>n/a</td>
   </tr>
   <tr>
@@ -273,7 +274,7 @@ FullCalendar offers the following packages:
       Offers an Angular component. <a href='angular'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/angular'>Yarn</a></td>
-    <td><a href='https://unpkg.com/@fullcalendar/angular'>JS</a></td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/angular'>JS</a></td>
     <td>n/a</td>
   </tr>
 </tbody>

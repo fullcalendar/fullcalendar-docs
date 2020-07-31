@@ -97,7 +97,7 @@ def query_package_release(arg_str)
   has_css = File.exist?("#{dir}/main.css")
   base_url =
     if ENV['JEKYLL_ENV'] === 'production'
-    then "https://unpkg.com/#{package_name}@#{version}"
+    then "https://cdn.jsdelivr.net/npm/#{package_name}@#{version}"
     else "/#{dir}" # TODO: use site.baseurl
     end
 
