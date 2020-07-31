@@ -74,15 +74,18 @@
     </div>
 
     <div class='topbar__notice'>
-      <a class='topbar__notice-link' href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}'>
-        <span style='color:#FAC863'>June 21</span> &mdash;
-        V5 Officially Released!
+      <a class='topbar__notice-link' href='https://github.com/fullcalendar/fullcalendar/releases/tag/v{{ site.data.releases[0].version }}' target='_blank'>
+        v{{ site.data.releases[0].version }}
       </a>
+      {% comment %}
+        <a class='topbar__notice-link' href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}'>
+          <span style='color:#FAC863'></span> &mdash;
+        </a>
+      {% endcomment %}
     </div>
 
     <div class='topbar__github'>
       <a class='topbar__github-link' href='{{ site.fullcalendar_repo }}' target='_blank'>
-        <!-- <div class='topbar__github-text'>view on GitHub</div> -->
         <div class='topbar__github-graphic'></div>
       </a>
     </div>
