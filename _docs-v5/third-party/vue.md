@@ -217,9 +217,15 @@ The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typesc
 [Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-vuex' class='more-link'>View an example project</a>
 
 
+## Nuxt
+
+If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/nuxt'>See the example project</a>
+
+
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
 [example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue
 [DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
+[Nuxt]: https://nuxtjs.org/

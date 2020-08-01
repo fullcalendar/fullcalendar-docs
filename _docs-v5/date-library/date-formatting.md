@@ -152,7 +152,7 @@ Date formatting configs are great for internationalization, but if you want **mo
 
 Date formatting strings are **only** available if you include a plugin that provides the functionality. The two available connector plugins are:
 
-- [Moment Plugin](moment-plugins) (for the [Moment](https://momentjs.com/) library)
+- [Moment Plugin](moment-plugin) (for the [Moment](https://momentjs.com/) library)
 - [Luxon Plugin](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
 
 Example using the Moment plugin:

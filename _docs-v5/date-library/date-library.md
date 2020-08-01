@@ -15,7 +15,8 @@ children:
       - Calendar-formatRange
   - title: Plugins
     children:
-      - moment-plugins
+      - moment-plugin
+      - moment-timezone-plugin
       - luxon-plugin
 related:
   - timeZone

@@ -242,6 +242,11 @@ Please check out the following example projects that demonstrate usage with thir
 React goes really well with [TypeScript]! To show you how to integrate the two, we've prepared [another sample project &raquo;][typescript project]
 
 
+## Next.js
+
+If you plan to use the [Next.js] React framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next'>See the example project</a>
+
+
 [React]: https://reactjs.org/
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
@@ -252,3 +257,4 @@ React goes really well with [TypeScript]! To show you how to integrate the two, 
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/
 [typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript
+[Next.js]: https://nextjs.org/

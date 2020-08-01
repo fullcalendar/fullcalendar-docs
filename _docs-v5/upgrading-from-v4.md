@@ -159,6 +159,7 @@ This guide outlines the changes between v4 and v5.
 - [Custom JS Views](#custom-js-views)
 - [Interaction Plugin](#interaction-plugin)
 - [Moment Plugin](#moment-plugin)
+- [Moment Timezone Plugin](#moment-timezone-plugin)
 - [Luxon Plugin](#luxon-plugin)
 - [Other Misc Changes](#other-misc-changes)
 - [React Connector](#react-connector)
@@ -1668,9 +1669,7 @@ new FullCalendar.Draggable(settings) // the NEW way
 
 ## Moment Plugin
 
-The `@fullcalendar/moment` and `@fullcalendar/moment-timezone` packages can no longer be used with [script tags and browser globals](initialize-globals). They can **ONLY** be used used with an [ES6 build system](initialize-es6).
-
-Also, the `@fullcalendar/moment` package's **ES6 exports** have changed:
+The `@fullcalendar/moment` package's **ES6 exports** have changed:
 
 ```js
 // OLD
@@ -1680,9 +1679,13 @@ import { toDuration } from '@fullcalendar/moment'
 import { toMomentDuration } from '@fullcalendar/moment'
 ```
 
-Also, when used with Webpack, both plugins will now **import quite a bit of data that most people will not need**. The moment plugin imports all locale data. The moment-timezone plugin imports all zone data. In v4, this was not the case. Both plugins internally imported specific data-less files within the moment/moment-timezone dist directories. Now, in v5, both plugins import the standard `'moment'` and `'moment-timezone'`, so they now import lots of extra data by default.
+Also, when used with Webpack, the `@fullcalendar/moment` package will now import **ALL locale data**, which most people will not need. This was not the case in v4. To avoid this, install a Webpack plugin specifically for this purpose. [More info](moment-plugin#usage-with-webpack).
 
-If you want to avoid this, use the `moment-locales-webpack-plugin` and `moment-timezone-data-webpack-plugin` packages, which exist precisely for this purpose. <a href='moment-plugins#usage-with-webpack' class='more-link'>More info</a>
+
+## Moment Timezone Plugin
+
+
+When used with Webpack, the `@fullcalendar/moment-timezone` package will now import **ALL timezone data**, which most people will not need. This was not the case in v4. To avoid this, install a Webpack plugin specifically for this purpose. [More info](moment-timezone-plugin#usage-with-webpack).
 
 
 ## Luxon Plugin

@@ -201,7 +201,7 @@ FullCalendar offers the following packages:
       <strong>@fullcalendar/moment</strong>
     </td>
     <td>
-      Offers a formatting string implementation and utilities fo convert to Moment objects. <a href='moment-plugins'>More info</a>
+      Offers a formatting string implementation and utilities fo convert to Moment objects. <a href='moment-plugin'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment'>Yarn</a></td>
   </tr>
@@ -210,7 +210,7 @@ FullCalendar offers the following packages:
       <strong>@fullcalendar/moment-timezone</strong>
     </td>
     <td>
-      Offers a named timezone implementation. <a href='moment-plugins#moment-timezone'>More info</a>
+      Offers a named timezone implementation. <a href='moment-timezone-plugin'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment-timezone'>Yarn</a></td>
   </tr>
