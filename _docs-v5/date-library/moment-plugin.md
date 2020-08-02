@@ -47,7 +47,7 @@ You can also configure the moment plugin with [script tags](initialize-globals).
 
 ```html
 <!-- moment lib -->
-<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/dist/moment.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js'></script>
 
 <!-- fullcalendar bundle -->
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.min.js'></script>

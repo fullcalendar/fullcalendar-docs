@@ -41,3 +41,4 @@ When the above hooks are specified as a function in the form `function(arg)`, th
 - `isFuture`
 - `isToday`
 - `el` - the `<td>` element. only available in `slotLabelDidMount`, `slotLabelWillUnmount`, `slotLaneDidMount`, and `slotLaneWillUnmount`
+- `level` - only for slot labels, and only for timeline view when [slotLabelFormat](slotLabelFormat) is specified as an array. Indicates which tier of the header is being rendered. `0` is the topmost.
