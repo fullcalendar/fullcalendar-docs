@@ -160,10 +160,10 @@ class CustomView extends React.Component {
 
     return (
       <Fragment>
-        <div class='view-title'>
+        <div className='view-title'>
           {props.dateProfile.currentRange.start.toUTCString()}
         </div>
-        <div class='view-events'>
+        <div className='view-events'>
           {segs.length} events
         </div>
       </Fragment>
