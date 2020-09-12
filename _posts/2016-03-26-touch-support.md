@@ -3,7 +3,7 @@ title: Touch Support in Beta Releases
 date: 2016-03-26T08:47:19+00:00
 ---
 
-Touch device support has been added to FullCalendar Core and the [Scheduler]({{ site.baseurl }}/purchase), represented by the long-standing [issue 994](https://github.com/fullcalendar/fullcalendar/issues/994):
+Touch device support has been added to FullCalendar Core and the [Scheduler]({{ site.baseurl }}/premium), represented by the long-standing [issue 994](https://github.com/fullcalendar/fullcalendar/issues/994):
 
 * smooth scrolling
 * press-and-hold dragging and resizing of events

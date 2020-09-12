@@ -3,13 +3,13 @@ title: Scheduler Released!
 date: 2015-08-23T01:41:02+00:00
 ---
 
-The Scheduler add-on has finally been released! To see demos, docs, and licensing information, go to [fullcalendar.io/scheduler]({{ site.baseurl }}/purchase)
+The Scheduler add-on has finally been released! To see demos, docs, and licensing information, go to [fullcalendar.io/scheduler]({{ site.baseurl }}/premium)
 
 A quick refresher: Scheduler is a premium add-on for FullCalendar that provides features related to _resources_ (things like team members or conference rooms). It comes with a new calendar view called _Timeline_ which portrays time left-to-right and resources top-to-bottom. This was a very [highly requested](https://code.google.com/p/fullcalendar/issues/detail?id=150) feature and it feels good to finally get it done. For more background information, view the [feature announcement post](http://blog.arshaw.com/1/post/2015/02/timeline-and-other-news.html).
 
 ### Pricing and Licensing
 
-There are a number of license options that should accommodate a range of use-cases. For websites that are _not_ considered webapps or SaaS products, you can purchase a Website license. For use in more advance scenarios, Developer licenses are required. All licenses come with a year of email support and upgrades. For more information, [visit the pricing page]({{ site.baseurl }}/purchase).
+There are a number of license options that should accommodate a range of use-cases. For websites that are _not_ considered webapps or SaaS products, you can purchase a Website license. For use in more advance scenarios, Developer licenses are required. All licenses come with a year of email support and upgrades. For more information, [visit the pricing page]({{ site.baseurl }}/premium).
 
 Registered non-profit organizations are able to use Scheduler for free. For more information, visit the [license page]({{ site.baseurl }}/license/premium).
 

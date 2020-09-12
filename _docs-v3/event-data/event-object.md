@@ -239,7 +239,7 @@ the calendar-wide <a href='eventTextColor'>eventTextColor</a> option.
 resourceId
 </th>
 <td>
-String. The <code>id</code> of a <a href='resource-object'>Resource</a> that this event is associated with. (<strong><a href='/purchase'>requires premium</a></strong>)
+String. The <code>id</code> of a <a href='resource-object'>Resource</a> that this event is associated with. (<strong><a href='/premium'>requires premium</a></strong>)
 </td>
 </tr>
 <!-- ------------------- -->
@@ -248,7 +248,7 @@ String. The <code>id</code> of a <a href='resource-object'>Resource</a> that thi
 resourceIds
 </th>
 <td>
-Array of strings. When an event is associated with multiple resources, each element of this array is the <code>id</code> of a <a href='resource-object'>Resource</a>. (<strong><a href='/purchase'>requires premium</a></strong>)
+Array of strings. When an event is associated with multiple resources, each element of this array is the <code>id</code> of a <a href='resource-object'>Resource</a>. (<strong><a href='/premium'>requires premium</a></strong>)
 </td>
 </tr>
 </table>

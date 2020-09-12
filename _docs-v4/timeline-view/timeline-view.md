@@ -32,7 +32,7 @@ demos:
   - timeline-resourceRender-demo
 ---
 
-The [Scheduler add-on]({{ site.baseurl }}/purchase) provides a new view called "timeline view" with a customizable horizontal time-axis and resources as rows.
+The [Scheduler add-on]({{ site.baseurl }}/premium) provides a new view called "timeline view" with a customizable horizontal time-axis and resources as rows.
 
 The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 

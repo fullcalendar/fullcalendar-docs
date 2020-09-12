@@ -11,7 +11,7 @@ The most notable features:
 * [validRange]({{ site.baseurl }}/docs/validRange) &#8211; restrict the user from interacting with certain dates
 * [showNonCurrentDates]({{ site.baseurl }}/docs/showNonCurrentDates) &#8211; enables/disables render of dates outside the current month
 
-And much more! These improvements are available in the [core views]({{ site.baseurl }}/docs) as well as Scheduler&#8217;s [timeline]({{ site.baseurl }}/purchase) and [vertical resource]({{ site.baseurl }}/js/fullcalendar-scheduler-1.6.0/demos/vertical-resource-view.html) views:
+And much more! These improvements are available in the [core views]({{ site.baseurl }}/docs) as well as Scheduler&#8217;s [timeline]({{ site.baseurl }}/premium) and [vertical resource]({{ site.baseurl }}/js/fullcalendar-scheduler-1.6.0/demos/vertical-resource-view.html) views:
 
 * [FullCalendar 3.3.0 full changelog »](https://github.com/fullcalendar/fullcalendar/releases/tag/v3.3.0)
 * [Scheduler 1.6.0 full changelog »](https://github.com/fullcalendar/fullcalendar-scheduler/releases/tag/v1.6.0)

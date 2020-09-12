@@ -3,7 +3,7 @@ title: Bootstrap Support and Future Developments
 date: 2017-08-31T17:07:14+00:00
 ---
 
-FullCalendar 3.5.0 and [Scheduler]({{ site.baseurl }}/purchase) 1.7.0 offers built-in <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3</a> theme support. Include a Bootstrap theme&#8217;s stylesheet on your page, set the [`themeSystem`]({{ site.baseurl }}/docs/themeSystem) options to `'bootstrap3'` and you&#8217;re off to the races. Big thanks to <a href="https://github.com/joankaradimov" target="_blank">@joankaradimov</a> for the bulk of the implementation.
+FullCalendar 3.5.0 and [Scheduler]({{ site.baseurl }}/premium) 1.7.0 offers built-in <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3</a> theme support. Include a Bootstrap theme&#8217;s stylesheet on your page, set the [`themeSystem`]({{ site.baseurl }}/docs/themeSystem) options to `'bootstrap3'` and you&#8217;re off to the races. Big thanks to <a href="https://github.com/joankaradimov" target="_blank">@joankaradimov</a> for the bulk of the implementation.
 
 Try out different themes with the <a href="{{ site.baseurl }}/js/fullcalendar-3.5.0/demos/themes.html" target="_blank">new theme browser »</a>
 
@@ -21,7 +21,7 @@ There are also a number of bugfixes in 3.5.0. <a href="https://github.com/fullca
 
 ## What the future brings
 
-Some of you may have noticed that in the past few months, there has been a lot of <a href="https://github.com/fullcalendar/fullcalendar/commits/master" target="_blank">activity on Github</a>, but sadly, features are not being rapidly pumped out. This is because FullCalendar (and [Scheduler]({{ site.baseurl }}/purchase)) are undergoing some long-overdue refactoring. The technical debt accumulated over the course of the project&#8217;s 8 year lifespan has slowed the development of new features. This next round of changes will be released as a backwards-compatible 3.6.0 and will provide a solid base for future features.
+Some of you may have noticed that in the past few months, there has been a lot of <a href="https://github.com/fullcalendar/fullcalendar/commits/master" target="_blank">activity on Github</a>, but sadly, features are not being rapidly pumped out. This is because FullCalendar (and [Scheduler]({{ site.baseurl }}/premium)) are undergoing some long-overdue refactoring. The technical debt accumulated over the course of the project&#8217;s 8 year lifespan has slowed the development of new features. This next round of changes will be released as a backwards-compatible 3.6.0 and will provide a solid base for future features.
 
 Examples of features that will be much easier to implement:
 

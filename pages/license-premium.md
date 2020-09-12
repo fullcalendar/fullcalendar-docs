@@ -10,7 +10,7 @@ FullCalendar Scheduler is tri-licensed, **meaning you must choose one of three l
 
 ## Option 1)&nbsp; Commercial License
 
-A commercial license, [which must be purchased]({{ site.baseurl }}/purchase), allows Scheduler's use in commercial projects. You may make modifications to the source code but you may not redistribute those modifications. This license is what most people choose.
+A commercial license, [which must be purchased]({{ site.baseurl }}/premium), allows Scheduler's use in commercial projects. You may make modifications to the source code but you may not redistribute those modifications. This license is what most people choose.
 
 [Read frequently asked questions (FAQs) &raquo;]({{ site.baseurl }}/license/premium-faq)
 

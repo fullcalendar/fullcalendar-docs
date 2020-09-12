@@ -173,7 +173,7 @@ Also, many of the views have been renamed:
 
 ## Scheduler
 
-The [premium Scheduler product]({{ site.baseurl }}/purchase) has been broken into a number of separate plugins. Also, the names and meanings of each view have changed.
+The [premium Scheduler product]({{ site.baseurl }}/premium) has been broken into a number of separate plugins. Also, the names and meanings of each view have changed.
 
 Previously, to display a resource view, you would specify the `resources` option, and if working with vertical resource view, you might specify `groupByResource` or `groupByDateAndResource` as well. In v4, things are much more explicit. To display a resource view, you must choose one of the following views:
 
