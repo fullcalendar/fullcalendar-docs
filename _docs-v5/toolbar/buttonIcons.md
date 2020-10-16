@@ -11,8 +11,8 @@ Object, *default:*
 {
   prev: 'chevron-left',
   next: 'chevron-right',
-  prevYear: 'chevron-double-left',
-  nextYear: 'chevron-double-right'
+  prevYear: 'chevrons-left',
+  nextYear: 'chevrons-right'
 }
 ```
 </div>
