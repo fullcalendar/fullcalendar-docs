@@ -9,10 +9,10 @@ Object, *default:*
 
 ```js
 {
-  prev: 'left-single-arrow',
-  next: 'right-single-arrow',
-  prevYear: 'left-double-arrow',
-  nextYear: 'right-double-arrow'
+  prev: 'chevron-left',
+  next: 'chevron-right',
+  prevYear: 'chevron-double-left',
+  nextYear: 'chevron-double-right'
 }
 ```
 </div>
