@@ -210,7 +210,7 @@ export default class DemoApp extends React.Component {
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's](premium) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```jsx
 import React from 'react'

@@ -251,7 +251,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 export class AppModule { }
 ```
 
-Also, make sure to include your `schedulerLicenseKey` in the options object:
+Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey) in the options object:
 
 ```js
 import { Component } from '@angular/core';
