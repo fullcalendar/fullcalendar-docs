@@ -8,7 +8,7 @@ Determines whether the user is allowed to select periods of time that are occupi
 boolean / function. *default*: `true`
 </div>
 
-When the [selectable](selectable) option is activated, and `false` is given, the user will not be allowed to select periods of time that intersect with events on the calendar. If `true` is given (the default), the user will be able to freely select any period of time.
+When the [selectOverlap](selectOverlap) option is activated, and `false` is given, the user will not be allowed to select periods of time that intersect with events on the calendar. If `true` is given (the default), the user will be able to freely select any period of time.
 
 If a function is given, the function will be called once for every time the user's selection intersects with an event. If the function returns `true`, the selection will be allowed. If `false`, the selection will not be allowed. Here is an example of allowing selections over [background events](background-events) but not allowing selections over any other types of events:
 
