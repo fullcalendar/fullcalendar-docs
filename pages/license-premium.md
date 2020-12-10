@@ -23,7 +23,7 @@ Scheduler is also released under a Creative Commons Attribution Non-Commercial N
 
 [Read the full license &raquo;](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-This is the license behind the [free trial version]({{ site.baseurl }}/docs/premium) of Scheduler. If you are a student, university, public school, or a [registered non-profit organization](https://en.wikipedia.org/wiki/Nonprofit_organization), you may use Scheduler under this license. You may simply download it from the [free trial page]({{ site.baseurl }}/docs/premium) and begin using it immediately. Governmental entities are not covered by this non-commercial license.
+This is the license behind the [free trial version]({{ site.baseurl }}/docs/premium) of Scheduler. If you are a [registered non-profit organization](https://en.wikipedia.org/wiki/Nonprofit_organization), you may use Scheduler under this license. Governmental entities and universities are not covered by this non-commercial license.
 
 
 ## Option 3)&nbsp; GPL License
