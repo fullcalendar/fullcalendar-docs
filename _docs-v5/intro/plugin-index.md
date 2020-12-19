@@ -183,7 +183,7 @@ FullCalendar offers the following packages:
       <strong>@fullcalendar/icalendar</strong>
     </td>
     <td>
-      For loading events from an <a href='icalendar-feed'>iCalendar feed</a>
+      For loading events from an <a href='icalendar'>iCalendar feed</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/icalendar'>Yarn</a></td>
   </tr>
