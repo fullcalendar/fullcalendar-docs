@@ -72,6 +72,18 @@ Optional. Useful for <a href='Calendar-getEventSourceById'>getEventSourceById</a
 </td>
 </tr>
 <tr>
+<th>url</th>
+<td markdown='1'>
+If a [JSON feed](events-json-feed) or [iCalendar feed](icalendar), the specified URL
+</td>
+</tr>
+<tr>
+<th>format</th>
+<td markdown='1'>
+Specify `'json'` for a [JSON feed](events-json-feed) (the default) or `'icalendar'` for an [iCalendar feed](icalendar)
+</td>
+</tr>
+<tr>
 <th>
 color
 </th>
@@ -228,7 +240,14 @@ The specified ID
 <tr>
 <th>url</th>
 <td markdown='1'>
-If a [JSON feed](events-json-feed), the specified URL
+If a [JSON feed](events-json-feed) or [iCalendar feed](icalendar), the specified URL
+</td>
+</tr>
+
+<tr>
+<th>format</th>
+<td markdown='1'>
+`'json'` for a [JSON feed](events-json-feed), `'icalendar'` for an [iCalendar feed](icalendar), or `null` for anything else.
 </td>
 </tr>
 

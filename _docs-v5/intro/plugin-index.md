@@ -180,6 +180,15 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
+      <strong>@fullcalendar/icalendar</strong>
+    </td>
+    <td>
+      For loading events from an <a href='icalendar-feed'>iCalendar feed</a>
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/icalendar'>Yarn</a></td>
+  </tr>
+  <tr>
+    <td>
       <strong>@fullcalendar/rrule</strong>
     </td>
     <td>
