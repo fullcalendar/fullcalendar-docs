@@ -80,7 +80,7 @@ If a [JSON feed](events-json-feed) or [iCalendar feed](icalendar), the specified
 <tr>
 <th>format</th>
 <td markdown='1'>
-Specify `'json'` for a [JSON feed](events-json-feed) (the default) or `'icalendar'` for an [iCalendar feed](icalendar)
+Specify `'json'` for a [JSON feed](events-json-feed) (the default) or `'ics'` for an [iCalendar feed](icalendar)
 </td>
 </tr>
 <tr>
@@ -247,7 +247,7 @@ If a [JSON feed](events-json-feed) or [iCalendar feed](icalendar), the specified
 <tr>
 <th>format</th>
 <td markdown='1'>
-`'json'` for a [JSON feed](events-json-feed), `'icalendar'` for an [iCalendar feed](icalendar), or `null` for anything else.
+`'json'` for a [JSON feed](events-json-feed), `'ics'` for an [iCalendar feed](icalendar), or `null` for anything else.
 </td>
 </tr>
 
