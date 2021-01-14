@@ -5,7 +5,7 @@ title: Content Injection
 Custom content can be injected into FullCalendar's DOM in various places. This content can be provided in the following formats. These examples use `eventContent` from the [event render hooks](event-render-hooks):
 
 
-**unescapted text**, provided as a string:
+**unescaped text**, provided as a string:
 
 ```js
 eventContent: 'some text'
