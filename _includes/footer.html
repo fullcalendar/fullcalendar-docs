@@ -2,32 +2,32 @@
 <div class='footer'>
   <div class='footer__container container'>
     <div class='footer__left'>
+      <form target='_blank' action='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=pp_url'>
+        <p>
+          Does your company use FullCalendar?
+        </p>
+        <input class='footer-text-input' type='text' name='entry.428396311' style='width:200px' placeholder="Enter your company's name" />
+        <button class='footer-button'>continue &raquo;</button>
+      </form>
       {% comment %}
-        <form target='_blank' action='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=pp_url'>
-          <p>
-            Does your company use FullCalendar?
-          </p>
-          <input class='footer-text-input' type='text' name='entry.428396311' placeholder="Enter your company's name" />
-          <button class='footer-button'>continue &gt;</button>
-        </form>
+        <ul>
+          <p>News:</p>
+          <li>
+            Blog &mdash;
+            <a href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}'>
+              V5 Officially Released!
+            </a>
+            (June 21)
+          </li>
+          <li>
+            Hiring
+            <img src='{{ site.baseurl }}/assets/images/bullhorn.svg' width='26' height='26' style='vertical-align:bottom' alt='bullhorn' />
+            &mdash;
+            <a href='{{ site.production_baseurl }}/opportunities'>Technical Documentation Writer</a>
+            (posted Jul 14)
+          </li>
+        </ul>
       {% endcomment %}
-      <ul>
-        <p>News:</p>
-        <li>
-          Blog &mdash;
-          <a href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}'>
-            V5 Officially Released!
-          </a>
-          (June 21)
-        </li>
-        <li>
-          Hiring
-          <img src='{{ site.baseurl }}/assets/images/bullhorn.svg' width='26' height='26' style='vertical-align:bottom' alt='bullhorn' />
-          &mdash;
-          <a href='{{ site.production_baseurl }}/opportunities'>Technical Documentation Writer</a>
-          (posted Jul 14)
-        </li>
-      </ul>
     </div>
     <div class='footer__right'>
       <p>
@@ -38,11 +38,13 @@
         <li><a href='{{ site.baseurl }}/blog'>Blog</a></li>
         <li><a href='{{ site.baseurl }}/donate'>Donate</a></li>
       </ul>
-      <p>
-        <a href='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=sf_link'>
-          Does your company use FullCalendar?
-        </a>
-      </p>
+      {% comment %}
+        <p>
+          <a href='https://docs.google.com/forms/d/e/1FAIpQLSf9mPTzy0tMSRN53y0CSnHLgS6uwlne2sK-tcwIbUZzs_LOUA/viewform?usp=sf_link'>
+            Does your company use FullCalendar?
+          </a>
+        </p>
+      {% endcomment %}
     </div>
   </div>
 </div>
