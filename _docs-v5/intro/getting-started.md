@@ -24,7 +24,7 @@ You might want to avoid a built system by [initializing fullcalendar with script
   - **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.releases[0].version }}.zip')">fullcalendar-{{ site.data.releases[0].version }}.zip</a>
   - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar)
   - **NPM:** `npm install fullcalendar`
-- `fullcalendar-scheduler` - [a premium product](premium)
+- `fullcalendar-scheduler` - [a premium product]({{ site.baseurl }}/pricing)
   - **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip</a>
   - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
   - **NPM:** `npm install fullcalendar-scheduler`

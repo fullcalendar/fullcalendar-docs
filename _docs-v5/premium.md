@@ -15,23 +15,6 @@ Scheduler is a premium product that has different licensing than the standard Fu
 <a href='{{ site.baseurl }}/license' class='more-link'>More about licensing</a>
 
 
-## Free Trial
-
-Scheduler can be downloaded and evaluated for an unlimited amount of time, free of charge.
-This evaluation version is licensed under a Creative Commons license that does not allow distribution
-of source code modifications nor use in commercial production websites or products.
-
-During the free trial, in order to hide the license warning, use the following key:
-
-```js
-var calendar = new Calendar(calendarEl, {
-  schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
-});
-```
-
-But first, you must install the necessary plugins...
-
-
 ## Package Managers
 
 FullCalendar Scheduler is available on [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/). You'll first need to install FullCalendar’s `core` package as well as the premium plugins you plan to use. For example, the following is how you install [Resource Timeline View](timeline-view):

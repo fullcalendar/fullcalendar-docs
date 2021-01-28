@@ -142,7 +142,7 @@ Here are all the available properties, **all of which are optional**:
   <th>resourceEditable</th>
   <td markdown='1'>
   Boolean (`true` or `false`). Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
-  Requires one of the [resource plugins](premium).
+  Requires one of the [resource plugins]({{ site.baseurl }}/pricing).
   </td>
   </tr>
 
@@ -151,7 +151,7 @@ Here are all the available properties, **all of which are optional**:
   <td markdown='1'>
   String. The string ID of a [Resource](resource-object).
   See [Associating Events with Resources](resources-and-events).
-  Requires one of the [resource plugins](premium).
+  Requires one of the [resource plugins]({{ site.baseurl }}/pricing).
   </td>
   </tr>
 
@@ -160,7 +160,7 @@ Here are all the available properties, **all of which are optional**:
   <td markdown='1'>
   Array. An array of string IDs of [Resources](resource-object).
   See [Associating Events with Resources](resources-and-events).
-  Requires one of the [resource plugins](premium).
+  Requires one of the [resource plugins]({{ site.baseurl }}/pricing).
   </td>
   </tr>
 

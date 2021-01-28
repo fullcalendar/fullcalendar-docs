@@ -12,7 +12,7 @@ The Scheduler plugin provides you with two extra calendar views to use, both of 
 - [Timeline View](timeline-view) - good at displaying a large number of resources
 - [Vertical Resource View](vertical-resource-view) - good at displaying a fewer number of resources
 
-Scheduler is a [premium plugin]({{ site.baseurl }}/premium) that has different licensing than the core FullCalendar library. [More information &raquo;]({{ site.baseurl }}/license/premium)
+Scheduler is a [premium plugin]({{ site.baseurl }}/pricing) that has different licensing than the core FullCalendar library. [More information &raquo;]({{ site.baseurl }}/license)
 
 
 ## Installation with Script Tags

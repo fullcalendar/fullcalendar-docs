@@ -219,7 +219,7 @@ export class AppComponent {
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
 
 ```js
 import { Component } from '@angular/core';

@@ -36,7 +36,7 @@ The first step is to visit the [Getting Started page](getting-started) to downlo
 
 ## Scheduler
 
-If you want to use any of the [premium Scheduler functionality](premium), use the `fullcalendar-scheduler` bundle instead. Its ZIP and CDN links are also listed on the [Getting Started page](getting-started). The code will be virtually the same:
+If you want to use any of the [premium Scheduler functionality]({{ site.baseurl }}/pricing), use the `fullcalendar-scheduler` bundle instead. Its ZIP and CDN links are also listed on the [Getting Started page](getting-started). The code will be virtually the same:
 
 ```html
 <!DOCTYPE html>
@@ -86,13 +86,13 @@ Here are the packages inside of each bundle:
   - `@fullcalendar/list`
   - `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
   - `@fullcalendar/google-calendar`
-  - `@fullcalendar/adaptive` ([premium](premium))
-  - `@fullcalendar/scrollgrid` ([premium](premium))
-  - `@fullcalendar/timeline` ([premium](premium))
-  - `@fullcalendar/resource-common` ([premium](premium))
-  - `@fullcalendar/resource-daygrid` ([premium](premium))
-  - `@fullcalendar/resource-timegrid` ([premium](premium))
-  - `@fullcalendar/resource-timeline` ([premium](premium))
+  - `@fullcalendar/adaptive` ([premium]({{ site.baseurl }}/pricing))
+  - `@fullcalendar/scrollgrid` ([premium]({{ site.baseurl }}/pricing))
+  - `@fullcalendar/timeline` ([premium]({{ site.baseurl }}/pricing))
+  - `@fullcalendar/resource-common` ([premium]({{ site.baseurl }}/pricing))
+  - `@fullcalendar/resource-daygrid` ([premium]({{ site.baseurl }}/pricing))
+  - `@fullcalendar/resource-timegrid` ([premium]({{ site.baseurl }}/pricing))
+  - `@fullcalendar/resource-timeline` ([premium]({{ site.baseurl }}/pricing))
 
 
 ## Different Approaches

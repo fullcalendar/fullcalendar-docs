@@ -3,7 +3,7 @@ title: A Feature-Packed v3.0 and Scheduler v1.4
 date: 2016-09-05T06:50:35+00:00
 ---
 
-After being in beta for three weeks, FullCalendar v3 has been released. It implements two very long standing features, and introduces some noteworthy breaking changes. A new version of the [premium Scheduler plugin]({{ site.baseurl }}/premium) has also been released.
+After being in beta for three weeks, FullCalendar v3 has been released. It implements two very long standing features, and introduces some noteworthy breaking changes. A new version of the [premium Scheduler plugin]({{ site.baseurl }}/pricing) has also been released.
 
 ### List View
 
@@ -41,7 +41,7 @@ Compared to the transition between FullCalendar v1 and v2, this transition to v3
 
 ## Scheduler 1.4.0
 
-The core project&#8217;s v3 release is accompanied by a new release of the [premium Scheduler plugin]({{ site.baseurl }}/premium). Here are the new features:
+The core project&#8217;s v3 release is accompanied by a new release of the [premium Scheduler plugin]({{ site.baseurl }}/pricing). Here are the new features:
 
 * mirrored support for [eventAllow]({{ site.baseurl }}/docs/eventAllow) and [selectAllow]({{ site.baseurl }}/docs/selectAllow)
 * easily allow or prevent events from changing resources with [eventResourceEditable]({{ site.baseurl }}/docs/eventResourceEditable)

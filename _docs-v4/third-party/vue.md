@@ -137,7 +137,7 @@ Notice how property *values* must remain in their original case.
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
 
 ```html
 <script>

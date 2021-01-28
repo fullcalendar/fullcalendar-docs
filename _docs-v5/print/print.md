@@ -14,7 +14,7 @@ images:
 
 FullCalendar looks great on a computer screen, but by default it does not look very good for printing on a piece of paper. A web browser isn't able to convert certain things consistently, such as absolute positioning and scrollbars. Fortunately FullCalendar can render differently for print if you configure it to do so.
 
-You will need to install `@fullcalendar/adaptive`, which is a [premium plugin](premium):
+You will need to install `@fullcalendar/adaptive`, which is a [premium plugin]({{ site.baseurl }}/pricing):
 
 ```
 npm install --save @fullcalendar/adaptive

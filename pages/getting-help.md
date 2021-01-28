@@ -31,7 +31,7 @@ The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, E
 
 ### Need help with Scheduler?
 
-<a href='{{ site.baseurl }}/premium'>
+<a href='{{ site.baseurl }}/pricing'>
   FullCalendar Scheduler comes with<br />1 year of email support
 </a>
 
