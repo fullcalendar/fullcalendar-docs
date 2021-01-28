@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-## Plugins
+## Standard Plugins
 
 FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and prevent it from being compiled into your bundle, saving space. By default, the bare core of FullCalendar does not do *anything*. You'll *need* to use a plugin to display a calendar view at the very least.
 
@@ -57,3 +57,27 @@ let calendar = new Calendar(calendarEl, {
 });
 ...
 ```
+
+## Premium Plugins
+
+Example:
+
+```
+npm install --save @fullcalendar/core @fullcalendar/resource-timeline
+```
+
+```js
+import { Calendar } from '@fullcalendar/core';
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+...
+let calendar = new Calendar(calendarEl, {
+  plugins: [ resourceTimelinePlugin ],
+  initialView: 'resourceTimeline',
+  resources: [
+    // your resource list
+  ]
+});
+...
+```
+
+[View available premium plugins &raquo;](premium)
