@@ -45,12 +45,12 @@ Then, write the following initialization code:
 The `fullcalendar` bundle's `main.js` and `main.css` files include the following packages:
 
 - `@fullcalendar/core`
-- `@fullcalendar/interaction`
-- `@fullcalendar/daygrid`
-- `@fullcalendar/timegrid`
-- `@fullcalendar/list`
-- `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
-- `@fullcalendar/google-calendar`
+- `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
+- `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
+- `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
+- `@fullcalendar/list` (for [list views](list-view))
+- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap/FontAwesome packages. [more info](bootstrap-theme))
+- `@fullcalendar/google-calendar` ([more info](google-calendar))
 
 
 ## Premium Bundle
@@ -95,16 +95,16 @@ You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalen
 The `fullcalendar-scheduler` bundle's `main.js` and `main.css` files include the following packages:
 
 - `@fullcalendar/core`
-- `@fullcalendar/interaction`
-- `@fullcalendar/daygrid`
-- `@fullcalendar/timegrid`
-- `@fullcalendar/list`
-- `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
-- `@fullcalendar/google-calendar`
-- `@fullcalendar/adaptive`
+- `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
+- `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
+- `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
+- `@fullcalendar/list` (for [list views](list-view))
+- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap/FontAwesome packages. [more info](bootstrap-theme))
+- `@fullcalendar/google-calendar` ([more info](google-calendar))
+- `@fullcalendar/adaptive` (for [print optimization](print))
 - `@fullcalendar/scrollgrid`
-- `@fullcalendar/timeline`
+- `@fullcalendar/timeline` ([more info](timeline-view-no-resources))
 - `@fullcalendar/resource-common`
-- `@fullcalendar/resource-daygrid`
-- `@fullcalendar/resource-timegrid`
-- `@fullcalendar/resource-timeline`
+- `@fullcalendar/resource-daygrid` ([more info](resource-daygrid-view))
+- `@fullcalendar/resource-timegrid` ([more info](vertical-resource-view))
+- `@fullcalendar/resource-timeline` ([more info](timeline-view))
