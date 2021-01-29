@@ -5,6 +5,8 @@ title: Requesting Features
 layout: text
 ---
 
+<div class='sidebar-layout'>
+<div class='sidebar-layout__main' markdown='1'>
 
 Have an idea for a new feature? If so, please carefully follow these steps:
 
@@ -43,3 +45,17 @@ If you are confident you have followed all the above steps, enter your feature r
 {% include issue-tracker-links.html %}
 
 Please enter only one feature request per issue and do not combine issues.
+
+</div>
+<div class='sidebar-layout__sidebar sidebar-layout__sidebar--blue'>
+
+  <h3>Premium Support</h3>
+
+  <p>
+  FullCalendar Premium comes with 1 year of email support.
+  </p>
+
+  <a href='{{ site.baseurl }}/pricing'>Learn more &raquo;</a>
+
+</div>
+</div>

@@ -27,13 +27,15 @@ Have an idea for a new feature? Please carefully follow the [feature request ins
 The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, Edge, and IE 11+.
 
 </div>
-<div class='sidebar-layout__sidebar text-content' markdown='1'>
+<div class='sidebar-layout__sidebar sidebar-layout__sidebar--blue'>
 
-### Need help with Scheduler?
+  <h3>Premium Support</h3>
 
-<a href='{{ site.baseurl }}/pricing'>
-  FullCalendar Scheduler comes with<br />1 year of email support
-</a>
+  <p>
+  FullCalendar Premium comes with 1 year of email support.
+  </p>
+
+  <a href='{{ site.baseurl }}/pricing'>Learn more &raquo;</a>
 
 </div>
 </div>
