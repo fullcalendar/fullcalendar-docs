@@ -233,18 +233,23 @@ The above mentioned sample project uses a rather simple technique to store event
 
 Please check out the following example projects that demonstrate usage with third-party state-management libraries:
 
-- [View the Redux example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-redux)
-- [View the MobX+TypeScript example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-mobx-typescript)
+- [View the **Redux** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-redux)
+- [View the **MobX** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-mobx-typescript)
 
 
 ## TypeScript
 
-React goes really well with [TypeScript]! To show you how to integrate the two, we've prepared [another sample project &raquo;][typescript project]
+React goes really well with [TypeScript]!
+
+- [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript)
 
 
 ## Next.js
 
-If you plan to use the [Next.js] React framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next'>See the example project</a>
+If you plan to use the [Next.js] React framework, you'll need special configuration. See the following example projects:
+
+- [View the **Next** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next)
+- [View the **Next** + **Scheduler** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next-scheduler)
 
 
 [React]: https://reactjs.org/
@@ -256,5 +261,4 @@ If you plan to use the [Next.js] React framework, you'll need special configurat
 [docs toc]: https://fullcalendar.io/docs#toc
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/
-[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript
 [Next.js]: https://nextjs.org/
