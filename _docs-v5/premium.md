@@ -10,7 +10,7 @@ images:
     caption: Print optimization in Timeline view
 ---
 
-FullCalendar Premium (also known as "FullCalendar Scheduler") is a collection of plugins released under a [different license]({{ site.baseurl }}/license) than the Standard plugins. Each plugin offers additional functionality:
+FullCalendar Premium (also known as "FullCalendar Scheduler") is a collection of plugins released under a [different license]({{ site.baseurl }}/license) than the standard plugins. Each plugin offers additional functionality:
 
 - [Timeline View](timeline-view) - display a large number of resources, with dates/times spanning horizontally
 - [Vertical Resource View](vertical-resource-view) - display resources as columns

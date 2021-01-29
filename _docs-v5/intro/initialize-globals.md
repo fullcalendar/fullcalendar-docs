@@ -4,7 +4,16 @@ title: Initialize with Script Tags
 
 It's possible to manually include the necessary `<script>` tags in the head of your HTML page and then initialize a calendar via browser globals. You will leverage one of FullCalendar's prebuilt bundles to do this.
 
-The first step is to visit the [Getting Started page](getting-started) to download a ZIP archive or get CDN links. Once you have that, write something like this:
+
+## Standard Bundle
+
+First, get ahold of the standard `fullcalendar` bundle:
+
+- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.releases[0].version }}.zip')">fullcalendar-{{ site.data.releases[0].version }}.zip</a>
+- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar)
+- **NPM:** `npm install fullcalendar`
+
+Then, write the following initialization code:
 
 ```html
 <!DOCTYPE html>
@@ -33,13 +42,7 @@ The first step is to visit the [Getting Started page](getting-started) to downlo
 
 [View a runnable example &raquo;](initialize-globals-demo)
 
-You might want to avoid a built system by [initializing fullcalendar with script tags and globals](initialize-globals):
-
-- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.releases[0].version }}.zip')">fullcalendar-{{ site.data.releases[0].version }}.zip</a>
-- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar)
-- **NPM:** `npm install fullcalendar`
-
-`fullcalendar` - the `main.js` and `main.css` files include the following packages:
+The `fullcalendar` bundle's `main.js` and `main.css` files include the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction`
@@ -52,7 +55,13 @@ You might want to avoid a built system by [initializing fullcalendar with script
 
 ## Premium Bundle
 
-If you want to use any of the [premium Scheduler functionality]({{ site.baseurl }}/pricing), use the `fullcalendar-scheduler` bundle instead. Its ZIP and CDN links are also listed on the [Getting Started page](getting-started). The code will be virtually the same:
+First, get ahold of the premium `fullcalendar-scheduler` bundle:
+
+- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip</a>
+- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
+- **NPM:** `npm install fullcalendar-scheduler`
+
+Then, write the following initialization code:
 
 ```html
 <!DOCTYPE html>
@@ -81,13 +90,7 @@ If you want to use any of the [premium Scheduler functionality]({{ site.baseurl 
 
 You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalendar` bundle. The `fullcalendar-scheduler` bundle includes everything.
 
-You might want to avoid a built system by [initializing fullcalendar with script tags and globals](initialize-globals):
-
-- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip</a>
-- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
-- **NPM:** `npm install fullcalendar-scheduler`
-
-`fullcalendar-scheduler` - the `main.js` and `main.css` files include the following packages:
+The `fullcalendar-scheduler` bundle's `main.js` and `main.css` files include the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction`
@@ -103,8 +106,3 @@ You might want to avoid a built system by [initializing fullcalendar with script
 - `@fullcalendar/resource-daygrid`
 - `@fullcalendar/resource-timegrid`
 - `@fullcalendar/resource-timeline`
-
-
-## Different Approaches
-
-If you're already using a build system like [Webpack](https://webpack.js.org/), or you want a smaller build by trimming away plugins you don't use, look at how to set up FullCalendar with an [ES6 build system](initialize-es6).

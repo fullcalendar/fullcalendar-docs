@@ -25,14 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin ]
+    plugins: [ dayGridPlugin ],
+    initialView: 'dayGridMonth'
   });
 
   calendar.render();
 });
 ```
 
-## Standard Plugins
+## How to use Plugins
 
 FullCalendar's functionality is broken up into "plugins". You only include a plugin if you need the features it provides, otherwise, you can omit the plugin and prevent it from being compiled into your bundle, saving space. By default, the bare core of FullCalendar does not do *anything*. You'll *need* to use a plugin to display a calendar view at the very least.
 
@@ -53,18 +54,26 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 ...
 let calendar = new Calendar(calendarEl, {
-  plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ]
+  plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ],
+  initialView: 'dayGridMonth',
+  headerToolbar: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'dayGridMonth,timeGridWeek,listWeek'
+  }
 });
 ...
 ```
 
 ## Premium Plugins
 
-Example:
+The set of [premium plugins](premium) works in the same way. You'll need to install the `core` package as well as any Premium plugins you plan to use:
 
 ```
 npm install --save @fullcalendar/core @fullcalendar/resource-timeline
 ```
+
+Then, import your plugins and supply them to the `Calendar` object:
 
 ```js
 import { Calendar } from '@fullcalendar/core';
