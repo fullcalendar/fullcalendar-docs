@@ -34,7 +34,7 @@ let calendar = new Calendar({
 })
 ```
 
-**OR,** you can use the `fullcalendar-scheduler` [pre-built bundle](getting-started#pre-built-bundles), which automatically includes the adaptive plugin.
+**OR,** you can use the `fullcalendar-scheduler` [pre-built bundle](initialize-globals), which automatically includes the adaptive plugin.
 
 After installing the plugin, print optimization will work automatically!
 

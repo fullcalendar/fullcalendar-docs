@@ -243,7 +243,7 @@ Configuring your build system to handle CSS is beyond the scope of this document
 
 What if you want to avoid using a build system? What if you prefer manual `<script>` tags and browser globals? This is why we are beginning to offer pre-built bundles of plugins ([#4566](https://github.com/fullcalendar/fullcalendar/issues/4566)). In fact, using the pre-built bundles will be the <strong>ONLY</strong> way to use manual `<script>` tags going forward. The individual plugins will no longer provide browser-runnable UMD files.
 
-First, [get the bundle distro files on the Getting Started page &raquo;](getting-started#pre-built-bundles)
+First, [get the bundle distro files on the Getting Started page &raquo;](initialize-globals)
 
 To use a bundle, do something like this:
 
