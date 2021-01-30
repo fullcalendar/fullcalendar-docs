@@ -208,9 +208,9 @@ export default class DemoApp extends React.Component {
 ```
 
 
-## Scheduler
+## FullCalendar Premium
 
-How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
+How do you use [FullCalendar Premium's]({{ site.baseurl }}/pricing) plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```jsx
 import React from 'react'

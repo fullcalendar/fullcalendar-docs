@@ -62,4 +62,4 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-Only available with the [Scheduler plugin]({{ site.baseurl }}/pricing).
+Resources are a [premium feature]({{ site.baseurl }}/pricing).

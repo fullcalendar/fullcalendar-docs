@@ -84,4 +84,4 @@ eventAllow: function(dropInfo, draggedEvent) {
 }
 ```
 
-Only available with the [Scheduler plugin]({{ site.baseurl }}/pricing).
+Resources are a [premium feature]({{ site.baseurl }}/pricing).

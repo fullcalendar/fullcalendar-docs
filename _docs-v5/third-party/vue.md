@@ -178,9 +178,9 @@ Some people prefer to write component names in kebab-case when writing markup. T
 However, the properties within `calendarOptions` must have the same names.
 
 
-## Scheduler
+## FullCalendar Premium
 
-How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
+How do you use [FullCalendar Premium's]({{ site.baseurl }}/pricing) plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```html
 <script>

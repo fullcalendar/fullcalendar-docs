@@ -5,8 +5,7 @@ layout: text
 ---
 
 The FullCalendar project is supported by profits from
-<a href='{{ site.baseurl }}/pricing'>FullCalendar Scheduler</a>,
-a premium add-on.
+<a href='{{ site.baseurl }}/pricing'>FullCalendar Premium</a>.
 
 However, if you'd like to contribute a monetary gift to the lead contributor,
 please feel free to do so:

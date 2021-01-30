@@ -31,4 +31,4 @@ slotLabelFormat: [
 ]
 ```
 
-Only available with the [Scheduler plugin]({{ site.baseurl }}/pricing).
+Timeline view is a [premium feature]({{ site.baseurl }}/pricing).

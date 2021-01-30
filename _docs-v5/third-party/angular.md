@@ -222,9 +222,9 @@ export class AppComponent {
 ```
 
 
-## Scheduler
+## FullCalendar Premiums
 
-How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example, but with [resourceTimelinePlugin](timeline-view) or whatever premium plugin you want to use:
+How do you use [FullCalendar Premiums's]({{ site.baseurl }}/pricing) plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example, but with [resourceTimelinePlugin](timeline-view) or whatever premium plugin you want to use:
 
 ```js
 import { BrowserModule } from '@angular/platform-browser';
