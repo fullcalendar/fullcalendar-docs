@@ -108,6 +108,7 @@ input.button {
   &.button--filled {
     background-color: $yellow-highlight-color;
     color: $font-color;
+    box-shadow: none; // box shadow looks bad with yellow
 
     &:not(:disabled):hover {
       border-color: $yellow-highlight-color;
