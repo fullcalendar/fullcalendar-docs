@@ -55,7 +55,7 @@ Please enter only one feature request per issue and do not combine issues.
   FullCalendar Premium comes with 1 year of email support.
   </p>
 
-  <a href='{{ site.baseurl }}/pricing'>Learn more &raquo;</a>
+  <a href='{{ site.baseurl }}/pricing' class='button button--filled button--blue'>Learn more &raquo;</a>
 
 </div>
 </div>

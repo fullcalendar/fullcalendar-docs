@@ -35,7 +35,7 @@ The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, E
   FullCalendar Premium comes with 1 year of email support.
   </p>
 
-  <a href='{{ site.baseurl }}/pricing'>Learn more &raquo;</a>
+  <a href='{{ site.baseurl }}/pricing' class='button button--filled button--blue'>Learn more &raquo;</a>
 
 </div>
 </div>
