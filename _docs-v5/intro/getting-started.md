@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: How to initialize a calendar
 ---
 
 The simplest way to get started is with FullCalendar's pre-built bundles and `<script>` tags:

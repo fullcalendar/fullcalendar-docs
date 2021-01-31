@@ -2,7 +2,7 @@
 title: schedulerLicenseKey
 ---
 
-The `schedulerLicenseKey` setting is the license key you must enter to use premium features in premium plugins.
+The `schedulerLicenseKey` setting is the license key you must enter to use premium features.
 
 Example:
 

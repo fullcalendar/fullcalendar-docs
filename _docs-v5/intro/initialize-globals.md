@@ -1,5 +1,6 @@
 ---
 title: Initialize with Script Tags
+description: Use pre-built bundles and HTML script tags
 ---
 
 It's possible to manually include the necessary `<script>` tags in the head of your HTML page and then initialize a calendar via browser globals. You will leverage one of FullCalendar's prebuilt bundles to do this.
