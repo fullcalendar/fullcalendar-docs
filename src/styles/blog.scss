@@ -190,6 +190,23 @@ $vtimeline-fade: 40px;
   float: right;
 }
 
+.image-with-caption {
+  a {
+    color: #999;
+  }
+
+  img {
+    border: 7px solid #c8c9cc;
+  }
+
+  span { // caption
+    display: block;
+    margin: .5em 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
 .indented {
   margin-left: 2em;
 }
@@ -199,6 +216,12 @@ $vtimeline-fade: 40px;
   .float-image {
     float: none;
     margin: 0 !important;
+  }
+
+  .image-with-caption {
+    img {
+      max-width: 90%;
+    }
   }
 
   .indented {
