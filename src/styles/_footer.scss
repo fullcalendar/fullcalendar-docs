@@ -57,3 +57,22 @@
   color: #cbd3d6;
   cursor: pointer;
 }
+
+.footer-ad-card { // an <a> tag
+  color: inherit !important;
+  text-decoration: none !important;
+
+  display: block;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 8px 12px;
+  background-color: rgba(255,255,255,.05);
+  min-width: 300px;
+
+  div { // styled as a link
+    color: $blue-highlight-color;
+  }
+  &:hover div {
+    text-decoration: underline !important;
+  }
+}
