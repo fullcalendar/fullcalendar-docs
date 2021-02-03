@@ -26,8 +26,22 @@
     </div>
   {% endif %}
 
-  <h2 class='blog-post-sidebar__title'>Recent Posts</h2>
+  <h2 class='blog-post-sidebar__title'>Featured Posts</h2>
+  <ul class='blog-post-sidebar__list'>
+    <li>
+      <a href='{{ site.baseurl }}/blog/2021/02/10percent-profits-to-effective-charities'>
+        FullCalendar LLC Pledges to Donate 10% of Profits to EA Charities
+      </a>
+    </li>
+    <li>
+      <a href='{{ site.baseurl }}/blog/2019/05/fullcalendar-turns-10'>
+        From Dead Code to Company: The FullCalendar JS Lib Turns 10
+      </a>
+    </li>
+  </ul>
 
+  {% comment %}
+  <h2 class='blog-post-sidebar__title'>Recent Posts</h2>
   <ul class='blog-post-sidebar__list'>
     {% for post in site.posts offset:1 limit:3 %}
       <li>
@@ -35,5 +49,6 @@
       </li>
     {% endfor %}
   </ul>
+  {% endcomment %}
 
 </div>
