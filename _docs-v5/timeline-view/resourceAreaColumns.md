@@ -134,7 +134,7 @@ resourceAreaColumns: [
     },
 
     cellContent: function(arg) {
-      var extendedProps = resource.extendedProps;
+      var extendedProps = arg.resource.extendedProps;
       var message = extendedProps.message;
 
       if (extendedProps.isUrgent) {
