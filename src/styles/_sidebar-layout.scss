@@ -14,7 +14,7 @@
   }
 }
 
-@media only screen and (max-width: $one-col-breakpoint) {
+@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
   .responsive-enabled {
     .sidebar-layout {
       display: block; // kill flexbox, will stack

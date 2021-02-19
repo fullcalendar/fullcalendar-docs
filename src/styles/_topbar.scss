@@ -4,7 +4,7 @@
   color: #fff;
 }
 
-@media only screen and (max-width: $one-col-breakpoint) {
+@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
   .responsive-enabled {
     .topbar {
       overflow: auto;
