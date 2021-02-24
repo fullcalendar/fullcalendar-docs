@@ -16,7 +16,18 @@
 }
 
 
-// page-content-tray (not best place for this)
+// content containers with different backgrounds
+
+
+.page-showcase {
+  background-color: rgba(130, 215, 247, 0.12);
+  overflow: hidden;
+}
+
+.page-showcase__main {
+  box-shadow: 0 0 356px 0 rgba(130, 215, 247, 0.5);
+}
+
 
 .page-content-tray {
   background: $light-bg-color;
