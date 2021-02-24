@@ -47,15 +47,13 @@ If you are confident you have followed all the above steps, enter your feature r
 Please enter only one feature request per issue and do not combine issues.
 
 </div>
-<div class='sidebar-layout__sidebar sidebar-layout__sidebar--blue'>
+<div class='sidebar-layout__sidebar'>
 
-  <h3>Premium Support</h3>
-
-  <p>
-  FullCalendar Premium comes with 1 year of email support.
-  </p>
-
-  <a href='{{ site.baseurl }}/pricing' class='button button--filled button--blue'>Learn more &raquo;</a>
+  <div class='sidebar-card'>
+    <h3>Premium Support</h3>
+    <p>FullCalendar Premium comes with 1 year of email support.</p>
+    <a href='{{ site.baseurl }}/pricing' class='button button--filled button--blue'>Learn more &raquo;</a>
+  </div>
 
 </div>
 </div>

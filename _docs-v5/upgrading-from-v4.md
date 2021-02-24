@@ -130,7 +130,7 @@ This guide outlines the changes between v4 and v5.
 **Have a comment?** [Comment on the latest blog post]({{ site.baseurl }}{% post_url 2020-06-21-v5-official %})
 
 </div>
-<div class='sidebar-layout__sidebar' id='toc' markdown='1'>
+<div class='sidebar-layout__sidebar sidebar-layout__sidebar--bordered' id='toc' markdown='1'>
 
 ## Table of Contents
 

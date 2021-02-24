@@ -1,0 +1,24 @@
+
+.sidebar-card {
+  flex-basis: 35%;
+  padding: 1.5em;
+  margin-top: -1em;
+
+  // TODO: more dry with blue-frame
+  border: 1px solid #61d9fa;
+  background-color: #ddf8ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  h3 {
+    font-weight: 700 !important; // overcome .text-content's h3
+  }
+
+  p {
+    margin: 1.5em 0; // match what text-content does
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}

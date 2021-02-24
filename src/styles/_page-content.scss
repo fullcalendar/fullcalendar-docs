@@ -32,3 +32,14 @@
 .page-content-tray {
   background: $light-bg-color;
 }
+
+
+.section-bottom-shadow {
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section-top-shadow {
+  border-top: 1px solid #ccc;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+}
