@@ -6,7 +6,7 @@
   background: $dark-bg-color;
 
   p, ul, li {
-    margin-bottom: 1em;
+    margin: 1em 0;
   }
 }
 
@@ -14,21 +14,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
-  .responsive-enabled {
-    .footer__container {
-      display: block;
-    }
-  }
-}
-
-.footer__left,
-.footer__right {
-  margin-bottom: -1em;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 .footer__left {
@@ -37,6 +24,30 @@
 
 .footer__right {
   text-align: right;
+}
+
+@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
+  .responsive-enabled {
+    .footer__container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .footer__left,
+    .footer__right {
+      text-align: center;
+    }
+
+    .footer__left {
+      margin: 2em 0;
+    }
+
+    .footer__right {
+      margin: 2em 0 0;
+    }
+  }
 }
 
 .footer-text-input {
@@ -59,20 +70,41 @@
 }
 
 .footer-ad-card { // an <a> tag
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
   color: inherit !important;
   text-decoration: none !important;
 
-  display: block;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  padding: 8px 12px;
-  background-color: rgba(255,255,255,.05);
-  min-width: 300px;
+  span:first-child {
+    padding: 8px 12px;
+    font-size: 1.2em;
+  }
 
-  div { // styled as a link
+  span:last-child { // styled as a link
+    align-self: center;
+    padding: 2px 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
     color: $blue-highlight-color;
   }
-  &:hover div {
+
+  &:hover span:last-child {
     text-decoration: underline !important;
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
+  .responsive-enabled {
+    .footer-ad-card {
+      flex-direction: column;
+      text-align: center;
+
+      span:last-child {
+        align-self: stretch;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+    }
   }
 }
