@@ -18,7 +18,7 @@
 .docs-article__sidebar-title {
   margin: 60px 0 44px;
   font-size: 20px;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
 
   a:hover {
     color: $link-color;
@@ -66,7 +66,7 @@
 
   a,
   a:hover {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-semibold;
     color: #000;
   }
 

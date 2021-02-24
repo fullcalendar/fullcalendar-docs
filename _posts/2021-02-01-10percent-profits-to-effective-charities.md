@@ -27,7 +27,7 @@ Then I discovered Effective Altruism and the ["Earning to Give"](https://80000ho
   </a>
 </div>
 
-However, the more I thought about it, the more it made sense. It would allow me to continue doing what I love. I would still be developing valuable software that increases the efficiency of developers around the world while <strong class='really-strong'>also</strong> [saving children in sub-Saharan Africa from malaria](https://www.givewell.org/), [ending animal suffering in industrial farming](https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare), and [solving climate change with clean energy innovation](https://founderspledge.com/funds/climate-change-fund).
+However, the more I thought about it, the more it made sense. It would allow me to continue doing what I love. I would still be developing valuable software that increases the efficiency of developers around the world while <strong>also</strong> [saving children in sub-Saharan Africa from malaria](https://www.givewell.org/), [ending animal suffering in industrial farming](https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare), and [solving climate change with clean energy innovation](https://founderspledge.com/funds/climate-change-fund).
 
 If you are in tech, finance, or another industry blessed by good fortune in recent years, I urge you to consider reserving a percentage of your earnings for philanthropy, especially if you have leverage by [living in a rich country](https://howrichami.givingwhatwecan.org/how-rich-am-i). If you do so, be loud and public about it (as I’m doing with this blog post) [to inspire others to give!](https://www.givingwhatwecan.org/post/2015/12/why-you-should-be-public-good-deeds/)
 

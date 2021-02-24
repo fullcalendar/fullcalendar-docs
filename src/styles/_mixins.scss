@@ -1,8 +1,6 @@
 
-// ???
-
 @mixin big-title {
-  font-weight: 900;
+  font-weight: $font-weight-superbold;
   font-size: 34px;
   margin: 1.4em 0;
 
@@ -12,7 +10,7 @@
 }
 
 @mixin title { // won't give margins
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
   font-size: $font-size-title;
 }
 
