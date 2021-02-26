@@ -6,6 +6,8 @@
 }
 
 .sidebar-layout__main {
+  flex-grow: 1;
+
   > *:first-child {
     margin-top: 0;
   }
@@ -17,11 +19,8 @@
   margin-left: 40px;
 }
 
-.sidebar-layout__sidebar--bordered {
-  align-self: flex-start;
-  flex-basis: 25%;
-  border-left: 1px solid $control-border-color-light;
-  padding-left: 20px;
+.sidebar-layout__sidebar--narrow {
+  flex-basis: 30%;
 }
 
 @media only screen and (max-width: $desktop-breakpoint - 1) { // <desktop
@@ -34,14 +33,6 @@
     .sidebar-layout__sidebar {
       margin-left: 0;
       margin-top: 3em;
-    }
-
-    .sidebar-layout__sidebar--bordered {
-      align-self: stretch;
-      padding-left: 0;
-      padding-top: 20px;
-      border-left: 0;
-      border-top: 1px solid $control-border-color-light;
     }
   }
 }

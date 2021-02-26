@@ -185,47 +185,93 @@ $vtimeline-fade: 40px;
   white-space: nowrap;
 }
 
-.float-image {
-  clear: right;
-  float: right;
+.bordered-image {
+  border: 7px solid #c8c9cc;
 }
 
-.image-with-caption {
-  a {
-    color: #999;
+.image-caption { // probably a span
+  display: block;
+  margin: 1em 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #999; // for when link
+}
+
+.image-caption {
+  margin: .5em 0;
+}
+
+
+// indent
+
+@media only screen and (min-width: $tablet-breakpoint) { // >=tablet
+  .indented {
+    margin-left: 2em;
+  }
+}
+
+
+// bleedout
+
+@media only screen and (min-width: $desktop-breakpoint) { // >=desktop (when blog sidebar appears)
+  .bleedout {
+    margin-right: -40%;
+  }
+}
+
+
+// float image
+
+@media only screen and (max-width: $desktop-breakpoint - 1) { // <desktop (when blog sidebar disappears)
+  .float-image {
+    margin-right: 0 !important; // cancel bleeding out
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) { // >=tablet
+  .float-image {
+    clear: right;
+    float: right;
+  }
+}
+
+
+// split image layout
+
+.split-image {
+  display: flex;
+  justify-content: flex-start;
+
+  > * {
+    flex-basis: 0;
+    flex-grow: 1;
   }
 
   img {
-    border: 7px solid #c8c9cc;
-  }
-
-  span { // caption
     display: block;
-    margin: .5em 0;
-    font-size: 14px;
-    line-height: 1.4;
   }
-}
-
-.indented {
-  margin-left: 2em;
 }
 
 @media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
+  .split-image {
+    flex-direction: column;
 
-  .float-image {
-    float: none;
-    margin: 0 !important;
-  }
-
-  .image-with-caption {
-    img {
-      max-width: 90%;
+    > *:not(:first-child) .bordered-image {
+      margin-top: -7px; // collapses into other border
     }
   }
+}
 
-  .indented {
-    margin-left: 0;
+@media only screen and (min-width: $tablet-breakpoint) { // >=tablet
+  .split-image {
+    flex-direction: row;
+
+    > *:not(:first-child) {
+      margin-left: 2em;
+    }
+
+    .image-caption {
+      margin-top: 1em; // increase
+    }
   }
-
 }

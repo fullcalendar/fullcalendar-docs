@@ -1,0 +1,16 @@
+
+.sidebar-bordered-section {
+  border-left: 1px solid $control-border-color-light;
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: $desktop-breakpoint - 1) { // <desktop (NOTE: must match when sidebar-layout breaks)
+  .responsive-enabled {
+    .sidebar-bordered-section {
+      padding-left: 0;
+      padding-top: 20px;
+      border-left: 0;
+      border-top: 1px solid $control-border-color-light;
+    }
+  }
+}

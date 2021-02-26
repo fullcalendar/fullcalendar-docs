@@ -8,11 +8,9 @@ advanced_sidebar: true
 
 An "effective charity", a term coined by the [Effective Altruism](https://www.effectivealtruism.org/articles/introduction-to-effective-altruism/) movement, is a charity that is especially impactful, sometimes even [hundreds of times more](https://www.givingwhatwecan.org/charity-comparisons/) than a different charity solving the same problem.
 
-<div class='image-with-caption'>
-  <a href='https://www.givingwhatwecan.org/charity-comparisons/'>
-    <img src='{{ site.baseurl }}/assets/images/blog/ea/effectiveness-graph.png' width='604'>
-  </a>
-</div>
+<a href='https://www.givingwhatwecan.org/charity-comparisons/'>
+  <img class='bordered-image' src='{{ site.baseurl }}/assets/images/blog/ea/effectiveness-graph.png' width='604'>
+</a>
 
 If we decide to give to charity, it is our moral imperative to ensure our contributions go as far as possible. However, the first hurdle is deciding to give in the first place. Why have I decided to take the [Giving What We Can pledge](https://www.givingwhatwecan.org/pledge/) and direct a minimum of 10% of my life-long earnings towards charity?
 
@@ -20,12 +18,10 @@ At a certain point, FullCalendar’s earnings began comfortably supporting my li
 
 Then I discovered Effective Altruism and the ["Earning to Give"](https://80000hours.org/articles/earning-to-give/) philosophy, its main idea being that if you have a high-paying specialized skill, you’ll likely make the biggest impact if you simply make as much money as possible and donate a portion of it to effective charities. This idea felt counterintuitive at first, as capitalism seems an opposing force to philanthropy.
 
-<div class='image-with-caption'>
-  <a href='https://80000hours.org/articles/earning-to-give/'>
-    <img src='{{ site.baseurl }}/assets/images/blog/ea/gates.jpg' width='500'>
-    <span>Bill Gates has had a huge humanitarian impact through philanthropy</span>
-  </a>
-</div>
+<a href='https://80000hours.org/articles/earning-to-give/'>
+  <img class='bordered-image' src='{{ site.baseurl }}/assets/images/blog/ea/gates.jpg' width='500'>
+  <span class='image-caption'>Bill Gates has had a huge humanitarian impact through philanthropy</span>
+</a>
 
 However, the more I thought about it, the more it made sense. It would allow me to continue doing what I love. I would still be developing valuable software that increases the efficiency of developers around the world while <strong>also</strong> [saving children in sub-Saharan Africa from malaria](https://www.givewell.org/), [ending animal suffering in industrial farming](https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare), and [solving climate change with clean energy innovation](https://founderspledge.com/funds/climate-change-fund).
 

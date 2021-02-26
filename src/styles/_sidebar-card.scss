@@ -1,10 +1,7 @@
 
 .sidebar-card {
-  flex-basis: 35%;
   padding: 1.5em;
   margin-top: -1em;
-  position: sticky;
-  top: 3em;
 
   // TODO: more dry with blue-frame
   border: 1px solid #61d9fa;
@@ -18,5 +15,16 @@
 
   > *:first-child {
     margin-top: 0;
+  }
+}
+
+.sidebar-card:last-child {
+  position: sticky;
+  top: 3em;
+}
+
+.sidebar-layout__sidebar--narrow { // hack
+  .sidebar-card {
+    padding: 20px; // matches what sidebar-bordered-section does
   }
 }

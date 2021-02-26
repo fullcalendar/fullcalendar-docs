@@ -1,54 +1,73 @@
 
-<div class='sidebar-layout__sidebar sidebar-layout__sidebar--bordered blog-post-sidebar'>
-
-  {% if page.advanced_sidebar %}
-    <div class='blog-post-sidebar__advanced'>
-
-      <div class='blog-post-sidebar__date'>
-        Posted by
-        <a href='https://github.com/arshaw' style='font-weight: 800'>arshaw</a>
-        on {{ page.date | date: '%B %d, %Y' }}
-      </div>
-
-      <ul class='blog-post-sidebar__list'>
-        {% if page.hacker_news_url %}
-          <li>
-            <a href='{{ page.hacker_news_url }}' target='_blank'>View on Hacker News</a>
-          </li>
-        {% endif %}
-        {% if page.reddit_url %}
-          <li>
-            <a href='{{ page.reddit_url }}' target='_blank'>View on Reddit</a>
-          </li>
-        {% endif %}
-      </ul>
-
-    </div>
-  {% endif %}
-
-  <h2 class='blog-post-sidebar__title'>Featured Posts</h2>
-  <ul class='blog-post-sidebar__list'>
-    <li>
-      <a href='{{ site.baseurl }}/blog/2021/02/10percent-profits-to-effective-charities'>
-        FullCalendar LLC Pledges to Donate 10% of Profits to EA Charities
-      </a>
-    </li>
-    <li>
-      <a href='{{ site.baseurl }}/blog/2019/05/fullcalendar-turns-10'>
-        From Dead Code to Company: The FullCalendar JS Lib Turns 10
-      </a>
-    </li>
-  </ul>
+<div class='sidebar-layout__sidebar sidebar-layout__sidebar--narrow blog-post-sidebar'>
 
   {% comment %}
-  <h2 class='blog-post-sidebar__title'>Recent Posts</h2>
-  <ul class='blog-post-sidebar__list'>
-    {% for post in site.posts offset:1 limit:3 %}
-      <li>
-        <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    when disabling this card, think about resetting
+    .sidebar-layout__sidebar--narrow's width to 25%
   {% endcomment %}
+  <div class='sidebar-card' style='margin-bottom:3em;color:#218ba9'>
+    <div style='text-transform:uppercase;letter-spacing:1px'>
+      <img src='{{ site.baseurl }}/assets/images/bullhorn-lightblue.svg' width='32' height='32' style='vertical-align:bottom'>
+      Available Positions
+    </div>
+    <a style='display:block;margin-top:1em' href='{{ site.baseurl }}/opportunities'>
+      <strong>Software Developer</strong>
+      (non-core)
+    </a>
+  </div>
+
+  <div class='sidebar-bordered-section'>
+
+    {% if page.advanced_sidebar %}
+      <div class='blog-post-sidebar__advanced'>
+
+        <div class='blog-post-sidebar__date'>
+          Posted by
+          <a href='https://github.com/arshaw' style='font-weight: 800'>arshaw</a>
+          on {{ page.date | date: '%B %d, %Y' }}
+        </div>
+
+        <ul class='blog-post-sidebar__list'>
+          {% if page.hacker_news_url %}
+            <li>
+              <a href='{{ page.hacker_news_url }}' target='_blank'>View on Hacker News</a>
+            </li>
+          {% endif %}
+          {% if page.reddit_url %}
+            <li>
+              <a href='{{ page.reddit_url }}' target='_blank'>View on Reddit</a>
+            </li>
+          {% endif %}
+        </ul>
+
+      </div>
+    {% endif %}
+
+    <h2 class='blog-post-sidebar__title'>Featured Posts</h2>
+    <ul class='blog-post-sidebar__list'>
+      <li>
+        <a href='{{ site.baseurl }}/blog/2021/02/10percent-profits-to-effective-charities'>
+          FullCalendar LLC Pledges to Donate 10% of Profits to EA Charities
+        </a>
+      </li>
+      <li>
+        <a href='{{ site.baseurl }}/blog/2019/05/fullcalendar-turns-10'>
+          From Dead Code to Company: The FullCalendar JS Lib Turns 10
+        </a>
+      </li>
+    </ul>
+
+    {% comment %}
+    <h2 class='blog-post-sidebar__title'>Recent Posts</h2>
+    <ul class='blog-post-sidebar__list'>
+      {% for post in site.posts offset:1 limit:3 %}
+        <li>
+          <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% endcomment %}
+
+  </div>
 
 </div>
