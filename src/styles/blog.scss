@@ -187,6 +187,7 @@ $vtimeline-fade: 40px;
 
 .bordered-image {
   border: 7px solid #c8c9cc;
+  box-sizing: content-box; // so img's width/height doesn't consume border
 }
 
 .image-caption { // probably a span
