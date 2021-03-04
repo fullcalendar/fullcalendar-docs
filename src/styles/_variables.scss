@@ -33,6 +33,7 @@ $code-line-height: 1.8em;
 
 $page-max-content-width: 1200px;
 $page-gutter: 30px;
+$page-gutter-small: 15px;
 $container-max-width: $page-max-content-width + ($page-gutter * 2); // because it's border-box
 
 $tablet-breakpoint: 768px;

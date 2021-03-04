@@ -8,7 +8,9 @@ I always have my trusty graph paper notebook by my side. I use it for drawing di
 
 <div class='split-image'>
   <div><img src='{{ site.baseurl }}/assets/images/homepage-redesign-post/random-sketch.jpg' class='bordered-image' width='372' height='322'></div>
-  <div class='image-caption'>A diagram in my notebook. Most of the meaning is now lost on me.</div>
+  <div style='margin:0 1em'>
+    <div class='image-caption'>A diagram in my notebook. Most of the meaning is now lost on me.</div>
+  </div>
 </div>
 
 I needed to redesign FullCalendar's homepage, so I began scribbling like I normally do. What started as a boring wireframe began evolving into something much more illustrative. I raced to my local art supplies store for some color markers.

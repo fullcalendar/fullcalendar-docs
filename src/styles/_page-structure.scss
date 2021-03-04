@@ -36,8 +36,8 @@ body > .footer {
 
 @media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
   .container:not(.container--always-spacious) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: $page-gutter-small;
+    padding-right: $page-gutter-small;
   }
 }
 
