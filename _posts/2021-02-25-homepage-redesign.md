@@ -4,14 +4,16 @@ date: 2021-02-25T00:00:00+00:00
 advanced_sidebar: true
 ---
 
-I've always have my trusty graph paper pad by my side while I can so that I can draw diagrams I won't be able to understand three days later. I'm a solopreneur for the open source project-turned-business FullCalendar, and I find hand written notes valuable for keeping track of my thoughts.
+I always have my trusty graph paper notebook by my side. I use it for drawing diagrams I won't be able to understand a day later. I'm a solopreneur for the open source [project-turned-business]({{ site.baseurl }}/blog/2019/05/fullcalendar-turns-10) FullCalendar, and scribbling notes and diagrams has become a staple of my workflow.
 
 <div class='split-image'>
   <div><img src='{{ site.baseurl }}/assets/images/homepage-redesign-post/random-sketch.jpg' class='bordered-image' width='372' height='322'></div>
-  <div class='image-caption'>this is some really fun caption</div>
+  <div class='image-caption'>A diagram in my notebook. I sorta kinda remember what I was thinking, but not really.</div>
 </div>
 
-When it came to redesigning the fullcalendar.io homepage, I began scribbling like I normally do. I wanted something more fun and illustrative than the previous homepage, which was spartan to a fault. Please keep in mind I'm a coder by trade, not a designer. What ensued was an educational experience on what translates well from sketch pad to screen and what doesn't.
+I needed to redesign FullCalendar's homepage, so I began scribbling like I normally do. What started as a boring wireframe began evolving into something much more illustrative. I raced to my local art supplies store for some color markers.
+
+Just to be clear, I'm an engineer, **not** a graphic design person. I was suren't any if these ideas would translate to the screen. After hiring an extremely talented designer, I would find out...
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -20,7 +22,9 @@ When it came to redesigning the fullcalendar.io homepage, I began scribbling lik
   </div>
 </div>
 
-When it came to redesigning the fullcalendar.io homepage, I began scribbling like I normally do. I wanted something more fun and illustrative than the previous homepage, which was spartan to a fault.
+Turns out it's best to have your call to action on the left (for LTR languages at least). Also, stay away from overly exotic buttons because they won't look clickable.
+
+I was happy the Star Wars code-scroll made it in.
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -29,7 +33,9 @@ When it came to redesigning the fullcalendar.io homepage, I began scribbling lik
   </div>
 </div>
 
-When it came to redesigning the fullcalendar.io homepage, I began scribbling like I normally do. I wanted something more fun and illustrative than the previous homepage, which was spartan to a fault.
+My designer tried a million iterations of a cartoony looking lightning bolt. A more realistic one made the final cut.
+
+The sassy emoji girl needed to be removed because it made the design look too busy (and too vein <img src='{{ site.baseurl }}/assets/images/homepage-redesign-post/sassy-emoji.png' width='32' height='32'>).
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -38,7 +44,9 @@ When it came to redesigning the fullcalendar.io homepage, I began scribbling lik
   </div>
 </div>
 
-When it came to redesigning the fullcalendar.io homepage, I began scribbling like I normally do. I wanted something more fun and illustrative than the previous homepage, which was spartan to a fault.
+For the beach scene, only the [Octocat](https://octodex.github.com/) survived. The speedboat and the treasure chest, which linked to the payment page (get it?), were replaced by some **ingenious** magical narwhals.
+
+Designing the new homepage was a breath of fresh air from coding all day. It might be a bit too whimsical for its own good given that it's a JavaScript library, but who cares. When you run your own company, you do what you want :)
 
 <a href='{{ site.baseurl }}/' class='button button--filled button--blue'>
   Visit the new hompage! &raquo;
