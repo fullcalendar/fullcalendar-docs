@@ -13,7 +13,7 @@ I always have my trusty graph paper notebook by my side. I use it for drawing di
 
 I needed to redesign FullCalendar's homepage, so I began scribbling like I normally do. What started as a boring wireframe began evolving into something much more illustrative. I raced to my local art supplies store for some color markers.
 
-Just to be clear, I'm an engineer, **not** a graphic design person. I was suren't any if these ideas would translate to the screen. After hiring an extremely talented designer, I would find out...
+Just to be clear, I'm an engineer, **not** a graphic design person. I wasn't sure if any of these ideas would translate to the screen. After hiring an extremely talented designer, I would find out...
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -44,7 +44,7 @@ The sassy emoji girl needed to be removed because it made the design look too bu
   </div>
 </div>
 
-For the beach scene, only the [Octocat](https://octodex.github.com/) survived. The speedboat and the treasure chest, which linked to the payment page (get it?), were replaced by some **ingenious** magical narwhals that I can't take credit for.
+For the beach scene, only the [Octocat](https://octodex.github.com/) survived. The tacky speedboat and the treasure chest, which linked to the payment page (get it?), were replaced by some **ingenious** magical narwhals I can't take credit for.
 
 Designing the new homepage was a breath of fresh air from coding all day. It might be a bit too whimsical for its own good given that it's a JavaScript library, but who cares. When you run your own company, you do what you want :)
 
