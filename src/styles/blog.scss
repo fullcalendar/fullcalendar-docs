@@ -186,9 +186,12 @@ $vtimeline-fade: 40px;
   white-space: nowrap;
 }
 
+$image-border-width: 7px;
+
 .bordered-image {
-  border: 7px solid #c8c9cc;
   box-sizing: content-box; // so img's width/height doesn't consume border
+  border: $image-border-width solid #c8c9cc;
+  max-width: calc(100% - #{$image-border-width * 2}) !important; // because of content-box
 }
 
 .image-caption { // probably a span
@@ -255,7 +258,7 @@ $vtimeline-fade: 40px;
     flex-direction: column;
 
     > *:not(:first-child) .bordered-image {
-      margin-top: -7px; // collapses into other border
+      margin-top: -($image-border-width); // collapses into other border
     }
   }
 }
@@ -265,7 +268,7 @@ $vtimeline-fade: 40px;
     flex-direction: row;
 
     > *:not(:first-child) {
-      margin-left: 2em;
+      margin-left: 1.5em;
     }
 
     .image-caption {
