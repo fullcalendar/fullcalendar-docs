@@ -2,6 +2,7 @@
 title: An Engineer Redesigns the Company Homepage
 date: 2021-03-04T01:00:00+00:00
 advanced_sidebar: true
+hacker_news_url: https://news.ycombinator.com/item?id=26339204
 ---
 
 I always have my trusty graph paper notebook by my side. I use it for drawing diagrams I won't be able to understand a day later. I'm a solopreneur for the open source [project-turned-business]({{ site.baseurl }}/blog/2019/05/fullcalendar-turns-10) FullCalendar, and scribbling notes and diagrams has become a staple of my workflow.
