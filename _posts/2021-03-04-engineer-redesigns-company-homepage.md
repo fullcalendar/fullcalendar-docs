@@ -17,7 +17,7 @@ I needed to redesign FullCalendar's homepage, so I began scribbling like I norma
 
 Just to be clear, I'm an engineer, **not** a graphic design person. I wasn't sure if any of these ideas would translate to the screen. After hiring an [extremely talented designer](http://allie-surdovel.com/), I would find out.
 
-I intended the first section to have a depiction of FullCalendar's calendar product. It transitions into a Star Wars-esque space scroll of code underneath. Lucky this worked out! What did **not** make the cut were my unorthodox button and tab styles because they didn't look clickable:
+I intended the first section to have a depiction of FullCalendar's calendar product. It transitions into a Star Wars-esque space scroll of code underneath. Luckily this worked out! What did **not** make the cut were my unorthodox button and tab styles. They didn't look clickable:
 
 <div class='bleedout'>
   <div class='split-image'>
