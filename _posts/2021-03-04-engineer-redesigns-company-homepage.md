@@ -1,6 +1,6 @@
 ---
-title: Homepage Redesign
-date: 2021-02-25T00:00:00+00:00
+title: An Engineer Redesigns the Company Homepage
+date: 2021-03-04T01:00:00+00:00
 advanced_sidebar: true
 ---
 
@@ -44,7 +44,7 @@ The sassy emoji girl needed to be removed because it made the design look too bu
   </div>
 </div>
 
-For the beach scene, only the [Octocat](https://octodex.github.com/) survived. The speedboat and the treasure chest, which linked to the payment page (get it?), were replaced by some **ingenious** magical narwhals.
+For the beach scene, only the [Octocat](https://octodex.github.com/) survived. The speedboat and the treasure chest, which linked to the payment page (get it?), were replaced by some **ingenious** magical narwhals that I can't take credit for.
 
 Designing the new homepage was a breath of fresh air from coding all day. It might be a bit too whimsical for its own good given that it's a JavaScript library, but who cares. When you run your own company, you do what you want :)
 
