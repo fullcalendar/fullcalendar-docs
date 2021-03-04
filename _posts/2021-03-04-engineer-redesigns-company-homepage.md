@@ -8,12 +8,14 @@ I always have my trusty graph paper notebook by my side. I use it for drawing di
 
 <div class='split-image'>
   <div><img src='{{ site.baseurl }}/assets/images/homepage-redesign-post/random-sketch.jpg' class='bordered-image' width='372' height='322'></div>
-  <div class='image-caption'>A diagram in my notebook. I sorta kinda remember what I was thinking, but not really.</div>
+  <div class='image-caption'>A diagram in my notebook. Most of the meaning is now lost on me.</div>
 </div>
 
 I needed to redesign FullCalendar's homepage, so I began scribbling like I normally do. What started as a boring wireframe began evolving into something much more illustrative. I raced to my local art supplies store for some color markers.
 
-Just to be clear, I'm an engineer, **not** a graphic design person. I wasn't sure if any of these ideas would translate to the screen. After hiring an extremely talented designer, I would find out...
+Just to be clear, I'm an engineer, **not** a graphic design person. I wasn't sure if any of these ideas would translate to the screen. After hiring an [extremely talented designer](http://allie-surdovel.com/), I would find out.
+
+I intended the first section to have a depiction of FullCalendar's calendar product. It transitions into a Star Wars-esque space scroll of code underneath. Lucky this worked out! What did **not** make the cut were my unorthodox button and tab styles because they didn't look clickable:
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -22,9 +24,9 @@ Just to be clear, I'm an engineer, **not** a graphic design person. I wasn't sur
   </div>
 </div>
 
-Turns out it's best to have your call to action on the left (for LTR languages at least). Also, stay away from overly exotic buttons because they won't look clickable.
+The following scene takes place in the clouds and contains a lightning bolt. My designer and I struggled with numerous cartoony bolts until she recommended a more realistic rendition that is really unique and matches perfectly with the rest of the illustrations.
 
-I was happy the Star Wars code-scroll made it in.
+If you glance below, you'll see I intended the "sassy emoji girl" <img src='{{ site.baseurl }}/assets/images/homepage-redesign-post/sassy-emoji.png' width='32' height='32'> to be sitting atop the mountain. Unfortunately the mountain was too shrouded in logos to accommodate her:
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -33,9 +35,7 @@ I was happy the Star Wars code-scroll made it in.
   </div>
 </div>
 
-My designer tried a million iterations of a cartoony looking lightning bolt. A more realistic one made the final cut.
-
-The sassy emoji girl needed to be removed because it made the design look too busy (and too vein <img src='{{ site.baseurl }}/assets/images/homepage-redesign-post/sassy-emoji.png' width='32' height='32'>).
+The nautical-themed section that follows contains many elements that were gutted. Only the [Octocat](https://octodex.github.com/) survived. My tacky speedboat and treasure chest, which links to the payment page (get it?), were replaced by some **ingenious** magical narwhals I can't take credit for:
 
 <div class='bleedout'>
   <div class='split-image'>
@@ -44,9 +44,7 @@ The sassy emoji girl needed to be removed because it made the design look too bu
   </div>
 </div>
 
-For the beach scene, only the [Octocat](https://octodex.github.com/) survived. The tacky speedboat and the treasure chest, which linked to the payment page (get it?), were replaced by some **ingenious** magical narwhals I can't take credit for.
-
-Designing the new homepage was a breath of fresh air from coding all day. It might be a bit too whimsical for its own good given that it's a JavaScript library, but who cares. When you run your own company, you do what you want :)
+Working on this design was a breath of fresh air from coding all day. While some may find it a bit too illustrative for an open source project's homepage, it was an excuse for me to have fun and wear another hat within my company. I'm very curious to hear what others think!
 
 <a href='{{ site.baseurl }}/' class='button button--filled button--blue'>
   Visit the new hompage! &raquo;
