@@ -24,7 +24,7 @@ Have an idea for a new feature? Please carefully follow the [feature request ins
 
 ## Browser Testing & Version Compatibility
 
-The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, Edge, and IE 11+.
+The latest version of FullCalendar is compatible with Firefox, Chrome, Safari, Edge, and IE 11+. Safari/iOS browsers < 10 and Internet Explorer do need an [Intl Polyfill](https://polyfill.io/v3/polyfill.min.js?features=Intl).
 
 </div>
 <div class='sidebar-layout__sidebar'>
