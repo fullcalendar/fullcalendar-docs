@@ -9,3 +9,5 @@ Determines how far forward the scroll pane is initially scrolled.
 </div>
 
 The user will be able to scroll back to see events before this time. If you want to prevent users from doing this, use the [slotMinTime](slotMinTime) option instead.
+
+By default, `scrollTime` is reapplied to the view whenever the date range changes. To disable this, set [scrollTimeReset](scrollTimeReset) to `false`.

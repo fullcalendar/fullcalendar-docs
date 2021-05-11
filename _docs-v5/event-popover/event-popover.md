@@ -3,6 +3,7 @@ title: Event Popover
 children:
   - dayMaxEventRows
   - dayMaxEvents
+  - eventMaxStack
   - moreLinkClick
   - dayPopoverFormat
   - article: more-link-render-hooks

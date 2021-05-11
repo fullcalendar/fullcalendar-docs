@@ -834,9 +834,11 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
       </ul>
     </td>
     <td>
-      <p>
-        Set a <code>min-height</code> on your event elements via CSS. The computed min-height is considered when positioning events.
-      </p>
+      <ul class='diff-list'>
+        <li>
+          <a href='eventMinHeight' class='diff-added'>eventMinHeight</a> - simply renamed
+        </li>
+      </ul>
     </td>
   </tr>
   <tr>

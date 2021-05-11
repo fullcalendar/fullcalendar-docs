@@ -2,11 +2,13 @@
 title: dayMaxEventRows
 ---
 
-The max number of stacked event levels within a given day. This *includes* the +more link if present. The rest will show up in a popover.
+In **dayGrid** view, the max number of stacked event levels within a given day. This *includes* the +more link if present. The rest will show up in a popover.
 
 <div class='spec' markdown='1'>
 Boolean, Integer. *default:* `false`
 </div>
+
+For **timeGrid** and **timeline** views, see [eventMaxStack](eventMaxStack).
 
 When there are too many events, a link that looks like "+2 more" is displayed. The exact action that happens when the user clicks the link is determined by [moreLinkClick](moreLinkClick).
 

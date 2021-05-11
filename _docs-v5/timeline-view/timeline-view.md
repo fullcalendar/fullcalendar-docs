@@ -9,6 +9,7 @@ children:
       - resourceAreaColumns
       - resourcesInitiallyExpanded
       - slotMinWidth
+      - eventMinWidth
       - timeline-view-no-resources
       - article: resource-group-render-hooks
         points:
@@ -27,6 +28,7 @@ children:
           - resourceAreaHeaderDidMount
           - resourceAreaHeaderWillUnmount
 related:
+  - eventMaxStack
   - resource-render-hooks
   - dateClick
   - slotDuration

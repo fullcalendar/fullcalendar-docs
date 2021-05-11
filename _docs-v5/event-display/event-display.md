@@ -11,6 +11,7 @@ children:
   - displayEventEnd
   - nextDayThreshold
   - eventOrder
+  - eventOrderStrict
   - progressiveEventRendering
   - article: event-render-hooks
     points:
