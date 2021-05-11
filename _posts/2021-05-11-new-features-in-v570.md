@@ -4,17 +4,60 @@ date: 2021-05-11T00:00:00+00:00
 advanced_sidebar: true
 ---
 
-Version 5.7.0 improves event positioning. See how events in timeGrid have more consistent widths [#5004](https://github.com/fullcalendar/fullcalendar/issues/5004):
+Version 5.7.0 gives timeGrid and timeline the ability to hide events within a more-link ([#4218](https://github.com/fullcalendar/fullcalendar/issues/4218), [#4827](https://github.com/fullcalendar/fullcalendar/issues/4827)). Use the [eventMaxStack]({{ site.baseurl }}/docs/eventMaxStack) option.
 
---screenshot-before--
+Example with timeGrid:
 
---screenshot-after--
+<div class='split-image'>
+  <div style='flex-grow:0'>
+    <img src='{{ site.baseurl }}/docs/v5/timegrid-more-link-closed.png' class='bordered-image' width='266' height='230' style='max-width:none !important'>
+    <div class='image-caption'>
+      Before click
+    </div>
+  </div>
+  <div style='flex-grow:0'>
+    <img src='{{ site.baseurl }}/docs/v5/timegrid-more-link-open.png' class='bordered-image' width='395' height='230' style='max-width:none !important'>
+    <div class='image-caption'>
+      After click
+    </div>
+  </div>
+</div>
 
-Also, both timeGrid and timeline have been given the ability to hide events within a more-link via the [eventMaxStack]({{ site.baseurl }}/docs/eventMaxStack) option ([#4218](https://github.com/fullcalendar/fullcalendar/issues/4218), [#4827](https://github.com/fullcalendar/fullcalendar/issues/4827)):
+Example with timeline:
 
---screenshot-timegrid--
+<div class='split-image'>
+  <div style='flex-grow:0'>
+    <img src='{{ site.baseurl }}/docs/v5/timeline-more-link-closed.png' class='bordered-image' width='360' height='164' style='max-width:none !important'>
+    <div class='image-caption'>
+      Before click
+    </div>
+  </div>
+  <div style='flex-grow:0'>
+    <img src='{{ site.baseurl }}/docs/v5/timeline-more-link-open.png' class='bordered-image' width='360' height='164' style='max-width:none !important'>
+    <div class='image-caption'>
+      After click
+    </div>
+  </div>
+</div>
 
---screenshot-timeline--
+Also, events in timeGrid now have more consistent widths ([#5004](https://github.com/fullcalendar/fullcalendar/issues/5004)):
+
+<div class='bleedout'>
+  <div class='split-image'>
+    <div>
+      <img src='{{ site.baseurl }}/assets/images/docs/timegrid-events-bad.png' class='bordered-image' width='575' height='335'>
+      <div class='image-caption'>
+        Prior to 5.7.0, some events become very narrow
+      </div>
+    </div>
+    <div>
+      <img src='{{ site.baseurl }}/assets/images/docs/timegrid-events-good.png' class='bordered-image' width='575' height='335'>
+      <div class='image-caption'>
+        After 5.7.0, the available width is shared more evenly
+      </div>
+    </div>
+  </div>
+</div>
 
 There are many more features/fixes:
 
