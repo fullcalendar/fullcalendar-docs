@@ -74,7 +74,8 @@ There are many more features/fixes:
 - **fix:** respect duration in eventOrder as highest precedence ([#5481](https://github.com/fullcalendar/fullcalendar/issues/5481))
 - **fix:** refetching events should keep event popover open ([#3958](https://github.com/fullcalendar/fullcalendar/issues/3958))
 - **fix:** accidental +more popover close with shadow dom ([#6205](https://github.com/fullcalendar/fullcalendar/issues/6205))
+- **fix:** dayGrid events streched out of cells in print media ([#6300](https://github.com/fullcalendar/fullcalendar/issues/6300))
 
-For a full list of changes, <a href='' class='more-link'>read the changelog</a>
+For a full list of changes, <a href='https://github.com/fullcalendar/fullcalendar/releases/tag/v5.7.0' class='more-link'>read the changelog</a>
 
 Cheers!
