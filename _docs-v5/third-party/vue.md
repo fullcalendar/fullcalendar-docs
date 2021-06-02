@@ -9,16 +9,25 @@ This package is released under an MIT license, the same license the standard ver
 
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
-- [Example project][example project] leveraging [Webpack] and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue) in a code playground
+- Example projects:
+  - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue) (uses [Webpack] and [css-loader]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue)
+  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript) (uses [TypeScript] and [Vite]) <!-- - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript?file=/src/Demo.vue) -->
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter and any additional plugins you plan to use:
+The first step is to install the Vue adapted. If using **Vue 2**:
 
 ```bash
-npm install --save @fullcalendar/vue @fullcalendar/daygrid
+npm install --save @fullcalendar/vue
 ```
+
+If using **Vue 2**:
+
+```bash
+npm install --save @fullcalendar/vue3
+```
+
+Then install any additional FullCalendar plugins (like `@fullcalendar/daygrid`).
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.vue]):
 
@@ -209,7 +218,9 @@ export default {
 
 ## TypeScript
 
-The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typescriptlang.org/) definitions. When using TypeScript in your Vue project, it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript' class='more-link'>example TypeScript project</a>
+For `@fullcalendar/vue3`, nothing special is needed for TypeScript integration.
+
+When using TypeScript in your Vue 2 project, it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript' class='more-link'>example TypeScript project</a>
 
 
 ## Vuex
@@ -225,7 +236,8 @@ If you plan to use the [Nuxt] Vue framework, you'll need special configuration. 
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue
 [DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
 [Nuxt]: https://nuxtjs.org/
+[TypeScript]: https://www.typescriptlang.org/
+[Vite]: https://github.com/vitejs/vite
