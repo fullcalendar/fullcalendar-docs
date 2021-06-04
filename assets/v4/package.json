@@ -16,7 +16,7 @@
     "@fullcalendar/resource-timeline": "^4.4.2",
     "@fullcalendar/rrule": "^4.4.2",
     "@fullcalendar/timegrid": "^4.4.2",
-    "@fullcalendar/timeline": "^4.4.2",
+    "@fullcalendar/timeline": "^4.4.3",
     "luxon": "^1.24.1",
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.31",
