@@ -11,20 +11,20 @@ This package is released under an MIT license, the same license the standard ver
 - [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
 - Example projects:
   - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue) (uses [Webpack] and [css-loader]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue)
-  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript) (uses [TypeScript] and [Vite]) <!-- - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript?file=/src/Demo.vue) -->
+  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript) (uses [TypeScript] and [Vite]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript?file=/src/Demo.vue)
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
 The first step is to install the Vue adapted. If using **Vue 2**:
 
 ```bash
-npm install --save @fullcalendar/vue
+npm install --save @fullcalendar/vue @fullcalendar/core
 ```
 
 If using **Vue 3**:
 
 ```bash
-npm install --save @fullcalendar/vue3
+npm install --save @fullcalendar/vue3 @fullcalendar/core
 ```
 
 Then install any additional FullCalendar plugins like `@fullcalendar/daygrid`
@@ -33,6 +33,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -68,6 +69,7 @@ Vue has the concept of "props" (via `v-bind` or `:`) versus "events" (via `v-on`
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -108,6 +110,7 @@ You can modify your calendar's options after initialization by reassigning them 
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -193,6 +196,7 @@ How do you use [FullCalendar Premium's]({{ site.baseurl }}/pricing) plugins with
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 
