@@ -25,9 +25,9 @@ You must then include the `FullCalendarModule` into your app's root module along
 ```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector. must go first
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
-import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { AppComponent } from './app.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
@@ -229,8 +229,8 @@ How do you use [FullCalendar Premium's]({{ site.baseurl }}/pricing) plugins with
 ```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'; // a plugin
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline'; // a plugin!
 import { AppComponent } from './app.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins

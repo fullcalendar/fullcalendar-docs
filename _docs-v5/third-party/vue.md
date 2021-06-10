@@ -57,6 +57,8 @@ export default {
 </template>
 ```
 
+It is recommended to import `@fullcalendar/core/vdom` before any other imports. This is especially important for [Vite]'s HMR to work. For more info, see [ticket #152](https://github.com/fullcalendar/fullcalendar-vue/issues/152).
+
 
 ## CSS
 

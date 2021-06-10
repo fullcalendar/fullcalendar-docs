@@ -26,8 +26,8 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 export default class DemoApp extends React.Component {
   render() {
@@ -72,9 +72,9 @@ A callback function can be passed into a React component and it will be called w
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
+import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
 export default class DemoApp extends React.Component {
 
@@ -103,8 +103,8 @@ There are many settings throughout the API for injecting custom content, like th
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 export default class DemoApp extends React.Component {
   render() {
@@ -214,8 +214,8 @@ How do you use [FullCalendar Premium's]({{ site.baseurl }}/pricing) plugins with
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline' // a plugin!
 
 export default class DemoApp extends React.Component {
   render() {
