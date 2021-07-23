@@ -15,9 +15,10 @@ FullCalendar Premium (also known as "FullCalendar Scheduler") is a collection of
 - [Vertical Resource View](vertical-resource-view) - display resources as columns
 - [Print Optimization](print) - improve how your calendar looks when printed
 
-A Premium plugin is initialized in the same way a typical Standard plugin would be initialized.
+A Premium plugin is initialized in the same way a typical standard plugin would be initialized:
 
-[Learn how to initialize a calendar &raquo;]({{ site.baseurl }}/docs/getting-started)
+- [**NPM/Yarn instructions**](initialize-es6#premium-plugins)
+- [**ZIP archives and CDN links**](initialize-globals#premium-bundle)
 
 
 ## Free Trial
@@ -31,5 +32,3 @@ var calendar = new Calendar(calendarEl, {
   schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
 });
 ```
-
-[Learn how to initialize a calendar &raquo;]({{ site.baseurl }}/docs/getting-started)
