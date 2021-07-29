@@ -3,9 +3,8 @@
 
 {% if jekyll.environment == "production" %}
   {% include fathom-analytics.html %}
-  {% include google-analytics.html %}
 {% else %}
-  <!-- no Google Analytics. need this comment for linting -->
+  <!-- not using Fathom Analytics. need this comment for linting -->
 {% endif %}
 
 {% if layout.needs_disqus_count %}

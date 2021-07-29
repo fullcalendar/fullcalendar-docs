@@ -10,7 +10,7 @@ It's possible to manually include the necessary `<script>` tags in the head of y
 
 First, obtain the standard `fullcalendar` bundle in one of the following ways:
 
-- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-{{ site.data.releases[0].version }}.zip')">fullcalendar-{{ site.data.releases[0].version }}.zip</a>
+- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-{{ site.data.releases[0].version }}.zip'>fullcalendar-{{ site.data.releases[0].version }}.zip</a>
 - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar)
 - **NPM:** `npm install fullcalendar`
 
@@ -58,7 +58,7 @@ The `fullcalendar` bundle's `main.js` and `main.css` files include the following
 
 First, obtain the premium `fullcalendar-scheduler` bundle in one of the following ways:
 
-- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip' onclick="ga('send', 'pageview', '/downloads/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip')">fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip</a>
+- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.releases[0].version }}/fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip'>fullcalendar-scheduler-{{ site.data.releases[0].version }}.zip</a>
 - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
 - **NPM:** `npm install fullcalendar-scheduler`
 
