@@ -141,7 +141,7 @@ resources: [
 
 ## Nested resources with a flat array
 
-An alternative method for specify child resources is via linking them together with the `parentId` property. This is often more pleasant when dealing with resource data that originates from a database.
+An alternative method for specifying child resources is via linking them together with the `parentId` property. This is often more pleasant when dealing with resource data that originates from a database.
 
 ```js
 resources: [
