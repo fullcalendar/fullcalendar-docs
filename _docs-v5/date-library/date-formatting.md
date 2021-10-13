@@ -107,6 +107,7 @@ There are additional properties you may use that are **not part of the native Da
 <tr>
 <th>week</th>
 <td>
+<code>'long'</code> will produce something like <code>Week 8</code><br>
 <code>'short'</code> will produce something like <code>Wk 8</code><br>
 <code>'narrow'</code> will produce something like <code>Wk8</code><br>
 <code>'numeric'</code> will produce something like <code>8</code><br>

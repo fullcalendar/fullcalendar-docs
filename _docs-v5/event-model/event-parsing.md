@@ -111,6 +111,13 @@ Here are all the available properties, **all of which are optional**:
   </tr>
 
   <tr>
+  <th>interactive</th>
+  <td markdown='1'>
+  Boolean. Whether or not the event is tabbable. Defaults to `true` if `url` is present, `false` otherwise. See [eventInteractive](eventInteractive) for more info.
+  </td>
+  </tr>
+
+  <tr>
   <th><div style='white-space:nowrap'>className or</div> classNames</th>
   <td markdown='1'>
   String or Array. A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
