@@ -60,6 +60,7 @@ children:
       - angular
   - title: Accessibility
     children:
+      - accessibility
       - touch
       - print
 ---
