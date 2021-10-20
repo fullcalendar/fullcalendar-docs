@@ -35,11 +35,6 @@ fullcalendar_react_repo: https://github.com/fullcalendar/fullcalendar-react
 fullcalendar_vue_repo: https://github.com/fullcalendar/fullcalendar-vue
 fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
 
-disqus_shortname: adamshawsblog
-
-paginate: 10
-paginate_path: /blog/page:num
-
 # ordered by how they should appear in UI
 available_versions:
 
@@ -82,11 +77,3 @@ collections:
 
   posts: # will output by default
     permalink: /blog/:year/:month/:title
-
-defaults:
-  # will apply default values to all posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: blog-post

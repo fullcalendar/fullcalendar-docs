@@ -7,10 +7,6 @@
   <!-- not using Fathom Analytics. need this comment for linting -->
 {% endif %}
 
-{% if layout.needs_disqus_count %}
-  <script id='dsq-count-scr' src='https://{{ site.disqus_shortname }}.disqus.com/count.js' async></script>
-{% endif %}
-
 {% for path in layout.assets %}
   {% if path contains '.js' %}
     <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
