@@ -14,7 +14,7 @@ do
   # would want to do `npm ci`
   # but server doesn't have it
   rm -rf node_modules
-  npm install
+  yarn install
 
   cd -
 done
