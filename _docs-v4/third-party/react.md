@@ -8,7 +8,7 @@ FullCalendar seamlessly integrates with the [React] JavaScript framework. It pro
 This component is built and maintained by [Josh Ruff](https://github.com/joshuaRuff) of [Sardius Media](http://sardius.media/) in partnership with the maintainers of FullCalendar. It is the official React connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
-- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
+- [Bug report instructions](/reporting-bugs)
 - [Example project][example project] leveraging [Webpack], [Babel], and [Sass] (the code in this guide loosely follows it)
 - [Runnable project](https://codesandbox.io/s/2z6wp2jozn) in a code playground
 
@@ -129,7 +129,7 @@ export default class DemoApp extends React.Component {
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's](/pricing) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
 
 ```jsx
 import React from 'react'

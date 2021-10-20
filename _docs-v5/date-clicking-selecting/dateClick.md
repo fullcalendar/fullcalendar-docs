@@ -92,7 +92,7 @@ The current [View Object](view-object).
 <tr>
 <th>resource</th>
 <td markdown='1'>
-If the current view is a resource-view, the [Resource Object](resource-object) that owns this date. Must be using one of the [resource plugins]({{ site.baseurl }}/pricing).
+If the current view is a resource-view, the [Resource Object](resource-object) that owns this date. Must be using one of the [resource plugins](/pricing).
 </td>
 </tr>
 
@@ -119,6 +119,6 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 ```
 
-Resources are a [premium feature]({{ site.baseurl }}/pricing).
+Resources are a [premium feature](/pricing).
 
 [See a demo of dateClick with resources](date-clicking-selecting-resource-demo).

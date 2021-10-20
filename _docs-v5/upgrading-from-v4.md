@@ -125,9 +125,9 @@ This guide outlines the changes between v4 and v5.
 
 **Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs)
 
-**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
+**Found a bug?** [Report it on the issue tracker](/reporting-bugs)
 
-**Have a comment?** [Comment on the latest blog post]({{ site.baseurl }}{% post_url 2020-06-21-v5-official %})
+**Have a comment?** [Comment on the latest blog post](/blog/2020/06/v5-official)
 
 </div>
 <div class='sidebar-layout__sidebar sidebar-layout__sidebar--bordered' id='toc' markdown='1'>
@@ -263,7 +263,7 @@ To use a bundle, do something like this:
 
 You'll still need to include the CSS file. You won't need to define the `plugins` array anymore.
 
-For initializing [scheduler]({{ site.baseurl }}/pricing), do something like this:
+For initializing [scheduler](/pricing), do something like this:
 
 ```html
 <link ref='fullcalendar-scheduler/main.css' rel='stylesheet' />

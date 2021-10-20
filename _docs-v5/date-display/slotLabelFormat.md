@@ -31,4 +31,4 @@ slotLabelFormat: [
 ]
 ```
 
-Timeline view is a [premium feature]({{ site.baseurl }}/pricing).
+Timeline view is a [premium feature](/pricing).

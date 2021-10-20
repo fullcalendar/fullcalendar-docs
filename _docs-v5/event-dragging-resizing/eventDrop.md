@@ -37,7 +37,7 @@ An [Event Object](event-object) that holds information about the event **before*
 <td markdown='1'>
 If the resource has changed, this is the [Resource Object](resource-object) the event **came from**.
 If the resource has not changed, this will be undefined.
-For use with the [resource plugins]({{ site.baseurl }}/pricing) only.
+For use with the [resource plugins](/pricing) only.
 </td>
 </tr>
 
@@ -46,7 +46,7 @@ For use with the [resource plugins]({{ site.baseurl }}/pricing) only.
 <td markdown='1'>
 If the resource has changed, this is the [Resource Object](resource-object) the event **went to**.
 If the resource has not changed, this will be undefined.
-For use with the [resource plugins]({{ site.baseurl }}/pricing) only.
+For use with the [resource plugins](/pricing) only.
 </td>
 </tr>
 

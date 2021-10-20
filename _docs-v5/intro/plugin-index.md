@@ -92,7 +92,7 @@ FullCalendar offers the following packages:
   <tr>
     <td>
       <strong>@fullcalendar/timeline</strong>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
     </td>
     <td>
       Offers <a href='timeline-view-no-resources'>Timeline views with <strong>no resource support</strong></a>:<br />
@@ -107,7 +107,7 @@ FullCalendar offers the following packages:
   <tr>
     <td>
       <strong>@fullcalendar/adaptive</strong>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
     </td>
     <td>
       Offers <a href='print'>improved printing support</a>.
@@ -117,7 +117,7 @@ FullCalendar offers the following packages:
   <tr>
     <td>
       <strong>@fullcalendar/resource-common</strong>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
     </td>
     <td>
       Offers base support for resources. Required for all resource-related plugins.
@@ -127,7 +127,7 @@ FullCalendar offers the following packages:
   <tr>
     <td>
       <strong>@fullcalendar/resource-daygrid</strong>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
     </td>
     <td>
       Offers <a href='resource-daygrid-view'>resource-enabled DayGrid</a> views:
@@ -141,7 +141,7 @@ FullCalendar offers the following packages:
   <tr>
     <td>
       <strong>@fullcalendar/resource-timegrid</strong>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
     </td>
     <td>
       Offers <a href='vertical-resource-view'>resource-enabled TimeGrid</a> views:
@@ -154,7 +154,7 @@ FullCalendar offers the following packages:
   <tr>
     <td>
       <strong>@fullcalendar/resource-timeline</strong>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
     </td>
     <td>
       Offers <a href='timeline-view'>resource-enabled Timeline</a> views:

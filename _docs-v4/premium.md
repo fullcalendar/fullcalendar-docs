@@ -12,7 +12,7 @@ FullCalendar "Scheduler" is the name for a collection of premium plugins. There 
 - [Vertical Resource View](vertical-resource-view) - good at displaying a fewer number of resources
 
 Scheduler is a premium product that has different licensing than the standard FullCalendar library.
-<a href='{{ site.baseurl }}/license' class='more-link'>More about licensing</a>
+<a href='/license' class='more-link'>More about licensing</a>
 
 
 ## Free Trial

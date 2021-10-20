@@ -8,7 +8,7 @@ FullCalendar seamlessly integrates with the [Angular] 7. It provides a component
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
-- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
+- [Bug report instructions](/reporting-bugs)
 - [Example project][example project]. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. The code in this guide loosely follows it.
 - [Runnable project](https://stackblitz.com/github/fullcalendar/fullcalendar-example-projects/tree/v4/angular) in a code playground
 
@@ -219,7 +219,7 @@ export class AppComponent {
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's]({{ site.baseurl }}/pricing) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's](/pricing) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
 
 ```js
 import { Component } from '@angular/core';

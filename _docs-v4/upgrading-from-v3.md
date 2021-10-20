@@ -53,9 +53,9 @@ Version 4 is the biggest FullCalendar release to date. It sheds a number of outd
 
 **Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs)
 
-**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
+**Found a bug?** [Report it on the issue tracker](/reporting-bugs)
 
-**Have a comment?** [Comment on the blog post]({{ site.baseurl }}/blog/2019/03/v4-officially-released)
+**Have a comment?** [Comment on the blog post](/blog/2019/03/v4-officially-released)
 
 </div>
 <div class='sidebar-layout__sidebar sidebar-layout__sidebar--bordered' id='toc' markdown='1'>
@@ -173,7 +173,7 @@ Also, many of the views have been renamed:
 
 ## Scheduler
 
-The [premium Scheduler product]({{ site.baseurl }}/pricing) has been broken into a number of separate plugins. Also, the names and meanings of each view have changed.
+The [premium Scheduler product](/pricing) has been broken into a number of separate plugins. Also, the names and meanings of each view have changed.
 
 Previously, to display a resource view, you would specify the `resources` option, and if working with vertical resource view, you might specify `groupByResource` or `groupByDateAndResource` as well. In v4, things are much more explicit. To display a resource view, you must choose one of the following views:
 

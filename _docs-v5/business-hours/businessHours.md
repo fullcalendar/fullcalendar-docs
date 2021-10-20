@@ -39,6 +39,6 @@ businessHours: [ // specify an array instead
 ]
 ```
 
-If you are using one of the resource views from the [premium plugins]({{ site.baseurl }}/pricing), you may specify business hours on a per-resource basis. See [Resource parsing](resource-parsing) docs for more information.
+If you are using one of the resource views from the [premium plugins](/pricing), you may specify business hours on a per-resource basis. See [Resource parsing](resource-parsing) docs for more information.
 
 More information on specifying times can be found in the [Duration](duration-object) article.

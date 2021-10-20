@@ -98,7 +98,7 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
       <strong>@fullcalendar/timeline</strong>
       <code>timeline</code>
     </td>
@@ -116,7 +116,7 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
       <strong>@fullcalendar/resource-common</strong>
     </td>
     <td>
@@ -128,7 +128,7 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
       <strong>@fullcalendar/resource-daygrid</strong>
       <code>resourceDayGrid</code>
     </td>
@@ -145,7 +145,7 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
       <strong>@fullcalendar/resource-timegrid</strong>
       <code>resourceTimeGrid</code>
     </td>
@@ -161,7 +161,7 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
-      <a href='{{ site.baseurl }}/pricing' class='badge'>Premium</a>
+      <a href='/pricing' class='badge'>Premium</a>
       <strong>@fullcalendar/resource-timeline</strong>
       <code>resourceTimeline</code>
     </td>

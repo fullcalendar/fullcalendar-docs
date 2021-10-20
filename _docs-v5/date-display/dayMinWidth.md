@@ -11,6 +11,6 @@ number of pixels, undefined
 
 For [vertical resource view](vertical-resource-view), daygrid view, and timegrid view.
 
-Requires the `@fullcalendar/scrollgrid` [premium plugin]({{ site.baseurl }}/pricing).
+Requires the `@fullcalendar/scrollgrid` [premium plugin](/pricing).
 
 <a href='dayMinWidth-demo' class='more-link'>View a live example</a>

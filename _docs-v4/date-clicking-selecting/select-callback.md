@@ -68,7 +68,7 @@ The native JavaScript event with low-level information such as click coordinates
 <tr>
 <th>resource</th>
 <td markdown='1'>
-[Resource object](resource-object). If the current view is a resource view, this is the [Resource object](resource-object) that was selected. This is only available when using one of the [resource plugins]({{ site.baseurl }}/pricing).
+[Resource object](resource-object). If the current view is a resource view, this is the [Resource object](resource-object) that was selected. This is only available when using one of the [resource plugins](/pricing).
 </td>
 </tr>
 

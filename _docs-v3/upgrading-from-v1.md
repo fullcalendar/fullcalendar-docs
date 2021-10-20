@@ -131,7 +131,7 @@ Other affected locale-related options:
 <tr><td><a href='weekNumberCalculation'><code>weekNumberCalculation</code></a></td><td>new <code>"local"</code> option, which is now the default</td></tr>
 </table>
 
-**[View a live demo!]({{ site.baseurl }}/releases/fullcalendar/2.9.1/demos/languages.html)**
+**[View a live demo!](/releases/fullcalendar/2.9.1/demos/languages.html)**
 
 ## Timezones
 
@@ -158,7 +158,7 @@ The
 <a href='now'><code>now</code></a>
 options have been added as well.
 
-**[View a live demo!]({{ site.baseurl }}/releases/fullcalendar/2.9.1/demos/timezones.html)**
+**[View a live demo!](/releases/fullcalendar/2.9.1/demos/timezones.html)**
 
 ## Requesting and Receiving Events
 
