@@ -6,7 +6,7 @@ include:
 # (except for dotfiles which are automatically excluded)
 exclude:
   - node_modules
-  - bin
+  - scripts
   - src
   - vendor # rubygems in TravisCI
   - Gemfile
@@ -14,7 +14,6 @@ exclude:
   - package.json
   - package-lock.json
   - webpack.config.js
-  - gulpfile.js
   - README.md
 
 plugins:
