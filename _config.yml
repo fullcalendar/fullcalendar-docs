@@ -74,6 +74,3 @@ collections:
   docs-v1:
     output: true
     permalink: /docs/v1/:slug
-
-  posts: # will output by default
-    permalink: /blog/:year/:month/:title
