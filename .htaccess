@@ -30,6 +30,7 @@ RewriteRule ^v4/release-notes v4/upgrading-from-v3 [R=301,L]
 
 # favicon legacy paths old browsers might request
 # needed after we fully convert to gatsby???
+# TODO: move to root repo because it handles root urls
 RewriteRule ^(favicon|browserconfig|mstile)(\.|\-).*$ assets/favicon/$0 [L]
 
 # TODO: add not about how this ends up in _site dir
