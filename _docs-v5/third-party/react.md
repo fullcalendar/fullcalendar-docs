@@ -5,7 +5,7 @@ title_for_landing: React
 
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-This is more than a mere "connector". It tells the core FullCalendar package to begin rendering with **React** virtual DOM nodes as opposed to the [Preact](https://preactjs.com/) nodes it normally uses, transforming FullCalendar into a "real" React component. You can learn a bit more [from this blog post]({{ site.baseurl }}{% post_url 2020-05-20-react-ts-v5-beta %}) (more info to come).
+This is more than a mere "connector". It tells the core FullCalendar package to begin rendering with **React** virtual DOM nodes as opposed to the [Preact](https://preactjs.com/) nodes it normally uses, transforming FullCalendar into a "real" React component. You can learn a bit more [from this blog post](/blog/2020/05/react-ts-v5-beta) (more info to come).
 
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 

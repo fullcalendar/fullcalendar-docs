@@ -25,6 +25,8 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+baseurl: /docs
+
 fullcalendar_org: https://github.com/fullcalendar
 fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
 fullcalendar_scheduler_repo: https://github.com/fullcalendar/fullcalendar-scheduler
@@ -58,16 +60,16 @@ collections:
 
   docs-v5:
     output: true
-    permalink: /docs/:slug
+    permalink: /:slug
 
   docs-v4:
     output: true
-    permalink: /docs/v4/:slug
+    permalink: /v4/:slug
 
   docs-v3:
     output: true
-    permalink: /docs/v3/:slug
+    permalink: /v3/:slug
 
   docs-v1:
     output: true
-    permalink: /docs/v1/:slug
+    permalink: /v1/:slug

@@ -51,7 +51,7 @@ Version 4 is the biggest FullCalendar release to date. It sheds a number of outd
 
 <br />
 
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs)
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/v4)
 
 **Found a bug?** [Report it on the issue tracker](/reporting-bugs)
 

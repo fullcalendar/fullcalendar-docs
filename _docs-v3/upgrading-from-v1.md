@@ -3,7 +3,7 @@ title: Upgrading to v2
 layout: text
 ---
 
-FullCalendar version 2.0 ([full documentation]({{ site.baseurl }}/docs))
+FullCalendar version 2.0 ([full documentation]({{ site.baseurl }}/v3#v2))
 offers huge improvements in regards to timezones, internationalization,
 and date manipulation. Much of this is due to intergration with [MomentJS](http://momentjs.com),
 which is now a dependency.
