@@ -22,7 +22,7 @@ disable_base_styles: true
       editable: true,
       selectable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json',
+      events: '/api/demo-feeds/events.json',
 
       loading: function(bool) {
         if (bool) {
@@ -39,7 +39,7 @@ disable_base_styles: true
 
     // load the list of available timezones, build the <select> options
     // it's highly encouraged to use your own AJAX lib instead of using FullCalendar's internal util
-    FullCalendar.requestJson('GET', '{{ site.data.demo_feed_baseurl }}/demo-timezones.json', {}, function(timeZones) {
+    FullCalendar.requestJson('GET', '/api/demo-feeds/timezones.json', {}, function(timeZones) {
       timeZones.forEach(function(timeZone) {
         var optionEl;
 

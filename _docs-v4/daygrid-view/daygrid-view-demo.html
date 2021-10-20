@@ -18,7 +18,7 @@ plugins: [ interaction, daygrid ]
         right: 'dayGridDay,dayGridWeek'
       },
       editable: true,
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '/api/demo-feeds/events.json'
     });
 
     calendar.render();

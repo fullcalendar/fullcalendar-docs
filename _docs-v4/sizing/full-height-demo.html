@@ -16,7 +16,7 @@ plugins: [ daygrid ]
       timeZone: 'UTC',
       defaultView: 'dayGridMonth',
       height: 'parent',
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '/api/demo-feeds/events.json'
     });
 
     calendar.render();

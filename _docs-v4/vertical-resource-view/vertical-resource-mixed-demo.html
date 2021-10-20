@@ -33,7 +33,7 @@ plugins: [ interaction, daygrid, timegrid, resource-common, resource-daygrid, re
         { id: 'c', title: 'Room C', eventColor: 'orange' },
         { id: 'd', title: 'Room D', eventColor: 'red' }
       ],
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=4&single-day'
+      events: '/api/demo-feeds/events.json?with-resources=4&single-day'
     });
 
     calendar.render();

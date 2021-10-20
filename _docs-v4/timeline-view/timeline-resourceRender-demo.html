@@ -20,7 +20,7 @@ plugins: [ timeline, resource-common, resource-timeline ]
         right: 'resourceTimelineDay,resourceTimelineWeek'
       },
       defaultView: 'resourceTimelineDay',
-      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json',
+      resources: '/api/demo-feeds/resources.json',
 
       resourceRender: function(info) {
         var questionMark = document.createElement('strong');

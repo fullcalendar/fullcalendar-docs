@@ -29,7 +29,7 @@ plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegr
         { id: 'a', title: 'Room A' },
         { id: 'b', title: 'Room B' }
       ],
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=2'
+      events: '/api/demo-feeds/events.json?with-resources=2'
     });
 
     calendar.render();

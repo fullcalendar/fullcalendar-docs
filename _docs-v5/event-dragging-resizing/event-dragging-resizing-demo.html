@@ -17,7 +17,7 @@ layout: demo-v5
       },
       editable: true,
       dayMaxEvents: true, // when too many events in a day, show the popover
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'
+      events: '/api/demo-feeds/events.json?overload-day'
     });
 
     calendar.render();
