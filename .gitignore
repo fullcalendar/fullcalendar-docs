@@ -1,15 +1,16 @@
 # NOTE: keep in sync with _config.yml's exclude
 
 # jekyll
-_site
-.jekyll-metadata
-.sass-cache
+/_site
+/.jekyll-metadata
+/.sass-cache
 
 # npm
+# (applies to FullCalendar versions in assets too)
 node_modules
 
 # rubygems in TravisCI
-vendor
+/vendor
 
 # built assets
-assets/*.*
+/assets/*.*

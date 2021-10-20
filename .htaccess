@@ -1,0 +1,36 @@
+
+# disable directory indexes
+Options -Indexes
+
+# works???
+ErrorDocument 403 /public/403.html
+ErrorDocument 404 /public/404.html
+
+# never serve hidden files like .htaccess and .git*
+# first slash means start-of-directory
+RedirectMatch 404 "/\."
+
+RewriteEngine on
+
+# remove www
+RewriteCond %{HTTP_HOST}%{REQUEST_URI} ^www\.(.*)$
+RewriteRule .* https://%1 [R=301,L]
+
+# for relative redirects
+# needed???
+RewriteBase /docs/
+
+# doc urls for prereleases that became real releases
+# last rule here works???
+RewriteRule ^v5/(.*) $1 [R=301,L]
+RewriteRule ^v5 . [R=301,L]
+
+# renamed release-notes
+RewriteRule ^v4/release-notes v4/upgrading-from-v3 [R=301,L]
+
+# favicon legacy paths old browsers might request
+# needed after we fully convert to gatsby???
+RewriteRule ^(favicon|browserconfig|mstile)(\.|\-).*$ assets/favicon/$0 [L]
+
+# TODO: add not about how this ends up in _site dir
+# TODO: test all docs urls (/docs/, /docs/v5/, /docs/v3/, etc)
