@@ -2,6 +2,9 @@
 # disable directory indexes
 Options -Indexes
 
+# disable forcing slashes to directory URLs
+DirectorySlash Off
+
 # works???
 ErrorDocument 403 /public/403.html
 ErrorDocument 404 /public/404.html
@@ -11,14 +14,23 @@ ErrorDocument 404 /public/404.html
 RedirectMatch 404 "/\."
 
 RewriteEngine on
+RewriteOptions AllowNoSlash
 
 # remove www
 RewriteCond %{HTTP_HOST}%{REQUEST_URI} ^www\.(.*)$
 RewriteRule .* https://%1 [R=301,L]
 
-# for relative redirects
-# needed???
-RewriteBase /docs/
+# root index
+# using `DirectorySlash Off` (which requires `RewriteOptions AllowNoSlash`),
+# matches against a real file path in RewriteRule, so use RewriteCond instead.
+RewriteCond %{REQUEST_URI} ^/docs$
+RewriteRule .* index.html [L]
+
+# indexes for specific versions
+RewriteRule ^v\d+$ $0/index.html [L]
+
+# articles (no file extension)
+RewriteRule ^(v\d+/)?([^.]+)$ $0.html [L]
 
 # doc urls for prereleases that became real releases
 # last rule here works???
@@ -35,3 +47,4 @@ RewriteRule ^(favicon|browserconfig|mstile)(\.|\-).*$ assets/favicon/$0 [L]
 
 # TODO: add not about how this ends up in _site dir
 # TODO: test all docs urls (/docs/, /docs/v5/, /docs/v3/, etc)
+# TODO: what about caching? emulate what's in /api/
