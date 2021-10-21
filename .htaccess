@@ -1,27 +1,42 @@
+################
+# General Config
+################
 
-# disable directory indexes
+# disables auto-listing directory contents
 Options -Indexes
-
-# disable forcing slashes to directory URLs
-# causes resolution of DirectoryIndex (usually index.html) to break, thus the rewrite rule below
-# FYI, we tried `RewriteOptions AllowNoSlash` but causes RewriteRule to sometimes match against
-# a real filepath, not a URL!
-DirectorySlash Off
 
 # works???
 ErrorDocument 403 /public/403.html
 ErrorDocument 404 /public/404.html
 
-# never serve hidden files like .htaccess and .git*
-# first slash means start-of-directory
-RedirectMatch 404 "/\."
+# disable forcing slashes on directory URLs
+# (causes resolution of index.html to break, thus the RewriteRule below)
+DirectorySlash Off
 
 RewriteEngine on
 
-# remove www
-# TODO: use the technique gatsby uses?
-RewriteCond %{HTTP_HOST}%{REQUEST_URI} ^www\.(.*)$
-RewriteRule .* https://%1 [R=301,L]
+# allows mod_rewrite on a direct request to current directory, despite `DirectorySlash Off`
+RewriteOptions AllowNoSlash
+
+##################
+# General Rewrites
+##################
+
+# prevents serving hidden files like .htaccess and .git
+# (leading slash means start-of-directory)
+RedirectMatch 404 "/\."
+
+# removes www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+
+# removes trailing slashes
+RewriteCond %{REQUEST_URI} ^(/.*)/$
+RewriteRule .* %1 [R=301,L]
+
+#######################
+# App-Specific Rewrites
+#######################
 
 # directory indexes (necessary because of `DirectorySlash Off`)
 RewriteCond %{REQUEST_FILENAME} -d
