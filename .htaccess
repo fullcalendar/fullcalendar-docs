@@ -3,6 +3,9 @@
 Options -Indexes
 
 # disable forcing slashes to directory URLs
+# causes resolution of DirectoryIndex (usually index.html) to break, thus the rewrite rule below
+# FYI, we tried `RewriteOptions AllowNoSlash` but causes RewriteRule to sometimes match against
+# a real filepath, not a URL!
 DirectorySlash Off
 
 # works???
@@ -14,23 +17,19 @@ ErrorDocument 404 /public/404.html
 RedirectMatch 404 "/\."
 
 RewriteEngine on
-RewriteOptions AllowNoSlash
 
 # remove www
+# TODO: use the technique gatsby uses?
 RewriteCond %{HTTP_HOST}%{REQUEST_URI} ^www\.(.*)$
 RewriteRule .* https://%1 [R=301,L]
 
-# root index
-# using `DirectorySlash Off` (which requires `RewriteOptions AllowNoSlash`),
-# matches against a real file path in RewriteRule, so use RewriteCond instead.
-RewriteCond %{REQUEST_URI} ^/docs$
-RewriteRule .* index.html [L]
+# directory indexes (necessary because of `DirectorySlash Off`)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .* $0/index.html [L]
 
-# indexes for specific versions
-RewriteRule ^v\d+$ $0/index.html [L]
-
-# articles (no file extension)
-RewriteRule ^(v\d+/)?([^.]+)$ $0.html [L]
+# articles (matches any nonexistent files)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* $0.html [L]
 
 # doc urls for prereleases that became real releases
 # last rule here works???
