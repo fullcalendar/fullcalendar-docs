@@ -16,10 +16,6 @@ exclude:
   - webpack.config.js
   - README.md
 
-plugins:
-  - jekyll-paginate
-  - jekyll-archives
-
 markdown: kramdown
 kramdown:
   input: GFM
