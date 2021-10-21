@@ -39,6 +39,9 @@ RewriteRule .* %1 [R=301,L]
 # # App-Specific Rewrites
 # #######################
 
+# short-circuit already-rewritten HTML paths
+RewriteRule \.html$ - [L]
+
 # directories (necessary because of `DirectorySlash Off`)
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule .* $0/index.html [L]
