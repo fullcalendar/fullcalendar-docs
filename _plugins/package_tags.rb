@@ -98,7 +98,7 @@ def query_package_release(arg_str)
   base_url =
     if ENV['JEKYLL_ENV'] === 'production'
     then "https://cdn.jsdelivr.net/npm/#{package_name}@#{version}"
-    else "/#{dir}" # TODO: use site.baseurl
+    else "/docs/#{dir}" # TODO: use site.baseurl
     end
 
   {
