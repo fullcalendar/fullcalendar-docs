@@ -13,7 +13,7 @@
     "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
   },
   "scripts": {
-    "install": "bundle install",
+    "install-other": "bundle install",
     "build": "yarn run webpack-build && yarn run jekyll-build",
     "watch": "concurrently --raw 'yarn run webpack-watch' 'yarn run jekyll-watch'",
     "clean": "yarn run webpack-clean && yarn run jekyll-clean",
