@@ -2,7 +2,15 @@
 title: Dynamically switch between timezones
 layout: demo-v4
 disable_base_styles: true
-plugins: [ interaction, daygrid, timegrid, list ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
 ---
 <script>
 

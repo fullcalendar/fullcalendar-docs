@@ -18,7 +18,7 @@
     "build": "yarn run webpack-build && yarn run jekyll-build",
     "clean": "yarn run webpack-clean && yarn run jekyll-clean",
     "jekyll-dev": "yarn run jekyll-clean && bundle exec jekyll serve --watch --incremental",
-    "jekyll-build": "export JEKYLL_ENV=production && bundle exec jekyll build",
+    "jekyll-build": "JEKYLL_ENV=production bundle exec jekyll build",
     "jekyll-clean": "bundle exec jekyll clean",
     "webpack-dev": "webpack --watch",
     "webpack-build": "webpack --mode production",

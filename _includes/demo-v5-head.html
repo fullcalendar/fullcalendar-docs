@@ -27,28 +27,20 @@
 {% endunless %}
 
 {% if page.needs_premium %}
-  {% package_css_tag fullcalendar-scheduler 5 %}
-  {% package_js_tag fullcalendar-scheduler 5 %}
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5/main.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5/main.min.js'></script>
 
   {% if page.needs_locales %}
-    <script src='{% package_baseurl fullcalendar-scheduler 5 %}/locales-all.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5/locales-all.min.js'></script>
   {% endif %}
-
-  {% for plugin_name in page.extra_plugins %}
-    <script src='{% package_baseurl fullcalendar-scheduler 5 %}/{{ plugin_name }}.js'></script>
-  {% endfor %}
 
 {% else %}
-  {% package_css_tag fullcalendar 5 %}
-  {% package_js_tag fullcalendar 5 %}
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5/main.min.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5/main.min.js'></script>
 
   {% if page.needs_locales %}
-    <script src='{% package_baseurl fullcalendar 5 %}/locales-all.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5/locales-all.min.js'></script>
   {% endif %}
-
-  {% for plugin_name in page.extra_plugins %}
-    <script src='{% package_baseurl fullcalendar 5 %}/{{ plugin_name }}.js'></script>
-  {% endfor %}
 
 {% endif %}
 

@@ -2,7 +2,13 @@
 title: Enable event dragging/resizing
 description: You can drag events to other days and resize the end date
 layout: demo-v4
-plugins: [ interaction, daygrid, timegrid ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 <script>
 

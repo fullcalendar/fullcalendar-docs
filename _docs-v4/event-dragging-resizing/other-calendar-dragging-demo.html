@@ -1,7 +1,11 @@
 ---
 title: Dragging Events Between Two Calendars
 layout: demo-v4
-plugins: [ interaction, daygrid ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>

@@ -3,7 +3,15 @@ title: Dynamically switch between locales
 layout: demo-v4
 disable_base_styles: true
 needs_locales: true
-plugins: [ interaction, daygrid, timegrid, list ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
 ---
 <script>
 

@@ -2,7 +2,10 @@
 title: Event tooltip with eventRender
 description: Event tooltip with eventRender and Tooltip.js
 layout: demo-v4
-plugins: [ daygrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 {% include popper-css.html %}

@@ -1,7 +1,20 @@
 ---
 description: demo of scheduler plugin views
 layout: demo-v4
-plugins: [ interaction, daygrid, timegrid, timeline, resource-common, resource-daygrid, resource-timegrid, resource-timeline ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-daygrid'
+  - '@fullcalendar/resource-timegrid'
+  - '@fullcalendar/resource-timeline'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-timeline'
 ---
 {% assign ymd = site.time | date: '%Y-%m-%d' %}
 <script>

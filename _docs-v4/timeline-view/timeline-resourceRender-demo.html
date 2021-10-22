@@ -2,7 +2,13 @@
 title: Using resourceRender with a popover in timeline-view
 description: Mouseover each "(?)" to see a popover that was attached via resourceRender
 layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline ]
+plugin_js:
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-timeline'
+plugin_css:
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-timeline'
 ---
 {% include popper-css.html %}
 <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
