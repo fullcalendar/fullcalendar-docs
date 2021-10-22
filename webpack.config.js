@@ -1,7 +1,7 @@
 const path = require('path')
 const globby = require('globby')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = (env, options) => {
   let isProduction = options.mode === 'production'
@@ -17,7 +17,7 @@ module.exports = (env, options) => {
     ],
     optimization: {
       // https://github.com/webpack-contrib/mini-css-extract-plugin#minimizing-for-production
-      minimizer: isProduction ? [ new OptimizeCSSAssetsPlugin({}) ] : [],
+      minimizer: isProduction ? [ new CssMinimizerPlugin({}) ] : [],
     },
     module: {
       rules: [
