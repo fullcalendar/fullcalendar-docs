@@ -14,16 +14,16 @@
   },
   "scripts": {
     "install-other": "bundle install",
+    "dev": "concurrently --raw 'yarn run webpack-dev' 'yarn run jekyll-dev'",
     "build": "yarn run webpack-build && yarn run jekyll-build",
-    "watch": "concurrently --raw 'yarn run webpack-watch' 'yarn run jekyll-watch'",
     "clean": "yarn run webpack-clean && yarn run jekyll-clean",
+    "jekyll-dev": "yarn run jekyll-clean && bundle exec jekyll serve --watch --incremental",
     "jekyll-build": "export JEKYLL_ENV=production && bundle exec jekyll build",
-    "jekyll-watch": "yarn run jekyll-clean && bundle exec jekyll serve --watch --incremental",
     "jekyll-clean": "bundle exec jekyll clean",
+    "webpack-dev": "webpack --watch",
     "webpack-build": "webpack --mode production",
-    "webpack-watch": "webpack --watch",
     "webpack-clean": "rm -rf assets/*.*",
-    "lint": "./scripts/lint.sh"
+    "lint": "bash scripts/lint.sh"
   },
   "devDependencies": {
     "concurrently": "^4.1.2",

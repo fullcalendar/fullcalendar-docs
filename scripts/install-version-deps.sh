@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
-
-set -e # always immediately exit upon error
+# always immediately exit upon error
+set -e
 
 cd "`dirname $0`/.." # start in project root
 
