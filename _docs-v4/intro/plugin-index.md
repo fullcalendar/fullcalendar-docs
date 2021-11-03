@@ -187,7 +187,7 @@ FullCalendar offers the following packages:
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/bootstrap'>Yarn</a></td>
     <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.4.2/main.min.js'>JS</a></td>
-    <td>n/a</td>
+    <td><a href='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.4.2/main.min.css'>CSS</a></td>
   </tr>
   <tr>
     <td>
