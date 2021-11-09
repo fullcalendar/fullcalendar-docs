@@ -25,6 +25,16 @@
     "webpack-clean": "bash scripts/clean.sh",
     "lint": "bash scripts/lint.sh"
   },
+  "dependencies": {
+    "@fullcalendar/bootstrap": "~5.5.0",
+    "@fullcalendar/core": "~5.5.0",
+    "@fullcalendar/daygrid": "~5.5.0",
+    "@fullcalendar/interaction": "~5.5.0",
+    "@fullcalendar/list": "~5.5.0",
+    "@fullcalendar/resource-timegrid": "~5.5.0",
+    "@fullcalendar/resource-timeline": "~5.5.0",
+    "@fullcalendar/timegrid": "~5.5.0"
+  },
   "devDependencies": {
     "concurrently": "^4.1.2",
     "css-loader": "^2.1.1",
