@@ -28,8 +28,8 @@ export default class extends Demo {
       },
       editable: true,
       resourceLabelText: 'Rooms',
-      resources: '/demo-resources.json?with-nesting&with-colors', // TODO: use BASE_URL
-      events: '/demo-events.json?single-day&for-resource-timeline' // TODO: use BASE_URL
+      resources: '/api/demo-feeds/resources.json?with-nesting&with-colors', // TODO: use BASE_URL
+      events: '/api/demo-feeds/events.json?single-day&for-resource-timeline' // TODO: use BASE_URL
     })
   }
 
