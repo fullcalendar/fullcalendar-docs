@@ -33,7 +33,8 @@
     "@fullcalendar/list": "~5.5.0",
     "@fullcalendar/resource-timegrid": "~5.5.0",
     "@fullcalendar/resource-timeline": "~5.5.0",
-    "@fullcalendar/timegrid": "~5.5.0"
+    "@fullcalendar/timegrid": "~5.5.0",
+    "accordion": "^3.0.2"
   },
   "devDependencies": {
     "concurrently": "^4.1.2",

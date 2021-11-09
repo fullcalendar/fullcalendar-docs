@@ -22,6 +22,13 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
+          test: /\.css$/,
+          use: [
+            { loader: MiniCssExtractPlugin.loader },
+            { loader: 'css-loader' },
+          ]
+        },
+        {
           test: /\.scss$/,
           use: [
             { loader: MiniCssExtractPlugin.loader },

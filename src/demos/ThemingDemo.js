@@ -1,4 +1,4 @@
-import { querySelectorAll } from 'fullcalendar-site-static/lib/util'
+import { querySelectorAll } from '../lib/util'
 import Demo from './Demo'
 
 const FOREIGN_URL_RE = /^\w+:\/\//

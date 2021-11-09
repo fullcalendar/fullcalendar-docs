@@ -1,7 +1,7 @@
 import { Accordion } from 'accordion'
 import 'accordion/src/accordion.css'
 import './styles/demos.scss'
-import { htmlEscape, querySelectorAll } from 'fullcalendar-site-static/lib/util'
+import { htmlEscape, querySelectorAll } from './lib/util'
 import DragAndDropDemo from './demos/DragAndDropDemo'
 import SelectableDemo from './demos/SelectableDemo'
 import BgEventDemo from './demos/BgEventDemo'
