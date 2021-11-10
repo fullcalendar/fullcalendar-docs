@@ -7,8 +7,8 @@ Options -Indexes
 
 # error pages
 # (leading slash spawns internal request)
-ErrorDocument 404 /403
-ErrorDocument 404 /404
+ErrorDocument 404 /api/404.php
+ErrorDocument 403 /403/index.html
 
 # disable forcing slashes on directory URLs
 # (causes resolution of index.html to break, thus the RewriteRule below)
