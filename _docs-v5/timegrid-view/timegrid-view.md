@@ -51,7 +51,7 @@ Or you can choose to initialized the TimeGrid views [as a global bundle](initial
 var calendar = new FullCalendar.Calendar(calendarEl, {
   initialView: 'timeGridWeek'
 });
-...
+....
 </script>
 ```
 
