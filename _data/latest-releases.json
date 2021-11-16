@@ -1,0 +1,8 @@
+{
+  "v5": "5.10.1",
+  "v4": "4.4.3",
+  "v3": {
+    "fullcalendar": "3.10.5",
+    "fullcalendar-scheduler": "1.10.4"
+  }
+}
