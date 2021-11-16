@@ -1,9 +1,0 @@
-{
-  "private": true,
-  "dependencies": {
-    "fullcalendar": "^3.10.3",
-    "fullcalendar-scheduler": "^1.10.2",
-    "jquery": "^3.5.0",
-    "moment": "^2.24.0"
-  }
-}
