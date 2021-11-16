@@ -41,6 +41,6 @@ function initCalendar() {
     },
     navLinks: true, // can click day/week names to navigate views
     dayMaxEvents: true, // allow "more" link when too many events
-    events: '/api/demo-feeds/events.json?overload-day' // TODO: use BASE_URL somehow
+    events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?overload-day' // TODO: use BASE_URL somehow
   })
 }

@@ -37,11 +37,11 @@ needs_premium: true
       //
       // 6. Paste this URL below:
       //
-      resources: '/api/demo-feeds/resources.json?max=4',
+      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json?max=4',
 
       // 7. do the same for the events JSON feed:
       //
-      events: '/api/demo-feeds/events.json?with-resources'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?with-resources'
 
       // 8. Then, enter a date for initialDate that best displays your events:
       //

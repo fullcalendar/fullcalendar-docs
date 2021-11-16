@@ -15,7 +15,7 @@ layout: demo-v5
         center: 'title',
         right: 'timeGridWeek,timeGridDay'
       },
-      events: '/api/demo-feeds/events.json'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

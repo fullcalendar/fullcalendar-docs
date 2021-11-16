@@ -20,8 +20,8 @@ needs_premium: true
       editable: true,
       eventOverlap: false,
       resourceAreaHeaderContent: 'Rooms',
-      resources: '/api/demo-feeds/resources.json?with-nesting&with-colors',
-      events: '/api/demo-feeds/events.json?single-day&for-resource-timeline'
+      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting&with-colors',
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline'
     });
 
     calendar.render();

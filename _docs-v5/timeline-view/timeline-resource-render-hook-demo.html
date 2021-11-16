@@ -19,7 +19,7 @@ needs_premium: true
         right: 'resourceTimelineDay,resourceTimelineWeek'
       },
       initialView: 'resourceTimelineDay',
-      resources: '/api/demo-feeds/resources.json',
+      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json',
 
       resourceLabelDidMount: function(info) {
         var questionMark = document.createElement('strong');

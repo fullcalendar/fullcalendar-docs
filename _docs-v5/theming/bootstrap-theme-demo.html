@@ -19,7 +19,7 @@ layout: demo-v5
       },
       weekNumbers: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: '/api/demo-feeds/events.json'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

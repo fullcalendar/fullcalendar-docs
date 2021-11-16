@@ -22,7 +22,7 @@ plugin_css:
         right: 'dayGridDay,dayGridWeek'
       },
       editable: true,
-      events: '/api/demo-feeds/events.json'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

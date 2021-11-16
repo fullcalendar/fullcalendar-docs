@@ -8,7 +8,7 @@ layout: demo-v3
 
     $('#calendar').fullCalendar({
       defaultView: 'month',
-      events: '/api/demo-feeds/events.json'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
   });

@@ -36,7 +36,7 @@ plugin_css:
         { id: 'a', title: 'Room A' },
         { id: 'b', title: 'Room B' }
       ],
-      events: '/api/demo-feeds/events.json?with-resources=2'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?with-resources=2'
     });
 
     calendar.render();

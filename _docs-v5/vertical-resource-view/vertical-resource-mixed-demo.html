@@ -32,7 +32,7 @@ needs_premium: true
         { id: 'c', title: 'Room C', eventColor: 'orange' },
         { id: 'd', title: 'Room D', eventColor: 'red' }
       ],
-      events: '/api/demo-feeds/events.json?with-resources=4&single-day'
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?with-resources=4&single-day'
     });
 
     calendar.render();

@@ -25,8 +25,8 @@ needs_scheduler: true
         }
       },
       resourceLabelText: 'Rooms',
-      resources: '/api/demo-feeds/resources.json?with-nesting',
-      events: '/api/demo-feeds/events.json?with-resources'
+      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting',
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?with-resources'
     });
 
   });

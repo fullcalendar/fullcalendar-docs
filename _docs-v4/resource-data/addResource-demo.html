@@ -41,8 +41,8 @@ plugin_css:
       aspectRatio: 1.5,
       defaultView: 'resourceTimelineDay',
       resourceLabelText: 'Rooms',
-      resources: '/api/demo-feeds/resources.json?with-nesting',
-      events: '/api/demo-feeds/events.json?single-day&for-resource-timeline'
+      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting',
+      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline'
     });
 
     calendar.render();
