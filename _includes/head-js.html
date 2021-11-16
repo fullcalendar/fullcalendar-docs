@@ -1,11 +1,7 @@
 
 {% assign cachebuster = site.time | date: '%s' %}
 
-{% if jekyll.environment == "production" %}
-  {% include fathom-analytics.html %}
-{% else %}
-  <!-- not using Fathom Analytics. need this comment for linting -->
-{% endif %}
+{% include fathom-analytics.html %}
 
 {% for path in layout.assets %}
   {% if path contains '.js' %}
