@@ -15,8 +15,8 @@ needs_scheduler: true
         right: 'timelineDay,timelineWeek,timelineMonth'
       },
       resourceLabelText: 'Rooms',
-      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json',
-      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?with-resources'
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources'
     });
 
   });

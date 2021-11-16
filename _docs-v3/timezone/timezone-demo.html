@@ -17,7 +17,7 @@ disable_base_styles: true
       editable: true,
       selectable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json',
       loading: function(bool) {
         $('#loading').toggle(bool);
       },
@@ -32,7 +32,7 @@ disable_base_styles: true
     });
 
     // load the list of available timezones, build the <select> options
-    $.getJSON('{{ site.parent_baseurl }}/api/demo-feeds/timezones.json', function(timezones) {
+    $.getJSON('{{ site.data.parent_baseurl }}/api/demo-feeds/timezones.json', function(timezones) {
       $.each(timezones, function(i, timezone) {
         if (timezone != 'UTC') { // UTC is already in the list
           $('#timezone-selector').append(

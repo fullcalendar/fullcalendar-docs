@@ -38,7 +38,7 @@ export default class extends Demo {
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?overload-day' // TODO: use BASE_URL somehow
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?overload-day' // TODO: use BASE_URL somehow
     })
 
     calendar.render()

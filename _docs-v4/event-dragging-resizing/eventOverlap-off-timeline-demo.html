@@ -28,8 +28,8 @@ plugin_css:
       editable: true,
       eventOverlap: false,
       resourceLabelText: 'Rooms',
-      resources: '{{ site.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting&with-colors',
-      events: '{{ site.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline'
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting&with-colors',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline'
     });
 
     calendar.render();
