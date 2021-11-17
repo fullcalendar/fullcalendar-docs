@@ -3,51 +3,49 @@ const globby = require('globby')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
-module.exports = (env, options) => {
-  let isProduction = options.mode === 'production'
-
-  return {
-    mode: 'development', // unless overridden by command-line flag
-    devtool: isProduction ? false : 'inline-source-map',
-    entry: buildEntryMap(),
-    plugins: [
-      new MiniCssExtractPlugin({
-        filename: '[name].css'
-      })
+module.exports = {
+  mode: 'development', // overridden with --mode flag
+  devtool: 'inline-source-map', // overridden with --devtool/--no-devtool flags
+  entry: buildEntryMap(),
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    })
+  ],
+  optimization: { // only for 'production' mode
+    minimizer: [
+      '...', // add to existing
+      new CssMinimizerPlugin({}),
     ],
-    optimization: {
-      // https://github.com/webpack-contrib/mini-css-extract-plugin#minimizing-for-production
-      minimizer: isProduction ? [ new CssMinimizerPlugin({}) ] : [],
-    },
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: [
-            { loader: MiniCssExtractPlugin.loader },
-            { loader: 'css-loader' },
-          ]
-        },
-        {
-          test: /\.scss$/,
-          use: [
-            { loader: MiniCssExtractPlugin.loader },
-            { loader: 'css-loader' },
-            { loader: 'sass-loader' }
-          ]
-        },
-        {
-          test: /\.(png|jpg|gif)$/i, // TODO: better to use src/styles/images/* instead
-          use: [
-            { loader: 'url-loader' }
-          ]
-        }
-      ]
-    },
-    output: {
-      path: path.join(__dirname, 'assets'),
-      filename: '[name].js' // will produce a JS file we won't use
-    }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader' },
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/i, // TODO: better to use src/styles/images/* instead
+        use: [
+          { loader: 'url-loader' }
+        ]
+      }
+    ]
+  },
+  output: {
+    path: path.join(__dirname, 'assets'),
+    filename: '[name].js' // will produce a JS file we won't use
   }
 }
 

@@ -21,7 +21,7 @@
     "jekyll-build": "JEKYLL_ENV=build bundle exec jekyll build",
     "jekyll-clean": "bundle exec jekyll clean",
     "webpack-dev": "webpack --watch",
-    "webpack-build": "webpack --mode production",
+    "webpack-build": "webpack --mode production --no-devtool",
     "webpack-clean": "bash scripts/clean.sh",
     "lint": "bash scripts/lint.sh"
   },
