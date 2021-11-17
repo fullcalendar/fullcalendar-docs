@@ -28,6 +28,10 @@ RewriteOptions AllowNoSlash
 # (leading slash means start-of-directory)
 RedirectMatch 404 "/\."
 
+# prevents serving PHP
+# (best cross-environment solution. (?i) means case-insensitive)
+RedirectMatch 404 "(?i)\.php$"
+
 # removes www
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
