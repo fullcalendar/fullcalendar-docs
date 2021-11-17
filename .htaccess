@@ -15,6 +15,7 @@ ErrorDocument 403 /403/index.html
 DirectorySlash Off
 
 RewriteEngine On
+RewriteBase /docs/
 
 # allows mod_rewrite on a direct request to current directory, despite `DirectorySlash Off`
 RewriteOptions AllowNoSlash
@@ -72,8 +73,3 @@ RewriteRule ^v5 . [R=301,L]
 
 # renamed release-notes
 RewriteRule ^v4/release-notes v4/upgrading-from-v3 [R=301,L]
-
-# favicon legacy paths old browsers might request
-# needed after we fully convert to gatsby???
-# TODO: move to root repo because it handles root urls
-RewriteRule ^(favicon|browserconfig|mstile)(\.|\-).*$ assets/favicon/$0 [L]
