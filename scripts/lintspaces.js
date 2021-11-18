@@ -7,9 +7,6 @@ const PROJECT_ROOT = path.join(__dirname, '..')
 const FILES = [
   '{_includes,_layouts,fragments,pages}/**/*.{html,md}',
   '_docs-*/**/*.{html,md}',
-  'assets/**/*.{js,css,scss}',
-  '!assets/*.*', // built assets
-  '!assets/v*/**', // npm packages for major versions
   '_plugins/**/*.rb',
   'scripts/**/*.sh',
   '_config.yml', // top level

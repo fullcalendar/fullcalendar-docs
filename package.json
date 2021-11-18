@@ -22,7 +22,7 @@
     "jekyll-clean": "bundle exec jekyll clean",
     "webpack-dev": "webpack --watch",
     "webpack-build": "webpack --mode production --no-devtool",
-    "webpack-clean": "bash scripts/clean.sh",
+    "webpack-clean": "rm -rf dist",
     "lint": "bash scripts/lint.sh"
   },
   "dependencies": {

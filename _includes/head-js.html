@@ -9,12 +9,12 @@
 
 {% for path in layout.assets %}
   {% if path contains '.js' %}
-    <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
+    <script type='text/javascript' src='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}'></script>
   {% endif %}
 {% endfor %}
 
 {% for path in page.assets %}
   {% if path contains '.js' %}
-    <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
+    <script type='text/javascript' src='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}'></script>
   {% endif %}
 {% endfor %}

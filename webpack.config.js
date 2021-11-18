@@ -44,7 +44,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(__dirname, 'assets'),
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js' // will produce a JS file we won't use
   }
 }

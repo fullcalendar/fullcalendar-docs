@@ -3,16 +3,16 @@
 
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli:300,400,600,800,900' />
 
-<link href='{{ site.baseurl }}/assets/base.css?{{ cachebuster }}' rel='stylesheet' />
+<link href='{{ site.baseurl }}/dist/base.css?{{ cachebuster }}' rel='stylesheet' />
 
 {% for path in layout.assets %}
   {% if path contains '.css' %}
-    <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}' />
+    <link rel='stylesheet' href='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}' />
   {% endif %}
 {% endfor %}
 
 {% for path in page.assets %}
   {% if path contains '.css' %}
-    <link rel='stylesheet' href='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}' />
+    <link rel='stylesheet' href='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}' />
   {% endif %}
 {% endfor %}
