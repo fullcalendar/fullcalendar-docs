@@ -17,7 +17,7 @@ This guide does not go into depth about initializing an Angular project. Please 
 The first step is to install the FullCalendar-related dependencies. You'll need the Angular adapter and any additional plugins you plan to use:
 
 ```bash
-npm install --save @fullcalendar/angular @fullcalendar/daygrid
+npm install --save @fullcalendar/angular @fullcalendar/daygrid @fullcalendar/interactionPlugin
 ```
 
 You must then include the `FullCalendarModule` into your app's root module along with any plugins you plan to use. You'll then register these plugins with the FullCalendar module and subsequently register the FullCalendar module with your app. An example app ([app.module.ts]):
