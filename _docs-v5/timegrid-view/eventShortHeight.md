@@ -11,8 +11,20 @@ Number, *default*: `30`
 
 Example of a regular event:
 
-<img src='timegrid-event-notshort.png' class='bordered-image' width='179' height='104'>
+<img
+  src='timegrid-event-notshort.png'
+  alt='Screenshot of event with regular height'
+  class='bordered-image'
+  width='179'
+  height='104'
+>
 
 Example of a "short" event:
 
-<img src='timegrid-event-short.png' class='bordered-image' width='179' height='104'>
+<img
+  src='timegrid-event-short.png'
+  alt='Screenshot of event with short height'
+  class='bordered-image'
+  width='179'
+  height='104'
+>
