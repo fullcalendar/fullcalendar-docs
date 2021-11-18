@@ -19,13 +19,27 @@ Example of a more-link in timeGrid view:
 
 <div class='split-image'>
   <div style='flex-grow:0'>
-    <img src='timegrid-more-link-closed.png' class='bordered-image' width='266' height='230' style='max-width:none !important'>
+    <img
+      src='timegrid-more-link-closed.png'
+      alt='Screenshot before more-link has been clicked in timegrid view'
+      class='bordered-image'
+      width='266'
+      height='230'
+      style='max-width:none !important'
+    >
     <div class='image-caption'>
       Default state
     </div>
   </div>
   <div style='flex-grow:0'>
-    <img src='timegrid-more-link-open.png' class='bordered-image' width='395' height='230' style='max-width:none !important'>
+    <img
+      src='timegrid-more-link-open.png'
+      alt='Screenshot of more-popover open in timegrid view'
+      class='bordered-image'
+      width='395'
+      height='230'
+      style='max-width:none !important'
+    >
     <div class='image-caption'>
       With the more-popover open
     </div>
@@ -36,13 +50,27 @@ Example of a more-link in timeline view:
 
 <div class='split-image'>
   <div style='flex-grow:0'>
-    <img src='timeline-more-link-closed.png' class='bordered-image' width='360' height='164' style='max-width:none !important'>
+    <img
+      src='timeline-more-link-closed.png'
+      alt='Screenshot before more-link has been clicked in timeline view'
+      class='bordered-image'
+      width='360'
+      height='164'
+      style='max-width:none !important'
+    >
     <div class='image-caption'>
       Default state
     </div>
   </div>
   <div style='flex-grow:0'>
-    <img src='timeline-more-link-open.png' class='bordered-image' width='360' height='164' style='max-width:none !important'>
+    <img
+      src='timeline-more-link-open.png'
+      alt='Screenshot of more-popover open in timeline view'
+      class='bordered-image'
+      width='360'
+      height='164'
+      style='max-width:none !important'
+    >
     <div class='image-caption'>
       With the more-popover open
     </div>
