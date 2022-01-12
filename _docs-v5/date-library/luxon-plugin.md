@@ -2,13 +2,13 @@
 title: Luxon Plugin
 ---
 
-[Luxon](https://moment.github.io/luxon/index.html) is a JavaScript date library that cleverly leverages the browser's native APIs for many things such as time zones, locales, and formatting. However, it requires **IE11 and above**, and if you want to use named time zones, **it does not support IE at all**, only Microsoft Edge. If these browser requirements are okay for your project, then all is good!
+[Luxon](https://moment.github.io/luxon) is a JavaScript date library that cleverly leverages the browser's native APIs for many things such as time zones, locales, and formatting. However, it requires **IE11 and above**, and if you want to use named time zones, **it does not support IE at all**, only Microsoft Edge. If these browser requirements are okay for your project, then all is good!
 
 The FullCalendar plugin provides you the following functionality:
 
-- Lets you use Luxon [formatting strings](https://moment.github.io/luxon/docs/manual/formatting.html#toformat) for all date-formatting settings
-- Lets you convert native [Date objects](date-object) emitted from the API into [Luxon DateTime objects](https://moment.github.io/luxon/docs/class/src/datetime.js~DateTime.html) that match the calendar's time zone and locale
-- Lets you convert [Duration objects](duration-object) emitted from the API into [Luxon Durations objects](https://moment.github.io/luxon/docs/class/src/duration.js~Duration.html)
+- Lets you use Luxon [formatting strings](https://moment.github.io/luxon/#/formatting?id=toformat) for all date-formatting settings
+- Lets you convert native [Date objects](date-object) emitted from the API into [Luxon DateTime objects](https://moment.github.io/luxon/api-docs/index.html#datetime) that match the calendar's time zone and locale
+- Lets you convert [Duration objects](duration-object) emitted from the API into [Luxon Durations objects](https://moment.github.io/luxon/api-docs/index.html#duration)
 - Provides you a named time-zone implementation for the [timeZone](timeZone) setting
 
 
