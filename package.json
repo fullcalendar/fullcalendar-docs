@@ -23,9 +23,7 @@
     "webpack-dev": "webpack --watch",
     "webpack-build": "webpack --mode production --no-devtool",
     "webpack-clean": "rm -rf dist",
-    "lint": "yarn run lintspaces && yarn run htmlproofer",
-    "lintspaces": "node ./scripts/lintspaces.cjs",
-    "htmlproofer": "bash ./scripts/htmlproofer.sh"
+    "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh"
   },
   "dependencies": {
     "@fullcalendar/bootstrap": "~5.10.1",

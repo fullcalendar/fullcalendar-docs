@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #
 # Checks built html files for various things, mainly integrity of links.
 # Provide an --external param to verify existence of external links.

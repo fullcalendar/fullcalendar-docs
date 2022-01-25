@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const path = require('path')
 const globby = require('globby')
 const Validator = require('lintspaces')
