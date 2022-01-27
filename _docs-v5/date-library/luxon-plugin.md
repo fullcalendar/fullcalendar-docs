@@ -64,7 +64,7 @@ You can also configure the Luxon plugin with [script tags](initialize-globals). 
 
 ## Formatting
 
-The plugin allows you to specify [luxon formatting strings](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) wherever a [date formatting input](http://fullcalendar.test/docs/date-formatting) is expected:
+The plugin allows you to specify [luxon formatting strings](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) wherever a [date formatting input](date-formatting) is expected:
 
 ```js
 var calendar = new FullCalendar.Calendar(calendarEl, {

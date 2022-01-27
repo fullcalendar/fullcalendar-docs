@@ -68,7 +68,7 @@ You can also configure the moment plugin with [script tags](initialize-globals).
 
 ## Formatting
 
-The plugin allows you to specify [moment formatting strings](https://momentjs.com/docs/#/displaying/format/) wherever a [date formatting input](http://fullcalendar.test/docs/date-formatting) is expected:
+The plugin allows you to specify [moment formatting strings](https://momentjs.com/docs/#/displaying/format/) wherever a [date formatting input](date-formatting) is expected:
 
 ```js
 var calendar = new FullCalendar.Calendar(calendarEl, {
