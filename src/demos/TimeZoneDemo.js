@@ -42,7 +42,7 @@ export default class extends Demo {
       editable: true,
       selectable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json', // TODO: use BASE_URL
+      events: '/api/demo-feeds/events.json',
       loading: function(bool) {
         // if (bool) {
         //   loadingEl.style.display = 'inline' // show
@@ -55,7 +55,7 @@ export default class extends Demo {
 
     // load the list of available timezones, build the <select> options
     // it's highly encouraged to use your own AJAX lib instead of using FullCalendar's internal util
-    requestJson('GET', '{{ site.data.parent_baseurl }}/api/demo-feeds/timezones.json', {}, function(timeZones) { // TODO: use BASE_URL
+    requestJson('GET', '/api/demo-feeds/timezones.json', {}, function(timeZones) {
       timeZones.forEach(function(timeZone) {
         if (timeZone !== 'UTC') { // UTC is already in the list
           let optionEl = document.createElement('option')

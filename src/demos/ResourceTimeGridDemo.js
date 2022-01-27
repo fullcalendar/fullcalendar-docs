@@ -26,7 +26,7 @@ export default class extends Demo {
         { id: 'd', title: 'Room D' }
       ],
       editable: true,
-      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources=4&single-day' // TODO: use BASE_URL
+      events: '/api/demo-feeds/events.json?with-resources=4&single-day'
     })
   }
 
