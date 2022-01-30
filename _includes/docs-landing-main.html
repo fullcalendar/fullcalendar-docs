@@ -8,7 +8,7 @@
           {% for node in child_group.children %}
             <li class='docs-landing__illustration'>
               <a class='docs-landing__illustration-link' href='{{ site.baseurl }}{{ node.article.url | escape }}'>
-                <img src='{{ site.baseurl }}/assets/images/docs-categories/{%
+                <img src='{{ site.baseurl }}/assets/docs-categories/{%
                   if node.article.illustration
                 %}{{ node.article.illustration | escape }}{%
                   else

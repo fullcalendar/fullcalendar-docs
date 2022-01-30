@@ -1,7 +1,12 @@
 ---
 title: Custom 4-day TimeGrid view
 layout: demo-v4
-plugins: [ daygrid, timegrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 <script>
 
@@ -24,7 +29,7 @@ plugins: [ daygrid, timegrid ]
           buttonText: '4 day'
         }
       },
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

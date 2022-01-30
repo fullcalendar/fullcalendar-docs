@@ -1,7 +1,11 @@
 ---
 title: dayGridDay and dayGridWeek views
 layout: demo-v4
-plugins: [ interaction, daygrid ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
 ---
 <script>
 
@@ -18,7 +22,7 @@ plugins: [ interaction, daygrid ]
         right: 'dayGridDay,dayGridWeek'
       },
       editable: true,
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

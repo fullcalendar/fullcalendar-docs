@@ -1,0 +1,79 @@
+
+@import 'variables';
+@import 'mixins';
+@import 'accordion';
+
+
+// .demos
+
+.demos__container {
+  display: flex; // will stretch by default, which we want
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.demos__sidebar {
+  width: 230px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 60px;
+
+  .fc-event {
+    padding: 1px 2px;
+  }
+
+  // hacks to get spacing right...
+
+  select,
+  input {
+    max-width: 100%;
+  }
+
+  p,
+  .fc-event {
+    margin: 8px 0;
+  }
+
+}
+
+.demos__sidebar-title {
+  font-weight: $font-weight-superbold;
+  font-size: 34px;
+  margin: 20px 0 20px 12px; // 12px is same as accorion
+}
+
+.demos__main {
+  @include raised-card-subtle;
+  position: relative;
+  flex-grow: 1;
+  border-top: 4px solid $yellow-highlight-color;
+  margin-top: 36px;
+  padding-top: 85px; // compensate for the below aspect ratio being a bit off due to toolbar/padding
+
+  &:after { // make space for default aspect ratio of calendar
+    content: '';
+    display: block;
+    padding-bottom: 74%;
+  }
+}
+
+.demos__main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.demos__main-iframe { // within demos__main-container
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.demo-calendar {
+  font-size: 14px !important; // fc's stylesheet has strong rule
+  margin: 20px 16px 0;
+  line-height: 1.3;
+}

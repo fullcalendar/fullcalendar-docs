@@ -2,7 +2,13 @@
 title: Constrain event dragging by certain criteria
 description: Prevents events from dragging into the red. Events in green must stay in green
 layout: demo-v4
-plugins: [ interaction, daygrid, timegrid ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>

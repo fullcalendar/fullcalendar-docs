@@ -1,10 +1,20 @@
 ---
 title: Initialize with Script Tags
+description: Use pre-built bundles and HTML script tags
 ---
 
 It's possible to manually include the necessary `<script>` tags in the head of your HTML page and then initialize a calendar via browser globals. You will leverage one of FullCalendar's prebuilt bundles to do this.
 
-The first step is to visit the [Getting Started page](getting-started) to download a ZIP archive or get CDN links. Once you have that, write something like this:
+
+## Standard Bundle
+
+First, obtain the standard `fullcalendar` bundle in one of the following ways:
+
+- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.latest-releases.v5 }}/fullcalendar-{{ site.data.latest-releases.v5 }}.zip'>fullcalendar-{{ site.data.latest-releases.v5 }}.zip</a>
+- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar)
+- **NPM:** `npm install fullcalendar`
+
+Then, write the following initialization code:
 
 ```html
 <!DOCTYPE html>
@@ -33,10 +43,26 @@ The first step is to visit the [Getting Started page](getting-started) to downlo
 
 [View a runnable example &raquo;](initialize-globals-demo)
 
+The `fullcalendar` bundle's `main.js` and `main.css` files include the following packages:
 
-## Scheduler
+- `@fullcalendar/core`
+- `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
+- `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
+- `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
+- `@fullcalendar/list` (for [list views](list-view))
+- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap/FontAwesome packages. [more info](bootstrap-theme))
+- `@fullcalendar/google-calendar` ([more info](google-calendar))
 
-If you want to use any of the [premium Scheduler functionality](premium), use the `fullcalendar-scheduler` bundle instead. Its ZIP and CDN links are also listed on the [Getting Started page](getting-started). The code will be virtually the same:
+
+## Premium Bundle
+
+First, obtain the premium `fullcalendar-scheduler` bundle in one of the following ways:
+
+- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.latest-releases.v5 }}/fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip'>fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip</a>
+- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
+- **NPM:** `npm install fullcalendar-scheduler`
+
+Then, write the following initialization code:
 
 ```html
 <!DOCTYPE html>
@@ -63,38 +89,23 @@ If you want to use any of the [premium Scheduler functionality](premium), use th
 </html>
 ```
 
+[View a runnable example &raquo;](timeline-standard-view-demo)
+
 You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalendar` bundle. The `fullcalendar-scheduler` bundle includes everything.
 
+The `fullcalendar-scheduler` bundle's `main.js` and `main.css` files include the following packages:
 
-## Bundle Contents
-
-Here are the packages inside of each bundle:
-
-- `fullcalendar` - the `main.js` and `main.css` files include the following packages:
-  - `@fullcalendar/core`
-  - `@fullcalendar/interaction`
-  - `@fullcalendar/daygrid`
-  - `@fullcalendar/timegrid`
-  - `@fullcalendar/list`
-  - `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
-  - `@fullcalendar/google-calendar`
-- `fullcalendar-scheduler` - the `main.js` and `main.css` files include the following packages:
-  - `@fullcalendar/core`
-  - `@fullcalendar/interaction`
-  - `@fullcalendar/daygrid`
-  - `@fullcalendar/timegrid`
-  - `@fullcalendar/list`
-  - `@fullcalendar/bootstrap` (though you'll still need Bootstrap/FontAwesome. [more info](bootstrap-theme))
-  - `@fullcalendar/google-calendar`
-  - `@fullcalendar/adaptive` ([premium](premium))
-  - `@fullcalendar/scrollgrid` ([premium](premium))
-  - `@fullcalendar/timeline` ([premium](premium))
-  - `@fullcalendar/resource-common` ([premium](premium))
-  - `@fullcalendar/resource-daygrid` ([premium](premium))
-  - `@fullcalendar/resource-timegrid` ([premium](premium))
-  - `@fullcalendar/resource-timeline` ([premium](premium))
-
-
-## Different Approaches
-
-If you're already using a build system like [Webpack](https://webpack.js.org/), or you want a smaller build by trimming away plugins you don't use, look at how to set up FullCalendar with an [ES6 build system](initialize-es6).
+- `@fullcalendar/core`
+- `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
+- `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
+- `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
+- `@fullcalendar/list` (for [list views](list-view))
+- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap/FontAwesome packages. [more info](bootstrap-theme))
+- `@fullcalendar/google-calendar` ([more info](google-calendar))
+- `@fullcalendar/adaptive` (for [print optimization](print))
+- `@fullcalendar/scrollgrid`
+- `@fullcalendar/timeline` ([more info](timeline-view-no-resources))
+- `@fullcalendar/resource-common`
+- `@fullcalendar/resource-daygrid` ([more info](resource-daygrid-view))
+- `@fullcalendar/resource-timegrid` ([more info](vertical-resource-view))
+- `@fullcalendar/resource-timeline` ([more info](timeline-view))

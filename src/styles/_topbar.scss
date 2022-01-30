@@ -4,7 +4,7 @@
   color: #fff;
 }
 
-@media only screen and (max-width: $one-col-breakpoint) {
+@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
   .responsive-enabled {
     .topbar {
       overflow: auto;
@@ -97,7 +97,7 @@ a.topbar__nav-handle {
 }
 
 .topbar__notice-link {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
   color: #fff;
   padding-bottom: 2px;
   border-bottom: 2px solid $yellow-highlight-color;
@@ -154,6 +154,6 @@ a.branding {
 }
 
 .branding-text {
-  font-weight: 800; // TODO: use png
+  font-weight: $font-weight-bold; // TODO: use png?
   font-size: 24px;
 }

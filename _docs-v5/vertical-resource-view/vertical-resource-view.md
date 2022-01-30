@@ -11,7 +11,7 @@ demos:
   - vertical-resource-render-hook-demo
 ---
 
-The [Scheduler add-on]({{ site.baseurl }}/purchase) provides [TimeGrid view](timegrid-view) and [DayGrid view](daygrid-view) with the ability to display **resources as columns**. For example, a TimeGrid `day` resource view can be initialized in an [ES6 setup](initialize-es6) like so:
+[FullCalendar Premium](/pricing) provides [TimeGrid view](timegrid-view) and [DayGrid view](daygrid-view) with the ability to display **resources as columns**. For example, a TimeGrid `day` resource view can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```
 npm install --save @fullcalendar/core @fullcalendar/resource-timegrid

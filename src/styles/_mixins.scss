@@ -1,8 +1,6 @@
 
-// ???
-
 @mixin big-title {
-  font-weight: 900;
+  font-weight: $font-weight-superbold;
   font-size: 34px;
   margin: 1.4em 0;
 
@@ -12,7 +10,7 @@
 }
 
 @mixin title { // won't give margins
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
   font-size: $font-size-title;
 }
 
@@ -86,13 +84,13 @@
 
 @mixin right-triangle($width, $height, $color) {
   border-style: solid;
-  border-width: ($height / 2) 0 ($height / 2) $width;
+  border-width: ($height * 0.5) 0 ($height * 0.5) $width;
   border-color: transparent transparent transparent $color;
 }
 
 @mixin down-triangle($width, $height, $color) {
   border-style: solid;
-  border-width: ($height) ($width / 2) 0 ($width / 2);
+  border-width: ($height) ($width * 0.5) 0 ($width * 0.5);
   border-color: $color transparent transparent transparent;
 }
 
@@ -100,7 +98,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: ($height / -2) 0 0 ($width / -2);
+  margin: ($height * -0.5) 0 0 ($width * -0.5);
 }
 
 @mixin reset-appearance {

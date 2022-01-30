@@ -2,7 +2,12 @@
 title: Background Events
 description: Click between month and week view to see background events
 layout: demo-v4
-plugins: [ daygrid, timegrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>

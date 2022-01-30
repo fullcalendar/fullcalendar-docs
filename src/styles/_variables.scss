@@ -18,9 +18,9 @@ $font-color: #20232A; // applied globally
 $font-color-weak: #989ba2;
 $font-weight-thin: 300; // must be used manually
 $font-weight-normal: 400; // applied globally
-$font-weight-bold: 600; // applied to all b/strong tags
-  // NOTE: some places manually use 800
-  // even in blog-sidebar.html
+$font-weight-semibold: 600;
+$font-weight-bold: 800; // applied to all b/strong tags
+$font-weight-superbold: 900;
 
 $link-color: $blue-primary-color; // must be used manually
 $link-color-dark: #0b4d8e; // must be used manually
@@ -33,7 +33,11 @@ $code-line-height: 1.8em;
 
 $page-max-content-width: 1200px;
 $page-gutter: 30px;
-$one-col-breakpoint: 790px;
+$page-gutter-small: 15px;
+$container-max-width: $page-max-content-width + ($page-gutter * 2); // because it's border-box
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
 
 $control-font-size: 14px;
 $control-line-height: 18px;

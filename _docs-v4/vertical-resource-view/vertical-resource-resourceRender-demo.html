@@ -2,7 +2,15 @@
 title: Using resourceRender with a popover in vertical-resource-view
 description: Mouseover each "(?)" to see a popover that was attached via resourceRender
 layout: demo-v4
-plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-daygrid'
+  - '@fullcalendar/resource-timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 {% include popper-css.html %}
 <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>

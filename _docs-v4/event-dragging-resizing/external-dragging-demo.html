@@ -3,7 +3,13 @@ title: Drag-n-drop external events
 description: Drag external events into the calendar with the Draggable API
 layout: demo-v4
 disable_base_styles: true
-plugins: [ interaction, daygrid, timegrid ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 <script>
 

@@ -10,7 +10,9 @@ String / Array / Function, *default*: `"start,-duration,allDay,title"`
 
 For most views, this determines the vertical ordering of events within the same day. For [TimeGrid view](timegrid-view) however, it determines the *horizontal* ordering of events within the same day.
 
-The default value puts earlier events first. If tied, it puts longer events first. If tied, it puts all-day events first. If still tied, orders events by title, alphabetically.
+The default value puts earlier events first. If tied, it puts longer events first. If still tied, it puts all-day events first. If still tied, orders events by title, alphabetically.
+
+If putting a lower-precedent event before a higher-precedent improves compactness, the algorithm will do so. To disable this behavior, set [eventOrderStrict](eventOrderStrict) to `true`.
 
 This setting accepts a few different arguments:
 

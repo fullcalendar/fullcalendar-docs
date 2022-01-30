@@ -1,21 +1,17 @@
 <title>
-  {% if page.url == '/' %}
-    FullCalendar - JavaScript Event Calendar
-  {% else %}
-    {% if page.is_docs %}
-      {% if page.slug == 'index' %}
-        Documentation
-      {% else %}
-        {{ page.title | escape }} - Docs
-      {% endif %}
-      {% if page.version %}
-        {% unless page.version.is_latest %}
-          {{ page.version.id | escape }}
-        {% endunless %}
-      {% endif %}
+  {% if page.is_docs %}
+    {% if page.slug == 'index' %}
+      Documentation
     {% else %}
-      {{ page.title | escape }}
+      {{ page.title | escape }} - Docs
     {% endif %}
-    | FullCalendar {% if page.layout == 'blog-post' %}Blog{% endif %}
+    {% if page.version %}
+      {% unless page.version.is_latest %}
+        {{ page.version.id | escape }}
+      {% endunless %}
+    {% endif %}
+  {% else %}
+    {{ page.title | escape }}
   {% endif %}
+  | FullCalendar {% if page.layout == 'blog-post' %}Blog{% endif %}
 </title>

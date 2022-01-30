@@ -1,24 +1,20 @@
 
 {% assign cachebuster = site.time | date: '%s' %}
 
-{% if jekyll.environment == "production" %}
-  {% include google-analytics.html %}
+{% if jekyll.environment == "build" %}
+  {% include fathom-analytics.html %}
 {% else %}
-  <!-- no Google Analytics. need this comment for linting -->
-{% endif %}
-
-{% if layout.needs_disqus_count %}
-  <script id='dsq-count-scr' src='https://{{ site.disqus_shortname }}.disqus.com/count.js' async></script>
+  <!-- not using Fathom Analytics. need this comment for linting -->
 {% endif %}
 
 {% for path in layout.assets %}
   {% if path contains '.js' %}
-    <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
+    <script type='text/javascript' src='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}'></script>
   {% endif %}
 {% endfor %}
 
 {% for path in page.assets %}
   {% if path contains '.js' %}
-    <script type='text/javascript' src='{{ site.baseurl }}/assets/{{ path }}?{{ cachebuster }}'></script>
+    <script type='text/javascript' src='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}'></script>
   {% endif %}
 {% endfor %}

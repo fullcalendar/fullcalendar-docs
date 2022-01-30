@@ -14,7 +14,7 @@ disable_base_styles: true
       timeZone: 'UTC',
       initialView: 'dayGridMonth',
       height: '100%',
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

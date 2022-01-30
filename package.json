@@ -13,29 +13,40 @@
     "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
   },
   "scripts": {
-    "install": "bundle install && ./scripts/install-version-deps.sh",
-    "build": "npm run webpack-build && npm run jekyll-build",
-    "watch": "concurrently --raw 'npm run webpack-watch' 'npm run jekyll-watch'",
-    "clean": "npm run webpack-clean && npm run jekyll-clean",
-    "jekyll-build": "export JEKYLL_ENV=production && bundle exec jekyll build",
-    "jekyll-watch": "npm run jekyll-clean && bundle exec jekyll serve --watch --incremental",
+    "install-misc": "bundle install",
+    "dev": "concurrently --raw 'yarn run webpack-dev' 'yarn run jekyll-dev'",
+    "build": "yarn run webpack-build && yarn run jekyll-build",
+    "clean": "yarn run webpack-clean && yarn run jekyll-clean",
+    "jekyll-dev": "RUBYOPT='-W0' yarn run jekyll-clean && bundle exec jekyll serve --watch --incremental",
+    "jekyll-build": "RUBYOPT='-W0' JEKYLL_ENV=build bundle exec jekyll build",
     "jekyll-clean": "bundle exec jekyll clean",
-    "webpack-build": "webpack --mode production",
-    "webpack-watch": "webpack --watch",
-    "webpack-clean": "rm -rf assets/*.*",
-    "lint": "./scripts/lint.sh"
+    "webpack-dev": "webpack --watch",
+    "webpack-build": "webpack --mode production --no-devtool",
+    "webpack-clean": "rm -rf dist",
+    "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh"
+  },
+  "dependencies": {
+    "@fullcalendar/bootstrap": "~5.10.1",
+    "@fullcalendar/core": "~5.10.1",
+    "@fullcalendar/daygrid": "~5.10.1",
+    "@fullcalendar/interaction": "~5.10.1",
+    "@fullcalendar/list": "~5.10.1",
+    "@fullcalendar/resource-timegrid": "~5.10.1",
+    "@fullcalendar/resource-timeline": "~5.10.1",
+    "@fullcalendar/timegrid": "~5.10.1",
+    "accordion": "^3.0.2"
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
     "css-loader": "^2.1.1",
+    "css-minimizer-webpack-plugin": "^3.1.1",
     "globby": "^11.0.0",
     "lintspaces": "^0.6.4",
-    "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "^4.13.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "sass-loader": "^7.3.1",
+    "mini-css-extract-plugin": "^2.4.3",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.1.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1"
   }
 }

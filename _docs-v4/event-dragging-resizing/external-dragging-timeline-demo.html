@@ -2,7 +2,14 @@
 title: Drag-n-drop external events onto Timeline views
 layout: demo-v4
 disable_base_styles: true
-plugins: [ interaction, timeline, resource-common, resource-timeline ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-timeline'
+plugin_css:
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-timeline'
 ---
 <script>
 
@@ -40,7 +47,7 @@ plugins: [ interaction, timeline, resource-common, resource-timeline ]
         right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
       },
       resourceLabelText: 'Rooms',
-      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json?with-nesting&with-colors',
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting&with-colors',
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar
       drop: function(info) {

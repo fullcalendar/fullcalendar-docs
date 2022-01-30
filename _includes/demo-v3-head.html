@@ -11,29 +11,29 @@
   Or we should just hardcode the path.
 {% endcomment %}
 
-<link href='{{ site.baseurl }}/assets/demo-to-codepen.css' rel='stylesheet' />
+<link href='{{ site.baseurl }}/dist/demo-to-codepen.css' rel='stylesheet' />
 
-<link href='{% package_baseurl fullcalendar 3 %}/dist/fullcalendar.min.css' rel='stylesheet' />
-<link href='{% package_baseurl fullcalendar 3 %}/dist/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v3.fullcalendar }}/dist/fullcalendar.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v3.fullcalendar }}/dist/fullcalendar.print.css' rel='stylesheet' media='print' />
 
 {% if page.needs_scheduler %}
-  <link href='{% package_baseurl fullcalendar-scheduler 3 %}/dist/scheduler.min.css' rel='stylesheet' />
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@{{ site.data.latest-releases.v3.fullcalendar-scheduler }}/dist/scheduler.min.css' rel='stylesheet' />
 {% endif %}
 
-<script src='{% package_baseurl moment 3 %}/min/moment.min.js'></script>
-<script src='{% package_baseurl jquery 3 %}/dist/jquery.min.js'></script>
-<script src='{% package_baseurl fullcalendar 3 %}/dist/fullcalendar.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/moment@2/min/moment.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v3.fullcalendar }}/dist/fullcalendar.min.js'></script>
 
 {% if page.needs_locales %}
-  <script src='{% package_baseurl fullcalendar 3 %}/dist/locale-all.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v3.fullcalendar }}/dist/locale-all.min.js'></script>
 {% endif %}
 
 {% if page.needs_google_calendar %}
-  <script src='{% package_baseurl fullcalendar 3 %}/dist/gcal.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v3.fullcalendar }}/dist/gcal.min.js'></script>
 {% endif %}
 
 {% if page.needs_scheduler %}
-  <script src='{% package_baseurl fullcalendar-scheduler 3 %}/dist/scheduler.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@{{ site.data.latest-releases.v3.fullcalendar-scheduler }}/dist/scheduler.min.js'></script>
 {% endif %}
 
-<script src='{{ site.baseurl }}/assets/demo-to-codepen.js'></script>
+<script src='{{ site.baseurl }}/dist/demo-to-codepen.js'></script>

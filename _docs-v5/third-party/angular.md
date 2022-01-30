@@ -8,7 +8,7 @@ FullCalendar seamlessly integrates with the [Angular] 9. It provides a component
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
-- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
+- [Bug report instructions](/reporting-bugs)
 - [Example project][example project]. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. The code in this guide loosely follows it.
 - [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/angular?file=/src/app/app.component.ts) in a code playground
 
@@ -25,9 +25,9 @@ You must then include the `FullCalendarModule` into your app's root module along
 ```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector. must go first
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
-import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { AppComponent } from './app.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
@@ -222,15 +222,15 @@ export class AppComponent {
 ```
 
 
-## Scheduler
+## FullCalendar Premium
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example, but with [resourceTimelinePlugin](timeline-view) or whatever premium plugin you want to use:
+How do you use [FullCalendar Premium's](/pricing) plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example, but with [resourceTimelinePlugin](timeline-view) or whatever premium plugin you want to use:
 
 ```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'; // a plugin
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline'; // a plugin!
 import { AppComponent } from './app.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
@@ -251,7 +251,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 export class AppModule { }
 ```
 
-Also, make sure to include your `schedulerLicenseKey` in the options object:
+Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey) in the options object:
 
 ```js
 import { Component } from '@angular/core';

@@ -111,6 +111,13 @@ Here are all the available properties, **all of which are optional**:
   </tr>
 
   <tr>
+  <th>interactive</th>
+  <td markdown='1'>
+  Boolean. Whether or not the event is tabbable. Defaults to `true` if `url` is present, `false` otherwise. See [eventInteractive](eventInteractive) for more info.
+  </td>
+  </tr>
+
+  <tr>
   <th><div style='white-space:nowrap'>className or</div> classNames</th>
   <td markdown='1'>
   String or Array. A single string like `'myclass'`, a space-separated string like `'myclass1 myclass2'`, or an array of strings like `[ 'myclass1', myclass2' ]`. Determines which HTML classNames will be attached to the rendered event.
@@ -142,7 +149,7 @@ Here are all the available properties, **all of which are optional**:
   <th>resourceEditable</th>
   <td markdown='1'>
   Boolean (`true` or `false`). Overrides the master [eventResourceEditable](eventResourceEditable) option for this single event.
-  Requires one of the [resource plugins](premium).
+  Requires one of the [resource plugins](/pricing).
   </td>
   </tr>
 
@@ -151,7 +158,7 @@ Here are all the available properties, **all of which are optional**:
   <td markdown='1'>
   String. The string ID of a [Resource](resource-object).
   See [Associating Events with Resources](resources-and-events).
-  Requires one of the [resource plugins](premium).
+  Requires one of the [resource plugins](/pricing).
   </td>
   </tr>
 
@@ -160,7 +167,7 @@ Here are all the available properties, **all of which are optional**:
   <td markdown='1'>
   Array. An array of string IDs of [Resources](resource-object).
   See [Associating Events with Resources](resources-and-events).
-  Requires one of the [resource plugins](premium).
+  Requires one of the [resource plugins](/pricing).
   </td>
   </tr>
 

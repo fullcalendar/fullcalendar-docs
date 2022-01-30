@@ -19,6 +19,7 @@ children:
       - dragScroll
       - snapDuration
       - allDayMaintainDuration
+      - fixedMirrorParent
   - title: Control
     children:
       - eventOverlap

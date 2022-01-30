@@ -3,7 +3,7 @@
   padding: 2px 4px;
   font-size: 11px;
   line-height: 14px;
-  color: #fff;
+  color: #fff !important; // override any link color
   background-color: $link-color;
   border-radius: $border-radius;
   vertical-align: middle;

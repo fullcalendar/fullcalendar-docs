@@ -2,9 +2,18 @@
 title: Theme Chooser for Timeline Views
 layout: demo-v4
 disable_base_styles: true
-plugins: [ interaction, bootstrap, timeline, resource-common, resource-timeline ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/bootstrap'
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-timeline'
+plugin_css:
+  - '@fullcalendar/bootstrap'
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-timeline'
 ---
-<script src='{{ site.baseurl }}/assets/theme-chooser.js'></script>
+<script src='{{ site.baseurl }}/dist/theme-chooser.js'></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -28,8 +37,8 @@ plugins: [ interaction, bootstrap, timeline, resource-common, resource-timeline 
           navLinks: true, // can click day/week names to navigate views
           editable: true,
           eventLimit: true, // allow "more" link when too many events
-          events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?single-day&for-resource-timeline',
-          resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json?with-colors'
+          events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline',
+          resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?with-colors'
         });
         calendar.render();
       },

@@ -1,7 +1,10 @@
 ---
 title: Event color customization
 layout: demo-v4
-plugins: [ daygrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>

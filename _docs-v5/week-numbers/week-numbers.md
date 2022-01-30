@@ -4,6 +4,7 @@ children:
   - weekNumbers
   - weekNumberCalculation
   - weekText
+  - weekTextLong
   - weekNumberFormat
   - article: week-number-render-hooks
     points:

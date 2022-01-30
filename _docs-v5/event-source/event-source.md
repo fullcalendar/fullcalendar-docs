@@ -5,6 +5,7 @@ children:
   - events-json-feed
   - events-function
   - google-calendar
+  - icalendar
   - event-source-object
   - eventSources
   - eventSourceSuccess

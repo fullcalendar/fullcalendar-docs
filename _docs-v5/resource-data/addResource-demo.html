@@ -33,8 +33,8 @@ needs_premium: true
       aspectRatio: 1.5,
       initialView: 'resourceTimelineDay',
       resourceAreaHeaderContent: 'Rooms',
-      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json?with-nesting',
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?single-day&for-resource-timeline'
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline'
     });
 
     calendar.render();

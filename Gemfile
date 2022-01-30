@@ -9,10 +9,3 @@ gem 'kramdown'
 gem 'rouge'
 gem 'html-proofer'
 gem 'json'
-gem 'jekyll-archives'
-
-
-group :jekyll_plugins do
-   gem "jekyll-paginate", "~> 1.1.0"
-end
-

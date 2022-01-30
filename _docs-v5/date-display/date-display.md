@@ -28,6 +28,7 @@ children:
       - slotMinTime
       - slotMaxTime
       - scrollTime
+      - scrollTimeReset
       - article: slot-render-hooks
         points:
           - slotLabelClassNames

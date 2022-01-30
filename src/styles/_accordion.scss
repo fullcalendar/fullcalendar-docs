@@ -1,0 +1,50 @@
+
+@import 'variables';
+
+$accordion-v-padding: 12px;
+$accordion-h-padding: 12px;
+
+.accordion {
+  @include text-dark-bg;
+  background: $dark-bg-color-lighter;
+  border-radius: $border-radius;
+  font-size: 14px;
+}
+
+.accordion__panel {
+  width: 100%; // should be part of accordion lib
+}
+
+.accordion__panel-title {
+  padding: $accordion-v-padding 6px $accordion-v-padding $accordion-h-padding;
+
+  &:focus {
+    outline: 0; // reset browser default
+    background-color: rgba(255, 255, 255, .1); // lighten up
+  }
+
+  .fc-icon {
+    float: right;
+    margin-top: 1px;
+    font-size: 20px;
+    color: #000;
+
+    &:after {
+      content: "\e901"; // chevron-right
+    }
+  }
+}
+
+.accordion__panel--open {
+  .accordion__panel-title {
+    .fc-icon {
+      color: $blue-highlight-color;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordion__panel-content {
+  background: $dark-bg-color-darker;
+  padding: $accordion-v-padding $accordion-h-padding;
+}

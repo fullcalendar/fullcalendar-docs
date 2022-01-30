@@ -61,6 +61,6 @@ $('#calendar').fullCalendar({
 });
 ```
 
-This is only available with the [Scheduler plugin]({{ site.baseurl }}/purchase).
+This is only available with the [Scheduler plugin](/pricing).
 
 [See a demo of dayClick with resources](date-clicking-selecting-resource-demo).

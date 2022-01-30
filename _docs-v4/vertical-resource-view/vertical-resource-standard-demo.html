@@ -1,7 +1,15 @@
 ---
 title: 1-day vertical resource view
 layout: demo-v4
-plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-daygrid'
+  - '@fullcalendar/resource-timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 <script>
 
@@ -18,7 +26,7 @@ plugins: [ daygrid, timegrid, resource-common, resource-daygrid, resource-timegr
         { id: 'c', title: 'Room C' },
         { id: 'd', title: 'Room D' }
       ],
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?with-resources=4&single-day'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources=4&single-day'
     });
 
     calendar.render();

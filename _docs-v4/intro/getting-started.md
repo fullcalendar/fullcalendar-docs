@@ -28,7 +28,7 @@ Once you've downloaded it, you can initialize a calendar <a href='initialize-glo
 
 A number of free CDNs host FullCalendar's dist files. A clever way to choose a CDN and figure out the URLs of the files you need is to visit the package on [Yarn](https://yarnpkg.com/). For example, visit the [@fullcalendar/core](https://yarnpkg.com/en/package/@fullcalendar/core) package. Then, look at the "CDNs" area on the sidebar.
 
-You'll be manually initializing FullCalendar with [script tags and globals]({{ site.baseurl }}/docs/initialize-globals), so make sure you've included all the necessary files for whatever [plugins you choose]({{ site.baseurl }}/docs/plugin-index).
+You'll be manually initializing FullCalendar with [script tags and globals](initialize-globals), so make sure you've included all the necessary files for whatever [plugins you choose](plugin-index).
 
 
 ## FullCalendar Scheduler

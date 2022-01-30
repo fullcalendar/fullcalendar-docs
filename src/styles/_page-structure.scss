@@ -29,14 +29,15 @@ body > .footer {
 
 .container {
   margin: 0 auto;
-  max-width: ($page-max-content-width + ($page-gutter * 2)); // because border-box
+  width: 100%; // important for if flexbox
+  max-width: $container-max-width;
   padding: 0 $page-gutter;
 }
 
-@media only screen and (max-width: $one-col-breakpoint) {
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
+@media only screen and (max-width: $tablet-breakpoint - 1) { // <tablet
+  .container:not(.container--always-spacious) {
+    padding-left: $page-gutter-small;
+    padding-right: $page-gutter-small;
   }
 }
 

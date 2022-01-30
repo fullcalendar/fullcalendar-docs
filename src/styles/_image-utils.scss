@@ -1,0 +1,64 @@
+
+$image-border-width: 7px;
+
+.bordered-image {
+  box-sizing: content-box; // so img's width/height doesn't consume border
+  border: $image-border-width solid #c8c9cc;
+  max-width: calc(100% - #{$image-border-width * 2}) !important; // because of content-box
+}
+
+.image-caption { // probably a span
+  display: block;
+  margin: .5em 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #999; // for when link
+}
+
+
+// split image layout
+
+.split-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 ($page-gutter-small * -1); // container moves out to browser edges
+  padding: $image-border-width 0 0 0;
+  overflow: hidden; // for bordered-image's borders that moves out of view
+
+  > * {
+    flex-basis: 0;
+    flex-grow: 1;
+    // borders vertically collapse. also, borders move beyond left/right edges of screen.
+    margin: ($image-border-width * -1) ($image-border-width * -1) 0 ($image-border-width * -1);
+  }
+
+  img {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) { // >=tablet
+  .split-image {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0 0 0 $image-border-width;
+
+    > * {
+      margin: 0 0 0 ($image-border-width * -1); // borders horizontally collapse
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) { // >=desktop
+  .split-image {
+    margin: 0 0 0 -1.5em;
+    padding: 0;
+
+    > * {
+      margin: 0 0 0 1.5em; // space between subsections
+    }
+  }
+}

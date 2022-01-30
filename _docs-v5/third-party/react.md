@@ -5,12 +5,12 @@ title_for_landing: React
 
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-This is more than a mere "connector". It tells the core FullCalendar package to begin rendering with **React** virtual DOM nodes as opposed to the [Preact](https://preactjs.com/) nodes it normally uses, transforming FullCalendar into a "real" React component. You can learn a bit more [from this blog post]({{ site.baseurl }}{% post_url 2020-05-20-react-ts-v5-beta %}) (more info to come).
+This is more than a mere "connector". It tells the core FullCalendar package to begin rendering with **React** virtual DOM nodes as opposed to the [Preact](https://preactjs.com/) nodes it normally uses, transforming FullCalendar into a "real" React component. You can learn a bit more [from this blog post](/blog/2020/05/react-ts-v5-beta) (more info to come).
 
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
-- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
+- [Bug report instructions](/reporting-bugs)
 - [Example project][example project] leveraging [Webpack], [Babel], and [css-loader] (the code in this guide loosely follows it)
 - [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/react?file=/src/DemoApp.jsx) in a code playground
 
@@ -26,8 +26,8 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 export default class DemoApp extends React.Component {
   render() {
@@ -72,9 +72,9 @@ A callback function can be passed into a React component and it will be called w
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
+import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
 export default class DemoApp extends React.Component {
 
@@ -103,8 +103,8 @@ There are many settings throughout the API for injecting custom content, like th
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 export default class DemoApp extends React.Component {
   render() {
@@ -208,14 +208,14 @@ export default class DemoApp extends React.Component {
 ```
 
 
-## Scheduler
+## FullCalendar Premium
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Premium's](/pricing) plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline' // a plugin!
 
 export default class DemoApp extends React.Component {
   render() {
@@ -233,18 +233,23 @@ The above mentioned sample project uses a rather simple technique to store event
 
 Please check out the following example projects that demonstrate usage with third-party state-management libraries:
 
-- [View the Redux example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-redux)
-- [View the MobX+TypeScript example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-mobx-typescript)
+- [View the **Redux** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-redux)
+- [View the **MobX** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-mobx-typescript)
 
 
 ## TypeScript
 
-React goes really well with [TypeScript]! To show you how to integrate the two, we've prepared [another sample project &raquo;][typescript project]
+React goes really well with [TypeScript]!
+
+- [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript)
 
 
 ## Next.js
 
-If you plan to use the [Next.js] React framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next'>See the example project</a>
+If you plan to use the [Next.js] React framework, you'll need special configuration. See the following example projects:
+
+- [View the **Next** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next)
+- [View the **Next** + **Scheduler** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next-scheduler)
 
 
 [React]: https://reactjs.org/
@@ -256,5 +261,4 @@ If you plan to use the [Next.js] React framework, you'll need special configurat
 [docs toc]: https://fullcalendar.io/docs#toc
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/
-[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript
 [Next.js]: https://nextjs.org/

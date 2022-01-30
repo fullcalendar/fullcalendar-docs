@@ -1,17 +1,16 @@
-
 <div class='topbar'>
   <div class='topbar__container container'>
 
     <div class='topbar__branding'>
-      <a class='branding' href='{{ site.baseurl }}/'>
+      <a class='branding' href='/'>
         <div class='branding-graphic'></div>
         <div class='branding-text'>FullCalendar</div>
       </a>
     </div>
 
     <div class='topbar__nav'>
-      <div class='topbar__nav-item'>
-        <a class='topbar__nav-handle' href='{{ site.baseurl }}/#demos'>
+      <div class='topbar__nav-item' id='demos-nav-item'>
+        <a class='topbar__nav-handle' href='/demos'>
           Demos
         </a>
       </div>
@@ -20,7 +19,7 @@
       %}topbar__nav-item--selected{%
         endif
       %}'>
-        <a class='topbar__nav-handle' href='{{ site.baseurl }}/docs'>
+        <a class='topbar__nav-handle' href='{{ site.baseurl }}'>
           Docs
         </a>
       </div>
@@ -30,58 +29,50 @@
         endif
       %}'>
         <div class='topbar__nav-handle'>
-          Community
+          Support
         </div>
         <div class='topbar__flyout-wrap'>
           <div class='topbar__flyout'>
             <div class='topbar__flyout-item'>
-              <a class='topbar__flyout-handle' href='{{ site.baseurl }}/getting-help'>
+              <a class='topbar__flyout-handle' href='/getting-help'>
                 Getting Help
               </a>
             </div>
             <div class='topbar__flyout-item'>
-              <a class='topbar__flyout-handle' href='{{ site.baseurl }}/reporting-bugs'>
+              <a class='topbar__flyout-handle' href='/reporting-bugs'>
                 Reporting Bugs
               </a>
             </div>
             <div class='topbar__flyout-item'>
-              <a class='topbar__flyout-handle' href='{{ site.baseurl }}/requesting-features'>
+              <a class='topbar__flyout-handle' href='/requesting-features'>
                 Requesting Features
               </a>
             </div>
             <div class='topbar__flyout-item'>
-              <a class='topbar__flyout-handle' href='{{ site.baseurl }}/contributing'>
+              <a class='topbar__flyout-handle' href='/contributing'>
                 Contributing
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class='topbar__nav-item {%
-        if page.is_license
-      %}topbar__nav-item--selected{%
-        endif
-      %}'>
-        <a class='topbar__nav-handle' href='{{ site.baseurl }}/license'>
-          License
-        </a>
-      </div>
       <div class='topbar__nav-item'>
-        <a class='topbar__nav-handle button button--lightblue button--outlined' href='{{ site.baseurl }}/purchase'>
-          Premium
+        <a class='topbar__nav-handle button button--lightblue button--outlined' href='/pricing'>
+          Pricing
         </a>
       </div>
     </div>
 
     <div class='topbar__notice'>
-      <a class='topbar__notice-link' href='https://github.com/fullcalendar/fullcalendar/releases/tag/v{{ site.data.releases[0].version }}' target='_blank'>
-        v{{ site.data.releases[0].version }}
-      </a>
       {% comment %}
-        <a class='topbar__notice-link' href='{{ site.baseurl }}{% post_url 2020-06-21-v5-official %}'>
-          <span style='color:#FAC863'></span> &mdash;
+        <a class='topbar__notice-link' href='https://github.com/fullcalendar/fullcalendar/releases' target='_blank'>
+          v{{ site.data.latest-releases.v5 }}
         </a>
       {% endcomment %}
+      <a class='topbar__notice-link'
+        href='{{ site.baseurl }}{% post_url 2021-11-03-accessibility-enhancements-in-v510 %}'>
+        <span style='color:#FAC863'>Nov 3</span> &mdash; Accessibility Enhancements in v5.10
+      </a>
     </div>
 
     <div class='topbar__github'>

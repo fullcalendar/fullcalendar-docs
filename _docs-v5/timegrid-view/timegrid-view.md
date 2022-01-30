@@ -3,6 +3,8 @@ title: TimeGrid View
 children:
   - title: TimeGrid-specific Options
     children:
+      - eventMinHeight
+      - eventShortHeight
       - slotEventOverlap
       - allDaySlot
       - article: all-day-render-hooks
@@ -11,8 +13,8 @@ children:
           - allDayContent
           - allDayDidMount
           - allDayWillUnmount
-
 related:
+  - eventMaxStack
   - slotDuration
   - slotLabelFormat
   - slotLabelInterval

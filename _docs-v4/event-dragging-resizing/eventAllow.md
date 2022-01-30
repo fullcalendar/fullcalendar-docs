@@ -51,7 +51,7 @@ The [ISO8601 string](https://en.wikipedia.org/wiki/ISO_8601) representation of t
 <tr>
 <th>resource</th>
 <td markdown='1'>
-If the current view is a resource-view, the [Resource Object](resource-object) the element was dropped on. This requires one of the [resource plugins](premium).
+If the current view is a resource-view, the [Resource Object](resource-object) the element was dropped on. This requires one of the [resource plugins](/pricing).
 </td>
 </tr>
 
@@ -84,4 +84,4 @@ eventAllow: function(dropInfo, draggedEvent) {
 }
 ```
 
-Only available with the [Scheduler plugin]({{ site.baseurl }}/purchase).
+Only available with the [Scheduler plugin](/pricing).

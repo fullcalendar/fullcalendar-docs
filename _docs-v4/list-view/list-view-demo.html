@@ -1,7 +1,10 @@
 ---
 title: Assorted list views
 layout: demo-v4
-plugins: [ list ]
+plugin_js:
+  - '@fullcalendar/list'
+plugin_css:
+  - '@fullcalendar/list'
 ---
 <script>
 
@@ -26,7 +29,7 @@ plugins: [ list ]
         center: '',
         right: 'listDay,listWeek,listMonth'
       },
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

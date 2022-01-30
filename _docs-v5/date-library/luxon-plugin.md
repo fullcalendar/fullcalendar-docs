@@ -46,10 +46,10 @@ You can also configure the Luxon plugin with [script tags](initialize-globals). 
 <script src='https://cdn.jsdelivr.net/npm/luxon@1.24.1/build/global/luxon.min.js'></script>
 
 <!-- fullcalendar bundle -->
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
 
 <!-- the luxon-to-fullcalendar connector. must go AFTER the luxon lib -->
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon@5.2.0/main.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon@5.5.0/main.global.min.js'></script>
 
 <script>
   var calendar = document.getElementById('calendar')
@@ -64,7 +64,7 @@ You can also configure the Luxon plugin with [script tags](initialize-globals). 
 
 ## Formatting
 
-The plugin allows you to specify [luxon formatting strings](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) wherever a [date formatting input](http://fullcalendar.test/docs/date-formatting) is expected:
+The plugin allows you to specify [luxon formatting strings](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) wherever a [date formatting input](date-formatting) is expected:
 
 ```js
 var calendar = new FullCalendar.Calendar(calendarEl, {

@@ -1,10 +1,21 @@
 
 .button {
-  // TODO: resets
   display: inline-block;
   border: 2px solid transparent;
-  border-radius: $border-radius;
-  padding: .2em .5em;
+  border-radius: 4px;
+  padding: 3px 8px;
+  line-height: 1.7;
+  cursor: pointer;
+  text-decoration: none !important; // dont let text-content apply underline
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+}
+
+.button--filled {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 button.button,
@@ -13,16 +24,68 @@ input.button {
   font-family: inherit; // more props?
 }
 
+.button--red {
+
+  &.button--filled {
+    background-color: #d20404;
+    color: #fff;
+
+    &:not(:disabled):hover {
+      border-color: #d20404;
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+}
+
 .button--blue {
 
   &.button--filled {
     background-color: $blue-primary-color;
     color: #fff;
 
-    &:hover {
+    &:not(:disabled):hover {
       border-color: $blue-primary-color;
       background-color: transparent;
-      color: $font-color;
+      color: inherit;
+    }
+  }
+
+  &.button--outlined {
+    border-color: $blue-primary-color;
+    color: inherit;
+
+    &:not(:disabled):hover {
+      background-color: $blue-primary-color;
+      color: #fff;
+    }
+  }
+}
+
+.button--purple {
+
+  &.button--filled {
+    background-color: #5f1481;
+    color: #fff;
+
+    &:not(:disabled):hover {
+      border-color: #5f1481;
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+}
+
+.button--green {
+
+  &.button--filled {
+    background-color: $green-primary-color;
+    color: #fff;
+
+    &:not(:disabled):hover {
+      border-color: $green-primary-color;
+      background-color: transparent;
+      color: inherit;
     }
   }
 }
@@ -31,11 +94,11 @@ input.button {
 
   &.button--outlined {
     border-color: $blue-highlight-color;
-    color: #fff;
+    color: inherit;
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: $blue-highlight-color;
-      color: $font-color;
+      color: $font-color; // assumed dark font color
     }
   }
 }
@@ -45,8 +108,9 @@ input.button {
   &.button--filled {
     background-color: $yellow-highlight-color;
     color: $font-color;
+    box-shadow: none; // box shadow looks bad with yellow
 
-    &:hover {
+    &:not(:disabled):hover {
       border-color: $yellow-highlight-color;
       background-color: transparent;
     }

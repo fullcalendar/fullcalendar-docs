@@ -123,14 +123,14 @@ This guide outlines the changes between v4 and v5.
 
 <br />
 
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/docs)
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }})
 
-**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
+**Found a bug?** [Report it on the issue tracker](/reporting-bugs)
 
-**Have a comment?** [Comment on the latest blog post]({{ site.baseurl }}{% post_url 2020-06-21-v5-official %})
+**Have a comment?** [Comment on the latest blog post](/blog/2020/06/v5-official)
 
 </div>
-<div class='sidebar-layout__sidebar' id='toc' markdown='1'>
+<div class='sidebar-layout__sidebar sidebar-layout__sidebar--bordered' id='toc' markdown='1'>
 
 ## Table of Contents
 
@@ -243,7 +243,7 @@ Configuring your build system to handle CSS is beyond the scope of this document
 
 What if you want to avoid using a build system? What if you prefer manual `<script>` tags and browser globals? This is why we are beginning to offer pre-built bundles of plugins ([#4566](https://github.com/fullcalendar/fullcalendar/issues/4566)). In fact, using the pre-built bundles will be the <strong>ONLY</strong> way to use manual `<script>` tags going forward. The individual plugins will no longer provide browser-runnable UMD files.
 
-First, [get the bundle distro files on the Getting Started page &raquo;](getting-started#pre-built-bundles)
+First, [get the bundle distro files on the Getting Started page &raquo;](initialize-globals)
 
 To use a bundle, do something like this:
 
@@ -263,7 +263,7 @@ To use a bundle, do something like this:
 
 You'll still need to include the CSS file. You won't need to define the `plugins` array anymore.
 
-For initializing [scheduler](premium), do something like this:
+For initializing [scheduler](/pricing), do something like this:
 
 ```html
 <link ref='fullcalendar-scheduler/main.css' rel='stylesheet' />
@@ -662,7 +662,7 @@ Week numbers:
     <td>
       <p>
         This is now the default behavior. The <code>weekNumbersWithinDays:false</code> behavior has been retired.
-        <a href='{{ site.baseurl }}/docs/v4/weekNumbersWithinDays'>See the old docs</a> for an illustration of the difference.
+        <a href='{{ site.baseurl }}/v4/weekNumbersWithinDays'>See the old docs</a> for an illustration of the difference.
       </p>
     </td>
   </tr>
@@ -834,9 +834,11 @@ The area where the "all-day" text is displayed, both in timegrid view and list v
       </ul>
     </td>
     <td>
-      <p>
-        Set a <code>min-height</code> on your event elements via CSS. The computed min-height is considered when positioning events.
-      </p>
+      <ul class='diff-list'>
+        <li>
+          <a href='eventMinHeight' class='diff-added'>eventMinHeight</a> - simply renamed
+        </li>
+      </ul>
     </td>
   </tr>
   <tr>
@@ -1854,7 +1856,7 @@ Also, any utilities that normally would be accessed via `@fullcalendar/core` can
 
 Many developers will be upgrading from <strong>v3</strong> instead of v4. We will likely release a separate guide for this process before the official v5 is released. In the meantime, here are some tips for upgrading from v3 -> v5 in lieu of a full guide:
 
-1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/docs/v4/upgrading-from-v3) but ignore the following areas:
+1. Follow the [v3 -> v4 upgrade guide]({{ site.baseurl }}/v4/upgrading-from-v3) but ignore the following areas:
   - "Initialization" and anything related to `<script>` tags or stylesheets
   - anything related to content injection, such as options with the words `render`, `text`, or `html` in them
 2. Learn how to install and initialize a v5 calendar from the [Getting Started article](getting-started).

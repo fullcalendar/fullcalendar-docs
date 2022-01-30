@@ -14,3 +14,32 @@
 .page-content__title--small {
   font-size: 24px;
 }
+
+
+// content containers with different backgrounds
+
+
+.page-showcase {
+  background-color: rgba(130, 215, 247, 0.12);
+  overflow: hidden;
+}
+
+.page-showcase__main {
+  box-shadow: 0 0 356px 0 rgba(130, 215, 247, 0.5);
+}
+
+
+.page-content-tray {
+  background: $light-bg-color;
+}
+
+
+.section-bottom-shadow {
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section-top-shadow {
+  border-top: 1px solid #ccc;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+}

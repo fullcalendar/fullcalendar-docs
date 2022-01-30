@@ -3,7 +3,7 @@
 # (except for dotfiles which are automatically excluded)
 exclude:
   - node_modules
-  - bin
+  - scripts
   - src
   - vendor # rubygems in TravisCI
   - Gemfile
@@ -11,19 +11,19 @@ exclude:
   - package.json
   - package-lock.json
   - webpack.config.js
-  - gulpfile.js
   - README.md
-
-plugins:
-  - jekyll-paginate
-  - jekyll-archives
 
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-production_baseurl: https://fullcalendar.io
+baseurl: /docs
+
+# for computing `parent_baseurl`, which is for serving assets from outer side
+# no ending slash
+local_parent_baseurl: ""
+live_parent_baseurl: "https://fullcalendar.io"
 
 fullcalendar_org: https://github.com/fullcalendar
 fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
@@ -31,11 +31,6 @@ fullcalendar_scheduler_repo: https://github.com/fullcalendar/fullcalendar-schedu
 fullcalendar_react_repo: https://github.com/fullcalendar/fullcalendar-react
 fullcalendar_vue_repo: https://github.com/fullcalendar/fullcalendar-vue
 fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
-
-disqus_shortname: adamshawsblog
-
-paginate: 10
-paginate_path: /blog/page:num
 
 # ordered by how they should appear in UI
 available_versions:
@@ -63,27 +58,16 @@ collections:
 
   docs-v5:
     output: true
-    permalink: /docs/:slug
+    permalink: /:slug
 
   docs-v4:
     output: true
-    permalink: /docs/v4/:slug
+    permalink: /v4/:slug
 
   docs-v3:
     output: true
-    permalink: /docs/v3/:slug
+    permalink: /v3/:slug
 
   docs-v1:
     output: true
-    permalink: /docs/v1/:slug
-
-  posts: # will output by default
-    permalink: /blog/:year/:month/:title
-
-defaults:
-  # will apply default values to all posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: blog-post
+    permalink: /v1/:slug

@@ -3,7 +3,15 @@ title: Dynamically switch between locales
 layout: demo-v4
 disable_base_styles: true
 needs_locales: true
-plugins: [ interaction, daygrid, timegrid, list ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
 ---
 <script>
 
@@ -25,7 +33,7 @@ plugins: [ interaction, daygrid, timegrid, list ]
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json?overload-day'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?overload-day'
     });
 
     calendar.render();

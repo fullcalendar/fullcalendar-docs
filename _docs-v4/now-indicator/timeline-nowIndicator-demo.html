@@ -1,7 +1,13 @@
 ---
 title: Timeline-view now-indicator
 layout: demo-v4
-plugins: [ timeline, resource-common, resource-timeline ]
+plugin_js:
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-common'
+  - '@fullcalendar/resource-timeline'
+plugin_css:
+  - '@fullcalendar/timeline'
+  - '@fullcalendar/resource-timeline'
 ---
 <script>
 
@@ -13,7 +19,7 @@ plugins: [ timeline, resource-common, resource-timeline ]
       defaultView: 'resourceTimeline',
       nowIndicator: true,
       now: '2018-02-13T09:25:00', // just for demo
-      resources: '{{ site.data.demo_feed_baseurl }}/demo-resources.json'
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json'
     });
 
     calendar.render();

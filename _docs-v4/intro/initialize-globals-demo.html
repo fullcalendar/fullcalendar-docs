@@ -1,7 +1,13 @@
 ---
 description: initialization of calendar with browser globals
 layout: demo-v4
-plugins: [ interaction, daygrid, timegrid ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>

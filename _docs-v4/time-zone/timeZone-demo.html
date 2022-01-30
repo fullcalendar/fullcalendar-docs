@@ -2,7 +2,15 @@
 title: Dynamically switch between timezones
 layout: demo-v4
 disable_base_styles: true
-plugins: [ interaction, daygrid, timegrid, list ]
+plugin_js:
+  - '@fullcalendar/interaction'
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
+plugin_css:
+  - '@fullcalendar/daygrid'
+  - '@fullcalendar/timegrid'
+  - '@fullcalendar/list'
 ---
 <script>
 
@@ -24,7 +32,7 @@ plugins: [ interaction, daygrid, timegrid, list ]
       editable: true,
       selectable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json',
 
       loading: function(bool) {
         if (bool) {
@@ -41,7 +49,7 @@ plugins: [ interaction, daygrid, timegrid, list ]
 
     // load the list of available timezones, build the <select> options
     // it's highly encouraged to use your own AJAX lib instead of using FullCalendar's internal util
-    FullCalendar.requestJson('GET', '{{ site.data.demo_feed_baseurl }}/demo-timezones.json', {}, function(timeZones) {
+    FullCalendar.requestJson('GET', '{{ site.data.parent_baseurl }}/api/demo-feeds/timezones.json', {}, function(timeZones) {
       timeZones.forEach(function(timeZone) {
         var optionEl;
 

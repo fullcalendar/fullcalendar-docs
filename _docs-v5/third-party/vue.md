@@ -8,22 +8,32 @@ FullCalendar seamlessly integrates with the [Vue] JavaScript framework. It provi
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
-- [Bug report instructions]({{ site.baseurl }}/reporting-bugs)
-- [Example project][example project] leveraging [Webpack] and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue) in a code playground
+- [Bug report instructions](/reporting-bugs)
+- Example projects:
+  - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue) (uses [Webpack] and [css-loader]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue)
+  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript) (uses [TypeScript] and [Vite]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript?file=/src/Demo.vue)
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Vue adapter and any additional plugins you plan to use:
+The first step is to install the Vue adapted. If using **Vue 2**:
 
 ```bash
-npm install --save @fullcalendar/vue @fullcalendar/daygrid
+npm install --save @fullcalendar/vue @fullcalendar/core
 ```
 
-You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.vue]):
+If using **Vue 3**:
+
+```bash
+npm install --save @fullcalendar/vue3 @fullcalendar/core
+```
+
+Then install any additional FullCalendar plugins like `@fullcalendar/daygrid`
+
+You may then begin to write a parent component that leverages the `<FullCalendar>` component:
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -47,6 +57,8 @@ export default {
 </template>
 ```
 
+It is recommended to import `@fullcalendar/core/vdom` before any other imports. This is especially important for [Vite]'s HMR to work. For more info, see [ticket #152](https://github.com/fullcalendar/fullcalendar-vue/issues/152).
+
 
 ## CSS
 
@@ -59,6 +71,7 @@ Vue has the concept of "props" (via `v-bind` or `:`) versus "events" (via `v-on`
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -99,6 +112,7 @@ You can modify your calendar's options after initialization by reassigning them 
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -178,12 +192,13 @@ Some people prefer to write component names in kebab-case when writing markup. T
 However, the properties within `calendarOptions` must have the same names.
 
 
-## Scheduler
+## FullCalendar Premium
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Premium's](/pricing) plugins with Vue? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```html
 <script>
+import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue'
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 
@@ -209,7 +224,9 @@ export default {
 
 ## TypeScript
 
-The `@fullcalendar/vue` package includes its own [TypeScript](https://www.typescriptlang.org/) definitions. When using TypeScript in your Vue project, it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript' class='more-link'>example TypeScript project</a>
+For `@fullcalendar/vue3`, nothing special is needed for TypeScript integration.
+
+For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript' class='more-link'>example TypeScript project</a>
 
 
 ## Vuex
@@ -225,7 +242,7 @@ If you plan to use the [Nuxt] Vue framework, you'll need special configuration. 
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue
-[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
 [Nuxt]: https://nuxtjs.org/
+[TypeScript]: https://www.typescriptlang.org/
+[Vite]: https://github.com/vitejs/vite

@@ -41,7 +41,7 @@ layout: demo-v5
     let calendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ CustomViewPlugin ],
       initialView: 'custom',
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     })
 
     calendar.render();

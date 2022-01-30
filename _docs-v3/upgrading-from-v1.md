@@ -3,7 +3,7 @@ title: Upgrading to v2
 layout: text
 ---
 
-FullCalendar version 2.0 ([full documentation]({{ site.baseurl }}/docs))
+FullCalendar version 2.0 ([full documentation]({{ site.baseurl }}/v3#v2))
 offers huge improvements in regards to timezones, internationalization,
 and date manipulation. Much of this is due to intergration with [MomentJS](http://momentjs.com),
 which is now a dependency.
@@ -131,7 +131,7 @@ Other affected locale-related options:
 <tr><td><a href='weekNumberCalculation'><code>weekNumberCalculation</code></a></td><td>new <code>"local"</code> option, which is now the default</td></tr>
 </table>
 
-**[View a live demo!]({{ site.baseurl }}/releases/fullcalendar/2.9.1/demos/languages.html)**
+**[View a live demo!](/releases/fullcalendar/2.9.1/demos/languages.html)**
 
 ## Timezones
 
@@ -158,7 +158,7 @@ The
 <a href='now'><code>now</code></a>
 options have been added as well.
 
-**[View a live demo!]({{ site.baseurl }}/releases/fullcalendar/2.9.1/demos/timezones.html)**
+**[View a live demo!](/releases/fullcalendar/2.9.1/demos/timezones.html)**
 
 ## Requesting and Receiving Events
 

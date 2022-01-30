@@ -7,10 +7,15 @@
 set -e # always immediately exit upon error
 cd "`dirname $0`/.." # start in project root
 
-# ignore paths we know will exist once live including:
-# license/premium-commercial
-# license/premium-faq
-url_ignores="/^\/(releases|issues|js|opportunities|license\/premium-(commercial|faq))(\/|$)/"
+if [[ ! -d './_site' ]]; then
+  echo
+  echo "Must build site before linting."
+  echo
+  exit 1
+fi
+
+# ignore absolute paths with a leading slash
+url_ignores="/^\//"
 
 other_flags=""
 

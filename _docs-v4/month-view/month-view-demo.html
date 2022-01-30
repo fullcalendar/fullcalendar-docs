@@ -1,7 +1,10 @@
 ---
 title: Month View
 layout: demo-v4
-plugins: [ daygrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
 ---
 <script>
 
@@ -12,7 +15,7 @@ plugins: [ daygrid ]
       plugins: [ 'dayGrid' ],
       timeZone: 'UTC',
       defaultView: 'dayGridMonth',
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

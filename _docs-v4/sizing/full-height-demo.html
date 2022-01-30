@@ -3,7 +3,10 @@ title: Calendar with full-height
 description: The height of the calendar will stretch to fill the browser window
 layout: demo-v4
 disable_base_styles: true
-plugins: [ daygrid ]
+plugin_js:
+  - '@fullcalendar/daygrid'
+plugin_css:
+  - '@fullcalendar/daygrid'
 ---
 {% assign ym = site.time | date: '%Y-%m' %}
 <script>
@@ -16,7 +19,7 @@ plugins: [ daygrid ]
       timeZone: 'UTC',
       defaultView: 'dayGridMonth',
       height: 'parent',
-      events: '{{ site.data.demo_feed_baseurl }}/demo-events.json'
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
     });
 
     calendar.render();

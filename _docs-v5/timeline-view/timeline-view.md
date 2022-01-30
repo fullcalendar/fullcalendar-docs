@@ -9,6 +9,7 @@ children:
       - resourceAreaColumns
       - resourcesInitiallyExpanded
       - slotMinWidth
+      - eventMinWidth
       - timeline-view-no-resources
       - article: resource-group-render-hooks
         points:
@@ -27,6 +28,7 @@ children:
           - resourceAreaHeaderDidMount
           - resourceAreaHeaderWillUnmount
 related:
+  - eventMaxStack
   - resource-render-hooks
   - dateClick
   - slotDuration
@@ -48,7 +50,7 @@ demos:
   - timeline-resource-render-hook-demo
 ---
 
-The [Scheduler add-on]({{ site.baseurl }}/purchase) provides a new view called "timeline view" with a customizable horizontal time-axis and resources as rows.
+[FullCalendar Premium](/pricing) provides a view called "timeline view" with a customizable horizontal time-axis and resources as rows.
 
 The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 

@@ -31,6 +31,7 @@ var calendar = new Calendar(calendarEl, {
 Each `customButton` entry accepts the following properties:
 
 - `text` - the text to be display on the button itself
+- `hint` - the [accessibility hint](hints). defaults to `text`
 - `click` - a callback function that is called when the button is clicked. Accepts two arguments: <code>( <a href='https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent'>mouseEvent</a>, <a href='https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement'>htmlElement</a> ).
 - `icon` - see [buttonIcons](buttonIcons). optional
 - `bootstrapFontAwesome` - see [bootstrapFontAwesome](bootstrapFontAwesome). optional

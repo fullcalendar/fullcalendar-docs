@@ -1,15 +1,16 @@
 # NOTE: keep in sync with _config.yml's exclude
 
-# jekyll
-_site
-.jekyll-metadata
-.sass-cache
-
-# npm
-node_modules
-
 # rubygems in TravisCI
-vendor
+/vendor
+
+# npm (if used. not used in monorepo)
+/node_modules
+/package-lock.json
+
+# jekyll
+/.jekyll-metadata
+/.sass-cache
+/_site
 
 # built assets
-assets/*.*
+/dist
