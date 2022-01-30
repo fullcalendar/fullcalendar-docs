@@ -78,7 +78,7 @@ If you want to load ALL locales have the ability to switch between them after pa
 <script src='fullcalendar/core/locales-all.js'></script>
 <script>
 ...
-var calendar = new Calenar(calendarEl, {
+var calendar = new FullCalendar.Calendar(calendarEl, {
   locale: 'es'
 });
 ...
