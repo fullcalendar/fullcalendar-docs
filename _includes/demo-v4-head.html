@@ -26,20 +26,24 @@
   </style>
 {% endunless %}
 
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v4 }}/main.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/main.min.css' rel='stylesheet' />
 
 {% for package_name in page.plugin_css %}
-  <link href='https://cdn.jsdelivr.net/npm/{{ package_name }}@{{ site.data.latest-releases.v4 }}/main.min.css' rel='stylesheet' />
+  <link href='https://cdn.jsdelivr.net/npm/{{ package_name }}@4.4.2/main.min.css' rel='stylesheet' />
 {% endfor %}
 
 <script src='{{ site.baseurl }}/dist/demo-to-codepen.js'></script>
 
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v4 }}/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/main.min.js'></script>
 
 {% if page.needs_locales %}
-  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v4 }}/locales-all.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/locales-all.min.js'></script>
 {% endif %}
 
 {% for package_name in page.plugin_js %}
-  <script src='https://cdn.jsdelivr.net/npm/{{ package_name }}@{{ site.data.latest-releases.v4 }}/main.min.js'></script>
+  {% if package_name == "@fullcalendar/timeline" %}
+    <script src='https://cdn.jsdelivr.net/npm/{{ package_name }}@4.4.3/main.min.js'></script>
+  {% else %}
+    <script src='https://cdn.jsdelivr.net/npm/{{ package_name }}@4.4.2/main.min.js'></script>
+  {% endif %}
 {% endfor %}
