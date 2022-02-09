@@ -50,7 +50,8 @@ The `fullcalendar` bundle's `main.js` and `main.css` files include the following
 - `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
 - `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
 - `@fullcalendar/list` (for [list views](list-view))
-- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap/FontAwesome packages. [more info](bootstrap-theme))
+- `@fullcalendar/bootstrap5` (requires 3rd-party Bootstrap 5 and Bootstrap-Font packages. [more info](bootstrap5))
+- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap 4 and FontAwesome packages. [more info](bootstrap4))
 - `@fullcalendar/google-calendar` ([more info](google-calendar))
 
 
@@ -100,7 +101,8 @@ The `fullcalendar-scheduler` bundle's `main.js` and `main.css` files include the
 - `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
 - `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
 - `@fullcalendar/list` (for [list views](list-view))
-- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap/FontAwesome packages. [more info](bootstrap-theme))
+- `@fullcalendar/bootstrap5` (requires 3rd-party Bootstrap 5 and Bootstrap Icons packages. [more info](bootstrap5))
+- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap 4 and FontAwesome packages. [more info](bootstrap4))
 - `@fullcalendar/google-calendar` ([more info](google-calendar))
 - `@fullcalendar/adaptive` (for [print optimization](print))
 - `@fullcalendar/scrollgrid`

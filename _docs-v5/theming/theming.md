@@ -2,10 +2,11 @@
 title: Theme
 children:
   - themeSystem
-  - bootstrap-theme
+  - bootstrap5
+  - bootstrap4
   - bootstrapFontAwesome
 demos:
-  - bootstrap-theme-demo
+  - bootstrap5-demo
 ---
 
-It is possible to change the look of the calendar (colors, fonts, etc) by applying a *theme*. Currently, only Boostrap v4 is available.
+It is possible to change the look of the calendar (colors, fonts, etc) by applying a *theme*.

@@ -11,5 +11,8 @@ String, *default*: `'standard'`
 `'standard'`
 : Renders a minimal look & feel, the look in most of the [demos](/). Does not require any CSS files beyond the FullCalendar base files.
 
+`'bootstrap5'`
+: Prepares the calendar for a [Bootstrap 5](https://getbootstrap.com/) theme. [Further instructions &raquo;](bootstrap5)
+
 `'bootstrap'`
-: Prepares the calendar for a [Bootstrap 4](https://getbootstrap.com/) theme. [There are other instructions you must follow to get Bootstrap theming working &raquo;](bootstrap-theme)
+: Prepares the calendar for a [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) theme. [Further instructions &raquo;](bootstrap4)

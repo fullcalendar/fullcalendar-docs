@@ -168,10 +168,19 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
+      <strong>@fullcalendar/bootstrap5</strong>
+    </td>
+    <td>
+      Offers <a href='bootstrap5'>Bootstrap 5 theming</a>
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/bootstrap5'>Yarn</a></td>
+  </tr>
+  <tr>
+    <td>
       <strong>@fullcalendar/bootstrap</strong>
     </td>
     <td>
-      Offers <a href='bootstrap-theme'>Bootstrap theming</a>
+      Offers <a href='bootstrap4'>Bootstrap 4 theming</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/bootstrap'>Yarn</a></td>
   </tr>

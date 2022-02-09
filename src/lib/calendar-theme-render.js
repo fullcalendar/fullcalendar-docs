@@ -2,7 +2,7 @@ import { Calendar } from '@fullcalendar/core'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
-import bootstrapPlugin from '@fullcalendar/bootstrap'
+import bootstrap5Plugin from '@fullcalendar/bootstrap5'
 import { loadThemeStylesheets } from './theme-stylesheets'
 
 let calendar
@@ -32,8 +32,8 @@ function initCalendar() {
   // NOTE: don't do drag-n-drop because it's in an iframe
   return new Calendar(calendarEl, {
     timeZone: 'UTC',
-    plugins: [ dayGridPlugin, timeGridPlugin, listPlugin, bootstrapPlugin ],
-    themeSystem: 'bootstrap',
+    plugins: [dayGridPlugin, timeGridPlugin, listPlugin, bootstrap5Plugin],
+    themeSystem: 'bootstrap5',
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',

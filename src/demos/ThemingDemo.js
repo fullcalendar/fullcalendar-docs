@@ -11,7 +11,7 @@ export default class extends Demo {
     <p>
     <select id='theme-select' name='theme'>
       <option value='fullcalendar'>Default FullCalendar Theme</option>
-      <option value='bootstrap' selected>Default Bootstrap Theme</option>
+      <option value='bootstrap5' selected>Default Bootstrap Theme</option>
       <option value='cerulean'>Cerulean</option>
       <option value='cosmo'>Cosmo</option>
       <option value='cyborg'>Cyborg</option>
@@ -64,8 +64,8 @@ export default class extends Demo {
         themeSystem = 'standard'
         theme = ''
       } else {
-        themeSystem = 'bootstrap'
-        theme = val === 'bootstrap' ? '' : val
+        themeSystem = 'bootstrap5'
+        theme = val === 'bootstrap5' ? '' : val
       }
 
       iframe.contentWindow.renderCalendarTheme(themeSystem, theme)

@@ -211,7 +211,7 @@ As a result, if you've written custom styling, <strong>it will most likely need 
 
 In v4, it was your responsibility to import all of fullcalendar's stylesheets. You may have done this in one your project's SASS files. Or, if you had a build system that handled CSS, you may have done this from your JavaScript.
 
-In v5, you no longer need to do this! The plugins will import their own stylesheets (with the exception of the [bootstrap plugin](bootstrap-theme)). So, you'll be able remove lines like these:
+In v5, you no longer need to do this! The plugins will import their own stylesheets (with the exception of the [bootstrap plugin](bootstrap4)). So, you'll be able remove lines like these:
 
 ```js
 import { Calendar } from '@fullcalendar/core'

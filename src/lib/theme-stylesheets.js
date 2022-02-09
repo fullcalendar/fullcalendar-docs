@@ -1,6 +1,6 @@
 import { loadStylesheets } from './stylesheet-loading'
 
-const FONT_AWESOME_URL = 'https://use.fontawesome.com/releases/v5.0.6/css/all.css'
+const FONT_URL = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css'
 
 /*
 settings:
@@ -10,9 +10,9 @@ settings:
   loadingCallback
 */
 export function loadThemeStylesheets(settings) {
-  let callback = settings.callback || function() { }
-  let loadingCallback = settings.loadingCallback || function() { }
-  let stylesheetUrls = [ FONT_AWESOME_URL ]
+  let callback = settings.callback || function () { }
+  let loadingCallback = settings.loadingCallback || function () { }
+  let stylesheetUrls = [FONT_URL]
   let themeStylesheetUrl = generateThemeStylesheetUrl(settings.themeSystemName, settings.themeName)
 
   if (themeStylesheetUrl) {
@@ -20,19 +20,19 @@ export function loadThemeStylesheets(settings) {
   }
 
   loadingCallback(true)
-  loadStylesheets(stylesheetUrls, function() {
+  loadStylesheets(stylesheetUrls, function () {
     loadingCallback(false)
     callback()
   })
 }
 
 function generateThemeStylesheetUrl(themeSystemName, themeName) {
-  if (themeSystemName === 'bootstrap') {
+  if (themeSystemName === 'bootstrap5') {
     if (themeName) {
-      return 'https://bootswatch.com/4/' + themeName + '/bootstrap.min.css'
+      return 'https://bootswatch.com/5/' + themeName + '/bootstrap.min.css';
     }
     else { // the default bootstrap theme
-      return 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
+      return 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css';
     }
   }
 }
