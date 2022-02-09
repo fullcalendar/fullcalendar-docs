@@ -46,7 +46,8 @@ console.log(slotDuration)
 The Duration objects that FullCalendar emits are very simple objects that don't offer a lot of utilities to work with. If you need more power, feed one of these duration objects into a third-party library. There are already connectors written for other libs:
 
 - [Moment Plugin](moment-plugin) (for the [Moment](https://momentjs.com/) library)
-- [Luxon Plugin](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Luxon 2 Plugin](luxon2) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Luxon 1 Plugin](luxon1)
 
 An example with the Moment plugin:
 

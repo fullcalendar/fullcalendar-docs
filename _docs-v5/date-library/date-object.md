@@ -50,6 +50,7 @@ Operations such as computing how many days are between two dates, advancing a da
 However, you can use a third party library to do manipulation. FullCalendar offset connector plugins for these:
 
 - [Moment Plugin](moment-plugin) (for the [Moment](https://momentjs.com/) library)
-- [Luxon Plugin](luxon-plugin) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Luxon 2 Plugin](luxon2) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Luxon 1 Plugin](luxon1)
 
 What about [date-fns](https://date-fns.org/), another popular date-manipulation library? In its current state (version 1.x at the time of writing), it only operates on a date's *local* values, not its UTC values or values interpreted by other time zones. Thus, it will only work propertly if your timeZone is set to `'local'`, but for anything else, it will choke. See [this ticket in date-fns's issue tracker](https://github.com/date-fns/date-fns/issues/376) for more info.

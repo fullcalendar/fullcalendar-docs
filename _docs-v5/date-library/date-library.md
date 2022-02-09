@@ -17,7 +17,8 @@ children:
     children:
       - moment-plugin
       - moment-timezone-plugin
-      - luxon-plugin
+      - luxon2
+      - luxon1
 related:
   - timeZone
 ---
