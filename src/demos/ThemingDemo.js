@@ -45,17 +45,28 @@ export default class extends Demo {
 
   init(controlEl, contentEl) {
     let iframe = contentEl.querySelector('iframe')
-    let iframeDocument = iframe.contentWindow.document
+    let iframeWindow = iframe.contentWindow
+    let iframeDocument = iframeWindow.document
+    let iframeLoaded = false
 
     iframeDocument.open()
     iframeDocument.write(generateHtml())
     iframeDocument.close()
-    iframeDocument.addEventListener('DOMContentLoaded', update)
+    iframeDocument.addEventListener('DOMContentLoaded', handleIframeLoaded)
+    iframeWindow.onload = handleIframeLoaded // in case DOMContentLoaded doesn't fire
+    setTimeout(handleIframeLoaded, 2000) // last resort
 
     let themeSelectEl = controlEl.querySelector('select[name="theme"]')
-    themeSelectEl.addEventListener('change', update)
+    themeSelectEl.addEventListener('change', updateTheme)
 
-    function update() {
+    function handleIframeLoaded() {
+      if (!iframeLoaded) {
+        iframeLoaded = true
+        updateTheme()
+      }
+    }
+
+    function updateTheme() {
       let val = themeSelectEl.value
       let themeSystem
       let theme
@@ -68,7 +79,7 @@ export default class extends Demo {
         theme = val === 'bootstrap5' ? '' : val
       }
 
-      iframe.contentWindow.renderCalendarTheme(themeSystem, theme)
+      iframeWindow.renderCalendarTheme(themeSystem, theme)
     }
   }
 
