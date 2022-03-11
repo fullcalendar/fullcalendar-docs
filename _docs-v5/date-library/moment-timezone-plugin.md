@@ -49,7 +49,7 @@ You can also configure the moment-timezone plugin with [script tags](initialize-
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
 
 <!-- the connector. must go AFTER moment-timezone -->
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/moment@5.5.0/main.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/moment-timezone@5.10.1/main.global.min.js'></script>
 
 <script>
   var calendarEl = document.getElementById('calendar')
