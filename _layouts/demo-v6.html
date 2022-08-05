@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include demo-v6-head.html %}
+{% if content contains '<body' %}
+  {{ content | replace_first: '<body', '</head><body' }}
+{% else %}
+  {{ content }}
+</head>
+<body>
+  {% include demo-topbar.html %}
+  <div id='calendar'></div>
+</body>
+{% endif %}
+</html>
