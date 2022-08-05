@@ -3,6 +3,11 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
+<div class='warning'>
+Angular 14 is not compatible with FullCalendar 5. Please use FullCalendar 6 beta instead.
+<a href='/docs/v6/angular'>Integration instructions</a>.
+</div>
+
 FullCalendar seamlessly integrates with the [Angular] 9 - 13. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
