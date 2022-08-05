@@ -37,7 +37,7 @@ While this technique is rather simple to implement, it is brittle because if ful
 
 <h2 id='css-variables'>Technique 2) Customizing CSS Variables</h2>
 
-It's possible to customize fullcalendar's CSS in a more surgical way. FullCalendar's CSS source code was originally written with [custom CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), aka "CSS variables". These variables are compiled down to plain CSS statements that all supported browsers can understand. However, fullcalendar also leaves these variables in the compiled CSS code for you to override.
+It's possible to customize fullcalendar's CSS in a more surgical way. FullCalendar's CSS source code was originally written with [custom CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), aka "CSS variables". These variables are compiled down to plain CSS statements that all supported browsers (like IE11) can understand. However, fullcalendar also leaves these variables in the compiled CSS code for you to override.
 
 To override these variables, you must be [using a build system](initialize-es6) like Webpack or Rollup. Then, you must install the following:
 

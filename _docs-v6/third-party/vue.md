@@ -10,8 +10,8 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
 - Example projects:
-  - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue) (uses [Webpack] and [css-loader]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue?file=/src/DemoApp.vue)
-  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript) (uses [TypeScript] and [Vite]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/vue3-typescript?file=/src/Demo.vue)
+  - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue) (uses [Webpack] and [css-loader]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/v6/vue?file=/src/DemoApp.vue)
+  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue3-typescript) (uses [TypeScript] and [Vite]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/v6/vue3-typescript?file=/src/Demo.vue)
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
@@ -62,11 +62,6 @@ export default {
 ```
 
 It is recommended to import `@fullcalendar/core/vdom` before any other imports. This is especially important for [Vite]'s HMR to work. For more info, see [ticket #152](https://github.com/fullcalendar/fullcalendar-vue/issues/152).
-
-
-## CSS
-
-All of FullCalendar's CSS will be automatically loaded as long as your build system is able to process `.css` file imports. See [Initializing with an ES6 Build System](initialize-es6) for more information on configuring your build system.
 
 
 ## Props and Emitted Events
@@ -230,17 +225,17 @@ export default {
 
 For `@fullcalendar/vue3`, nothing special is needed for TypeScript integration.
 
-For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-typescript' class='more-link'>example TypeScript project</a>
+For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue-typescript' class='more-link'>example TypeScript project</a>
 
 
 ## Vuex
 
-[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/vue-vuex' class='more-link'>View an example project</a>
+[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue-vuex' class='more-link'>View an example project</a>
 
 
 ## Nuxt
 
-If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/nuxt'>See the example project</a>
+If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/nuxt'>See the example project</a>
 
 
 [Vue]: https://vuejs.org/

@@ -97,7 +97,7 @@ If you're using the React connector you can [specify a React component instead](
 
 ## Props
 
-Both the config and component techniques receive "props", an object with information about the current view. You'll need to look at the [FullCalendar v5 source code](https://github.com/fullcalendar/fullcalendar/blob/master/packages/core/src/View.ts) to see exactly what's in `props`.
+Both the config and component techniques receive "props", an object with information about the current view. You'll need to look at the [FullCalendar v6 source code](https://github.com/fullcalendar/fullcalendar/blob/v6/packages/common/src/View.ts) to see exactly what's in `props`.
 
 
 ## Other Considerations

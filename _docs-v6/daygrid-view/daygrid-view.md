@@ -21,7 +21,6 @@ let calendar = new Calendar(calendarEl, {
 Or you can choose to initialized DayGrid view [as a global bundle](initialize-globals):
 
 ```html
-<link href='fullcalendar/main.css' rel='stylesheet' />
 <script src='fullcalendar/main.js'></script>
 <script>
 ...

@@ -36,7 +36,6 @@ let calendar = new Calendar(calendarEl, {
 Or, you can choose to initialize it with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<link href='fullcalendar-scheduler/main.css' rel='stylesheet' />
 <script src='fullcalendar-scheduler/main.js'></script>
 <script>
 ...

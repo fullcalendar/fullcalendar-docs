@@ -37,7 +37,7 @@ calendar.render()
 
 When used with Webpack, whenever the `moment-timezone` package is imported into your project, it imports **ALL** timezone data. This is a known issue with `moment-timezone`. It applies to `@fullcalendar/moment-timezone` as well. Luckily there is a workaround. Use [moment-timezone-data-webpack-plugin](https://www.npmjs.com/package/moment-timezone-data-webpack-plugin) to strip away this unused data.
 
-<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/moment-timezone' class='more-link'>View an example moment-timezone project</a>
+<a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/moment-timezone' class='more-link'>View an example moment-timezone project</a>
 
 
 ## Usage with Script Tags

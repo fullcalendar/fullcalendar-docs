@@ -30,7 +30,6 @@ let calendar = new Calendar(calendarEl, {
 Alternatively, if you are using [a global bundle](initialize-globals), you can do something like this:
 
 ```html
-<link href='fullcalendar/main.css' rel='stylesheet' />
 <script src='fullcalendar/main.js'></script>
 <script>
 ...
