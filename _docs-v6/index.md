@@ -1,5 +1,7 @@
 ---
-permalink: /
+# we actually want "/v6" (without the trailing slash),
+# but wildcard URL for doc articles confuses things.
+permalink: /v6/
 
 layout: docs-landing
 
