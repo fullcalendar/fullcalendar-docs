@@ -265,14 +265,5 @@ FullCalendar offers the following packages:
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/vue'>Yarn</a></td>
   </tr>
-  <tr>
-    <td>
-      <strong>@fullcalendar/angular</strong>
-    </td>
-    <td>
-      Offers an Angular component. <a href='angular'>More info</a>
-    </td>
-    <td><a href='https://yarnpkg.com/package/@fullcalendar/angular'>Yarn</a></td>
-  </tr>
 </tbody>
 </table>

@@ -286,5 +286,5 @@ and the template:
 [app.component.scss]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/app/app.component.scss
 [app.component.html]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/app/app.component.html
 [docs toc]: https://fullcalendar.io/docs#toc
-[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/v5/projects/fullcalendar/src/lib/fullcalendar-options.ts
+[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/master/projects/fullcalendar/src/lib/fullcalendar-options.ts
 [ViewChild]: https://angular.io/api/core/ViewChild
