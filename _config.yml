@@ -35,6 +35,9 @@ fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
 # ordered by how they should appear in UI
 available_versions:
 
+  - id: v6
+    collection: docs-v6
+
   - id: v5
     collection: docs-v5
     is_latest: true
@@ -55,6 +58,10 @@ available_versions:
 # NOTE: if you change the permalink structure, you must also change
 # the permalinks in the _docs-*/index.md files.
 collections:
+
+  docs-v6:
+    output: true
+    permalink: /v6/:slug
 
   docs-v5:
     output: true
