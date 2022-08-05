@@ -10,7 +10,10 @@ title: Moment Timezone Plugin
 First, install the `@fullcalendar/moment-timezone` package along with any other packages you plan to use:
 
 ```
-npm install --save @fullcalendar/moment-timezone @fullcalendar/core @fullcalendar/daygrid
+npm install --save \
+  @fullcalendar/moment-timezone@beta \
+  @fullcalendar/core@beta \
+  @fullcalendar/daygrid@beta
 ```
 
 Then, create a new calendar and pass in the plugins:

@@ -38,7 +38,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 Alternatively, you can load the bootstrap plugin [using an ES6 build system](initialize-es6). Install the necessary FullCalendar packages first:
 
 ```
-npm install --save @fullcalendar/core @fullcalendar/bootstrap5
+npm install --save \
+  @fullcalendar/core@beta \
+  @fullcalendar/bootstrap5@beta
 ```
 
 Then, install the packages for Bootstrap and Bootstrap Icons:

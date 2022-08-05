@@ -55,7 +55,9 @@ demos:
 The following pre-configured timeline views are available: **timelineDay**, **timelineWeek**, **timelineMonth**, and **timelineYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```
-npm install --save @fullcalendar/core @fullcalendar/resource-timeline
+npm install --save \
+  @fullcalendar/core@beta \
+  @fullcalendar/resource-timeline@beta
 ```
 
 ```js

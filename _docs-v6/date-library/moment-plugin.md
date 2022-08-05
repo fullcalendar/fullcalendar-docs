@@ -14,7 +14,10 @@ title: Moment Plugin
 First, install the `@fullcalendar/moment` package along with any other packages you plan to use:
 
 ```
-npm install --save @fullcalendar/moment @fullcalendar/core @fullcalendar/daygrid
+npm install --save \
+  @fullcalendar/moment@beta \
+  @fullcalendar/core@beta \
+  @fullcalendar/daygrid@beta
 ```
 
 Then, create a new calendar and pass in the plugins:

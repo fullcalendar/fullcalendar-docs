@@ -18,7 +18,11 @@ FullCalendar's functionality is broken up into "plugins" ([see a full list](plug
 First, use NPM or Yarn to install the `core` package along with any plugins you plan to use:
 
 ```
-npm install @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/list
+npm install \
+  @fullcalendar/core@beta \
+  @fullcalendar/daygrid@beta \
+  @fullcalendar/timegrid@beta \
+  @fullcalendar/list@beta
 ```
 
 Then, import your plugins and supply them to a new `Calendar` instance:
@@ -47,7 +51,9 @@ let calendar = new Calendar(calendarEl, {
 The set of [premium plugins](premium) works in the same way. You'll need to install the `core` package as well as any premium plugins you plan to use:
 
 ```
-npm install --save @fullcalendar/core @fullcalendar/resource-timeline
+npm install --save \
+  @fullcalendar/core@beta \
+  @fullcalendar/resource-timeline@beta
 ```
 
 Then, import your plugins and supply them to a new `Calendar` instance:

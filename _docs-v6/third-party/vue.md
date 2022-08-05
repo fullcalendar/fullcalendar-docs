@@ -18,13 +18,17 @@ This guide does not go into depth about initializing a Vue project. Please consu
 The first step is to install the Vue adapted. If using **Vue 2**:
 
 ```bash
-npm install --save @fullcalendar/vue @fullcalendar/core
+npm install --save \
+  @fullcalendar/vue@beta \
+  @fullcalendar/core@beta
 ```
 
 If using **Vue 3**:
 
 ```bash
-npm install --save @fullcalendar/vue3 @fullcalendar/core
+npm install --save \
+  @fullcalendar/vue3@beta \
+  @fullcalendar/core@beta
 ```
 
 Then install any additional FullCalendar plugins like `@fullcalendar/daygrid`

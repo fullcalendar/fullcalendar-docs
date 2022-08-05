@@ -14,7 +14,9 @@ demos:
 [FullCalendar Premium](/pricing) provides [TimeGrid view](timegrid-view) and [DayGrid view](daygrid-view) with the ability to display **resources as columns**. For example, a TimeGrid `day` resource view can be initialized in an [ES6 setup](initialize-es6) like so:
 
 ```
-npm install --save @fullcalendar/core @fullcalendar/resource-timegrid
+npm install --save \
+  @fullcalendar/core@beta \
+  @fullcalendar/resource-timegrid@beta
 ```
 
 ```js

@@ -10,7 +10,10 @@ The RRule plugin is a connector to the [rrule js library](https://github.com/jak
 First, install the `@fullcalendar/rrule` package along with any other packages you plan to use:
 
 ```
-npm install --save @fullcalendar/rrule @fullcalendar/core @fullcalendar/daygrid
+npm install --save \
+  @fullcalendar/rrule@beta \
+  @fullcalendar/core@beta \
+  @fullcalendar/daygrid@beta
 ```
 
 Then, create a new calendar and pass in the plugins:
