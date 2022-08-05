@@ -1,0 +1,40 @@
+---
+title: timeGridWeek with natural height and sticky headers
+layout: demo-v5
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'timeGridWeek',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'timeGridWeek,timeGridDay'
+      },
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json',
+      editable: true,
+      selectable: true,
+
+      height: 'auto', // will activate stickyHeaderDates automatically!
+      slotDuration: '00:05:00' // very small slots will make the calendar really tall
+    });
+
+    calendar.render();
+  });
+
+</script>
+<body>
+  {% include demo-topbar.html %}
+
+  <p style='text-align:center'>
+    As you scroll down, see how the header sticks<br />
+    &darr;<br />
+  </p>
+
+  <div id='calendar'></div>
+
+</body>

@@ -1,0 +1,36 @@
+---
+title: Custom 4-day vertical resource view
+layout: demo-v5
+needs_premium: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'resourceTimeGridFourDay',
+      headerToolbar: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'resourceTimeGridDay,resourceTimeGridFourDay'
+      },
+      views: {
+        resourceTimeGridFourDay: {
+          type: 'resourceTimeGrid',
+          duration: { days: 4 },
+          buttonText: '4 days'
+        }
+      },
+      resources: [
+        { id: 'a', title: 'Room A' },
+        { id: 'b', title: 'Room B' }
+      ],
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources=2'
+    });
+
+    calendar.render();
+  });
+
+</script>

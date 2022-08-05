@@ -1,0 +1,68 @@
+---
+title: Dragging Events Between Two Calendars
+layout: demo-v5
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var srcCalendarEl = document.getElementById('source-calendar');
+    var destCalendarEl = document.getElementById('destination-calendar');
+
+    var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
+      editable: true,
+      initialDate: '{{ ym }}-12',
+      events: [
+        {
+          title: 'event1',
+          start: '{{ ym }}-11T10:00:00',
+          end: '{{ ym }}-11T16:00:00'
+        },
+        {
+          title: 'event2',
+          start: '{{ ym }}-13T10:00:00',
+          end: '{{ ym }}-13T16:00:00'
+        }
+      ],
+      eventLeave: function(info) {
+        console.log('event left!', info.event);
+      }
+    });
+
+    var destCalendar = new FullCalendar.Calendar(destCalendarEl, {
+      initialDate: '{{ ym }}-12',
+      editable: true,
+      droppable: true, // will let it receive events!
+      eventReceive: function(info) {
+        console.log('event received!', info.event);
+      }
+    });
+
+    srcCalendar.render();
+    destCalendar.render();
+  });
+
+</script>
+<style>
+
+  #container {
+    padding: 20px 0 0 20px;
+  }
+
+  #container > * {
+    float: left;
+    width: 600px;
+    margin: 0 20px 20px 0;
+  }
+
+</style>
+<body>
+
+  {% include demo-topbar.html %}
+
+  <div id='container'>
+    <div id='source-calendar'></div>
+    <div id='destination-calendar'></div>
+  </div>
+
+</body>

@@ -1,0 +1,73 @@
+---
+title: list view with natural height and sticky headers
+layout: none
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://cdn.jsdelivr.net/npm/rrule@2.6.4/dist/es5/rrule.min.js'></script>
+    {% include demo-v5-head.html %}
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          height: 'auto', // will activate stickyHeaderDates automatically!
+
+          timeZone: 'UTC',
+          initialView: 'listMonth',
+          initialDate: '{{ ym }}-09',
+          navLinks: true, // can click day/week names to navigate views
+          editable: true,
+
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'listMonth,listYear'
+          },
+
+          // customize the button names,
+          // otherwise they'd all just say "list"
+          views: {
+            listMonth: { buttonText: 'list month' },
+            listYear: { buttonText: 'list year' }
+          },
+
+          events: [
+            {
+              title: 'repeating event 1',
+              daysOfWeek: [ 1, 2, 3 ],
+              duration: '00:30'
+            },
+            {
+              title: 'repeating event 2',
+              daysOfWeek: [ 1, 2, 3 ],
+              duration: '00:30'
+            },
+            {
+              title: 'repeating event 3',
+              daysOfWeek: [ 1, 2, 3 ],
+              duration: '00:30'
+            }
+          ]
+        });
+
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    {% include demo-topbar.html %}
+
+    <p style='text-align:center'>
+      As you scroll down, see how the header sticks<br />
+      &darr;<br />
+    </p>
+
+    <div id='calendar'></div>
+
+  </body>
+</html>

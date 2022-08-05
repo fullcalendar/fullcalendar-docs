@@ -1,0 +1,48 @@
+---
+title: Vertical Resource View
+layout: demo-v5
+needs_premium: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'resourceTimeGridDay',
+      editable: true,
+      selectable: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'resourceTimeGridDay,resourceTimeGridTwoDay,timeGridWeek,dayGridMonth'
+      },
+      views: {
+        resourceTimeGridTwoDay: {
+          type: 'resourceTimeGrid',
+          duration: { days: 2 },
+          buttonText: '2 days',
+        }
+      },
+      resources: [
+        { id: 'a', title: 'Room A' },
+        { id: 'b', title: 'Room B', eventColor: 'green' },
+        { id: 'c', title: 'Room C', eventColor: 'orange' },
+        { id: 'd', title: 'Room D', eventColor: 'red' }
+      ],
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources=4&single-day'
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+  .fc-today {
+    background: transparent !important; /* hack. because demo will always start out on current day */
+  }
+
+</style>

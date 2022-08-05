@@ -1,0 +1,50 @@
+---
+title: Custom View with JS
+layout: demo-v5
+---
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const { sliceEvents, createPlugin, Calendar } = FullCalendar
+
+    const CustomViewConfig = {
+
+      classNames: [ 'custom-view' ],
+
+      content: function(props) {
+        let segs = sliceEvents(props, true); // allDay=true
+        let html =
+          '<div class="view-title">' +
+            props.dateProfile.currentRange.start.toUTCString() +
+          '</div>' +
+          '<div class="view-events">' +
+            segs.length + ' events:' +
+            '<ul>' +
+              segs.map(function(seg) {
+                return seg.def.title + ' (' + seg.range.start.toUTCString() + ')'
+              }).join('') +
+            '</ul>' +
+          '</div>'
+
+        return { html: html }
+      }
+
+    }
+
+    const CustomViewPlugin = createPlugin({
+      views: {
+        custom: CustomViewConfig
+      }
+    })
+
+    let calendarEl = document.getElementById('calendar');
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ CustomViewPlugin ],
+      initialView: 'custom',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
+    })
+
+    calendar.render();
+
+  });
+</script>

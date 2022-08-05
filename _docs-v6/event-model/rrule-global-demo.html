@@ -1,0 +1,42 @@
+---
+title: RRule Plugin Demo
+layout: demo-v5
+---
+
+<script src='https://cdn.jsdelivr.net/npm/rrule@2.6.4/dist/es5/rrule.min.js'></script>
+
+<!--
+  IMPORTANT: use a CDN with a full version number instead of the one below!
+  Grab a URL at https://www.jsdelivr.com/package/npm/@fullcalendar/rrule
+-->
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@5/main.global.min.js'></script>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialDate: '2020-05-12',
+      editable: true,
+      events: [
+        {
+          title: 'rrule event',
+          rrule: {
+            dtstart: '2020-05-09T13:00:00',
+            freq: 'weekly'
+          },
+          duration: '02:00'
+        }
+      ],
+      eventClick: function(arg) {
+        if (confirm('delete event?')) {
+          arg.event.remove()
+        }
+      }
+    });
+
+    calendar.render();
+  });
+
+</script>

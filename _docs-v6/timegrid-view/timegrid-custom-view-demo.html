@@ -1,0 +1,31 @@
+---
+title: Custom 4-day TimeGrid view
+layout: demo-v5
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'timeGridFourDay',
+      headerToolbar: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'timeGridDay,timeGridFourDay'
+      },
+      views: {
+        timeGridFourDay: {
+          type: 'timeGrid',
+          duration: { days: 4 },
+          buttonText: '4 day'
+        }
+      },
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

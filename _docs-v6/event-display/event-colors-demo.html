@@ -1,0 +1,70 @@
+---
+title: Event color customization
+layout: demo-v5
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      initialDate: '{{ ym }}-12',
+      eventColor: 'green',
+      events: [
+        {
+          title: 'All Day Event',
+          start: '{{ ym }}-01'
+        },
+        {
+          title: 'Long Event',
+          start: '{{ ym }}-07',
+          end: '{{ ym }}-10',
+          color: 'purple' // override!
+        },
+        {
+          groupId: '999',
+          title: 'Repeating Event',
+          start: '{{ ym }}-09T16:00:00'
+        },
+        {
+          groupId: '999',
+          title: 'Repeating Event',
+          start: '{{ ym }}-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '{{ ym }}-11',
+          end: '{{ ym }}-13',
+          color: 'purple' // override!
+        },
+        {
+          title: 'Meeting',
+          start: '{{ ym }}-12T10:30:00',
+          end: '{{ ym }}-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '{{ ym }}-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '{{ ym }}-12T14:30:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '{{ ym }}-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '{{ ym }}-28'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>

@@ -1,0 +1,41 @@
+---
+title: Custom-duration timeline views
+layout: demo-v5
+needs_premium: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      headerToolbar: {
+        left: 'today prev,next',
+        center: 'title',
+        right: 'resourceTimelineDay,resourceTimelineTenDay,resourceTimelineMonth,resourceTimelineYear'
+      },
+      initialView: 'resourceTimelineDay',
+      scrollTime: '08:00',
+      aspectRatio: 1.5,
+      views: {
+        resourceTimelineDay: {
+          buttonText: ':15 slots',
+          slotDuration: '00:15'
+        },
+        resourceTimelineTenDay: {
+          type: 'resourceTimeline',
+          duration: { days: 10 },
+          buttonText: '10 days'
+        }
+      },
+      editable: true,
+      resourceAreaHeaderContent: 'Rooms',
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting&with-colors',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?single-day&for-resource-timeline'
+    });
+
+    calendar.render();
+  });
+
+</script>

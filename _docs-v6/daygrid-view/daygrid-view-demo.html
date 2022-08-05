@@ -1,0 +1,25 @@
+---
+title: dayGridDay and dayGridWeek views
+layout: demo-v5
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'dayGridWeek',
+      headerToolbar: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'dayGridDay,dayGridWeek'
+      },
+      editable: true,
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

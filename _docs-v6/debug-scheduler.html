@@ -1,0 +1,73 @@
+---
+description: demo of scheduler plugin views
+layout: demo-v5
+needs_premium: true
+---
+{% assign ymd = site.time | date: '%Y-%m-%d' %}
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      editable: true,
+      initialView: 'resourceTimelineDay',
+      initialDate: '{{ ymd }}',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'resourceTimelineDay,resourceTimeGridDay'
+      },
+      resourceAreaHeaderContent: 'Rooms',
+      views: {
+        resourceTimelineDay: { buttonText: 'timeline' },
+        resourceTimeGridDay: { buttonText: 'timeGrid' }
+      },
+      events: [
+        {
+          resourceId: 'a',
+          title: 'Timed Event',
+          start: '{{ ymd }}T16:00:00+00:00'
+        },
+        {
+          resourceId: 'b',
+          title: 'Conference',
+          start: '{{ ymd }}'
+        },
+        {
+          resourceId: 'c',
+          title: 'Meeting',
+          start: '{{ ymd }}T10:30:00+00:00',
+          end: '{{ ymd }}T12:30:00+00:00'
+        },
+        {
+          resourceId: 'a',
+          title: 'Lunch',
+          start: '{{ ymd }}T12:00:00+00:00'
+        }
+      ],
+      resources: [
+        {
+          id: 'a',
+          title: 'Auditorium A'
+        },
+        {
+          id: 'b',
+          title: 'Auditorium B'
+        },
+        {
+          id: 'c',
+          title: 'Auditorium C'
+        },
+        {
+          id: 'd',
+          title: 'Auditorium D'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>

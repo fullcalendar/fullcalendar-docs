@@ -1,0 +1,43 @@
+---
+description: dayMinWidth horizontal scrollbars
+layout: demo-v5
+needs_premium: true
+---
+{% assign ym = site.time | date: '%Y-%m' %}
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialDate: '{{ ym }}-07',
+      initialView: 'resourceTimeGridThreeDay',
+      views: {
+        resourceTimeGridThreeDay: {
+          type: 'resourceTimeGrid',
+          duration: { days: 3 }
+        }
+      },
+      datesAboveResources: true,
+
+      dayMinWidth: 200,
+
+      resources: [
+        { id: 'a', title: 'Room A' },
+        { id: 'b', title: 'Room B', eventColor: 'green' },
+        { id: 'c', title: 'Room C', eventColor: 'orange' },
+        { id: 'd', title: 'Room D', eventColor: 'red' }
+      ],
+      events: [
+        { id: '1', resourceId: 'a', start: '{{ ym }}-06', end: '{{ ym }}-08', title: 'event 1' },
+        { id: '2', resourceId: 'a', start: '{{ ym }}-07T09:00:00', end: '{{ ym }}-07T14:00:00', title: 'event 2' },
+        { id: '3', resourceId: 'b', start: '{{ ym }}-07T12:00:00', end: '{{ ym }}-08T06:00:00', title: 'event 3' },
+        { id: '4', resourceId: 'c', start: '{{ ym }}-07T07:30:00', end: '{{ ym }}-07T09:30:00', title: 'event 4' },
+        { id: '5', resourceId: 'd', start: '{{ ym }}-07T10:00:00', end: '{{ ym }}-07T15:00:00', title: 'event 5' }
+      ],
+    });
+
+    calendar.render();
+  });
+
+</script>

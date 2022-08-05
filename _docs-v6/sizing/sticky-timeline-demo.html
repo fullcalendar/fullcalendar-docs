@@ -1,0 +1,131 @@
+---
+title: timeline view with natural height and sticky header/scrollbar
+layout: demo-v5
+needs_premium: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'resourceTimelineWeek',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'resourceTimelineWeek,resourceTimelineDay'
+      },
+      editable: true,
+      selectable: true,
+      scrollTime: '00:00',
+
+      height: 'auto', // will activate stickyHeaderDates automatically!
+
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources',
+      resourceAreaHeaderContent: 'Rooms',
+      resources: [
+        { id: 'a', title: 'Auditorium A' },
+        { id: 'b', title: 'Auditorium B', eventColor: 'green' },
+        { id: 'c', title: 'Auditorium C', eventColor: 'orange' },
+        { id: 'd', title: 'Auditorium D', children: [
+          { id: 'd1', title: 'Room D1' },
+          { id: 'd2', title: 'Room D2' }
+        ] },
+        { id: 'e', title: 'Auditorium E' },
+        { id: 'f', title: 'Auditorium F', eventColor: 'red' },
+        { id: 'g', title: 'Auditorium G' },
+        { id: 'h', title: 'Auditorium H' },
+        { id: 'i', title: 'Auditorium I' },
+        { id: 'j', title: 'Auditorium J' },
+        { id: 'k', title: 'Auditorium K' },
+        { id: 'l', title: 'Auditorium L' },
+        { id: 'm', title: 'Auditorium M' },
+        { id: 'n', title: 'Auditorium N' },
+        { id: 'o', title: 'Auditorium O' },
+        { id: 'p', title: 'Auditorium P' },
+        { id: 'q', title: 'Auditorium Q' },
+        { id: 'r', title: 'Auditorium R' },
+        { id: 's', title: 'Auditorium S' },
+        { id: 't', title: 'Auditorium T' },
+        { id: 'u', title: 'Auditorium U' },
+        { id: 'v', title: 'Auditorium V' },
+        { id: 'w', title: 'Auditorium W' },
+        { id: 'x', title: 'Auditorium X' },
+        { id: 'y', title: 'Auditorium Y' },
+        { id: 'z', title: 'Auditorium Z' },
+        { id: 'a2', title: 'Auditorium A2' },
+        { id: 'b2', title: 'Auditorium B2' },
+        { id: 'c2', title: 'Auditorium C2' },
+        { id: 'd2', title: 'Auditorium D2' },
+        { id: 'e2', title: 'Auditorium E2' },
+        { id: 'f2', title: 'Auditorium F2' },
+        { id: 'g2', title: 'Auditorium G2' },
+        { id: 'h2', title: 'Auditorium H2' },
+        { id: 'i2', title: 'Auditorium I2' },
+        { id: 'j2', title: 'Auditorium J2' },
+        { id: 'k2', title: 'Auditorium K2' },
+        { id: 'l2', title: 'Auditorium L2' },
+        { id: 'm2', title: 'Auditorium M2' },
+        { id: 'n2', title: 'Auditorium N2' },
+        { id: 'o2', title: 'Auditorium O2' },
+        { id: 'p2', title: 'Auditorium P2' },
+        { id: 'q2', title: 'Auditorium Q2' },
+        { id: 'r2', title: 'Auditorium R2' },
+        { id: 's2', title: 'Auditorium S2' },
+        { id: 't2', title: 'Auditorium T2' },
+        { id: 'u2', title: 'Auditorium U2' },
+        { id: 'v2', title: 'Auditorium V2' },
+        { id: 'w2', title: 'Auditorium W2' },
+        { id: 'x2', title: 'Auditorium X2' },
+        { id: 'y2', title: 'Auditorium Y2' },
+        { id: 'z2', title: 'Auditorium Z2' },
+        { id: 'a3', title: 'Auditorium A3' },
+        { id: 'b3', title: 'Auditorium B3' },
+        { id: 'c3', title: 'Auditorium C3' },
+        { id: 'd3', title: 'Auditorium D3' },
+        { id: 'e3', title: 'Auditorium E3' },
+        { id: 'f3', title: 'Auditorium F3' },
+        { id: 'g3', title: 'Auditorium G3' },
+        { id: 'h3', title: 'Auditorium H3' },
+        { id: 'i3', title: 'Auditorium I3' },
+        { id: 'j3', title: 'Auditorium J3' },
+        { id: 'k3', title: 'Auditorium K3' },
+        { id: 'l3', title: 'Auditorium L3' },
+        { id: 'm3', title: 'Auditorium M3' },
+        { id: 'n3', title: 'Auditorium N3' },
+        { id: 'o3', title: 'Auditorium O3' },
+        { id: 'p3', title: 'Auditorium P3' },
+        { id: 'q3', title: 'Auditorium Q3' },
+        { id: 'r3', title: 'Auditorium R3' },
+        { id: 's3', title: 'Auditorium S3' },
+        { id: 't3', title: 'Auditorium T3' },
+        { id: 'u3', title: 'Auditorium U3' },
+        { id: 'v3', title: 'Auditorium V3' },
+        { id: 'w3', title: 'Auditorium W3' },
+        { id: 'x3', title: 'Auditorium X3' },
+        { id: 'y3', title: 'Auditorium Y3' },
+        { id: 'z3', title: 'Auditorium Z3' }
+      ],
+    });
+
+    calendar.render();
+  });
+
+</script>
+<body>
+  {% include demo-topbar.html %}
+
+  <p style='text-align:center'>
+    As you scroll down, see how the header and horizontal scrollbar sticks<br />
+    &darr;<br />
+  </p>
+
+  <div id='calendar'></div>
+
+  <p style='text-align:center'>
+    <br />&uarr;<br />
+    Did you see how the horizontal scrollbar sticks?
+  </p>
+
+</body>

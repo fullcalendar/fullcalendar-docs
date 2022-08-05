@@ -1,0 +1,43 @@
+---
+title: Using resourceLabelDidMount with a popover in timeline-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceLabelDidMount
+layout: demo-v5
+needs_premium: true
+---
+{% include popper-css.html %}
+<script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+<script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'today prev,next',
+        center: 'title',
+        right: 'resourceTimelineDay,resourceTimelineWeek'
+      },
+      initialView: 'resourceTimelineDay',
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json',
+
+      resourceLabelDidMount: function(info) {
+        var questionMark = document.createElement('strong');
+        questionMark.innerText = ' (?) ';
+
+        info.el.querySelector('.fc-datagrid-cell-main')
+          .appendChild(questionMark);
+
+        var tooltip = new Tooltip(questionMark, {
+          title: info.resource.title + '!!!',
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body'
+        });
+      }
+    });
+
+    calendar.render();
+  });
+
+</script>

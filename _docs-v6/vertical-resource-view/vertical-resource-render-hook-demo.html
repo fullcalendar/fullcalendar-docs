@@ -1,0 +1,42 @@
+---
+title: Using resourceLabelDidMount with a popover in vertical-resource-view
+description: Mouseover each "(?)" to see a popover that was attached via resourceLabelDidMount
+layout: demo-v5
+needs_premium: true
+---
+{% include popper-css.html %}
+<script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+<script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'resourceTimeGridDay',
+
+      resourceLabelDidMount: function(info) {
+        var questionMark = document.createElement('span');
+        questionMark.innerText = ' (?) ';
+
+        info.el.appendChild(questionMark);
+
+        var tooltip = new Tooltip(questionMark, {
+          title: info.resource.title + '!!!',
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body'
+        });
+      },
+
+      resources: [
+        { id: 'a', title: 'Auditorium A' },
+        { id: 'b', title: 'Auditorium B' },
+        { id: 'c', title: 'Auditorium C' }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>

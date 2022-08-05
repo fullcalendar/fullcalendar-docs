@@ -1,0 +1,48 @@
+---
+title: resourceTimeGridWeek with natural height and sticky header/scrollbar
+layout: demo-v5
+needs_premium: true
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'resourceTimeGridWeek',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'resourceTimeGridWeek,resourceTimeGridDay'
+      },
+      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?max=4',
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?with-resources=2&single-day',
+      editable: true,
+      selectable: true,
+
+      height: 'auto', // will activate stickyHeaderDates automatically!
+      slotDuration: '00:05:00', // very small slots will make the calendar really tall
+      dayMinWidth: 150, // will cause horizontal scrollbars
+    });
+
+    calendar.render();
+  });
+
+</script>
+<body>
+  {% include demo-topbar.html %}
+
+  <p style='text-align:center'>
+    As you scroll down, see how the header and horizontal scrollbar sticks
+    <br />&darr;<br />
+  </p>
+
+  <div id='calendar'></div>
+
+  <p style='text-align:center'>
+    <br />&uarr;<br />
+    Did you see how the horizontal scrollbar sticks?
+  </p>
+
+</body>
