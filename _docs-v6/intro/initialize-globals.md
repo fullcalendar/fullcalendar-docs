@@ -10,9 +10,9 @@ It's possible to manually include the necessary `<script>` tags in the head of y
 
 First, obtain the standard `fullcalendar` bundle in one of the following ways:
 
-- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.latest-releases.v5 }}/fullcalendar-{{ site.data.latest-releases.v5 }}.zip'>fullcalendar-{{ site.data.latest-releases.v5 }}.zip</a>
-- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar)
-- **NPM:** `npm install fullcalendar`
+- **Download**: <a href='{{ site.fullcalendar_repo }}/releases/download/v{{ site.data.latest-releases.v6 }}/fullcalendar-{{ site.data.latest-releases.v6 }}.zip'>fullcalendar-{{ site.data.latest-releases.v6 }}.zip</a>
+- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar?version={{ site.data.latest-releases.v6 }})
+- **NPM:** `npm install fullcalendar@beta`
 
 Then, write the following initialization code:
 
@@ -21,7 +21,6 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <link href='fullcalendar/main.css' rel='stylesheet' />
     <script src='fullcalendar/main.js'></script>
     <script>
 
@@ -43,7 +42,7 @@ Then, write the following initialization code:
 
 [View a runnable example &raquo;](initialize-globals-demo)
 
-The `fullcalendar` bundle's `main.js` and `main.css` files include the following packages:
+The `fullcalendar` bundle's `main.js` file includes the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
@@ -59,9 +58,9 @@ The `fullcalendar` bundle's `main.js` and `main.css` files include the following
 
 First, obtain the premium `fullcalendar-scheduler` bundle in one of the following ways:
 
-- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.latest-releases.v5 }}/fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip'>fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip</a>
-- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
-- **NPM:** `npm install fullcalendar-scheduler`
+- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.latest-releases.v6 }}/fullcalendar-scheduler-{{ site.data.latest-releases.v6 }}.zip'>fullcalendar-scheduler-{{ site.data.latest-releases.v6 }}.zip</a>
+- **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler?version={{ site.data.latest-releases.v6 }})
+- **NPM:** `npm install fullcalendar-scheduler@beta`
 
 Then, write the following initialization code:
 
@@ -70,7 +69,6 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <link href='fullcalendar-scheduler/main.css' rel='stylesheet' />
     <script src='fullcalendar-scheduler/main.js'></script>
     <script>
 
@@ -94,7 +92,7 @@ Then, write the following initialization code:
 
 You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalendar` bundle. The `fullcalendar-scheduler` bundle includes everything.
 
-The `fullcalendar-scheduler` bundle's `main.js` and `main.css` files include the following packages:
+The `fullcalendar-scheduler` bundle's `main.js` file includes the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
