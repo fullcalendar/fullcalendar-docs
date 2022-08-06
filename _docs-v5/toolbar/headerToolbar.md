@@ -9,9 +9,9 @@ Object/`false`, *default:*
 
 ```js
 {
-  start: 'title', // will normally be on the left. if RTL, will be on the right
+  left: 'title', // will normally be on the left. if RTL, will be on the right
   center: '',
-  end: 'today prev,next' // will normally be on the right. if RTL, will be on the left
+  right: 'today prev,next' // will normally be on the right. if RTL, will be on the left
 }
 ```
 </div>
