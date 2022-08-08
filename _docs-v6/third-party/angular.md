@@ -140,7 +140,7 @@ Once you've explicitly marked your child component (`#calendar`), retrieve the [
 
 ```js
 import { Component } from '@angular/core';
-import { CalendarOptions, defineFullCalendarElement, FullCalendarElement } from '@fullcalendar/web-component';
+import { CalendarOptions, FullCalendarElement, defineFullCalendarElement } from '@fullcalendar/web-component';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 defineFullCalendarElement();
