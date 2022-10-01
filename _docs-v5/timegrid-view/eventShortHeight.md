@@ -16,8 +16,7 @@ Example of a regular event:
   alt='Screenshot of event with regular height'
   class='bordered-image'
   width='179'
-  height='104'
->
+  height='104'>
 
 Example of a "short" event:
 
@@ -26,5 +25,4 @@ Example of a "short" event:
   alt='Screenshot of event with short height'
   class='bordered-image'
   width='179'
-  height='104'
->
+  height='104'>
