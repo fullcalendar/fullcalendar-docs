@@ -3,19 +3,14 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
-<div class='warning'>
-Angular 14 is not compatible with FullCalendar 5. Please use FullCalendar 6 beta instead.
-<a href='/docs/v6/angular'>Integration instructions</a>.
-</div>
-
-FullCalendar seamlessly integrates with the [Angular] 9 - 13. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar integrates with the [Angular] 9 - 14. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
-- [Example project][example project]. It was initially set up with the `ng new` command of the [Angular CLI], but with lots of stuff stripped out including testing and linting. The code in this guide loosely follows it.
-- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/angular?file=/src/app/app.component.ts) in a code playground
+- [Angular 13 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/angular13)
+- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/angular14)
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
 
@@ -85,9 +80,16 @@ Then, in your component's template file ([app.component.html]), you have access 
 ```
 
 
-## CSS
+## CSS with Angular 13
 
-All of FullCalendar's CSS will be automatically loaded into your project when you import the `full-calendar` component. Each plugins' CSS will be included as well.
+With Angular 13, all of FullCalendar's CSS will be seamlessly loaded into your project when you import the `full-calendar` component. Each plugins' CSS will be included as well.
+
+
+## CSS with Angular 14
+
+**Angular 14 chokes on FullCalendar's external stylesheets.**
+The next major version of FullCalendar will solve this, however, a workaround is needed in the meantime.
+[View the example project for a workaround &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/angular14#workarounds)
 
 
 ## Props and Emitted Events
