@@ -21,7 +21,7 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='fullcalendar/index.global.js'></script>
+    <script src='fullcalendar/dist/index.global.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -66,7 +66,7 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='fullcalendar-scheduler/index.global.js'></script>
+    <script src='fullcalendar-scheduler/dist/index.global.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {

@@ -78,7 +78,7 @@ let calendar = new Calendar(calendarEl, {
 Or, you can choose to initialize Timeline view with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<script src='fullcalendar-scheduler/index.global.js'></script>
+<script src='fullcalendar-scheduler/dist/index.global.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
