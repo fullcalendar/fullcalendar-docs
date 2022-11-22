@@ -8,6 +8,7 @@ A [DayGrid view](daygrid-view) like `dayGridDay` can be given resource functiona
 ```
 npm install --save \
   @fullcalendar/core@beta \
+  @fullcalendar/resource@beta \
   @fullcalendar/resource-daygrid@beta
 ```
 
@@ -28,7 +29,7 @@ let calendar = new Calendar(calendarEl, {
 Or, you can choose to initialize Timeline view with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<script src='fullcalendar-scheduler/main.js'></script>
+<script src='fullcalendar-scheduler/index.global.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {

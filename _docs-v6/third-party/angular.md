@@ -1,100 +1,133 @@
 ---
-title: Angular Integration
+title: Angular Component
 title_for_landing: Angular
 ---
 
-FullCalendar offers a Web Component (aka "Custom Element") for all versions of [Angular]. Useful links:
+FullCalendar seamlessly integrates with the [Angular] 9 - 15. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-- [Custom Elements Everywhere] website showing Angular support
-- [Example project][example project]. Based on a project created with the `ng new` command of the [Angular CLI]. The code in this guide loosely follows it.
-- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/v6/angular?file=/src/app/app.component.ts) in a code playground
+This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
-Install the FullCalendar packages, including any plugins:
+- [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
+- [Bug report instructions](/reporting-bugs)
+- [Angular 15 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15)
+
+This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
+
+The first step is to install the FullCalendar-related dependencies. You'll need FullCalendar core, the Angular adapter, and any plugins you plan to use:
 
 ```bash
 npm install --save \
-  @fullcalendar/web-component \
-  @fullcalendar/core@beta \
-  @fullcalendar/daygrid@beta
+  @fullcalendar/core
+  @fullcalendar/angular \
+  @fullcalendar/daygrid
 ```
 
-In `app.module.ts`, [enable the use of Custom Elements][Angular Web Components]:
+You must then include the `FullCalendarModule` into your app's root module. An example app ([app.module.ts]):
 
-```ts
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  // ...
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FullCalendarModule // register FullCalendar with you app
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 ```
 
-In `app.component.ts`, import the FullCalendar-related packages and configure FullCalendar's
-options:
+Then, in one of your app's component files ([app.component.ts]), prepare an object of options along with any plugins:
 
-```ts
+```js
 import { Component } from '@angular/core';
-import { CalendarOptions, defineFullCalendarElement } from '@fullcalendar/web-component';
+import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
-
-// make the <full-calendar> element globally available by calling this function at the top-level
-defineFullCalendarElement();
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
   calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin],
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,dayGridWeek,dayGridDay'
-    }
+    initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin]
   };
 }
 ```
 
-In `app.component.html`, include the correct tags:
+Then, in your component's template file ([app.component.html]), you have access to the `<full-calendar>` tag. You must pass your options into this declaration!
 
 ```
-<full-calendar [options]='calendarOptions'></full-calendar>
+<full-calendar [options]="calendarOptions"></full-calendar>
+```
+
+
+## Props and Emitted Events
+
+Angular has the concept of props (aka "inputs", written with `[brackets]`) versus events (aka "outputs", written with `(parentheses)`). For the FullCalendar connector, there is no distinction between props and events. Everything is passed into the master `options` object as key-value pairs. Here is an example that demonstrates passing in an `events` array and a `dateClick` handler:
+
+```js
+import { Component } from '@angular/core';
+import { CalendarOptions } from '@fullcalendar/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth',
+    dateClick: this.handleDateClick.bind(this), // bind is important!
+    events: [
+      { title: 'event 1', date: '2019-04-01' },
+      { title: 'event 2', date: '2019-04-02' }
+    ]
+  };
+
+  handleDateClick(arg) {
+    alert('date click! ' + arg.dateStr)
+  }
+}
+```
+
+and the template, which still only accepts `[options]`:
+
+```
+<full-calendar [options]="calendarOptions"></full-calendar>
 ```
 
 
 ### Modifying Properties
 
-Dynamically modify FullCalendar's options by creating new copies of the object. This example toggles the `weekends` option on and off:
+You can modify FullCalendar's options dynamically by reassigning them within the options object. This example toggles the `weekends` option on and off:
 
 ```js
 import { Component } from '@angular/core';
-import { CalendarOptions, defineFullCalendarElement } from '@fullcalendar/web-component';
-import dayGridPlugin from '@fullcalendar/daygrid';
-
-defineFullCalendarElement();
+import { CalendarOptions } from '@fullcalendar/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
   calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin],
+    initialView: 'dayGridMonth',
     weekends: false // initial value
   };
 
   toggleWeekends() {
-    // make a copy while overriding some values
-    this.calendarOptions = {
-      ...this.calendarOptions,
-      weekends: !this.calendarOptions.weekends,
-    }
+    this.calendarOptions.weekends = !this.calendarOptions.weekends // toggle the boolean!
   }
 }
 ```
@@ -106,21 +139,10 @@ and the template:
 <full-calendar [options]="calendarOptions"></full-calendar>
 ```
 
+If you want to modify options that are complex objects, like [headerToolbar](headerToolbar) or [events](events-array), you'll need to make a copy of the object, make your change, and then reassign it. If you DO NOT want to do this, you can have the angular connector recursively search for changes within your objects, though this comes at a slight performance cost. Set the `deepChangeDetection` prop to `"true"`:
 
-## FullCalendar Utilities
-
-All of FullCalendar's utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `@fullcalendar/angular`. The [formatDate](formatDate) utility for example. This prevents you from needing to add another dependency to your project.
-
-```js
-import { formatDate } from '@fullcalendar/angular';
-
-let str = formatDate(new Date(), {
-  month: 'long',
-  year: 'numeric',
-  day: 'numeric'
-});
-
-console.log(str);
+```
+<full-calendar deepChangeDetection="true" [options]="calendarOptions"></full-calendar>
 ```
 
 
@@ -136,31 +158,28 @@ To do something like this, you'll need to get ahold of the [ViewChild reference]
 <full-calendar #calendar [options]="calendarOptions"></full-calendar>
 ```
 
-Once you've explicitly marked your child component (`#calendar`), retrieve the [ElementRef]'s `nativeElement`. Then call the `getApi` method:
+Once you've explicitly marked your child component (`#calendar`), you can get the underlying `Calendar` object via the `getApi` method:
 
 ```js
-import { Component } from '@angular/core';
-import { CalendarOptions, FullCalendarElement, defineFullCalendarElement } from '@fullcalendar/web-component';
-import dayGridPlugin from '@fullcalendar/daygrid';
-
-defineFullCalendarElement();
+import { Component, ViewChild } from '@angular/core';
+import { CalendarOptions } from '@fullcalendar/core';
+import { FullCalendarComponent } from '@fullcalendar/angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
   // references the #calendar in the template
-  @ViewChild('calendar') calendarRef: ElementRef<FullCalendarElement>;
+  @ViewChild('calendar') calendarComponent: FullCalendarComponent;
 
   calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin],
+    initialView: 'dayGridMonth'
   };
 
   someMethod() {
-    let calendarApi = this.calendarRef.nativeElement.getApi();
+    let calendarApi = this.calendarComponent.getApi();
     calendarApi.next();
   }
 }
@@ -169,43 +188,47 @@ export class AppComponent {
 
 ## FullCalendar Premium
 
-How do you use [FullCalendar Premium's](/pricing) plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example, but with [resourceTimelinePlugin](timeline-view) or whatever premium plugin you want to use.
+How do you use [FullCalendar Premium's](/pricing) plugins with Angular? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. If you plan to use resources, you'll need the `@fullcalendar/resource` package:
 
-Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey) in the options object.
+```sh
+npm install --save \
+  @fullcalendar/core@beta \
+  @fullcalendar/angular@beta \
+  @fullcalendar/resource@beta \
+  @fullcalendar/resource-timeline@beta
+```
 
-In `app.component.ts`:
+Then, initialize your calendar. Make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
-```ts
+```js
 import { Component } from '@angular/core';
-import { CalendarOptions, defineFullCalendarElement } from '@fullcalendar/web-component';
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
-
-defineFullCalendarElement();
+import { CalendarOptions } from '@fullcalendar/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
   calendarOptions: CalendarOptions = {
-    plugins: [resourceTimelinePlugin],
     schedulerLicenseKey: 'XXX'
   };
 }
 ```
 
-[Custom Elements Everywhere]: https://custom-elements-everywhere.com/
+and the template:
+
+```
+<full-calendar [options]="calendarOptions"></full-calendar>
+```
+
+
 [Angular]: https://angular.io/
 [Angular CLI]: https://cli.angular.io/
-[Angular Web Components]: https://coryrylan.com/blog/using-web-components-in-angular
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular
-[app.module.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular/src/app/app.module.ts
-[app.component.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular/src/app/app.component.ts
-[app.component.scss]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular/src/app/app.component.scss
-[app.component.html]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular/src/app/app.component.html
-[ElementRef]: https://angular.io/api/core/ElementRef
-[docs toc]: https://fullcalendar.io/docs#toc
-[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/master/projects/fullcalendar/src/lib/fullcalendar-options.ts
+[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15
+[app.module.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.module.ts
+[app.component.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.component.ts
+[app.component.scss]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.component.scss
+[app.component.html]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.component.html
+[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/v6/lib/src/options.ts
 [ViewChild]: https://angular.io/api/core/ViewChild

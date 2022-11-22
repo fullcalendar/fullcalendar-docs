@@ -16,6 +16,7 @@ demos:
 ```
 npm install --save \
   @fullcalendar/core@beta \
+  @fullcalendar/resource@beta \
   @fullcalendar/resource-timegrid@beta
 ```
 
@@ -36,7 +37,7 @@ let calendar = new Calendar(calendarEl, {
 Or, you can choose to initialize it with the `fullcalendar-scheduler` [global bundle](initialize-globals):
 
 ```html
-<script src='fullcalendar-scheduler/main.js'></script>
+<script src='fullcalendar-scheduler/index.global.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {

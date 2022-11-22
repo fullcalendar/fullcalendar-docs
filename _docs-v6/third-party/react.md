@@ -5,8 +5,6 @@ title_for_landing: React
 
 FullCalendar seamlessly integrates with the [React] JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
-This is more than a mere "connector". It tells the core FullCalendar package to begin rendering with **React** virtual DOM nodes as opposed to the [Preact](https://preactjs.com/) nodes it normally uses, transforming FullCalendar into a "real" React component. You can learn a bit more [from this blog post](/blog/2020/05/react-ts-v5-beta) (more info to come).
-
 This package is released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
@@ -16,10 +14,11 @@ This package is released under an MIT license, the same license the standard ver
 
 This guide does not go into depth about initializing a React project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the React adapter any additional plugins you plan to use:
+The first step is to install the FullCalendar-related dependencies. You'll need FullCalendar core, the React adapter, and any plugins you plan to use:
 
 ```bash
 npm install --save \
+  @fullcalendar/core@beta \
   @fullcalendar/react@beta \
   @fullcalendar/daygrid@beta
 ```
@@ -125,30 +124,13 @@ function renderEventContent(eventInfo) {
 ```
 
 
-## FullCalendar Utilities
-
-All of FullCalendar's utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `@fullcalendar/react`. The [formatDate](formatDate) utility for example. This prevents you from needing to add another dependency to your project.
-
-```js
-import { formatDate } from '@fullcalendar/react';
-
-let str = formatDate(new Date(), {
-  month: 'long',
-  year: 'numeric',
-  day: 'numeric'
-});
-
-console.log(str);
-```
-
-
 ## Custom Views with Components
 
 It's possible to make calendar views that have custom rendering logic. The [Custom Views via JS](custom-view-with-js) article explains the general concept. When you're using the React connector, it's possible to specify a [React component](https://reactjs.org/docs/components-and-props.html). Example:
 
 ```jsx
 import React from 'react';
-import { sliceEvents, createPlugin } from '@fullcalendar/react';
+import { sliceEvents, createPlugin } from '@fullcalendar/core';
 
 class CustomView extends React.Component {
 
@@ -207,7 +189,17 @@ export default class DemoApp extends React.Component {
 
 ## FullCalendar Premium
 
-How do you use [FullCalendar Premium's](/pricing) plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
+How do you use [FullCalendar Premium's](/pricing) plugins with React? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. If you plan to use resources, you'll need the `@fullcalendar/resource` package:
+
+```sh
+npm install --save \
+  @fullcalendar/core@beta \
+  @fullcalendar/react@beta \
+  @fullcalendar/resource@beta \
+  @fullcalendar/resource-timeline@beta
+```
+
+Then, initialize your calendar. Make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```jsx
 import React from 'react'
@@ -239,14 +231,6 @@ Please check out the following example projects that demonstrate usage with thir
 React goes really well with [TypeScript]!
 
 - [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/react-typescript)
-
-
-## Next.js
-
-If you plan to use the [Next.js] React framework, you'll need special configuration. See the following example projects:
-
-- [View the **Next** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/next)
-- [View the **Next** + **Scheduler** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/next-scheduler)
 
 
 [React]: https://reactjs.org/

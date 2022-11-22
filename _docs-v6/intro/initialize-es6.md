@@ -48,11 +48,12 @@ let calendar = new Calendar(calendarEl, {
 
 ## Premium Plugins
 
-The set of [premium plugins](premium) works in the same way. You'll need to install the `core` package as well as any premium plugins you plan to use:
+The set of [premium plugins](premium) works in the same way. You'll need to install the `core` package, the `resource` package, and any premium plugins you plan to use.
 
 ```
 npm install --save \
   @fullcalendar/core@beta \
+  @fullcalendar/resource@beta \
   @fullcalendar/resource-timeline@beta
 ```
 

@@ -60,8 +60,8 @@ calendar.setOption('locale', 'pt-br');
 If you are using [script tags and browser globals](initialize-globals) and want to load a specific locale, do something like this:
 
 ```html
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/core/locales/es.js'></script>
+<script src='fullcalendar/core/index.global.js'></script>
+<script src='fullcalendar/core/locales/es.global.js'></script>
 <script>
 ...
 var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -74,8 +74,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 If you want to load ALL locales have the ability to switch between them after pageload, do something like this:
 
 ```html
-<script src='fullcalendar/core/main.js'></script>
-<script src='fullcalendar/core/locales-all.js'></script>
+<script src='fullcalendar/core/index.global.js'></script>
+<script src='fullcalendar/core/locales-all.global.js'></script>
 <script>
 ...
 var calendar = new Calenar(calendarEl, {

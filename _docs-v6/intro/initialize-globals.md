@@ -21,7 +21,7 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='fullcalendar/main.js'></script>
+    <script src='fullcalendar/index.global.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -42,16 +42,13 @@ Then, write the following initialization code:
 
 [View a runnable example &raquo;](initialize-globals-demo)
 
-The `fullcalendar` bundle's `main.js` file includes the following packages:
+The `fullcalendar` bundle's `index.global.js` file includes the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
 - `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
 - `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
 - `@fullcalendar/list` (for [list views](list-view))
-- `@fullcalendar/bootstrap5` (requires 3rd-party Bootstrap 5 and Bootstrap-Font packages. [more info](bootstrap5))
-- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap 4 and FontAwesome packages. [more info](bootstrap4))
-- `@fullcalendar/google-calendar` ([more info](google-calendar))
 
 
 ## Premium Bundle
@@ -69,7 +66,7 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='fullcalendar-scheduler/main.js'></script>
+    <script src='fullcalendar-scheduler/index.global.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -92,20 +89,17 @@ Then, write the following initialization code:
 
 You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalendar` bundle. The `fullcalendar-scheduler` bundle includes everything.
 
-The `fullcalendar-scheduler` bundle's `main.js` file includes the following packages:
+The `fullcalendar-scheduler` bundle's `index.global.js` file includes the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
 - `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
 - `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
 - `@fullcalendar/list` (for [list views](list-view))
-- `@fullcalendar/bootstrap5` (requires 3rd-party Bootstrap 5 and Bootstrap Icons packages. [more info](bootstrap5))
-- `@fullcalendar/bootstrap` (requires 3rd-party Bootstrap 4 and FontAwesome packages. [more info](bootstrap4))
-- `@fullcalendar/google-calendar` ([more info](google-calendar))
 - `@fullcalendar/adaptive` (for [print optimization](print))
 - `@fullcalendar/scrollgrid`
 - `@fullcalendar/timeline` ([more info](timeline-view-no-resources))
-- `@fullcalendar/resource-common`
+- `@fullcalendar/resource`
 - `@fullcalendar/resource-daygrid` ([more info](resource-daygrid-view))
 - `@fullcalendar/resource-timegrid` ([more info](vertical-resource-view))
 - `@fullcalendar/resource-timeline` ([more info](timeline-view))
