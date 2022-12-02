@@ -101,6 +101,8 @@ eventContent: function(arg) {
 
 **Bugfix:** Support for Angular 14 and above has been restored ([angular-403], [v6 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15))
 
+**Breaking:** The minimum supported Angular version is now Angular 12.
+
 **Breaking:** The Angular connector no longer re-exports everything from `@fullcalendar/core`. You must import utilities and types from core:
 
 ```diff
@@ -113,7 +115,7 @@ eventContent: function(arg) {
 ```diff
 // app.module.ts
 
-- import { FullCalendarModule } from '@fullcalendar/angular'
+  import { FullCalendarModule } from '@fullcalendar/angular'
 - import dayGridPlugin from '@fullcalendar/daygrid'
 - import interactionPlugin from '@fullcalendar/interaction'
 -
@@ -121,32 +123,55 @@ eventContent: function(arg) {
 -   dayGridPlugin,
 -   interactionPlugin
 - ]);
+
+// ...
 ```
 
 Instead, register them where you write your component code:
 
-```js
+```diff
 // app.component.ts
 
-import { Component } from '@angular/core'
-import { CalendarOptions } from '@fullcalendar/core'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
+  import { Component } from '@angular/core'
+  import { CalendarOptions } from '@fullcalendar/core'
++ import dayGridPlugin from '@fullcalendar/daygrid'
++ import interactionPlugin from '@fullcalendar/interaction'
 
-@Component({
-  selector: 'app-root',
-  template: '<full-calendar [options]="calendarOptions"></full-calendar>',
-})
-export class AppComponent {
-  calendarOptions: CalendarOptions = {
-    plugins: [
-      dayGridPlugin,
-      interactionPlugin,
-    ],
-    initialView: 'dayGridMonth',
+  @Component({
+    selector: 'app-root',
+    template: '<full-calendar [options]="calendarOptions"></full-calendar>',
+  })
+  export class AppComponent {
+    calendarOptions: CalendarOptions = {
++     plugins: [
++       dayGridPlugin,
++       interactionPlugin,
++     ],
+      initialView: 'dayGridMonth',
+    }
   }
-}
 ```
+
+**Feature:** Expose `events`, `eventSources`, and `resources` as top-level Inputs for easier binding ([angular-303](https://github.com/fullcalendar/fullcalendar-angular/issues/303)), making use of `async` easier:
+
+```
+<full-calendar
+  [options]="calendarOptions"
+  [events]="events$ | async"
+></full-calendar>
+```
+
+**Feature:** Content-injection properties (like `eventContent`) can now be customized with `ng-template` ([angular-204](https://github.com/fullcalendar/fullcalendar-angular/issues/204)):
+
+```
+<full-calendar [options]="calendarOptions">
+  <ng-template #eventContent let-arg>
+    <b>{% raw %}{{{% endraw %} arg.event.title {% raw %}}}{% endraw %}</b>
+  </ng-template>
+</full-calendar>
+```
+
+Each template accepts a single argument ([more information](angular#nested-templates)).
 
 
 ## Vue-specific Changes
@@ -208,19 +233,21 @@ Additionally, the minified versions are consistently named `index.global.min.js`
 
 Support for IE 11 has been dropped.
 
-FullCalendar now distributes JS with ES2015 syntax. Thus, reliance on `tslib` as a dependency has been dropped.
+FullCalendar now distributes JS with (ES6) ES2015 syntax. Thus, reliance on `tslib` as a dependency has been dropped.
 
 
 ## Fetch versus XHR
 
-**Internal:** [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is now used instead of [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) to make requests to JSON feed URLs.
+**Internal:** The [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) browser API is now used instead of [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) to make JSON feed requests.
 
-**Breaking:** The second argument given to [`eventSourceSuccess`]({{ site.baseurl }}/v6/eventSourceSuccess) and [`eventSourceFailure`]({{ site.baseurl }}/v6/eventSourceFailure) is no longer an XHR. It is now a fetch [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+**Breaking:** The second argument given to [`eventSourceSuccess`]({{ site.baseurl }}/v6/eventSourceSuccess) is no longer an XHR. It is now a fetch [Response] object.
+
+**Feature:** [`eventSourceFailure`]({{ site.baseurl }}/v6/eventSourceFailure)'s error object will contain a `response` property when failing on a JSON feed. It is a fetch [Response] object.
 
 
 ## Codebase Improvements
 
-The tooling of the codebase has been refactored to improve the contributor experience. For example, [PNPM](https://pnpm.io/) and [Turborepo](https://turbo.build/) are now used. More documentation to come.
+The tooling of the codebase has been refactored to improve the contributor experience. For example, [PNPM](https://pnpm.io/) and [Turborepo](https://turbo.build/) are now used. [View the master monorepo](https://github.com/fullcalendar/fullcalendar-scheduler/tree/v6) on GitHub.
 
 
 </div>
@@ -260,3 +287,4 @@ The tooling of the codebase has been refactored to improve the contributor exper
 [vue-122]: https://github.com/fullcalendar/fullcalendar-vue/issues/122
 [vue-152]: https://github.com/fullcalendar/fullcalendar-vue/issues/152
 [vue-181]: https://github.com/fullcalendar/fullcalendar-vue/pull/181
+[Response]: https://developer.mozilla.org/en-US/docs/Web/API/Response

@@ -5,13 +5,13 @@ title: eventSourceSuccess
 A function that gets called when fetching succeeds. It can transform the response. Gets called for any type of Event source.
 
 <div class='spec' markdown='1'>
-function( *rawEvents*, *xhr* )
+function( *rawEvents*, *response* )
 </div>
 
-Will receive two arguments, the raw response content and an [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) if applicable. The function can return a new array of [parsable Event objects](event-parsing) that will be used instead of the received response. Example:
+Will receive two arguments, the raw response content and a [Response object](https://developer.mozilla.org/en-US/docs/Web/API/Response) if the source was a JSON feed. The function can return a new array of [parsable Event objects](event-parsing) that will be used instead of the received response. Example:
 
 ```js
-eventSourceSuccess: function(content, xhr) {
+eventSourceSuccess: function(content, response) {
   return content.eventArray;
 }
 ```

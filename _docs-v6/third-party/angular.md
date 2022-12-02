@@ -3,12 +3,13 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
-FullCalendar seamlessly integrates with the [Angular] 9 - 15. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar seamlessly integrates with the [Angular] 12 - 15. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
+- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular14)
 - [Angular 15 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15)
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
@@ -36,7 +37,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FullCalendarModule // register FullCalendar with you app
+    FullCalendarModule // register FullCalendar with your app
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -71,9 +72,9 @@ Then, in your component's template file ([app.component.html]), you have access 
 ```
 
 
-## Props and Emitted Events
+## Inputs and Emitted Events
 
-Angular has the concept of props (aka "inputs", written with `[brackets]`) versus events (aka "outputs", written with `(parentheses)`). For the FullCalendar connector, there is no distinction between props and events. Everything is passed into the master `options` object as key-value pairs. Here is an example that demonstrates passing in an `events` array and a `dateClick` handler:
+Angular has the concept of bound input data (written with `[brackets]`) versus outputs (written with `(parentheses)`). For the FullCalendar connector, there is no distinction between inputs and outputs. Everything is passed into the master `options` input as key-value pairs. Here is an example that demonstrates passing in an `events` array and a `dateClick` handler:
 
 ```js
 import { Component } from '@angular/core';
@@ -87,23 +88,59 @@ import { CalendarOptions } from '@fullcalendar/core';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    dateClick: this.handleDateClick.bind(this), // bind is important!
+    dateClick: this.handleDateClick
     events: [
       { title: 'event 1', date: '2019-04-01' },
       { title: 'event 2', date: '2019-04-02' }
     ]
   };
 
-  handleDateClick(arg) {
+  handleDateClick = (arg) => { // keep bound to `this`
     alert('date click! ' + arg.dateStr)
   }
 }
 ```
 
-and the template, which still only accepts `[options]`:
+Template:
 
 ```
 <full-calendar [options]="calendarOptions"></full-calendar>
+```
+
+
+<h2 id='individual-inputs' markdown='1'>Inputs for `events`/`eventSources`/`resources` (new in v6)</h2>
+
+Certain options are exposed as top-level component inputs for convenience. This works well with [NgRx](https://ngrx.io/) and the [`async`](https://angular.io/api/common/AsyncPipe) template helper. The above example rewritten:
+
+```js
+import { Component } from '@angular/core';
+import { CalendarOptions, EventsInput } from '@fullcalendar/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth',
+    dateClick: this.handleDateClick
+  };
+  events$?: Promise<EventsInput>; // TODO: create a better NgRx example
+
+  handleDateClick = (arg) => { // keep bound to `this`
+    alert('date click! ' + arg.dateStr)
+  }
+}
+```
+
+Template:
+
+```
+<full-calendar
+  [options]="calendarOptions"
+  [events]="events$ | async"
+></full-calendar>
 ```
 
 
@@ -142,8 +179,30 @@ and the template:
 If you want to modify options that are complex objects, like [headerToolbar](headerToolbar) or [events](events-array), you'll need to make a copy of the object, make your change, and then reassign it. If you DO NOT want to do this, you can have the angular connector recursively search for changes within your objects, though this comes at a slight performance cost. Set the `deepChangeDetection` prop to `"true"`:
 
 ```
-<full-calendar deepChangeDetection="true" [options]="calendarOptions"></full-calendar>
+<full-calendar
+  [options]="calendarOptions"
+  deepChangeDetection="true"
+></full-calendar>
 ```
+
+
+<h2 id='nested-templates'>Nested Templates (new in v6)</h2>
+
+Use the `ng-template` tag to customize [content-injection](content-injection) areas such as [eventContent](event-render-hooks). Example:
+
+```
+<full-calendar [options]="calendarOptions">
+  <ng-template #eventContent let-arg>
+    <b>{% raw %}{{{% endraw %} arg.event.title {% raw %}}}{% endraw %}</b>
+  </ng-template>
+</full-calendar>
+```
+
+Explanation:
+
+- The template is named via the [`#` syntax](https://angular.io/guide/template-reference-variables#syntax). It must be the name of a content-injection area.
+- The template accepts a single [implicit local variable](https://stackoverflow.com/questions/45055384/what-is-implicit-in-angular-2/45055768#45055768) which is named via the `let-*` syntax. In the above example, `let-arg` names the variable "arg".
+- The properties of the argument are documented alongside each content-injection area. For example see [eventContent's argument](event-render-hooks#argument).
 
 
 ## Calendar API
