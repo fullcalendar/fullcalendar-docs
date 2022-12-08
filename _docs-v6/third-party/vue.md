@@ -141,6 +141,24 @@ export default {
 </template>
 ```
 
+
+## Slot Templates
+
+[Slot templates](https://vuejs.org/guide/components/slots.html#slot-content-and-outlet) can be passed to FullCalendar components. They accepts slots for all [content-injection](content-injection) settings such as [eventContent](event-render-hooks).
+
+```html
+<template>
+  <FullCalendar :options="calendarOptions">
+    <template v-slot:eventContent='arg'>
+      <b>{% raw %}{{{% endraw %} arg.event.title {% raw %}}}{% endraw %}</b>
+    </template>
+  </FullCalendar>
+</template>
+```
+
+All slots are [scoped slots](https://vuejs.org/guide/components/slots.html#scoped-slots) that accept an argument (explicitly named `arg` in the above example).
+
+
 ## Calendar API
 
 Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.

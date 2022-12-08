@@ -144,6 +144,23 @@ export default {
 ```
 
 
+## Slot Templates
+
+[Slot templates](https://vuejs.org/guide/components/slots.html#slot-content-and-outlet) can be passed to FullCalendar components. They accepts slots for all [content-injection](content-injection) settings such as [eventContent](event-render-hooks).
+
+```html
+<template>
+  <FullCalendar :options="calendarOptions">
+    <template v-slot:eventContent='arg'>
+      <b>{% raw %}{{{% endraw %} arg.event.title {% raw %}}}{% endraw %}</b>
+    </template>
+  </FullCalendar>
+</template>
+```
+
+All slots are [scoped slots](https://vuejs.org/guide/components/slots.html#scoped-slots) that accept an argument (explicitly named `arg` in the above example).
+
+
 ## FullCalendar Utilities
 
 All of FullCalendar's utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `@fullcalendar/vue`. The [formatDate](formatDate) utility for example. This prevents you from needing to add another dependency to your project.
