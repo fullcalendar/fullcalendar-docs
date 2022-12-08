@@ -27,19 +27,13 @@
 {% endunless %}
 
 {% if page.needs_premium %}
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@{{ site.data.latest-releases.v6 }}/main.min.js'></script>
-
-  {% if page.needs_locales %}
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@{{ site.data.latest-releases.v6 }}/locales-all.min.js'></script>
-  {% endif %}
-
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 {% else %}
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/main.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
+{% endif %}
 
-  {% if page.needs_locales %}
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/locales-all.min.js'></script>
-  {% endif %}
-
+{% if page.needs_locales %}
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales-all.global.min.js'></script>
 {% endif %}
 
 <script src='{{ site.baseurl }}/dist/demo-to-codepen.js'></script>

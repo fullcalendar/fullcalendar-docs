@@ -46,10 +46,10 @@ You can also configure the Luxon plugin with [script tags](initialize-globals). 
 <script src='https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js'></script>
 
 <!-- fullcalendar bundle -->
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v5 }}/main.min.js'></script>
 
 <!-- the luxon-to-fullcalendar connector. must go AFTER the luxon lib -->
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon2@5.10.2/main.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon2@{{ site.data.latest-releases.v5 }}/main.global.min.js'></script>
 
 <script>
   var calendar = document.getElementById('calendar')

@@ -223,8 +223,8 @@ Instead, they should be included as separate script tags.
 
 **Breaking:** Previously, the paths to FullCalendar's [script tag globals]({{ site.baseurl }}/v6/initialize-globals) JS files were inconsistently named as `main.js` or `main.global.js`. Now, they are always named `index.global.js`. Examples:
 
-- [https://cdn.jsdelivr.net/npm/fullcalendar@6.0.0-beta.2/index.global.js](https://cdn.jsdelivr.net/npm/fullcalendar@6.0.0-beta.2/index.global.js)
-- [https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.0.0-beta.2/index.global.js](https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.0.0-beta.2/index.global.js)
+- [https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.js](https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.js)
+- [https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.js](https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.js)
 
 Additionally, the minified versions are consistently named `index.global.min.js`.
 

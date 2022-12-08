@@ -41,10 +41,10 @@ You can also configure the rrule plugin with [script tags](initialize-globals). 
 <script src='https://cdn.jsdelivr.net/npm/rrule@2.6.4/dist/es5/rrule.min.js'></script>
 
 <!-- fullcalendar bundle -->
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v5 }}/main.min.js'></script>
 
 <!-- the rrule-to-fullcalendar connector. must go AFTER the rrule lib -->
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@5.5.0/main.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@{{ site.data.latest-releases.v5 }}/main.global.min.js'></script>
 
 <script>
   var calendar = document.getElementById('calendar')
