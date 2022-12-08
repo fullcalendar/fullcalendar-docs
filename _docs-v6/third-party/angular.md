@@ -88,14 +88,14 @@ import { CalendarOptions } from '@fullcalendar/core';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    dateClick: this.handleDateClick
+    dateClick: this.handleDateClick.bind(this), // MUST ensure `this` context is maintained
     events: [
       { title: 'event 1', date: '2019-04-01' },
       { title: 'event 2', date: '2019-04-02' }
     ]
   };
 
-  handleDateClick = (arg) => { // keep bound to `this`
+  handleDateClick(arg) {
     alert('date click! ' + arg.dateStr)
   }
 }
@@ -110,7 +110,7 @@ Template:
 
 <h2 id='individual-inputs' markdown='1'>Inputs for `events`/`eventSources`/`resources` (new in v6)</h2>
 
-Certain options are exposed as top-level component inputs for convenience. This works well with [NgRx](https://ngrx.io/) and the [`async`](https://angular.io/api/common/AsyncPipe) template helper. The above example rewritten:
+Certain options are exposed as top-level component inputs for convenience. This works well with the [`async`](https://angular.io/api/common/AsyncPipe) template helper, which accepts an `Observable` or `Promise`. The above example rewritten:
 
 ```js
 import { Component } from '@angular/core';
@@ -124,12 +124,12 @@ import { CalendarOptions, EventsInput } from '@fullcalendar/core';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    dateClick: this.handleDateClick
+    dateClick: this.handleDateClick.bind(this)
   };
-  events$?: Promise<EventsInput>; // TODO: create a better NgRx example
+  eventsPromise: Promise<EventsInput>;
 
-  handleDateClick = (arg) => { // keep bound to `this`
-    alert('date click! ' + arg.dateStr)
+  handleDateClick(arg) {
+    alert('date click! ' + arg.dateStr);
   }
 }
 ```
@@ -139,9 +139,11 @@ Template:
 ```
 <full-calendar
   [options]="calendarOptions"
-  [events]="events$ | async"
+  [events]="eventsPromise | async"
 ></full-calendar>
 ```
+
+This technique is commonly used when working with [NgRx](https://ngrx.io/). [View a sample project &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15-ngrx)
 
 
 ### Modifying Properties
