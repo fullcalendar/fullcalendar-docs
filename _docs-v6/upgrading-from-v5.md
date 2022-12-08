@@ -118,7 +118,7 @@ eventContent: function(arg) {
   import { FullCalendarModule } from '@fullcalendar/angular'
 - import dayGridPlugin from '@fullcalendar/daygrid'
 - import interactionPlugin from '@fullcalendar/interaction'
--
+
 - FullCalendarModule.registerPlugins([
 -   dayGridPlugin,
 -   interactionPlugin
@@ -178,7 +178,7 @@ Each template accepts a single argument ([more information](angular#nested-templ
 
 **Bugfix:** Custom markup given to slots (like `eventContent`) now properly supports binding, [custom global properties](https://vuejs.org/api/application.html#app-config-globalproperties), and [async components](https://vuejs.org/guide/components/async.html). Essentially, slots now behave as they should ([vue-169], [vue-141], [vue-128], [vue-122]). Fixed for both the Vue2 and Vue3 connectors.
 
-**Performance:** Custom markup given to slots (like `eventContent`) now renders much faster ([vue-181]).
+**Performance:** Custom markup given to slots (like `eventContent`) now renders much faster ([vue-191]).
 
 **Breaking:** The Vue connector no longer re-exports everything from `@fullcalendar/core`. You must import utilities and types from core:
 
@@ -213,20 +213,27 @@ The codebase will likely be rearchitected in the future to once again support a 
 
 ## Script Tag Usage
 
+**Breaking:** Previously, the paths to FullCalendar's [script tag globals]({{ site.baseurl }}/v6/initialize-globals) JS files were inconsistently named as `main.min.js` or `main.global.min.js`. Now, they are always named `index.global.min.js`. Examples:
+
+- [https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js)
+- [https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.min.js)
+
+**Breaking:** The `fullcalendar` and `fullcalendar-scheduler` packages no longer contain locale files. Instead, always use `@fullcalendar/core`:
+
+- **All locales:** [https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales-all.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales-all.global.min.js)
+- **Single locale:** [https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales/es.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales/es.global.min.js)
+
 **Breaking:** The `fullcalendar` and `fullcalendar-scheduler` bundles that are meant to be used as [script tag globals]({{ site.baseurl }}/v6/initialize-globals) no longer contain the following packages:
 
 - `@fullcalendar/bootstrap5`
 - `@fullcalendar/bootstrap`
 - `@fullcalendar/google-calendar`
 
-Instead, they should be included as separate script tags.
+Instead, they should be included as separate script tags:
 
-**Breaking:** Previously, the paths to FullCalendar's [script tag globals]({{ site.baseurl }}/v6/initialize-globals) JS files were inconsistently named as `main.js` or `main.global.js`. Now, they are always named `index.global.js`. Examples:
-
-- [https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.js](https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.js)
-- [https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.js](https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.js)
-
-Additionally, the minified versions are consistently named `index.global.min.js`.
+- [https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@{{ site.data.latest-releases.v6 }}/index.global.min.js)
+- [https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@{{ site.data.latest-releases.v6 }}/index.global.min.js)
+- [https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.min.js)
 
 
 ## IE 11 Dropped
@@ -238,7 +245,7 @@ FullCalendar now distributes JS with (ES6) ES2015 syntax. Thus, reliance on `tsl
 
 ## Fetch versus XHR
 
-**Internal:** The [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) browser API is now used instead of [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) to make JSON feed requests.
+**Internal:** The [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) browser API is now used instead of [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) to make JSON feed requests ([#6772](https://github.com/fullcalendar/fullcalendar/issues/6772))
 
 **Breaking:** The second argument given to [`eventSourceSuccess`]({{ site.baseurl }}/v6/eventSourceSuccess) is no longer an XHR. It is now a fetch [Response] object.
 
@@ -286,5 +293,5 @@ The tooling of the codebase has been refactored to improve the contributor exper
 [vue-128]: https://github.com/fullcalendar/fullcalendar-vue/issues/128
 [vue-122]: https://github.com/fullcalendar/fullcalendar-vue/issues/122
 [vue-152]: https://github.com/fullcalendar/fullcalendar-vue/issues/152
-[vue-181]: https://github.com/fullcalendar/fullcalendar-vue/pull/181
+[vue-191]: https://github.com/fullcalendar/fullcalendar-vue/issues/191
 [Response]: https://developer.mozilla.org/en-US/docs/Web/API/Response
