@@ -101,7 +101,9 @@ eventContent: function(arg) {
 
 **Bugfix:** Support for Angular 14 and above has been restored ([angular-403], [v6 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15))
 
-**Breaking:** The minimum supported Angular version is now Angular 12.
+**DX:** An Ivy library is now being published ([angular-396])
+
+**Breaking:** The minimum supported Angular version is now Angular 12. Also, support for the legacy View Engine has been dropped.
 
 **Breaking:** The Angular connector no longer re-exports everything from `@fullcalendar/core`. You must import utilities and types from core:
 
@@ -280,6 +282,7 @@ The tooling of the codebase has been refactored to improve the contributor exper
 
 
 [#6674]: https://github.com/fullcalendar/fullcalendar/issues/6674
+[angular-396]: https://github.com/fullcalendar/fullcalendar-angular/issues/396
 [angular-403]: https://github.com/fullcalendar/fullcalendar-angular/issues/403
 [angular-web-components]: https://coryrylan.com/blog/using-web-components-in-angular
 [web-components]: https://developer.mozilla.org/en-US/docs/Web/Web_Components
