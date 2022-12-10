@@ -27,7 +27,7 @@ FullCalendar offers the following packages:
       Offers the <code>Calendar</code> class among other things
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/core'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/core'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/core?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -42,7 +42,7 @@ FullCalendar offers the following packages:
       <a href='eventMouseEnter'>eventMouseEnter</a>/<a href='eventMouseLeave'>eventMouseLeave</a>.
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/interaction'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/interaction'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/interaction?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -56,7 +56,7 @@ FullCalendar offers the following packages:
       <code>dayGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/daygrid'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/daygrid'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/daygrid?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -69,7 +69,7 @@ FullCalendar offers the following packages:
       <code>timeGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/timegrid'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/timegrid'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/timegrid?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -84,7 +84,7 @@ FullCalendar offers the following packages:
       <code>list</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/list'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/list'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/list?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -94,7 +94,7 @@ FullCalendar offers the following packages:
       Provides advanced scrolling features such as horizontal scrolling to certain views
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/scrollgrid'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/scrollgrid'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/scrollgrid?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -110,7 +110,7 @@ FullCalendar offers the following packages:
       <code>timeline</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/timeline'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/timeline'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/timeline?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -121,7 +121,7 @@ FullCalendar offers the following packages:
       Offers <a href='print'>improved printing support</a>.
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/adaptive'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/adaptive'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/adaptive?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -132,7 +132,7 @@ FullCalendar offers the following packages:
       Offers base support for resources. Required for all resource-related plugins.
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -147,7 +147,7 @@ FullCalendar offers the following packages:
       <code>resourceDayGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-daygrid'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource-daygrid'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource-daygrid?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -161,7 +161,7 @@ FullCalendar offers the following packages:
       <code>resourceTimeGrid</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-timegrid'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource-timegrid'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource-timegrid?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -177,7 +177,7 @@ FullCalendar offers the following packages:
       <code>resourceTimeline</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/resource-timeline'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource-timeline'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/resource-timeline?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -187,7 +187,7 @@ FullCalendar offers the following packages:
       Offers <a href='bootstrap5'>Bootstrap 5 theming</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/bootstrap5'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/bootstrap5'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/bootstrap5?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -197,7 +197,7 @@ FullCalendar offers the following packages:
       Offers <a href='bootstrap4'>Bootstrap 4 theming</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/bootstrap'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/bootstrap'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/bootstrap?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -207,7 +207,7 @@ FullCalendar offers the following packages:
       For loading events from a public <a href='google-calendar'>Google Calendar feed</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/google-calendar'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/google-calendar'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/google-calendar?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -217,7 +217,7 @@ FullCalendar offers the following packages:
       For loading events from an <a href='icalendar'>iCalendar feed</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/icalendar'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/icalendar'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/icalendar?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -227,7 +227,7 @@ FullCalendar offers the following packages:
       For <a href='rrule-plugin'>leveraging the RRule library</a> for event recurrence
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/rrule'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/rrule'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/rrule?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -237,7 +237,7 @@ FullCalendar offers the following packages:
       Offers a named-timezone implementation, a formatting string implementation, and utilities for converting to Luxon DateTimes. <a href='luxon2'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/luxon2'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon2'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon2?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -247,7 +247,7 @@ FullCalendar offers the following packages:
       Supports Luxon v1. <a href='luxon1'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/luxon'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -257,7 +257,7 @@ FullCalendar offers the following packages:
       Offers a formatting string implementation and utilities fo convert to Moment objects. <a href='moment-plugin'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/moment'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/moment?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -267,7 +267,7 @@ FullCalendar offers the following packages:
       Offers a named timezone implementation. <a href='moment-timezone-plugin'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment-timezone'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/moment-timezone'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/moment-timezone?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -277,7 +277,7 @@ FullCalendar offers the following packages:
       Offers a React component. <a href='react'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/react'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/react'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/react?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -287,7 +287,7 @@ FullCalendar offers the following packages:
       Offers a Vue 3 component. <a href='vue'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/vue3'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/vue3'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/vue3?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -297,7 +297,7 @@ FullCalendar offers the following packages:
       Offers a Vue 2 component. <a href='vue'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/vue'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/vue'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/vue?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
   <tr>
     <td>
@@ -307,7 +307,7 @@ FullCalendar offers the following packages:
       Offers an Angular component. <a href='angular'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/angular'>Yarn</a></td>
-    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/angular'>jsDelivr</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/angular?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
   </tr>
 </tbody>
 </table>
