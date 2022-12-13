@@ -213,6 +213,15 @@ The codebase will likely be rearchitected in the future to once again support a 
 **Feature:** The [Web Components API][web-components] provide a standardized way to make reusable custom elements. FullCalendar offers a custom element in the new  `@fullcalendar/web-component` package. [Learn how to use it &raquo;](https://github.com/fullcalendar/fullcalendar/tree/v6/packages/web-component)
 
 
+## iCalendar Package
+
+**Breaking:** Users of the `@fullcalendar/icalendar` package must now install `ical.js` themselves. This is because `ical.js` is now a peer dependency.
+
+```
+npm install @fullcalendar/icalendar ical.js
+```
+
+
 ## Script Tag Usage
 
 **Breaking:** Previously, the paths to FullCalendar's [script tag globals]({{ site.baseurl }}/v6/initialize-globals) JS files were inconsistently named as `main.min.js` or `main.global.min.js`. Now, they are always named `index.global.min.js`. Examples:
@@ -272,6 +281,7 @@ The tooling of the codebase has been refactored to improve the contributor exper
 - [Vue-specific Changes](#vue-specific-changes)
 - [React-specific Changes](#react-specific-changes)
 - [Web Component Package](#web-component-package)
+- [iCalendar Package](#icalendar-package)
 - [Script Tag Usage](#script-tag-usage)
 - [IE 11 Dropped](#ie-11-dropped)
 - [Fetch versus XHR](#fetch-versus-xhr)
