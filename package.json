@@ -4,13 +4,13 @@
   "license": "ISC",
   "author": "Adam Shaw <arshaw@arshaw.com> (http://arshaw.com/)",
   "description": "Documentation for the FullCalendar project",
-  "homepage": "https://github.com/fullcalendar/fullcalendar-site-static#readme",
+  "homepage": "https://github.com/fullcalendar/fullcalendar-docs#readme",
   "bugs": {
     "url": "https://github.com/fullcalendar/fullcalendar/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fullcalendar/fullcalendar-site-static.git"
+    "url": "https://github.com/fullcalendar/fullcalendar-docs.git"
   },
   "scripts": {
     "install-misc": "bundle install",

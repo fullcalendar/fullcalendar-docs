@@ -1,5 +1,5 @@
 
-# FullCalendar Website Static Content [![Build Status](https://travis-ci.com/fullcalendar/fullcalendar-site-static.svg?branch=master)](https://travis-ci.com/fullcalendar/fullcalendar-site-static)
+# FullCalendar Website Static Content
 
 This repo contains the static content for [fullcalendar.io](https://fullcalendar.io).
 
@@ -32,7 +32,7 @@ You also need to have the [Rubygem bundler](https://bundler.io/) installed:
 gem install bundler
 ```
 
-Then, `cd` into the `fullcalendar-site-static` directory you cloned.
+Then, `cd` into the `fullcalendar-docs` directory you cloned.
 
 Then, run the following:
 
