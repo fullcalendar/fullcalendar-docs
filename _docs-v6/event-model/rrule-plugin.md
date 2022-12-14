@@ -11,9 +11,9 @@ First, install the `@fullcalendar/rrule` package along with any other packages y
 
 ```
 npm install --save \
-  @fullcalendar/rrule@beta \
-  @fullcalendar/core@beta \
-  @fullcalendar/daygrid@beta
+  @fullcalendar/rrule \
+  @fullcalendar/core \
+  @fullcalendar/daygrid
 ```
 
 Then, create a new calendar and pass in the plugins:

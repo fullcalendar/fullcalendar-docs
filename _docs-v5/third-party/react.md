@@ -12,7 +12,7 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
 - [Example project][example project] leveraging [Webpack], [Babel], and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/master/react?file=/src/DemoApp.jsx) in a code playground
+- [Runnable project](https://stackblitz.com/github/fullcalendar/fullcalendar-examples/tree/v5/react) in a code playground
 
 This guide does not go into depth about initializing a React project. Please consult the aforementioned example/runnable projects for that.
 
@@ -233,31 +233,31 @@ The above mentioned sample project uses a rather simple technique to store event
 
 Please check out the following example projects that demonstrate usage with third-party state-management libraries:
 
-- [View the **Redux** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-redux)
-- [View the **MobX** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-mobx-typescript)
+- [View the **Redux** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/react-redux)
+- [View the **MobX** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/react-mobx-typescript)
 
 
 ## TypeScript
 
 React goes really well with [TypeScript]!
 
-- [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react-typescript)
+- [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/react-typescript)
 
 
 ## Next.js
 
 If you plan to use the [Next.js] React framework, you'll need special configuration. See the following example projects:
 
-- [View the **Next** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next)
-- [View the **Next** + **Scheduler** example &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/next-scheduler)
+- [View the **Next** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/next)
+- [View the **Next** + **Scheduler** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/next-scheduler)
 
 
 [React]: https://reactjs.org/
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/react
-[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/react/src/DemoApp.jsx
+[example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/v5/react
+[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/react/src/DemoApp.jsx
 [docs toc]: https://fullcalendar.io/docs#toc
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/

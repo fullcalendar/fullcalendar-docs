@@ -17,7 +17,7 @@ The FullCalendar plugin provides you the following functionality:
 First, install the `@fullcalendar/luxon` package along with any other packages you plan to use:
 
 ```
-npm install --save @fullcalendar/luxon @fullcalendar/core @fullcalendar/daygrid
+npm install --save @fullcalendar/luxon @fullcalendar/core@5 @fullcalendar/daygrid
 ```
 
 Then, create a new calendar and pass in the plugins:

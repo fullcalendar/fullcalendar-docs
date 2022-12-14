@@ -36,8 +36,8 @@ Alternatively, you can load the bootstrap plugin [using an ES6 build system](ini
 
 ```
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/bootstrap@beta
+  @fullcalendar/core \
+  @fullcalendar/bootstrap
 ```
 
 Then, install the packages for Bootstrap and FontAwesome:
@@ -63,7 +63,7 @@ var calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Using `fontawesome-free` with webpack is a bit complicated because it relies on font files that are not present in the main stylesheet. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/bootstrap' class='more-link'>See an example project that does it</a>
+Using `fontawesome-free` with webpack is a bit complicated because it relies on font files that are not present in the main stylesheet. <a href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/bootstrap4' class='more-link'>See an example project that does it</a>
 
 
 ## 3rd Party Bootstrap Themes

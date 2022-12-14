@@ -7,8 +7,8 @@ For non-trivial projects, it is recommended to use an ES6-compatible build syste
 
 Example repos:
 
-- [View the **Webpack** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/webpack)
-- [View the **Rollup** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/rollup)
+- [View the **Webpack** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack)
+- [View the **Rollup** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/rollup)
 
 
 ## Initialize a Calendar with Plugins
@@ -19,10 +19,10 @@ First, use NPM or Yarn to install the `core` package along with any plugins you 
 
 ```
 npm install \
-  @fullcalendar/core@beta \
-  @fullcalendar/daygrid@beta \
-  @fullcalendar/timegrid@beta \
-  @fullcalendar/list@beta
+  @fullcalendar/core \
+  @fullcalendar/daygrid \
+  @fullcalendar/timegrid \
+  @fullcalendar/list
 ```
 
 Then, import your plugins and supply them to a new `Calendar` instance:
@@ -52,9 +52,9 @@ The set of [premium plugins](premium) works in the same way. You'll need to inst
 
 ```
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta
+  @fullcalendar/core \
+  @fullcalendar/resource \
+  @fullcalendar/resource-timeline
 ```
 
 Then, import your plugins and supply them to a new `Calendar` instance:
@@ -75,5 +75,5 @@ let calendar = new Calendar(calendarEl, {
 
 Example repos:
 
-- [View the **Webpack** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/webpack-scheduler)
-- [View the **Rollup** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/rollup-scheduler)
+- [View the **Webpack** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack-scheduler)
+- [View the **Rollup** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/rollup-scheduler)

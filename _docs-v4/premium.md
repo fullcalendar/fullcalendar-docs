@@ -45,6 +45,6 @@ To initialize a calendar, <a href='initialize-es6' class='more-link'>read about 
 
 ## Download
 
-You can also download the library manually. <a href='{{ site.fullcalendar_scheduler_repo }}/releases' class='more-link'>View all releases</a>
+You can also download the library manually. <a href='{{ site.fullcalendar_premium_repo }}/releases' class='more-link'>View all releases</a>
 
 Once you've downloaded it, you can initialize a calendar <a href='initialize-globals' class='more-link'>using script tags and browser globals</a>

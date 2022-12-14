@@ -27,7 +27,7 @@ live_parent_baseurl: "https://fullcalendar.io"
 
 fullcalendar_org: https://github.com/fullcalendar
 fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
-fullcalendar_scheduler_repo: https://github.com/fullcalendar/fullcalendar-scheduler
+fullcalendar_premium_repo: https://github.com/fullcalendar/fullcalendar-workspace
 fullcalendar_react_repo: https://github.com/fullcalendar/fullcalendar-react
 fullcalendar_vue_repo: https://github.com/fullcalendar/fullcalendar-vue
 fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
@@ -37,10 +37,10 @@ available_versions:
 
   - id: v6
     collection: docs-v6
+    is_latest: true
 
   - id: v5
     collection: docs-v5
-    is_latest: true
 
   - id: v4
     collection: docs-v4
@@ -61,11 +61,11 @@ collections:
 
   docs-v6:
     output: true
-    permalink: /v6/:slug
+    permalink: /:slug
 
   docs-v5:
     output: true
-    permalink: /:slug
+    permalink: /v5/:slug
 
   docs-v4:
     output: true

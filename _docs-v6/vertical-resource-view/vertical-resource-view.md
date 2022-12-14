@@ -15,9 +15,9 @@ demos:
 
 ```
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timegrid@beta
+  @fullcalendar/core \
+  @fullcalendar/resource \
+  @fullcalendar/resource-timegrid
 ```
 
 ```js

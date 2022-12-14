@@ -8,7 +8,7 @@ FullCalendar can display events from a public [iCalendar](https://en.wikipedia.o
 First, install the `@fullcalendar/icalendar` and `ical.js` packages:
 
 ```
-npm install --save @fullcalendar/icalendar@beta ical.js
+npm install --save @fullcalendar/icalendar ical.js
 ```
 
 Then, initialize your calendar with the plugin. Use the `events` option to provide an [event source](event-source-object) that contains a `url` property and a `format:'ics'` property:

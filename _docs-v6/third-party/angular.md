@@ -9,8 +9,8 @@ This component is built and maintained by [irustm](https://github.com/irustm) in
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
-- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular14)
-- [Angular 15 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15)
+- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular14)
+- [Angular 15 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular15)
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
 
@@ -143,7 +143,7 @@ Template:
 ></full-calendar>
 ```
 
-This technique is commonly used when working with [NgRx](https://ngrx.io/). [View a sample project &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15-ngrx)
+This technique is commonly used when working with [NgRx](https://ngrx.io/). [View a sample project &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular15-ngrx)
 
 
 ### Modifying Properties
@@ -253,10 +253,10 @@ How do you use [FullCalendar Premium's](/pricing) plugins with Angular? They are
 
 ```sh
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/angular@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta
+  @fullcalendar/core \
+  @fullcalendar/angular \
+  @fullcalendar/resource \
+  @fullcalendar/resource-timeline
 ```
 
 Then, initialize your calendar. Make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
@@ -286,10 +286,9 @@ and the template:
 
 [Angular]: https://angular.io/
 [Angular CLI]: https://cli.angular.io/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15
-[app.module.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.module.ts
-[app.component.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.component.ts
-[app.component.scss]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.component.scss
-[app.component.html]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/angular15/src/app/app.component.html
-[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/v6/lib/src/options.ts
+[app.module.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.module.ts
+[app.component.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.ts
+[app.component.scss]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.scss
+[app.component.html]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.html
+[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/main/lib/src/options.ts
 [ViewChild]: https://angular.io/api/core/ViewChild

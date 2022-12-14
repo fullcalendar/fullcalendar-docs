@@ -19,9 +19,9 @@ layout: text
 
 The primary goal of V6 is to solve bugs related to the *installation* of FullCalendar's packages. Beyond installing some new packages and rewriting some `import` statements, there are very few breaking API changes.
 
-**Want the code?** [Read the instructions]({{ site.baseurl }}/v6/initialize-es6)
+**Want the code?** [Read the instructions](initialize-es6)
 
-**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }}/v6)
+**Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }})
 
 **Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
 
@@ -30,11 +30,11 @@ The primary goal of V6 is to solve bugs related to the *installation* of FullCal
 
 **DX:** FullCalendar no longer attempts to import `.css` files. Instead, FullCalendar's JS is responsible for injecting its own CSS. This solves many issues with third-party bundlers:
 
-- **Webpack**: no longer necessary to use css-loader (see [v6 example project](https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/webpack/webpack.config.js))
-- **Rollup**: no longer necessary to use a css-processing plugin (like postcss) (see [v6 example project](https://github.com/fullcalendar/fullcalendar-example-projects/blob/v6/rollup/rollup.config.js))
-- **NextJS**: no longer necessary to ignore and manually import .css files (see [v6 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/next), [#6674])
+- **Webpack**: no longer necessary to use css-loader (see [v6 example project](https://github.com/fullcalendar/fullcalendar-examples/blob/main/webpack/webpack.config.js))
+- **Rollup**: no longer necessary to use a css-processing plugin (like postcss) (see [v6 example project](https://github.com/fullcalendar/fullcalendar-examples/blob/main/rollup/rollup.config.js))
+- **NextJS**: no longer necessary to ignore and manually import .css files (see [v6 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/next), [#6674])
 
-**DX:** Overriding FullCalendar's CSS variables no longer [requires any build system configuration]({{ site.baseurl }}/css-customization#css-variables). You can simply write CSS variables anywhere you'd like:
+**DX:** Overriding FullCalendar's CSS variables no longer [requires any build system configuration]({{ site.baseurl }}/v5/css-customization#css-variables). You can simply write CSS variables anywhere you'd like:
 
 ```css
 --fc-border-color: black;
@@ -50,18 +50,18 @@ Using [peerDependencies](https://nodejs.org/es/blog/npm/peer-dependencies/) solv
 
 ```sh
 npm install \
-  @fullcalendar/core@beta \   # always install core!
-  @fullcalendar/react@beta \  # the connector (react/angular/vue)
-  @fullcalendar/daygrid@beta  # any additional plugins
+  @fullcalendar/core \   # always install core!
+  @fullcalendar/react \  # the connector (react/angular/vue)
+  @fullcalendar/daygrid  # any additional plugins
 ```
 
 **Breaking:** The `@fullcalendar/resource` package (previously name `@fullcalendar/resource-common`) is now a peer-dependency of all other resource-related packages, meaning it **must be installed manually**, whether using a connector or not:
 
 ```sh
 npm install \
-  @fullcalendar/core@beta \
-  @fullcalendar/resource@beta \  # always install when using resources!
-  @fullcalendar/resource-timeline@beta  # a plugin that uses resources
+  @fullcalendar/core \
+  @fullcalendar/resource \  # always install when using resources!
+  @fullcalendar/resource-timeline  # a plugin that uses resources
 ```
 
 
@@ -79,7 +79,7 @@ npm install \
 
 ## Content Injection
 
-For **vanilla JS** users who write [content-injection functions]({{ site.baseurl }}/v6/content-injection) (like `eventContent`), there are some small changes to be aware of.
+For **vanilla JS** users who write [content-injection functions](content-injection) (like `eventContent`), there are some small changes to be aware of.
 
 **Breaking:** It is not recommended to import `preact` for supplying virtual DOM nodes. Instead, import from FullCalendar's entrypoint:
 
@@ -99,7 +99,7 @@ eventContent: function(arg) {
 
 ## Angular-specific Changes
 
-**Bugfix:** Support for Angular 14 and above has been restored ([angular-403], [v6 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/angular15))
+**Bugfix:** Support for Angular 14 and above has been restored ([angular-403], [v6 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular15))
 
 **DX:** An Ivy library is now being published ([angular-396])
 
@@ -202,7 +202,7 @@ Each template accepts a single argument ([more information](angular#nested-templ
 **Internal:** The React connector no longer replaces the core package's Preact renderer with a React renderer. Thus, the React connector will ultimately use Preact. This change was necessary to circumvent a number of developer experience problems, such as [import statement ordering](#import-statements) and `StrictMode` warnings. It has the following implications (or lack thereof):
 
 - **NO** significant performance implications
-- **NO** API changes. Furthermore, React virtual dom nodes are still given to [content-injection props]({{ site.baseurl }}/v6/react#content-injection) like `eventContent`
+- **NO** API changes. Furthermore, React virtual dom nodes are still given to [content-injection props](react#content-injection) like `eventContent`
 - **Bundle size** increase of about 3k as a result of including Preact
 
 The codebase will likely be rearchitected in the future to once again support a dual React/Preact renderer.
@@ -210,7 +210,7 @@ The codebase will likely be rearchitected in the future to once again support a 
 
 ## Web Component Package
 
-**Feature:** The [Web Components API][web-components] provide a standardized way to make reusable custom elements. FullCalendar offers a custom element in the new  `@fullcalendar/web-component` package. [Learn how to use it &raquo;](https://github.com/fullcalendar/fullcalendar/tree/v6/packages/web-component)
+**Feature:** The [Web Components API][web-components] provide a standardized way to make reusable custom elements. FullCalendar offers a custom element in the new  `@fullcalendar/web-component` package. [Learn how to use it &raquo;](https://github.com/fullcalendar/fullcalendar/tree/main/packages/web-component)
 
 
 ## iCalendar Package
@@ -224,7 +224,7 @@ npm install @fullcalendar/icalendar ical.js
 
 ## Script Tag Usage
 
-**Breaking:** Previously, the paths to FullCalendar's [script tag globals]({{ site.baseurl }}/v6/initialize-globals) JS files were inconsistently named as `main.min.js` or `main.global.min.js`. Now, they are always named `index.global.min.js`. Examples:
+**Breaking:** Previously, the paths to FullCalendar's [script tag globals](initialize-globals) JS files were inconsistently named as `main.min.js` or `main.global.min.js`. Now, they are always named `index.global.min.js`. Examples:
 
 - [https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js)
 - [https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@{{ site.data.latest-releases.v6 }}/index.global.min.js)
@@ -234,7 +234,7 @@ npm install @fullcalendar/icalendar ical.js
 - **All locales:** [https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales-all.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales-all.global.min.js)
 - **Single locale:** [https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales/es.global.min.js](https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/locales/es.global.min.js)
 
-**Breaking:** The `fullcalendar` and `fullcalendar-scheduler` bundles that are meant to be used as [script tag globals]({{ site.baseurl }}/v6/initialize-globals) no longer contain the following packages:
+**Breaking:** The `fullcalendar` and `fullcalendar-scheduler` bundles that are meant to be used as [script tag globals](initialize-globals) no longer contain the following packages:
 
 - `@fullcalendar/bootstrap5`
 - `@fullcalendar/bootstrap`
@@ -258,14 +258,14 @@ FullCalendar now distributes JS with (ES6) ES2015 syntax. Thus, reliance on `tsl
 
 **Internal:** The [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) browser API is now used instead of [XHR](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) to make JSON feed requests ([#6772](https://github.com/fullcalendar/fullcalendar/issues/6772))
 
-**Breaking:** The second argument given to [`eventSourceSuccess`]({{ site.baseurl }}/v6/eventSourceSuccess) is no longer an XHR. It is now a fetch [Response] object.
+**Breaking:** The second argument given to [`eventSourceSuccess`](eventSourceSuccess) is no longer an XHR. It is now a fetch [Response] object.
 
-**Feature:** [`eventSourceFailure`]({{ site.baseurl }}/v6/eventSourceFailure)'s error object will contain a `response` property when failing on a JSON feed. It is a fetch [Response] object.
+**Feature:** [`eventSourceFailure`](eventSourceFailure)'s error object will contain a `response` property when failing on a JSON feed. It is a fetch [Response] object.
 
 
 ## Codebase Improvements
 
-The tooling of the codebase has been refactored to improve the contributor experience. For example, [PNPM](https://pnpm.io/) and [Turborepo](https://turbo.build/) are now used. [View the master monorepo](https://github.com/fullcalendar/fullcalendar-scheduler/tree/v6) on GitHub.
+The tooling of the codebase has been refactored to improve the contributor experience. For example, [PNPM](https://pnpm.io/) and [Turborepo](https://turbo.build/) are now used. [View the master monorepo](https://github.com/fullcalendar/fullcalendar-workspace/tree/main) on GitHub.
 
 
 </div>

@@ -9,8 +9,8 @@ This component is built and maintained by [irustm](https://github.com/irustm) in
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
-- [Angular 13 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/angular13)
-- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/angular14)
+- [Angular 13 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/angular13)
+- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/angular14)
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
 
@@ -89,7 +89,7 @@ With Angular 13, all of FullCalendar's CSS will be seamlessly loaded into your p
 
 **Angular 14 chokes on FullCalendar's external stylesheets.**
 The next major version of FullCalendar will solve this, however, a workaround is needed in the meantime.
-[View the example project for a workaround &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/angular14#workarounds)
+[View the example project for a workaround &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/angular14#workarounds)
 
 
 ## Props and Emitted Events
@@ -287,11 +287,10 @@ and the template:
 
 [Angular]: https://angular.io/
 [Angular CLI]: https://cli.angular.io/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular
-[app.module.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/app/app.module.ts
-[app.component.ts]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/app/app.component.ts
-[app.component.scss]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/app/app.component.scss
-[app.component.html]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/src/app/app.component.html
+[app.module.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.module.ts
+[app.component.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.component.ts
+[app.component.scss]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.component.scss
+[app.component.html]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.component.html
 [docs toc]: https://fullcalendar.io/docs#toc
-[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/master/projects/fullcalendar/src/lib/fullcalendar-options.ts
+[component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/v5/projects/fullcalendar/src/lib/fullcalendar-options.ts
 [ViewChild]: https://angular.io/api/core/ViewChild

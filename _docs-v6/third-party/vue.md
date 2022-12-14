@@ -10,8 +10,8 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_vue_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
 - Example projects:
-  - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue) (uses [Webpack] and [css-loader]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/v6/vue?file=/src/DemoApp.vue)
-  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue3-typescript) (uses [TypeScript] and [Vite]) - [runnable](https://codesandbox.io/s/github/fullcalendar/fullcalendar-example-projects/tree/v6/vue3-typescript?file=/src/Demo.vue)
+  - [Vue 2 example](https://github.com/fullcalendar/fullcalendar-examples/tree/main/vue2) (uses [Webpack] and [css-loader]) - [runnable](https://stackblitz.com/github/fullcalendar/fullcalendar-examples/tree/main/vue2)
+  - [Vue 3 example](https://github.com/fullcalendar/fullcalendar-examples/tree/main/vue3) (uses [Vite]) - [runnable](https://stackblitz.com/github/fullcalendar/fullcalendar-examples/tree/main/vue3)
 
 This guide does not go into depth about initializing a Vue project. Please consult the aforementioned example/runnable projects for that.
 
@@ -21,16 +21,16 @@ If using **Vue 2**:
 
 ```bash
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/vue@beta
+  @fullcalendar/core \
+  @fullcalendar/vue
 ```
 
 If using **Vue 3**:
 
 ```bash
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/vue3@beta
+  @fullcalendar/core \
+  @fullcalendar/vue3
 ```
 
 Then install any additional FullCalendar plugins like `@fullcalendar/daygrid`
@@ -196,10 +196,10 @@ How do you use [FullCalendar Premium's](/pricing) plugins with Vue? They are no 
 
 ```sh
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/vue3@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta
+  @fullcalendar/core \
+  @fullcalendar/vue3 \
+  @fullcalendar/resource \
+  @fullcalendar/resource-timeline
 ```
 
 Then, initialize your calendar. Make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
@@ -233,17 +233,17 @@ export default {
 
 For `@fullcalendar/vue3`, nothing special is needed for TypeScript integration.
 
-For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue-typescript' class='more-link'>example TypeScript project</a>
+For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based components](https://github.com/vuejs/vue-class-component). See an <a href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/vue2-typescript' class='more-link'>example TypeScript project</a>
 
 
 ## Vuex
 
-[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/vue-vuex' class='more-link'>View an example project</a>
+[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/vue-vuex' class='more-link'>View an example project</a>
 
 
 ## Nuxt
 
-If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/nuxt'>See the example project</a>
+If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/nuxt'>See the example project</a>
 
 
 [Vue]: https://vuejs.org/

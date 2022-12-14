@@ -1,15 +1,22 @@
 
 {% if page.version.id == "v6" %}
   <div id='docs-controls-warning'>
-    These docs are for a BETA RELEASE.
-    <a href='{{ site.baseurl }}/v6/upgrading-from-v5'>
+    These are the v6 docs (recently released)
+    <a href='{{ site.baseurl }}/upgrading-from-v5'>
       Release notes
+    </a>
+  </div>
+{% elsif page.version.id == "v5" %}
+  <div id='docs-controls-warning'>
+    These docs are for an old release.
+    <a href='{{ site.baseurl }}/upgrading-from-v5'>
+      Info on upgrading to v6
     </a>
   </div>
 {% elsif page.version.id == "v4" %}
   <div id='docs-controls-warning'>
     These docs are for an old release.
-    <a href='{{ site.baseurl }}/upgrading-from-v4'>
+    <a href='{{ site.baseurl }}/v5/upgrading-from-v4'>
       Info on upgrading to v5
     </a>
   </div>

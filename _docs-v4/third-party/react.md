@@ -157,10 +157,10 @@ React goes really well with [TypeScript]! To show you how to integrate the two, 
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
 [Sass]: https://sass-lang.com/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v4/react
-[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v4/react/src/DemoApp.jsx
+[example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/v4/react
+[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-examples/blob/v4/react/src/DemoApp.jsx
 [sass-loader]: https://github.com/webpack-contrib/sass-loader#readme
 [docs toc]: https://fullcalendar.io/docs#toc
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/
-[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v4/react-typescript
+[typescript project]: https://github.com/fullcalendar/fullcalendar-examples/tree/v4/react-typescript

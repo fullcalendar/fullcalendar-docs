@@ -56,9 +56,9 @@ The following pre-configured timeline views are available: **timelineDay**, **ti
 
 ```
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta
+  @fullcalendar/core \
+  @fullcalendar/resource \
+  @fullcalendar/resource-timeline
 ```
 
 ```js

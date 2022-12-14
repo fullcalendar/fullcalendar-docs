@@ -1933,7 +1933,7 @@ Removed. Use the `Resource` [remove](Resource-remove) method instead.
 <td markdown='1'>
 Used to accept ordered arguments `( resourceObj, labelTds, bodyTds )`. Now accepts a single `renderInfo` object. The `labelTds` elements are now present in the `renderInfo.el` property as a single `<td>` element. If multiple elements are available for a single resource, `resourceRender` will be fired multiple times.
 
-There is currently no way to retrieve the element(s) that were previously available in `bodyTds`. [Issue 481](https://github.com/fullcalendar/fullcalendar-scheduler/issues/481)
+There is currently no way to retrieve the element(s) that were previously available in `bodyTds`. [Issue 481](https://github.com/fullcalendar/fullcalendar-workspace/issues/481)
 </td>
 </tr>
 

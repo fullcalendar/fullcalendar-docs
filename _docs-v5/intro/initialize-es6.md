@@ -7,8 +7,8 @@ For non-trivial projects, it is recommended to use an ES6-compatible build syste
 
 Your build system will need to know how to process CSS files. This is because fullcalendar core and many of the plugins import their own stylesheets. For Webpack, you can use [css-loader](https://webpack.js.org/loaders/css-loader/).
 
-- [View the **Webpack** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/webpack)
-- [View the **Rollup** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/rollup)
+- [View the **Webpack** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/webpack)
+- [View the **Rollup** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/rollup)
 
 
 ## Initialize a Calendar with Plugins
@@ -68,5 +68,5 @@ let calendar = new Calendar(calendarEl, {
 
 Example repos:
 
-- [View the **Webpack** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/webpack-scheduler)
-- [View the **Rollup** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/rollup-scheduler)
+- [View the **Webpack** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/webpack-scheduler)
+- [View the **Rollup** + **Scheduler** example repo &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/rollup-scheduler)

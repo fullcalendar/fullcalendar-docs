@@ -38,8 +38,8 @@ Alternatively, you can load the bootstrap plugin [using an ES6 build system](ini
 
 ```
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/bootstrap5@beta
+  @fullcalendar/core \
+  @fullcalendar/bootstrap5
 ```
 
 Then, install the packages for Bootstrap and Bootstrap Icons:
@@ -65,7 +65,7 @@ var calendar = new Calendar(calendarEl, {
 ...
 ```
 
-Using `bootstrap-icons` with webpack is a bit complicated because it relies on font files that are not present in the main stylesheet. <a href='https://github.com/fullcalendar/fullcalendar-example-projects/tree/v6/bootstrap5' class='more-link'>See an example project that does it</a>
+Using `bootstrap-icons` with webpack is a bit complicated because it relies on font files that are not present in the main stylesheet. <a href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/bootstrap5' class='more-link'>See an example project that does it</a>
 
 
 ## 3rd Party Bootstrap Themes

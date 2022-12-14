@@ -18,9 +18,9 @@ First, install the `@fullcalendar/luxon` package along with any other packages y
 
 ```
 npm install --save \
-  @fullcalendar/luxon@beta \
-  @fullcalendar/core@beta \
-  @fullcalendar/daygrid@beta
+  @fullcalendar/luxon \
+  @fullcalendar/core \
+  @fullcalendar/daygrid
 ```
 
 Then, create a new calendar and pass in the plugins:

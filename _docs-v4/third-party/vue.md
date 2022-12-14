@@ -174,7 +174,7 @@ export default {
 [Vue]: https://vuejs.org/
 [Webpack]: https://webpack.js.org/
 [Sass]: https://sass-lang.com/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/v4/vue
-[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/v4/vue/src/DemoApp.vue
+[example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/v4/vue
+[DemoApp.vue]: https://github.com/fullcalendar/fullcalendar-examples/blob/v4/vue/src/DemoApp.vue
 [docs toc]: https://fullcalendar.io/docs#toc
 [component options]: https://github.com/fullcalendar/fullcalendar-vue/blob/v4/src/fullcalendar-options.js

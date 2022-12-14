@@ -1,5 +1,7 @@
 ---
-permalink: /
+# we actually want "/v5" (without the trailing slash),
+# but wildcard URL for doc articles confuses things.
+permalink: /v5/
 
 layout: docs-landing
 

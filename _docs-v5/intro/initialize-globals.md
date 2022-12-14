@@ -59,7 +59,7 @@ The `fullcalendar` bundle's `main.js` and `main.css` files include the following
 
 First, obtain the premium `fullcalendar-scheduler` bundle in one of the following ways:
 
-- **Download**: <a href='{{ site.fullcalendar_scheduler_repo }}/releases/download/v{{ site.data.latest-releases.v5 }}/fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip'>fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip</a>
+- **Download**: <a href='{{ site.fullcalendar_premium_repo }}/releases/download/v{{ site.data.latest-releases.v5 }}/fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip'>fullcalendar-scheduler-{{ site.data.latest-releases.v5 }}.zip</a>
 - **CDN:** [jsdelivr](https://www.jsdelivr.com/package/npm/fullcalendar-scheduler)
 - **NPM:** `npm install fullcalendar-scheduler`
 

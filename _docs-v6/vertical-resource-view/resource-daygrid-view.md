@@ -7,9 +7,9 @@ A [DayGrid view](daygrid-view) like `dayGridDay` can be given resource functiona
 
 ```
 npm install --save \
-  @fullcalendar/core@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-daygrid@beta
+  @fullcalendar/core \
+  @fullcalendar/resource \
+  @fullcalendar/resource-daygrid
 ```
 
 ```js
