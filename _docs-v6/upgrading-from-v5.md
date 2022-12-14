@@ -1,5 +1,5 @@
 ---
-title: V6 Beta Release Notes and Upgrade Guide
+title: V6 Release Notes and Upgrade Guide
 layout: text
 ---
 

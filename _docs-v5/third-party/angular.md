@@ -9,7 +9,7 @@ This component is built and maintained by [irustm](https://github.com/irustm) in
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
-- [Angular 13 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/angular13)
+- [Angular 13 example project]
 - [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/v5/angular14)
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
@@ -287,6 +287,7 @@ and the template:
 
 [Angular]: https://angular.io/
 [Angular CLI]: https://cli.angular.io/
+[Angular 13 example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/v5/angular13
 [app.module.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.module.ts
 [app.component.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.component.ts
 [app.component.scss]: https://github.com/fullcalendar/fullcalendar-examples/blob/v5/angular13/src/app/app.component.scss
