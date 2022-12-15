@@ -224,6 +224,8 @@ npm install @fullcalendar/icalendar ical.js
 
 ## Script Tag Usage
 
+**DX:** It is no longer to necessary to write `<link>` tags for external stylesheets. The JavaScript bundles contain their own stylesheets.
+
 **Breaking:** Previously, the paths to FullCalendar's [script tag globals](initialize-globals) JS files were inconsistently named as `main.min.js` or `main.global.min.js`. Now, they are always named `index.global.min.js`. Examples:
 
 - [https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js](https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js)
