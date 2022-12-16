@@ -2,8 +2,9 @@
 title: Introduction
 children:
   - getting-started
-  - initialize-globals
   - initialize-es6
+  - initialize-globals
+  - initialize-browser-esm
   - plugin-index
   - handlers
   - methods

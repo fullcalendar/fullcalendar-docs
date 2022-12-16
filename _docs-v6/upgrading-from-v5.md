@@ -178,7 +178,7 @@ Each template accepts a single argument ([more information](angular#nested-templ
 
 ## Vue-specific Changes
 
-**Bugfix:** Custom markup given to slots (like `eventContent`) now properly supports binding, [custom global properties](https://vuejs.org/api/application.html#app-config-globalproperties), and [async components](https://vuejs.org/guide/components/async.html). Essentially, slots now behave as they should ([vue-169], [vue-141], [vue-128], [vue-122]). Fixed for both the Vue2 and Vue3 connectors.
+**Bugfix:** Custom markup given to slots (like `eventContent`) now properly supports binding, [custom global properties](https://vuejs.org/api/application.html#app-config-globalproperties), and [async components](https://vuejs.org/guide/components/async.html). Essentially, slots now behave as they should ([vue-169], [vue-141], [vue-128], [vue-122], [vue-182]). Fixed for both the Vue2 and Vue3 connectors.
 
 **Performance:** Custom markup given to slots (like `eventContent`) now renders much faster ([vue-191]).
 
@@ -222,7 +222,14 @@ npm install @fullcalendar/icalendar ical.js
 ```
 
 
+## Moment Timezone Package
+
+**FIX:** When using `@fullcalendar/moment-timezone`, the `moment` package is no longer needed as a peer dependency ([#6839](https://github.com/fullcalendar/fullcalendar/issues/6839))
+
+
 ## Script Tag Usage
+
+**Feature:** install FullCalendar as an ES module within a script tag ([docs](initialize-browser-esm), [#6933](https://github.com/fullcalendar/fullcalendar/issues/6933))
 
 **DX:** It is no longer to necessary to write `<link>` tags for external stylesheets. The JavaScript bundles contain their own stylesheets.
 
@@ -284,6 +291,7 @@ The tooling of the codebase has been refactored to improve the contributor exper
 - [React-specific Changes](#react-specific-changes)
 - [Web Component Package](#web-component-package)
 - [iCalendar Package](#icalendar-package)
+- [Moment Timezone Package](#moment-timezone-package)
 - [Script Tag Usage](#script-tag-usage)
 - [IE 11 Dropped](#ie-11-dropped)
 - [Fetch versus XHR](#fetch-versus-xhr)
@@ -308,5 +316,6 @@ The tooling of the codebase has been refactored to improve the contributor exper
 [vue-128]: https://github.com/fullcalendar/fullcalendar-vue/issues/128
 [vue-122]: https://github.com/fullcalendar/fullcalendar-vue/issues/122
 [vue-152]: https://github.com/fullcalendar/fullcalendar-vue/issues/152
+[vue-182]: https://github.com/fullcalendar/fullcalendar-vue/issues/182
 [vue-191]: https://github.com/fullcalendar/fullcalendar-vue/issues/191
 [Response]: https://developer.mozilla.org/en-US/docs/Web/API/Response

@@ -2,7 +2,7 @@
 title: Luxon 2 Plugin
 ---
 
-[Luxon](https://moment.github.io/luxon/index.html) is a JavaScript date library that cleverly leverages the browser's native APIs for many things such as time zones, locales, and formatting. However, it requires **IE11 and above**, and if you want to use named time zones, **it does not support IE at all**, only Microsoft Edge. If these browser requirements are okay for your project, then all is good!
+[Luxon](https://moment.github.io/luxon/index.html) is a JavaScript date library that cleverly leverages the browser's native APIs for many things such as time zones, locales, and formatting.
 
 The FullCalendar plugin provides you the following functionality:
 
