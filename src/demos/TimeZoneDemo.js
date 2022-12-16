@@ -30,7 +30,7 @@ export default class extends Demo {
     // let loadingEl = document.createElement('div') // TODO: make part of the UI!!!
 
     let calendar = new Calendar(calendarEl, {
-      plugins: [ interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
+      plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin],
       initialView: 'timeGridWeek',
       timeZone: INITIAL_TIME_ZONE,
       headerToolbar: {
@@ -43,7 +43,7 @@ export default class extends Demo {
       selectable: true,
       dayMaxEvents: true, // allow "more" link when too many events
       events: '/api/demo-feeds/events.json',
-      loading: function(bool) {
+      loading: function (bool) {
         // if (bool) {
         //   loadingEl.style.display = 'inline' // show
         // } else {
@@ -55,22 +55,24 @@ export default class extends Demo {
 
     // load the list of available timezones, build the <select> options
     // it's highly encouraged to use your own AJAX lib instead of using FullCalendar's internal util
-    requestJson('GET', '/api/demo-feeds/timezones.json', {}, function(timeZones) {
-      timeZones.forEach(function(timeZone) {
-        if (timeZone !== 'UTC') { // UTC is already in the list
-          let optionEl = document.createElement('option')
-          optionEl.value = timeZone
-          optionEl.innerText = timeZone
-          timeZoneSelectorEl.appendChild(optionEl)
-          timeZoneSelectorEl.value = INITIAL_TIME_ZONE
-        }
-      })
-    }, function() {
-      // failure
+    fetch('/api/demo-feeds/timezones.json').then((res) => {
+      if (res.ok) {
+        res.json().then((timeZones) => {
+          timeZones.forEach(function (timeZone) {
+            if (timeZone !== 'UTC') { // UTC is already in the list
+              let optionEl = document.createElement('option')
+              optionEl.value = timeZone
+              optionEl.innerText = timeZone
+              timeZoneSelectorEl.appendChild(optionEl)
+              timeZoneSelectorEl.value = INITIAL_TIME_ZONE
+            }
+          })
+        })
+      }
     })
 
     // when the timezone selector changes, dynamically change the calendar option
-    timeZoneSelectorEl.addEventListener('change', function() {
+    timeZoneSelectorEl.addEventListener('change', function () {
       calendar.setOption('timeZone', this.value)
     });
 
