@@ -224,7 +224,7 @@ npm install @fullcalendar/icalendar ical.js
 
 ## Moment Timezone Package
 
-**FIX:** When using `@fullcalendar/moment-timezone`, the `moment` package is no longer needed as a peer dependency ([#6839](https://github.com/fullcalendar/fullcalendar/issues/6839))
+**Bugfix:** When using `@fullcalendar/moment-timezone`, the `moment` package is no longer needed as a peer dependency ([#6839](https://github.com/fullcalendar/fullcalendar/issues/6839))
 
 
 ## Script Tag Usage
