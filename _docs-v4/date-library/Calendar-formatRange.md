@@ -5,7 +5,7 @@ title: Calendar::formatRange
 Formats two dates, a start and an end, into a string. A separator string, most likely a dash, will be intelligently inserted between the two dates. Inherits the time zone and locale settings of the calendar it's called on.
 
 <div class='spec' markdown='1'>
-calendar.formatDate( *start*, *end*, *settings* )
+calendar.formatRange( *start*, *end*, *settings* )
 </div>
 
 `start` and `end` can each be a [Date Object](date-object) or something that will [parse into a Date Object](date-parsing).
