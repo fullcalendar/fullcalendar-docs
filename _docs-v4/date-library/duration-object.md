@@ -19,7 +19,7 @@ The way in which FullCalendar accepts durations is rather flexible. It can be in
 
 It's important to note that each of these values does not *include* the units of the other properties. If the duration is 6 months, the year value will be `0`, not `0.5`. And vice-versa, if the duration is 1 years, the month value will be `0`, not `12`.
 
-Also, if you want to want to get the hour/minute/second values of the duration, you must do division on the `millisecond` property.
+Also, if you want to get the hour/minute/second values of the duration, you must do division on the `millisecond` property.
 
 An example that shows both Duration parsing and outputting:
 
