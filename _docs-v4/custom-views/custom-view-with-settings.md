@@ -22,7 +22,7 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-We use the `views` option similar to how [View-Specific Options](view-specific-options) work but with the very important addition of the `type` property. Also, a date-range parameter is required, whether is be [duration](duration), [visibleRange](visibleRange), or [dayCount](dayCount).
+We use the `views` option similar to how [View-Specific Options](view-specific-options) work but with the very important addition of the `type` property. Also, a date-range parameter is required, whether it be [duration](duration), [visibleRange](visibleRange), or [dayCount](dayCount).
 
 We have chosen `"timeGridFourDay"` to be the name of our new custom view.
 
