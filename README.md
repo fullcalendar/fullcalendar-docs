@@ -13,7 +13,7 @@ See a problem with the docs? Create a ticket in the [main dev repo's issue track
 
 ## Contributing
 
-To make edits to the documentation please submit a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) against the `master` branch of this repo.
+To make edits to the documentation please submit a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) against the `main` branch of this repo.
 
 
 ## Getting Set Up
