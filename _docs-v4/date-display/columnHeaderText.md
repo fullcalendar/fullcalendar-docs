@@ -18,7 +18,7 @@ var calendar = new Calendar(calendarEl, {
     if (date.getDay() === 5) {
       return 'Friday!';
     } else {
-      return mom.format('LLL');
+      return date.toString();
     }
   }
 });
