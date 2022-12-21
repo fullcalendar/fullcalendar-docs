@@ -31,7 +31,7 @@ Background events that are **timed** will only be rendered on the time slots in 
 
 ## Color
 
-The color of background events can be manipulated by targeting the `fc-bgevent` className, one of your own custom classNames provided by the [Event Object](event-object)'s `className` property, or by explicitly specifying a color with each [Event Object](event-object)'s or [Event Source](event-source-object)'s `color` or `backgroundColor` properties.
+The color of background events can be manipulated by targeting the `fc-bg-event` className, one of your own custom classNames provided by the [Event Object](event-object)'s `className` property, or by explicitly specifying a color with each [Event Object](event-object)'s or [Event Source](event-source-object)'s `color` or `backgroundColor` properties.
 
 
 ## Inverse Backgrounds
