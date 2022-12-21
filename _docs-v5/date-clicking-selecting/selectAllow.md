@@ -16,6 +16,6 @@ The `selectInfo` object will have the following properties:
 
 - `start` (a [Date](date-object))
 - `end` (a [Date](date-object))
-- `resourceId` (if you are using a [Resource View](/pricing))
+- `resource` (a [Resource](resource-object))(if you are using a [Resource View]({{ site.baseurl }}/pricing))
 
 In line with the discussion about the [Event object](event-parsing), it is important to stress that the `end` date property is **exclusive**.
