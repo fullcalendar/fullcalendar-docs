@@ -20,7 +20,7 @@ import { Calendar } from '@fullcalendar/core'
 import rrulePlugin from '@fullcalendar/rrule'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
-let calendar = document.getElementById('calendar')
+let calendarEl = document.getElementById('calendar')
 let calendar = new Calendar(calendarEl, {
   plugins: [ rrulePlugin, dayGridPlugin ],
   events: [

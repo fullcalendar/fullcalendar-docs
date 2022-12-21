@@ -23,7 +23,7 @@ import { Calendar } from '@fullcalendar/core'
 import rrulePlugin from '@fullcalendar/rrule'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
-let calendar = document.getElementById('calendar')
+let calendarEl = document.getElementById('calendar')
 let calendar = new Calendar(calendarEl, {
   plugins: [ rrulePlugin, dayGridPlugin ],
   events: [
@@ -50,7 +50,7 @@ You can also configure the rrule plugin with [script tags](initialize-globals). 
 <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 
 <script>
-  var calendar = document.getElementById('calendar')
+  var calendarEl = document.getElementById('calendar')
   var calendar = new FullCalendar.Calendar(calendarEl, {
     events: [
       // event data. see below
