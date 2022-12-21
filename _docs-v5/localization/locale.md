@@ -34,7 +34,7 @@ import frLocale from '@fullcalendar/core/locales/fr';
 ...
 let calendar = new Calendar(calendarEl, {
   locales: [ esLocale, frLocale ],
-  locale: 'fr' // the initial locale. of not specified, uses the first one
+  locale: 'fr' // the initial locale. if not specified, uses the first one
 });
 ...
 calendar.setOption('locale', 'es');
