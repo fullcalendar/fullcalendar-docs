@@ -6,9 +6,9 @@ title: Luxon Plugin
 
 The plugin provides you the following functionality:
 
-- Lets you use Luxon [formatting strings](https://moment.github.io/luxon/docs/manual/formatting.html#toformat) for all date-formatting settings
-- Lets you convert native [Date objects](date-object) emitted from the API into [Luxon DateTime objects](https://moment.github.io/luxon/docs/class/src/datetime.js~DateTime.html) that match the calendar's time zone and locale
-- Lets you convert [Duration objects](duration-object) emitted from the API into [Luxon Durations objects](https://moment.github.io/luxon/docs/class/src/duration.js~Duration.html)
+- Lets you use Luxon [formatting strings](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all date-formatting settings
+- Lets you convert native [Date objects](date-object) emitted from the API into [Luxon DateTime objects](https://moment.github.io/luxon/api-docs/index.html#datetime) that match the calendar's time zone and locale
+- Lets you convert [Duration objects](duration-object) emitted from the API into [Luxon Durations objects](https://moment.github.io/luxon/api-docs/index.html#duration)
 - Provides you a named time-zone implementation for the [timeZone](timeZone) setting
 
 Example using formatting strings with [an ES6 build system](initialize-es6):
