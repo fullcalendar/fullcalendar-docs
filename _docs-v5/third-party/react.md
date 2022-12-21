@@ -41,7 +41,7 @@ export default class DemoApp extends React.Component {
 }
 ```
 
-You must initialized your calendar with at least one plugin that provides a view!
+You must initialize your calendar with at least one plugin that provides a view!
 
 
 ## CSS
