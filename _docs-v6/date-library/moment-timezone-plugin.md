@@ -45,14 +45,15 @@ When used with Webpack, whenever the `moment-timezone` package is imported into 
 You can also configure the moment-timezone plugin with [script tags](initialize-globals). This example leverages CDN links:
 
 ```html
-<!-- include one of the moment-timezone builds -->
-<script src='https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js'></script>
+<!-- include moment and one of the moment-timezone builds -->
+<script src='https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/moment-timezone@0.5.40/builds/moment-timezone-with-data.min.js'></script>
 
 <!-- fullcalendar bundle -->
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 
 <!-- the connector. must go AFTER moment-timezone -->
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/moment@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/moment-timezone@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 
 <script>
   var calendarEl = document.getElementById('calendar')
