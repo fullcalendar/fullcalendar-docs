@@ -14,6 +14,6 @@ For larger projects, it's best to use some type of build system:
 
 Also, FullCalendar integrates with popular front-end frameworks:
 
-- [React "deep" integration](react) (supports Next)
+- [React connector](react) (supports Next)
 - [Vue connector](vue) (supports Nuxt)
 - [Angular connector](angular)

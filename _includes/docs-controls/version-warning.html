@@ -1,12 +1,5 @@
 
-{% if page.version.id == "v6" %}
-  <div id='docs-controls-warning'>
-    These are the v6 docs (recently released)
-    <a href='{{ site.baseurl }}/upgrading-from-v5'>
-      Release notes
-    </a>
-  </div>
-{% elsif page.version.id == "v5" %}
+{% if page.version.id == "v5" %}
   <div id='docs-controls-warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/upgrading-from-v5'>
