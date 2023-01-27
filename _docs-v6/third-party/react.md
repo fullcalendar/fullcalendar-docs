@@ -228,9 +228,17 @@ Please check out the following example projects that demonstrate usage with thir
 
 ## TypeScript
 
-React goes really well with [TypeScript]!
+React works well with [TypeScript]!
 
 - [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react-typescript)
+
+
+## Jest
+
+The FullCalendar React connector works well with [Jest](https://jestjs.io/) but requires a workaround for Jest >=28:
+
+- [Explanation on Github Issues](https://github.com/fullcalendar/fullcalendar/issues/7113#issuecomment-1384696198)
+- [Example Project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/jest-react)
 
 
 [React]: https://reactjs.org/

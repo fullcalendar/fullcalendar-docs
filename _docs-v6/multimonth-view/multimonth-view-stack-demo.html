@@ -1,0 +1,21 @@
+---
+title: multiMonthYear as a vertical stack of months
+layout: demo-v6
+---
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'multiMonthYear',
+      multiMonthMaxColumns: 1, // force a single columns
+      editable: true,
+      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json'
+    });
+
+    calendar.render();
+  });
+
+</script>

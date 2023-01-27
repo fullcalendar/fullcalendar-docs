@@ -20,6 +20,7 @@ children:
       - Calendar-batchRendering
       - classname-input
       - content-injection
+      - content-security-policy
 related:
   - initialDate
   - initialView

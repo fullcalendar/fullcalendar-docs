@@ -30,6 +30,12 @@ demos:
 
 A TimeGrid view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis. The two predefined TimeGrid views are the **timeGridWeek** and **timeGridDay** views. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
+```
+npm install --save \
+  @fullcalendar/core \
+  @fullcalendar/timegrid
+```
+
 ```js
 import { Calendar } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid';

@@ -96,6 +96,17 @@ eventContent: function(arg) {
 }
 ```
 
+To restore the old behavior of rendering default content, return `true` (added in **v6.1.0**):
+
+```js
+eventContent: function(arg) {
+  if (arg.event.title === 'Custom event') {
+    return { html: 'Some custom HTML here' }
+  }
+  return true // render default content
+}
+```
+
 
 ## Angular-specific Changes
 

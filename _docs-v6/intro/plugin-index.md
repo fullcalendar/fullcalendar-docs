@@ -88,6 +88,18 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
+      <strong>@fullcalendar/multimonth</strong>
+    </td>
+    <td>
+      Offers <a href='multimonth-view'>MultiMonth</a> views:<br />
+      <code>multiMonthYear</code>,
+      <code>multiMonth</code> (<a href='custom-view-with-settings'>generic</a>)
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/multimonth'>Yarn</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/multimonth?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
+  </tr>
+  <tr>
+    <td>
       <strong>@fullcalendar/scrollgrid</strong>
     </td>
     <td>

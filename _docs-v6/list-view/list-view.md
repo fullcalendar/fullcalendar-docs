@@ -17,6 +17,12 @@ demos:
 
 A list view displays events in a simple vertical list for a specific interval of time. If there are no events during a specific interval of time, the "No events to display" screen is displayed, which can be customized via [render hooks](no-events-render-hooks). There are 4 preset list views: **listDay**, **listWeek**, **listMonth**, and **listYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
 
+```
+npm install --save \
+  @fullcalendar/core \
+  @fullcalendar/list
+```
+
 ```js
 import { Calendar } from '@fullcalendar/core';
 import listPlugin from '@fullcalendar/list';
