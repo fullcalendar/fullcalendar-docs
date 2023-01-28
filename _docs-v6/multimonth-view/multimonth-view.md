@@ -46,12 +46,12 @@ let calendar = new Calendar(calendarEl, {
 
 [View a live demo &raquo;](multimonth-view-grid-demo)
 
-The [multiMonthMinWidth] setting ultimately determines the number of columns.
+The [multiMonthMinWidth](multiMonthMinWidth) setting ultimately determines the number of columns.
 
 
 <h2 id='vertical-stack'>B) Vertical stack</h2>
 
-Create a vertical stack of months by forcing the grid to have a single column. Do this with the [multiMonthMaxColumns] setting.
+Create a vertical stack of months by forcing the grid to have a single column. Do this with the [multiMonthMaxColumns](multiMonthMaxColumns) setting.
 
 ```js
 import { Calendar } from '@fullcalendar/core'

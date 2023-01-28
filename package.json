@@ -26,16 +26,15 @@
     "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh"
   },
   "dependencies": {
-    "@fullcalendar/bootstrap5": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/bootstrap5/dist",
-    "@fullcalendar/core": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/core/dist",
-    "@fullcalendar/daygrid": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/daygrid/dist",
-    "@fullcalendar/interaction": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/interaction/dist",
-    "@fullcalendar/list": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/list/dist",
-    "@fullcalendar/multimonth": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/multimonth/dist",
-    "@fullcalendar/resource": "link:/Users/adam/Code/fullcalendar-workspace/premium/packages/resource/dist",
-    "@fullcalendar/resource-timegrid": "link:/Users/adam/Code/fullcalendar-workspace/premium/packages/resource-timegrid/dist",
-    "@fullcalendar/resource-timeline": "link:/Users/adam/Code/fullcalendar-workspace/premium/packages/resource-timeline/dist",
-    "@fullcalendar/timegrid": "link:/Users/adam/Code/fullcalendar-workspace/standard/packages/timegrid/dist",
+    "@fullcalendar/bootstrap5": "~6.1.0",
+    "@fullcalendar/core": "~6.1.0",
+    "@fullcalendar/daygrid": "~6.1.0",
+    "@fullcalendar/interaction": "~6.1.0",
+    "@fullcalendar/list": "~6.1.0",
+    "@fullcalendar/resource": "~6.1.0",
+    "@fullcalendar/resource-timegrid": "~6.1.0",
+    "@fullcalendar/resource-timeline": "~6.1.0",
+    "@fullcalendar/timegrid": "~6.1.0",
     "accordion": "^3.0.2"
   },
   "devDependencies": {

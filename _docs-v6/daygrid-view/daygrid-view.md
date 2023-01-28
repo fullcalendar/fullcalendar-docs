@@ -49,4 +49,4 @@ There are numerous other options throughout the docs that affect the display of 
 
 <h2 id='large-duration'>dayGridYear and other large durations</h2>
 
-When using **dayGridYear** or a large custom duration, the first day cell of any new month will have a bold title. To control the date format of this title, use [monthStartFormat].
+When using **dayGridYear** or a large custom duration, the first day cell of any new month will have a bold title. To control the date format of this title, use [monthStartFormat](monthStartFormat).

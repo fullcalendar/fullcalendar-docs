@@ -10,6 +10,7 @@ import TimeZoneDemo from './demos/TimeZoneDemo'
 import LocaleDemo from './demos/LocaleDemo'
 import ResourceTimelineDemo from './demos/ResourceTimelineDemo'
 import ResourceTimeGridDemo from './demos/ResourceTimeGridDemo'
+import YearDemo from './demos/YearDemo'
 import { renderCalendarTheme } from './lib/calendar-theme-render'
 
 const EXPAND_FIRST_PANEL = true
@@ -17,6 +18,7 @@ const DEMO_CLASSES = [
   DragAndDropDemo,
   ResourceTimelineDemo,
   ResourceTimeGridDemo,
+  YearDemo,
   SelectableDemo,
   BgEventDemo,
   ThemingDemo,
@@ -32,7 +34,7 @@ This allows us to bundle multiple related bundles together.
 if (window.isCalendarThemeRender) {
   window.renderCalendarTheme = renderCalendarTheme // expose global util
 } else {
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     let accordionEl = document.getElementById('demo-accordion')
     let contentEl = document.getElementById('demo-content')
 
@@ -131,13 +133,13 @@ class DemoRunner {
     for (let demo of this.demos) {
       html +=
         '<div class="accordion__panel">' +
-          '<div class="accordion__panel-title">' +
-            '<span class="fc-icon"></span>' + // CSS will give it content
-            htmlEscape(demo.title) +
-          '</div>' +
-          '<div class="accordion__panel-content">' +
-            demo.controlHtml +
-          '</div>' +
+        '<div class="accordion__panel-title">' +
+        '<span class="fc-icon"></span>' + // CSS will give it content
+        htmlEscape(demo.title) +
+        '</div>' +
+        '<div class="accordion__panel-content">' +
+        demo.controlHtml +
+        '</div>' +
         '</div>'
     }
 

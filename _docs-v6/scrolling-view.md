@@ -14,12 +14,16 @@ Use a [multimonth view in vertical-stack mode](multimonth-view#vertical-stack) t
 
 Screenshot here.
 
+[View a live demo &raquo;](multimonth-view-stack-demo)
+
 
 <h2 id='daygrid'>B) Without month breaks</h2>
 
 Use [daygrid view with a large duration](daygrid-view#large-duration) to achieve this. There will be a continuous grid of days without month breaks. The first day cell of any new month will have a bold title. Screenshot:
 
 Screenshot here.
+
+[View a live demo &raquo;](daygridyear-view-demo)
 
 
 <h2>Future developments</h2>

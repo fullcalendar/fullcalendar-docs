@@ -41,7 +41,7 @@ class DocsIndexer < Jekyll::Generator
           # assign a layout if not explicitly defined
           if not doc.data['layout']
             doc.data['layout'] =
-              if doc.data['children']
+              if doc.data['children'] or doc.data['demos']
                 'docs-sublanding'
               else
                 'docs-article'

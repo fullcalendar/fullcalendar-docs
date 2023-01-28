@@ -18,7 +18,7 @@ export default class extends Demo {
     return new Calendar(calendarEl, {
       plugins: [interactionPlugin, dayGridPlugin, multiMonthPlugin],
       timeZone: 'UTC',
-      initialView: 'multiMonthGrid',
+      initialView: 'multiMonthYearGrid',
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
