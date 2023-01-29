@@ -3,7 +3,7 @@ title: Initialize with Script Tags
 description: Use pre-built bundles and HTML script tags
 ---
 
-It's possible to manually include the necessary `<script>` tags in the head of your HTML page and then initialize a calendar via browser globals. You will leverage one of FullCalendar's prebuilt bundles to do this.
+It's possible to manually include the necessary `<script>` tags in the head of your HTML page and then initialize a calendar via browser globals. Leverage one of FullCalendar's prebuilt bundles or include individual plugins
 
 
 ## Standard Bundle
@@ -21,7 +21,7 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='fullcalendar/dist/index.global.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -42,7 +42,7 @@ Then, write the following initialization code:
 
 [View a runnable example &raquo;](initialize-globals-demo)
 
-The `fullcalendar` bundle's `index.global.js` file includes the following packages:
+The `fullcalendar` bundle's `index.global(.min).js` file includes the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
@@ -66,7 +66,7 @@ Then, write the following initialization code:
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='fullcalendar-scheduler/dist/index.global.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -89,7 +89,7 @@ Then, write the following initialization code:
 
 You won't need to include the `fullcalendar-scheduler` bundle AND the `fullcalendar` bundle. The `fullcalendar-scheduler` bundle includes everything.
 
-The `fullcalendar-scheduler` bundle's `index.global.js` file includes the following packages:
+The `fullcalendar-scheduler` bundle's `index.global(.min).js` file includes the following packages:
 
 - `@fullcalendar/core`
 - `@fullcalendar/interaction` (for [date selecting](date-clicking-selecting), [event dragging & resizing](event-dragging-resizing))
@@ -103,3 +103,33 @@ The `fullcalendar-scheduler` bundle's `index.global.js` file includes the follow
 - `@fullcalendar/resource-daygrid` ([more info](resource-daygrid-view))
 - `@fullcalendar/resource-timegrid` ([more info](vertical-resource-view))
 - `@fullcalendar/resource-timeline` ([more info](timeline-view))
+
+
+## Individual Plugins
+
+You can also include `<script>` tags for individual plugins.
+
+```html
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
+</html>
+```

@@ -1,5 +1,6 @@
 ---
 title: Timeline View
+title_for_landing: Timeline
 is_premium: true
 children:
   - title: Timeline-specific Options

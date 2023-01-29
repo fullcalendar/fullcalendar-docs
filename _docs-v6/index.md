@@ -20,7 +20,7 @@ children:
       - timegrid-view
       - list-view
       - daygrid-view
-      - scrolling-view
+      - multimonth-stack
       - multimonth-view
       - timeline-view
       - vertical-resource-view

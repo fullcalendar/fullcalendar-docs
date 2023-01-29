@@ -1,4 +1,3 @@
-
 // FYI: most images are naturally 300px wide
 // FYI: border is 14px in horizontal width
 $docs-sublanding-sidebar-width: 300px + 14px;
@@ -52,8 +51,12 @@ a.docs-sublanding__image {
   line-height: 1.4;
 }
 
+.docs-sublanding__children {
+  margin-top: 5em;
+}
+
 .docs-sublanding__child-group {
-  margin: 0 0 2.8em;
+  margin: 3em 0;
 }
 
 .docs-sublanding__child-group-title {

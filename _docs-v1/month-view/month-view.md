@@ -14,4 +14,4 @@ $('#calendar').fullCalendar({
 });
 ```
 
-The following options are specific to month view. However, there are numerous other options throughout the docs that affect the display of month view, such as the [locale-related options](localization) and [date/time display options](date-display).
+The following options are specific to month view. However, there are numerous other options throughout the docs that affect the display of month view, such as the [date/time display options](date-display) and [locale-related options](localization).

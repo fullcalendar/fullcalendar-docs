@@ -15,4 +15,4 @@ $('#calendar').fullCalendar({
 
 If you'd like a different interval of time, you can create a [custom view](custom-view-with-settings) with type `'basic'`.
 
-There are numerous other options throughout the docs that affect the display of basic view, such as the [locale-related options](localization) and [date/time display options](date-display).
+There are numerous other options throughout the docs that affect the display of basic view, such as the [date/time display options](date-display) and [locale-related options](localization).

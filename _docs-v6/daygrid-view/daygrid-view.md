@@ -1,5 +1,7 @@
 ---
 title: DayGrid View
+title_for_landing: DayGrid
+excerpt_separator: <!--more-->
 layout: docs-sublanding
 children:
   - title: Daygrid-specific Options
@@ -10,7 +12,7 @@ demos:
   - daygridyear-view-demo
 ---
 
-A DayGrid view is a view with one or more columns, each representing a day. The pre-configured DayGrid views are **dayGridDay** **dayGridWeek**, and **dayGridYear**. They can be initialized in an [ES6 setup](initialize-es6) like so:
+A DayGrid view displays one or more cells, each representing a day.<!--more--> Either install via [script tags](initialize-globals) or [individual packages](initialize-es6) like so:
 
 ```
 npm install --save \
@@ -18,35 +20,69 @@ npm install --save \
   @fullcalendar/daygrid
 ```
 
+There are numerous other options throughout the docs that affect the display of DayGrid view, such as the [date/time display options](date-display) and [locale-related options](localization).
+
+
+## Week & Day View
+
+The following example shows how to toggle between `dayGridWeek` and `dayGridDay`:
+
 ```js
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-...
-let calendar = new Calendar(calendarEl, {
-  plugins: [ dayGridPlugin ],
-  initialView: 'dayGridWeek'
-});
-...
+import { Calendar } from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+const calendar = new Calendar(calendarEl, {
+  plugins: [dayGridPlugin],
+  initialView: 'dayGridWeek',
+  headerToolbar: {
+    left: 'prev,next',
+    center: 'title',
+    right: 'dayGridWeek,dayGridDay' // user can switch between the two
+  }
+})
 ```
 
-Or you can choose to initialized DayGrid view [as a global bundle](initialize-globals):
+[View a demo &raquo;](daygrid-view-demo)
 
-```html
-<script src='fullcalendar/dist/index.global.js'></script>
-<script>
-...
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  initialView: 'dayGridWeek'
-});
-...
-</script>
+
+## Month View
+
+The `dayGridMonth` view is the most common. [View docs specifically for month view &raquo;](month-view)
+
+
+## Year View
+
+The `dayGridYear` view shows one continuous grid of cells for an entire year. The user most scroll. The first cell of each month is emphasized, as controlled by [monthStartFormat](monthStartFormat).
+
+```js
+import { Calendar } from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+const calendar = new Calendar(calendarEl, {
+  plugins: [dayGridPlugin],
+  initialView: 'dayGridYear'
+})
 ```
 
-If you'd like a different interval of time, you can create a [custom view](custom-view-with-settings) with type `'dayGrid'`.
-
-There are numerous other options throughout the docs that affect the display of DayGrid view, such as the [locale-related options](localization) and [date/time display options](date-display).
+[View a demo &raquo;](daygridyear-view-demo)
 
 
-<h2 id='large-duration'>dayGridYear and other large durations</h2>
+## Custom Duration
 
-When using **dayGridYear** or a large custom duration, the first day cell of any new month will have a bold title. To control the date format of this title, use [monthStartFormat](monthStartFormat).
+You can create DayGrid views [with arbitrary durations](custom-view-with-settings). The following creates a 4-week view:
+
+```js
+import { Calendar } from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+const calendar = new Calendar(calendarEl, {
+  plugins: [dayGridPlugin],
+  initialView: 'dayGridFourWeek',
+  views: {
+    dayGridFourWeek: {
+      type: 'dayGrid',
+      duration: { weeks: 4 }
+    }
+  }
+})
+```

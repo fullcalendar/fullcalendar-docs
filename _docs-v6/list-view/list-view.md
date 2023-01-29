@@ -1,5 +1,6 @@
 ---
 title: List View
+title_for_landing: List
 children:
   - title: List-View-specific Options
     children:

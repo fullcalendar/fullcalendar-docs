@@ -1,5 +1,6 @@
 ---
 title: Month View
+title_for_landing: Month
 children:
   - title: Month-View-specific Options
     children:
@@ -9,7 +10,7 @@ demos:
   - month-view-demo
 ---
 
-Month view displays the current month's days, and usually a few days of the previous and next months, in a table-like format. It's technically considered "dayGridMonth" view and is part of the [DayGrid plugin](daygrid-view). It can be initialized in an [ES6 setup](initialize-es6) like so:
+The Month view is a specific type of [DayGrid view](daygrid-view) called `dayGridMonth`. Either install via [script tags](initialize-globals) or [individual packages](initialize-es6) like so:
 
 ```
 npm install --save \
@@ -17,28 +18,18 @@ npm install --save \
   @fullcalendar/daygrid
 ```
 
+Then initialize the calendar in JavaScript:
+
 ```js
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-...
-let calendar = new Calendar(calendarEl, {
-  plugins: [ dayGridPlugin ],
+import { Calendar } from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+const calendar = new Calendar(calendarEl, {
+  plugins: [dayGridPlugin],
   initialView: 'dayGridMonth'
 });
-...
 ```
 
-Or you can choose to initialized Month view [as a global bundle](initialize-globals):
+[View a demo &raquo;](month-view-demo)
 
-```html
-<script src='fullcalendar/dist/index.global.js'></script>
-<script>
-...
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  initialView: 'dayGridMonth'
-});
-...
-</script>
-```
-
-The following options are specific to month view. However, there are numerous other options throughout the docs that affect the display of month view, such as the [locale-related options](localization) and [date/time display options](date-display).
+There are numerous other options throughout the docs that affect the display of DayGrid view, such as the [date/time display options](date-display) and [locale-related options](localization).

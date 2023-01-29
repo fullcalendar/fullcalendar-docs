@@ -1,5 +1,6 @@
 ---
 title: Vertical Resource View
+title_for_landing: Vertical Resource
 is_premium: true
 children:
   - datesAboveResources

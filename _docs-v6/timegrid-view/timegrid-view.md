@@ -1,5 +1,7 @@
 ---
 title: TimeGrid View
+title_for_landing: TimeGrid
+excerpt_separator: <!--more-->
 children:
   - title: TimeGrid-specific Options
     children:
@@ -28,7 +30,7 @@ demos:
   - timegrid-custom-view-demo
 ---
 
-A TimeGrid view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis. The two predefined TimeGrid views are the **timeGridWeek** and **timeGridDay** views. They can be initialized in an [ES6 setup](initialize-es6) like so:
+A TimeGrid view displays one-or-more horizontal days as well as an axis of time, usually midnight to midnight, on the vertical axis.<!--more--> Either install via [script tags](initialize-globals) or [individual packages](initialize-es6) like so:
 
 ```
 npm install --save \
@@ -36,30 +38,49 @@ npm install --save \
   @fullcalendar/timegrid
 ```
 
+There are numerous other options throughout the docs that affect the display of TimeGrid view, such as the [date/time display options](date-display) and [locale-related options](localization).
+
+
+## Week & Day View
+
+The following example shows how to toggle between `timeGridWeek` and `timeGridDay`:
+
 ```js
-import { Calendar } from '@fullcalendar/core';
-import timeGridPlugin from '@fullcalendar/timegrid';
-...
-let calendar = new Calendar(calendarEl, {
-  plugins: [ timeGridPlugin ],
-  initialView: 'timeGridWeek'
-});
-...
+import { Calendar } from '@fullcalendar/core'
+import timeGridPlugin from '@fullcalendar/timegrid'
+
+const calendar = new Calendar(calendarEl, {
+  plugins: [timeGridPlugin],
+  initialView: 'timeGridWeek',
+  headerToolbar: {
+    left: 'prev,next',
+    center: 'title',
+    right: 'timeGridWeek,timeGridDay' // user can switch between the two
+  }
+})
 ```
 
-Or you can choose to initialized the TimeGrid views [as a global bundle](initialize-globals):
+[View a demo &raquo;](timegrid-standard-view-demo)
 
-```html
-<script src='fullcalendar/dist/index.global.js'></script>
-<script>
-...
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  initialView: 'timeGridWeek'
-});
-...
-</script>
+
+## Custom Duration
+
+You can create TimeGrid views [with arbitrary durations](custom-view-with-settings). The following creates a 4-day view:
+
+```js
+import { Calendar } from '@fullcalendar/core'
+import timeGridPlugin from '@fullcalendar/timegrid'
+
+const calendar = new Calendar(calendarEl, {
+  plugins: [timeGridPlugin],
+  initialView: 'timeGridFourDay',
+  views: {
+    timeGridFourDay: {
+      type: 'timeGrid',
+      duration: { days: 4 }
+    }
+  }
+})
 ```
 
-TimeGrid views of other durations can be made with a [custom view](custom-view-with-settings) with type `'timeGrid'`.
-
-The following options are specific to TimeGrid view. However, there are numerous other options throughout the docs that affect the display of TimeGrid view, such as the [locale-related options](localization) and [date/time display options](date-display).
+[View a demo &raquo;](timegrid-custom-view-demo)
