@@ -26,16 +26,16 @@
     "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh"
   },
   "dependencies": {
-    "@fullcalendar/bootstrap5": "~6.1.0",
-    "@fullcalendar/core": "~6.1.0",
-    "@fullcalendar/daygrid": "~6.1.0",
-    "@fullcalendar/interaction": "~6.1.0",
-    "@fullcalendar/list": "~6.1.0",
-    "@fullcalendar/multimonth": "~6.1.0",
-    "@fullcalendar/resource": "~6.1.0",
-    "@fullcalendar/resource-timegrid": "~6.1.0",
-    "@fullcalendar/resource-timeline": "~6.1.0",
-    "@fullcalendar/timegrid": "~6.1.0",
+    "@fullcalendar/bootstrap5": "~6.1.1",
+    "@fullcalendar/core": "~6.1.1",
+    "@fullcalendar/daygrid": "~6.1.1",
+    "@fullcalendar/interaction": "~6.1.1",
+    "@fullcalendar/list": "~6.1.1",
+    "@fullcalendar/multimonth": "~6.1.1",
+    "@fullcalendar/resource": "~6.1.1",
+    "@fullcalendar/resource-timegrid": "~6.1.1",
+    "@fullcalendar/resource-timeline": "~6.1.1",
+    "@fullcalendar/timegrid": "~6.1.1",
     "accordion": "^3.0.2"
   },
   "devDependencies": {
