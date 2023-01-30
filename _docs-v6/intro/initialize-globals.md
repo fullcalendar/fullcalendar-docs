@@ -49,6 +49,7 @@ The `fullcalendar` bundle's `index.global(.min).js` file includes the following 
 - `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
 - `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
 - `@fullcalendar/list` (for [list views](list-view))
+- `@fullcalendar/multimonth` (for [multi-month views](multimonth-grid))
 
 
 ## Premium Bundle
@@ -96,6 +97,7 @@ The `fullcalendar-scheduler` bundle's `index.global(.min).js` file includes the 
 - `@fullcalendar/daygrid` (for [month](month-view) and [dayGrid](daygrid-view) views)
 - `@fullcalendar/timegrid` (for [timeGrid](timegrid-view) views)
 - `@fullcalendar/list` (for [list views](list-view))
+- `@fullcalendar/multimonth` (for [multi-month views](multimonth-grid))
 - `@fullcalendar/adaptive` (for [print optimization](print))
 - `@fullcalendar/scrollgrid`
 - `@fullcalendar/timeline` ([more info](timeline-view-no-resources))
