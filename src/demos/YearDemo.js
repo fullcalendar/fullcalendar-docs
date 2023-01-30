@@ -10,7 +10,7 @@ export default class extends Demo {
   controlHtml = `
     <p>
       Display an entire year
-      <a href='/docs/scrolling-view' class='more-link'>Learn more</a>
+      <a href='/docs/multimonth-grid' class='more-link'>Learn more</a>
     </p>
   ` // TODO: BASE_URL in href
 
