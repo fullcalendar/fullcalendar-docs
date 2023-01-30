@@ -21,7 +21,7 @@ children:
       - list-view
       - daygrid-view
       - multimonth-stack
-      - multimonth-view
+      - multimonth-grid
       - timeline-view
       - vertical-resource-view
       - custom-views

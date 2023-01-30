@@ -91,7 +91,7 @@ FullCalendar offers the following packages:
       <strong>@fullcalendar/multimonth</strong>
     </td>
     <td>
-      Offers <a href='multimonth-view'>MultiMonth</a> views:<br />
+      Offers <a href='multimonth-grid'>Multi-Month</a> views:<br />
       <code>multiMonthYear</code>,
       <code>multiMonth</code> (<a href='custom-view-with-settings'>generic</a>)
     </td>

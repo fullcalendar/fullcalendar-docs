@@ -3,7 +3,7 @@ title: multiMonthMinWidth
 since_version: 6.1.0
 ---
 
-[MultiMonth view](multimonth-view) will not allow each mini-month to be become smaller than this pixel value.
+[Multi-Month Grid](multimonth-grid) will not allow each mini-month to be become smaller than this pixel value.
 
 <div class='spec' markdown='1'>
 Number, *default*: `350`

@@ -3,7 +3,7 @@ title: multiMonthTitleFormat
 since_version: 6.1.0
 ---
 
-In [multiMonth view](multimonth-view), the format of the text above each month.
+In [Multi-Month Grid](multimonth-grid), the format of the text above each month.
 
 <div class='spec' markdown='1'>
 [format string](date-formatting-string)

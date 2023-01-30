@@ -1,6 +1,5 @@
 ---
-title: MultiMonth Stack View
-title_for_landing: MultiMonth Stack
+title: Multi-Month Stack
 excerpt_separator: <!--more-->
 demos:
   - multimonth-stack-demo
@@ -12,7 +11,7 @@ related:
   - weekends
 ---
 
-You can create a specific type of [MultiMonth view](multimonth-view) with a single column. The user must scroll to see months beyond the first.<!--more--> This is achieved by setting [multiMonthMaxColumns](multiMonthMaxColumns) to `1`.
+You can create a specific type of [Multi-Month Grid](multimonth-grid) with a single column. The user must scroll to see months beyond the first.<!--more--> This is achieved by setting [multiMonthMaxColumns](multiMonthMaxColumns) to `1`.
 
 Either install via [script tags](initialize-globals) or [individual packages](initialize-es6) like so:
 
