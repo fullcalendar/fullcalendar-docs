@@ -38,6 +38,8 @@ const calendar = new Calendar(calendarEl, {
 
 Months are separate by month headers that stick to the top of the scroll container. The text of the header is controlled by [multiMonthTitleFormat](multiMonthTitleFormat).
 
+There are numerous other options throughout the docs that affect the display of Multi-Month view, such as the [date/time display options](date-display) and [locale-related options](localization).
+
 
 ## Without Month Headers
 

@@ -26,19 +26,21 @@ On your server, generate a random nonce value (`abc123` in this example). Then, 
 <meta http-equiv='Content-Security-Policy' content="default-src 'nonce-abc123'; font-src data:">
 ```
 
-Then, embed your application's JS:
+Then, when writing your application's `<script>` and `<link>` tags, include the `nonce` attribute:
 
 ```html
 <script src='fullcalendar/dist/index.js' nonce='abc123'></script>
 <script src='app/index.js' nonce='abc123'></script>
 ```
 
-By default, FullCalendar will scan for the first `nonce` attribute it sees in any `<script>` or `<link>` tags. It will use this nonce value while injecting its own `<style>` tags, essentially outputting `<style nonce='abc123'>`.
+Starting with **v6.1.0**, FullCalendar is able to output nonce values.
 
-You may override this behavior by including a meta in the head of your page. It must have the name `csp-nonce`:
+By default, FullCalendar will scan for the first `nonce` attribute it sees in any `<script>` tag. It will use this nonce value when injecting its own `<style>` tags, essentially outputting `<style nonce='abc123'>`.
+
+You may override this behavior by including a meta at the head of your page. It must have the name `csp-nonce`:
 
 ```html
 <meta name='csp-nonce' content='qwerty456' />
 ```
 
-For nonce values to be secure, they must be randomly generated on the server and only used once. Consult documentation elsewhere on the internet for best practices.
+For nonce values to be secure, they must be randomly generated on the server and only used once. Consult documentation elsewhere on the web for best practices.

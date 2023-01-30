@@ -21,6 +21,14 @@ assets: [ 'docs.css', 'docs.js' ]
       <a href='{{ site.baseurl }}{{ page.version.url | escape }}'>Docs</a>
       <span class='breadcrumb-title__separator'></span>
       {{ page.title | escape }}
+
+      {% if page.since_scheduler_version %}
+        <span class='docs-article__version'>scheduler {{ page.since_scheduler_version }}</span>
+      {% elsif page.since_version %}
+        <span class='docs-article__version'>{{ page.since_version }}</span>
+      {% elsif page.version_notes %}
+        <span class='docs-article__version'>{{ page.version_notes | escape }}</span>
+      {% endif %}
     </h1>
 
     <div class='docs-sublanding'>

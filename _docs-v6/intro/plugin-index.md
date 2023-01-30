@@ -50,6 +50,7 @@ FullCalendar offers the following packages:
     </td>
     <td>
       Offers <a href='month-view'>Month</a> and <a href='daygrid-view'>DayGrid</a> views:<br />
+      <code>dayGridYear</code>,
       <code>dayGridMonth</code>,
       <code>dayGridWeek</code>,
       <code>dayGridDay</code>,

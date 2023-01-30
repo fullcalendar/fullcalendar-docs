@@ -1,6 +1,7 @@
 ---
 title: Multi-Month Grid
 excerpt_separator: <!--more-->
+since_version: 6.1.0
 children:
   - title: Multimonth-specific Options
     children:

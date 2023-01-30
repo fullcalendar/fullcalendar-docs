@@ -107,7 +107,7 @@ The `fullcalendar-scheduler` bundle's `index.global(.min).js` file includes the 
 
 ## Individual Plugins
 
-You can also include `<script>` tags for individual plugins.
+You can also include `<script>` tags for individual plugins. Example:
 
 ```html
 <!DOCTYPE html>

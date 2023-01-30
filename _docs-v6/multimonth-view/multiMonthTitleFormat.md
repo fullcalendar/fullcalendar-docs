@@ -3,10 +3,10 @@ title: multiMonthTitleFormat
 since_version: 6.1.0
 ---
 
-In [Multi-Month Grid](multimonth-grid), the format of the text above each month.
+In [Multi-Month views](multimonth-grid), the format of the text above each month.
 
 <div class='spec' markdown='1'>
-[format string](date-formatting-string)
+[format string](date-formatting)
 </div>
 
 If the calendar spans a single year, the default is `{ month: 'long' }` (ex: `"January"`).
