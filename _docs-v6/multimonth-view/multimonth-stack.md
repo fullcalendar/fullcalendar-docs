@@ -1,6 +1,7 @@
 ---
 title: Multi-Month Stack
 excerpt_separator: <!--more-->
+since_version: 6.1.0
 demos:
   - multimonth-stack-demo
 related:

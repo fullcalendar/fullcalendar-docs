@@ -66,6 +66,8 @@ const calendar = new Calendar(calendarEl, {
 
 [View a demo &raquo;](daygridyear-view-demo)
 
+`dayGridYear` view was added in **v6.1.0**.
+
 
 ## Custom Duration
 
