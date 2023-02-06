@@ -20,7 +20,8 @@ The first step is to install the FullCalendar-related dependencies. You'll need 
 npm install --save \
   @fullcalendar/core
   @fullcalendar/angular \
-  @fullcalendar/daygrid
+  @fullcalendar/daygrid \
+  @fullcalendar/interaction
 ```
 
 You must then include the `FullCalendarModule` into your app's root module. An example app ([app.module.ts]):
@@ -79,6 +80,8 @@ Angular has the concept of bound input data (written with `[brackets]`) versus o
 ```js
 import { Component } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 
 @Component({
   selector: 'app-root',
@@ -88,6 +91,7 @@ import { CalendarOptions } from '@fullcalendar/core';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin, interactionPlugin],
     dateClick: this.handleDateClick.bind(this), // MUST ensure `this` context is maintained
     events: [
       { title: 'event 1', date: '2019-04-01' },
