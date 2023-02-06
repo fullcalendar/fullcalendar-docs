@@ -42,6 +42,7 @@ let calendar = new Calendar(calendarEl, {
     right: 'dayGridMonth,timeGridWeek,listWeek'
   }
 });
+calendar.render();
 ...
 ```
 
@@ -70,6 +71,7 @@ let calendar = new Calendar(calendarEl, {
     // your resource list
   ]
 });
+calendar.render();
 ...
 ```
 
