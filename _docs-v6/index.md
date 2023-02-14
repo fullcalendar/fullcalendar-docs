@@ -58,6 +58,7 @@ children:
       - react
       - vue
       - angular
+      - web-component
   - title: Accessibility
     children:
       - accessibility

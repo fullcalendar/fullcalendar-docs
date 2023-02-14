@@ -5,6 +5,7 @@ children:
   - react
   - vue
   - angular
+  - web-component
 related:
   - plugin-index
 ---
