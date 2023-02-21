@@ -5,5 +5,8 @@
   "v3": {
     "fullcalendar": "3.10.5",
     "fullcalendar-scheduler": "1.10.4"
-  }
+  },
+  "NOTE": [
+    "Keep api/config/releases up to date!"
+  ]
 }
