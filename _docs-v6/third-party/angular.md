@@ -114,7 +114,7 @@ Certain options are exposed as top-level component inputs for convenience. This 
 
 ```js
 import { Component } from '@angular/core';
-import { CalendarOptions, EventsInput } from '@fullcalendar/core';
+import { CalendarOptions, EventInput } from '@fullcalendar/core';
 
 @Component({
   selector: 'app-root',
@@ -126,7 +126,7 @@ export class AppComponent {
     initialView: 'dayGridMonth',
     dateClick: this.handleDateClick.bind(this)
   };
-  eventsPromise: Promise<EventsInput>;
+  eventsPromise: Promise<EventInput>;
 
   handleDateClick(arg) {
     alert('date click! ' + arg.dateStr);
