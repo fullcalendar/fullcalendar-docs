@@ -110,4 +110,4 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-When using script tags, these utility functions are available as `FullCalendarLuxon2.toLuxonDateTime` and `FullCalendarLuxon2.toLuxonDuration`.
+When using script tags, these utility functions are available as `FullCalendar.Luxon2.toLuxonDateTime` and `FullCalendar.Luxon2.toLuxonDuration`.
