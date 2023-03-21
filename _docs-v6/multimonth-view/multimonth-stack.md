@@ -49,4 +49,4 @@ Want one continuous table of cells without month headers? [See dayGridYear view 
 
 ## Endless Scroll
 
-Want endless scrolling of months that goes on forever? [Follow this GibHub ticket &raquo;](https://github.com/fullcalendar/fullcalendar/issues/2276)
+Want endless scrolling of months that goes on forever? [Follow this GitHub ticket &raquo;](https://github.com/fullcalendar/fullcalendar/issues/2276)
