@@ -37,22 +37,20 @@ disable_base_styles: true
 
     calendar.render();
 
-    // load the list of available timezones, build the <select> options
-    // it's highly encouraged to use your own AJAX lib instead of using FullCalendar's internal util
-    FullCalendar.requestJson('GET', '{{ site.data.parent_baseurl }}/api/demo-feeds/timezones.json', {}, function(timeZones) {
-      timeZones.forEach(function(timeZone) {
-        var optionEl;
+    fetch('{{ site.data.parent_baseurl }}/api/demo-feeds/timezones.json')
+      .then((response) => response.json())
+      .then((timeZones) => {
+        timeZones.forEach(function(timeZone) {
+          var optionEl;
 
-        if (timeZone !== 'UTC') { // UTC is already in the list
-          optionEl = document.createElement('option');
-          optionEl.value = timeZone;
-          optionEl.innerText = timeZone;
-          timeZoneSelectorEl.appendChild(optionEl);
-        }
+          if (timeZone !== 'UTC') { // UTC is already in the list
+            optionEl = document.createElement('option');
+            optionEl.value = timeZone;
+            optionEl.innerText = timeZone;
+            timeZoneSelectorEl.appendChild(optionEl);
+          }
+        });
       });
-    }, function() {
-      // failure
-    });
 
     // when the timezone selector changes, dynamically change the calendar option
     timeZoneSelectorEl.addEventListener('change', function() {
