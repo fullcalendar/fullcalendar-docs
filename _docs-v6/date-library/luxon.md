@@ -1,5 +1,5 @@
 ---
-title: Luxon 2 Plugin
+title: Luxon Plugin (v2 & v3)
 ---
 
 [Luxon](https://moment.github.io/luxon/index.html) is a JavaScript date library that cleverly leverages the browser's native APIs for many things such as time zones, locales, and formatting.
@@ -14,25 +14,28 @@ The FullCalendar plugin provides you the following functionality:
 
 ## Usage with NPM
 
-First, install the `@fullcalendar/luxon2` package along with any other packages you plan to use:
+First, install the `@fullcalendar/luxon3` package along with any other packages you plan to use:
 
 ```
 npm install --save \
-  @fullcalendar/luxon2 \
+  @fullcalendar/luxon3 \
   @fullcalendar/core \
   @fullcalendar/daygrid
 ```
+
+**NOTE:** If you are using Luxon v2, swap out `@fullcalendar/luxon3` for `@fullcalendar/luxon2`.
+The same applies to all examples below.
 
 Then, create a new calendar and pass in the plugins:
 
 ```js
 import { Calendar } from '@fullcalendar/core'
-import luxon2Plugin from '@fullcalendar/luxon2'
+import luxonPlugin from '@fullcalendar/luxon3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 let calendar = document.getElementById('calendar')
 let calendar = new Calendar(calendarEl, {
-  plugins: [ luxon2Plugin, dayGridPlugin ],
+  plugins: [ luxonPlugin, dayGridPlugin ],
   titleFormat: 'LLLL d, yyyy' // you can now use Luxon format strings!
 })
 
@@ -52,7 +55,7 @@ You can also configure the Luxon plugin with [script tags](initialize-globals). 
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 
 <!-- the luxon-to-fullcalendar connector. must go AFTER the luxon lib -->
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon2@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon3@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 
 <script>
   var calendar = document.getElementById('calendar')
@@ -93,7 +96,7 @@ Using the provided utility methods, you can convert dates and durations supplied
 
 ```js
 import { Calendar } from '@fullcalendar/core';
-import { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon2';
+import { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon3';
 ...
 let calendar = new Calendar(calendarEl, {
 
@@ -110,4 +113,4 @@ let calendar = new Calendar(calendarEl, {
 ...
 ```
 
-When using script tags, these utility functions are available as `FullCalendarLuxon2.toLuxonDateTime` and `FullCalendarLuxon2.toLuxonDuration`.
+When using script tags, these utility functions are available as `FullCalendarLuxon3.toLuxonDateTime` and `FullCalendarLuxon3.toLuxonDuration`.

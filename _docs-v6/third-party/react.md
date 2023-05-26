@@ -233,6 +233,24 @@ React works well with [TypeScript]!
 - [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react-typescript)
 
 
+## Next.js
+
+FullCalendar works well with the React framework [Next.js](https://nextjs.org/).
+View the [example project &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/next13)
+
+
+## Remix
+
+FullCalendar works well with the React framework [Remix](https://remix.run/).
+It requires a workaround where you must explicitly define the location of FullCalendar's styles in the `<head>`:
+
+```jsx
+<style data-fullcalendar />
+```
+
+View the [example project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/remix) for more information.
+
+
 ## Jest
 
 The FullCalendar React connector works well with [Jest](https://jestjs.io/) but requires a workaround for Jest >=28:

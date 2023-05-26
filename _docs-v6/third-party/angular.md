@@ -3,14 +3,18 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
-FullCalendar seamlessly integrates with the [Angular] 12 - 15. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar seamlessly integrates with the [Angular] 12 - 16. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
-- [Angular 14 example project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular14)
-- [Angular 15 example project]
+- Example projects:
+  [Angular 16](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular16)
+  | [15](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular15)
+  | [14](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular14)
+  | [13](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular13)
+  | [12](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular12)
 
 This guide does not go into depth about initializing an Angular project. Please consult the aforementioned example/runnable projects for that.
 
@@ -286,7 +290,6 @@ and the template:
 
 [Angular]: https://angular.io/
 [Angular CLI]: https://cli.angular.io/
-[Angular 15 example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular15
 [app.module.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.module.ts
 [app.component.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.ts
 [app.component.scss]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.scss

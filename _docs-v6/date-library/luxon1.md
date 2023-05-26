@@ -1,5 +1,5 @@
 ---
-title: Luxon 1 Plugin
+title: Luxon Plugin (v1)
 ---
 
 [Luxon](https://moment.github.io/luxon/index.html) is a JavaScript date library that cleverly leverages the browser's native APIs for many things such as time zones, locales, and formatting.
