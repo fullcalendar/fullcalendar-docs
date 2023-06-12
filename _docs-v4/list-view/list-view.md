@@ -18,7 +18,7 @@ import listPlugin from '@fullcalendar/list';
 ...
 let calendar = new Calendar(calendarEl, {
   plugins: [ listPlugin ],
-  defaultView: 'listWeek'
+  defaultView: 'listYear'
 });
 ...
 ```
