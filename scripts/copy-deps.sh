@@ -5,13 +5,11 @@ cd "`dirname $0`/.." # start in project root
 
 #
 # INSTRUCTIONS:
-# 0. use NPM instead of Yarn
-# 1. temporarily change all yarn commands in package.json to use npm
-# 2. temporarily remove all @fullcalendar dependencies from package.json
-# 3. replace with "preact": "^10.0.5"
-# 4. run `npm install`
-# 5. run this script
-# 6. in demo-v6-head.html, change resources to:
+# 1. temporarily remove all @fullcalendar dependencies from package.json
+# 2. replace with "preact": "^10.0.5"
+# 3. run `npm install`
+# 4. run this script
+# 5. in demo-v6-head.html, change resources to:
 #      {% if page.needs_premium %}
 #        <script src='{{ site.baseurl }}/fullcalendar-scheduler.min.js'></script>
 #      {% else %}
