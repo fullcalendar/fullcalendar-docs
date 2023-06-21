@@ -2,16 +2,15 @@
 # NOTE: keep in sync with .gitignore
 # (except for dotfiles which are automatically excluded)
 exclude:
-  - node_modules
   - scripts
   - src
-  - vendor # rubygems in TravisCI
-  - Gemfile
-  - Gemfile.lock
+  - README.*
+  - webpack.config.js
+  - node_modules
   - package.json
   - package-lock.json
-  - webpack.config.js
-  - README.md
+  - Gemfile
+  - Gemfile.lock
 
 markdown: kramdown
 kramdown:

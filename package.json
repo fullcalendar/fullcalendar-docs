@@ -13,17 +13,17 @@
     "url": "https://github.com/fullcalendar/fullcalendar-docs.git"
   },
   "scripts": {
-    "install-misc": "bundle install",
-    "dev": "concurrently --raw 'npm run webpack-dev' 'npm run jekyll-dev'",
-    "build": "npm run webpack-build && npm run jekyll-build",
-    "clean": "npm run webpack-clean && npm run jekyll-clean",
-    "jekyll-dev": "npm run jekyll-clean && RUBYOPT='-W0' bundle exec jekyll serve --watch --incremental",
-    "jekyll-build": "RUBYOPT='-W0' JEKYLL_ENV=build bundle exec jekyll build",
-    "jekyll-clean": "bundle exec jekyll clean",
-    "webpack-dev": "webpack --watch",
-    "webpack-build": "webpack --mode production --no-devtool",
-    "webpack-clean": "rm -rf dist",
-    "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh"
+    "postinstall": "bundle install",
+    "dev": "concurrently --raw 'npm:webpack:dev' 'npm:jekyll:dev'",
+    "build": "npm run webpack:build && npm run jekyll:build",
+    "clean": "npm run webpack:clean && npm run jekyll:clean",
+    "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh",
+    "jekyll:dev": "npm run jekyll:clean && RUBYOPT='-W0' bundle exec jekyll serve --watch --incremental",
+    "jekyll:build": "RUBYOPT='-W0' JEKYLL_ENV=build bundle exec jekyll build",
+    "jekyll:clean": "bundle exec jekyll clean",
+    "webpack:build": "webpack --mode production --no-devtool",
+    "webpack:dev": "webpack --watch",
+    "webpack:clean": "rm -rf dist"
   },
   "dependencies": {
     "@fullcalendar/bootstrap5": "6.1.8",
