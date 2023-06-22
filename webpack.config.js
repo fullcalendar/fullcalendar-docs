@@ -32,14 +32,15 @@ module.exports = {
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader', options: {
+            // Prefer `dart-sass`
+            implementation: require.resolve('sass'),
+          } }
         ]
       },
       {
         test: /\.(png|jpg|gif)$/i, // TODO: better to use src/styles/images/* instead
-        use: [
-          { loader: 'url-loader' }
-        ]
+        type: 'asset/resource',
       }
     ]
   },

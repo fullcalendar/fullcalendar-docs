@@ -24,7 +24,7 @@
     "jekyll:clean": "bundle exec jekyll clean",
     "webpack:dev": "webpack --watch",
     "webpack:build": "webpack --mode production --no-devtool",
-    "webpack:clean": "rm -rf dist"
+    "webpack:clean": "rm -rf _site/dist"
   },
   "dependencies": {
     "@fullcalendar/bootstrap5": "6.1.8",
@@ -48,7 +48,6 @@
     "mini-css-extract-plugin": "^2.4.3",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
-    "url-loader": "^4.1.1",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4"
   }
