@@ -18,7 +18,7 @@
     "build": "npm run webpack:build && npm run jekyll:build",
     "clean": "npm run webpack:clean && npm run jekyll:clean",
     "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh",
-    "jekyll:dev": "npm run jekyll:clean && RUBYOPT='-W0' bundle exec jekyll serve --port 8001 --watch --incremental",
+    "jekyll:dev": "npm run jekyll:clean && RUBYOPT='-W0' bundle exec jekyll serve --port 8789 --watch --incremental",
     "jekyll:build": "RUBYOPT='-W0' JEKYLL_ENV=build bundle exec jekyll build",
     "jekyll:clean": "bundle exec jekyll clean",
     "webpack:dev": "webpack --watch",
