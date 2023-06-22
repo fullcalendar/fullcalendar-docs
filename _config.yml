@@ -1,4 +1,8 @@
 
+# don't delete webpack-generated files
+keep_files:
+  - dist
+
 # NOTE: keep in sync with .gitignore
 # (except for dotfiles which are automatically excluded)
 exclude:
