@@ -22,7 +22,7 @@ disable_base_styles: true
       editable: true,
       selectable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json',
+      events: '{{ site.data.site_url }}/api/demo-feeds/events.json',
 
       loading: function(bool) {
         if (bool) {
@@ -37,7 +37,7 @@ disable_base_styles: true
 
     calendar.render();
 
-    fetch('{{ site.data.parent_baseurl }}/api/demo-feeds/timezones.json')
+    fetch('{{ site.data.site_url }}/api/demo-feeds/timezones.json')
       .then((response) => response.json())
       .then((timeZones) => {
         timeZones.forEach(function(timeZone) {

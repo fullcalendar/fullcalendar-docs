@@ -23,7 +23,7 @@ disable_base_styles: true
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?overload-day'
+      events: '{{ site.data.site_url }}/api/demo-feeds/events.json?overload-day'
     });
 
     calendar.render();

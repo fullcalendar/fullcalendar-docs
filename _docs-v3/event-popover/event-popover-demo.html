@@ -9,7 +9,7 @@ layout: demo-v3
 
     $('#calendar').fullCalendar({
       eventLimit: true, // allow "more" link when too many events
-      events: '{{ site.data.parent_baseurl }}/api/demo-feeds/events.json?overload-day'
+      events: '{{ site.data.site_url }}/api/demo-feeds/events.json?overload-day'
     });
 
   });

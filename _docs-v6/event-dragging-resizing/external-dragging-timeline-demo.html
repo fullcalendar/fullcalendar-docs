@@ -39,7 +39,7 @@ needs_premium: true
         right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
       },
       resourceAreaHeaderContent: 'Rooms',
-      resources: '{{ site.data.parent_baseurl }}/api/demo-feeds/resources.json?with-nesting&with-colors',
+      resources: '{{ site.data.site_url }}/api/demo-feeds/resources.json?with-nesting&with-colors',
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar
       drop: function(info) {
