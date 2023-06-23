@@ -4,8 +4,8 @@
 # Provide an --external param to verify existence of external links.
 # NOTE: this script does NOT build the site beforehand
 #
-set -e # always immediately exit upon error
-cd "`dirname $0`/.." # start in project root
+set -e
+cd "`dirname $0`/.."
 
 if [[ ! -d './_site' ]]; then
   echo
