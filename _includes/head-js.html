@@ -1,12 +1,6 @@
 
 {% assign cachebuster = site.time | date: '%s' %}
 
-{% if jekyll.environment == "build" %}
-  {% include fathom-analytics.html %}
-{% else %}
-  <!-- not using Fathom Analytics. need this comment for linting -->
-{% endif %}
-
 {% for path in layout.assets %}
   {% if path contains '.js' %}
     <script type='text/javascript' src='{{ site.baseurl }}/dist/{{ path }}?{{ cachebuster }}'></script>
