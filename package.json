@@ -14,11 +14,12 @@
     "url": "https://github.com/fullcalendar/fullcalendar-docs.git"
   },
   "scripts": {
-    "postinstall": "bundle install",
+    "postinstall": "./scripts/postinstall.sh",
     "dev": "npm run 'jekyll:clean' && concurrently --raw 'npm:jekyll:dev' 'npm:webpack:dev'",
     "build": "npm run webpack:build && npm run jekyll:build",
     "clean": "npm run webpack:clean && npm run jekyll:clean",
-    "lint": "./scripts/lintspaces.cjs && ./scripts/htmlproofer.sh",
+    "lint": "./scripts/lintspaces.cjs",
+    "htmlproofer": "./scripts/htmlproofer.sh",
     "jekyll:dev": "RUBYOPT='-W0' bundle exec jekyll serve --port 8789 --watch --incremental",
     "jekyll:build": "RUBYOPT='-W0' bundle exec jekyll build",
     "jekyll:clean": "bundle exec jekyll clean",
