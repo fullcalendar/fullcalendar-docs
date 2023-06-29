@@ -23,7 +23,7 @@ kramdown:
 
 baseurl: /docs
 
-fullcalendar_site: https://fullcalendar.io
+fullcalendar_site: https://fullcalendar-site.pages.dev
 fullcalendar_org: https://github.com/fullcalendar
 fullcalendar_repo: https://github.com/fullcalendar/fullcalendar
 fullcalendar_premium_repo: https://github.com/fullcalendar/fullcalendar-workspace
