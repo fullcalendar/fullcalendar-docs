@@ -19,8 +19,7 @@ url_ignores="/^\//"
 
 other_flags=""
 
-if [[ "$1" == "--external" ]]
-then
+if [[ "$1" == "--external" ]]; then
   echo
   echo "Will check external links."
   echo
