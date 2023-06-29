@@ -27,7 +27,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react' // must go before plugins
+import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 export default class DemoApp extends React.Component {
@@ -68,7 +68,7 @@ A callback function can be passed into a React component and it will be called w
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react' // must go before plugins
+import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
@@ -99,7 +99,7 @@ There are many settings throughout the API for injecting custom content, like th
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react' // must go before plugins
+import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 export default class DemoApp extends React.Component {
@@ -203,7 +203,7 @@ Then, initialize your calendar. Make sure to include your [schedulerLicenseKey](
 
 ```jsx
 import React from 'react'
-import FullCalendar from '@fullcalendar/react' // must go before plugins
+import FullCalendar from '@fullcalendar/react'
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline' // a plugin!
 
 export default class DemoApp extends React.Component {
