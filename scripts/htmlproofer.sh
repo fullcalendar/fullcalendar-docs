@@ -24,19 +24,12 @@ if [[ "$1" == "--external" ]]; then
   echo "Will check external links."
   echo
 else
-  other_flags="$other_flags --disable-external"
+  other_flags="$other_flags --disable-external=true"
 fi
 
-# flags:
-# --check-favicon    # would like to enable but chokes on /fragments/
-# --assume-extension # treat /mypath as /mypath.html
-# --url-ignore       # if these paths don't resolve, don't complain
-#
 bundle exec htmlproofer ./_site \
-  --check-html \
-  --assume-extension \
-  --file-ignore '/\.\/_site\/assets\/.*/' \
-  --url-ignore "$url_ignores" \
+  --ignore-files='/\.\/_site\/(assets|dist)\/.*/' \
+  --ignore-urls="$url_ignores" \
   $other_flags
 
 echo
