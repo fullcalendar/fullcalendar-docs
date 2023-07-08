@@ -20,7 +20,7 @@ var calendar = new Calendar(calendarEl, {
 
 <h2 id='outdated'>An Outdated License Key</h2>
 
-Often times existing customers who purchase [FullCalendar Premium]({{site.baseurl}}/pricing) see license key warnings when they upgrade versions. This is usually due to the expiration of the 1-year free upgrade policy that comes with FullCalendar Premium. When this happens, you can do one of two things:
+Often times existing customers who purchase [FullCalendar Premium](/pricing) see license key warnings when they upgrade versions. This is usually due to the expiration of the 1-year free upgrade policy that comes with FullCalendar Premium. When this happens, you can do one of two things:
 
 1. Use a downgraded version
 2. Purchase an additional year of support
