@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-[Read more about Moment JS formatting strings](http://momentjs.com/docs/#/displaying/).
+[Read more about Moment JS formatting strings](https://momentjs.com/docs/#/displaying/).
 
 
 ## Formatting Functions

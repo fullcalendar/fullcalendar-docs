@@ -34,7 +34,7 @@ The theme you download might already have custom CSS written to style FullCalend
 
 ## jQuery UI Theme Roller
 
-Custom jQuery UI themes can be created with the [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/).
+Custom jQuery UI themes can be created with the [jQuery UI ThemeRoller](https://jqueryui.com/themeroller/).
 
 
 ## Legacy

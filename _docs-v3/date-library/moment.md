@@ -5,9 +5,9 @@ type: guide
 
 A Moment object represents a point in time, like the native [Date Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), but is far superior.
 
-This functionality is provided by [MomentJS](http://momentjs.com/), a third-party open-source library. FullCalendar extends this functionality a bit to accomodate for ambiguously-timed and ambiguously-zoned moments.
+This functionality is provided by [MomentJS](https://momentjs.com/), a third-party open-source library. FullCalendar extends this functionality a bit to accomodate for ambiguously-timed and ambiguously-zoned moments.
 
-[**See the MomentJS docs &raquo;**](http://momentjs.com/docs/)
+[**See the MomentJS docs &raquo;**](https://momentjs.com/docs/)
 
 In the API, most options that accept a Moment will also conveniently accept anything that the `moment()` constructor accepts, including:
 
@@ -44,7 +44,7 @@ var m = calendar.moment();
 
 <h2 id='ambiguously-timed'>Ambiguously-timed Moments</h2>
 
-For FullCalendar, the Moment object has been extended to represent a moment without a time, or an "ambigously-timed moment". Under the hood, these moments are represented in [UTC-mode](http://momentjs.com/docs/#/parsing/utc/) with a time of `00:00:00`.
+For FullCalendar, the Moment object has been extended to represent a moment without a time, or an "ambigously-timed moment". Under the hood, these moments are represented in [UTC-mode](https://momentjs.com/docs/#/parsing/utc/) with a time of `00:00:00`.
 
 To create one, you can use FullCalendar's version of the `moment`, `moment.utc`, or `moment.parseZone` constructor in tandem with an ISO8601 string without a time part:
 
@@ -74,7 +74,7 @@ m.format();
 
 <h2 id='ambiguously-zoned'>Ambiguously-zoned Moments</h2>
 
-The moment object has also been extended to represent a date with no specified timezone. Under the hood, these moments are represented in [UTC-mode](http://momentjs.com/docs/#/parsing/utc/).
+The moment object has also been extended to represent a date with no specified timezone. Under the hood, these moments are represented in [UTC-mode](https://momentjs.com/docs/#/parsing/utc/).
 
 To create one, you can use FullCalendar's version of the `moment.parseZone` constructor in tandem with an ISO8601 string without a timezone offset part:
 

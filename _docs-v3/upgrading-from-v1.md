@@ -5,7 +5,7 @@ layout: text
 
 FullCalendar version 2.0 ([full documentation]({{ site.baseurl }}/v3#v2))
 offers huge improvements in regards to timezones, internationalization,
-and date manipulation. Much of this is due to intergration with [MomentJS](http://momentjs.com),
+and date manipulation. Much of this is due to intergration with [MomentJS](https://momentjs.com),
 which is now a dependency.
 Because the changes are so dramatic, compatibility with the 1.x versions has been broken.
 This guide explains the differences between versions.
@@ -18,7 +18,7 @@ In addition, **all end dates are now exclusive**. For example, if an all-day eve
 The 1.x versions had some strange rules in regards to this. Things should be much simpler
 now that exclusive end dates are used consistently throughout the API.
 In addition, this behavior is more consistent with other API's and formats,
-such as [iCalendar](http://en.wikipedia.org/wiki/ICalendar).
+such as [iCalendar](https://en.wikipedia.org/wiki/ICalendar).
 
 Affected options:
 
@@ -58,12 +58,12 @@ Affected options:
 </table>
 
 *Note*: anywhere in the API that accepts a Moment parameter, a "Moment-like" parameter (anything
-the [Moment constructor](http://momentjs.com/docs/#/parsing/) accepts) can also be given.
+the [Moment constructor](https://momentjs.com/docs/#/parsing/) accepts) can also be given.
 This includes raw ISO8601 strings like `"2013-12-25"`.
 
 ## Options that now use Durations
 
-The MomentJS library provides a [Duration](http://momentjs.com/docs/#/durations/) object, which is
+The MomentJS library provides a [Duration](https://momentjs.com/docs/#/durations/) object, which is
 also used throughout the API. It is used to specify intervals of time and anonymous times.
 The following options have been affected:
 
@@ -78,7 +78,7 @@ The following options have been affected:
 </table>
 
 *Note*: Anywhere the API accepts a Duration, a "Duration-like" parameter can be given (anything the
-[Duration constructor](http://momentjs.com/docs/#/durations/creating/) accepts).
+[Duration constructor](https://momentjs.com/docs/#/durations/creating/) accepts).
 This includes raw strings like `"02:00"` (two hours).
 
 ## Date Formatting and Parsing
@@ -97,10 +97,10 @@ characters are the same, **but some have changed!**
 <tr><td><code>S</code> (st, nd, rd, th)</td><td><code>o</code></td></tr>
 <tr><td><code>''</code> (escape characters)</td><td><code>[]</code></td></tr>
 <tr><td><code>[]</code> and <code>{}</code> for range formatting</td><td>no replacement. <a href='formatRange'><code>formatRange</code></a> works differently</td></tr>
-<tr><td><code>u</code> (outputs IS08601)</td><td>use moment's <a href='http://momentjs.com/docs/#/displaying/as-iso-string/'><code>toISOString</code></a> instead</td></tr>
+<tr><td><code>u</code> (outputs IS08601)</td><td>use moment's <a href='https://momentjs.com/docs/#/displaying/as-iso-string/'><code>toISOString</code></a> instead</td></tr>
 </table>
 
-See the [MomentJS formatting characters](http://momentjs.com/docs/#/displaying/format/)
+See the [MomentJS formatting characters](https://momentjs.com/docs/#/displaying/format/)
 for the full list of available characters.
 
 Additionally, there are some [FullCalendar-specific formatting characters](date-formatting-string),
@@ -112,7 +112,7 @@ The following date utility methods have also been affected:
 <tr><th>Method</th><th>Upgrade Notes</th></tr>
 <tr><td><del><code>$.fullCalendar.parseDate</code></del></td><td rowspan='2'>use a <a href='moment#creating'>moment constructor</a></td></tr>
 <tr><td><del><code>$.fullCalendar.parseISO8601</code></del></td></tr>
-<tr><td><del><code>$.fullCalendar.formatDate</code></del></td><td>use a moment's <a href='http://momentjs.com/docs/#/displaying/format/'><code>.format()</code></a> method instead</td></tr>
+<tr><td><del><code>$.fullCalendar.formatDate</code></del></td><td>use a moment's <a href='https://momentjs.com/docs/#/displaying/format/'><code>.format()</code></a> method instead</td></tr>
 <tr><td><del><code>$.fullCalendar.formatDates</code></del></td><td>use <a href='formatRange'><code>$.fullCalendar.formatRange</code></a> instead</td></tr>
 </table>
 
@@ -200,7 +200,7 @@ and the basic views.
 
 ## AMD Module
 
-FullCalendar now registers itself as an **AMD module** for use with loaders like [RequireJS](http://requirejs.org/).
+FullCalendar now registers itself as an **AMD module** for use with loaders like [RequireJS](https://requirejs.org/).
 When loaded in this manner, it attaches itself to the `jquery` the AMD system provides.
 
 ## No More IE7 Support

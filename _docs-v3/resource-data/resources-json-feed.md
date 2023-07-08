@@ -11,7 +11,7 @@ $('#calendar').fullCalendar({
 });
 ```
 
-The value can also be an object with a `url` field and other options accepted by jQuery's [ajax method](http://api.jquery.com/jquery.ajax/):
+The value can also be an object with a `url` field and other options accepted by jQuery's [ajax method](https://api.jquery.com/jquery.ajax/):
 
 ```js
 $('#calendar').fullCalendar({

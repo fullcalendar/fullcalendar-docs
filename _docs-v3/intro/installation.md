@@ -10,7 +10,7 @@ You must first get FullCalendar's code loaded onto the page before initializing 
 
 First, download a ZIP from the [releases page]({{ site.fullcalendar_repo }}/releases). After unzipping, find the files `fullcalendar.js` and `fullcalendar.css`.
 
-Then, download the JavaScript files for FullCalendar's two dependencies: [jQuery](http://jquery.com/) and [Moment](http://momentjs.com/).
+Then, download the JavaScript files for FullCalendar's two dependencies: [jQuery](https://jquery.com/) and [Moment](https://momentjs.com/).
 
 Then, write something like this in the `<head>` of your page:
 
@@ -32,7 +32,7 @@ Use NPM to install FullCalendar:
 npm install jquery moment fullcalendar
 ```
 
-Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/webpack-example/tree/v3)
+Then, you must install a build system like [Webpack](https://webpack.js.org/) or [Browserify](https://browserify.org/) that will automatically bundle all of your code. [See an example repo that uses Webpack &raquo;](https://github.com/fullcalendar/webpack-example/tree/v3)
 
 Then, write a module that imports both jQuery and FullCalendar:
 

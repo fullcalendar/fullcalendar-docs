@@ -5,7 +5,7 @@ description: How to get started. Learn FullCalendar's basic principles.
 
 The first step in embedding a calendar on a web page is to have the right JavaScript and CSS files.
 Make sure you are including the FullCalendar stylesheet, as well as the FullCalendar and
-[jQuery](http://jquery.com/) JS files, in the `<head>` of your page:
+[jQuery](https://jquery.com/) JS files, in the `<head>` of your page:
 
 ```js
 <link rel='stylesheet' type='text/css' href='fullcalendar.css' />
@@ -13,7 +13,7 @@ Make sure you are including the FullCalendar stylesheet, as well as the FullCale
 <script type='text/javascript' src='fullcalendar.js'></script>
 ```
 
-If you plan on doing dragging or resizing, you need some additional [jQuery UI](http://jqueryui.com/download) files (more information [here](jquery-ui-dnd)).
+If you plan on doing dragging or resizing, you need some additional [jQuery UI](https://jqueryui.com/download) files (more information [here](jquery-ui-dnd)).
 
 Once you have your dependencies, you need to write the JavaScript code that initializes the calendar.
 This code must be executed *after* the page has initialized. The best way to do this is with jQuery's

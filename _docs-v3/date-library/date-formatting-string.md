@@ -6,7 +6,7 @@ Date formatting strings are used throughout the API and determine how a given [M
 
 FullCalendar leverages MomentJS for most date-related operations including formatting dates:
 
-> **[See MomentJS's formatting characters](http://momentjs.com/docs/#/displaying/format/)**
+> **[See MomentJS's formatting characters](https://momentjs.com/docs/#/displaying/format/)**
 
 However, FullCalendar has extended Moment's functionality a bit by adding additional formatting characters:
 

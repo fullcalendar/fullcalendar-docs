@@ -3,7 +3,7 @@ title: events from Google Calendar
 excerpt_separator: <!--more-->
 ---
 
-FullCalendar can display events from a public [Google Calendar](http://calendar.google.com/).<!--more--> Google Calendar can serve as a backend that manages and persistently stores event data (a feature that FullCalendar currently lacks).
+FullCalendar can display events from a public [Google Calendar](https://calendar.google.com/).<!--more--> Google Calendar can serve as a backend that manages and persistently stores event data (a feature that FullCalendar currently lacks).
 
 <div class='warning'>
 On Nov 17th 2014, Google shut down V1 and V2 of their Calendar APIs, which FullCalendar relied upon.

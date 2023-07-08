@@ -17,7 +17,7 @@ function( *event*, *delta*, *revertFunc*, *jsEvent*, *ui*, *view* ) { }
 
 `jsEvent` holds the jQuery event with low-level information such as mouse coordinates.
 
-`ui` holds an empty object. Before version 2.1, the [jQuery UI object](http://jqueryui.com/demos/resizable/).
+`ui` holds an empty object. Before version 2.1, the [jQuery UI object](https://jqueryui.com/demos/resizable/).
 
 `view` holds the current [View Object](view-object).
 

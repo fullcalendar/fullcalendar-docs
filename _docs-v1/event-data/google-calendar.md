@@ -3,7 +3,7 @@ title: events from Google Calendar
 excerpt_separator: <!--more-->
 ---
 
-FullCalendar can display events from a public [Google Calendar](http://calendar.google.com/).<!--more--> Google Calendar can serve as a backend that manages and persistently stores event data (a feature that FullCalendar currently lacks).
+FullCalendar can display events from a public [Google Calendar](https://calendar.google.com/).<!--more--> Google Calendar can serve as a backend that manages and persistently stores event data (a feature that FullCalendar currently lacks).
 
 <div class='warning'>
 On Nov 17th 2014, Google shut down V1 and V2 of their Calendar APIs, which FullCalendar relied upon.
@@ -99,7 +99,7 @@ currentTimezone
 </th>
 <td>
 a string like "America/Chicago".
-Consult <a href='http://php.net/manual/en/timezones.php'>http://php.net/manual/en/timezones.php</a> for a full list.
+Consult <a href='https://php.net/manual/en/timezones.php'>https://php.net/manual/en/timezones.php</a> for a full list.
 </td>
 </tr>
 <tr>

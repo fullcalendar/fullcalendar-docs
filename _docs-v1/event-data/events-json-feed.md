@@ -24,7 +24,7 @@ Here is a URL that FullCalendar might visit:
 
 The `_` parameter is automatically inserted to prevent the browser from caching the result ([more below](#caching)).
 
-If you need to access a feed that is in a different domain, you can use JSONP with a `?` in your URL (see the JSONP discussion in [$.ajax](http://api.jquery.com/jQuery.ajax/)).
+If you need to access a feed that is in a different domain, you can use JSONP with a `?` in your URL (see the JSONP discussion in [$.ajax](https://api.jquery.com/jQuery.ajax/)).
 
 ## Extended Form
 
@@ -76,7 +76,7 @@ Sets the <a href='endParam'>endParam</a> option, but only for this source.
 
 ## jQuery $.ajax options
 
-You can also specify any of the [jQuery $.ajax](http://api.jquery.com/jQuery.ajax/) options within the same object! This allows you to easily pass additional parameters to your feed script, as well as listen to ajax callbacks:
+You can also specify any of the [jQuery $.ajax](https://api.jquery.com/jQuery.ajax/) options within the same object! This allows you to easily pass additional parameters to your feed script, as well as listen to ajax callbacks:
 
 ```js
 $('#calendar').fullCalendar({

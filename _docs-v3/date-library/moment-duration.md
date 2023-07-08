@@ -11,9 +11,9 @@ Durations objects are used to represent:
 - times that are not bound to a particular day (ex: [scrollTime](scrollTime))
 
 
-This functionality is provided by [MomentJS](http://momentjs.com/), a third-party open-source library.
+This functionality is provided by [MomentJS](https://momentjs.com/), a third-party open-source library.
 
-[**See the MomentJS Duration docs &raquo;**](http://momentjs.com/docs/#/durations/)
+[**See the MomentJS Duration docs &raquo;**](https://momentjs.com/docs/#/durations/)
 
 In FullCalendar's API, most options that accept Durations also conveniently accept anything that the `moment.duration` constructor accepts, including the following:
 

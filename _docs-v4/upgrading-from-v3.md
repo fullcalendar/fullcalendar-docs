@@ -840,7 +840,7 @@ It is no longer possible to request events via JSONP. CORS will be used instead.
 <tr>
 <th>jQuery.ajax settings</th>
 <td markdown='1'>
-The full range of [jQuery.ajax](http://api.jquery.com/jquery.ajax/) settings are **no longer accepted**. However, can use the following new settings:
+The full range of [jQuery.ajax](https://api.jquery.com/jquery.ajax/) settings are **no longer accepted**. However, can use the following new settings:
 
 - `method` - something like `'GET'` (the default) or `'POST'`
 - `extraParams` - will send GET/POST data to the server. the `data` property was previously used

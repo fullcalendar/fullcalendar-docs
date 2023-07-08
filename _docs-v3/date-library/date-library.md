@@ -9,4 +9,4 @@ children:
   - formatRange
 ---
 
-FullCalendar leverages [MomentJS](http://momentjs.com/) as its date library. Moment and Duration objects are accepted for many settings and they are used throughout the API.
+FullCalendar leverages [MomentJS](https://momentjs.com/) as its date library. Moment and Duration objects are accepted for many settings and they are used throughout the API.

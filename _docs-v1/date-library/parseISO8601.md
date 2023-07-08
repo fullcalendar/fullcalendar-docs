@@ -8,4 +8,4 @@ Parses an ISO8601 string into a Date object.
 $.fullCalendar.parseISO8601( *string* [, *ignoreTimezone* ] ) -> Date
 </div>
 
-More information about the ISO8601 format can be found [here](http://www.w3.org/TR/NOTE-datetime).
+More information about the ISO8601 format can be found [here](https://www.w3.org/TR/NOTE-datetime).

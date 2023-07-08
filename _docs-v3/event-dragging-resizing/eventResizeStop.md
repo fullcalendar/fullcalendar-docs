@@ -15,6 +15,6 @@ This callback is *guaranteed* to be triggered after the user resizes an event, e
 
 `jsEvent` holds the jQuery event with low-level information such as mouse coordinates.
 
-`ui` holds an empty object. Before version 2.1, the [jQuery UI object](http://jqueryui.com/demos/resizable/).
+`ui` holds an empty object. Before version 2.1, the [jQuery UI object](https://jqueryui.com/demos/resizable/).
 
 `view` holds the current [View Object](view-object).

@@ -77,7 +77,7 @@ var calendar = new Calendar(calendarEl, {
     {
       title: 'My Event',
       start: '2010-01-01',
-      url: 'http://google.com/'
+      url: 'https://google.com/'
     }
     // other events here
   ],
@@ -91,4 +91,4 @@ var calendar = new Calendar(calendarEl, {
 });
 ```
 
-The `window.open` function can take [many other options](http://www.w3schools.com/jsref/met_win_open.asp).
+The `window.open` function can take [many other options](https://www.w3schools.com/jsref/met_win_open.asp).

@@ -30,7 +30,7 @@ Use this mode if you don't store timezone information for your events and you wa
 events.php?start=2013-09-28&end=2013-11-02
 ```
 
-**2)** When ISO8601 date strings are parsed, the timezone offset that was originally in the string will be preserved (via Moment's [zone](http://momentjs.com/docs/#/manipulating/timezone-offset/)). If the string has no timezone offset, the date will become [ambiguously-zoned](moment#ambiguously-zoned).
+**2)** When ISO8601 date strings are parsed, the timezone offset that was originally in the string will be preserved (via Moment's [zone](https://momentjs.com/docs/#/manipulating/timezone-offset/)). If the string has no timezone offset, the date will become [ambiguously-zoned](moment#ambiguously-zoned).
 
 ```js
 { title: "event1", start: "2013-10-20T02:00:00+09:00" }
@@ -69,7 +69,7 @@ events.php?start=2013-09-28&end=2013-11-02
 
 ## `"UTC"`
 
-Use this mode if you store timezone information for your events and you want all your events to be displayed in UTC ([Coordinated Universal Time](http://en.wikipedia.org/wiki/Coordinated_Universal_Time)).
+Use this mode if you store timezone information for your events and you want all your events to be displayed in UTC ([Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)).
 
 **1)** When events are requested, the [timezone parameter](timezoneParam) will be set to `UTC`:
 
@@ -98,7 +98,7 @@ Use this mode if you store timezone information for your events and you want the
 events.php?start=2013-09-28&end=2013-11-02&timezone=America/Chicago
 ```
 
-**2)** **Your server-side script is then expected to use the `timezone` parameter to calculate the timezone offset of the returned ISO8601 dates!** Once the dates are parsed, they will have a forced [zone](http://momentjs.com/docs/#/manipulating/timezone-offset/):
+**2)** **Your server-side script is then expected to use the `timezone` parameter to calculate the timezone offset of the returned ISO8601 dates!** Once the dates are parsed, they will have a forced [zone](https://momentjs.com/docs/#/manipulating/timezone-offset/):
 
 ```js
 { title: "event1", start: "2013-10-20T02:00:00+09:00" }

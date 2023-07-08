@@ -22,7 +22,7 @@ function( *event*, *dayDelta*, *minuteDelta*, *revertFunc*, *jsEvent*, *ui*, *vi
 
 `jsEvent` holds the native javascript event with low-level information such as mouse coordinates.
 
-`ui` holds the [jQuery UI object](http://jqueryui.com/demos/resizable/).
+`ui` holds the [jQuery UI object](https://jqueryui.com/demos/resizable/).
 
 `view` holds the current [View Object](view-object).
 

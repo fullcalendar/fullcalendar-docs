@@ -16,7 +16,7 @@ It has already been populated with the correct time/title.
 
 The `eventRender` callback function can modify `element`, return a brand new DOM element that will be used for rendering instead, or it can return `false`, which will prevent the event from being rendered at all.
 
-`eventRender` is a great way to attach other jQuery plugins to event elements, such as a [qTip](http://craigsworks.com/projects/qtip/) tooltip effect:
+`eventRender` is a great way to attach other jQuery plugins to event elements, such as a [qTip](https://craigsworks.com/projects/qtip/) tooltip effect:
 
 ```js
 $('#calendar').fullCalendar({

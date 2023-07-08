@@ -9,7 +9,7 @@ Determines if jQuery UI draggables can be dropped onto the calendar.
 Boolean, *default*: `false`
 </div>
 
-This option operates with jQuery UI draggables. You must [download](http://jqueryui.com/download) the appropriate jQuery UI files and initialize a [draggable](http://jqueryui.com/demos/draggable/) element. Additionally, you must set the calendar's `droppable` option to `true`.
+This option operates with jQuery UI draggables. You must [download](https://jqueryui.com/download) the appropriate jQuery UI files and initialize a [draggable](https://jqueryui.com/demos/draggable/) element. Additionally, you must set the calendar's `droppable` option to `true`.
 
 Here is how you might initialize an element that can be dragged onto a calendar:
 

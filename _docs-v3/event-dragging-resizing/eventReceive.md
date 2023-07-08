@@ -19,7 +19,7 @@ The [eventDrop](eventDrop) callback *does not* get called when an external event
 
 ## Associating Event Data
 
-To make a normal draggable element represent an event, the element must have "data" associated with it, labeled as "event". It must be `1`, `true`, or an object. This can be done through jQuery's [data method](http://api.jquery.com/data/) in JavaScript:
+To make a normal draggable element represent an event, the element must have "data" associated with it, labeled as "event". It must be `1`, `true`, or an object. This can be done through jQuery's [data method](https://api.jquery.com/data/) in JavaScript:
 
 ```js
 $('.draggable').data('event', { title: 'my event' });
@@ -33,7 +33,7 @@ Alternatively, you can use an HTML5 data attribute:
 <div class='draggable' data-event='{"title":"my event"}' />
 ```
 
-If done through an HTML5 attribute, make sure it is **valid JSON**! For example, property names must be enclosed in double quotes! For more information, see [parseJSON](http://api.jquery.com/jquery.parsejson/).
+If done through an HTML5 attribute, make sure it is **valid JSON**! For example, property names must be enclosed in double quotes! For more information, see [parseJSON](https://api.jquery.com/jquery.parsejson/).
 
 In the provided object, any of the [Event Object](event-object) properties can be specified. There are a few additional properties that provide special functionality:
 

@@ -25,4 +25,4 @@ calendar.on('dateClick', function(info) {
 });
 ```
 
-The API for on / off are very similar to [Backbone's on / off](http://backbonejs.org/#Events).
+The API for on / off are very similar to [Backbone's on / off](https://backbonejs.org/#Events).

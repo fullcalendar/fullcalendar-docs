@@ -4,7 +4,7 @@ type: guide
 excerpt_separator: <!--more-->
 ---
 
-For advanced developers, FullCalendar provides an API for building custom views with the unlimited flexibility of JavaScript code.<!--more--> Using [OOP programming principles](http://en.wikipedia.org/wiki/Object-oriented_programming), one can *subclass* the base `View` class, implementing or overriding each specific behavior as methods like so:
+For advanced developers, FullCalendar provides an API for building custom views with the unlimited flexibility of JavaScript code.<!--more--> Using [OOP programming principles](https://en.wikipedia.org/wiki/Object-oriented_programming), one can *subclass* the base `View` class, implementing or overriding each specific behavior as methods like so:
 
 ```js
 import { View, createPlugin } from '@fullcalendar/core';
