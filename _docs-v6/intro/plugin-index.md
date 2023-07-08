@@ -247,7 +247,7 @@ FullCalendar offers the following packages:
       <strong>@fullcalendar/luxon2</strong>
     </td>
     <td>
-      Offers a named-timezone implementation, a formatting string implementation, and utilities for converting to Luxon DateTimes. <a href='luxon2'>More info</a>
+      Offers a named-timezone implementation, a formatting string implementation, and utilities for converting to Luxon DateTimes. <a href='luxon'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/luxon2'>Yarn</a></td>
     <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon2?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>

@@ -116,7 +116,7 @@ When using a third-party time zone implementation, You won't be able to use the 
 There are two available plugins:
 
 - [moment-timezone plugin](moment-timezone-plugin) (for the [Moment Timezone](https://momentjs.com/timezone/) library)
-- [Luxon 2 Plugin](luxon2) (for the [Luxon](https://moment.github.io/luxon/) library)
+- [Luxon 2 & 3 Plugin](luxon) (for the [Luxon](https://moment.github.io/luxon/) library)
 - [Luxon 1 Plugin](luxon1)
 
 The following example demonstrates the **moment-timezone plugin** with an [ES6 build system](initialize-es6):
