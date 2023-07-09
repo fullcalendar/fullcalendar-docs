@@ -5,16 +5,16 @@ type: method
 
 A method for programmatically selecting a period of time. It accepts two different signatures:
 
-```js
+<div class='spec' markdown='1'>
 calendar.select( *start*, [ *end* ] )
-```
+</div>
 
 The first method accepts individual `start` and `end` parameters, with the `end` being optional.
 
 
-```js
+<div class='spec' markdown='1'>
 calendar.select( { *start*, *end* , *allDay* , *resourceId* } )
-```
+</div>
 
 The second method accepts an object with `start`, `end`, `allDay` and `resourceId` keys. Only the `start` key is required.
 
