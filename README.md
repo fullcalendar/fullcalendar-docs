@@ -1,9 +1,9 @@
 
 # FullCalendar Docs
 
-This repo contains the static content for [fullcalendar.io/docs](https://fullcalendar.io/docs).
+This repo contains the static content for [fullcalendar.io/docs](https://fullcalendar.io/docs)
 
-The source for documentation articles are found in directories like `_docs-*`.
+Documentation articles are found in directories like `_docs-*`.
 
 Made with [Jekyll](https://jekyllrb.com/).
 
