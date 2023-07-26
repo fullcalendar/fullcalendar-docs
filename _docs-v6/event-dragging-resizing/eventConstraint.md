@@ -29,8 +29,8 @@ A specific period of time with concrete start/end dates can also be given, simil
 
 ```js
 {
-  startTime: '2014-12-01T10:00:00',
-  endTime: '2014-12-05T22:00:00'
+  start: '2014-12-01T10:00:00',
+  end: '2014-12-05T22:00:00'
 }
 ```
 
