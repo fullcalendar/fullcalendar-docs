@@ -28,16 +28,16 @@
     "webpack:clean": "rm -rf _site/dist"
   },
   "dependencies": {
-    "@fullcalendar/bootstrap5": "6.1.9",
-    "@fullcalendar/core": "6.1.9",
-    "@fullcalendar/daygrid": "6.1.9",
-    "@fullcalendar/interaction": "6.1.9",
-    "@fullcalendar/list": "6.1.9",
-    "@fullcalendar/multimonth": "6.1.9",
-    "@fullcalendar/resource": "6.1.9",
-    "@fullcalendar/resource-timegrid": "6.1.9",
-    "@fullcalendar/resource-timeline": "6.1.9",
-    "@fullcalendar/timegrid": "6.1.9",
+    "@fullcalendar/bootstrap5": "6.1.10",
+    "@fullcalendar/core": "6.1.10",
+    "@fullcalendar/daygrid": "6.1.10",
+    "@fullcalendar/interaction": "6.1.10",
+    "@fullcalendar/list": "6.1.10",
+    "@fullcalendar/multimonth": "6.1.10",
+    "@fullcalendar/resource": "6.1.10",
+    "@fullcalendar/resource-timegrid": "6.1.10",
+    "@fullcalendar/resource-timeline": "6.1.10",
+    "@fullcalendar/timegrid": "6.1.10",
     "accordion": "^3.0.2"
   },
   "devDependencies": {
