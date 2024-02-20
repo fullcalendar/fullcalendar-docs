@@ -1,31 +1,38 @@
 import './styles/demo-to-codepen.scss'
 import { querySelectorAll, htmlEscape } from './lib/util'
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
   var settings = {
     collapseHtml: true,
     collapseCss: true,
-    filterJsUrl: function(url) {
-      return !url.match(/\/demo-to-codepen\.js$/)
+    collapseJs: false,
+    filterJsUrl: function (url) {
+      return !url.match(/\/demo-to-codepen\.js$/) &&
+        !url.match(/cloudflare|google|\/pre\//)
     },
-    filterCssUrl: function(url) {
+    filterCssUrl: function (url) {
       return !url.match(/\/demo-to-codepen\.css$/)
     },
-    filterJs: function(js) {
-      return js
+    filterJs: function (js, baseUrl) {
+      // absolutize strings with /api/ URLs in them
+      const baseUrlObj = new URL(baseUrl)
+      return js.replace(
+        /(?<=['"])\/api\//,
+        baseUrlObj.protocol + '//' + baseUrlObj.host + '/api/',
+      )
     },
-    filterCss: function(css) {
+    filterCss: function (css) {
       return css.replace(/\.demo-topbar[^{]*\{[^}]*?\}/g, '')
     },
-    filterHtml: function(html) {
+    filterHtml: function (html) {
       return html
         .replace(/<div[^>]+class\s*=\s*['"]demo-topbar['"][\s\S]*?<\/\s*div\s*>/ig, '')
         .replace(/<(a|button)[^>]+data-codepen[^>]*>[\s\S]*?<\/\s*\1\s*>/ig, '')
     }
   }
 
-  querySelectorAll('a[data-codepen], button[data-codepen]').forEach(function(el) {
-    el.addEventListener('click', function() {
+  querySelectorAll('a[data-codepen], button[data-codepen]').forEach(function (el) {
+    el.addEventListener('click', function () {
       var url = el.getAttribute('data-codepen')
       openEditor(
         url ?
@@ -38,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function openEditor(url) {
     var newWindow = window.open('', '_blank')
 
-    getUrlContent(url, function(content) {
+    getUrlContent(url, function (content) {
       var codepenData = buildCodepenData(
         content,
         url // all relative refs within the content will be relative to this baseUrl
@@ -127,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function absolutizeHtmlRefs(html, baseUrl) {
     return html.replace(
       /(src|href)(\s*=\s*['"])([^'"]*)(['"])/g,
-      function(m0, m1, m2, m3, m4) {
+      function (m0, m1, m2, m3, m4) {
         return m1 + m2 + normalizeUrl(m3, baseUrl) + m4
       }
     )
@@ -226,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function getUrlContent(url, callback) {
     var xhr = new XMLHttpRequest()
     xhr.open('GET', url)
-    xhr.onload = function() {
+    xhr.onload = function () {
       if (xhr.status === 200) {
         callback(xhr.responseText)
       }

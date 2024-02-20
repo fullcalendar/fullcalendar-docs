@@ -3,6 +3,7 @@ title: Theme Chooser Demo
 layout: demo-v6
 disable_base_styles: true
 ---
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 <script src='{{ site.baseurl }}/dist/theme-chooser.js'></script>
 <script>
 
@@ -146,12 +147,12 @@ disable_base_styles: true
         Theme System:
 
         <select>
-          <option value='bootstrap' selected>Bootstrap 4</option>
+          <option value='bootstrap5' selected>Bootstrap 5</option>
           <option value='standard'>unthemed</option>
         </select>
       </div>
 
-      <div data-theme-system="bootstrap" class='selector' style='display:none'>
+      <div data-theme-system="bootstrap5" class='selector' style='display:none'>
         Theme Name:
 
         <select>
@@ -186,7 +187,7 @@ disable_base_styles: true
 
     <div class='right'>
       <span class='credits' data-credit-id='bootstrap-standard' style='display:none'>
-        <a href='https://getbootstrap.com/docs/3.3/' target='_blank'>Theme by Bootstrap</a>
+        <a href='https://getbootstrap.com/' target='_blank'>Theme by Bootstrap</a>
       </span>
       <span class='credits' data-credit-id='bootstrap-custom' style='display:none'>
         <a href='https://bootswatch.com/' target='_blank'>Theme by Bootswatch</a>

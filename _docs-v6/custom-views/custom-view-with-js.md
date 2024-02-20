@@ -63,8 +63,8 @@ let calendar = new Calendar(calendarEl, {
 It is also possible to specify a [Preact Component](https://preactjs.com/guide/v10/components/). Here's an example that uses JSX:
 
 ```jsx
-import { h, Component, Fragment } from 'preact';
 import { sliceEvents, createPlugin } from '@fullcalendar/core';
+import { h, Component, Fragment } from '@fullcalendar/core/preact';
 
 class CustomView extends Component {
 

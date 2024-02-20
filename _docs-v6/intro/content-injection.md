@@ -46,6 +46,9 @@ eventContent: function(arg) {
 
 Each hook accepts different arguments. For example, `eventContent` accepts a single object argument [with a whole bunch of properties](event-render-hooks#argument).
 
+The above usage of `eventContent` **only applies to vanilla JS**, not any of the connectors. Follow the instructions for your connector of choice:
+[React](react#content-injection), [Vue](http://localhost:8788/docs/vue#slot-templates), [Angular](angular#nested-templates)
+
 
 ## Virtual DOM
 
@@ -68,16 +71,15 @@ eventContent: function(arg, createElement) {
 If you install `preact` as a dependency of your project and set up JSX, you can write it like this:
 
 ```jsx
-import { h } from 'preact'
 import { Calendar } from '@fullcalendar/core'
+import { h } from '@fullcalendar/core/preact'
 
 let calendar = new Calendar(calendarEl, {
   eventContent: (arg) => (
     <i>
       {arg.event.extendedProps.isUrgent ?
         'urgent event' :
-        'normal event'
-      }
+        'normal event'}
     </i>
   )
 })

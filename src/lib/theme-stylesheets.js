@@ -30,9 +30,14 @@ function generateThemeStylesheetUrl(themeSystemName, themeName) {
   if (themeSystemName === 'bootstrap5') {
     if (themeName) {
       return 'https://bootswatch.com/5/' + themeName + '/bootstrap.min.css';
-    }
-    else { // the default bootstrap theme
+    } else { // the default bootstrap theme
       return 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css';
+    }
+  } else if (themeSystemName === 'bootstrap') {
+    if (themeName) {
+      return 'https://bootswatch.com/4/' + themeName + '/bootstrap.min.css';
+    } else { // the default bootstrap theme
+      return 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css';
     }
   }
 }
