@@ -32,7 +32,8 @@ import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
-...
+
+let calendarEl = document.getElementById('calendar')
 let calendar = new Calendar(calendarEl, {
   plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ],
   initialView: 'dayGridMonth',
@@ -43,7 +44,6 @@ let calendar = new Calendar(calendarEl, {
   }
 });
 calendar.render();
-...
 ```
 
 
@@ -63,7 +63,8 @@ Then, import your plugins and supply them to a new `Calendar` instance:
 ```js
 import { Calendar } from '@fullcalendar/core';
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
-...
+
+let calendarEl = document.getElementById('calendar')
 let calendar = new Calendar(calendarEl, {
   plugins: [ resourceTimelinePlugin ],
   initialView: 'resourceTimeline',
@@ -72,7 +73,6 @@ let calendar = new Calendar(calendarEl, {
   ]
 });
 calendar.render();
-...
 ```
 
 Example repos:
