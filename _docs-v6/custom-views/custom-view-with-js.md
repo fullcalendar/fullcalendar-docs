@@ -8,7 +8,7 @@ For advanced developers, FullCalendar provides an API for building custom views 
 
 ## Config Object
 
-You can define an "config object" with functions that execute rendering. Example:
+You can define a view's "config object" with functions that execute rendering. Example:
 
 ```js
 import { sliceEvents, createPlugin } from '@fullcalendar/core';
@@ -28,6 +28,14 @@ const CustomViewConfig = {
       '</div>'
 
     return { html: html }
+  },
+
+  didMount: function(props) {
+    console.log('custom view now loaded');
+  },
+
+  willUnmount: function(props) {
+    console.log('view is about to change away from custom view');
   }
 
 }
