@@ -23,7 +23,7 @@ The primary goal of V6 is to solve bugs related to the *installation* of FullCal
 
 **Want the full docs** in a non-changelog format? [View the docs]({{ site.baseurl }})
 
-**Found a bug?** [Report it on the issue tracker]({{ site.baseurl }}/reporting-bugs)
+**Found a bug?** [Report it on the issue tracker](/reporting-bugs)
 
 
 ## Bundlers & CSS

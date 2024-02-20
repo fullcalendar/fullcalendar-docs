@@ -1,6 +1,6 @@
 ---
 title: Hints
-since_version: 2.10.0
+since_version: 5.10.0
 ---
 
 Interactive HTML elements are annotated with `aria-label` and `title` attributes to make them more descriptive. It is possible to control the text of these attributes.
