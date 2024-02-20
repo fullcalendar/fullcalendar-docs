@@ -14,7 +14,6 @@ You can define a view's "config object" with functions that execute rendering. E
 import { sliceEvents, createPlugin } from '@fullcalendar/core';
 
 const CustomViewConfig = {
-
   classNames: [ 'custom-view' ],
 
   content: function(props) {
@@ -35,9 +34,8 @@ const CustomViewConfig = {
   },
 
   willUnmount: function(props) {
-    console.log('view is about to change away from custom view');
+    console.log('about to change away from custom view');
   }
-
 }
 
 export default createPlugin({
@@ -75,7 +73,6 @@ import { sliceEvents, createPlugin } from '@fullcalendar/core';
 import { h, Component, Fragment } from '@fullcalendar/core/preact';
 
 class CustomView extends Component {
-
   render(props) {
     let segs = sliceEvents(props, true); // allDay=true
 
@@ -90,7 +87,6 @@ class CustomView extends Component {
       </Fragment>
     );
   }
-
 }
 
 export default createPlugin({
