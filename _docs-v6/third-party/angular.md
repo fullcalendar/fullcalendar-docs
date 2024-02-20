@@ -92,7 +92,7 @@ import { CalendarOptions } from '@fullcalendar/core';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    dateClick: this.handleDateClick.bind(this), // MUST ensure `this` context is maintained
+    dateClick: (arg) => this.handleDateClick(arg),
     events: [
       { title: 'event 1', date: '2019-04-01' },
       { title: 'event 2', date: '2019-04-02' }
@@ -128,7 +128,7 @@ import { CalendarOptions, EventsInput } from '@fullcalendar/core';
 export class AppComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    dateClick: this.handleDateClick.bind(this)
+    dateClick: (arg) => this.handleDateClick(arg)
   };
   eventsPromise: Promise<EventsInput>;
 
