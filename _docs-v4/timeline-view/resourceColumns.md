@@ -79,7 +79,7 @@ resourceColumns: [
       var extendedProps = resource.extendedProps;
       var message = extendedProps.message;
 
-      if (resource.isUrgent) {
+      if (extendedProps.isUrgent) {
         message += '!!!';
       }
 

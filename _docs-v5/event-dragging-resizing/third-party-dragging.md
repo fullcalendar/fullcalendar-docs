@@ -15,12 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
   let containerEl = document.getElementById('external-events-list');
   let calendarEl = document.getElementBy('mycalendar');
 
+  let calendar = new Calendar(calendarEl, {
+    plugins: [ interactionPlugin ],
+    droppable: true
+  });
+  calendar.render();
+
+  // Make the element draggable with Dragula
   let drake = dragula({
     containers: [ containerEl ],
     copy: true
   });
 
-  new ThirdPartyDraggable(containerEl, {
+  // when you're done...
+  // drake.destroy();
+
+  // Allow FullCalendar to accept third-party draggables
+  let draggable = new ThirdPartyDraggable(containerEl, {
     itemSelector: '.my-item',
     mirrorSelector: '.gu-mirror', // the dragging element that dragula renders
     eventData: function(eventEl) {
@@ -30,12 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  let calendar = new Calendar(calendarEl, {
-    plugins: [ interactionPlugin ],
-    droppable: true
-  });
-
-  calendar.render();
+  // when you're done...
+  // draggable.destroy();
 });
 ```
 

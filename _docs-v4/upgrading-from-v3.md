@@ -1775,9 +1775,9 @@ The user is able to resize the [resourceAreaWidth](resourceAreaWidth) as well as
 
 ## Vertical Resource View
 
-Previously, the <del>groupByResource</del> and <del>groupByDateAndResource</del> settings would do two things. They would "active" a vertical resource view (as opposed to rendering the non-resource version of the view) as well as control the headers at the top of the view.
+Previously, the <del>groupByResource</del> and <del>groupByDateAndResource</del> settings would do two things. They would "activate" a vertical resource view (as opposed to rendering the non-resource version of the view) as well as control the headers at the top of the view.
 
-Now, explicitly specifying a resource view such as `resourceTimeGridDay` is how you "active" a vertical resource. Additionally, these two settings have been collapsed into one:
+Now, explicitly specifying a resource view such as `resourceTimeGridDay` is how you "activate" a vertical resource. Additionally, these two settings have been collapsed into one:
 
 ```js
 datesAboveResources: false // the default. instead of groupByResource:true

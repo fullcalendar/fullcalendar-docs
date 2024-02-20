@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
     plugins: [ interactionPlugin ],
     droppable: true
   });
-
   calendar.render();
 
-  new Draggable(draggableEl);
+  let draggable = new Draggable(draggableEl);
+
+  // when you're done...
+  // draggable.destroy();
 });
 ```
 

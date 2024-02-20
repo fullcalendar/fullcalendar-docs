@@ -10,7 +10,7 @@ Determines what happens upon a [week-number](weekNumbers) nav-link click.
 view name (string), function
 </div>
 
-By default, the user is taken to the a the first week-view that appears in the [header](header).
+By default, the user is taken to the first week-view that appears in the [header](header).
 
 A string argument can be provided that navigates the user to a specific view.
 

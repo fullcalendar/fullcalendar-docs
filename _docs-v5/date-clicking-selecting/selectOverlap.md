@@ -16,7 +16,7 @@ If a function is given, the function will be called once for every time the user
 var calendar = new Calendar(calendarEl, {
   events: [ /* event data here */ ]
   selectOverlap: function(event) {
-    return event.rendering === 'background';
+    return event.display === 'background';
   }
 });
 ```
