@@ -22,7 +22,7 @@ The first step is to install the FullCalendar-related dependencies. You'll need 
 
 ```bash
 npm install --save \
-  @fullcalendar/core
+  @fullcalendar/core \
   @fullcalendar/angular \
   @fullcalendar/daygrid
 ```
