@@ -58,7 +58,7 @@ You can also configure the Luxon plugin with [script tags](initialize-globals). 
 <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/luxon3@{{ site.data.latest-releases.v6 }}/index.global.min.js'></script>
 
 <script>
-  var calendar = document.getElementById('calendar')
+  var calendarEl = document.getElementById('calendar')
   var calendar = new FullCalendar.Calendar(calendarEl, {
     titleFormat: 'LLLL d, yyyy' // you can now use Luxon format strings!
   })
