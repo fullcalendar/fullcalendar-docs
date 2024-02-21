@@ -134,7 +134,7 @@ export class AppComponent {
     initialView: 'dayGridMonth',
     dateClick: (arg) => this.handleDateClick(arg)
   };
-  eventsPromise: Promise<EventInput>;
+  eventsPromise: Promise<EventInput[]>;
 
   handleDateClick(arg) {
     alert('date click! ' + arg.dateStr);
