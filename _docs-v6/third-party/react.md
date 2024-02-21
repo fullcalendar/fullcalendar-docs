@@ -25,33 +25,11 @@ npm install --save \
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([DemoApp.jsx]):
 
-<h4>Using React's Class Components</h4>
-
-```jsx
-import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-
-export default class DemoApp extends React.Component {
-  render() {
-    return (
-      <FullCalendar
-        plugins={[ dayGridPlugin ]}
-        initialView="dayGridMonth"
-      />
-    )
-  }
-}
-```
-
-<h4>Using React's Functional Components</h4>
-
 ```jsx
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
-export default function Calendar(){
-
+export default function Calendar() {
   return (
     <FullCalendar
       plugins={[ dayGridPlugin ]}
@@ -88,43 +66,12 @@ Props for the `<FullCalendar>` component are set the same way for both Class and
 
 A callback function can be passed into a React component and it will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date:
 
-<h4>Using React's Class Components</h4>
-
-```jsx
-import React from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
-
-export default class DemoApp extends React.Component {
-
-  render() {
-    return (
-      <FullCalendar
-        plugins={[ dayGridPlugin, interactionPlugin ]}
-        dateClick={this.handleDateClick}
-      />
-    )
-  }
-
-  handleDateClick = (arg) => { // bind with an arrow function
-    alert(arg.dateStr)
-  }
-
-}
-```
-
-Make sure your callbacks methods are [bound to your component's context][callback-method-binding]!
-
-<h4>Using React's Functional Components</h4>
-
 ```jsx
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
-export default function Calendar(){
-
+export default function Calendar() {
   const handleDateClick = (arg) => {
     alert(arg.dateStr)
   }
@@ -143,58 +90,25 @@ export default function Calendar(){
 
 There are many settings throughout the API for injecting custom content, like the `eventContent` [event render hook](event-render-hooks). The [Content Injection article](content-injection) explains the general concept. When you're using the React connector, it's possible to return React JSX nodes. Example:
 
-
-<h4>Using React's Class Components</h4>
-
 ```jsx
-import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
-export default class DemoApp extends React.Component {
-  render() {
-    return (
-      <FullCalendar
-        plugins={[ dayGridPlugin ]}
-        eventContent={renderEventContent}
-      />
-    )
-  }
+export default function Calendar() {
+  return (
+    <FullCalendar
+      plugins={[ dayGridPlugin ]}
+      eventContent={renderEventContent}
+    />
+  )
 }
 
 function renderEventContent(eventInfo) {
-  return (
-    <>
-      <b>{eventInfo.timeText}</b>
-      <i>{eventInfo.event.title}</i>
-    </>
-  )
-}
-```
-
-<h4>Using React's Functional Components</h4>
-
-```jsx
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-
-function renderEventContent(eventInfo){
   return(
     <>
       <b>{eventInfo.timeText}</b>
       <i>{eventInfo.event.title}</i>
     </>
-  )
-
-}
-
-export default function Calendar(){
-
-  return (
-    <FullCalendar
-        plugins={[ dayGridPlugin ]}
-        eventContent={renderEventContent}
-    />
   )
 }
 ```
@@ -204,57 +118,21 @@ export default function Calendar(){
 
 It's possible to make calendar views that have custom rendering logic. The [Custom Views via JS](custom-view-with-js) article explains the general concept. When you're using the React connector, it's possible to specify a [React component](https://reactjs.org/docs/components-and-props.html). Example:
 
-<h4>Using React's Class Components</h4>
-
-```jsx
-import React from 'react';
-import { sliceEvents, createPlugin } from '@fullcalendar/core';
-
-class CustomView extends React.Component {
-
-  render(props) {
-    let segs = sliceEvents(props, true); // allDay=true
-
-    return (
-      <Fragment>
-        <div className='view-title'>
-          {props.dateProfile.currentRange.start.toUTCString()}
-        </div>
-        <div className='view-events'>
-          {segs.length} events
-        </div>
-      </Fragment>
-    );
-  }
-
-}
-
-export default createPlugin({
-  views: {
-    custom: CustomView
-  }
-});
-
-```
-
-<h4>Using React's Functional Components</h4>
-
 ```jsx
 import { sliceEvents, createPlugin } from '@fullcalendar/core';
 
-function CustomView(props){
-
-  let segs = sliceEvents(props, true);
+function CustomView(props) {
+  let segs = sliceEvents(props, true); // allDay=true
 
   return (
-    <Fragment>
+    <>
       <div className='view-title'>
         {props.dateProfile.currentRange.start.toUTCString()}
       </div>
       <div className='view-events'>
         {segs.length} events
       </div>
-    </Fragment>
+    </>
   );
 }
 
@@ -274,44 +152,24 @@ This is especially useful for controlling the current date. The [initialDate](in
 
 To do something like this, you'll need to get ahold of the component's ref (short for "reference"). Once you do that, you call the `getApi` method of the "current" component instance:
 
-<h4>Using React's Class Components</h4>
-
-```jsx
-import React from 'react';
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-
-export default class DemoApp extends React.Component {
-
-  calendarRef = React.createRef()
-
-  render() {
-    return (
-      <FullCalendar ref={this.calendarRef} plugins={[ dayGridPlugin ]} />
-    )
-  }
-
-  someMethod() {
-    let calendarApi = this.calendarRef.current.getApi()
-    calendarApi.next()
-  }
-
-}
-```
-
-<h4>Using React's Functional Components</h4>
-
 ```jsx
 import { useRef } from 'react';
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
-export default function Calendar(){
-
+export default function Calendar() {
   const calendarRef = useRef(null)
 
+  function goNext() {
+    const calendarApi = calendarRef.current.getApi()
+    calendarApi.next()
+  }
+
   return (
-    <FullCalendar ref={calendarRef} plugins={[ dayGridPlugin ]}>
+    <>
+      <button onClick={goNext}>Go Next!</button>
+      <FullCalendar ref={calendarRef} plugins={[ dayGridPlugin ]}>
+    </>
   )
 }
 ```
@@ -332,26 +190,10 @@ npm install --save \
 Then, initialize your calendar. Make sure to include your [schedulerLicenseKey](schedulerLicenseKey):
 
 ```jsx
-import React from 'react'
 import FullCalendar from '@fullcalendar/react'
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline' // a plugin!
 
-export default class DemoApp extends React.Component {
-  render() {
-    return (
-      <FullCalendar schedulerLicenseKey="XXX" plugins={[ resourceTimelinePlugin ]} />
-    )
-  }
-}
-```
-
-Or alternatively using React's Functional Components:
-
-```jsx
-import FullCalendar from '@fullcalendar/react'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline' // a plugin!
-
-export default function Calendar(){
+export default function Calendar() {
   return (
     <FullCalendar schedulerLicenseKey="XXX" plugins={[ resourceTimelinePlugin ]} />
   )
