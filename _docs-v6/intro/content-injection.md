@@ -47,7 +47,7 @@ eventContent: function(arg) {
 Each hook accepts different arguments. For example, `eventContent` accepts a single object argument [with a whole bunch of properties](event-render-hooks#argument).
 
 The above usage of `eventContent` **only applies to vanilla JS**, not any of the connectors. Follow the instructions for your connector of choice:
-[React](react#content-injection), [Vue](http://localhost:8788/docs/vue#slot-templates), [Angular](angular#nested-templates)
+[React](react#content-injection), [Vue](vue#slot-templates), [Angular](angular#nested-templates)
 
 
 ## Virtual DOM

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       // absolutize strings with /api/ URLs in them
       const baseUrlObj = new URL(baseUrl)
       return js.replace(
-        /(?<=['"])\/api\//,
+        /(?<=['"])\/api\//g,
         baseUrlObj.protocol + '//' + baseUrlObj.host + '/api/',
       )
     },
