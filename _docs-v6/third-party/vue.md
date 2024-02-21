@@ -236,7 +236,7 @@ For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based component
 
 ## Vuex
 
-[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/vue-vuex' class='more-link'>View an example project</a>
+[Vuex](https://vuex.vuejs.org/) is a popular state management library for Vue that works well with the FullCalendar connector. <a href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/vue2-vuex' class='more-link'>View an example project</a>
 
 
 ## Nuxt
