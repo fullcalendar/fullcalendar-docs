@@ -26,7 +26,7 @@ Result:
 
 <img src='background-events.png' width='500' alt='background events example' />
 
-Background events that are **timed** will only be rendered on the time slots in TimeGrid view. Background events that are **all-day** will only be rendered in month view or the all-day slots of TimeGrid view.
+Background events that are **timed** will only be rendered on the time slots in TimeGrid view.
 
 
 ## Color
