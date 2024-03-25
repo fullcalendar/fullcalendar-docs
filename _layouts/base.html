@@ -8,15 +8,7 @@
 
     {% include head-title.html %}
     {% include head-description.html %}
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LM1SN3K0E"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8LM1SN3K0E');
-    </script>
-
+    {% include head-analytics.html %}
     {% include head-favicon.html %}
     {% include head-css.html %}
     {% include head-js.html %}
