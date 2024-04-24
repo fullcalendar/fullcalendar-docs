@@ -43,6 +43,13 @@ eventContent: function(arg) {
 }
 ```
 
+**a function** that returns true will return the default format:
+
+```js
+eventContent: function(arg) {
+  return true;
+}
+```
 
 Each hook accepts different arguments. For example, `eventContent` accepts a single object argument [with a whole bunch of properties](event-render-hooks#argument).
 
