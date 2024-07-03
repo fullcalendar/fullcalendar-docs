@@ -7,7 +7,7 @@ Customize the header elements above the day cells in daygrid and timegrid views 
 
 `dayHeaderClassNames` - a [ClassName Input](classname-input) for adding classNames to the header `<th>` cell
 
-`dayHeaderContent` - a [Content Injection Input](content-injection). Generated content is inserted *inside* the inner-most wrapper of the header cell. It does not replace the `<th>` cell.
+`dayHeaderContent` - a [Content Injection Input](content-injection). Generated content is inserted _inside_ the inner-most wrapper of the header cell. It does not replace the `<th>` cell. For day headers that do not represent specific dates, like weekdays in a month view, the provided `Date` instant must be interpreted as UTC.
 
 `dayHeaderDidMount` - called right after the `<th>` has been added to the DOM
 
