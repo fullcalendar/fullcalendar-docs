@@ -28,6 +28,8 @@
     "webpack:clean": "rm -rf _site/dist"
   },
   "dependencies": {
+    "@docsearch/css": "3",
+    "@docsearch/js": "3",
     "@fullcalendar/bootstrap5": "6.1.15",
     "@fullcalendar/core": "6.1.15",
     "@fullcalendar/daygrid": "6.1.15",

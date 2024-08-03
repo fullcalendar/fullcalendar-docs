@@ -1,10 +1,9 @@
-
 .docs-controls {
   float: right;
 }
 
 .docs-controls__warning {
-  height: 63px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -18,20 +17,14 @@
 .docs-controls__controls {
   display: flex; // will stretch items by default
   justify-content: flex-end;
+  height: 34px;
 
-  > * {
+  >* {
     margin-left: 10px;
   }
 }
 
-.docs-controls--big {
-
-  .docs-controls__warning {
-    height: 60px; // shorter
-  }
-
-  .docs-controls__controls {
-    height: 34px; // taller
-  }
-
+:root {
+  --docsearch-searchbox-background: #eaebec !important;
+  --docsearch-primary-color: #1876d2 !important;
 }

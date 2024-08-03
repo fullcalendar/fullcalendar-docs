@@ -6,11 +6,12 @@ assets: [ 'docs.css', 'docs.js' ]
 <div class='page-content'>
   <div class='page-content__container container'>
 
-    <div class='docs-controls docs-controls--big'>
+    <div class='docs-controls'>
       <div class='docs-controls__warning'>
         {% include docs-controls/version-warning.html %}
       </div>
       <div class='docs-controls__controls'>
+        {% include docs-controls/search.html %}
         {% include docs-controls/premium-notice.html %}
         {% include docs-controls/edit-button.html %}
         {% include docs-controls/version-select.html %}

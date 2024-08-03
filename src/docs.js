@@ -1,7 +1,28 @@
+import docsearch from '@docsearch/js'
 import { querySelectorAll } from './lib/util'
+import '@docsearch/css'
 import './styles/docs.scss'
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+
+  // DocSearch
+  // ------------------------------------------------------------------------------------------
+
+  querySelectorAll('.control-search-button').forEach(function (searchButtonEl) {
+    var version = searchButtonEl.getAttribute('data-version')
+
+    docsearch({
+      // test API key
+      appId: 'R2IYF7ETH7',
+      apiKey: '599cec31baffa4868cae4e79f180729b',
+      indexName: 'docsearch',
+
+      container: searchButtonEl,
+      searchParameters: {
+        facetFilters: ['version:' + version],
+      },
+    })
+  })
 
   // Version Chooser
   // ------------------------------------------------------------------------------------------
@@ -11,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     'Version 3 is nearly API-compatible with version 2. ' +
     '<a href="/blog/2016/09/feature-packed-releases">More Information</a>' // TODO: use baseurl
 
-  querySelectorAll('.control-select__select').forEach(function(selectEl) {
+  querySelectorAll('.control-select__select').forEach(function (selectEl) {
 
-    selectEl.addEventListener('change', function() {
+    selectEl.addEventListener('change', function () {
       var selectedOptionEl = selectEl.options[selectEl.selectedIndex]
 
       window.location.href = selectedOptionEl.getAttribute('data-url')
@@ -28,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     processHash(extractUrlHash(window.location.href))
 
-    window.addEventListener('hashchange', function(ev) {
+    window.addEventListener('hashchange', function (ev) {
       processHash(
         extractUrlHash(ev.newURL || document.URL) // IE11 doesn't have newURL
       )
@@ -45,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Docs Index Layout Chooser
   // ------------------------------------------------------------------------------------------
 
-  querySelectorAll('.docs-layout-toggler').forEach(function(togglerEl) {
+  querySelectorAll('.docs-layout-toggler').forEach(function (togglerEl) {
     var SELECTED_CLASS = 'control-toggler__choice--selected'
     var itemEls = querySelectorAll('.control-toggler__choice', togglerEl)
     var choices = [] // array of strings
@@ -55,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var initialChoice
     var storedChoice
 
-    itemEls.forEach(function(itemEl) {
+    itemEls.forEach(function (itemEl) {
       var choice = extractUrlHash(itemEl.getAttribute('href'))
       var choiceContainer
 
@@ -84,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    window.addEventListener('hashchange', function(ev) {
+    window.addEventListener('hashchange', function (ev) {
       var newChoice = extractUrlHash(ev.newURL || document.URL) // IE11 doesn't have newURL
 
       if (isValidChoice(newChoice)) {
