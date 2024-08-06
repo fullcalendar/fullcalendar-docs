@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       container: searchButtonEl,
       searchParameters: {
-        facetFilters: ['version:' + version],
+        // NOTE: we don't use 'version' because it's reserved and requires full x.x.x
+        facetFilters: ['major_version:' + version],
       },
     })
   })
