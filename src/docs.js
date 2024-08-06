@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var version = searchButtonEl.getAttribute('data-version')
 
     docsearch({
-      // test API key
-      appId: 'R2IYF7ETH7',
-      apiKey: '599cec31baffa4868cae4e79f180729b',
-      indexName: 'docsearch',
+      appId: 'AGJMDAFLM6',
+      apiKey: '1964b0f1d600306bcf5a02eee797c5b5',
+      indexName: 'fullcalendar',
 
       container: searchButtonEl,
       searchParameters: {

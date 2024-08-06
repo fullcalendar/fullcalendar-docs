@@ -35,22 +35,28 @@ fullcalendar_angular_repo: https://github.com/fullcalendar/fullcalendar-angular
 available_versions:
 
   - id: v6
+    idShort: 6
     collection: docs-v6
     is_latest: true
 
   - id: v5
+    idShort: 5
     collection: docs-v5
 
   - id: v4
+    idShort: 4
     collection: docs-v4
 
   - id: v3
+    idShort: 3
     collection: docs-v3
 
   - id: v2
+    idShort: 2
     aliased_to: v3
 
   - id: v1
+    idShort: 1
     collection: docs-v1
 
 # `output: true` says a page should be generated for each document.
