@@ -1,6 +1,5 @@
 ---
 title: selectConstraint
-since_version: 2.2
 ---
 
 Limits user selection to certain windows of time.

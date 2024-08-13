@@ -1,6 +1,5 @@
 ---
 title: slotLabelFormat
-since_version: 2.4.0
 ---
 
 Determines the text that will be displayed within a time slot.

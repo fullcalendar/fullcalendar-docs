@@ -1,6 +1,6 @@
 ---
 title: eventInteractive
-since_version: 2.10.0
+since_version: 5.10.0
 ---
 
 Setting to `true` will cause all events to be focusable/tabbable. By default, only events that have an `event.url` property are tabbable.

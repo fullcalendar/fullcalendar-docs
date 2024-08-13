@@ -1,6 +1,5 @@
 ---
 title: eventOverlap
-since_version: 2.2
 ---
 
 Determines if events being dragged and resized are allowed to overlap each other.

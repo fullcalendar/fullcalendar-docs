@@ -1,7 +1,6 @@
 ---
 title: Custom Views via JS classes
 type: guide
-since_version: 2.2.5
 excerpt_separator: <!--more-->
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: eventReceive
 type: callback
-since_version: 2.2
 ---
 
 Called when a valid external jQuery UI draggable, containing event data, has been dropped onto the calendar.

@@ -1,6 +1,5 @@
 ---
 title: eventMinHeight
-since_version: 5.7.0
 ---
 
 In **timeGrid** view, the minimum height an event is allowed to be.

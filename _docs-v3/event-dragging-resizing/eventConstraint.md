@@ -1,6 +1,5 @@
 ---
 title: eventConstraint
-since_version: 2.2
 ---
 
 Limits event dragging and resizing to certain windows of time.

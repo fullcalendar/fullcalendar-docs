@@ -1,6 +1,5 @@
 ---
 title: eventLimitClick
-since_version: 2.1.0
 ---
 
 Determines the action taken when the user clicks on a "more" link created by the [eventLimit](eventLimit) option.

@@ -1,6 +1,5 @@
 ---
 title: eventMaxStack
-since_version: 5.7.0
 ---
 
 For **timeline** view, the maximum number of events that stack top-to-bottom. For **timeGrid** view, the maximum number of events that stack left-to-right.

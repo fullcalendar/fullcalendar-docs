@@ -2,7 +2,6 @@
 title: Background Events
 type: guide
 layout: docs-sublanding
-since_version: 2.2
 demos:
   - background-events-demo
 ---

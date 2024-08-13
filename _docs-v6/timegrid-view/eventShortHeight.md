@@ -1,6 +1,5 @@
 ---
 title: eventShortHeight
-since_version: 5.7.0
 ---
 
 In **timeGrid** view, the height threshold for when an event has a "short" style.

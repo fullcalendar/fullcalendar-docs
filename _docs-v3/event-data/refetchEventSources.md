@@ -1,7 +1,6 @@
 ---
 title: refetchEventSources
 type: method
-since_version: 2.8.0
 ---
 
 Refetches one or more specific event sources.

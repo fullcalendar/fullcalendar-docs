@@ -1,6 +1,5 @@
 ---
 title: longPressDelay
-since_version: 2.7.0
 ---
 
 For touch devices, the amount of time the user must hold down before an event becomes draggable or a date becomes selectable.

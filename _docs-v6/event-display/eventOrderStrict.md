@@ -1,6 +1,5 @@
 ---
 title: eventOrderStrict
-since_version: 5.7.0
 ---
 
 Ensures the [eventOrder](eventOrder) setting is strictly followed.

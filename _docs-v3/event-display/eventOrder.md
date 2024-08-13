@@ -1,6 +1,5 @@
 ---
 title: eventOrder
-since_version: 2.4.0
 ---
 
 Determines the vertical ordering events that have the same times.

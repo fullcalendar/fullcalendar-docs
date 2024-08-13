@@ -1,6 +1,5 @@
 ---
 title: selectOverlap
-since_version: 2.2
 ---
 
 Determines whether the user is allowed to select periods of time that are occupied by events.

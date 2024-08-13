@@ -1,7 +1,6 @@
 ---
 title: removeEventSources
 type: method
-since_version: 2.8.0
 ---
 
 Dynamically removes all event sources, or multiple specific event sources.

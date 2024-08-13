@@ -1,6 +1,5 @@
 ---
 title: dayPopoverFormat
-since_version: 2.1.0
 ---
 
 Determines the date format of title of the popover created by the [eventLimitClick](eventLimitClick) option.

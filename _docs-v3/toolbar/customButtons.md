@@ -1,6 +1,5 @@
 ---
 title: customButtons
-since_version: 2.4.0
 ---
 
 Defines custom buttons that can be used in the header/footer.

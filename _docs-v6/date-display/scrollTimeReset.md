@@ -1,6 +1,5 @@
 ---
 title: scrollTimeReset
-since_version: 5.7.0
 ---
 
 Whether the view should scroll to [scrollTime](scrollTime) every time the date range changes.

@@ -1,6 +1,5 @@
 ---
 title: dragScroll
-since_version: 2.1.0
 ---
 
 Whether to automatically scoll the scroll-containers during event drag-and-drop and date selecting.

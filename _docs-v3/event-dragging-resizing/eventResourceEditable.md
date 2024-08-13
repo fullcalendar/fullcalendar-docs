@@ -1,6 +1,5 @@
 ---
 title: eventResourceEditable
-since_version: 1.4.0
 ---
 
 Determines whether the user can drag events between resources.

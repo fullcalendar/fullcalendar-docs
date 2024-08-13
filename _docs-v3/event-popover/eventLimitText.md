@@ -1,6 +1,5 @@
 ---
 title: eventLimitText
-since_version: 2.1.0
 ---
 
 Determines the text of the link created by the [eventLimit](eventLimit) setting.
