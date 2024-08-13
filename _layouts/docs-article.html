@@ -24,7 +24,9 @@ assets: [ 'docs.css', 'docs.js' ]
         </div>
 
         <h1 class='page-content__title'>
-          {{ page.title | escape }}
+          <span class='page-content__title-main'>
+            {{ page.title | escape }}
+          </span>
 
           {% if page.since_scheduler_version %}
             <span class='docs-article__version'>scheduler {{ page.since_scheduler_version }}</span>
