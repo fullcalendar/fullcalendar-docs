@@ -244,10 +244,20 @@ FullCalendar offers the following packages:
   </tr>
   <tr>
     <td>
-      <strong>@fullcalendar/luxon2</strong>
+      <strong>@fullcalendar/luxon3</strong>
     </td>
     <td>
       Offers a named-timezone implementation, a formatting string implementation, and utilities for converting to Luxon DateTimes. <a href='luxon'>More info</a>
+    </td>
+    <td><a href='https://yarnpkg.com/package/@fullcalendar/luxon3'>Yarn</a></td>
+    <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon3?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
+  </tr>
+  <tr>
+    <td>
+      <strong>@fullcalendar/luxon2</strong>
+    </td>
+    <td>
+      Supports Luxon v2. <a href='luxon'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/luxon2'>Yarn</a></td>
     <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/luxon2?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
