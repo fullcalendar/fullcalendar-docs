@@ -86,3 +86,22 @@ let calendar = new Calendar(calendarEl, {
 ```
 
 If you are using the React connector, you'll be able to [return React JSX nodes](react#content-injection).
+
+## Available Properties
+The following properties are available for content injection, courtsey of [wandrille](https://stackoverflow.com/users/6664264/wandrille) from [stack overflow](https://stackoverflow.com/a/76180405/518064)
+
+- dayHeaderContent
+- dayCellContent
+- weekNumberContent
+- nowIndicatorContent
+- eventContent
+- slotLaneContent
+- slotLabelContent
+- allDayContent
+- moreLinkContent
+- noEventsContent
+- resourceAreaHeaderContent
+- resourceGroupLabelContent
+- resourceLabelContent
+- resourceLaneContent
+- resourceGroupLaneContent
