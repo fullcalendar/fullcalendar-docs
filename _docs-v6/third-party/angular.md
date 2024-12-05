@@ -3,14 +3,15 @@ title: Angular Component
 title_for_landing: Angular
 ---
 
-FullCalendar seamlessly integrates with the [Angular] 12 - 18. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar seamlessly integrates with the [Angular] 12 - 19. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is built and maintained by [irustm](https://github.com/irustm) in partnership with the maintainers of FullCalendar. It is the official Angular connector, released under an MIT license, the same license the standard version of FullCalendar uses. Useful links:
 
 - [Browse the Github repo]({{ site.fullcalendar_angular_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
 - Example projects:
-  [Angular 18](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular18)
+  [Angular 19](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular19)
+  | [18](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular18)
   | [17](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular17)
   | [16](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular16)
   | [15](https://github.com/fullcalendar/fullcalendar-examples/tree/main/angular15)
@@ -30,37 +31,20 @@ npm install --save \
   @fullcalendar/interaction
 ```
 
-You must then include the `FullCalendarModule` into your app's root module. An example app ([app.module.ts]):
-
-```js
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FullCalendarModule // register FullCalendar with your app
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-Then, in one of your app's component files ([app.component.ts]), prepare an object of options along with any plugins:
+In one of your app's component files ([app.component.ts]), prepare an object of options along with any plugins:
 
 ```js
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, FullCalendarModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -296,9 +280,8 @@ and the template:
 
 [Angular]: https://angular.io/
 [Angular CLI]: https://cli.angular.io/
-[app.module.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.module.ts
-[app.component.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.ts
-[app.component.scss]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.scss
-[app.component.html]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular15/src/app/app.component.html
+[app.component.ts]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular19/src/app/app.component.ts
+[app.component.scss]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular19/src/app/app.component.scss
+[app.component.html]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/angular19/src/app/app.component.html
 [component options]: https://github.com/fullcalendar/fullcalendar-angular/blob/main/lib/src/options.ts
 [ViewChild]: https://angular.io/api/core/ViewChild

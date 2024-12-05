@@ -10,7 +10,7 @@ This package is released under an MIT license, the same license the standard ver
 - [Browse the Github repo]({{ site.fullcalendar_react_repo }}) (please star it!)
 - [Bug report instructions](/reporting-bugs)
 - [Example project][example project] leveraging [Webpack], [Babel], and [css-loader] (the code in this guide loosely follows it)
-- [Runnable project](https://stackblitz.com/github/fullcalendar/fullcalendar-examples/tree/main/react) in a code playground
+- [Runnable project](https://stackblitz.com/github/fullcalendar/fullcalendar-examples/tree/main/react18) in a code playground
 
 This guide does not go into depth about initializing a React project. Please consult the aforementioned example/runnable projects for that.
 
@@ -207,15 +207,15 @@ The above mentioned sample project uses a rather simple technique to store event
 
 Please check out the following example projects that demonstrate usage with third-party state-management libraries:
 
-- [View the **Redux** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react-redux)
-- [View the **MobX** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react-mobx-typescript)
+- [View the **Redux** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react18-redux)
+- [View the **MobX** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react18-mobx-typescript)
 
 
 ## TypeScript
 
 React works well with [TypeScript]!
 
-- [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react-typescript)
+- [View the **React** + **TypeScript** example &raquo;](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react18-typescript)
 
 
 ## Next.js
@@ -241,15 +241,15 @@ View the [example project](https://github.com/fullcalendar/fullcalendar-examples
 The FullCalendar React connector works well with [Jest](https://jestjs.io/) but requires a workaround for Jest >=28:
 
 - [Explanation on Github Issues](https://github.com/fullcalendar/fullcalendar/issues/7113#issuecomment-1384696198)
-- [Example Project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/jest-react)
+- [Example Project](https://github.com/fullcalendar/fullcalendar-examples/tree/main/react18-jest)
 
 
 [React]: https://reactjs.org/
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
 [css-loader]: https://webpack.js.org/loaders/css-loader/
-[example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/main/react
-[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/react/src/DemoApp.jsx
+[example project]: https://github.com/fullcalendar/fullcalendar-examples/tree/main/react18
+[DemoApp.jsx]: https://github.com/fullcalendar/fullcalendar-examples/blob/main/react18/src/DemoApp.jsx
 [docs toc]: https://fullcalendar.io/docs#toc
 [callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-react-2e1e39b1d498
 [TypeScript]: https://www.typescriptlang.org/

@@ -241,7 +241,7 @@ For `@fullcalendar/vue` (Vue 2), it is recommended to use [class-based component
 
 ## Nuxt
 
-If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/nuxt'>See the example project</a>
+If you plan to use the [Nuxt] Vue framework, you'll need special configuration. <a class='more-link' href='https://github.com/fullcalendar/fullcalendar-examples/tree/main/nuxt3'>See the example project</a>
 
 
 [Vue]: https://vuejs.org/
