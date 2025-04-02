@@ -182,7 +182,7 @@ If you want to modify options that are complex objects, like [headerToolbar](hea
 ```
 
 
-<h2 id='nested-templates'>Nested Templates (new in v6)</h2>
+<h2 id='nested-templates'>Nested Templates</h2>
 
 Use the `ng-template` tag to customize [content-injection](content-injection) areas such as [eventContent](event-render-hooks). Example:
 
@@ -199,6 +199,8 @@ Explanation:
 - The template is named via the [`#` syntax](https://angular.io/guide/template-reference-variables#syntax). It must be the name of a content-injection area.
 - The template accepts a single [implicit local variable](https://stackoverflow.com/questions/45055384/what-is-implicit-in-angular-2/45055768#45055768) which is named via the `let-*` syntax. In the above example, `let-arg` names the variable "arg".
 - The properties of the argument are documented alongside each content-injection area. For example see [eventContent's argument](event-render-hooks#argument).
+
+For more complex situations, a [TemplateRef](https://angular.dev/guide/templates/ng-template#referencing-a-template-fragment-with-queries) can be directly passed to the options. This is useful for nested options like [resourceAreaColumns](resourceAreaColumns)' `.cellContent`.
 
 
 ## Calendar API
