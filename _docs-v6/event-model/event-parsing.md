@@ -26,6 +26,7 @@ Here are all the available properties, **all of which are optional**:
   <th>id</th>
   <td markdown='1'>
   String or Integer. Will uniquely identify your event. Useful for [getEventById](Calendar-getEventById).
+  It will be converted to a string.
   </td>
   </tr>
 
