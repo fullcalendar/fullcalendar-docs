@@ -2,6 +2,7 @@
 title: Now Indicator
 children:
   - nowIndicator
+  - nowIndicatorSnap
   - now
   - article: now-indicator-render-hooks
     points:
