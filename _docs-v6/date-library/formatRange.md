@@ -13,7 +13,7 @@ FullCalendar.formatRange( *start*, *end*, *settings* )
 `settings` is an object that holds any of the [date format config](date-formatting) options. It also accepts the following additional properties:
 
 - `separator` &mdash; what will be inserted between the two dates. a `' - '` by default
-- `isExclusive` &mdash; if `true`, the given end date will be considered the *exclusive end* of the range, meaning date just before the `end` will be rendered instead. Useful if you need to format an exclusive-end whole-day range.
+- `isEndExclusive` &mdash; if `true`, the given end date will be considered the *exclusive end* of the range, meaning date just before the `end` will be rendered instead. Useful if you need to format an exclusive-end whole-day range.
 - `locale` &mdash; the name of a [locale](locale) like `'es'`
 - `timeZone` &mdash; the name of a [time zone](timeZone). Either `'local'`, `'UTC'`, or a named time zone
 
