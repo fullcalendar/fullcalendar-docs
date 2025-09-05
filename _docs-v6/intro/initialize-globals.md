@@ -135,3 +135,5 @@ You can also include `<script>` tags for individual plugins. Example:
   </body>
 </html>
 ```
+
+Note that if you wish to include any of the [premium](https://fullcalendar.io/pricing) plugins in this manner, you will need to include the `@fullcalendar/premium-common` package too.
