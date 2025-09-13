@@ -49,6 +49,8 @@ Here are all the available properties, **all of which are optional**:
   <th>start</th>
   <td markdown='1'>
   Something [date-parseable](date-parsing). When your event begins. If your event is explicitly `allDay`, hour, minutes, seconds and milliseconds will be ignored.
+
+  **Alias:** you can also use `date` instead of `start`. This is commonly used for simple one-day events.
   </td>
   </tr>
 
