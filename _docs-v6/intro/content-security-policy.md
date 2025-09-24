@@ -18,19 +18,17 @@ FullCalendar's icon-font is embedded into its CSS with a `data:` protcol. You mu
 
 ## Dynamically-Generated Styles
 
-FullCalendar injects its own `<style>` tags onto the page. Your CSP might prohibit this. The solution is to use a [nonce value](https://content-security-policy.com/nonce/).
+FullCalendar injects its own `<style>` tags onto the page. Your CSP might prohibit this. A workaround is to use a [nonce value](https://content-security-policy.com/nonce/).
 
 On your server, generate a random nonce value (`abc123` in this example). Then, register it with your CSP. The following line achieves this while also whitelisting the icon-font mentioned above:
 
 ```html
-<meta http-equiv='Content-Security-Policy' content="default-src 'nonce-abc123'; font-src data:">
+<meta http-equiv='Content-Security-Policy' content="default-src …; style-src 'nonce-abc123'; font-src data:">
 ```
 
-Then, when writing your application's `<script>` and `<link>` tags, include the `nonce` attribute:
-
 ```html
-<script src='fullcalendar/dist/index.js' nonce='abc123'></script>
-<script src='app/index.js' nonce='abc123'></script>
+<script src='fullcalendar/dist/index.js'></script>
+<script src='app/index.js'></script>
 ```
 
 Starting with **v6.1.0**, FullCalendar is able to output nonce values.
@@ -43,4 +41,4 @@ You may override this behavior by including a meta at the head of your page. It 
 <meta name='csp-nonce' content='qwerty456' />
 ```
 
-For nonce values to be secure, they must be randomly generated on the server and only used once. Consult documentation elsewhere on the web for best practices.
+For nonce values to be secure, they must be randomly generated on the server and only used once. Also note that nonces can allow attackers to bypass all other restrictions from the CSP. Consult documentation elsewhere on the web for best practices, e.g. [in the specification](https://www.w3.org/TR/CSP3/#security-considerations).
