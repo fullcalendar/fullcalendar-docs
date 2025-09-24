@@ -28,7 +28,7 @@ Setting the headerToolbar options to `false` will display no header toolbar. An 
 :   button for moving the calendar forward one month/week/day
 
 `prevYear`
-:   button for moving the calendar back on year
+:   button for moving the calendar back one year
 
 `nextYear`
 :   button for moving the calendar forward one year
