@@ -61,7 +61,12 @@ npm install --save \
   @fullcalendar/resource \
   @fullcalendar/resource-timeline
 ```
-
+```
+yarn add --save \
+  @fullcalendar/core \
+  @fullcalendar/resource \
+  @fullcalendar/resource-timeline
+```
 ```js
 import { Calendar } from '@fullcalendar/core';
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
