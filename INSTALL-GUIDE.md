@@ -50,7 +50,7 @@ FullCalendar offers 5 beautiful stock themes that are intended to be used withou
 
 ### React
 
-First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
+First, visit [themes.fullcalendar.io](https://v7-dev.fc-v7-theme-preview.pages.dev) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
 
 Next, install the react package, the core package, and your chosen theme:
 
@@ -160,7 +160,7 @@ Coming soon
 
 ### Vanilla JS
 
-First, visit the [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
+First, visit the [themes.fullcalendar.io](https://v7-dev.fc-v7-theme-preview.pages.dev) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
 
 Next, install the core package and your chosen theme:
 
@@ -455,7 +455,7 @@ import './global-styles.css'
 
 [Shadcn](https://ui.shadcn.com/) is a React component framework.
 
-FullCalendar inherits all style variables from the Shadcn theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/shadcn](https://themes.fullcalendar.io/shadcn) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
+FullCalendar inherits all style variables from the Shadcn theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/shadcn](https://v7-dev.fc-v7-theme-preview.pages.dev/shadcn) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
 
 Choose a flavor and add it to your `components.json`:
 
@@ -519,7 +519,7 @@ Feel free to dissect the `resource-timeline-demo.tsx` and `resource-timegrid-dem
 
 MUI's [Material UI](https://mui.com/material-ui/) is a React component framework.
 
-FullCalendar inherits all style variables from the MUI theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/mui](https://themes.fullcalendar.io/mui) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
+FullCalendar inherits all style variables from the MUI theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/mui](https://v7-dev.fc-v7-theme-preview.pages.dev/mui) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
 
 Next, install the mui package, the react package, the core package, and your chosen theme:
 
