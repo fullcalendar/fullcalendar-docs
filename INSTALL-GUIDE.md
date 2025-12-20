@@ -55,7 +55,7 @@ Choose a flavor and add it to your `components.json`:
 {
   "registries": {
     "@fullcalendar-monarch": "https://shadcn-registry.fullcalendar.io/monarch/{name}.json"
-    //             ^^^^^^^                                            ^^^^^^^
+    //             ^^^^^^^ YOUR FLAVOR                                ^^^^^^^ YOUR FLAVOR
   }
 }
 ```
@@ -159,7 +159,7 @@ import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 #### Option 2: Composable Components
 
-Alternatively, install exactly the plugins you, customize the views, or customize the toolbar:
+Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
 
 ```jsx
 import { useCalendarController } from '@fullcalendar/react'
@@ -240,7 +240,7 @@ import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 #### Option 2: Composable Components
 
-Alternatively, install exactly the plugins you need or customize the views or toolbar:
+Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
 
 ```jsx
 import { useCalendarController } from '@fullcalendar/react'
@@ -595,7 +595,7 @@ At its heart, the theme system is just a ton of class name props.
 
 You can supply a `string` argument for each, or a function that accepts `state` and returns a `string`.
 
-To combine multiple class names, we recommend using the [clsx](https://www.npmjs.com/package/clsx) utiliity.
+To combine multiple class names, we recommend using the [clsx](https://www.npmjs.com/package/clsx) utility.
 
 We are working an extensive reference for all class name props, but in the meantime, please consult the existing theme files:
 
