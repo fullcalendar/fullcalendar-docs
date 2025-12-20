@@ -16,267 +16,31 @@ NOTE: In VSCode, update table with SHIFT+CMD+P, then "Markdown... Update Table o
   then delete the unnecessary top entry "FullCalendar v7 Guide" and unindent
 -->
 
-- [Shadcn](#shadcn)
-  - [Standard Plugins](#standard-plugins)
-  - [Premium Plugins](#premium-plugins)
-- [MUI](#mui)
-  - [Standard Plugins](#standard-plugins-1)
-    - [Option 1: Stock Component](#option-1-stock-component)
-    - [Option 2: Composable Components](#option-2-composable-components)
-  - [Premium Plugins](#premium-plugins-1)
-    - [Option 1: Stock Component](#option-1-stock-component-1)
-    - [Option 2: Composable Components](#option-2-composable-components-1)
 - [Stock Themes](#stock-themes)
   - [React](#react)
-    - [Standard Plugins](#standard-plugins-2)
-    - [Premium Plugins](#premium-plugins-2)
+    - [Standard Plugins](#standard-plugins)
+    - [Premium Plugins](#premium-plugins)
   - [Vue](#vue)
   - [Angular](#angular)
   - [Vanilla JS](#vanilla-js)
-    - [Standard Plugins](#standard-plugins-3)
-    - [Premium Plugins](#premium-plugins-3)
+    - [Standard Plugins](#standard-plugins-1)
+    - [Premium Plugins](#premium-plugins-1)
   - [Color Palettes](#color-palettes)
     - [Dark Mode](#dark-mode)
 - [Custom Themes](#custom-themes)
   - [Tailwind](#tailwind)
   - [CSS Modules](#css-modules)
   - [Global CSS](#global-css)
-
-
-## Shadcn
-
-[Shadcn](https://ui.shadcn.com/) is a React component framework.
-
-FullCalendar inherits all style variables from the Shadcn theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/shadcn](https://themes.fullcalendar.io/shadcn) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
-
-Choose a flavor and add it to your `components.json`:
-
-```jsonc
-{
-  "registries": {
-    "@fullcalendar-monarch": "https://shadcn-registry.fullcalendar.io/monarch/{name}.json"
-    //             ^^^^^^^ YOUR FLAVOR                                ^^^^^^^ YOUR FLAVOR
-  }
-}
-```
-
-
-### Standard Plugins
-
-Install a Shadcn event calendar with standard plugins:
-
-```bash
-npx shadcn@latest add @fullcalendar-monarch/event-calendar
-#                                   ^^^^^^^ YOUR FLAVOR
-```
-
-Then, easily render a demo:
-
-```jsx
-import { EventCalendarDemo } from '@/components/event-calendar-demo'
-
-<div className='px-5'>
-  <EventCalendarDemo />
-</div>
-```
-
-Feel free to dissect the `event-calendar-demo.tsx` file and delete when done.
-
-
-### Premium Plugins
-
-Install an Shadcn event calendar with premium plugins (aka "scheduler").
-
-```bash
-npx shadcn@latest add @fullcalendar-monarch/scheduler
-#                                   ^^^^^^^ YOUR FLAVOR
-```
-
-Then, easily render a demo:
-
-```jsx
-import { ResourceTimelineDemo } from '@/components/resource-timeline-demo'
-import { ResourceTimeGridDemo } from '@/components/resource-timegrid-demo'
-
-<div className='px-5'>
-  <ResourceTimelineDemo />
-  <ResourceTimeGridDemo />
-</div>
-```
-
-Feel free to dissect the `resource-timeline-demo.tsx` and `resource-timegrid-demo.tsx` files and delete when done.
-
-
-## MUI
-
-MUI's [Material UI](https://mui.com/material-ui/) is a React component framework.
-
-FullCalendar inherits all style variables from the MUI theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/mui](https://themes.fullcalendar.io/mui) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
-
-Next, install the mui package, the react package, the core package, and your chosen theme:
-
-```bash
-npm install \
-  @fullcalendar/mui@beta \
-  @fullcalendar/react@beta \
-  @fullcalendar/core@beta \
-  @fullcalendar/theme-monarch@beta
-  #                   ^^^^^^^ YOUR FLAVOR
-```
-
-
-### Standard Plugins
-
-There are two ways to install an MUI event calendar with standard plugins:
-
-
-#### Option 1: Stock Component
-
-FullCalendar provides a stock MUI `EventCalendar` component that **REQUIRES** the following dependencies:
-
-```bash
-npm install \
-  @fullcalendar/interaction@beta \
-  @fullcalendar/daygrid@beta \
-  @fullcalendar/timegrid@beta \
-  @fullcalendar/list@beta \
-  @fullcalendar/multimonth@beta
-```
-
-Initialize in the JS:
-
-```jsx
-import EventCalendar from '@fullcalendar/mui/monarch/EventCalendar' // YOUR FLAVOR
-
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
-
-<EventCalendar
-  // your props here
-/>
-```
-
-
-#### Option 2: Composable Components
-
-Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
-
-```jsx
-import { useCalendarController } from '@fullcalendar/react'
-import EventCalendarContainer from '@fullcalendar/mui/monarch/EventCalendarContainer' // YOUR FLAVOR
-import EventCalendarToolbar from '@fullcalendar/mui/monarch/EventCalendarToolbar' // YOUR FLAVOR
-import EventCalendarViews from '@fullcalendar/mui/monarch/EventCalendarViews' // YOUR FLAVOR
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
-
-function CustomEventCalendar(props) {
-  const controller = useCalendarController()
-
-  return (
-    <EventCalendarContainer>
-      {/* use toolbar as-is or write your own */}
-      <EventCalendarToolbar
-        controller={controller}
-        availableViews={['dayGridMonth', 'timeGridWeek', 'timeGridDay']}
-      />
-      <EventCalendarViews
-        controller={controller}
-        plugins={[dayGridPlugin, timeGridPlugin]}
-        initialView='dayGridMonth'
-        navLinkWeekClick='timeGridWeek'
-        navLinkDayClick='timeGridDay'
-        events={props.events}
-      />
-    </EventCalendarContainer>
-  )
-}
-```
-
-For further inspiration, see what the stock [EventCalendar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendar.tsx) and [EventCalendarToolbar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendarToolbar.tsx) do.
-
-
-### Premium Plugins
-
-There are two ways to install an MUI event calendar with premium plugins (aka "scheduler"):
-
-
-#### Option 1: Stock Component
-
-FullCalendar provides stock MUI `ResourceTimeline` and `ResourceTimeGrid` components that **REQUIRE** the following dependencies:
-
-```bash
-npm install \
-  @fullcalendar/adaptive@beta \
-  @fullcalendar/scrollgrid@beta \
-  @fullcalendar/timeline@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta \
-  @fullcalendar/resource-daygrid@beta \
-  @fullcalendar/resource-timegrid@beta
-```
-
-Initialize in the JS:
-
-```jsx
-import ResourceTimeline from '@fullcalendar/mui/monarch/ResourceTimeline' // YOUR FLAVOR
-import ResourceTimeGrid from '@fullcalendar/mui/monarch/ResourceTimeGrid' // YOUR FLAVOR
-
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
-
-<div>
-  <ResourceTimeline
-    // your props here
-  />
-  <ResourceTimeGrid
-    // your props here
-  />
-</div>
-```
-
-
-#### Option 2: Composable Components
-
-Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
-
-```jsx
-import { useCalendarController } from '@fullcalendar/react'
-import EventCalendarContainer from '@fullcalendar/mui/monarch/EventCalendarContainer' // YOUR FLAVOR
-import EventCalendarToolbar from '@fullcalendar/mui/monarch/EventCalendarToolbar' // YOUR FLAVOR
-import SchedulerViews from '@fullcalendar/mui/monarch/SchedulerViews' // YOUR FLAVOR
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
-
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
-
-function CustomScheduler(props) {
-  const controller = useCalendarController()
-
-  return (
-    <EventCalendarContainer>
-      {/* use toolbar as-is or write your own */}
-      <EventCalendarToolbar
-        controller={controller}
-        availableViews={['resourceTimelineMonth', 'resourceTimelineWeek', 'resourceTimelineDay']}
-      />
-      <SchedulerViews
-        controller={controller}
-        plugins={[resourceTimelinePlugin]}
-        initialView='resourceTimelineMonth'
-        navLinkWeekClick='resourceTimelineWeek'
-        navLinkDayClick='resourceTimelineDay'
-        resources={props.resources}
-        events={props.events}
-      />
-    </EventCalendarContainer>
-  )
-}
-```
-
-For further inspiration, see what the stock [ResourceTimeline](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/ResourceTimeline.tsx), [ResourceTimeGrid](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/ResourceTimeGrid.tsx), and [EventCalendarToolbar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendarToolbar.tsx) do.
+- [Shadcn](#shadcn)
+  - [Standard Plugins](#standard-plugins-2)
+  - [Premium Plugins](#premium-plugins-2)
+- [MUI](#mui)
+  - [Standard Plugins](#standard-plugins-3)
+    - [Option 1: Stock Component](#option-1-stock-component)
+    - [Option 2: Composable Components](#option-2-composable-components)
+  - [Premium Plugins](#premium-plugins-3)
+    - [Option 1: Stock Component](#option-1-stock-component-1)
+    - [Option 2: Composable Components](#option-2-composable-components-1)
 
 
 ## Stock Themes
@@ -685,3 +449,239 @@ import './global-styles.css'
   background-color: #eab308;
 }
 ```
+
+
+## Shadcn
+
+[Shadcn](https://ui.shadcn.com/) is a React component framework.
+
+FullCalendar inherits all style variables from the Shadcn theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/shadcn](https://themes.fullcalendar.io/shadcn) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
+
+Choose a flavor and add it to your `components.json`:
+
+```jsonc
+{
+  "registries": {
+    "@fullcalendar-monarch": "https://shadcn-registry.fullcalendar.io/monarch/{name}.json"
+    //             ^^^^^^^ YOUR FLAVOR                                ^^^^^^^ YOUR FLAVOR
+  }
+}
+```
+
+
+### Standard Plugins
+
+Install a Shadcn event calendar with standard plugins:
+
+```bash
+npx shadcn@latest add @fullcalendar-monarch/event-calendar
+#                                   ^^^^^^^ YOUR FLAVOR
+```
+
+Then, easily render a demo:
+
+```jsx
+import { EventCalendarDemo } from '@/components/event-calendar-demo'
+
+<div className='px-5'>
+  <EventCalendarDemo />
+</div>
+```
+
+Feel free to dissect the `event-calendar-demo.tsx` file and delete when done.
+
+
+### Premium Plugins
+
+Install an Shadcn event calendar with premium plugins (aka "scheduler").
+
+```bash
+npx shadcn@latest add @fullcalendar-monarch/scheduler
+#                                   ^^^^^^^ YOUR FLAVOR
+```
+
+Then, easily render a demo:
+
+```jsx
+import { ResourceTimelineDemo } from '@/components/resource-timeline-demo'
+import { ResourceTimeGridDemo } from '@/components/resource-timegrid-demo'
+
+<div className='px-5'>
+  <ResourceTimelineDemo />
+  <ResourceTimeGridDemo />
+</div>
+```
+
+Feel free to dissect the `resource-timeline-demo.tsx` and `resource-timegrid-demo.tsx` files and delete when done.
+
+
+## MUI
+
+MUI's [Material UI](https://mui.com/material-ui/) is a React component framework.
+
+FullCalendar inherits all style variables from the MUI theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/mui](https://themes.fullcalendar.io/mui) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
+
+Next, install the mui package, the react package, the core package, and your chosen theme:
+
+```bash
+npm install \
+  @fullcalendar/mui@beta \
+  @fullcalendar/react@beta \
+  @fullcalendar/core@beta \
+  @fullcalendar/theme-monarch@beta
+  #                   ^^^^^^^ YOUR FLAVOR
+```
+
+
+### Standard Plugins
+
+There are two ways to install an MUI event calendar with standard plugins:
+
+
+#### Option 1: Stock Component
+
+FullCalendar provides a stock MUI `EventCalendar` component that **REQUIRES** the following dependencies:
+
+```bash
+npm install \
+  @fullcalendar/interaction@beta \
+  @fullcalendar/daygrid@beta \
+  @fullcalendar/timegrid@beta \
+  @fullcalendar/list@beta \
+  @fullcalendar/multimonth@beta
+```
+
+Initialize in the JS:
+
+```jsx
+import EventCalendar from '@fullcalendar/mui/monarch/EventCalendar' // YOUR FLAVOR
+
+import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
+
+<EventCalendar
+  // your props here
+/>
+```
+
+
+#### Option 2: Composable Components
+
+Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
+
+```jsx
+import { useCalendarController } from '@fullcalendar/react'
+import EventCalendarContainer from '@fullcalendar/mui/monarch/EventCalendarContainer' // YOUR FLAVOR
+import EventCalendarToolbar from '@fullcalendar/mui/monarch/EventCalendarToolbar' // YOUR FLAVOR
+import EventCalendarViews from '@fullcalendar/mui/monarch/EventCalendarViews' // YOUR FLAVOR
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+
+import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
+
+function CustomEventCalendar(props) {
+  const controller = useCalendarController()
+
+  return (
+    <EventCalendarContainer>
+      {/* use toolbar as-is or write your own */}
+      <EventCalendarToolbar
+        controller={controller}
+        availableViews={['dayGridMonth', 'timeGridWeek', 'timeGridDay']}
+      />
+      <EventCalendarViews
+        controller={controller}
+        plugins={[dayGridPlugin, timeGridPlugin]}
+        initialView='dayGridMonth'
+        navLinkWeekClick='timeGridWeek'
+        navLinkDayClick='timeGridDay'
+        events={props.events}
+      />
+    </EventCalendarContainer>
+  )
+}
+```
+
+For further inspiration, see what the stock [EventCalendar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendar.tsx) and [EventCalendarToolbar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendarToolbar.tsx) do.
+
+
+### Premium Plugins
+
+There are two ways to install an MUI event calendar with premium plugins (aka "scheduler"):
+
+
+#### Option 1: Stock Component
+
+FullCalendar provides stock MUI `ResourceTimeline` and `ResourceTimeGrid` components that **REQUIRE** the following dependencies:
+
+```bash
+npm install \
+  @fullcalendar/adaptive@beta \
+  @fullcalendar/scrollgrid@beta \
+  @fullcalendar/timeline@beta \
+  @fullcalendar/resource@beta \
+  @fullcalendar/resource-timeline@beta \
+  @fullcalendar/resource-daygrid@beta \
+  @fullcalendar/resource-timegrid@beta
+```
+
+Initialize in the JS:
+
+```jsx
+import ResourceTimeline from '@fullcalendar/mui/monarch/ResourceTimeline' // YOUR FLAVOR
+import ResourceTimeGrid from '@fullcalendar/mui/monarch/ResourceTimeGrid' // YOUR FLAVOR
+
+import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
+
+<div>
+  <ResourceTimeline
+    // your props here
+  />
+  <ResourceTimeGrid
+    // your props here
+  />
+</div>
+```
+
+
+#### Option 2: Composable Components
+
+Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
+
+```jsx
+import { useCalendarController } from '@fullcalendar/react'
+import EventCalendarContainer from '@fullcalendar/mui/monarch/EventCalendarContainer' // YOUR FLAVOR
+import EventCalendarToolbar from '@fullcalendar/mui/monarch/EventCalendarToolbar' // YOUR FLAVOR
+import SchedulerViews from '@fullcalendar/mui/monarch/SchedulerViews' // YOUR FLAVOR
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
+
+import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
+
+function CustomScheduler(props) {
+  const controller = useCalendarController()
+
+  return (
+    <EventCalendarContainer>
+      {/* use toolbar as-is or write your own */}
+      <EventCalendarToolbar
+        controller={controller}
+        availableViews={['resourceTimelineMonth', 'resourceTimelineWeek', 'resourceTimelineDay']}
+      />
+      <SchedulerViews
+        controller={controller}
+        plugins={[resourceTimelinePlugin]}
+        initialView='resourceTimelineMonth'
+        navLinkWeekClick='resourceTimelineWeek'
+        navLinkDayClick='resourceTimelineDay'
+        resources={props.resources}
+        events={props.events}
+      />
+    </EventCalendarContainer>
+  )
+}
+```
+
+For further inspiration, see what the stock [ResourceTimeline](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/ResourceTimeline.tsx), [ResourceTimeGrid](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/ResourceTimeGrid.tsx), and [EventCalendarToolbar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendarToolbar.tsx) do.
