@@ -1,5 +1,5 @@
 <!--
-NOTE: for new releases, update string "7.0.0-beta.5" for CDN links
+NOTE: for new releases, update string "7.0.0-beta.6" for CDN links
 NOTE: will move from "@beta" -> "@rc" in all npm-install snippets (and eventually "@rc" -> "")
 -->
 
@@ -150,7 +150,114 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 
 ### Vue
 
-Coming soon
+First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
+
+Next, install the vue3 package, the core package, and your chosen theme:
+
+```bash
+npm install \
+  @fullcalendar/vue3@beta \
+  @fullcalendar/core@beta \
+  @fullcalendar/theme-monarch@beta
+  #                   ^^^^^^^ YOUR THEME
+```
+
+
+#### Standard Plugins
+
+Install any standard plugins you wish to use:
+
+```bash
+npm install \
+  @fullcalendar/interaction@beta \
+  @fullcalendar/daygrid@beta \
+  @fullcalendar/timegrid@beta \
+  @fullcalendar/list@beta \
+  @fullcalendar/multimonth@beta
+```
+
+Initialize in the JS:
+
+```vue
+<script setup>
+  import FullCalendar from '@fullcalendar/vue3'
+  import interactionPlugin from '@fullcalendar/interaction'
+  import dayGridPlugin from '@fullcalendar/daygrid'
+  import timeGridPlugin from '@fullcalendar/timegrid'
+  import listPlugin from '@fullcalendar/list'
+  import multimonthPlugin from '@fullcalendar/multimonth'
+  import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+
+  import '@fullcalendar/core/skeleton.css'
+  import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
+  import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+</script>
+
+<template>
+  <FullCalendar
+    :options="{
+      plugins: [
+        interactionPlugin,
+        dayGridPlugin,
+        timeGridPlugin,
+        listPlugin,
+        multimonthPlugin,
+        themePlugin,
+      ],
+    }"
+  />
+</template>
+```
+
+For further explanation of palettes and dark mode, see the [Color Palettes](#color-palettes) section.
+
+
+#### Premium Plugins
+
+Install any premium plugins you wish to use:
+
+```bash
+npm install \
+  @fullcalendar/adaptive@beta \
+  @fullcalendar/scrollgrid@beta \
+  @fullcalendar/timeline@beta \
+  @fullcalendar/resource@beta \
+  @fullcalendar/resource-timeline@beta \
+  @fullcalendar/resource-daygrid@beta \
+  @fullcalendar/resource-timegrid@beta
+```
+
+Initialize in the JS:
+
+```vue
+<script setup>
+  import FullCalendar from '@fullcalendar/vue3'
+  import adaptivePlugin from '@fullcalendar/adaptive'
+  import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
+  import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'
+  import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+
+  import '@fullcalendar/core/skeleton.css'
+  import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
+  import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+</script>
+
+<template>
+  <FullCalendar
+    :options="{
+      schedulerLicenseKey: 'XXX',
+      plugins: [
+        adaptivePlugin,
+        resourceTimelinePlugin,
+        resourceTimeGridPlugin,
+        themePlugin,
+      ],
+    }"
+  />
+</template>
+```
+
+For further explanation of palettes and dark mode, see the [Color Palettes](#color-palettes) section.
 
 
 ### Angular
@@ -217,11 +324,11 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 It's possible to use global `<script>` tags as well:
 
 ```html
-<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.5/skeleton.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.5/theme.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.5/palettes/purple.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.5/global.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.5/global.min.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.6/skeleton.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/theme.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/palettes/purple.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.6/global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/global.min.js'></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar')
@@ -281,11 +388,11 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 It's possible to use global `<script>` tags as well:
 
 ```html
-<link href='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.5/skeleton.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.5/theme.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.5/palettes/purple.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.5/global.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.5/global.min.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.6/skeleton.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/theme.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/palettes/purple.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.6/global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/global.min.js'></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar')
