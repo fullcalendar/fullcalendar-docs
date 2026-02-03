@@ -1,5 +1,5 @@
 <!--
-NOTE: for new releases, update string "7.0.0-beta.6" for CDN links
+NOTE: for new releases, update string "7.0.0-beta.7" for CDN links
 NOTE: will move from "@beta" -> "@rc" in all npm-install snippets (and eventually "@rc" -> "")
 -->
 
@@ -24,9 +24,11 @@ NOTE: In VSCode, update table with SHIFT+CMD+P, then "Markdown... Update Table o
     - [Standard Plugins](#standard-plugins-1)
     - [Premium Plugins](#premium-plugins-1)
   - [Angular](#angular)
-  - [Vanilla JS](#vanilla-js)
     - [Standard Plugins](#standard-plugins-2)
     - [Premium Plugins](#premium-plugins-2)
+  - [Vanilla JS](#vanilla-js)
+    - [Standard Plugins](#standard-plugins-3)
+    - [Premium Plugins](#premium-plugins-3)
   - [Color Palettes](#color-palettes)
     - [Dark Mode](#dark-mode)
 - [Custom Themes](#custom-themes)
@@ -34,15 +36,16 @@ NOTE: In VSCode, update table with SHIFT+CMD+P, then "Markdown... Update Table o
   - [CSS Modules](#css-modules)
   - [Global CSS](#global-css)
 - [Shadcn](#shadcn)
-  - [Standard Plugins](#standard-plugins-3)
-  - [Premium Plugins](#premium-plugins-3)
-- [MUI](#mui)
   - [Standard Plugins](#standard-plugins-4)
+  - [Premium Plugins](#premium-plugins-4)
+- [MUI](#mui)
+  - [Standard Plugins](#standard-plugins-5)
     - [Option 1: Stock Component](#option-1-stock-component)
     - [Option 2: Composable Components](#option-2-composable-components)
-  - [Premium Plugins](#premium-plugins-4)
+  - [Premium Plugins](#premium-plugins-5)
     - [Option 1: Stock Component](#option-1-stock-component-1)
     - [Option 2: Composable Components](#option-2-composable-components-1)
+- [Temporal Polyfill](#temporal-polyfill)
 
 
 ## Stock Themes
@@ -52,55 +55,40 @@ FullCalendar offers 5 beautiful stock themes that are intended to be used withou
 
 ### React
 
-First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
-
-Next, install the react package, the core package, and your chosen theme:
-
-```bash
-npm install \
-  @fullcalendar/react@beta \
-  @fullcalendar/core@beta \
-  @fullcalendar/theme-monarch@beta
-  #                   ^^^^^^^ YOUR THEME
-```
+First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For example, `monarch` with color palette `purple`. This choice will be used in the examples below.
 
 
 #### Standard Plugins
 
-Install any standard plugins you wish to use:
+Install the React standard package along with temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
-npm install \
-  @fullcalendar/interaction@beta \
-  @fullcalendar/daygrid@beta \
-  @fullcalendar/timegrid@beta \
-  @fullcalendar/list@beta \
-  @fullcalendar/multimonth@beta
+npm install @fullcalendar/react@beta temporal-polyfill
 ```
 
 Initialize in the JS:
 
 ```jsx
 import FullCalendar from '@fullcalendar/react'
-import interactionPlugin from '@fullcalendar/interaction'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import listPlugin from '@fullcalendar/list'
-import multimonthPlugin from '@fullcalendar/multimonth'
-import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+import themePlugin from '@fullcalendar/react/themes/monarch' // YOUR THEME
+import interactionPlugin from '@fullcalendar/react/interaction'
+import dayGridPlugin from '@fullcalendar/react/daygrid'
+import timeGridPlugin from '@fullcalendar/react/timegrid'
+import listPlugin from '@fullcalendar/react/list'
+import multimonthPlugin from '@fullcalendar/react/multimonth'
 
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
-import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+import '@fullcalendar/react/skeleton.css'
+import '@fullcalendar/react/themes/monarch/theme.css' // YOUR THEME
+import '@fullcalendar/react/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
 
 <FullCalendar
   plugins={[
+    themePlugin,
     interactionPlugin,
     dayGridPlugin,
     timeGridPlugin,
     listPlugin,
     multimonthPlugin,
-    themePlugin,
   ]}
 />
 ```
@@ -110,39 +98,35 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 
 #### Premium Plugins
 
-Install any premium plugins you wish to use:
+Install the React "scheduler" package along with the "standard" package and temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
 npm install \
-  @fullcalendar/adaptive@beta \
-  @fullcalendar/scrollgrid@beta \
-  @fullcalendar/timeline@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta \
-  @fullcalendar/resource-daygrid@beta \
-  @fullcalendar/resource-timegrid@beta
+  @fullcalendar/react-scheduler@beta \
+  @fullcalendar/react@beta \
+  temporal-polyfill
 ```
 
 Initialize in the JS:
 
 ```jsx
 import FullCalendar from '@fullcalendar/react'
-import adaptivePlugin from '@fullcalendar/adaptive'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
-import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'
-import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+import themePlugin from '@fullcalendar/react/themes/monarch' // YOUR THEME
+import adaptivePlugin from '@fullcalendar/react-scheduler/adaptive'
+import resourceTimelinePlugin from '@fullcalendar/react-scheduler/resource-timeline'
+import resourceTimeGridPlugin from '@fullcalendar/react-scheduler/resource-timegrid'
 
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
-import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+import '@fullcalendar/react/skeleton.css'
+import '@fullcalendar/react/themes/monarch/theme.css' // YOUR THEME
+import '@fullcalendar/react/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
 
 <FullCalendar
   schedulerLicenseKey='XXX'
   plugins={[
+    themePlugin,
     adaptivePlugin,
     resourceTimelinePlugin,
     resourceTimeGridPlugin,
-    themePlugin,
   ]}
 />
 ```
@@ -152,30 +136,15 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 
 ### Vue
 
-First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
-
-Next, install the vue3 package, the core package, and your chosen theme:
-
-```bash
-npm install \
-  @fullcalendar/vue3@beta \
-  @fullcalendar/core@beta \
-  @fullcalendar/theme-monarch@beta
-  #                   ^^^^^^^ YOUR THEME
-```
+First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For example, `monarch` with color palette `purple`. This choice will be used in the examples below.
 
 
 #### Standard Plugins
 
-Install any standard plugins you wish to use:
+Install the Vue 3 standard package along with temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
-npm install \
-  @fullcalendar/interaction@beta \
-  @fullcalendar/daygrid@beta \
-  @fullcalendar/timegrid@beta \
-  @fullcalendar/list@beta \
-  @fullcalendar/multimonth@beta
+npm install @fullcalendar/vue3@beta temporal-polyfill
 ```
 
 Initialize in the JS:
@@ -183,28 +152,28 @@ Initialize in the JS:
 ```vue
 <script setup>
   import FullCalendar from '@fullcalendar/vue3'
-  import interactionPlugin from '@fullcalendar/interaction'
-  import dayGridPlugin from '@fullcalendar/daygrid'
-  import timeGridPlugin from '@fullcalendar/timegrid'
-  import listPlugin from '@fullcalendar/list'
-  import multimonthPlugin from '@fullcalendar/multimonth'
-  import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+  import themePlugin from '@fullcalendar/vue3/themes/monarch' // YOUR THEME
+  import interactionPlugin from '@fullcalendar/vue3/interaction'
+  import dayGridPlugin from '@fullcalendar/vue3/daygrid'
+  import timeGridPlugin from '@fullcalendar/vue3/timegrid'
+  import listPlugin from '@fullcalendar/vue3/list'
+  import multimonthPlugin from '@fullcalendar/vue3/multimonth'
 
-  import '@fullcalendar/core/skeleton.css'
-  import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
-  import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+  import '@fullcalendar/vue3/skeleton.css'
+  import '@fullcalendar/vue3/themes/monarch/theme.css' // YOUR THEME
+  import '@fullcalendar/vue3/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
 </script>
 
 <template>
   <FullCalendar
     :options="{
       plugins: [
+        themePlugin,
         interactionPlugin,
         dayGridPlugin,
         timeGridPlugin,
         listPlugin,
         multimonthPlugin,
-        themePlugin,
       ],
     }"
   />
@@ -216,17 +185,13 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 
 #### Premium Plugins
 
-Install any premium plugins you wish to use:
+Install the Vue 3 "scheduler" package along with the "standard" package and temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
 npm install \
-  @fullcalendar/adaptive@beta \
-  @fullcalendar/scrollgrid@beta \
-  @fullcalendar/timeline@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta \
-  @fullcalendar/resource-daygrid@beta \
-  @fullcalendar/resource-timegrid@beta
+  @fullcalendar/vue3-scheduler@beta \
+  @fullcalendar/vue3@beta \
+  temporal-polyfill
 ```
 
 Initialize in the JS:
@@ -234,14 +199,14 @@ Initialize in the JS:
 ```vue
 <script setup>
   import FullCalendar from '@fullcalendar/vue3'
-  import adaptivePlugin from '@fullcalendar/adaptive'
-  import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
-  import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'
-  import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+  import themePlugin from '@fullcalendar/vue3/themes/monarch' // YOUR THEME
+  import adaptivePlugin from '@fullcalendar/vue3-scheduler/adaptive'
+  import resourceTimelinePlugin from '@fullcalendar/vue3-scheduler/resource-timeline'
+  import resourceTimeGridPlugin from '@fullcalendar/vue3-scheduler/resource-timegrid'
 
-  import '@fullcalendar/core/skeleton.css'
-  import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
-  import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+  import '@fullcalendar/vue3/skeleton.css'
+  import '@fullcalendar/vue3/themes/monarch/theme.css' // YOUR THEME
+  import '@fullcalendar/vue3/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
 </script>
 
 <template>
@@ -249,10 +214,10 @@ Initialize in the JS:
     :options="{
       schedulerLicenseKey: 'XXX',
       plugins: [
+        themePlugin,
         adaptivePlugin,
         resourceTimelinePlugin,
         resourceTimeGridPlugin,
-        themePlugin,
       ],
     }"
   />
@@ -264,58 +229,167 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 
 ### Angular
 
-Coming soon
-
-
-### Vanilla JS
-
-First, visit the [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For examples, `monarch` with color palette `purple`.
-
-Next, install the core package and your chosen theme:
-
-```bash
-npm install @fullcalendar/core @fullcalendar/theme-monarch
-#                                                  ^^^^^^^ YOUR THEME
-```
+First, visit [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For example, `monarch` with color palette `purple`. This choice will be used in the examples below.
 
 
 #### Standard Plugins
 
-Install any standard plugins you wish to use:
+Install the Angular standard package along with the vanilla JS package and temporal-polyfill ([more info](#temporal-polyfill)):
+
+```bash
+npm install @fullcalendar/angular@beta fullcalendar@beta temporal-polyfill
+```
+
+**NOTE:** Though you are installing the vanilla JS `fullcalendar` package, you will NOT be importing it directly from your JS. You will ONLY be importing `@fullcalendar/angular`.
+
+Add the module:
+
+```diff
++ import { FullCalendarModule } from '@fullcalendar/angular';
+
+  @Component({
+    selector: 'app-root',
+    standalone: true,
+-   imports: [CommonModule],
++   imports: [CommonModule, FullCalendarModule],
+    templateUrl: './app.html',
+    styleUrl: './app.css'
+  })
+  export class App {
+```
+
+Add your theme, plugins, and options:
+
+```diff
+- import { FullCalendarModule } from '@fullcalendar/angular';
++ import { FullCalendarModule, CalendarOptions } from '@fullcalendar/angular';
++ import themePlugin from '@fullcalendar/angular/themes/monarch'; // YOUR THEME
++ import interactionPlugin from '@fullcalendar/angular/interaction';
++ import dayGridPlugin from '@fullcalendar/angular/daygrid';
+
+  // ...
+
+  export class App {
++   calendarOptions = signal<CalendarOptions>({
++     plugins: [
++       themePlugin,
++       interactionPlugin,
++       dayGridPlugin,
++     ],
++     editable: true,
++   })
+```
+
+Declare the calendar in your template:
+
+```txt
+<full-calendar [options]='calendarOptions()'>
+```
+
+Add the following stylesheets to your `angular.json`:
+
+```diff
+  {
+    "projects": {        // ...
+      "my-project": {    // ...
+        "architect": {   // ...
+          "build": {     // ...
+            "options": { // ...
+              "styles": [
++               "@fullcalendar/angular/skeleton.css",
++               "@fullcalendar/angular/themes/classic/theme.css", // YOUR THEME
++               "@fullcalendar/angular/themes/classic/palette.css", // YOUR THEME + PALETTE
+                "src/styles.css"
+              ]
+```
+
+For further explanation of palettes and dark mode, see the [Color Palettes](#color-palettes) section.
+
+
+#### Premium Plugins
+
+Install the following packages, including temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
 npm install \
-  @fullcalendar/interaction@beta \
-  @fullcalendar/daygrid@beta \
-  @fullcalendar/timegrid@beta \
-  @fullcalendar/list@beta \
-  @fullcalendar/multimonth@beta
+  @fullcalendar/angular-scheduler@beta \
+  @fullcalendar/angular@beta \
+  fullcalendar-scheduler@beta \
+  fullcalendar@beta \
+  temporal-polyfill
+```
+
+**NOTE:** Though you are installing the vanilla JS `fullcalendar-scheduler` and `fullcalendar` packages, you will NOT be importing them directly from your JS. You will ONLY be importing `@fullcalendar/angular-scheduler` and `@fullcalendar/angular`.
+
+Building on the "standard" code samples above, you can incorporate plugins from the `@fullcalendar/angular-scheduler` package:
+
+```diff
+  import { FullCalendarModule } from '@fullcalendar/angular';
+  import { FullCalendarModule, CalendarOptions } from '@fullcalendar/angular';
+  import themePlugin from '@fullcalendar/angular/themes/monarch'; // YOUR THEME
+  import interactionPlugin from '@fullcalendar/angular/interaction';
+  import dayGridPlugin from '@fullcalendar/angular/daygrid';
++ import resourceTimelinePlugin from '@fullcalendar/angular-scheduler/resource-timeline'
++ import resourceTimeGridPlugin from '@fullcalendar/angular-scheduler/resource-timegrid'
+
+  import '@fullcalendar/angular/skeleton.css'
+  import '@fullcalendar/angular/themes/monarch/theme.css' // YOUR THEME
+  import '@fullcalendar/angular/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
+
+  // ...
+
+  export class App {
+    calendarOptions = signal<CalendarOptions>({
+      plugins: [
+        themePlugin,
+        interactionPlugin,
+        dayGridPlugin,
++       resourceTimelinePlugin,
++       resourceTimeGridPlugin,
+      ],
+      editable: true,
++     schedulerLicenseKey: 'XXX',
+    })
+```
+
+
+### Vanilla JS
+
+First, visit the [themes.fullcalendar.io](https://themes.fullcalendar.io) and choose a theme (`monarch`, `forma`, `breezy`, `pulse`, or `classic`) and color palette. For example, `monarch` with color palette `purple`. This choice will be used in the examples below.
+
+
+#### Standard Plugins
+
+Install the vanilla JS "standard" package along with temporal-polyfill ([more info](#temporal-polyfill)):
+
+```bash
+npm install fullcalendar@beta temporal-polyfill
 ```
 
 Initialize in the JS:
 
 ```js
-import { Calendar } from '@fullcalendar/core'
-import interactionPlugin from '@fullcalendar/interaction'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import listPlugin from '@fullcalendar/list'
-import multimonthPlugin from '@fullcalendar/multimonth'
-import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+import { Calendar } from 'fullcalendar'
+import themePlugin from 'fullcalendar/themes/monarch' // YOUR THEME
+import interactionPlugin from 'fullcalendar/interaction'
+import dayGridPlugin from 'fullcalendar/daygrid'
+import timeGridPlugin from 'fullcalendar/timegrid'
+import listPlugin from 'fullcalendar/list'
+import multimonthPlugin from 'fullcalendar/multimonth'
 
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
-import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+import 'fullcalendar/skeleton.css'
+import 'fullcalendar/themes/monarch/theme.css' // YOUR THEME
+import 'fullcalendar/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
 
 const calendarEl = document.getElementById('calendar')
 const calendar = new Calendar(calendarEl, {
   plugins: [
+    themePlugin,
     interactionPlugin,
     dayGridPlugin,
     timeGridPlugin,
     listPlugin,
     multimonthPlugin,
-    themePlugin,
   ],
 })
 calendar.render()
@@ -326,11 +400,11 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 It's possible to use global `<script>` tags as well:
 
 ```html
-<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.6/skeleton.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/theme.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/palettes/purple.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.6/global.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/global.min.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/skeleton.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/themes/monarch/theme.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/themes/monarch/palettes/purple.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/all.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/themes/monarch/global.min.js'></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar')
@@ -346,40 +420,36 @@ It's possible to use global `<script>` tags as well:
 
 #### Premium Plugins
 
-Install any premium plugins you wish to use:
+Install the vanilla JS "scheduler" package along with the "standard" package and temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
 npm install \
-  @fullcalendar/adaptive@beta \
-  @fullcalendar/scrollgrid@beta \
-  @fullcalendar/timeline@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta \
-  @fullcalendar/resource-daygrid@beta \
-  @fullcalendar/resource-timegrid@beta
+  fullcalendar-scheduler@beta \
+  fullcalendar@beta \
+  temporal-polyfill
 ```
 
 Initialize in the JS:
 
 ```js
-import { Calendar } from '@fullcalendar/core'
-import adaptivePlugin from '@fullcalendar/adaptive'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
-import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'
-import themePlugin from '@fullcalendar/theme-monarch' // YOUR THEME
+import { Calendar } from 'fullcalendar'
+import themePlugin from 'fullcalendar/theme-monarch' // YOUR THEME
+import adaptivePlugin from 'fullcalendar-scheduler/adaptive'
+import resourceTimelinePlugin from 'fullcalendar-scheduler/resource-timeline'
+import resourceTimeGridPlugin from 'fullcalendar-scheduler/resource-timegrid'
 
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/theme-monarch/theme.css' // YOUR THEME
-import '@fullcalendar/theme-monarch/palettes/purple.css' // YOUR THEME + PALETTE
+import 'fullcalendar/skeleton.css'
+import 'fullcalendar/themes/monarch/theme.css' // YOUR THEME
+import 'fullcalendar/themes/monarch/palettes/purple.css' // YOUR THEME + PALETTE
 
 const calendarEl = document.getElementById('calendar')
 const calendar = new Calendar(calendarEl, {
   schedulerLicenseKey: 'XXX',
   plugins: [
+    themePlugin,
     adaptivePlugin,
     resourceTimelinePlugin,
     resourceTimeGridPlugin,
-    themePlugin,
   ],
 })
 calendar.render()
@@ -390,15 +460,17 @@ For further explanation of palettes and dark mode, see the [Color Palettes](#col
 It's possible to use global `<script>` tags as well:
 
 ```html
-<link href='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.6/skeleton.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/theme.min.css' rel='stylesheet' />
-<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/palettes/purple.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.6/global.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/theme-monarch@7.0.0-beta.6/global.min.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/skeleton.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/themes/monarch/theme.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/themes/monarch/palettes/purple.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/all.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.0-beta.7/themes/monarch/global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@7.0.0-beta.7/all.global.min.js'></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar')
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      schedulerLicenseKey: 'XXX',
       // your props here
     })
     calendar.render()
@@ -418,20 +490,13 @@ The 5 stock themes come with their own "palettes", which define color values:
 - **Pulse** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-pulse/src/palettes)
 - **Classic** - there is only one - [`palette.css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-classic/src/palette.css)
 
-Feel free to fork these CSS files into your own codebase and customize their color values! For example, this original JS:
+Feel free to fork these CSS files into your own codebase and customize their color values! Here's how to wire it up in your JS:
 
-```js
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/theme-monarch/theme.css'
-import '@fullcalendar/theme-monarch/palettes/purple.css'
-```
-
-would become this:
-
-```js
-import '@fullcalendar/core/skeleton.css'
-import '@fullcalendar/theme-monarch/theme.css'
-import './my-forked-monarch-color-palette.css'
+```diff
+  import 'fullcalendar/skeleton.css'
+  import 'fullcalendar/themes/monarch/theme.css'
+- import 'fullcalendar/themes/monarch/palettes/purple.css'
++ import './my-forked-monarch-color-palette.css'
 ```
 
 
@@ -628,44 +693,31 @@ Feel free to dissect the `resource-timeline-demo.tsx` and `resource-timegrid-dem
 
 MUI's [Material UI](https://mui.com/material-ui/) is a React component framework.
 
-FullCalendar inherits all style variables from the MUI theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/mui](https://themes.fullcalendar.io/mui) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`).
+FullCalendar inherits all style variables from the MUI theme while also allowing choice in theme "flavor". Visit [themes.fullcalendar.io/mui](https://themes.fullcalendar.io/mui) to see the available flavors (`monarch`, `forma`, `breezy`, `pulse`, and `classic`). This choice will be used in the examples below.
 
-Next, install the mui package, the react package, the core package, and your chosen theme:
+
+### Standard Plugins
+
+Install the MUI package, the React "standard" package, and temporal-polyfill ([more info](#temporal-polyfill)):
 
 ```bash
 npm install \
   @fullcalendar/mui@beta \
   @fullcalendar/react@beta \
-  @fullcalendar/core@beta \
-  @fullcalendar/theme-monarch@beta
-  #                   ^^^^^^^ YOUR FLAVOR
+  temporal-polyfill
 ```
 
-
-### Standard Plugins
-
-There are two ways to install an MUI event calendar with standard plugins:
+There are two ways to initialize a component:
 
 
 #### Option 1: Stock Component
 
-FullCalendar provides a stock MUI `EventCalendar` component that **REQUIRES** the following dependencies:
-
-```bash
-npm install \
-  @fullcalendar/interaction@beta \
-  @fullcalendar/daygrid@beta \
-  @fullcalendar/timegrid@beta \
-  @fullcalendar/list@beta \
-  @fullcalendar/multimonth@beta
-```
-
-Initialize in the JS:
+FullCalendar provides a stock MUI `EventCalendar` component with standard plugins and toolbar:
 
 ```jsx
 import EventCalendar from '@fullcalendar/mui/monarch/EventCalendar' // YOUR FLAVOR
 
-import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/react/skeleton.css'
 import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 <EventCalendar
@@ -676,17 +728,17 @@ import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 #### Option 2: Composable Components
 
-Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
+Alternatively, you can control the exact plugins and toolbar:
 
 ```jsx
 import { useCalendarController } from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/react/daygrid'
+import timeGridPlugin from '@fullcalendar/react/timegrid'
 import EventCalendarContainer from '@fullcalendar/mui/monarch/EventCalendarContainer' // YOUR FLAVOR
 import EventCalendarToolbar from '@fullcalendar/mui/monarch/EventCalendarToolbar' // YOUR FLAVOR
 import EventCalendarViews from '@fullcalendar/mui/monarch/EventCalendarViews' // YOUR FLAVOR
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
 
-import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/react/skeleton.css'
 import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 function CustomEventCalendar(props) {
@@ -717,31 +769,28 @@ For further inspiration, see what the stock [EventCalendar](https://github.com/f
 
 ### Premium Plugins
 
-There are two ways to install an MUI event calendar with premium plugins (aka "scheduler"):
+Install the MUI package, the React "scheduler" package, the React "standard" package, and temporal-polyfill ([more info](#temporal-polyfill)):
+
+```bash
+npm install \
+  @fullcalendar/mui@beta \
+  @fullcalendar/react-scheduler@beta \
+  @fullcalendar/react@beta \
+  temporal-polyfill
+```
+
+There are two ways to initialize a component:
 
 
 #### Option 1: Stock Component
 
-FullCalendar provides stock MUI `ResourceTimeline` and `ResourceTimeGrid` components that **REQUIRE** the following dependencies:
-
-```bash
-npm install \
-  @fullcalendar/adaptive@beta \
-  @fullcalendar/scrollgrid@beta \
-  @fullcalendar/timeline@beta \
-  @fullcalendar/resource@beta \
-  @fullcalendar/resource-timeline@beta \
-  @fullcalendar/resource-daygrid@beta \
-  @fullcalendar/resource-timegrid@beta
-```
-
-Initialize in the JS:
+FullCalendar provides stock MUI components with preset toolbar:
 
 ```jsx
 import ResourceTimeline from '@fullcalendar/mui/monarch/ResourceTimeline' // YOUR FLAVOR
 import ResourceTimeGrid from '@fullcalendar/mui/monarch/ResourceTimeGrid' // YOUR FLAVOR
 
-import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/react/skeleton.css'
 import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 <div>
@@ -757,16 +806,16 @@ import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 #### Option 2: Composable Components
 
-Alternatively, install exactly the plugins you need, customize the views, or customize the toolbar:
+Alternatively, you can control the exact plugins and toolbar:
 
 ```jsx
 import { useCalendarController } from '@fullcalendar/react'
+import resourceTimelinePlugin from '@fullcalendar/react-scheduler/resource-timeline'
 import EventCalendarContainer from '@fullcalendar/mui/monarch/EventCalendarContainer' // YOUR FLAVOR
 import EventCalendarToolbar from '@fullcalendar/mui/monarch/EventCalendarToolbar' // YOUR FLAVOR
 import SchedulerViews from '@fullcalendar/mui/monarch/SchedulerViews' // YOUR FLAVOR
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 
-import '@fullcalendar/core/skeleton.css'
+import '@fullcalendar/react/skeleton.css'
 import '@fullcalendar/mui/monarch/theme.css' // YOUR FLAVOR
 
 function CustomScheduler(props) {
@@ -794,3 +843,18 @@ function CustomScheduler(props) {
 ```
 
 For further inspiration, see what the stock [ResourceTimeline](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/ResourceTimeline.tsx), [ResourceTimeGrid](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/ResourceTimeGrid.tsx), and [EventCalendarToolbar](https://github.com/fullcalendar/fullcalendar-workspace/blob/v7-dev/theming/ui-mui/src/monarch/EventCalendarToolbar.tsx) do.
+
+
+## Temporal Polyfill
+
+The [temporal-polyfill](https://www.npmjs.com/package/temporal-polyfill) package is now a peer dependency of all the FullCalendar packages. This means you are required to install it.
+
+The "Temporal" [built-in browser API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) is coming to all modern browsers, and this package is a polyfill for it, which means it allows you to use it before it's officially supported.
+
+FullCalendar **DOES NOT INSTALL IT GLOBALLY** but instead uses it internally. For v7, FullCalendar uses the [tree-shakeable API](https://github.com/fullcalendar/temporal-polyfill?tab=readme-ov-file#tree-shakable-api), meaning the code-size impact will be minimal and there will be no side-effects.
+
+Though FullCalendar does not install the polyfill globally, you are welcome to do so for your projects:
+
+```ts
+import 'temporal-polyfill/global'
+```
