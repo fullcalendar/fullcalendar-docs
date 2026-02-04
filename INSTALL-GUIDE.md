@@ -484,11 +484,11 @@ It's possible to use global `<script>` tags as well:
 
 The 5 stock themes come with their own "palettes", which define color values:
 
-- **Monarch** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-monarch/src/palettes)
-- **Forma** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-forma/src/palettes)
-- **Breezy** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-breezy/src/palettes)
-- **Pulse** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-pulse/src/palettes)
-- **Classic** - there is only one - [`palette.css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/theming/theme-classic/src/palette.css)
+- **Monarch** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/packages/preact/src/themes/monarch/palettes)
+- **Forma** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/packages/preact/src/themes/forma/palettes)
+- **Breezy** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/packages/preact/src/themes/breezy/palettes)
+- **Pulse** - choose from [`palettes/[name].css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/packages/preact/src/themes/pulse/palettes)
+- **Classic** - there is only one - [`palette.css`](https://github.com/fullcalendar/fullcalendar-workspace/tree/v7-dev/standard/packages/preact/src/themes/classic/palette.css)
 
 Feel free to fork these CSS files into your own codebase and customize their color values! Here's how to wire it up in your JS:
 
