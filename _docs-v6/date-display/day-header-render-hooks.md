@@ -19,10 +19,10 @@ Customize the header elements above the day cells in daygrid and timegrid views 
 When the above hooks are specified as a function in the form `function(arg)`, the `arg` is an object with the following properties:
 
 - `date` - Date object
-- `text`
-- `isPast`
-- `isFuture`
-- `isToday`
-- `isOther`
+- `text` - A pre-formatted string of the day header label (e.g., "Mon", "Mon 9", "Monday, Mar 9") based on the current view and dayHeaderFormat setting.
+- `isPast` - `true` if the date is before today. Useful for dimming or disabling past dates.
+- `isFuture` - `true` if the date is after today. Useful for highlighting upcoming dates.
+- `isToday` - `true` if the date is today. Commonly used to apply a special highlight to the current day.
+- `isOther` - `true` if the date belongs to a different month than the one currently displayed (e.g., overflow days filling the calendar grid).
 - `resource` - if the date column lives under a specific resource in [vertical resource view](vertical-resource-view), this value will be the [Resource Object](resource-object)
 - `el` - the `<th>` element. only available in `dayHeaderDidMount` and `dayHeaderWillUnmount`
