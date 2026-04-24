@@ -1,5 +1,17 @@
 
-{% if page.version.id == "v5" %}
+{% if page.version.id == "v6" %}
+  <div id='docs-controls-warning'>
+    Version 7 will be released soon.
+    <a href='https://v7.fullcalendar.io/' target='_blank'>
+      Read the v7 docs
+      <svg xmlns='http://www.w3.org/2000/svg' width='0.9em' height='0.9em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' style='vertical-align:-0.1em'>
+        <path d='M15 3h6v6'/>
+        <path d='M10 14 21 3'/>
+        <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/>
+      </svg>
+    </a>
+  </div>
+{% elsif page.version.id == "v5" %}
   <div id='docs-controls-warning'>
     These docs are for an old release.
     <a href='{{ site.baseurl }}/upgrading-from-v5'>
