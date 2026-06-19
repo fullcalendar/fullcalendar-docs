@@ -34,6 +34,12 @@ npm install --save \
   @fullcalendar/interaction
 ```
 
+<div style="border: 1px solid #e0a458; background: #fdf3e7; border-radius: 4px; padding:0 1em;" markdown="1">
+
+**Note:** These docs are for v6. To install v7, [visit the v7 docs site](https://v7.fullcalendar.io/).
+
+</div>
+
 In one of your app's component files ([app.component.ts]), prepare an object of options along with any plugins:
 
 ```js
