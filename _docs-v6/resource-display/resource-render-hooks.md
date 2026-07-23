@@ -33,6 +33,6 @@ A resource "lane" is an element in resource-timeline view. It runs horizontally 
 
 When the above hooks are specified as a function in the form `function(arg)`, the `arg` is an object with the following properties:
 
-- `resource` - [Resoure Object](resource-object)
+- `resource` - [Resource Object](resource-object)
 - `date` - in vertical resource view, if this is a column that lives under a certain date, this will be the Date object
 - `el` - the label element. only available in `resourceLabelDidMount`, `resourceLabelWillUnmount`, `resourceLaneDidMount`, and `resourceLaneWillUnmount`
