@@ -23,16 +23,16 @@ To surgically customize CSS, set [custom properties](https://developer.mozilla.o
 
 This example customizes just two variables, but there are many more! You can browser fullcalendar's source code to see all available variables:
 
-- [common CSS variables](https://github.com/fullcalendar/fullcalendar/blob/main/packages/core/src/styles/vars.css)
-- [daygrid CSS variables](https://github.com/fullcalendar/fullcalendar/blob/main/packages/daygrid/src/styles/vars.css)
-- [list CSS variables](https://github.com/fullcalendar/fullcalendar/blob/main/packages/list/src/styles/vars.css)
+- [common CSS variables](https://github.com/fullcalendar/fullcalendar/blob/v6.1.21/packages/core/src/styles/vars.css)
+- [daygrid CSS variables](https://github.com/fullcalendar/fullcalendar/blob/v6.1.21/packages/daygrid/src/styles/vars.css)
+- [list CSS variables](https://github.com/fullcalendar/fullcalendar/blob/v6.1.21/packages/list/src/styles/vars.css)
 - and potentially other plugins, located in `<package-root>/src/styles/vars.css`
 
 
 
 ## Technique 2) Overriding Properties
 
-Use the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/css) or equivelant to pinpoint the element you want to customize. Then, view its active CSS statements. For example, if you want to customize the day-of-week headers at the top of dayGrid view, you'll see this CSS:
+Use the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/css) or equivalent to pinpoint the element you want to customize. Then, view its active CSS statements. For example, if you want to customize the day-of-week headers at the top of dayGrid view, you'll see this CSS:
 
 ```css
 .fc .fc-col-header-cell-cushion {
