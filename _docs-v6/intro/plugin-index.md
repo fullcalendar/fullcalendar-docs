@@ -277,7 +277,7 @@ FullCalendar offers the following packages:
       <strong>@fullcalendar/moment</strong>
     </td>
     <td>
-      Offers a formatting string implementation and utilities fo convert to Moment objects. <a href='moment-plugin'>More info</a>
+      Offers a formatting string implementation and utilities to convert to Moment objects. <a href='moment-plugin'>More info</a>
     </td>
     <td><a href='https://yarnpkg.com/package/@fullcalendar/moment'>Yarn</a></td>
     <td><a href='https://www.jsdelivr.com/package/npm/@fullcalendar/moment?version={{ site.data.latest-releases.v6 }}'>jsDelivr</a></td>
